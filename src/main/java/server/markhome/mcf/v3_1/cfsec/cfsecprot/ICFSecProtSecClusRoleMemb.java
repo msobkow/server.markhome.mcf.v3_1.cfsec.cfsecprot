@@ -1,0 +1,99 @@
+// Description: Java 25 protected interface for a SecClusRoleMemb record implementation
+
+/*
+ *	server.markhome.mcf.CFSec
+ *
+ *	Copyright (c) 2016-2026 Mark Stephen Sobkow
+ *	
+ *	Mark's Code Fractal 3.1 CFSec - Security Services
+ *	
+ *	Copyright (c) 2016-2026 Mark Stephen Sobkow mark.sobkow@gmail.com
+ *	
+ *	These files are part of Mark's Code Fractal CFSec.
+ *	
+ *	Licensed under the Apache License, Version 2.0 (the "License");
+ *	you may not use this file except in compliance with the License.
+ *	You may obtain a copy of the License at
+ *	
+ *	http://www.apache.org/licenses/LICENSE-2.0
+ *	
+ *	Unless required by applicable law or agreed to in writing, software
+ *	distributed under the License is distributed on an "AS IS" BASIS,
+ *	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *	See the License for the specific language governing permissions and
+ *	limitations under the License.
+ *	
+ */
+
+package server.markhome.mcf.v3_1.cfsec.cfsecprot;
+
+import java.io.Serializable;
+import java.math.*;
+import java.time.*;
+import java.util.*;
+import org.apache.commons.codec.binary.Base64;
+import org.apache.commons.text.StringEscapeUtils;
+import server.markhome.mcf.v3_1.cflib.*;
+import server.markhome.mcf.v3_1.cflib.dbutil.*;
+import server.markhome.mcf.v3_1.cflib.xml.CFLibXmlUtil;
+//import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
+
+/**
+ *	ICFSecProtSecClusRoleMemb persistence instances have CodeVis Protected, meaning that any only user interfaces and application code specific to the defining schema can access it.
+ */
+public interface ICFSecProtSecClusRoleMemb
+{
+	public static final String S_INIT_CREATED_BY = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 INIT_CREATED_BY = CFLibDbKeyHash256.fromHex(S_INIT_CREATED_BY);
+	public static final String S_INIT_UPDATED_BY = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 INIT_UPDATED_BY = CFLibDbKeyHash256.fromHex(S_INIT_UPDATED_BY);
+	public static final String S_SECCLUSROLEID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 SECCLUSROLEID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_SECCLUSROLEID_INIT_VALUE );
+	public static final String LOGINID_INIT_VALUE = new String( "" );
+	public final static int CLASS_CODE = 0xa01b;
+	public final static String S_CLASS_CODE = "a01b";
+
+	public int getClassCode();
+
+	public CFLibDbKeyHash256 getCreatedByUserId();
+	public void setCreatedByUserId( CFLibDbKeyHash256 value );
+	public LocalDateTime getCreatedAt();
+	public void setCreatedAt( LocalDateTime value );
+	public CFLibDbKeyHash256 getUpdatedByUserId();
+	public void setUpdatedByUserId( CFLibDbKeyHash256 value );
+	public LocalDateTime getUpdatedAt();
+	public void setUpdatedAt( LocalDateTime value );
+
+	public ICFSecProtSecClusRoleMembPKey getProtPKey();
+	public void setProtPKey(ICFSecProtSecClusRoleMembPKey pkey );
+	
+	public ICFSecProtSecClusRole getRequiredContainerRole();
+	public void setRequiredContainerRole(ICFSecProtSecClusRole argObj);
+	public void setRequiredContainerRole(CFLibDbKeyHash256 argSecClusRoleId);
+	public ICFSecProtSecUser getRequiredParentUser();
+	public void setRequiredParentUser(ICFSecProtSecUser argObj);
+	public void setRequiredParentUser(String argLoginId);
+	public CFLibDbKeyHash256 getRequiredSecClusRoleId();
+	public String getRequiredLoginId();
+	public int getRequiredRevision();
+	public void setRequiredRevision( int value );
+
+	@Override
+	public boolean equals( Object obj );
+	
+	@Override
+	public int hashCode();
+
+	//@Override not necessary because interfaces aren't able to implement Comparable, but they can double-team on the requirement
+	public int compareTo( Object obj );
+
+	public void set( ICFSecProtSecClusRoleMemb src );
+	public void setProtSecClusRoleMemb( ICFSecProtSecClusRoleMemb src );
+	public void set( ICFSecProtSecClusRoleMembH src );
+	public void setProtSecClusRoleMemb( ICFSecProtSecClusRoleMembH src );
+
+	public String getXmlAttrFragment();
+
+	@Override
+	public String toString();
+}
