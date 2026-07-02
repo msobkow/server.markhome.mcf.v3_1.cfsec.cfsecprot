@@ -78,13 +78,13 @@ public interface ICFSecProtSecClusGrpFactory
 	 *
 	 *	@return	The new instance.
 	 */
-	public ICFSecProtSecClusGrp newRec();
+	public ICFSecProtSecClusGrp newProtRec();
 
 	/**
 	 *	Allocate a protected SecClusGrp history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
-	public ICFSecProtSecClusGrpH newHRec();
+	public ICFSecProtSecClusGrpH newProtHRec();
 
 }

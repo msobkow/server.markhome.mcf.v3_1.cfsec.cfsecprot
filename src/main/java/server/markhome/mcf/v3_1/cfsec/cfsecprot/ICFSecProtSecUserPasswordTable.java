@@ -56,7 +56,7 @@ public interface ICFSecProtSecUserPasswordTable
 	 *
 	 *	@param	rec	The instance interface to be created.
 	 */
-	ICFSecProtSecUserPassword createSecUserPassword( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecUserPassword protcreateSecUserPassword( ICFSecProtAuthorization Authorization,
 		ICFSecProtSecUserPassword rec );
 
 
@@ -68,7 +68,7 @@ public interface ICFSecProtSecUserPasswordTable
 	 *
 	 *	@param	rec	The instance interface to be updated
 	 */
-	ICFSecProtSecUserPassword updateSecUserPassword( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecUserPassword protupdateSecUserPassword( ICFSecProtAuthorization Authorization,
 		ICFSecProtSecUserPassword rec );
 
 
@@ -79,7 +79,7 @@ public interface ICFSecProtSecUserPasswordTable
 	 *
 	 *	@param	rec	The instance interface to be deleted.
 	 */
-	void deleteSecUserPassword( ICFSecProtAuthorization Authorization,
+	public void protdeleteSecUserPassword( ICFSecProtAuthorization Authorization,
 		ICFSecProtSecUserPassword rec );
 	/**
 	 *	Delete the SecUserPassword instance identified by the primary key.
@@ -88,7 +88,7 @@ public interface ICFSecProtSecUserPasswordTable
 	 *
 	 *	@param	argKey	The primary key identifying the instance to be deleted.
 	 */
-	void deleteSecUserPasswordByIdIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSecUserPasswordByIdIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argKey );
 	/**
 	 *	Delete the SecUserPassword instances identified by the key SetStampIdx.
@@ -97,7 +97,7 @@ public interface ICFSecProtSecUserPasswordTable
 	 *
 	 *	@param	PWSetStamp	The SecUserPassword key attribute of the instance generating the id.
 	 */
-	void deleteSecUserPasswordBySetStampIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSecUserPasswordBySetStampIdx( ICFSecProtAuthorization Authorization,
 		LocalDateTime argPWSetStamp );
 
 	/**
@@ -107,7 +107,7 @@ public interface ICFSecProtSecUserPasswordTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteSecUserPasswordBySetStampIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSecUserPasswordBySetStampIdx( ICFSecProtAuthorization Authorization,
 		ICFSecProtSecUserPasswordBySetStampIdxKey argKey );
 
 
@@ -121,7 +121,7 @@ public interface ICFSecProtSecUserPasswordTable
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFSecProtSecUserPassword readDerived( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecUserPassword protreadDerived( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -134,7 +134,7 @@ public interface ICFSecProtSecUserPasswordTable
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFSecProtSecUserPassword lockDerived( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecUserPassword protlockDerived( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -144,7 +144,7 @@ public interface ICFSecProtSecUserPasswordTable
 	 *
 	 *	@return An array of derived record instances, potentially with 0 elements in the set.
 	 */
-	ICFSecProtSecUserPassword[] readProtAllDerived( ICFSecProtAuthorization Authorization );
+	public ICFSecProtSecUserPassword[] protreadProtAllDerived( ICFSecProtAuthorization Authorization );
 
 	/**
 	 *	Read the derived SecUserPassword record instance identified by the unique key IdIdx.
@@ -156,7 +156,7 @@ public interface ICFSecProtSecUserPasswordTable
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFSecProtSecUserPassword readDerivedByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecUserPassword protreadDerivedByIdIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 SecUserId );
 
 	/**
@@ -168,7 +168,7 @@ public interface ICFSecProtSecUserPasswordTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFSecProtSecUserPassword[] readDerivedBySetStampIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecUserPassword[] protreadDerivedBySetStampIdx( ICFSecProtAuthorization Authorization,
 		LocalDateTime PWSetStamp );
 
 	/**
@@ -183,7 +183,7 @@ public interface ICFSecProtSecUserPasswordTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFSecProtSecUserPassword readRec( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecUserPassword protreadRec( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -198,7 +198,7 @@ public interface ICFSecProtSecUserPasswordTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFSecProtSecUserPassword lockRec( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecUserPassword protlockRec( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -208,7 +208,7 @@ public interface ICFSecProtSecUserPasswordTable
 	 *
 	 *	@return All the specific SecUserPassword instances in the database accessible for the Authorization.
 	 */
-	ICFSecProtSecUserPassword[] readAllRec( ICFSecProtAuthorization Authorization );
+	public ICFSecProtSecUserPassword[] protreadAllRec( ICFSecProtAuthorization Authorization );
 
 	/**
 	 *	Read the specific SecUserPassword record instance identified by the unique key IdIdx.
@@ -222,7 +222,7 @@ public interface ICFSecProtSecUserPasswordTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFSecProtSecUserPassword readRecByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecUserPassword protreadRecByIdIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 SecUserId );
 
 	/**
@@ -236,6 +236,6 @@ public interface ICFSecProtSecUserPasswordTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFSecProtSecUserPassword[] readRecBySetStampIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecUserPassword[] protreadRecBySetStampIdx( ICFSecProtAuthorization Authorization,
 		LocalDateTime PWSetStamp );
 }

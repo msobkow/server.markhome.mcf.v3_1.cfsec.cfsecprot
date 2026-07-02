@@ -38,11 +38,13 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 
 /*
  *	ICFSecProtTableInfoFactory protected interface for TableInfo
  */
 public interface ICFSecProtTableInfoFactory
+extends ICFSecPubTableInfoFactory
 {
 
 	/**
@@ -92,13 +94,13 @@ public interface ICFSecProtTableInfoFactory
 	 *
 	 *	@return	The new instance.
 	 */
-	public ICFSecProtTableInfo newRec();
+	public ICFSecProtTableInfo newProtRec();
 
 	/**
 	 *	Allocate a protected TableInfo history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
-	public ICFSecProtTableInfoH newHRec();
+	public ICFSecProtTableInfoH newProtHRec();
 
 }

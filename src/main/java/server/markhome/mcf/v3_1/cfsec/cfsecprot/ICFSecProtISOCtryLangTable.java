@@ -56,7 +56,7 @@ public interface ICFSecProtISOCtryLangTable
 	 *
 	 *	@param	rec	The instance interface to be created.
 	 */
-	ICFSecProtISOCtryLang createISOCtryLang( ICFSecProtAuthorization Authorization,
+	public ICFSecProtISOCtryLang protcreateISOCtryLang( ICFSecProtAuthorization Authorization,
 		ICFSecProtISOCtryLang rec );
 
 
@@ -68,7 +68,7 @@ public interface ICFSecProtISOCtryLangTable
 	 *
 	 *	@param	rec	The instance interface to be updated
 	 */
-	ICFSecProtISOCtryLang updateISOCtryLang( ICFSecProtAuthorization Authorization,
+	public ICFSecProtISOCtryLang protupdateISOCtryLang( ICFSecProtAuthorization Authorization,
 		ICFSecProtISOCtryLang rec );
 
 
@@ -79,7 +79,7 @@ public interface ICFSecProtISOCtryLangTable
 	 *
 	 *	@param	rec	The instance interface to be deleted.
 	 */
-	void deleteISOCtryLang( ICFSecProtAuthorization Authorization,
+	public void protdeleteISOCtryLang( ICFSecProtAuthorization Authorization,
 		ICFSecProtISOCtryLang rec );
 	/**
 	 *	Delete the ISOCtryLang instance identified by the primary key attributes.
@@ -90,7 +90,7 @@ public interface ICFSecProtISOCtryLangTable
 	 *
 	 *	@param	ISOLangId	The ISOCtryLang key attribute of the instance generating the id.
 	 */
-	void deleteISOCtryLangByIdIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteISOCtryLangByIdIdx( ICFSecProtAuthorization Authorization,
 		short argISOCtryId,
 		short argISOLangId );
 	/**
@@ -100,7 +100,7 @@ public interface ICFSecProtISOCtryLangTable
 	 *
 	 *	@param	argKey	The primary key identifying the instance to be deleted.
 	 */
-	void deleteISOCtryLangByIdIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteISOCtryLangByIdIdx( ICFSecProtAuthorization Authorization,
 		ICFSecProtISOCtryLangPKey argKey );
 	/**
 	 *	Delete the ISOCtryLang instances identified by the key CtryIdx.
@@ -109,7 +109,7 @@ public interface ICFSecProtISOCtryLangTable
 	 *
 	 *	@param	ISOCtryId	The ISOCtryLang key attribute of the instance generating the id.
 	 */
-	void deleteISOCtryLangByCtryIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteISOCtryLangByCtryIdx( ICFSecProtAuthorization Authorization,
 		short argISOCtryId );
 
 	/**
@@ -119,7 +119,7 @@ public interface ICFSecProtISOCtryLangTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteISOCtryLangByCtryIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteISOCtryLangByCtryIdx( ICFSecProtAuthorization Authorization,
 		ICFSecProtISOCtryLangByCtryIdxKey argKey );
 	/**
 	 *	Delete the ISOCtryLang instances identified by the key LangIdx.
@@ -128,7 +128,7 @@ public interface ICFSecProtISOCtryLangTable
 	 *
 	 *	@param	ISOLangId	The ISOCtryLang key attribute of the instance generating the id.
 	 */
-	void deleteISOCtryLangByLangIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteISOCtryLangByLangIdx( ICFSecProtAuthorization Authorization,
 		short argISOLangId );
 
 	/**
@@ -138,7 +138,7 @@ public interface ICFSecProtISOCtryLangTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteISOCtryLangByLangIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteISOCtryLangByLangIdx( ICFSecProtAuthorization Authorization,
 		ICFSecProtISOCtryLangByLangIdxKey argKey );
 
 
@@ -152,7 +152,7 @@ public interface ICFSecProtISOCtryLangTable
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFSecProtISOCtryLang readDerived( ICFSecProtAuthorization Authorization,
+	public ICFSecProtISOCtryLang protreadDerived( ICFSecProtAuthorization Authorization,
 		ICFSecProtISOCtryLangPKey PKey );
 
 	/**
@@ -163,7 +163,7 @@ public interface ICFSecProtISOCtryLangTable
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFSecProtISOCtryLang readDerived( ICFSecProtAuthorization Authorization,
+	public ICFSecProtISOCtryLang protreadDerived( ICFSecProtAuthorization Authorization,
 		short ISOCtryId,
 		short ISOLangId );
 
@@ -177,7 +177,7 @@ public interface ICFSecProtISOCtryLangTable
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFSecProtISOCtryLang lockDerived( ICFSecProtAuthorization Authorization,
+	public ICFSecProtISOCtryLang protlockDerived( ICFSecProtAuthorization Authorization,
 		ICFSecProtISOCtryLangPKey PKey );
 
 	/**
@@ -187,7 +187,7 @@ public interface ICFSecProtISOCtryLangTable
 	 *
 	 *	@return An array of derived record instances, potentially with 0 elements in the set.
 	 */
-	ICFSecProtISOCtryLang[] readProtAllDerived( ICFSecProtAuthorization Authorization );
+	public ICFSecProtISOCtryLang[] protreadProtAllDerived( ICFSecProtAuthorization Authorization );
 
 	/**
 	 *	Read the derived ISOCtryLang record instance identified by the unique key IdIdx.
@@ -201,7 +201,7 @@ public interface ICFSecProtISOCtryLangTable
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFSecProtISOCtryLang readDerivedByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtISOCtryLang protreadDerivedByIdIdx( ICFSecProtAuthorization Authorization,
 		short ISOCtryId,
 		short ISOLangId );
 
@@ -214,7 +214,7 @@ public interface ICFSecProtISOCtryLangTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFSecProtISOCtryLang[] readDerivedByCtryIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtISOCtryLang[] protreadDerivedByCtryIdx( ICFSecProtAuthorization Authorization,
 		short ISOCtryId );
 
 	/**
@@ -226,7 +226,7 @@ public interface ICFSecProtISOCtryLangTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFSecProtISOCtryLang[] readDerivedByLangIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtISOCtryLang[] protreadDerivedByLangIdx( ICFSecProtAuthorization Authorization,
 		short ISOLangId );
 
 	/**
@@ -241,7 +241,7 @@ public interface ICFSecProtISOCtryLangTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFSecProtISOCtryLang readRec( ICFSecProtAuthorization Authorization,
+	public ICFSecProtISOCtryLang protreadRec( ICFSecProtAuthorization Authorization,
 		ICFSecProtISOCtryLangPKey PKey );
 
 	/**
@@ -256,7 +256,7 @@ public interface ICFSecProtISOCtryLangTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFSecProtISOCtryLang readRec( ICFSecProtAuthorization Authorization,
+	public ICFSecProtISOCtryLang protreadRec( ICFSecProtAuthorization Authorization,
 		short ISOCtryId,
 		short ISOLangId );
 
@@ -272,7 +272,7 @@ public interface ICFSecProtISOCtryLangTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFSecProtISOCtryLang lockRec( ICFSecProtAuthorization Authorization,
+	public ICFSecProtISOCtryLang protlockRec( ICFSecProtAuthorization Authorization,
 		ICFSecProtISOCtryLangPKey PKey );
 
 	/**
@@ -282,7 +282,7 @@ public interface ICFSecProtISOCtryLangTable
 	 *
 	 *	@return All the specific ISOCtryLang instances in the database accessible for the Authorization.
 	 */
-	ICFSecProtISOCtryLang[] readAllRec( ICFSecProtAuthorization Authorization );
+	public ICFSecProtISOCtryLang[] protreadAllRec( ICFSecProtAuthorization Authorization );
 
 	/**
 	 *	Read the specific ISOCtryLang record instance identified by the unique key IdIdx.
@@ -298,7 +298,7 @@ public interface ICFSecProtISOCtryLangTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFSecProtISOCtryLang readRecByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtISOCtryLang protreadRecByIdIdx( ICFSecProtAuthorization Authorization,
 		short ISOCtryId,
 		short ISOLangId );
 
@@ -313,7 +313,7 @@ public interface ICFSecProtISOCtryLangTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFSecProtISOCtryLang[] readRecByCtryIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtISOCtryLang[] protreadRecByCtryIdx( ICFSecProtAuthorization Authorization,
 		short ISOCtryId );
 
 	/**
@@ -327,6 +327,6 @@ public interface ICFSecProtISOCtryLangTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFSecProtISOCtryLang[] readRecByLangIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtISOCtryLang[] protreadRecByLangIdx( ICFSecProtAuthorization Authorization,
 		short ISOLangId );
 }

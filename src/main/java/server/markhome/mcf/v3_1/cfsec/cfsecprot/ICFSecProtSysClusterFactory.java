@@ -38,11 +38,13 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 
 /*
  *	ICFSecProtSysClusterFactory protected interface for SysCluster
  */
 public interface ICFSecProtSysClusterFactory
+extends ICFSecPubSysClusterFactory
 {
 
 	/**
@@ -64,13 +66,13 @@ public interface ICFSecProtSysClusterFactory
 	 *
 	 *	@return	The new instance.
 	 */
-	public ICFSecProtSysCluster newRec();
+	public ICFSecProtSysCluster newProtRec();
 
 	/**
 	 *	Allocate a protected SysCluster history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
-	public ICFSecProtSysClusterH newHRec();
+	public ICFSecProtSysClusterH newProtHRec();
 
 }

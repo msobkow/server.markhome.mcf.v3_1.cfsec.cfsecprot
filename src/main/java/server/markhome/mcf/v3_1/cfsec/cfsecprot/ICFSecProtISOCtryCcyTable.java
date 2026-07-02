@@ -56,7 +56,7 @@ public interface ICFSecProtISOCtryCcyTable
 	 *
 	 *	@param	rec	The instance interface to be created.
 	 */
-	ICFSecProtISOCtryCcy createISOCtryCcy( ICFSecProtAuthorization Authorization,
+	public ICFSecProtISOCtryCcy protcreateISOCtryCcy( ICFSecProtAuthorization Authorization,
 		ICFSecProtISOCtryCcy rec );
 
 
@@ -68,7 +68,7 @@ public interface ICFSecProtISOCtryCcyTable
 	 *
 	 *	@param	rec	The instance interface to be updated
 	 */
-	ICFSecProtISOCtryCcy updateISOCtryCcy( ICFSecProtAuthorization Authorization,
+	public ICFSecProtISOCtryCcy protupdateISOCtryCcy( ICFSecProtAuthorization Authorization,
 		ICFSecProtISOCtryCcy rec );
 
 
@@ -79,7 +79,7 @@ public interface ICFSecProtISOCtryCcyTable
 	 *
 	 *	@param	rec	The instance interface to be deleted.
 	 */
-	void deleteISOCtryCcy( ICFSecProtAuthorization Authorization,
+	public void protdeleteISOCtryCcy( ICFSecProtAuthorization Authorization,
 		ICFSecProtISOCtryCcy rec );
 	/**
 	 *	Delete the ISOCtryCcy instance identified by the primary key attributes.
@@ -90,7 +90,7 @@ public interface ICFSecProtISOCtryCcyTable
 	 *
 	 *	@param	ISOCcyId	The ISOCtryCcy key attribute of the instance generating the id.
 	 */
-	void deleteISOCtryCcyByIdIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteISOCtryCcyByIdIdx( ICFSecProtAuthorization Authorization,
 		short argISOCtryId,
 		short argISOCcyId );
 	/**
@@ -100,7 +100,7 @@ public interface ICFSecProtISOCtryCcyTable
 	 *
 	 *	@param	argKey	The primary key identifying the instance to be deleted.
 	 */
-	void deleteISOCtryCcyByIdIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteISOCtryCcyByIdIdx( ICFSecProtAuthorization Authorization,
 		ICFSecProtISOCtryCcyPKey argKey );
 	/**
 	 *	Delete the ISOCtryCcy instances identified by the key CtryIdx.
@@ -109,7 +109,7 @@ public interface ICFSecProtISOCtryCcyTable
 	 *
 	 *	@param	ISOCtryId	The ISOCtryCcy key attribute of the instance generating the id.
 	 */
-	void deleteISOCtryCcyByCtryIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteISOCtryCcyByCtryIdx( ICFSecProtAuthorization Authorization,
 		short argISOCtryId );
 
 	/**
@@ -119,7 +119,7 @@ public interface ICFSecProtISOCtryCcyTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteISOCtryCcyByCtryIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteISOCtryCcyByCtryIdx( ICFSecProtAuthorization Authorization,
 		ICFSecProtISOCtryCcyByCtryIdxKey argKey );
 	/**
 	 *	Delete the ISOCtryCcy instances identified by the key CcyIdx.
@@ -128,7 +128,7 @@ public interface ICFSecProtISOCtryCcyTable
 	 *
 	 *	@param	ISOCcyId	The ISOCtryCcy key attribute of the instance generating the id.
 	 */
-	void deleteISOCtryCcyByCcyIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteISOCtryCcyByCcyIdx( ICFSecProtAuthorization Authorization,
 		short argISOCcyId );
 
 	/**
@@ -138,7 +138,7 @@ public interface ICFSecProtISOCtryCcyTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteISOCtryCcyByCcyIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteISOCtryCcyByCcyIdx( ICFSecProtAuthorization Authorization,
 		ICFSecProtISOCtryCcyByCcyIdxKey argKey );
 
 
@@ -152,7 +152,7 @@ public interface ICFSecProtISOCtryCcyTable
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFSecProtISOCtryCcy readDerived( ICFSecProtAuthorization Authorization,
+	public ICFSecProtISOCtryCcy protreadDerived( ICFSecProtAuthorization Authorization,
 		ICFSecProtISOCtryCcyPKey PKey );
 
 	/**
@@ -163,7 +163,7 @@ public interface ICFSecProtISOCtryCcyTable
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFSecProtISOCtryCcy readDerived( ICFSecProtAuthorization Authorization,
+	public ICFSecProtISOCtryCcy protreadDerived( ICFSecProtAuthorization Authorization,
 		short ISOCtryId,
 		short ISOCcyId );
 
@@ -177,7 +177,7 @@ public interface ICFSecProtISOCtryCcyTable
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFSecProtISOCtryCcy lockDerived( ICFSecProtAuthorization Authorization,
+	public ICFSecProtISOCtryCcy protlockDerived( ICFSecProtAuthorization Authorization,
 		ICFSecProtISOCtryCcyPKey PKey );
 
 	/**
@@ -187,7 +187,7 @@ public interface ICFSecProtISOCtryCcyTable
 	 *
 	 *	@return An array of derived record instances, potentially with 0 elements in the set.
 	 */
-	ICFSecProtISOCtryCcy[] readProtAllDerived( ICFSecProtAuthorization Authorization );
+	public ICFSecProtISOCtryCcy[] protreadProtAllDerived( ICFSecProtAuthorization Authorization );
 
 	/**
 	 *	Read the derived ISOCtryCcy record instance identified by the unique key IdIdx.
@@ -201,7 +201,7 @@ public interface ICFSecProtISOCtryCcyTable
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFSecProtISOCtryCcy readDerivedByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtISOCtryCcy protreadDerivedByIdIdx( ICFSecProtAuthorization Authorization,
 		short ISOCtryId,
 		short ISOCcyId );
 
@@ -214,7 +214,7 @@ public interface ICFSecProtISOCtryCcyTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFSecProtISOCtryCcy[] readDerivedByCtryIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtISOCtryCcy[] protreadDerivedByCtryIdx( ICFSecProtAuthorization Authorization,
 		short ISOCtryId );
 
 	/**
@@ -226,7 +226,7 @@ public interface ICFSecProtISOCtryCcyTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFSecProtISOCtryCcy[] readDerivedByCcyIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtISOCtryCcy[] protreadDerivedByCcyIdx( ICFSecProtAuthorization Authorization,
 		short ISOCcyId );
 
 	/**
@@ -241,7 +241,7 @@ public interface ICFSecProtISOCtryCcyTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFSecProtISOCtryCcy readRec( ICFSecProtAuthorization Authorization,
+	public ICFSecProtISOCtryCcy protreadRec( ICFSecProtAuthorization Authorization,
 		ICFSecProtISOCtryCcyPKey PKey );
 
 	/**
@@ -256,7 +256,7 @@ public interface ICFSecProtISOCtryCcyTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFSecProtISOCtryCcy readRec( ICFSecProtAuthorization Authorization,
+	public ICFSecProtISOCtryCcy protreadRec( ICFSecProtAuthorization Authorization,
 		short ISOCtryId,
 		short ISOCcyId );
 
@@ -272,7 +272,7 @@ public interface ICFSecProtISOCtryCcyTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFSecProtISOCtryCcy lockRec( ICFSecProtAuthorization Authorization,
+	public ICFSecProtISOCtryCcy protlockRec( ICFSecProtAuthorization Authorization,
 		ICFSecProtISOCtryCcyPKey PKey );
 
 	/**
@@ -282,7 +282,7 @@ public interface ICFSecProtISOCtryCcyTable
 	 *
 	 *	@return All the specific ISOCtryCcy instances in the database accessible for the Authorization.
 	 */
-	ICFSecProtISOCtryCcy[] readAllRec( ICFSecProtAuthorization Authorization );
+	public ICFSecProtISOCtryCcy[] protreadAllRec( ICFSecProtAuthorization Authorization );
 
 	/**
 	 *	Read the specific ISOCtryCcy record instance identified by the unique key IdIdx.
@@ -298,7 +298,7 @@ public interface ICFSecProtISOCtryCcyTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFSecProtISOCtryCcy readRecByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtISOCtryCcy protreadRecByIdIdx( ICFSecProtAuthorization Authorization,
 		short ISOCtryId,
 		short ISOCcyId );
 
@@ -313,7 +313,7 @@ public interface ICFSecProtISOCtryCcyTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFSecProtISOCtryCcy[] readRecByCtryIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtISOCtryCcy[] protreadRecByCtryIdx( ICFSecProtAuthorization Authorization,
 		short ISOCtryId );
 
 	/**
@@ -327,6 +327,6 @@ public interface ICFSecProtISOCtryCcyTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFSecProtISOCtryCcy[] readRecByCcyIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtISOCtryCcy[] protreadRecByCcyIdx( ICFSecProtAuthorization Authorization,
 		short ISOCcyId );
 }

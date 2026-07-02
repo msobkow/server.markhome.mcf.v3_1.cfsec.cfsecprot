@@ -38,11 +38,13 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 
 /*
  *	ICFSecProtISOTZoneFactory protected interface for ISOTZone
  */
 public interface ICFSecProtISOTZoneFactory
+extends ICFSecPubISOTZoneFactory
 {
 
 	/**
@@ -78,13 +80,13 @@ public interface ICFSecProtISOTZoneFactory
 	 *
 	 *	@return	The new instance.
 	 */
-	public ICFSecProtISOTZone newRec();
+	public ICFSecProtISOTZone newProtRec();
 
 	/**
 	 *	Allocate a protected ISOTZone history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
-	public ICFSecProtISOTZoneH newHRec();
+	public ICFSecProtISOTZoneH newProtHRec();
 
 }

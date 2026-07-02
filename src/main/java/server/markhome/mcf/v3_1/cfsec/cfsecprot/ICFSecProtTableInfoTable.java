@@ -56,7 +56,7 @@ public interface ICFSecProtTableInfoTable
 	 *
 	 *	@param	rec	The instance interface to be created.
 	 */
-	ICFSecProtTableInfo createTableInfo( ICFSecProtAuthorization Authorization,
+	public ICFSecProtTableInfo protcreateTableInfo( ICFSecProtAuthorization Authorization,
 		ICFSecProtTableInfo rec );
 
 
@@ -68,7 +68,7 @@ public interface ICFSecProtTableInfoTable
 	 *
 	 *	@param	rec	The instance interface to be updated
 	 */
-	ICFSecProtTableInfo updateTableInfo( ICFSecProtAuthorization Authorization,
+	public ICFSecProtTableInfo protupdateTableInfo( ICFSecProtAuthorization Authorization,
 		ICFSecProtTableInfo rec );
 
 
@@ -79,7 +79,7 @@ public interface ICFSecProtTableInfoTable
 	 *
 	 *	@param	rec	The instance interface to be deleted.
 	 */
-	void deleteTableInfo( ICFSecProtAuthorization Authorization,
+	public void protdeleteTableInfo( ICFSecProtAuthorization Authorization,
 		ICFSecProtTableInfo rec );
 	/**
 	 *	Delete the TableInfo instance identified by the primary key.
@@ -88,7 +88,7 @@ public interface ICFSecProtTableInfoTable
 	 *
 	 *	@param	argKey	The primary key identifying the instance to be deleted.
 	 */
-	void deleteTableInfoByIdIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteTableInfoByIdIdx( ICFSecProtAuthorization Authorization,
 		Integer argKey );
 	/**
 	 *	Delete the TableInfo instances identified by the key TableNameIdx.
@@ -97,7 +97,7 @@ public interface ICFSecProtTableInfoTable
 	 *
 	 *	@param	TableName	The TableInfo key attribute of the instance generating the id.
 	 */
-	void deleteTableInfoByTableNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteTableInfoByTableNameIdx( ICFSecProtAuthorization Authorization,
 		String argTableName );
 
 	/**
@@ -107,7 +107,7 @@ public interface ICFSecProtTableInfoTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteTableInfoByTableNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteTableInfoByTableNameIdx( ICFSecProtAuthorization Authorization,
 		ICFSecProtTableInfoByTableNameIdxKey argKey );
 	/**
 	 *	Delete the TableInfo instances identified by the key SuperNameIdx.
@@ -116,7 +116,7 @@ public interface ICFSecProtTableInfoTable
 	 *
 	 *	@param	SuperName	The TableInfo key attribute of the instance generating the id.
 	 */
-	void deleteTableInfoBySuperNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteTableInfoBySuperNameIdx( ICFSecProtAuthorization Authorization,
 		String argSuperName );
 
 	/**
@@ -126,7 +126,7 @@ public interface ICFSecProtTableInfoTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteTableInfoBySuperNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteTableInfoBySuperNameIdx( ICFSecProtAuthorization Authorization,
 		ICFSecProtTableInfoBySuperNameIdxKey argKey );
 	/**
 	 *	Delete the TableInfo instances identified by the key SchemaNameIdx.
@@ -135,7 +135,7 @@ public interface ICFSecProtTableInfoTable
 	 *
 	 *	@param	SchemaName	The TableInfo key attribute of the instance generating the id.
 	 */
-	void deleteTableInfoBySchemaNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteTableInfoBySchemaNameIdx( ICFSecProtAuthorization Authorization,
 		String argSchemaName );
 
 	/**
@@ -145,7 +145,7 @@ public interface ICFSecProtTableInfoTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteTableInfoBySchemaNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteTableInfoBySchemaNameIdx( ICFSecProtAuthorization Authorization,
 		ICFSecProtTableInfoBySchemaNameIdxKey argKey );
 	/**
 	 *	Delete the TableInfo instances identified by the key SchemaBkCodeIdx.
@@ -156,7 +156,7 @@ public interface ICFSecProtTableInfoTable
 	 *
 	 *	@param	BackingClassCode	The TableInfo key attribute of the instance generating the id.
 	 */
-	void deleteTableInfoBySchemaBkCodeIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteTableInfoBySchemaBkCodeIdx( ICFSecProtAuthorization Authorization,
 		String argSchemaName,
 		int argBackingClassCode );
 
@@ -167,7 +167,7 @@ public interface ICFSecProtTableInfoTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteTableInfoBySchemaBkCodeIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteTableInfoBySchemaBkCodeIdx( ICFSecProtAuthorization Authorization,
 		ICFSecProtTableInfoBySchemaBkCodeIdxKey argKey );
 	/**
 	 *	Delete the TableInfo instances identified by the key SchemaRTCodeIdx.
@@ -176,7 +176,7 @@ public interface ICFSecProtTableInfoTable
 	 *
 	 *	@param	RuntimeClassCode	The TableInfo key attribute of the instance generating the id.
 	 */
-	void deleteTableInfoBySchemaRTCodeIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteTableInfoBySchemaRTCodeIdx( ICFSecProtAuthorization Authorization,
 		int argRuntimeClassCode );
 
 	/**
@@ -186,7 +186,7 @@ public interface ICFSecProtTableInfoTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteTableInfoBySchemaRTCodeIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteTableInfoBySchemaRTCodeIdx( ICFSecProtAuthorization Authorization,
 		ICFSecProtTableInfoBySchemaRTCodeIdxKey argKey );
 
 
@@ -200,7 +200,7 @@ public interface ICFSecProtTableInfoTable
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFSecProtTableInfo readDerived( ICFSecProtAuthorization Authorization,
+	public ICFSecProtTableInfo protreadDerived( ICFSecProtAuthorization Authorization,
 		Integer PKey );
 
 	/**
@@ -213,7 +213,7 @@ public interface ICFSecProtTableInfoTable
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFSecProtTableInfo lockDerived( ICFSecProtAuthorization Authorization,
+	public ICFSecProtTableInfo protlockDerived( ICFSecProtAuthorization Authorization,
 		Integer PKey );
 
 	/**
@@ -223,7 +223,7 @@ public interface ICFSecProtTableInfoTable
 	 *
 	 *	@return An array of derived record instances, potentially with 0 elements in the set.
 	 */
-	ICFSecProtTableInfo[] readProtAllDerived( ICFSecProtAuthorization Authorization );
+	public ICFSecProtTableInfo[] protreadProtAllDerived( ICFSecProtAuthorization Authorization );
 
 	/**
 	 *	Read the derived TableInfo record instance identified by the unique key IdIdx.
@@ -235,7 +235,7 @@ public interface ICFSecProtTableInfoTable
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFSecProtTableInfo readDerivedByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtTableInfo protreadDerivedByIdIdx( ICFSecProtAuthorization Authorization,
 		int TableInfoId );
 
 	/**
@@ -248,7 +248,7 @@ public interface ICFSecProtTableInfoTable
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFSecProtTableInfo readDerivedByTableNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtTableInfo protreadDerivedByTableNameIdx( ICFSecProtAuthorization Authorization,
 		String TableName );
 
 	/**
@@ -260,7 +260,7 @@ public interface ICFSecProtTableInfoTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFSecProtTableInfo[] readDerivedBySuperNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtTableInfo[] protreadDerivedBySuperNameIdx( ICFSecProtAuthorization Authorization,
 		String SuperName );
 
 	/**
@@ -272,7 +272,7 @@ public interface ICFSecProtTableInfoTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFSecProtTableInfo[] readDerivedBySchemaNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtTableInfo[] protreadDerivedBySchemaNameIdx( ICFSecProtAuthorization Authorization,
 		String SchemaName );
 
 	/**
@@ -287,7 +287,7 @@ public interface ICFSecProtTableInfoTable
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFSecProtTableInfo readDerivedBySchemaBkCodeIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtTableInfo protreadDerivedBySchemaBkCodeIdx( ICFSecProtAuthorization Authorization,
 		String SchemaName,
 		int BackingClassCode );
 
@@ -301,7 +301,7 @@ public interface ICFSecProtTableInfoTable
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFSecProtTableInfo readDerivedBySchemaRTCodeIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtTableInfo protreadDerivedBySchemaRTCodeIdx( ICFSecProtAuthorization Authorization,
 		int RuntimeClassCode );
 
 	/**
@@ -316,7 +316,7 @@ public interface ICFSecProtTableInfoTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFSecProtTableInfo readRec( ICFSecProtAuthorization Authorization,
+	public ICFSecProtTableInfo protreadRec( ICFSecProtAuthorization Authorization,
 		Integer PKey );
 
 	/**
@@ -331,7 +331,7 @@ public interface ICFSecProtTableInfoTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFSecProtTableInfo lockRec( ICFSecProtAuthorization Authorization,
+	public ICFSecProtTableInfo protlockRec( ICFSecProtAuthorization Authorization,
 		Integer PKey );
 
 	/**
@@ -341,7 +341,7 @@ public interface ICFSecProtTableInfoTable
 	 *
 	 *	@return All the specific TableInfo instances in the database accessible for the Authorization.
 	 */
-	ICFSecProtTableInfo[] readAllRec( ICFSecProtAuthorization Authorization );
+	public ICFSecProtTableInfo[] protreadAllRec( ICFSecProtAuthorization Authorization );
 
 	/**
 	 *	Read the specific TableInfo record instance identified by the unique key IdIdx.
@@ -355,7 +355,7 @@ public interface ICFSecProtTableInfoTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFSecProtTableInfo readRecByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtTableInfo protreadRecByIdIdx( ICFSecProtAuthorization Authorization,
 		int TableInfoId );
 
 	/**
@@ -370,7 +370,7 @@ public interface ICFSecProtTableInfoTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFSecProtTableInfo readRecByTableNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtTableInfo protreadRecByTableNameIdx( ICFSecProtAuthorization Authorization,
 		String TableName );
 
 	/**
@@ -384,7 +384,7 @@ public interface ICFSecProtTableInfoTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFSecProtTableInfo[] readRecBySuperNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtTableInfo[] protreadRecBySuperNameIdx( ICFSecProtAuthorization Authorization,
 		String SuperName );
 
 	/**
@@ -398,7 +398,7 @@ public interface ICFSecProtTableInfoTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFSecProtTableInfo[] readRecBySchemaNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtTableInfo[] protreadRecBySchemaNameIdx( ICFSecProtAuthorization Authorization,
 		String SchemaName );
 
 	/**
@@ -415,7 +415,7 @@ public interface ICFSecProtTableInfoTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFSecProtTableInfo readRecBySchemaBkCodeIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtTableInfo protreadRecBySchemaBkCodeIdx( ICFSecProtAuthorization Authorization,
 		String SchemaName,
 		int BackingClassCode );
 
@@ -431,6 +431,6 @@ public interface ICFSecProtTableInfoTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFSecProtTableInfo readRecBySchemaRTCodeIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtTableInfo protreadRecBySchemaRTCodeIdx( ICFSecProtAuthorization Authorization,
 		int RuntimeClassCode );
 }

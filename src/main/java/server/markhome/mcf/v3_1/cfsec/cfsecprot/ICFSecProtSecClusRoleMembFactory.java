@@ -78,13 +78,13 @@ public interface ICFSecProtSecClusRoleMembFactory
 	 *
 	 *	@return	The new instance.
 	 */
-	public ICFSecProtSecClusRoleMemb newRec();
+	public ICFSecProtSecClusRoleMemb newProtRec();
 
 	/**
 	 *	Allocate a protected SecClusRoleMemb history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
-	public ICFSecProtSecClusRoleMembH newHRec();
+	public ICFSecProtSecClusRoleMembH newProtHRec();
 
 }

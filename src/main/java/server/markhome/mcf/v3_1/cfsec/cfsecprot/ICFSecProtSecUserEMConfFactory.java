@@ -85,13 +85,13 @@ public interface ICFSecProtSecUserEMConfFactory
 	 *
 	 *	@return	The new instance.
 	 */
-	public ICFSecProtSecUserEMConf newRec();
+	public ICFSecProtSecUserEMConf newProtRec();
 
 	/**
 	 *	Allocate a protected SecUserEMConf history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
-	public ICFSecProtSecUserEMConfH newHRec();
+	public ICFSecProtSecUserEMConfH newProtHRec();
 
 }

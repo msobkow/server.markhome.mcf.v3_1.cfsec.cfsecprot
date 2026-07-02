@@ -38,11 +38,13 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 
 /*
  *	ICFSecProtTenantFactory protected interface for Tenant
  */
 public interface ICFSecProtTenantFactory
+extends ICFSecPubTenantFactory
 {
 
 	/**
@@ -71,13 +73,13 @@ public interface ICFSecProtTenantFactory
 	 *
 	 *	@return	The new instance.
 	 */
-	public ICFSecProtTenant newRec();
+	public ICFSecProtTenant newProtRec();
 
 	/**
 	 *	Allocate a protected Tenant history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
-	public ICFSecProtTenantH newHRec();
+	public ICFSecProtTenantH newProtHRec();
 
 }

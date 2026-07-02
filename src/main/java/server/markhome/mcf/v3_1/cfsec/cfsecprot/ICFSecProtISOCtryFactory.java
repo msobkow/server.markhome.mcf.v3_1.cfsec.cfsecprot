@@ -38,11 +38,13 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 
 /*
  *	ICFSecProtISOCtryFactory protected interface for ISOCtry
  */
 public interface ICFSecProtISOCtryFactory
+extends ICFSecPubISOCtryFactory
 {
 
 	/**
@@ -71,13 +73,13 @@ public interface ICFSecProtISOCtryFactory
 	 *
 	 *	@return	The new instance.
 	 */
-	public ICFSecProtISOCtry newRec();
+	public ICFSecProtISOCtry newProtRec();
 
 	/**
 	 *	Allocate a protected ISOCtry history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
-	public ICFSecProtISOCtryH newHRec();
+	public ICFSecProtISOCtryH newProtHRec();
 
 }

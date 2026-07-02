@@ -78,13 +78,13 @@ public interface ICFSecProtSecUserPWResetFactory
 	 *
 	 *	@return	The new instance.
 	 */
-	public ICFSecProtSecUserPWReset newRec();
+	public ICFSecProtSecUserPWReset newProtRec();
 
 	/**
 	 *	Allocate a protected SecUserPWReset history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
-	public ICFSecProtSecUserPWResetH newHRec();
+	public ICFSecProtSecUserPWResetH newProtHRec();
 
 }

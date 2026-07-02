@@ -38,11 +38,13 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 
 /*
  *	ICFSecProtISOCtryLangFactory protected interface for ISOCtryLang
  */
 public interface ICFSecProtISOCtryLangFactory
+extends ICFSecPubISOCtryLangFactory
 {
 
 	/**
@@ -78,13 +80,13 @@ public interface ICFSecProtISOCtryLangFactory
 	 *
 	 *	@return	The new instance.
 	 */
-	public ICFSecProtISOCtryLang newRec();
+	public ICFSecProtISOCtryLang newProtRec();
 
 	/**
 	 *	Allocate a protected ISOCtryLang history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
-	public ICFSecProtISOCtryLangH newHRec();
+	public ICFSecProtISOCtryLangH newProtHRec();
 
 }

@@ -56,7 +56,7 @@ public interface ICFSecProtSecUserTable
 	 *
 	 *	@param	rec	The instance interface to be created.
 	 */
-	ICFSecProtSecUser createSecUser( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecUser protcreateSecUser( ICFSecProtAuthorization Authorization,
 		ICFSecProtSecUser rec );
 
 
@@ -68,7 +68,7 @@ public interface ICFSecProtSecUserTable
 	 *
 	 *	@param	rec	The instance interface to be updated
 	 */
-	ICFSecProtSecUser updateSecUser( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecUser protupdateSecUser( ICFSecProtAuthorization Authorization,
 		ICFSecProtSecUser rec );
 
 
@@ -79,7 +79,7 @@ public interface ICFSecProtSecUserTable
 	 *
 	 *	@param	rec	The instance interface to be deleted.
 	 */
-	void deleteSecUser( ICFSecProtAuthorization Authorization,
+	public void protdeleteSecUser( ICFSecProtAuthorization Authorization,
 		ICFSecProtSecUser rec );
 	/**
 	 *	Delete the SecUser instance identified by the primary key.
@@ -88,7 +88,7 @@ public interface ICFSecProtSecUserTable
 	 *
 	 *	@param	argKey	The primary key identifying the instance to be deleted.
 	 */
-	void deleteSecUserByIdIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSecUserByIdIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argKey );
 	/**
 	 *	Delete the SecUser instances identified by the key ULoginIdx.
@@ -97,7 +97,7 @@ public interface ICFSecProtSecUserTable
 	 *
 	 *	@param	LoginId	The SecUser key attribute of the instance generating the id.
 	 */
-	void deleteSecUserByULoginIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSecUserByULoginIdx( ICFSecProtAuthorization Authorization,
 		String argLoginId );
 
 	/**
@@ -107,7 +107,7 @@ public interface ICFSecProtSecUserTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteSecUserByULoginIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSecUserByULoginIdx( ICFSecProtAuthorization Authorization,
 		ICFSecProtSecUserByULoginIdxKey argKey );
 	/**
 	 *	Delete the SecUser instances identified by the key EMAddrIdx.
@@ -116,7 +116,7 @@ public interface ICFSecProtSecUserTable
 	 *
 	 *	@param	EMailAddress	The SecUser key attribute of the instance generating the id.
 	 */
-	void deleteSecUserByEMAddrIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSecUserByEMAddrIdx( ICFSecProtAuthorization Authorization,
 		String argEMailAddress );
 
 	/**
@@ -126,7 +126,7 @@ public interface ICFSecProtSecUserTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteSecUserByEMAddrIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSecUserByEMAddrIdx( ICFSecProtAuthorization Authorization,
 		ICFSecProtSecUserByEMAddrIdxKey argKey );
 
 
@@ -140,7 +140,7 @@ public interface ICFSecProtSecUserTable
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFSecProtSecUser readDerived( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecUser protreadDerived( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -153,7 +153,7 @@ public interface ICFSecProtSecUserTable
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFSecProtSecUser lockDerived( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecUser protlockDerived( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -163,7 +163,7 @@ public interface ICFSecProtSecUserTable
 	 *
 	 *	@return An array of derived record instances, potentially with 0 elements in the set.
 	 */
-	ICFSecProtSecUser[] readProtAllDerived( ICFSecProtAuthorization Authorization );
+	public ICFSecProtSecUser[] protreadProtAllDerived( ICFSecProtAuthorization Authorization );
 
 	/**
 	 *	Read the derived SecUser record instance identified by the unique key IdIdx.
@@ -175,7 +175,7 @@ public interface ICFSecProtSecUserTable
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFSecProtSecUser readDerivedByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecUser protreadDerivedByIdIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 SecUserId );
 
 	/**
@@ -188,7 +188,7 @@ public interface ICFSecProtSecUserTable
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFSecProtSecUser readDerivedByULoginIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecUser protreadDerivedByULoginIdx( ICFSecProtAuthorization Authorization,
 		String LoginId );
 
 	/**
@@ -200,7 +200,7 @@ public interface ICFSecProtSecUserTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFSecProtSecUser[] readDerivedByEMAddrIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecUser[] protreadDerivedByEMAddrIdx( ICFSecProtAuthorization Authorization,
 		String EMailAddress );
 
 	/**
@@ -215,7 +215,7 @@ public interface ICFSecProtSecUserTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFSecProtSecUser readRec( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecUser protreadRec( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -230,7 +230,7 @@ public interface ICFSecProtSecUserTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFSecProtSecUser lockRec( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecUser protlockRec( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -240,7 +240,7 @@ public interface ICFSecProtSecUserTable
 	 *
 	 *	@return All the specific SecUser instances in the database accessible for the Authorization.
 	 */
-	ICFSecProtSecUser[] readAllRec( ICFSecProtAuthorization Authorization );
+	public ICFSecProtSecUser[] protreadAllRec( ICFSecProtAuthorization Authorization );
 
 	/**
 	 *	Read a page of all the specific SecUser record instances.
@@ -249,7 +249,7 @@ public interface ICFSecProtSecUserTable
 	 *
 	 *	@return All the specific SecUser instances in the database accessible for the Authorization.
 	 */
-	ICFSecProtSecUser[] pageAllRec( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecUser[] protpageAllRec( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 priorSecUserId );
 
 	/**
@@ -264,7 +264,7 @@ public interface ICFSecProtSecUserTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFSecProtSecUser readRecByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecUser protreadRecByIdIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 SecUserId );
 
 	/**
@@ -279,7 +279,7 @@ public interface ICFSecProtSecUserTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFSecProtSecUser readRecByULoginIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecUser protreadRecByULoginIdx( ICFSecProtAuthorization Authorization,
 		String LoginId );
 
 	/**
@@ -293,7 +293,7 @@ public interface ICFSecProtSecUserTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFSecProtSecUser[] readRecByEMAddrIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecUser[] protreadRecByEMAddrIdx( ICFSecProtAuthorization Authorization,
 		String EMailAddress );
 
 	/**
@@ -307,7 +307,7 @@ public interface ICFSecProtSecUserTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFSecProtSecUser[] pageRecByEMAddrIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecUser[] protpageRecByEMAddrIdx( ICFSecProtAuthorization Authorization,
 		String EMailAddress,
 		CFLibDbKeyHash256 priorSecUserId );
 }

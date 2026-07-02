@@ -38,11 +38,13 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 
 /*
  *	ICFSecProtSecUserFactory protected interface for SecUser
  */
 public interface ICFSecProtSecUserFactory
+extends ICFSecPubSecUserFactory
 {
 
 	/**
@@ -71,13 +73,13 @@ public interface ICFSecProtSecUserFactory
 	 *
 	 *	@return	The new instance.
 	 */
-	public ICFSecProtSecUser newRec();
+	public ICFSecProtSecUser newProtRec();
 
 	/**
 	 *	Allocate a protected SecUser history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
-	public ICFSecProtSecUserH newHRec();
+	public ICFSecProtSecUserH newProtHRec();
 
 }

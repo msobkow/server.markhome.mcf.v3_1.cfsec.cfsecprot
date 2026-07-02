@@ -56,7 +56,7 @@ public interface ICFSecProtISOTZoneTable
 	 *
 	 *	@param	rec	The instance interface to be created.
 	 */
-	ICFSecProtISOTZone createISOTZone( ICFSecProtAuthorization Authorization,
+	public ICFSecProtISOTZone protcreateISOTZone( ICFSecProtAuthorization Authorization,
 		ICFSecProtISOTZone rec );
 
 
@@ -68,7 +68,7 @@ public interface ICFSecProtISOTZoneTable
 	 *
 	 *	@param	rec	The instance interface to be updated
 	 */
-	ICFSecProtISOTZone updateISOTZone( ICFSecProtAuthorization Authorization,
+	public ICFSecProtISOTZone protupdateISOTZone( ICFSecProtAuthorization Authorization,
 		ICFSecProtISOTZone rec );
 
 
@@ -79,7 +79,7 @@ public interface ICFSecProtISOTZoneTable
 	 *
 	 *	@param	rec	The instance interface to be deleted.
 	 */
-	void deleteISOTZone( ICFSecProtAuthorization Authorization,
+	public void protdeleteISOTZone( ICFSecProtAuthorization Authorization,
 		ICFSecProtISOTZone rec );
 	/**
 	 *	Delete the ISOTZone instance identified by the primary key.
@@ -88,7 +88,7 @@ public interface ICFSecProtISOTZoneTable
 	 *
 	 *	@param	argKey	The primary key identifying the instance to be deleted.
 	 */
-	void deleteISOTZoneByIdIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteISOTZoneByIdIdx( ICFSecProtAuthorization Authorization,
 		Short argKey );
 	/**
 	 *	Delete the ISOTZone instances identified by the key OffsetIdx.
@@ -99,7 +99,7 @@ public interface ICFSecProtISOTZoneTable
 	 *
 	 *	@param	TZMinOffset	The ISOTZone key attribute of the instance generating the id.
 	 */
-	void deleteISOTZoneByOffsetIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteISOTZoneByOffsetIdx( ICFSecProtAuthorization Authorization,
 		short argTZHourOffset,
 		short argTZMinOffset );
 
@@ -110,7 +110,7 @@ public interface ICFSecProtISOTZoneTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteISOTZoneByOffsetIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteISOTZoneByOffsetIdx( ICFSecProtAuthorization Authorization,
 		ICFSecProtISOTZoneByOffsetIdxKey argKey );
 	/**
 	 *	Delete the ISOTZone instances identified by the key UTZNameIdx.
@@ -119,7 +119,7 @@ public interface ICFSecProtISOTZoneTable
 	 *
 	 *	@param	TZName	The ISOTZone key attribute of the instance generating the id.
 	 */
-	void deleteISOTZoneByUTZNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteISOTZoneByUTZNameIdx( ICFSecProtAuthorization Authorization,
 		String argTZName );
 
 	/**
@@ -129,7 +129,7 @@ public interface ICFSecProtISOTZoneTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteISOTZoneByUTZNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteISOTZoneByUTZNameIdx( ICFSecProtAuthorization Authorization,
 		ICFSecProtISOTZoneByUTZNameIdxKey argKey );
 	/**
 	 *	Delete the ISOTZone instances identified by the key Iso8601Idx.
@@ -138,7 +138,7 @@ public interface ICFSecProtISOTZoneTable
 	 *
 	 *	@param	Iso8601	The ISOTZone key attribute of the instance generating the id.
 	 */
-	void deleteISOTZoneByIso8601Idx( ICFSecProtAuthorization Authorization,
+	public void protdeleteISOTZoneByIso8601Idx( ICFSecProtAuthorization Authorization,
 		String argIso8601 );
 
 	/**
@@ -148,7 +148,7 @@ public interface ICFSecProtISOTZoneTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteISOTZoneByIso8601Idx( ICFSecProtAuthorization Authorization,
+	public void protdeleteISOTZoneByIso8601Idx( ICFSecProtAuthorization Authorization,
 		ICFSecProtISOTZoneByIso8601IdxKey argKey );
 
 
@@ -162,7 +162,7 @@ public interface ICFSecProtISOTZoneTable
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFSecProtISOTZone readDerived( ICFSecProtAuthorization Authorization,
+	public ICFSecProtISOTZone protreadDerived( ICFSecProtAuthorization Authorization,
 		Short PKey );
 
 	/**
@@ -175,7 +175,7 @@ public interface ICFSecProtISOTZoneTable
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFSecProtISOTZone lockDerived( ICFSecProtAuthorization Authorization,
+	public ICFSecProtISOTZone protlockDerived( ICFSecProtAuthorization Authorization,
 		Short PKey );
 
 	/**
@@ -185,7 +185,7 @@ public interface ICFSecProtISOTZoneTable
 	 *
 	 *	@return An array of derived record instances, potentially with 0 elements in the set.
 	 */
-	ICFSecProtISOTZone[] readProtAllDerived( ICFSecProtAuthorization Authorization );
+	public ICFSecProtISOTZone[] protreadProtAllDerived( ICFSecProtAuthorization Authorization );
 
 	/**
 	 *	Read the derived ISOTZone record instance identified by the unique key IdIdx.
@@ -197,7 +197,7 @@ public interface ICFSecProtISOTZoneTable
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFSecProtISOTZone readDerivedByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtISOTZone protreadDerivedByIdIdx( ICFSecProtAuthorization Authorization,
 		short ISOTZoneId );
 
 	/**
@@ -211,7 +211,7 @@ public interface ICFSecProtISOTZoneTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFSecProtISOTZone[] readDerivedByOffsetIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtISOTZone[] protreadDerivedByOffsetIdx( ICFSecProtAuthorization Authorization,
 		short TZHourOffset,
 		short TZMinOffset );
 
@@ -225,7 +225,7 @@ public interface ICFSecProtISOTZoneTable
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFSecProtISOTZone readDerivedByUTZNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtISOTZone protreadDerivedByUTZNameIdx( ICFSecProtAuthorization Authorization,
 		String TZName );
 
 	/**
@@ -237,7 +237,7 @@ public interface ICFSecProtISOTZoneTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFSecProtISOTZone[] readDerivedByIso8601Idx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtISOTZone[] protreadDerivedByIso8601Idx( ICFSecProtAuthorization Authorization,
 		String Iso8601 );
 
 	/**
@@ -252,7 +252,7 @@ public interface ICFSecProtISOTZoneTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFSecProtISOTZone readRec( ICFSecProtAuthorization Authorization,
+	public ICFSecProtISOTZone protreadRec( ICFSecProtAuthorization Authorization,
 		Short PKey );
 
 	/**
@@ -267,7 +267,7 @@ public interface ICFSecProtISOTZoneTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFSecProtISOTZone lockRec( ICFSecProtAuthorization Authorization,
+	public ICFSecProtISOTZone protlockRec( ICFSecProtAuthorization Authorization,
 		Short PKey );
 
 	/**
@@ -277,7 +277,7 @@ public interface ICFSecProtISOTZoneTable
 	 *
 	 *	@return All the specific ISOTZone instances in the database accessible for the Authorization.
 	 */
-	ICFSecProtISOTZone[] readAllRec( ICFSecProtAuthorization Authorization );
+	public ICFSecProtISOTZone[] protreadAllRec( ICFSecProtAuthorization Authorization );
 
 	/**
 	 *	Read the specific ISOTZone record instance identified by the unique key IdIdx.
@@ -291,7 +291,7 @@ public interface ICFSecProtISOTZoneTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFSecProtISOTZone readRecByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtISOTZone protreadRecByIdIdx( ICFSecProtAuthorization Authorization,
 		short ISOTZoneId );
 
 	/**
@@ -307,7 +307,7 @@ public interface ICFSecProtISOTZoneTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFSecProtISOTZone[] readRecByOffsetIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtISOTZone[] protreadRecByOffsetIdx( ICFSecProtAuthorization Authorization,
 		short TZHourOffset,
 		short TZMinOffset );
 
@@ -323,7 +323,7 @@ public interface ICFSecProtISOTZoneTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFSecProtISOTZone readRecByUTZNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtISOTZone protreadRecByUTZNameIdx( ICFSecProtAuthorization Authorization,
 		String TZName );
 
 	/**
@@ -337,6 +337,6 @@ public interface ICFSecProtISOTZoneTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFSecProtISOTZone[] readRecByIso8601Idx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtISOTZone[] protreadRecByIso8601Idx( ICFSecProtAuthorization Authorization,
 		String Iso8601 );
 }

@@ -38,11 +38,13 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 
 /*
  *	ICFSecProtSecSysGrpFactory protected interface for SecSysGrp
  */
 public interface ICFSecProtSecSysGrpFactory
+extends ICFSecPubSecSysGrpFactory
 {
 
 	/**
@@ -71,13 +73,13 @@ public interface ICFSecProtSecSysGrpFactory
 	 *
 	 *	@return	The new instance.
 	 */
-	public ICFSecProtSecSysGrp newRec();
+	public ICFSecProtSecSysGrp newProtRec();
 
 	/**
 	 *	Allocate a protected SecSysGrp history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
-	public ICFSecProtSecSysGrpH newHRec();
+	public ICFSecProtSecSysGrpH newProtHRec();
 
 }

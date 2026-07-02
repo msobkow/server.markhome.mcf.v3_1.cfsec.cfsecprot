@@ -78,13 +78,13 @@ public interface ICFSecProtSecSysGrpIncFactory
 	 *
 	 *	@return	The new instance.
 	 */
-	public ICFSecProtSecSysGrpInc newRec();
+	public ICFSecProtSecSysGrpInc newProtRec();
 
 	/**
 	 *	Allocate a protected SecSysGrpInc history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
-	public ICFSecProtSecSysGrpIncH newHRec();
+	public ICFSecProtSecSysGrpIncH newProtHRec();
 
 }

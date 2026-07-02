@@ -56,7 +56,7 @@ public interface ICFSecProtSysClusterTable
 	 *
 	 *	@param	rec	The instance interface to be created.
 	 */
-	ICFSecProtSysCluster createSysCluster( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSysCluster protcreateSysCluster( ICFSecProtAuthorization Authorization,
 		ICFSecProtSysCluster rec );
 
 
@@ -68,7 +68,7 @@ public interface ICFSecProtSysClusterTable
 	 *
 	 *	@param	rec	The instance interface to be updated
 	 */
-	ICFSecProtSysCluster updateSysCluster( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSysCluster protupdateSysCluster( ICFSecProtAuthorization Authorization,
 		ICFSecProtSysCluster rec );
 
 
@@ -79,7 +79,7 @@ public interface ICFSecProtSysClusterTable
 	 *
 	 *	@param	rec	The instance interface to be deleted.
 	 */
-	void deleteSysCluster( ICFSecProtAuthorization Authorization,
+	public void protdeleteSysCluster( ICFSecProtAuthorization Authorization,
 		ICFSecProtSysCluster rec );
 	/**
 	 *	Delete the SysCluster instance identified by the primary key.
@@ -88,7 +88,7 @@ public interface ICFSecProtSysClusterTable
 	 *
 	 *	@param	argKey	The primary key identifying the instance to be deleted.
 	 */
-	void deleteSysClusterByIdIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSysClusterByIdIdx( ICFSecProtAuthorization Authorization,
 		Integer argKey );
 	/**
 	 *	Delete the SysCluster instances identified by the key ClusterIdx.
@@ -97,7 +97,7 @@ public interface ICFSecProtSysClusterTable
 	 *
 	 *	@param	ClusterId	The SysCluster key attribute of the instance generating the id.
 	 */
-	void deleteSysClusterByClusterIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSysClusterByClusterIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argClusterId );
 
 	/**
@@ -107,7 +107,7 @@ public interface ICFSecProtSysClusterTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteSysClusterByClusterIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSysClusterByClusterIdx( ICFSecProtAuthorization Authorization,
 		ICFSecProtSysClusterByClusterIdxKey argKey );
 
 
@@ -121,7 +121,7 @@ public interface ICFSecProtSysClusterTable
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFSecProtSysCluster readDerived( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSysCluster protreadDerived( ICFSecProtAuthorization Authorization,
 		Integer PKey );
 
 	/**
@@ -134,7 +134,7 @@ public interface ICFSecProtSysClusterTable
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFSecProtSysCluster lockDerived( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSysCluster protlockDerived( ICFSecProtAuthorization Authorization,
 		Integer PKey );
 
 	/**
@@ -144,7 +144,7 @@ public interface ICFSecProtSysClusterTable
 	 *
 	 *	@return An array of derived record instances, potentially with 0 elements in the set.
 	 */
-	ICFSecProtSysCluster[] readProtAllDerived( ICFSecProtAuthorization Authorization );
+	public ICFSecProtSysCluster[] protreadProtAllDerived( ICFSecProtAuthorization Authorization );
 
 	/**
 	 *	Read the derived SysCluster record instance identified by the unique key IdIdx.
@@ -156,7 +156,7 @@ public interface ICFSecProtSysClusterTable
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFSecProtSysCluster readDerivedByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSysCluster protreadDerivedByIdIdx( ICFSecProtAuthorization Authorization,
 		int SingletonId );
 
 	/**
@@ -168,7 +168,7 @@ public interface ICFSecProtSysClusterTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFSecProtSysCluster[] readDerivedByClusterIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSysCluster[] protreadDerivedByClusterIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ClusterId );
 
 	/**
@@ -183,7 +183,7 @@ public interface ICFSecProtSysClusterTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFSecProtSysCluster readRec( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSysCluster protreadRec( ICFSecProtAuthorization Authorization,
 		Integer PKey );
 
 	/**
@@ -198,7 +198,7 @@ public interface ICFSecProtSysClusterTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFSecProtSysCluster lockRec( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSysCluster protlockRec( ICFSecProtAuthorization Authorization,
 		Integer PKey );
 
 	/**
@@ -208,7 +208,7 @@ public interface ICFSecProtSysClusterTable
 	 *
 	 *	@return All the specific SysCluster instances in the database accessible for the Authorization.
 	 */
-	ICFSecProtSysCluster[] readAllRec( ICFSecProtAuthorization Authorization );
+	public ICFSecProtSysCluster[] protreadAllRec( ICFSecProtAuthorization Authorization );
 
 	/**
 	 *	Read the specific SysCluster record instance identified by the unique key IdIdx.
@@ -222,7 +222,7 @@ public interface ICFSecProtSysClusterTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFSecProtSysCluster readRecByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSysCluster protreadRecByIdIdx( ICFSecProtAuthorization Authorization,
 		int SingletonId );
 
 	/**
@@ -236,6 +236,6 @@ public interface ICFSecProtSysClusterTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFSecProtSysCluster[] readRecByClusterIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSysCluster[] protreadRecByClusterIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 ClusterId );
 }

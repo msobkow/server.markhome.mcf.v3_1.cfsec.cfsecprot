@@ -64,13 +64,13 @@ public interface ICFSecProtSecUserPasswordFactory
 	 *
 	 *	@return	The new instance.
 	 */
-	public ICFSecProtSecUserPassword newRec();
+	public ICFSecProtSecUserPassword newProtRec();
 
 	/**
 	 *	Allocate a protected SecUserPassword history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
-	public ICFSecProtSecUserPasswordH newHRec();
+	public ICFSecProtSecUserPasswordH newProtHRec();
 
 }

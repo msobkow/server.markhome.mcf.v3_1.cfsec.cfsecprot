@@ -38,11 +38,13 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 
 /*
  *	ICFSecProtSecSysRoleFactory protected interface for SecSysRole
  */
 public interface ICFSecProtSecSysRoleFactory
+extends ICFSecPubSecSysRoleFactory
 {
 
 	/**
@@ -64,13 +66,13 @@ public interface ICFSecProtSecSysRoleFactory
 	 *
 	 *	@return	The new instance.
 	 */
-	public ICFSecProtSecSysRole newRec();
+	public ICFSecProtSecSysRole newProtRec();
 
 	/**
 	 *	Allocate a protected SecSysRole history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
-	public ICFSecProtSecSysRoleH newHRec();
+	public ICFSecProtSecSysRoleH newProtHRec();
 
 }

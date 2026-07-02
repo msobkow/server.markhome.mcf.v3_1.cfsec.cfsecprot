@@ -56,7 +56,7 @@ public interface ICFSecProtSecSysRoleTable
 	 *
 	 *	@param	rec	The instance interface to be created.
 	 */
-	ICFSecProtSecSysRole createSecSysRole( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecSysRole protcreateSecSysRole( ICFSecProtAuthorization Authorization,
 		ICFSecProtSecSysRole rec );
 
 
@@ -68,7 +68,7 @@ public interface ICFSecProtSecSysRoleTable
 	 *
 	 *	@param	rec	The instance interface to be updated
 	 */
-	ICFSecProtSecSysRole updateSecSysRole( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecSysRole protupdateSecSysRole( ICFSecProtAuthorization Authorization,
 		ICFSecProtSecSysRole rec );
 
 
@@ -79,7 +79,7 @@ public interface ICFSecProtSecSysRoleTable
 	 *
 	 *	@param	rec	The instance interface to be deleted.
 	 */
-	void deleteSecSysRole( ICFSecProtAuthorization Authorization,
+	public void protdeleteSecSysRole( ICFSecProtAuthorization Authorization,
 		ICFSecProtSecSysRole rec );
 	/**
 	 *	Delete the SecSysRole instance identified by the primary key.
@@ -88,7 +88,7 @@ public interface ICFSecProtSecSysRoleTable
 	 *
 	 *	@param	argKey	The primary key identifying the instance to be deleted.
 	 */
-	void deleteSecSysRoleByIdIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSecSysRoleByIdIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argKey );
 	/**
 	 *	Delete the SecSysRole instances identified by the key UNameIdx.
@@ -97,7 +97,7 @@ public interface ICFSecProtSecSysRoleTable
 	 *
 	 *	@param	Name	The SecSysRole key attribute of the instance generating the id.
 	 */
-	void deleteSecSysRoleByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSecSysRoleByUNameIdx( ICFSecProtAuthorization Authorization,
 		String argName );
 
 	/**
@@ -107,7 +107,7 @@ public interface ICFSecProtSecSysRoleTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteSecSysRoleByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSecSysRoleByUNameIdx( ICFSecProtAuthorization Authorization,
 		ICFSecProtSecSysRoleByUNameIdxKey argKey );
 
 
@@ -121,7 +121,7 @@ public interface ICFSecProtSecSysRoleTable
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFSecProtSecSysRole readDerived( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecSysRole protreadDerived( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -134,7 +134,7 @@ public interface ICFSecProtSecSysRoleTable
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFSecProtSecSysRole lockDerived( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecSysRole protlockDerived( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -144,7 +144,7 @@ public interface ICFSecProtSecSysRoleTable
 	 *
 	 *	@return An array of derived record instances, potentially with 0 elements in the set.
 	 */
-	ICFSecProtSecSysRole[] readProtAllDerived( ICFSecProtAuthorization Authorization );
+	public ICFSecProtSecSysRole[] protreadProtAllDerived( ICFSecProtAuthorization Authorization );
 
 	/**
 	 *	Read the derived SecSysRole record instance identified by the unique key IdIdx.
@@ -156,7 +156,7 @@ public interface ICFSecProtSecSysRoleTable
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFSecProtSecSysRole readDerivedByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecSysRole protreadDerivedByIdIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 SecSysRoleId );
 
 	/**
@@ -169,7 +169,7 @@ public interface ICFSecProtSecSysRoleTable
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFSecProtSecSysRole readDerivedByUNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecSysRole protreadDerivedByUNameIdx( ICFSecProtAuthorization Authorization,
 		String Name );
 
 	/**
@@ -184,7 +184,7 @@ public interface ICFSecProtSecSysRoleTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFSecProtSecSysRole readRec( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecSysRole protreadRec( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -199,7 +199,7 @@ public interface ICFSecProtSecSysRoleTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFSecProtSecSysRole lockRec( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecSysRole protlockRec( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -209,7 +209,7 @@ public interface ICFSecProtSecSysRoleTable
 	 *
 	 *	@return All the specific SecSysRole instances in the database accessible for the Authorization.
 	 */
-	ICFSecProtSecSysRole[] readAllRec( ICFSecProtAuthorization Authorization );
+	public ICFSecProtSecSysRole[] protreadAllRec( ICFSecProtAuthorization Authorization );
 
 	/**
 	 *	Read the specific SecSysRole record instance identified by the unique key IdIdx.
@@ -223,7 +223,7 @@ public interface ICFSecProtSecSysRoleTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFSecProtSecSysRole readRecByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecSysRole protreadRecByIdIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 SecSysRoleId );
 
 	/**
@@ -238,6 +238,6 @@ public interface ICFSecProtSecSysRoleTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFSecProtSecSysRole readRecByUNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecSysRole protreadRecByUNameIdx( ICFSecProtAuthorization Authorization,
 		String Name );
 }

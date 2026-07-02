@@ -78,13 +78,13 @@ public interface ICFSecProtSecTentGrpMembFactory
 	 *
 	 *	@return	The new instance.
 	 */
-	public ICFSecProtSecTentGrpMemb newRec();
+	public ICFSecProtSecTentGrpMemb newProtRec();
 
 	/**
 	 *	Allocate a protected SecTentGrpMemb history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
-	public ICFSecProtSecTentGrpMembH newHRec();
+	public ICFSecProtSecTentGrpMembH newProtHRec();
 
 }

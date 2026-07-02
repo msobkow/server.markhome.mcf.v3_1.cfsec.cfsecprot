@@ -56,7 +56,7 @@ public interface ICFSecProtClusterTable
 	 *
 	 *	@param	rec	The instance interface to be created.
 	 */
-	ICFSecProtCluster createCluster( ICFSecProtAuthorization Authorization,
+	public ICFSecProtCluster protcreateCluster( ICFSecProtAuthorization Authorization,
 		ICFSecProtCluster rec );
 
 
@@ -68,7 +68,7 @@ public interface ICFSecProtClusterTable
 	 *
 	 *	@param	rec	The instance interface to be updated
 	 */
-	ICFSecProtCluster updateCluster( ICFSecProtAuthorization Authorization,
+	public ICFSecProtCluster protupdateCluster( ICFSecProtAuthorization Authorization,
 		ICFSecProtCluster rec );
 
 
@@ -79,7 +79,7 @@ public interface ICFSecProtClusterTable
 	 *
 	 *	@param	rec	The instance interface to be deleted.
 	 */
-	void deleteCluster( ICFSecProtAuthorization Authorization,
+	public void protdeleteCluster( ICFSecProtAuthorization Authorization,
 		ICFSecProtCluster rec );
 	/**
 	 *	Delete the Cluster instance identified by the primary key.
@@ -88,7 +88,7 @@ public interface ICFSecProtClusterTable
 	 *
 	 *	@param	argKey	The primary key identifying the instance to be deleted.
 	 */
-	void deleteClusterByIdIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteClusterByIdIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argKey );
 	/**
 	 *	Delete the Cluster instances identified by the key UDomNameIdx.
@@ -97,7 +97,7 @@ public interface ICFSecProtClusterTable
 	 *
 	 *	@param	FullDomName	The Cluster key attribute of the instance generating the id.
 	 */
-	void deleteClusterByUDomNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteClusterByUDomNameIdx( ICFSecProtAuthorization Authorization,
 		String argFullDomName );
 
 	/**
@@ -107,7 +107,7 @@ public interface ICFSecProtClusterTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteClusterByUDomNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteClusterByUDomNameIdx( ICFSecProtAuthorization Authorization,
 		ICFSecProtClusterByUDomNameIdxKey argKey );
 	/**
 	 *	Delete the Cluster instances identified by the key UDescrIdx.
@@ -116,7 +116,7 @@ public interface ICFSecProtClusterTable
 	 *
 	 *	@param	Description	The Cluster key attribute of the instance generating the id.
 	 */
-	void deleteClusterByUDescrIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteClusterByUDescrIdx( ICFSecProtAuthorization Authorization,
 		String argDescription );
 
 	/**
@@ -126,7 +126,7 @@ public interface ICFSecProtClusterTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteClusterByUDescrIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteClusterByUDescrIdx( ICFSecProtAuthorization Authorization,
 		ICFSecProtClusterByUDescrIdxKey argKey );
 
 
@@ -140,7 +140,7 @@ public interface ICFSecProtClusterTable
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFSecProtCluster readDerived( ICFSecProtAuthorization Authorization,
+	public ICFSecProtCluster protreadDerived( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -153,7 +153,7 @@ public interface ICFSecProtClusterTable
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFSecProtCluster lockDerived( ICFSecProtAuthorization Authorization,
+	public ICFSecProtCluster protlockDerived( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -163,7 +163,7 @@ public interface ICFSecProtClusterTable
 	 *
 	 *	@return An array of derived record instances, potentially with 0 elements in the set.
 	 */
-	ICFSecProtCluster[] readProtAllDerived( ICFSecProtAuthorization Authorization );
+	public ICFSecProtCluster[] protreadProtAllDerived( ICFSecProtAuthorization Authorization );
 
 	/**
 	 *	Read the derived Cluster record instance identified by the unique key IdIdx.
@@ -175,7 +175,7 @@ public interface ICFSecProtClusterTable
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFSecProtCluster readDerivedByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtCluster protreadDerivedByIdIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 Id );
 
 	/**
@@ -188,7 +188,7 @@ public interface ICFSecProtClusterTable
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFSecProtCluster readDerivedByUDomNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtCluster protreadDerivedByUDomNameIdx( ICFSecProtAuthorization Authorization,
 		String FullDomName );
 
 	/**
@@ -201,7 +201,7 @@ public interface ICFSecProtClusterTable
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFSecProtCluster readDerivedByUDescrIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtCluster protreadDerivedByUDescrIdx( ICFSecProtAuthorization Authorization,
 		String Description );
 
 	/**
@@ -216,7 +216,7 @@ public interface ICFSecProtClusterTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFSecProtCluster readRec( ICFSecProtAuthorization Authorization,
+	public ICFSecProtCluster protreadRec( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -231,7 +231,7 @@ public interface ICFSecProtClusterTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFSecProtCluster lockRec( ICFSecProtAuthorization Authorization,
+	public ICFSecProtCluster protlockRec( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -241,7 +241,7 @@ public interface ICFSecProtClusterTable
 	 *
 	 *	@return All the specific Cluster instances in the database accessible for the Authorization.
 	 */
-	ICFSecProtCluster[] readAllRec( ICFSecProtAuthorization Authorization );
+	public ICFSecProtCluster[] protreadAllRec( ICFSecProtAuthorization Authorization );
 
 	/**
 	 *	Read a page of all the specific Cluster record instances.
@@ -250,7 +250,7 @@ public interface ICFSecProtClusterTable
 	 *
 	 *	@return All the specific Cluster instances in the database accessible for the Authorization.
 	 */
-	ICFSecProtCluster[] pageAllRec( ICFSecProtAuthorization Authorization,
+	public ICFSecProtCluster[] protpageAllRec( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 priorId );
 
 	/**
@@ -265,7 +265,7 @@ public interface ICFSecProtClusterTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFSecProtCluster readRecByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtCluster protreadRecByIdIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 Id );
 
 	/**
@@ -280,7 +280,7 @@ public interface ICFSecProtClusterTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFSecProtCluster readRecByUDomNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtCluster protreadRecByUDomNameIdx( ICFSecProtAuthorization Authorization,
 		String FullDomName );
 
 	/**
@@ -295,6 +295,6 @@ public interface ICFSecProtClusterTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFSecProtCluster readRecByUDescrIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtCluster protreadRecByUDescrIdx( ICFSecProtAuthorization Authorization,
 		String Description );
 }

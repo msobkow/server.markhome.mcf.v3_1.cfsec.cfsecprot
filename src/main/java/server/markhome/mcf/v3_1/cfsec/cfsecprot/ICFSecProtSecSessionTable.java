@@ -56,7 +56,7 @@ public interface ICFSecProtSecSessionTable
 	 *
 	 *	@param	rec	The instance interface to be created.
 	 */
-	ICFSecProtSecSession createSecSession( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecSession protcreateSecSession( ICFSecProtAuthorization Authorization,
 		ICFSecProtSecSession rec );
 
 
@@ -68,7 +68,7 @@ public interface ICFSecProtSecSessionTable
 	 *
 	 *	@param	rec	The instance interface to be updated
 	 */
-	ICFSecProtSecSession updateSecSession( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecSession protupdateSecSession( ICFSecProtAuthorization Authorization,
 		ICFSecProtSecSession rec );
 
 
@@ -79,7 +79,7 @@ public interface ICFSecProtSecSessionTable
 	 *
 	 *	@param	rec	The instance interface to be deleted.
 	 */
-	void deleteSecSession( ICFSecProtAuthorization Authorization,
+	public void protdeleteSecSession( ICFSecProtAuthorization Authorization,
 		ICFSecProtSecSession rec );
 	/**
 	 *	Delete the SecSession instance identified by the primary key.
@@ -88,7 +88,7 @@ public interface ICFSecProtSecSessionTable
 	 *
 	 *	@param	argKey	The primary key identifying the instance to be deleted.
 	 */
-	void deleteSecSessionByIdIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSecSessionByIdIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argKey );
 	/**
 	 *	Delete the SecSession instances identified by the key SecUserIdx.
@@ -97,7 +97,7 @@ public interface ICFSecProtSecSessionTable
 	 *
 	 *	@param	SecUserId	The SecSession key attribute of the instance generating the id.
 	 */
-	void deleteSecSessionBySecUserIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSecSessionBySecUserIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argSecUserId );
 
 	/**
@@ -107,7 +107,7 @@ public interface ICFSecProtSecSessionTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteSecSessionBySecUserIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSecSessionBySecUserIdx( ICFSecProtAuthorization Authorization,
 		ICFSecProtSecSessionBySecUserIdxKey argKey );
 	/**
 	 *	Delete the SecSession instances identified by the key StartIdx.
@@ -118,7 +118,7 @@ public interface ICFSecProtSecSessionTable
 	 *
 	 *	@param	Start	The SecSession key attribute of the instance generating the id.
 	 */
-	void deleteSecSessionByStartIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSecSessionByStartIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argSecUserId,
 		LocalDateTime argStart );
 
@@ -129,7 +129,7 @@ public interface ICFSecProtSecSessionTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteSecSessionByStartIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSecSessionByStartIdx( ICFSecProtAuthorization Authorization,
 		ICFSecProtSecSessionByStartIdxKey argKey );
 	/**
 	 *	Delete the SecSession instances identified by the key FinishIdx.
@@ -140,7 +140,7 @@ public interface ICFSecProtSecSessionTable
 	 *
 	 *	@param	Finish	The SecSession key attribute of the instance generating the id.
 	 */
-	void deleteSecSessionByFinishIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSecSessionByFinishIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argSecUserId,
 		LocalDateTime argFinish );
 
@@ -151,7 +151,7 @@ public interface ICFSecProtSecSessionTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteSecSessionByFinishIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSecSessionByFinishIdx( ICFSecProtAuthorization Authorization,
 		ICFSecProtSecSessionByFinishIdxKey argKey );
 	/**
 	 *	Delete the SecSession instances identified by the key SecProxyIdx.
@@ -160,7 +160,7 @@ public interface ICFSecProtSecSessionTable
 	 *
 	 *	@param	SecProxyId	The SecSession key attribute of the instance generating the id.
 	 */
-	void deleteSecSessionBySecProxyIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSecSessionBySecProxyIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 argSecProxyId );
 
 	/**
@@ -170,7 +170,7 @@ public interface ICFSecProtSecSessionTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	void deleteSecSessionBySecProxyIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSecSessionBySecProxyIdx( ICFSecProtAuthorization Authorization,
 		ICFSecProtSecSessionBySecProxyIdxKey argKey );
 
 
@@ -184,7 +184,7 @@ public interface ICFSecProtSecSessionTable
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFSecProtSecSession readDerived( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecSession protreadDerived( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -197,7 +197,7 @@ public interface ICFSecProtSecSessionTable
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFSecProtSecSession lockDerived( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecSession protlockDerived( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -207,7 +207,7 @@ public interface ICFSecProtSecSessionTable
 	 *
 	 *	@return An array of derived record instances, potentially with 0 elements in the set.
 	 */
-	ICFSecProtSecSession[] readProtAllDerived( ICFSecProtAuthorization Authorization );
+	public ICFSecProtSecSession[] protreadProtAllDerived( ICFSecProtAuthorization Authorization );
 
 	/**
 	 *	Read the derived SecSession record instance identified by the unique key IdIdx.
@@ -219,7 +219,7 @@ public interface ICFSecProtSecSessionTable
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFSecProtSecSession readDerivedByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecSession protreadDerivedByIdIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 SecSessionId );
 
 	/**
@@ -231,7 +231,7 @@ public interface ICFSecProtSecSessionTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFSecProtSecSession[] readDerivedBySecUserIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecSession[] protreadDerivedBySecUserIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 SecUserId );
 
 	/**
@@ -246,7 +246,7 @@ public interface ICFSecProtSecSessionTable
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	ICFSecProtSecSession readDerivedByStartIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecSession protreadDerivedByStartIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 SecUserId,
 		LocalDateTime Start );
 
@@ -261,7 +261,7 @@ public interface ICFSecProtSecSessionTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFSecProtSecSession[] readDerivedByFinishIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecSession[] protreadDerivedByFinishIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 SecUserId,
 		LocalDateTime Finish );
 
@@ -274,7 +274,7 @@ public interface ICFSecProtSecSessionTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	ICFSecProtSecSession[] readDerivedBySecProxyIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecSession[] protreadDerivedBySecProxyIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 SecProxyId );
 
 	/**
@@ -289,7 +289,7 @@ public interface ICFSecProtSecSessionTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFSecProtSecSession readRec( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecSession protreadRec( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -304,7 +304,7 @@ public interface ICFSecProtSecSessionTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFSecProtSecSession lockRec( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecSession protlockRec( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -314,7 +314,7 @@ public interface ICFSecProtSecSessionTable
 	 *
 	 *	@return All the specific SecSession instances in the database accessible for the Authorization.
 	 */
-	ICFSecProtSecSession[] readAllRec( ICFSecProtAuthorization Authorization );
+	public ICFSecProtSecSession[] protreadAllRec( ICFSecProtAuthorization Authorization );
 
 	/**
 	 *	Read a page of all the specific SecSession record instances.
@@ -323,7 +323,7 @@ public interface ICFSecProtSecSessionTable
 	 *
 	 *	@return All the specific SecSession instances in the database accessible for the Authorization.
 	 */
-	ICFSecProtSecSession[] pageAllRec( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecSession[] protpageAllRec( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 priorSecSessionId );
 
 	/**
@@ -338,7 +338,7 @@ public interface ICFSecProtSecSessionTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFSecProtSecSession readRecByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecSession protreadRecByIdIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 SecSessionId );
 
 	/**
@@ -352,7 +352,7 @@ public interface ICFSecProtSecSessionTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFSecProtSecSession[] readRecBySecUserIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecSession[] protreadRecBySecUserIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 SecUserId );
 
 	/**
@@ -369,7 +369,7 @@ public interface ICFSecProtSecSessionTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFSecProtSecSession readRecByStartIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecSession protreadRecByStartIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 SecUserId,
 		LocalDateTime Start );
 
@@ -386,7 +386,7 @@ public interface ICFSecProtSecSessionTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFSecProtSecSession[] readRecByFinishIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecSession[] protreadRecByFinishIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 SecUserId,
 		LocalDateTime Finish );
 
@@ -401,7 +401,7 @@ public interface ICFSecProtSecSessionTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFSecProtSecSession[] readRecBySecProxyIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecSession[] protreadRecBySecProxyIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 SecProxyId );
 
 	/**
@@ -415,7 +415,7 @@ public interface ICFSecProtSecSessionTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFSecProtSecSession[] pageRecBySecUserIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecSession[] protpageRecBySecUserIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 SecUserId,
 		CFLibDbKeyHash256 priorSecSessionId );
 
@@ -432,7 +432,7 @@ public interface ICFSecProtSecSessionTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFSecProtSecSession[] pageRecByFinishIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecSession[] protpageRecByFinishIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 SecUserId,
 		LocalDateTime Finish,
 		CFLibDbKeyHash256 priorSecSessionId );
@@ -448,7 +448,7 @@ public interface ICFSecProtSecSessionTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	ICFSecProtSecSession[] pageRecBySecProxyIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecSession[] protpageRecBySecProxyIdx( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 SecProxyId,
 		CFLibDbKeyHash256 priorSecSessionId );
 }

@@ -78,13 +78,13 @@ public interface ICFSecProtSecSysRoleEnablesFactory
 	 *
 	 *	@return	The new instance.
 	 */
-	public ICFSecProtSecSysRoleEnables newRec();
+	public ICFSecProtSecSysRoleEnables newProtRec();
 
 	/**
 	 *	Allocate a protected SecSysRoleEnables history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
-	public ICFSecProtSecSysRoleEnablesH newHRec();
+	public ICFSecProtSecSysRoleEnablesH newProtHRec();
 
 }
