@@ -214,13 +214,6 @@ public interface ICFSecProtSecUserPasswordObj
 	LocalDateTime getRequiredPWSetStamp();
 
 	/**
-	 *	Get the required  attribute PasswordHash.
-	 *
-	 *	@return	The required  attribute PasswordHash.
-	 */
-	 getRequiredPasswordHash();
-
-	/**
 	 *	Internal use only.
 	 */
 	void copyPKeyToRec();
