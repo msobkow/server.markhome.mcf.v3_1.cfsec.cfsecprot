@@ -58,7 +58,7 @@ public interface ICFSecProtSecClusRoleMembTable
 	 *
 	 *	@param	rec	The instance interface to be created.
 	 */
-	public ICFSecProtSecClusRoleMemb protcreateSecClusRoleMemb( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecClusRoleMemb protcreateSecClusRoleMemb( ICFSecPubAuthorization Authorization,
 		ICFSecProtSecClusRoleMemb rec );
 
 
@@ -70,7 +70,7 @@ public interface ICFSecProtSecClusRoleMembTable
 	 *
 	 *	@param	rec	The instance interface to be updated
 	 */
-	public ICFSecProtSecClusRoleMemb protupdateSecClusRoleMemb( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecClusRoleMemb protupdateSecClusRoleMemb( ICFSecPubAuthorization Authorization,
 		ICFSecProtSecClusRoleMemb rec );
 
 
@@ -81,7 +81,7 @@ public interface ICFSecProtSecClusRoleMembTable
 	 *
 	 *	@param	rec	The instance interface to be deleted.
 	 */
-	public void protdeleteSecClusRoleMemb( ICFSecProtAuthorization Authorization,
+	public void protdeleteSecClusRoleMemb( ICFSecPubAuthorization Authorization,
 		ICFSecProtSecClusRoleMemb rec );
 	/**
 	 *	Delete the SecClusRoleMemb instance identified by the primary key attributes.
@@ -92,7 +92,7 @@ public interface ICFSecProtSecClusRoleMembTable
 	 *
 	 *	@param	LoginId	The SecClusRoleMemb key attribute of the instance generating the id.
 	 */
-	public void protdeleteSecClusRoleMembByIdIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSecClusRoleMembByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argSecClusRoleId,
 		String argLoginId );
 	/**
@@ -102,7 +102,7 @@ public interface ICFSecProtSecClusRoleMembTable
 	 *
 	 *	@param	argKey	The primary key identifying the instance to be deleted.
 	 */
-	public void protdeleteSecClusRoleMembByIdIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSecClusRoleMembByIdIdx( ICFSecPubAuthorization Authorization,
 		ICFSecProtSecClusRoleMembPKey argKey );
 	/**
 	 *	Delete the SecClusRoleMemb instances identified by the key ClusRoleIdx.
@@ -111,7 +111,7 @@ public interface ICFSecProtSecClusRoleMembTable
 	 *
 	 *	@param	SecClusRoleId	The SecClusRoleMemb key attribute of the instance generating the id.
 	 */
-	public void protdeleteSecClusRoleMembByClusRoleIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSecClusRoleMembByClusRoleIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argSecClusRoleId );
 
 	/**
@@ -121,7 +121,7 @@ public interface ICFSecProtSecClusRoleMembTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteSecClusRoleMembByClusRoleIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSecClusRoleMembByClusRoleIdx( ICFSecPubAuthorization Authorization,
 		ICFSecProtSecClusRoleMembByClusRoleIdxKey argKey );
 	/**
 	 *	Delete the SecClusRoleMemb instances identified by the key LoginIdx.
@@ -130,7 +130,7 @@ public interface ICFSecProtSecClusRoleMembTable
 	 *
 	 *	@param	LoginId	The SecClusRoleMemb key attribute of the instance generating the id.
 	 */
-	public void protdeleteSecClusRoleMembByLoginIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSecClusRoleMembByLoginIdx( ICFSecPubAuthorization Authorization,
 		String argLoginId );
 
 	/**
@@ -140,7 +140,7 @@ public interface ICFSecProtSecClusRoleMembTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteSecClusRoleMembByLoginIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSecClusRoleMembByLoginIdx( ICFSecPubAuthorization Authorization,
 		ICFSecProtSecClusRoleMembByLoginIdxKey argKey );
 
 
@@ -154,7 +154,7 @@ public interface ICFSecProtSecClusRoleMembTable
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFSecProtSecClusRoleMemb protreadDerived( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecClusRoleMemb protreadDerived( ICFSecPubAuthorization Authorization,
 		ICFSecProtSecClusRoleMembPKey PKey );
 
 	/**
@@ -165,7 +165,7 @@ public interface ICFSecProtSecClusRoleMembTable
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFSecProtSecClusRoleMemb protreadDerived( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecClusRoleMemb protreadDerived( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 SecClusRoleId,
 		String LoginId );
 
@@ -179,7 +179,7 @@ public interface ICFSecProtSecClusRoleMembTable
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFSecProtSecClusRoleMemb protlockDerived( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecClusRoleMemb protlockDerived( ICFSecPubAuthorization Authorization,
 		ICFSecProtSecClusRoleMembPKey PKey );
 
 	/**
@@ -189,7 +189,7 @@ public interface ICFSecProtSecClusRoleMembTable
 	 *
 	 *	@return An array of derived record instances, potentially with 0 elements in the set.
 	 */
-	public ICFSecProtSecClusRoleMemb[] protreadProtAllDerived( ICFSecProtAuthorization Authorization );
+	public ICFSecProtSecClusRoleMemb[] protreadProtAllDerived( ICFSecPubAuthorization Authorization );
 
 	/**
 	 *	Read the derived SecClusRoleMemb record instance identified by the unique key IdIdx.
@@ -203,7 +203,7 @@ public interface ICFSecProtSecClusRoleMembTable
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFSecProtSecClusRoleMemb protreadDerivedByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecClusRoleMemb protreadDerivedByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 SecClusRoleId,
 		String LoginId );
 
@@ -216,7 +216,7 @@ public interface ICFSecProtSecClusRoleMembTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFSecProtSecClusRoleMemb[] protreadDerivedByClusRoleIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecClusRoleMemb[] protreadDerivedByClusRoleIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 SecClusRoleId );
 
 	/**
@@ -228,7 +228,7 @@ public interface ICFSecProtSecClusRoleMembTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFSecProtSecClusRoleMemb[] protreadDerivedByLoginIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecClusRoleMemb[] protreadDerivedByLoginIdx( ICFSecPubAuthorization Authorization,
 		String LoginId );
 
 	/**
@@ -243,7 +243,7 @@ public interface ICFSecProtSecClusRoleMembTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFSecProtSecClusRoleMemb protreadRec( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecClusRoleMemb protreadRec( ICFSecPubAuthorization Authorization,
 		ICFSecProtSecClusRoleMembPKey PKey );
 
 	/**
@@ -258,7 +258,7 @@ public interface ICFSecProtSecClusRoleMembTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFSecProtSecClusRoleMemb protreadRec( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecClusRoleMemb protreadRec( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 SecClusRoleId,
 		String LoginId );
 
@@ -274,7 +274,7 @@ public interface ICFSecProtSecClusRoleMembTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFSecProtSecClusRoleMemb protlockRec( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecClusRoleMemb protlockRec( ICFSecPubAuthorization Authorization,
 		ICFSecProtSecClusRoleMembPKey PKey );
 
 	/**
@@ -284,7 +284,7 @@ public interface ICFSecProtSecClusRoleMembTable
 	 *
 	 *	@return All the specific SecClusRoleMemb instances in the database accessible for the Authorization.
 	 */
-	public ICFSecProtSecClusRoleMemb[] protreadAllRec( ICFSecProtAuthorization Authorization );
+	public ICFSecProtSecClusRoleMemb[] protreadAllRec( ICFSecPubAuthorization Authorization );
 
 	/**
 	 *	Read a page of all the specific SecClusRoleMemb record instances.
@@ -293,7 +293,7 @@ public interface ICFSecProtSecClusRoleMembTable
 	 *
 	 *	@return All the specific SecClusRoleMemb instances in the database accessible for the Authorization.
 	 */
-	public ICFSecProtSecClusRoleMemb[] protpageAllRec( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecClusRoleMemb[] protpageAllRec( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 priorSecClusRoleId,
 		String priorLoginId );
 
@@ -311,7 +311,7 @@ public interface ICFSecProtSecClusRoleMembTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFSecProtSecClusRoleMemb protreadRecByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecClusRoleMemb protreadRecByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 SecClusRoleId,
 		String LoginId );
 
@@ -326,7 +326,7 @@ public interface ICFSecProtSecClusRoleMembTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFSecProtSecClusRoleMemb[] protreadRecByClusRoleIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecClusRoleMemb[] protreadRecByClusRoleIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 SecClusRoleId );
 
 	/**
@@ -340,7 +340,7 @@ public interface ICFSecProtSecClusRoleMembTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFSecProtSecClusRoleMemb[] protreadRecByLoginIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecClusRoleMemb[] protreadRecByLoginIdx( ICFSecPubAuthorization Authorization,
 		String LoginId );
 
 	/**
@@ -354,7 +354,7 @@ public interface ICFSecProtSecClusRoleMembTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFSecProtSecClusRoleMemb[] protpageRecByClusRoleIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecClusRoleMemb[] protpageRecByClusRoleIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 SecClusRoleId,
 		CFLibDbKeyHash256 priorSecClusRoleId,
 		String priorLoginId );
@@ -370,7 +370,7 @@ public interface ICFSecProtSecClusRoleMembTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFSecProtSecClusRoleMemb[] protpageRecByLoginIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecClusRoleMemb[] protpageRecByLoginIdx( ICFSecPubAuthorization Authorization,
 		String LoginId,
 		CFLibDbKeyHash256 priorSecClusRoleId,
 		String priorLoginId );

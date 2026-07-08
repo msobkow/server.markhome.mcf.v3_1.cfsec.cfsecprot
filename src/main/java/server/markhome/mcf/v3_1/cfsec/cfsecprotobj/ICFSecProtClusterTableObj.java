@@ -36,7 +36,10 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 
 public interface ICFSecProtClusterTableObj
 {
@@ -147,63 +150,63 @@ public interface ICFSecProtClusterTableObj
 	List<ICFSecProtClusterObj> pageAllCluster(CFLibDbKeyHash256 priorId );
 
 	/**
-	 *	Get the CFSecProtClusterObj instance for the primary key attributes.
+	 *	Get the ICFSecProtClusterObj instance for the primary key attributes.
 	 *
 	 *	@param	Id	The Cluster key attribute of the instance generating the id.
 	 *
-	 *	@return	CFSecProtClusterObj cached instance for the primary key, or
+	 *	@return	ICFSecProtClusterObj cached instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
 	ICFSecProtClusterObj readClusterByIdIdx( CFLibDbKeyHash256 Id );
 
 	/**
-	 *	Get the CFSecProtClusterObj instance for the primary key attributes.
+	 *	Get the ICFSecProtClusterObj instance for the primary key attributes.
 	 *
 	 *	@param	Id	The Cluster key attribute of the instance generating the id.
 	 *
-	 *	@return	CFSecProtClusterObj refreshed instance for the primary key, or
+	 *	@return	ICFSecProtClusterObj refreshed instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
 	ICFSecProtClusterObj readClusterByIdIdx( CFLibDbKeyHash256 Id,
 		boolean forceRead );
 
 	/**
-	 *	Get the CFSecProtClusterObj instance for the unique UDomNameIdx key.
+	 *	Get the ICFSecProtClusterObj instance for the unique UDomNameIdx key.
 	 *
 	 *	@param	FullDomName	The Cluster key attribute of the instance generating the id.
 	 *
-	 *	@return	CFSecProtClusterObj cached instance for the unique UDomNameIdx key, or
+	 *	@return	ICFSecProtClusterObj cached instance for the unique UDomNameIdx key, or
 	 *		null if no such instance exists.
 	 */
 	ICFSecProtClusterObj readClusterByUDomNameIdx(String FullDomName );
 
 	/**
-	 *	Get the CFSecProtClusterObj instance for the unique UDomNameIdx key.
+	 *	Get the ICFSecProtClusterObj instance for the unique UDomNameIdx key.
 	 *
 	 *	@param	FullDomName	The Cluster key attribute of the instance generating the id.
 	 *
-	 *	@return	CFSecProtClusterObj refreshed instance for the unique UDomNameIdx key, or
+	 *	@return	ICFSecProtClusterObj refreshed instance for the unique UDomNameIdx key, or
 	 *		null if no such instance exists.
 	 */
 	ICFSecProtClusterObj readClusterByUDomNameIdx(String FullDomName,
 		boolean forceRead );
 
 	/**
-	 *	Get the CFSecProtClusterObj instance for the unique UDescrIdx key.
+	 *	Get the ICFSecProtClusterObj instance for the unique UDescrIdx key.
 	 *
 	 *	@param	Description	The Cluster key attribute of the instance generating the id.
 	 *
-	 *	@return	CFSecProtClusterObj cached instance for the unique UDescrIdx key, or
+	 *	@return	ICFSecProtClusterObj cached instance for the unique UDescrIdx key, or
 	 *		null if no such instance exists.
 	 */
 	ICFSecProtClusterObj readClusterByUDescrIdx(String Description );
 
 	/**
-	 *	Get the CFSecProtClusterObj instance for the unique UDescrIdx key.
+	 *	Get the ICFSecProtClusterObj instance for the unique UDescrIdx key.
 	 *
 	 *	@param	Description	The Cluster key attribute of the instance generating the id.
 	 *
-	 *	@return	CFSecProtClusterObj refreshed instance for the unique UDescrIdx key, or
+	 *	@return	ICFSecProtClusterObj refreshed instance for the unique UDescrIdx key, or
 	 *		null if no such instance exists.
 	 */
 	ICFSecProtClusterObj readClusterByUDescrIdx(String Description,

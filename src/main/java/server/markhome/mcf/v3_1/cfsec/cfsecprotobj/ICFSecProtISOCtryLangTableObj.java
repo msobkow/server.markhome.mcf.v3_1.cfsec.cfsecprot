@@ -36,7 +36,10 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 
 public interface ICFSecProtISOCtryLangTableObj
 {
@@ -158,26 +161,26 @@ public interface ICFSecProtISOCtryLangTableObj
 	List<ICFSecProtISOCtryLangObj> readCachedAllISOCtryLang();
 
 	/**
-	 *	Get the CFSecProtISOCtryLangObj instance for the primary key attributes.
+	 *	Get the ICFSecProtISOCtryLangObj instance for the primary key attributes.
 	 *
 	 *	@param	ISOCtryId	The ISOCtryLang key attribute of the instance generating the id.
 	 *
 	 *	@param	ISOLangId	The ISOCtryLang key attribute of the instance generating the id.
 	 *
-	 *	@return	CFSecProtISOCtryLangObj cached instance for the primary key, or
+	 *	@return	ICFSecProtISOCtryLangObj cached instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
 	ICFSecProtISOCtryLangObj readISOCtryLangByIdIdx( short ISOCtryId,
 		short ISOLangId );
 
 	/**
-	 *	Get the CFSecProtISOCtryLangObj instance for the primary key attributes.
+	 *	Get the ICFSecProtISOCtryLangObj instance for the primary key attributes.
 	 *
 	 *	@param	ISOCtryId	The ISOCtryLang key attribute of the instance generating the id.
 	 *
 	 *	@param	ISOLangId	The ISOCtryLang key attribute of the instance generating the id.
 	 *
-	 *	@return	CFSecProtISOCtryLangObj refreshed instance for the primary key, or
+	 *	@return	ICFSecProtISOCtryLangObj refreshed instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
 	ICFSecProtISOCtryLangObj readISOCtryLangByIdIdx( short ISOCtryId,
@@ -185,42 +188,42 @@ public interface ICFSecProtISOCtryLangTableObj
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFSecProtISOCtryLangObj instances sorted by their primary keys for the duplicate CtryIdx key.
+	 *	Get the map of List<ICFSecProtISOCtryLangObj> instances sorted by their primary keys for the duplicate CtryIdx key.
 	 *
 	 *	@param	ISOCtryId	The ISOCtryLang key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFSecProtISOCtryLangObj cached instances sorted by their primary keys for the duplicate CtryIdx key,
+	 *	@return	List of List<ICFSecProtISOCtryLangObj> cached instances sorted by their primary keys for the duplicate CtryIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFSecProtISOCtryLangObj> readISOCtryLangByCtryIdx( short ISOCtryId );
 
 	/**
-	 *	Get the map of CFSecProtISOCtryLangObj instances sorted by their primary keys for the duplicate CtryIdx key.
+	 *	Get the map of List<ICFSecProtISOCtryLangObj> instances sorted by their primary keys for the duplicate CtryIdx key.
 	 *
 	 *	@param	ISOCtryId	The ISOCtryLang key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFSecProtISOCtryLangObj cached instances sorted by their primary keys for the duplicate CtryIdx key,
+	 *	@return	List of List<ICFSecProtISOCtryLangObj> cached instances sorted by their primary keys for the duplicate CtryIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFSecProtISOCtryLangObj> readISOCtryLangByCtryIdx( short ISOCtryId,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFSecProtISOCtryLangObj instances sorted by their primary keys for the duplicate LangIdx key.
+	 *	Get the map of List<ICFSecProtISOCtryLangObj> instances sorted by their primary keys for the duplicate LangIdx key.
 	 *
 	 *	@param	ISOLangId	The ISOCtryLang key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFSecProtISOCtryLangObj cached instances sorted by their primary keys for the duplicate LangIdx key,
+	 *	@return	List of List<ICFSecProtISOCtryLangObj> cached instances sorted by their primary keys for the duplicate LangIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFSecProtISOCtryLangObj> readISOCtryLangByLangIdx( short ISOLangId );
 
 	/**
-	 *	Get the map of CFSecProtISOCtryLangObj instances sorted by their primary keys for the duplicate LangIdx key.
+	 *	Get the map of List<ICFSecProtISOCtryLangObj> instances sorted by their primary keys for the duplicate LangIdx key.
 	 *
 	 *	@param	ISOLangId	The ISOCtryLang key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFSecProtISOCtryLangObj cached instances sorted by their primary keys for the duplicate LangIdx key,
+	 *	@return	List of List<ICFSecProtISOCtryLangObj> cached instances sorted by their primary keys for the duplicate LangIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFSecProtISOCtryLangObj> readISOCtryLangByLangIdx( short ISOLangId,
@@ -229,9 +232,9 @@ public interface ICFSecProtISOCtryLangTableObj
 	ICFSecProtISOCtryLangObj readCachedISOCtryLangByIdIdx( short ISOCtryId,
 		short ISOLangId );
 
-	List<ICFSecProtISOCtryLangObj> readCachedISOCtryLangByCtryIdx( short ISOCtryId );
+	List<List<ICFSecProtISOCtryLangObj>> readCachedISOCtryLangByCtryIdx( short ISOCtryId );
 
-	List<ICFSecProtISOCtryLangObj> readCachedISOCtryLangByLangIdx( short ISOLangId );
+	List<List<ICFSecProtISOCtryLangObj>> readCachedISOCtryLangByLangIdx( short ISOLangId );
 
 	void deepDisposeISOCtryLangByIdIdx( short ISOCtryId,
 		short ISOLangId );

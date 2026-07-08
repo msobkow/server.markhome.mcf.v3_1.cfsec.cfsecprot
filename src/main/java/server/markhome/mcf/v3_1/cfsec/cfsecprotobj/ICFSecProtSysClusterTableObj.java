@@ -36,7 +36,10 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 
 public interface ICFSecProtSysClusterTableObj
 {
@@ -139,42 +142,42 @@ public interface ICFSecProtSysClusterTableObj
 	List<ICFSecProtSysClusterObj> readCachedAllSysCluster();
 
 	/**
-	 *	Get the CFSecProtSysClusterObj instance for the primary key attributes.
+	 *	Get the ICFSecProtSysClusterObj instance for the primary key attributes.
 	 *
 	 *	@param	SingletonId	The SysCluster key attribute of the instance generating the id.
 	 *
-	 *	@return	CFSecProtSysClusterObj cached instance for the primary key, or
+	 *	@return	ICFSecProtSysClusterObj cached instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
 	ICFSecProtSysClusterObj readSysClusterByIdIdx( int SingletonId );
 
 	/**
-	 *	Get the CFSecProtSysClusterObj instance for the primary key attributes.
+	 *	Get the ICFSecProtSysClusterObj instance for the primary key attributes.
 	 *
 	 *	@param	SingletonId	The SysCluster key attribute of the instance generating the id.
 	 *
-	 *	@return	CFSecProtSysClusterObj refreshed instance for the primary key, or
+	 *	@return	ICFSecProtSysClusterObj refreshed instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
 	ICFSecProtSysClusterObj readSysClusterByIdIdx( int SingletonId,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFSecProtSysClusterObj instances sorted by their primary keys for the duplicate ClusterIdx key.
+	 *	Get the map of List<ICFSecProtSysClusterObj> instances sorted by their primary keys for the duplicate ClusterIdx key.
 	 *
 	 *	@param	ClusterId	The SysCluster key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFSecProtSysClusterObj cached instances sorted by their primary keys for the duplicate ClusterIdx key,
+	 *	@return	List of List<ICFSecProtSysClusterObj> cached instances sorted by their primary keys for the duplicate ClusterIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFSecProtSysClusterObj> readSysClusterByClusterIdx( CFLibDbKeyHash256 ClusterId );
 
 	/**
-	 *	Get the map of CFSecProtSysClusterObj instances sorted by their primary keys for the duplicate ClusterIdx key.
+	 *	Get the map of List<ICFSecProtSysClusterObj> instances sorted by their primary keys for the duplicate ClusterIdx key.
 	 *
 	 *	@param	ClusterId	The SysCluster key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFSecProtSysClusterObj cached instances sorted by their primary keys for the duplicate ClusterIdx key,
+	 *	@return	List of List<ICFSecProtSysClusterObj> cached instances sorted by their primary keys for the duplicate ClusterIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFSecProtSysClusterObj> readSysClusterByClusterIdx( CFLibDbKeyHash256 ClusterId,
@@ -182,7 +185,7 @@ public interface ICFSecProtSysClusterTableObj
 
 	ICFSecProtSysClusterObj readCachedSysClusterByIdIdx( int SingletonId );
 
-	List<ICFSecProtSysClusterObj> readCachedSysClusterByClusterIdx( CFLibDbKeyHash256 ClusterId );
+	List<List<ICFSecProtSysClusterObj>> readCachedSysClusterByClusterIdx( CFLibDbKeyHash256 ClusterId );
 
 	void deepDisposeSysClusterByIdIdx( int SingletonId );
 

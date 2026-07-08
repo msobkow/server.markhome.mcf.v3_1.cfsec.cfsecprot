@@ -35,6 +35,7 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
+import server.markhome.mcf.v3_1.cflib.xml.CFLibXmlUtil;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
@@ -53,7 +54,7 @@ public interface ICFSecProtSecUser
 	public static final String S_SECUSERID_INIT_VALUE = ICFSecPubSecUser.S_SECUSERID_INIT_VALUE;
 	public static final CFLibDbKeyHash256 SECUSERID_INIT_VALUE = ICFSecPubSecUser.SECUSERID_INIT_VALUE;
 	public static final String LOGINID_INIT_VALUE = ICFSecPubSecUser.LOGINID_INIT_VALUE;
-	public static final ICFSecProtSchema.SecAccountStatusEnum ACCOUNTSTATUS_INIT_VALUE = ICFSecPubSecUser.ACCOUNTSTATUS_INIT_VALUE;
+	public static final ICFSecPubSchema.SecAccountStatusEnum ACCOUNTSTATUS_INIT_VALUE = ICFSecPubSecUser.ACCOUNTSTATUS_INIT_VALUE;
 	public static final String DFLTSYSGRPNAME_INIT_VALUE = ICFSecPubSecUser.DFLTSYSGRPNAME_INIT_VALUE;
 	public static final String DFLTCLUSGRPNAME_INIT_VALUE = ICFSecPubSecUser.DFLTCLUSGRPNAME_INIT_VALUE;
 	public static final String DFLTTENTGRPNAME_INIT_VALUE = ICFSecPubSecUser.DFLTTENTGRPNAME_INIT_VALUE;
@@ -88,8 +89,8 @@ public interface ICFSecProtSecUser
 	public List<ICFSecProtSecTentGrpMemb> getOptionalChildrenTentSecGrpMemb();
 	public String getRequiredLoginId();
 	public void setRequiredLoginId( String value );
-	public ICFSecProtSchema.SecAccountStatusEnum getRequiredAccountStatus();
-	public void setRequiredAccountStatus( ICFSecProtSchema.SecAccountStatusEnum value );
+	public ICFSecPubSchema.SecAccountStatusEnum getRequiredAccountStatus();
+	public void setRequiredAccountStatus( ICFSecPubSchema.SecAccountStatusEnum value );
 	public String getOptionalDfltSysGrpName();
 	public void setOptionalDfltSysGrpName( String value );
 	public String getOptionalDfltClusGrpName();

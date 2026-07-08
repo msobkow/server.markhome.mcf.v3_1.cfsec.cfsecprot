@@ -36,7 +36,9 @@ import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cflib.xml.CFLibXmlUtil;
-//import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 
 /**
  *	ICFSecProtSecUserH provides access to protlic history records matching the CFSecProtSecUser object change history.
@@ -72,8 +74,8 @@ public interface ICFSecProtSecUserH
 
 	public String getRequiredLoginId();
 	public void setRequiredLoginId( String value );
-	public ICFSecProtSchema.SecAccountStatusEnum getRequiredAccountStatus();
-	public void setRequiredAccountStatus( ICFSecProtSchema.SecAccountStatusEnum value );
+	public ICFSecPubSchema.SecAccountStatusEnum getRequiredAccountStatus();
+	public void setRequiredAccountStatus( ICFSecPubSchema.SecAccountStatusEnum value );
 	public String getOptionalDfltSysGrpName();
 	public void setOptionalDfltSysGrpName( String value );
 	public String getOptionalDfltClusGrpName();

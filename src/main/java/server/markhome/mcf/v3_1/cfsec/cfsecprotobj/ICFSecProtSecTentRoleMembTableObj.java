@@ -36,7 +36,10 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 
 public interface ICFSecProtSecTentRoleMembTableObj
 {
@@ -167,26 +170,26 @@ public interface ICFSecProtSecTentRoleMembTableObj
 		String priorLoginId );
 
 	/**
-	 *	Get the CFSecProtSecTentRoleMembObj instance for the primary key attributes.
+	 *	Get the ICFSecProtSecTentRoleMembObj instance for the primary key attributes.
 	 *
 	 *	@param	SecTentRoleId	The SecTentRoleMemb key attribute of the instance generating the id.
 	 *
 	 *	@param	LoginId	The SecTentRoleMemb key attribute of the instance generating the id.
 	 *
-	 *	@return	CFSecProtSecTentRoleMembObj cached instance for the primary key, or
+	 *	@return	ICFSecProtSecTentRoleMembObj cached instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
 	ICFSecProtSecTentRoleMembObj readSecTentRoleMembByIdIdx( CFLibDbKeyHash256 SecTentRoleId,
 		String LoginId );
 
 	/**
-	 *	Get the CFSecProtSecTentRoleMembObj instance for the primary key attributes.
+	 *	Get the ICFSecProtSecTentRoleMembObj instance for the primary key attributes.
 	 *
 	 *	@param	SecTentRoleId	The SecTentRoleMemb key attribute of the instance generating the id.
 	 *
 	 *	@param	LoginId	The SecTentRoleMemb key attribute of the instance generating the id.
 	 *
-	 *	@return	CFSecProtSecTentRoleMembObj refreshed instance for the primary key, or
+	 *	@return	ICFSecProtSecTentRoleMembObj refreshed instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
 	ICFSecProtSecTentRoleMembObj readSecTentRoleMembByIdIdx( CFLibDbKeyHash256 SecTentRoleId,
@@ -194,42 +197,42 @@ public interface ICFSecProtSecTentRoleMembTableObj
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFSecProtSecTentRoleMembObj instances sorted by their primary keys for the duplicate TentRoleIdx key.
+	 *	Get the map of List<ICFSecProtSecTentRoleMembObj> instances sorted by their primary keys for the duplicate TentRoleIdx key.
 	 *
 	 *	@param	SecTentRoleId	The SecTentRoleMemb key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFSecProtSecTentRoleMembObj cached instances sorted by their primary keys for the duplicate TentRoleIdx key,
+	 *	@return	List of List<ICFSecProtSecTentRoleMembObj> cached instances sorted by their primary keys for the duplicate TentRoleIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFSecProtSecTentRoleMembObj> readSecTentRoleMembByTentRoleIdx( CFLibDbKeyHash256 SecTentRoleId );
 
 	/**
-	 *	Get the map of CFSecProtSecTentRoleMembObj instances sorted by their primary keys for the duplicate TentRoleIdx key.
+	 *	Get the map of List<ICFSecProtSecTentRoleMembObj> instances sorted by their primary keys for the duplicate TentRoleIdx key.
 	 *
 	 *	@param	SecTentRoleId	The SecTentRoleMemb key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFSecProtSecTentRoleMembObj cached instances sorted by their primary keys for the duplicate TentRoleIdx key,
+	 *	@return	List of List<ICFSecProtSecTentRoleMembObj> cached instances sorted by their primary keys for the duplicate TentRoleIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFSecProtSecTentRoleMembObj> readSecTentRoleMembByTentRoleIdx( CFLibDbKeyHash256 SecTentRoleId,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFSecProtSecTentRoleMembObj instances sorted by their primary keys for the duplicate UserIdx key.
+	 *	Get the map of List<ICFSecProtSecTentRoleMembObj> instances sorted by their primary keys for the duplicate UserIdx key.
 	 *
 	 *	@param	LoginId	The SecTentRoleMemb key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFSecProtSecTentRoleMembObj cached instances sorted by their primary keys for the duplicate UserIdx key,
+	 *	@return	List of List<ICFSecProtSecTentRoleMembObj> cached instances sorted by their primary keys for the duplicate UserIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFSecProtSecTentRoleMembObj> readSecTentRoleMembByUserIdx( String LoginId );
 
 	/**
-	 *	Get the map of CFSecProtSecTentRoleMembObj instances sorted by their primary keys for the duplicate UserIdx key.
+	 *	Get the map of List<ICFSecProtSecTentRoleMembObj> instances sorted by their primary keys for the duplicate UserIdx key.
 	 *
 	 *	@param	LoginId	The SecTentRoleMemb key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFSecProtSecTentRoleMembObj cached instances sorted by their primary keys for the duplicate UserIdx key,
+	 *	@return	List of List<ICFSecProtSecTentRoleMembObj> cached instances sorted by their primary keys for the duplicate UserIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFSecProtSecTentRoleMembObj> readSecTentRoleMembByUserIdx( String LoginId,
@@ -238,9 +241,9 @@ public interface ICFSecProtSecTentRoleMembTableObj
 	ICFSecProtSecTentRoleMembObj readCachedSecTentRoleMembByIdIdx( CFLibDbKeyHash256 SecTentRoleId,
 		String LoginId );
 
-	List<ICFSecProtSecTentRoleMembObj> readCachedSecTentRoleMembByTentRoleIdx( CFLibDbKeyHash256 SecTentRoleId );
+	List<List<ICFSecProtSecTentRoleMembObj>> readCachedSecTentRoleMembByTentRoleIdx( CFLibDbKeyHash256 SecTentRoleId );
 
-	List<ICFSecProtSecTentRoleMembObj> readCachedSecTentRoleMembByUserIdx( String LoginId );
+	List<List<ICFSecProtSecTentRoleMembObj>> readCachedSecTentRoleMembByUserIdx( String LoginId );
 
 	void deepDisposeSecTentRoleMembByIdIdx( CFLibDbKeyHash256 SecTentRoleId,
 		String LoginId );

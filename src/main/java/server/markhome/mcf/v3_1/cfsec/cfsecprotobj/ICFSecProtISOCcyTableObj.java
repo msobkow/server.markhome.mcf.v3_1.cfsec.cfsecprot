@@ -36,7 +36,10 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 
 public interface ICFSecProtISOCcyTableObj
 {
@@ -139,63 +142,63 @@ public interface ICFSecProtISOCcyTableObj
 	List<ICFSecProtISOCcyObj> readCachedAllISOCcy();
 
 	/**
-	 *	Get the CFSecProtISOCcyObj instance for the primary key attributes.
+	 *	Get the ICFSecProtISOCcyObj instance for the primary key attributes.
 	 *
 	 *	@param	ISOCcyId	The ISOCcy key attribute of the instance generating the id.
 	 *
-	 *	@return	CFSecProtISOCcyObj cached instance for the primary key, or
+	 *	@return	ICFSecProtISOCcyObj cached instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
 	ICFSecProtISOCcyObj readISOCcyByIdIdx( short ISOCcyId );
 
 	/**
-	 *	Get the CFSecProtISOCcyObj instance for the primary key attributes.
+	 *	Get the ICFSecProtISOCcyObj instance for the primary key attributes.
 	 *
 	 *	@param	ISOCcyId	The ISOCcy key attribute of the instance generating the id.
 	 *
-	 *	@return	CFSecProtISOCcyObj refreshed instance for the primary key, or
+	 *	@return	ICFSecProtISOCcyObj refreshed instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
 	ICFSecProtISOCcyObj readISOCcyByIdIdx( short ISOCcyId,
 		boolean forceRead );
 
 	/**
-	 *	Get the CFSecProtISOCcyObj instance for the unique CcyCdIdx key.
+	 *	Get the ICFSecProtISOCcyObj instance for the unique CcyCdIdx key.
 	 *
 	 *	@param	ISOCode	The ISOCcy key attribute of the instance generating the id.
 	 *
-	 *	@return	CFSecProtISOCcyObj cached instance for the unique CcyCdIdx key, or
+	 *	@return	ICFSecProtISOCcyObj cached instance for the unique CcyCdIdx key, or
 	 *		null if no such instance exists.
 	 */
 	ICFSecProtISOCcyObj readISOCcyByCcyCdIdx(String ISOCode );
 
 	/**
-	 *	Get the CFSecProtISOCcyObj instance for the unique CcyCdIdx key.
+	 *	Get the ICFSecProtISOCcyObj instance for the unique CcyCdIdx key.
 	 *
 	 *	@param	ISOCode	The ISOCcy key attribute of the instance generating the id.
 	 *
-	 *	@return	CFSecProtISOCcyObj refreshed instance for the unique CcyCdIdx key, or
+	 *	@return	ICFSecProtISOCcyObj refreshed instance for the unique CcyCdIdx key, or
 	 *		null if no such instance exists.
 	 */
 	ICFSecProtISOCcyObj readISOCcyByCcyCdIdx(String ISOCode,
 		boolean forceRead );
 
 	/**
-	 *	Get the CFSecProtISOCcyObj instance for the unique CcyNmIdx key.
+	 *	Get the ICFSecProtISOCcyObj instance for the unique CcyNmIdx key.
 	 *
 	 *	@param	Name	The ISOCcy key attribute of the instance generating the id.
 	 *
-	 *	@return	CFSecProtISOCcyObj cached instance for the unique CcyNmIdx key, or
+	 *	@return	ICFSecProtISOCcyObj cached instance for the unique CcyNmIdx key, or
 	 *		null if no such instance exists.
 	 */
 	ICFSecProtISOCcyObj readISOCcyByCcyNmIdx(String Name );
 
 	/**
-	 *	Get the CFSecProtISOCcyObj instance for the unique CcyNmIdx key.
+	 *	Get the ICFSecProtISOCcyObj instance for the unique CcyNmIdx key.
 	 *
 	 *	@param	Name	The ISOCcy key attribute of the instance generating the id.
 	 *
-	 *	@return	CFSecProtISOCcyObj refreshed instance for the unique CcyNmIdx key, or
+	 *	@return	ICFSecProtISOCcyObj refreshed instance for the unique CcyNmIdx key, or
 	 *		null if no such instance exists.
 	 */
 	ICFSecProtISOCcyObj readISOCcyByCcyNmIdx(String Name,

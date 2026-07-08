@@ -1,4 +1,4 @@
-// Description: Java 25 protlic inteface for a ISOCtryCcy primary key object.
+// Description: Java 25 protected inteface for a ISOCtryCcy primary key object.
 
 /*
  *	server.markhome.mcf.CFSec
@@ -38,7 +38,7 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cflib.xml.CFLibXmlUtil;
 
 /**
- *	ICFSecProtISOCtryCcyPKey protlic primary key interface for ISOCtryCcy has CodeVis Public, meaning that any user interface or referencing schema can access it.
+ *	ICFSecProtISOCtryCcyPKey protected primary key interface for ISOCtryCcy has CodeVis Public, meaning that any user interface or referencing schema can access it.
  *		requiredISOCtryId	Required object attribute ISOCtryId.
  *		requiredISOCcyId	Required object attribute ISOCcyId.
  */

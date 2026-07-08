@@ -36,7 +36,10 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 
 public interface ICFSecProtSecUserTableObj
 {
@@ -147,63 +150,63 @@ public interface ICFSecProtSecUserTableObj
 	List<ICFSecProtSecUserObj> pageAllSecUser(CFLibDbKeyHash256 priorSecUserId );
 
 	/**
-	 *	Get the CFSecProtSecUserObj instance for the primary key attributes.
+	 *	Get the ICFSecProtSecUserObj instance for the primary key attributes.
 	 *
 	 *	@param	SecUserId	The SecUser key attribute of the instance generating the id.
 	 *
-	 *	@return	CFSecProtSecUserObj cached instance for the primary key, or
+	 *	@return	ICFSecProtSecUserObj cached instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
 	ICFSecProtSecUserObj readSecUserByIdIdx( CFLibDbKeyHash256 SecUserId );
 
 	/**
-	 *	Get the CFSecProtSecUserObj instance for the primary key attributes.
+	 *	Get the ICFSecProtSecUserObj instance for the primary key attributes.
 	 *
 	 *	@param	SecUserId	The SecUser key attribute of the instance generating the id.
 	 *
-	 *	@return	CFSecProtSecUserObj refreshed instance for the primary key, or
+	 *	@return	ICFSecProtSecUserObj refreshed instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
 	ICFSecProtSecUserObj readSecUserByIdIdx( CFLibDbKeyHash256 SecUserId,
 		boolean forceRead );
 
 	/**
-	 *	Get the CFSecProtSecUserObj instance for the unique ULoginIdx key.
+	 *	Get the ICFSecProtSecUserObj instance for the unique ULoginIdx key.
 	 *
 	 *	@param	LoginId	The SecUser key attribute of the instance generating the id.
 	 *
-	 *	@return	CFSecProtSecUserObj cached instance for the unique ULoginIdx key, or
+	 *	@return	ICFSecProtSecUserObj cached instance for the unique ULoginIdx key, or
 	 *		null if no such instance exists.
 	 */
 	ICFSecProtSecUserObj readSecUserByULoginIdx(String LoginId );
 
 	/**
-	 *	Get the CFSecProtSecUserObj instance for the unique ULoginIdx key.
+	 *	Get the ICFSecProtSecUserObj instance for the unique ULoginIdx key.
 	 *
 	 *	@param	LoginId	The SecUser key attribute of the instance generating the id.
 	 *
-	 *	@return	CFSecProtSecUserObj refreshed instance for the unique ULoginIdx key, or
+	 *	@return	ICFSecProtSecUserObj refreshed instance for the unique ULoginIdx key, or
 	 *		null if no such instance exists.
 	 */
 	ICFSecProtSecUserObj readSecUserByULoginIdx(String LoginId,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFSecProtSecUserObj instances sorted by their primary keys for the duplicate EMAddrIdx key.
+	 *	Get the map of List<ICFSecProtSecUserObj> instances sorted by their primary keys for the duplicate EMAddrIdx key.
 	 *
 	 *	@param	EMailAddress	The SecUser key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFSecProtSecUserObj cached instances sorted by their primary keys for the duplicate EMAddrIdx key,
+	 *	@return	List of List<ICFSecProtSecUserObj> cached instances sorted by their primary keys for the duplicate EMAddrIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFSecProtSecUserObj> readSecUserByEMAddrIdx( String EMailAddress );
 
 	/**
-	 *	Get the map of CFSecProtSecUserObj instances sorted by their primary keys for the duplicate EMAddrIdx key.
+	 *	Get the map of List<ICFSecProtSecUserObj> instances sorted by their primary keys for the duplicate EMAddrIdx key.
 	 *
 	 *	@param	EMailAddress	The SecUser key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFSecProtSecUserObj cached instances sorted by their primary keys for the duplicate EMAddrIdx key,
+	 *	@return	List of List<ICFSecProtSecUserObj> cached instances sorted by their primary keys for the duplicate EMAddrIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFSecProtSecUserObj> readSecUserByEMAddrIdx( String EMailAddress,
@@ -213,7 +216,7 @@ public interface ICFSecProtSecUserTableObj
 
 	ICFSecProtSecUserObj readCachedSecUserByULoginIdx( String LoginId );
 
-	List<ICFSecProtSecUserObj> readCachedSecUserByEMAddrIdx( String EMailAddress );
+	List<List<ICFSecProtSecUserObj>> readCachedSecUserByEMAddrIdx( String EMailAddress );
 
 	void deepDisposeSecUserByIdIdx( CFLibDbKeyHash256 SecUserId );
 

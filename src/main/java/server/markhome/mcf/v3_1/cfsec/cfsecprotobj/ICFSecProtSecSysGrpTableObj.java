@@ -36,7 +36,10 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 
 public interface ICFSecProtSecSysGrpTableObj
 {
@@ -139,79 +142,79 @@ public interface ICFSecProtSecSysGrpTableObj
 	List<ICFSecProtSecSysGrpObj> readCachedAllSecSysGrp();
 
 	/**
-	 *	Get the CFSecProtSecSysGrpObj instance for the primary key attributes.
+	 *	Get the ICFSecProtSecSysGrpObj instance for the primary key attributes.
 	 *
 	 *	@param	SecSysGrpId	The SecSysGrp key attribute of the instance generating the id.
 	 *
-	 *	@return	CFSecProtSecSysGrpObj cached instance for the primary key, or
+	 *	@return	ICFSecProtSecSysGrpObj cached instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
 	ICFSecProtSecSysGrpObj readSecSysGrpByIdIdx( CFLibDbKeyHash256 SecSysGrpId );
 
 	/**
-	 *	Get the CFSecProtSecSysGrpObj instance for the primary key attributes.
+	 *	Get the ICFSecProtSecSysGrpObj instance for the primary key attributes.
 	 *
 	 *	@param	SecSysGrpId	The SecSysGrp key attribute of the instance generating the id.
 	 *
-	 *	@return	CFSecProtSecSysGrpObj refreshed instance for the primary key, or
+	 *	@return	ICFSecProtSecSysGrpObj refreshed instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
 	ICFSecProtSecSysGrpObj readSecSysGrpByIdIdx( CFLibDbKeyHash256 SecSysGrpId,
 		boolean forceRead );
 
 	/**
-	 *	Get the CFSecProtSecSysGrpObj instance for the unique UNameIdx key.
+	 *	Get the ICFSecProtSecSysGrpObj instance for the unique UNameIdx key.
 	 *
 	 *	@param	Name	The SecSysGrp key attribute of the instance generating the id.
 	 *
-	 *	@return	CFSecProtSecSysGrpObj cached instance for the unique UNameIdx key, or
+	 *	@return	ICFSecProtSecSysGrpObj cached instance for the unique UNameIdx key, or
 	 *		null if no such instance exists.
 	 */
 	ICFSecProtSecSysGrpObj readSecSysGrpByUNameIdx(String Name );
 
 	/**
-	 *	Get the CFSecProtSecSysGrpObj instance for the unique UNameIdx key.
+	 *	Get the ICFSecProtSecSysGrpObj instance for the unique UNameIdx key.
 	 *
 	 *	@param	Name	The SecSysGrp key attribute of the instance generating the id.
 	 *
-	 *	@return	CFSecProtSecSysGrpObj refreshed instance for the unique UNameIdx key, or
+	 *	@return	ICFSecProtSecSysGrpObj refreshed instance for the unique UNameIdx key, or
 	 *		null if no such instance exists.
 	 */
 	ICFSecProtSecSysGrpObj readSecSysGrpByUNameIdx(String Name,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFSecProtSecSysGrpObj instances sorted by their primary keys for the duplicate SecLevelIdx key.
+	 *	Get the map of List<ICFSecProtSecSysGrpObj> instances sorted by their primary keys for the duplicate SecLevelIdx key.
 	 *
 	 *	@param	SecLevel	The SecSysGrp key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFSecProtSecSysGrpObj cached instances sorted by their primary keys for the duplicate SecLevelIdx key,
+	 *	@return	List of List<ICFSecProtSecSysGrpObj> cached instances sorted by their primary keys for the duplicate SecLevelIdx key,
 	 *		which may be an empty set.
 	 */
-	List<ICFSecProtSecSysGrpObj> readSecSysGrpBySecLevelIdx( ICFSecProtSchema.SecLevelEnum SecLevel );
+	List<ICFSecProtSecSysGrpObj> readSecSysGrpBySecLevelIdx( ICFSecPubSchema.SecLevelEnum SecLevel );
 
 	/**
-	 *	Get the map of CFSecProtSecSysGrpObj instances sorted by their primary keys for the duplicate SecLevelIdx key.
+	 *	Get the map of List<ICFSecProtSecSysGrpObj> instances sorted by their primary keys for the duplicate SecLevelIdx key.
 	 *
 	 *	@param	SecLevel	The SecSysGrp key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFSecProtSecSysGrpObj cached instances sorted by their primary keys for the duplicate SecLevelIdx key,
+	 *	@return	List of List<ICFSecProtSecSysGrpObj> cached instances sorted by their primary keys for the duplicate SecLevelIdx key,
 	 *		which may be an empty set.
 	 */
-	List<ICFSecProtSecSysGrpObj> readSecSysGrpBySecLevelIdx( ICFSecProtSchema.SecLevelEnum SecLevel,
+	List<ICFSecProtSecSysGrpObj> readSecSysGrpBySecLevelIdx( ICFSecPubSchema.SecLevelEnum SecLevel,
 		boolean forceRead );
 
 	ICFSecProtSecSysGrpObj readCachedSecSysGrpByIdIdx( CFLibDbKeyHash256 SecSysGrpId );
 
 	ICFSecProtSecSysGrpObj readCachedSecSysGrpByUNameIdx( String Name );
 
-	List<ICFSecProtSecSysGrpObj> readCachedSecSysGrpBySecLevelIdx( ICFSecProtSchema.SecLevelEnum SecLevel );
+	List<List<ICFSecProtSecSysGrpObj>> readCachedSecSysGrpBySecLevelIdx( ICFSecPubSchema.SecLevelEnum SecLevel );
 
 	void deepDisposeSecSysGrpByIdIdx( CFLibDbKeyHash256 SecSysGrpId );
 
 	void deepDisposeSecSysGrpByUNameIdx( String Name );
 
-	void deepDisposeSecSysGrpBySecLevelIdx( ICFSecProtSchema.SecLevelEnum SecLevel );
+	void deepDisposeSecSysGrpBySecLevelIdx( ICFSecPubSchema.SecLevelEnum SecLevel );
 
 	/**
 	 *	Internal use only.
@@ -242,5 +245,5 @@ public interface ICFSecProtSecSysGrpTableObj
 	 *
 	 *	@param	SecLevel	The SecSysGrp key attribute of the instance generating the id.
 	 */
-	void deleteSecSysGrpBySecLevelIdx( ICFSecProtSchema.SecLevelEnum SecLevel );
+	void deleteSecSysGrpBySecLevelIdx( ICFSecPubSchema.SecLevelEnum SecLevel );
 }

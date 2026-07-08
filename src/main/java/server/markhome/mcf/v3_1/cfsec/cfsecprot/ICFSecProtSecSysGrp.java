@@ -35,6 +35,7 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
+import server.markhome.mcf.v3_1.cflib.xml.CFLibXmlUtil;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
@@ -53,7 +54,7 @@ public interface ICFSecProtSecSysGrp
 	public static final String S_SECSYSGRPID_INIT_VALUE = ICFSecPubSecSysGrp.S_SECSYSGRPID_INIT_VALUE;
 	public static final CFLibDbKeyHash256 SECSYSGRPID_INIT_VALUE = ICFSecPubSecSysGrp.SECSYSGRPID_INIT_VALUE;
 	public static final String NAME_INIT_VALUE = ICFSecPubSecSysGrp.NAME_INIT_VALUE;
-	public static final ICFSecProtSchema.SecLevelEnum SECLEVEL_INIT_VALUE = ICFSecPubSecSysGrp.SECLEVEL_INIT_VALUE;
+	public static final ICFSecPubSchema.SecLevelEnum SECLEVEL_INIT_VALUE = ICFSecPubSecSysGrp.SECLEVEL_INIT_VALUE;
 	public final static int CLASS_CODE = 0xa00e;
 	public final static String S_CLASS_CODE = "a00e";
 
@@ -87,8 +88,8 @@ public interface ICFSecProtSecSysGrp
 	public List<ICFSecProtSecSysRoleEnables> getOptionalChildrenRoleByEnableName();
 	public String getRequiredName();
 	public void setRequiredName( String value );
-	public ICFSecProtSchema.SecLevelEnum getRequiredSecLevel();
-	public void setRequiredSecLevel( ICFSecProtSchema.SecLevelEnum value );
+	public ICFSecPubSchema.SecLevelEnum getRequiredSecLevel();
+	public void setRequiredSecLevel( ICFSecPubSchema.SecLevelEnum value );
 	@Override
 	public boolean equals( Object obj );
 	

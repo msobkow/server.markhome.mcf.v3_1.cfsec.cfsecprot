@@ -1,4 +1,4 @@
-// Description: Java 25 protlic inteface for a SecTentGrpMemb primary key object.
+// Description: Java 25 protected inteface for a SecTentGrpMemb primary key object.
 
 /*
  *	server.markhome.mcf.CFSec
@@ -38,7 +38,7 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cflib.xml.CFLibXmlUtil;
 
 /**
- *	ICFSecProtSecTentGrpMembPKey protlic primary key interface for SecTentGrpMemb has CodeVis Protected, meaning that any only user interfaces and application code specific to the defining schema can access it.
+ *	ICFSecProtSecTentGrpMembPKey protected primary key interface for SecTentGrpMemb has CodeVis Protected, meaning that any only user interfaces and application code specific to the defining schema can access it.
  *		requiredSecTentGrpId	Required object attribute SecTentGrpId.
  *		requiredLoginId	Required object attribute LoginId.
  */

@@ -46,6 +46,4 @@ import server.markhome.mcf.v3_1.cfsec.cfsecpub.ICFSecPubAuthorization;
 public interface ICFSecProtAuthorization extends ICFSecPubAuthorization
 {
 
-	public CFLibDbKeyHash256 getSecClusterId();
-	public CFLibDbKeyHash256 getSecTenantId();
 }

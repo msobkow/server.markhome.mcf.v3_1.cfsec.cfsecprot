@@ -59,7 +59,7 @@ extends ICFSecPubISOCtryTable
 	 *
 	 *	@param	rec	The instance interface to be created.
 	 */
-	public ICFSecProtISOCtry protcreateISOCtry( ICFSecProtAuthorization Authorization,
+	public ICFSecProtISOCtry protcreateISOCtry( ICFSecPubAuthorization Authorization,
 		ICFSecProtISOCtry rec );
 
 	/**
@@ -70,7 +70,7 @@ extends ICFSecPubISOCtryTable
 	 *
 	 *	@param	rec	The instance interface to be created.
 	 */
-	public ICFSecProtISOCtry protcreateISOCtry( ICFSecProtAuthorization Authorization,
+	public ICFSecProtISOCtry protcreateISOCtry( ICFSecPubAuthorization Authorization,
 		ICFSecPubISOCtry rec );
 
 
@@ -82,7 +82,7 @@ extends ICFSecPubISOCtryTable
 	 *
 	 *	@param	rec	The instance interface to be updated
 	 */
-	public ICFSecProtISOCtry protupdateISOCtry( ICFSecProtAuthorization Authorization,
+	public ICFSecProtISOCtry protupdateISOCtry( ICFSecPubAuthorization Authorization,
 		ICFSecProtISOCtry rec );
 
 	/**
@@ -93,7 +93,7 @@ extends ICFSecPubISOCtryTable
 	 *
 	 *	@param	rec	The instance interface to be updated
 	 */
-	public ICFSecProtISOCtry protupdateISOCtry( ICFSecProtAuthorization Authorization,
+	public ICFSecProtISOCtry protupdateISOCtry( ICFSecPubAuthorization Authorization,
 		ICFSecPubISOCtry rec );
 
 
@@ -104,7 +104,7 @@ extends ICFSecPubISOCtryTable
 	 *
 	 *	@param	rec	The instance interface to be deleted.
 	 */
-	public void protdeleteISOCtry( ICFSecProtAuthorization Authorization,
+	public void protdeleteISOCtry( ICFSecPubAuthorization Authorization,
 		ICFSecProtISOCtry rec );
 	/**
 	 *	Delete the ISOCtry instance identified by the primary key.
@@ -113,7 +113,7 @@ extends ICFSecPubISOCtryTable
 	 *
 	 *	@param	argKey	The primary key identifying the instance to be deleted.
 	 */
-	public void protdeleteISOCtryByIdIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteISOCtryByIdIdx( ICFSecPubAuthorization Authorization,
 		Short argKey );
 	/**
 	 *	Delete the ISOCtry instances identified by the key ISOCodeIdx.
@@ -122,7 +122,7 @@ extends ICFSecPubISOCtryTable
 	 *
 	 *	@param	ISOCode	The ISOCtry key attribute of the instance generating the id.
 	 */
-	public void protdeleteISOCtryByISOCodeIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteISOCtryByISOCodeIdx( ICFSecPubAuthorization Authorization,
 		String argISOCode );
 
 	/**
@@ -132,7 +132,7 @@ extends ICFSecPubISOCtryTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteISOCtryByISOCodeIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteISOCtryByISOCodeIdx( ICFSecPubAuthorization Authorization,
 		ICFSecProtISOCtryByISOCodeIdxKey argKey );
 	/**
 	 *	Delete the ISOCtry instances identified by the key ISOCodeIdx.
@@ -141,7 +141,7 @@ extends ICFSecPubISOCtryTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteISOCtryByISOCodeIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteISOCtryByISOCodeIdx( ICFSecPubAuthorization Authorization,
 		ICFSecPubISOCtryByISOCodeIdxKey argKey );
 	/**
 	 *	Delete the ISOCtry instances identified by the key NameIdx.
@@ -150,7 +150,7 @@ extends ICFSecPubISOCtryTable
 	 *
 	 *	@param	Name	The ISOCtry key attribute of the instance generating the id.
 	 */
-	public void protdeleteISOCtryByNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteISOCtryByNameIdx( ICFSecPubAuthorization Authorization,
 		String argName );
 
 	/**
@@ -160,7 +160,7 @@ extends ICFSecPubISOCtryTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteISOCtryByNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteISOCtryByNameIdx( ICFSecPubAuthorization Authorization,
 		ICFSecProtISOCtryByNameIdxKey argKey );
 	/**
 	 *	Delete the ISOCtry instances identified by the key NameIdx.
@@ -169,7 +169,7 @@ extends ICFSecPubISOCtryTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteISOCtryByNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteISOCtryByNameIdx( ICFSecPubAuthorization Authorization,
 		ICFSecPubISOCtryByNameIdxKey argKey );
 
 	/**
@@ -179,35 +179,8 @@ extends ICFSecPubISOCtryTable
 	 *
 	 *	@param	rec	The instance interface to be deleted.
 	 */
-	public void protdeleteISOCtry( ICFSecProtAuthorization Authorization,
+	public void protdeleteISOCtry( ICFSecPubAuthorization Authorization,
 		ICFSecPubISOCtry rec );
-	/**
-	 *	Delete the ISOCtry instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The primary key identifying the instance to be deleted.
-	 */
-	public void protdeleteISOCtryByIdIdx( ICFSecProtAuthorization Authorization,
-		Short argKey );
-	/**
-	 *	Delete the ISOCtry instances identified by the key ISOCodeIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteISOCtryByISOCodeIdx( ICFSecProtAuthorization Authorization,
-		ICFSecPubISOCtryByISOCodeIdxKey argKey );
-	/**
-	 *	Delete the ISOCtry instances identified by the key NameIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteISOCtryByNameIdx( ICFSecProtAuthorization Authorization,
-		ICFSecPubISOCtryByNameIdxKey argKey );
 
 
 	/**
@@ -220,34 +193,8 @@ extends ICFSecPubISOCtryTable
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFSecProtISOCtry protreadDerived( ICFSecProtAuthorization Authorization,
+	public ICFSecProtISOCtry protreadDerived( ICFSecPubAuthorization Authorization,
 		Short PKey );
-	/**
-	 *	Read the derived ISOCtry record instance by protected primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the ISOCtry instance to be read.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFSecPubISOCtry pubreadDerived( ICFSecProtAuthorization Authorization,
-		Short PKey );
-
-	/**
-	 *	Read the derived ISOCtry record instance by public primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the ISOCtry instance to be read.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFSecProtISOCtry protreadDerived( ICFSecProtAuthorization Authorization,
-		Short PKey );
-
 
 	/**
 	 *	Lock the derived ISOCtry record instance by protected primary key.
@@ -259,34 +206,8 @@ extends ICFSecPubISOCtryTable
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFSecProtISOCtry protlockDerived( ICFSecProtAuthorization Authorization,
+	public ICFSecProtISOCtry protlockDerived( ICFSecPubAuthorization Authorization,
 		Short PKey );
-	/**
-	 *	Lock the derived ISOCtry record instance by protected primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the ISOCtry instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFSecPubISOCtry publockDerived( ICFSecProtAuthorization Authorization,
-		Short PKey );
-
-	/**
-	 *	Lock the derived ISOCtry record instance by public primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the ISOCtry instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFSecProtISOCtry protlockDerived( ICFSecProtAuthorization Authorization,
-		Short PKey );
-
 
 	/**
 	 *	Read all ISOCtry instances.
@@ -295,7 +216,7 @@ extends ICFSecPubISOCtryTable
 	 *
 	 *	@return An array of derived record instances, potentially with 0 elements in the set.
 	 */
-	public ICFSecProtISOCtry[] protreadProtAllDerived( ICFSecProtAuthorization Authorization );
+	public ICFSecProtISOCtry[] protreadProtAllDerived( ICFSecPubAuthorization Authorization );
 
 	/**
 	 *	Read the derived ISOCtry record instance identified by the unique key IdIdx.
@@ -307,7 +228,7 @@ extends ICFSecPubISOCtryTable
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFSecProtISOCtry protreadDerivedByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtISOCtry protreadDerivedByIdIdx( ICFSecPubAuthorization Authorization,
 		short ISOCtryId );
 
 	/**
@@ -320,7 +241,7 @@ extends ICFSecPubISOCtryTable
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFSecProtISOCtry protreadDerivedByISOCodeIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtISOCtry protreadDerivedByISOCodeIdx( ICFSecPubAuthorization Authorization,
 		String ISOCode );
 
 	/**
@@ -333,7 +254,7 @@ extends ICFSecPubISOCtryTable
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFSecProtISOCtry protreadDerivedByNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtISOCtry protreadDerivedByNameIdx( ICFSecPubAuthorization Authorization,
 		String Name );
 
 	/**
@@ -348,37 +269,7 @@ extends ICFSecPubISOCtryTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFSecProtISOCtry protreadRec( ICFSecProtAuthorization Authorization,
-		Short PKey );
-
-	/**
-	 *	Read the specific ISOCtry record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the ISOCtry instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFSecProtISOCtry protreadRec( ICFSecProtAuthorization Authorization,
-		Short PKey );
-
-	/**
-	 *	Read the specific ISOCtry record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the ISOCtry instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFSecPubISOCtry pubreadRec( ICFSecProtAuthorization Authorization,
+	public ICFSecProtISOCtry protreadRec( ICFSecPubAuthorization Authorization,
 		Short PKey );
 
 	/**
@@ -393,37 +284,7 @@ extends ICFSecPubISOCtryTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFSecProtISOCtry protlockRec( ICFSecProtAuthorization Authorization,
-		Short PKey );
-
-	/**
-	 *	Lock the specific ISOCtry record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the ISOCtry instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFSecPubISOCtry publockRec( ICFSecProtAuthorization Authorization,
-		Short PKey );
-
-	/**
-	 *	Lock the specific ISOCtry record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the ISOCtry instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFSecProtISOCtry protlockRec( ICFSecProtAuthorization Authorization,
+	public ICFSecProtISOCtry protlockRec( ICFSecPubAuthorization Authorization,
 		Short PKey );
 
 	/**
@@ -433,7 +294,7 @@ extends ICFSecPubISOCtryTable
 	 *
 	 *	@return All the specific ISOCtry instances in the database accessible for the Authorization.
 	 */
-	public ICFSecProtISOCtry[] protreadAllRec( ICFSecProtAuthorization Authorization );
+	public ICFSecProtISOCtry[] protreadAllRec( ICFSecPubAuthorization Authorization );
 
 	/**
 	 *	Read the specific ISOCtry record instance identified by the unique key IdIdx.
@@ -447,7 +308,7 @@ extends ICFSecPubISOCtryTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFSecProtISOCtry protreadRecByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtISOCtry protreadRecByIdIdx( ICFSecPubAuthorization Authorization,
 		short ISOCtryId );
 
 	/**
@@ -462,7 +323,7 @@ extends ICFSecPubISOCtryTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFSecProtISOCtry protreadRecByISOCodeIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtISOCtry protreadRecByISOCodeIdx( ICFSecPubAuthorization Authorization,
 		String ISOCode );
 
 	/**
@@ -477,6 +338,6 @@ extends ICFSecPubISOCtryTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFSecProtISOCtry protreadRecByNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtISOCtry protreadRecByNameIdx( ICFSecPubAuthorization Authorization,
 		String Name );
 }

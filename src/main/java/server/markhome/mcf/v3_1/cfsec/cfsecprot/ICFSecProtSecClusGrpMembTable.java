@@ -58,7 +58,7 @@ public interface ICFSecProtSecClusGrpMembTable
 	 *
 	 *	@param	rec	The instance interface to be created.
 	 */
-	public ICFSecProtSecClusGrpMemb protcreateSecClusGrpMemb( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecClusGrpMemb protcreateSecClusGrpMemb( ICFSecPubAuthorization Authorization,
 		ICFSecProtSecClusGrpMemb rec );
 
 
@@ -70,7 +70,7 @@ public interface ICFSecProtSecClusGrpMembTable
 	 *
 	 *	@param	rec	The instance interface to be updated
 	 */
-	public ICFSecProtSecClusGrpMemb protupdateSecClusGrpMemb( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecClusGrpMemb protupdateSecClusGrpMemb( ICFSecPubAuthorization Authorization,
 		ICFSecProtSecClusGrpMemb rec );
 
 
@@ -81,7 +81,7 @@ public interface ICFSecProtSecClusGrpMembTable
 	 *
 	 *	@param	rec	The instance interface to be deleted.
 	 */
-	public void protdeleteSecClusGrpMemb( ICFSecProtAuthorization Authorization,
+	public void protdeleteSecClusGrpMemb( ICFSecPubAuthorization Authorization,
 		ICFSecProtSecClusGrpMemb rec );
 	/**
 	 *	Delete the SecClusGrpMemb instance identified by the primary key attributes.
@@ -92,7 +92,7 @@ public interface ICFSecProtSecClusGrpMembTable
 	 *
 	 *	@param	LoginId	The SecClusGrpMemb key attribute of the instance generating the id.
 	 */
-	public void protdeleteSecClusGrpMembByIdIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSecClusGrpMembByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argSecClusGrpId,
 		String argLoginId );
 	/**
@@ -102,7 +102,7 @@ public interface ICFSecProtSecClusGrpMembTable
 	 *
 	 *	@param	argKey	The primary key identifying the instance to be deleted.
 	 */
-	public void protdeleteSecClusGrpMembByIdIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSecClusGrpMembByIdIdx( ICFSecPubAuthorization Authorization,
 		ICFSecProtSecClusGrpMembPKey argKey );
 	/**
 	 *	Delete the SecClusGrpMemb instances identified by the key ClusGrpIdx.
@@ -111,7 +111,7 @@ public interface ICFSecProtSecClusGrpMembTable
 	 *
 	 *	@param	SecClusGrpId	The SecClusGrpMemb key attribute of the instance generating the id.
 	 */
-	public void protdeleteSecClusGrpMembByClusGrpIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSecClusGrpMembByClusGrpIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argSecClusGrpId );
 
 	/**
@@ -121,7 +121,7 @@ public interface ICFSecProtSecClusGrpMembTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteSecClusGrpMembByClusGrpIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSecClusGrpMembByClusGrpIdx( ICFSecPubAuthorization Authorization,
 		ICFSecProtSecClusGrpMembByClusGrpIdxKey argKey );
 	/**
 	 *	Delete the SecClusGrpMemb instances identified by the key LoginIdx.
@@ -130,7 +130,7 @@ public interface ICFSecProtSecClusGrpMembTable
 	 *
 	 *	@param	LoginId	The SecClusGrpMemb key attribute of the instance generating the id.
 	 */
-	public void protdeleteSecClusGrpMembByLoginIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSecClusGrpMembByLoginIdx( ICFSecPubAuthorization Authorization,
 		String argLoginId );
 
 	/**
@@ -140,7 +140,7 @@ public interface ICFSecProtSecClusGrpMembTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteSecClusGrpMembByLoginIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSecClusGrpMembByLoginIdx( ICFSecPubAuthorization Authorization,
 		ICFSecProtSecClusGrpMembByLoginIdxKey argKey );
 
 
@@ -154,7 +154,7 @@ public interface ICFSecProtSecClusGrpMembTable
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFSecProtSecClusGrpMemb protreadDerived( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecClusGrpMemb protreadDerived( ICFSecPubAuthorization Authorization,
 		ICFSecProtSecClusGrpMembPKey PKey );
 
 	/**
@@ -165,7 +165,7 @@ public interface ICFSecProtSecClusGrpMembTable
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFSecProtSecClusGrpMemb protreadDerived( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecClusGrpMemb protreadDerived( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 SecClusGrpId,
 		String LoginId );
 
@@ -179,7 +179,7 @@ public interface ICFSecProtSecClusGrpMembTable
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFSecProtSecClusGrpMemb protlockDerived( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecClusGrpMemb protlockDerived( ICFSecPubAuthorization Authorization,
 		ICFSecProtSecClusGrpMembPKey PKey );
 
 	/**
@@ -189,7 +189,7 @@ public interface ICFSecProtSecClusGrpMembTable
 	 *
 	 *	@return An array of derived record instances, potentially with 0 elements in the set.
 	 */
-	public ICFSecProtSecClusGrpMemb[] protreadProtAllDerived( ICFSecProtAuthorization Authorization );
+	public ICFSecProtSecClusGrpMemb[] protreadProtAllDerived( ICFSecPubAuthorization Authorization );
 
 	/**
 	 *	Read the derived SecClusGrpMemb record instance identified by the unique key IdIdx.
@@ -203,7 +203,7 @@ public interface ICFSecProtSecClusGrpMembTable
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFSecProtSecClusGrpMemb protreadDerivedByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecClusGrpMemb protreadDerivedByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 SecClusGrpId,
 		String LoginId );
 
@@ -216,7 +216,7 @@ public interface ICFSecProtSecClusGrpMembTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFSecProtSecClusGrpMemb[] protreadDerivedByClusGrpIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecClusGrpMemb[] protreadDerivedByClusGrpIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 SecClusGrpId );
 
 	/**
@@ -228,7 +228,7 @@ public interface ICFSecProtSecClusGrpMembTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFSecProtSecClusGrpMemb[] protreadDerivedByLoginIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecClusGrpMemb[] protreadDerivedByLoginIdx( ICFSecPubAuthorization Authorization,
 		String LoginId );
 
 	/**
@@ -243,7 +243,7 @@ public interface ICFSecProtSecClusGrpMembTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFSecProtSecClusGrpMemb protreadRec( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecClusGrpMemb protreadRec( ICFSecPubAuthorization Authorization,
 		ICFSecProtSecClusGrpMembPKey PKey );
 
 	/**
@@ -258,7 +258,7 @@ public interface ICFSecProtSecClusGrpMembTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFSecProtSecClusGrpMemb protreadRec( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecClusGrpMemb protreadRec( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 SecClusGrpId,
 		String LoginId );
 
@@ -274,7 +274,7 @@ public interface ICFSecProtSecClusGrpMembTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFSecProtSecClusGrpMemb protlockRec( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecClusGrpMemb protlockRec( ICFSecPubAuthorization Authorization,
 		ICFSecProtSecClusGrpMembPKey PKey );
 
 	/**
@@ -284,7 +284,7 @@ public interface ICFSecProtSecClusGrpMembTable
 	 *
 	 *	@return All the specific SecClusGrpMemb instances in the database accessible for the Authorization.
 	 */
-	public ICFSecProtSecClusGrpMemb[] protreadAllRec( ICFSecProtAuthorization Authorization );
+	public ICFSecProtSecClusGrpMemb[] protreadAllRec( ICFSecPubAuthorization Authorization );
 
 	/**
 	 *	Read a page of all the specific SecClusGrpMemb record instances.
@@ -293,7 +293,7 @@ public interface ICFSecProtSecClusGrpMembTable
 	 *
 	 *	@return All the specific SecClusGrpMemb instances in the database accessible for the Authorization.
 	 */
-	public ICFSecProtSecClusGrpMemb[] protpageAllRec( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecClusGrpMemb[] protpageAllRec( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 priorSecClusGrpId,
 		String priorLoginId );
 
@@ -311,7 +311,7 @@ public interface ICFSecProtSecClusGrpMembTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFSecProtSecClusGrpMemb protreadRecByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecClusGrpMemb protreadRecByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 SecClusGrpId,
 		String LoginId );
 
@@ -326,7 +326,7 @@ public interface ICFSecProtSecClusGrpMembTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFSecProtSecClusGrpMemb[] protreadRecByClusGrpIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecClusGrpMemb[] protreadRecByClusGrpIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 SecClusGrpId );
 
 	/**
@@ -340,7 +340,7 @@ public interface ICFSecProtSecClusGrpMembTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFSecProtSecClusGrpMemb[] protreadRecByLoginIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecClusGrpMemb[] protreadRecByLoginIdx( ICFSecPubAuthorization Authorization,
 		String LoginId );
 
 	/**
@@ -354,7 +354,7 @@ public interface ICFSecProtSecClusGrpMembTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFSecProtSecClusGrpMemb[] protpageRecByClusGrpIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecClusGrpMemb[] protpageRecByClusGrpIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 SecClusGrpId,
 		CFLibDbKeyHash256 priorSecClusGrpId,
 		String priorLoginId );
@@ -370,7 +370,7 @@ public interface ICFSecProtSecClusGrpMembTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFSecProtSecClusGrpMemb[] protpageRecByLoginIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecClusGrpMemb[] protpageRecByLoginIdx( ICFSecPubAuthorization Authorization,
 		String LoginId,
 		CFLibDbKeyHash256 priorSecClusGrpId,
 		String priorLoginId );

@@ -47,32 +47,21 @@ import server.markhome.mcf.v3_1.cfsec.cfsecpub.CFSecPubAuthorization;
  */
 public class CFSecProtAuthorization extends CFSecPubAuthorization implements ICFSecProtAuthorization, Serializable
 {
-	protected CFLibDbKeyHash256 secClusterId;
-	protected CFLibDbKeyHash256 secTenantId;
 
 	public CFSecProtAuthorization() {
 		super();
-		secClusterId = CFLibDbKeyHash256.nullGet();
-		secTenantId = CFLibDbKeyHash256.nullGet();
+	}
+
+	public CFSecProtAuthorization(CFLibUuid6 authUuid6, CFLibDbKeyHash256 secSessionId, CFLibDbKeyHash256 secUserId, CFLibDbKeyHash256 secClusterId, CFLibDbKeyHash256 secTenantId) {
+		super(authUuid6, secSessionId, secUserId, secClusterId, secTenantId);
 	}
 
 	public CFSecProtAuthorization(ICFSecProtAuthorization src) {
 		super(src);
-		secClusterId = new CFLibDbKeyHash256(src.getSecClusterId());
-		secTenantId = new CFLibDbKeyHash256(src.getSecTenantId());
 	}
 
 	public CFSecProtAuthorization(ICFSecPubAuthorization src) {
 		super(src);
-		secClusterId = CFLibDbKeyHash256.nullGet();
-		secTenantId = CFLibDbKeyHash256.nullGet();
 	}
 
-	public CFLibDbKeyHash256 getSecClusterId() {
-		return( secClusterId );
-	}
-
-	public CFLibDbKeyHash256 getSecTenantId() {
-		return( secTenantId );
-	}
 }

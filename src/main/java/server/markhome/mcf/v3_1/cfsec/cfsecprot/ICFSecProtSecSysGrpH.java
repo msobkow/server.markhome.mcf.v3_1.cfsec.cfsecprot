@@ -36,7 +36,9 @@ import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cflib.xml.CFLibXmlUtil;
-//import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 
 /**
  *	ICFSecProtSecSysGrpH provides access to protlic history records matching the CFSecProtSecSysGrp object change history.
@@ -72,8 +74,8 @@ public interface ICFSecProtSecSysGrpH
 
 	public String getRequiredName();
 	public void setRequiredName( String value );
-	public ICFSecProtSchema.SecLevelEnum getRequiredSecLevel();
-	public void setRequiredSecLevel( ICFSecProtSchema.SecLevelEnum value );
+	public ICFSecPubSchema.SecLevelEnum getRequiredSecLevel();
+	public void setRequiredSecLevel( ICFSecPubSchema.SecLevelEnum value );
 	@Override
 	public boolean equals( Object obj );
 

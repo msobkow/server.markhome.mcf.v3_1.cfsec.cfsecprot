@@ -36,7 +36,10 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 
 public interface ICFSecProtSecSysRoleTableObj
 {
@@ -139,42 +142,42 @@ public interface ICFSecProtSecSysRoleTableObj
 	List<ICFSecProtSecSysRoleObj> readCachedAllSecSysRole();
 
 	/**
-	 *	Get the CFSecProtSecSysRoleObj instance for the primary key attributes.
+	 *	Get the ICFSecProtSecSysRoleObj instance for the primary key attributes.
 	 *
 	 *	@param	SecSysRoleId	The SecSysRole key attribute of the instance generating the id.
 	 *
-	 *	@return	CFSecProtSecSysRoleObj cached instance for the primary key, or
+	 *	@return	ICFSecProtSecSysRoleObj cached instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
 	ICFSecProtSecSysRoleObj readSecSysRoleByIdIdx( CFLibDbKeyHash256 SecSysRoleId );
 
 	/**
-	 *	Get the CFSecProtSecSysRoleObj instance for the primary key attributes.
+	 *	Get the ICFSecProtSecSysRoleObj instance for the primary key attributes.
 	 *
 	 *	@param	SecSysRoleId	The SecSysRole key attribute of the instance generating the id.
 	 *
-	 *	@return	CFSecProtSecSysRoleObj refreshed instance for the primary key, or
+	 *	@return	ICFSecProtSecSysRoleObj refreshed instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
 	ICFSecProtSecSysRoleObj readSecSysRoleByIdIdx( CFLibDbKeyHash256 SecSysRoleId,
 		boolean forceRead );
 
 	/**
-	 *	Get the CFSecProtSecSysRoleObj instance for the unique UNameIdx key.
+	 *	Get the ICFSecProtSecSysRoleObj instance for the unique UNameIdx key.
 	 *
 	 *	@param	Name	The SecSysRole key attribute of the instance generating the id.
 	 *
-	 *	@return	CFSecProtSecSysRoleObj cached instance for the unique UNameIdx key, or
+	 *	@return	ICFSecProtSecSysRoleObj cached instance for the unique UNameIdx key, or
 	 *		null if no such instance exists.
 	 */
 	ICFSecProtSecSysRoleObj readSecSysRoleByUNameIdx(String Name );
 
 	/**
-	 *	Get the CFSecProtSecSysRoleObj instance for the unique UNameIdx key.
+	 *	Get the ICFSecProtSecSysRoleObj instance for the unique UNameIdx key.
 	 *
 	 *	@param	Name	The SecSysRole key attribute of the instance generating the id.
 	 *
-	 *	@return	CFSecProtSecSysRoleObj refreshed instance for the unique UNameIdx key, or
+	 *	@return	ICFSecProtSecSysRoleObj refreshed instance for the unique UNameIdx key, or
 	 *		null if no such instance exists.
 	 */
 	ICFSecProtSecSysRoleObj readSecSysRoleByUNameIdx(String Name,

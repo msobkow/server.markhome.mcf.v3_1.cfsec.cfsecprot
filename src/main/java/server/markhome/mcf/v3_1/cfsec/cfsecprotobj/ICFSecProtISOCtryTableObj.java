@@ -36,7 +36,10 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 
 public interface ICFSecProtISOCtryTableObj
 {
@@ -139,63 +142,63 @@ public interface ICFSecProtISOCtryTableObj
 	List<ICFSecProtISOCtryObj> readCachedAllISOCtry();
 
 	/**
-	 *	Get the CFSecProtISOCtryObj instance for the primary key attributes.
+	 *	Get the ICFSecProtISOCtryObj instance for the primary key attributes.
 	 *
 	 *	@param	ISOCtryId	The ISOCtry key attribute of the instance generating the id.
 	 *
-	 *	@return	CFSecProtISOCtryObj cached instance for the primary key, or
+	 *	@return	ICFSecProtISOCtryObj cached instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
 	ICFSecProtISOCtryObj readISOCtryByIdIdx( short ISOCtryId );
 
 	/**
-	 *	Get the CFSecProtISOCtryObj instance for the primary key attributes.
+	 *	Get the ICFSecProtISOCtryObj instance for the primary key attributes.
 	 *
 	 *	@param	ISOCtryId	The ISOCtry key attribute of the instance generating the id.
 	 *
-	 *	@return	CFSecProtISOCtryObj refreshed instance for the primary key, or
+	 *	@return	ICFSecProtISOCtryObj refreshed instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
 	ICFSecProtISOCtryObj readISOCtryByIdIdx( short ISOCtryId,
 		boolean forceRead );
 
 	/**
-	 *	Get the CFSecProtISOCtryObj instance for the unique ISOCodeIdx key.
+	 *	Get the ICFSecProtISOCtryObj instance for the unique ISOCodeIdx key.
 	 *
 	 *	@param	ISOCode	The ISOCtry key attribute of the instance generating the id.
 	 *
-	 *	@return	CFSecProtISOCtryObj cached instance for the unique ISOCodeIdx key, or
+	 *	@return	ICFSecProtISOCtryObj cached instance for the unique ISOCodeIdx key, or
 	 *		null if no such instance exists.
 	 */
 	ICFSecProtISOCtryObj readISOCtryByISOCodeIdx(String ISOCode );
 
 	/**
-	 *	Get the CFSecProtISOCtryObj instance for the unique ISOCodeIdx key.
+	 *	Get the ICFSecProtISOCtryObj instance for the unique ISOCodeIdx key.
 	 *
 	 *	@param	ISOCode	The ISOCtry key attribute of the instance generating the id.
 	 *
-	 *	@return	CFSecProtISOCtryObj refreshed instance for the unique ISOCodeIdx key, or
+	 *	@return	ICFSecProtISOCtryObj refreshed instance for the unique ISOCodeIdx key, or
 	 *		null if no such instance exists.
 	 */
 	ICFSecProtISOCtryObj readISOCtryByISOCodeIdx(String ISOCode,
 		boolean forceRead );
 
 	/**
-	 *	Get the CFSecProtISOCtryObj instance for the unique NameIdx key.
+	 *	Get the ICFSecProtISOCtryObj instance for the unique NameIdx key.
 	 *
 	 *	@param	Name	The ISOCtry key attribute of the instance generating the id.
 	 *
-	 *	@return	CFSecProtISOCtryObj cached instance for the unique NameIdx key, or
+	 *	@return	ICFSecProtISOCtryObj cached instance for the unique NameIdx key, or
 	 *		null if no such instance exists.
 	 */
 	ICFSecProtISOCtryObj readISOCtryByNameIdx(String Name );
 
 	/**
-	 *	Get the CFSecProtISOCtryObj instance for the unique NameIdx key.
+	 *	Get the ICFSecProtISOCtryObj instance for the unique NameIdx key.
 	 *
 	 *	@param	Name	The ISOCtry key attribute of the instance generating the id.
 	 *
-	 *	@return	CFSecProtISOCtryObj refreshed instance for the unique NameIdx key, or
+	 *	@return	ICFSecProtISOCtryObj refreshed instance for the unique NameIdx key, or
 	 *		null if no such instance exists.
 	 */
 	ICFSecProtISOCtryObj readISOCtryByNameIdx(String Name,

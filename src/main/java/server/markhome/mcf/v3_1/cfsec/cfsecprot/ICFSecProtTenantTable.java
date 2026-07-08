@@ -59,7 +59,7 @@ extends ICFSecPubTenantTable
 	 *
 	 *	@param	rec	The instance interface to be created.
 	 */
-	public ICFSecProtTenant protcreateTenant( ICFSecProtAuthorization Authorization,
+	public ICFSecProtTenant protcreateTenant( ICFSecPubAuthorization Authorization,
 		ICFSecProtTenant rec );
 
 	/**
@@ -70,7 +70,7 @@ extends ICFSecPubTenantTable
 	 *
 	 *	@param	rec	The instance interface to be created.
 	 */
-	public ICFSecProtTenant protcreateTenant( ICFSecProtAuthorization Authorization,
+	public ICFSecProtTenant protcreateTenant( ICFSecPubAuthorization Authorization,
 		ICFSecPubTenant rec );
 
 
@@ -82,7 +82,7 @@ extends ICFSecPubTenantTable
 	 *
 	 *	@param	rec	The instance interface to be updated
 	 */
-	public ICFSecProtTenant protupdateTenant( ICFSecProtAuthorization Authorization,
+	public ICFSecProtTenant protupdateTenant( ICFSecPubAuthorization Authorization,
 		ICFSecProtTenant rec );
 
 	/**
@@ -93,7 +93,7 @@ extends ICFSecPubTenantTable
 	 *
 	 *	@param	rec	The instance interface to be updated
 	 */
-	public ICFSecProtTenant protupdateTenant( ICFSecProtAuthorization Authorization,
+	public ICFSecProtTenant protupdateTenant( ICFSecPubAuthorization Authorization,
 		ICFSecPubTenant rec );
 
 
@@ -104,7 +104,7 @@ extends ICFSecPubTenantTable
 	 *
 	 *	@param	rec	The instance interface to be deleted.
 	 */
-	public void protdeleteTenant( ICFSecProtAuthorization Authorization,
+	public void protdeleteTenant( ICFSecPubAuthorization Authorization,
 		ICFSecProtTenant rec );
 	/**
 	 *	Delete the Tenant instance identified by the primary key.
@@ -113,7 +113,7 @@ extends ICFSecPubTenantTable
 	 *
 	 *	@param	argKey	The primary key identifying the instance to be deleted.
 	 */
-	public void protdeleteTenantByIdIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteTenantByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argKey );
 	/**
 	 *	Delete the Tenant instances identified by the key ClusterIdx.
@@ -122,7 +122,7 @@ extends ICFSecPubTenantTable
 	 *
 	 *	@param	ClusterId	The Tenant key attribute of the instance generating the id.
 	 */
-	public void protdeleteTenantByClusterIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteTenantByClusterIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argClusterId );
 
 	/**
@@ -132,7 +132,7 @@ extends ICFSecPubTenantTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteTenantByClusterIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteTenantByClusterIdx( ICFSecPubAuthorization Authorization,
 		ICFSecProtTenantByClusterIdxKey argKey );
 	/**
 	 *	Delete the Tenant instances identified by the key ClusterIdx.
@@ -141,7 +141,7 @@ extends ICFSecPubTenantTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteTenantByClusterIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteTenantByClusterIdx( ICFSecPubAuthorization Authorization,
 		ICFSecPubTenantByClusterIdxKey argKey );
 	/**
 	 *	Delete the Tenant instances identified by the key UNameIdx.
@@ -152,7 +152,7 @@ extends ICFSecPubTenantTable
 	 *
 	 *	@param	TenantName	The Tenant key attribute of the instance generating the id.
 	 */
-	public void protdeleteTenantByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteTenantByUNameIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argClusterId,
 		String argTenantName );
 
@@ -163,7 +163,7 @@ extends ICFSecPubTenantTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteTenantByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteTenantByUNameIdx( ICFSecPubAuthorization Authorization,
 		ICFSecProtTenantByUNameIdxKey argKey );
 	/**
 	 *	Delete the Tenant instances identified by the key UNameIdx.
@@ -172,7 +172,7 @@ extends ICFSecPubTenantTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteTenantByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteTenantByUNameIdx( ICFSecPubAuthorization Authorization,
 		ICFSecPubTenantByUNameIdxKey argKey );
 
 	/**
@@ -182,35 +182,8 @@ extends ICFSecPubTenantTable
 	 *
 	 *	@param	rec	The instance interface to be deleted.
 	 */
-	public void protdeleteTenant( ICFSecProtAuthorization Authorization,
+	public void protdeleteTenant( ICFSecPubAuthorization Authorization,
 		ICFSecPubTenant rec );
-	/**
-	 *	Delete the Tenant instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The primary key identifying the instance to be deleted.
-	 */
-	public void protdeleteTenantByIdIdx( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 argKey );
-	/**
-	 *	Delete the Tenant instances identified by the key ClusterIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteTenantByClusterIdx( ICFSecProtAuthorization Authorization,
-		ICFSecPubTenantByClusterIdxKey argKey );
-	/**
-	 *	Delete the Tenant instances identified by the key UNameIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteTenantByUNameIdx( ICFSecProtAuthorization Authorization,
-		ICFSecPubTenantByUNameIdxKey argKey );
 
 
 	/**
@@ -223,34 +196,8 @@ extends ICFSecPubTenantTable
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFSecProtTenant protreadDerived( ICFSecProtAuthorization Authorization,
+	public ICFSecProtTenant protreadDerived( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
-	/**
-	 *	Read the derived Tenant record instance by protected primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the Tenant instance to be read.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFSecPubTenant pubreadDerived( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Read the derived Tenant record instance by public primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the Tenant instance to be read.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFSecProtTenant protreadDerived( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
 
 	/**
 	 *	Lock the derived Tenant record instance by protected primary key.
@@ -262,34 +209,8 @@ extends ICFSecPubTenantTable
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFSecProtTenant protlockDerived( ICFSecProtAuthorization Authorization,
+	public ICFSecProtTenant protlockDerived( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
-	/**
-	 *	Lock the derived Tenant record instance by protected primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the Tenant instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFSecPubTenant publockDerived( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Lock the derived Tenant record instance by public primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the Tenant instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFSecProtTenant protlockDerived( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
 
 	/**
 	 *	Read all Tenant instances.
@@ -298,7 +219,7 @@ extends ICFSecPubTenantTable
 	 *
 	 *	@return An array of derived record instances, potentially with 0 elements in the set.
 	 */
-	public ICFSecProtTenant[] protreadProtAllDerived( ICFSecProtAuthorization Authorization );
+	public ICFSecProtTenant[] protreadProtAllDerived( ICFSecPubAuthorization Authorization );
 
 	/**
 	 *	Read the derived Tenant record instance identified by the unique key IdIdx.
@@ -310,7 +231,7 @@ extends ICFSecPubTenantTable
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFSecProtTenant protreadDerivedByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtTenant protreadDerivedByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 Id );
 
 	/**
@@ -322,7 +243,7 @@ extends ICFSecPubTenantTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFSecProtTenant[] protreadDerivedByClusterIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtTenant[] protreadDerivedByClusterIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ClusterId );
 
 	/**
@@ -337,7 +258,7 @@ extends ICFSecPubTenantTable
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFSecProtTenant protreadDerivedByUNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtTenant protreadDerivedByUNameIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ClusterId,
 		String TenantName );
 
@@ -353,37 +274,7 @@ extends ICFSecPubTenantTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFSecProtTenant protreadRec( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Read the specific Tenant record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the Tenant instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFSecProtTenant protreadRec( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Read the specific Tenant record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the Tenant instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFSecPubTenant pubreadRec( ICFSecProtAuthorization Authorization,
+	public ICFSecProtTenant protreadRec( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -398,37 +289,7 @@ extends ICFSecPubTenantTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFSecProtTenant protlockRec( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Lock the specific Tenant record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the Tenant instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFSecPubTenant publockRec( ICFSecProtAuthorization Authorization,
-		CFLibDbKeyHash256 PKey );
-
-	/**
-	 *	Lock the specific Tenant record instance identified by the primary key.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PKey	The primary key of the Tenant instance to be locked.
-	 *
-	 *	@return The record instance for the specified primary key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFSecProtTenant protlockRec( ICFSecProtAuthorization Authorization,
+	public ICFSecProtTenant protlockRec( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -438,7 +299,7 @@ extends ICFSecPubTenantTable
 	 *
 	 *	@return All the specific Tenant instances in the database accessible for the Authorization.
 	 */
-	public ICFSecProtTenant[] protreadAllRec( ICFSecProtAuthorization Authorization );
+	public ICFSecProtTenant[] protreadAllRec( ICFSecPubAuthorization Authorization );
 
 	/**
 	 *	Read a page of all the specific Tenant record instances.
@@ -447,7 +308,7 @@ extends ICFSecPubTenantTable
 	 *
 	 *	@return All the specific Tenant instances in the database accessible for the Authorization.
 	 */
-	public ICFSecProtTenant[] protpageAllRec( ICFSecProtAuthorization Authorization,
+	public ICFSecProtTenant[] protpageAllRec( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 priorId );
 
 	/**
@@ -462,7 +323,7 @@ extends ICFSecPubTenantTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFSecProtTenant protreadRecByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtTenant protreadRecByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 Id );
 
 	/**
@@ -476,7 +337,7 @@ extends ICFSecPubTenantTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFSecProtTenant[] protreadRecByClusterIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtTenant[] protreadRecByClusterIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ClusterId );
 
 	/**
@@ -493,7 +354,7 @@ extends ICFSecPubTenantTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFSecProtTenant protreadRecByUNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtTenant protreadRecByUNameIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ClusterId,
 		String TenantName );
 
@@ -508,7 +369,7 @@ extends ICFSecPubTenantTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFSecProtTenant[] protpageRecByClusterIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtTenant[] protpageRecByClusterIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 ClusterId,
 		CFLibDbKeyHash256 priorId );
 }

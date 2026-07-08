@@ -36,7 +36,10 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 
 public interface ICFSecProtISOTZoneTableObj
 {
@@ -139,47 +142,47 @@ public interface ICFSecProtISOTZoneTableObj
 	List<ICFSecProtISOTZoneObj> readCachedAllISOTZone();
 
 	/**
-	 *	Get the CFSecProtISOTZoneObj instance for the primary key attributes.
+	 *	Get the ICFSecProtISOTZoneObj instance for the primary key attributes.
 	 *
 	 *	@param	ISOTZoneId	The ISOTZone key attribute of the instance generating the id.
 	 *
-	 *	@return	CFSecProtISOTZoneObj cached instance for the primary key, or
+	 *	@return	ICFSecProtISOTZoneObj cached instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
 	ICFSecProtISOTZoneObj readISOTZoneByIdIdx( short ISOTZoneId );
 
 	/**
-	 *	Get the CFSecProtISOTZoneObj instance for the primary key attributes.
+	 *	Get the ICFSecProtISOTZoneObj instance for the primary key attributes.
 	 *
 	 *	@param	ISOTZoneId	The ISOTZone key attribute of the instance generating the id.
 	 *
-	 *	@return	CFSecProtISOTZoneObj refreshed instance for the primary key, or
+	 *	@return	ICFSecProtISOTZoneObj refreshed instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
 	ICFSecProtISOTZoneObj readISOTZoneByIdIdx( short ISOTZoneId,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFSecProtISOTZoneObj instances sorted by their primary keys for the duplicate OffsetIdx key.
+	 *	Get the map of List<ICFSecProtISOTZoneObj> instances sorted by their primary keys for the duplicate OffsetIdx key.
 	 *
 	 *	@param	TZHourOffset	The ISOTZone key attribute of the instance generating the id.
 	 *
 	 *	@param	TZMinOffset	The ISOTZone key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFSecProtISOTZoneObj cached instances sorted by their primary keys for the duplicate OffsetIdx key,
+	 *	@return	List of List<ICFSecProtISOTZoneObj> cached instances sorted by their primary keys for the duplicate OffsetIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFSecProtISOTZoneObj> readISOTZoneByOffsetIdx( short TZHourOffset,
 		short TZMinOffset );
 
 	/**
-	 *	Get the map of CFSecProtISOTZoneObj instances sorted by their primary keys for the duplicate OffsetIdx key.
+	 *	Get the map of List<ICFSecProtISOTZoneObj> instances sorted by their primary keys for the duplicate OffsetIdx key.
 	 *
 	 *	@param	TZHourOffset	The ISOTZone key attribute of the instance generating the id.
 	 *
 	 *	@param	TZMinOffset	The ISOTZone key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFSecProtISOTZoneObj cached instances sorted by their primary keys for the duplicate OffsetIdx key,
+	 *	@return	List of List<ICFSecProtISOTZoneObj> cached instances sorted by their primary keys for the duplicate OffsetIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFSecProtISOTZoneObj> readISOTZoneByOffsetIdx( short TZHourOffset,
@@ -187,42 +190,42 @@ public interface ICFSecProtISOTZoneTableObj
 		boolean forceRead );
 
 	/**
-	 *	Get the CFSecProtISOTZoneObj instance for the unique UTZNameIdx key.
+	 *	Get the ICFSecProtISOTZoneObj instance for the unique UTZNameIdx key.
 	 *
 	 *	@param	TZName	The ISOTZone key attribute of the instance generating the id.
 	 *
-	 *	@return	CFSecProtISOTZoneObj cached instance for the unique UTZNameIdx key, or
+	 *	@return	ICFSecProtISOTZoneObj cached instance for the unique UTZNameIdx key, or
 	 *		null if no such instance exists.
 	 */
 	ICFSecProtISOTZoneObj readISOTZoneByUTZNameIdx(String TZName );
 
 	/**
-	 *	Get the CFSecProtISOTZoneObj instance for the unique UTZNameIdx key.
+	 *	Get the ICFSecProtISOTZoneObj instance for the unique UTZNameIdx key.
 	 *
 	 *	@param	TZName	The ISOTZone key attribute of the instance generating the id.
 	 *
-	 *	@return	CFSecProtISOTZoneObj refreshed instance for the unique UTZNameIdx key, or
+	 *	@return	ICFSecProtISOTZoneObj refreshed instance for the unique UTZNameIdx key, or
 	 *		null if no such instance exists.
 	 */
 	ICFSecProtISOTZoneObj readISOTZoneByUTZNameIdx(String TZName,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFSecProtISOTZoneObj instances sorted by their primary keys for the duplicate Iso8601Idx key.
+	 *	Get the map of List<ICFSecProtISOTZoneObj> instances sorted by their primary keys for the duplicate Iso8601Idx key.
 	 *
 	 *	@param	Iso8601	The ISOTZone key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFSecProtISOTZoneObj cached instances sorted by their primary keys for the duplicate Iso8601Idx key,
+	 *	@return	List of List<ICFSecProtISOTZoneObj> cached instances sorted by their primary keys for the duplicate Iso8601Idx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFSecProtISOTZoneObj> readISOTZoneByIso8601Idx( String Iso8601 );
 
 	/**
-	 *	Get the map of CFSecProtISOTZoneObj instances sorted by their primary keys for the duplicate Iso8601Idx key.
+	 *	Get the map of List<ICFSecProtISOTZoneObj> instances sorted by their primary keys for the duplicate Iso8601Idx key.
 	 *
 	 *	@param	Iso8601	The ISOTZone key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFSecProtISOTZoneObj cached instances sorted by their primary keys for the duplicate Iso8601Idx key,
+	 *	@return	List of List<ICFSecProtISOTZoneObj> cached instances sorted by their primary keys for the duplicate Iso8601Idx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFSecProtISOTZoneObj> readISOTZoneByIso8601Idx( String Iso8601,
@@ -230,12 +233,12 @@ public interface ICFSecProtISOTZoneTableObj
 
 	ICFSecProtISOTZoneObj readCachedISOTZoneByIdIdx( short ISOTZoneId );
 
-	List<ICFSecProtISOTZoneObj> readCachedISOTZoneByOffsetIdx( short TZHourOffset,
+	List<List<ICFSecProtISOTZoneObj>> readCachedISOTZoneByOffsetIdx( short TZHourOffset,
 		short TZMinOffset );
 
 	ICFSecProtISOTZoneObj readCachedISOTZoneByUTZNameIdx( String TZName );
 
-	List<ICFSecProtISOTZoneObj> readCachedISOTZoneByIso8601Idx( String Iso8601 );
+	List<List<ICFSecProtISOTZoneObj>> readCachedISOTZoneByIso8601Idx( String Iso8601 );
 
 	void deepDisposeISOTZoneByIdIdx( short ISOTZoneId );
 

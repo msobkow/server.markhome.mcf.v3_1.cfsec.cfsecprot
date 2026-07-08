@@ -36,7 +36,10 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 
 public interface ICFSecProtSecUserPWResetTableObj
 {
@@ -147,84 +150,84 @@ public interface ICFSecProtSecUserPWResetTableObj
 	List<ICFSecProtSecUserPWResetObj> pageAllSecUserPWReset(CFLibDbKeyHash256 priorSecUserId );
 
 	/**
-	 *	Get the CFSecProtSecUserPWResetObj instance for the primary key attributes.
+	 *	Get the ICFSecProtSecUserPWResetObj instance for the primary key attributes.
 	 *
 	 *	@param	SecUserId	The SecUserPWReset key attribute of the instance generating the id.
 	 *
-	 *	@return	CFSecProtSecUserPWResetObj cached instance for the primary key, or
+	 *	@return	ICFSecProtSecUserPWResetObj cached instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
 	ICFSecProtSecUserPWResetObj readSecUserPWResetByIdIdx( CFLibDbKeyHash256 SecUserId );
 
 	/**
-	 *	Get the CFSecProtSecUserPWResetObj instance for the primary key attributes.
+	 *	Get the ICFSecProtSecUserPWResetObj instance for the primary key attributes.
 	 *
 	 *	@param	SecUserId	The SecUserPWReset key attribute of the instance generating the id.
 	 *
-	 *	@return	CFSecProtSecUserPWResetObj refreshed instance for the primary key, or
+	 *	@return	ICFSecProtSecUserPWResetObj refreshed instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
 	ICFSecProtSecUserPWResetObj readSecUserPWResetByIdIdx( CFLibDbKeyHash256 SecUserId,
 		boolean forceRead );
 
 	/**
-	 *	Get the CFSecProtSecUserPWResetObj instance for the unique UUuid6Idx key.
+	 *	Get the ICFSecProtSecUserPWResetObj instance for the unique UUuid6Idx key.
 	 *
 	 *	@param	PasswordResetUuid6	The SecUserPWReset key attribute of the instance generating the id.
 	 *
-	 *	@return	CFSecProtSecUserPWResetObj cached instance for the unique UUuid6Idx key, or
+	 *	@return	ICFSecProtSecUserPWResetObj cached instance for the unique UUuid6Idx key, or
 	 *		null if no such instance exists.
 	 */
 	ICFSecProtSecUserPWResetObj readSecUserPWResetByUUuid6Idx(CFLibUuid6 PasswordResetUuid6 );
 
 	/**
-	 *	Get the CFSecProtSecUserPWResetObj instance for the unique UUuid6Idx key.
+	 *	Get the ICFSecProtSecUserPWResetObj instance for the unique UUuid6Idx key.
 	 *
 	 *	@param	PasswordResetUuid6	The SecUserPWReset key attribute of the instance generating the id.
 	 *
-	 *	@return	CFSecProtSecUserPWResetObj refreshed instance for the unique UUuid6Idx key, or
+	 *	@return	ICFSecProtSecUserPWResetObj refreshed instance for the unique UUuid6Idx key, or
 	 *		null if no such instance exists.
 	 */
 	ICFSecProtSecUserPWResetObj readSecUserPWResetByUUuid6Idx(CFLibUuid6 PasswordResetUuid6,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFSecProtSecUserPWResetObj instances sorted by their primary keys for the duplicate SentEMAddrIdx key.
+	 *	Get the map of List<ICFSecProtSecUserPWResetObj> instances sorted by their primary keys for the duplicate SentEMAddrIdx key.
 	 *
 	 *	@param	SentToEMailAddr	The SecUserPWReset key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFSecProtSecUserPWResetObj cached instances sorted by their primary keys for the duplicate SentEMAddrIdx key,
+	 *	@return	List of List<ICFSecProtSecUserPWResetObj> cached instances sorted by their primary keys for the duplicate SentEMAddrIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFSecProtSecUserPWResetObj> readSecUserPWResetBySentEMAddrIdx( String SentToEMailAddr );
 
 	/**
-	 *	Get the map of CFSecProtSecUserPWResetObj instances sorted by their primary keys for the duplicate SentEMAddrIdx key.
+	 *	Get the map of List<ICFSecProtSecUserPWResetObj> instances sorted by their primary keys for the duplicate SentEMAddrIdx key.
 	 *
 	 *	@param	SentToEMailAddr	The SecUserPWReset key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFSecProtSecUserPWResetObj cached instances sorted by their primary keys for the duplicate SentEMAddrIdx key,
+	 *	@return	List of List<ICFSecProtSecUserPWResetObj> cached instances sorted by their primary keys for the duplicate SentEMAddrIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFSecProtSecUserPWResetObj> readSecUserPWResetBySentEMAddrIdx( String SentToEMailAddr,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFSecProtSecUserPWResetObj instances sorted by their primary keys for the duplicate NewAcctIdx key.
+	 *	Get the map of List<ICFSecProtSecUserPWResetObj> instances sorted by their primary keys for the duplicate NewAcctIdx key.
 	 *
 	 *	@param	NewAccount	The SecUserPWReset key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFSecProtSecUserPWResetObj cached instances sorted by their primary keys for the duplicate NewAcctIdx key,
+	 *	@return	List of List<ICFSecProtSecUserPWResetObj> cached instances sorted by their primary keys for the duplicate NewAcctIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFSecProtSecUserPWResetObj> readSecUserPWResetByNewAcctIdx( boolean NewAccount );
 
 	/**
-	 *	Get the map of CFSecProtSecUserPWResetObj instances sorted by their primary keys for the duplicate NewAcctIdx key.
+	 *	Get the map of List<ICFSecProtSecUserPWResetObj> instances sorted by their primary keys for the duplicate NewAcctIdx key.
 	 *
 	 *	@param	NewAccount	The SecUserPWReset key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFSecProtSecUserPWResetObj cached instances sorted by their primary keys for the duplicate NewAcctIdx key,
+	 *	@return	List of List<ICFSecProtSecUserPWResetObj> cached instances sorted by their primary keys for the duplicate NewAcctIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFSecProtSecUserPWResetObj> readSecUserPWResetByNewAcctIdx( boolean NewAccount,
@@ -234,9 +237,9 @@ public interface ICFSecProtSecUserPWResetTableObj
 
 	ICFSecProtSecUserPWResetObj readCachedSecUserPWResetByUUuid6Idx( CFLibUuid6 PasswordResetUuid6 );
 
-	List<ICFSecProtSecUserPWResetObj> readCachedSecUserPWResetBySentEMAddrIdx( String SentToEMailAddr );
+	List<List<ICFSecProtSecUserPWResetObj>> readCachedSecUserPWResetBySentEMAddrIdx( String SentToEMailAddr );
 
-	List<ICFSecProtSecUserPWResetObj> readCachedSecUserPWResetByNewAcctIdx( boolean NewAccount );
+	List<List<ICFSecProtSecUserPWResetObj>> readCachedSecUserPWResetByNewAcctIdx( boolean NewAccount );
 
 	void deepDisposeSecUserPWResetByIdIdx( CFLibDbKeyHash256 SecUserId );
 

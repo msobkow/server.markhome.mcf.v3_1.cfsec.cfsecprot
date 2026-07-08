@@ -58,7 +58,7 @@ public interface ICFSecProtSecSysGrpIncTable
 	 *
 	 *	@param	rec	The instance interface to be created.
 	 */
-	public ICFSecProtSecSysGrpInc protcreateSecSysGrpInc( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecSysGrpInc protcreateSecSysGrpInc( ICFSecPubAuthorization Authorization,
 		ICFSecProtSecSysGrpInc rec );
 
 
@@ -70,7 +70,7 @@ public interface ICFSecProtSecSysGrpIncTable
 	 *
 	 *	@param	rec	The instance interface to be updated
 	 */
-	public ICFSecProtSecSysGrpInc protupdateSecSysGrpInc( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecSysGrpInc protupdateSecSysGrpInc( ICFSecPubAuthorization Authorization,
 		ICFSecProtSecSysGrpInc rec );
 
 
@@ -81,7 +81,7 @@ public interface ICFSecProtSecSysGrpIncTable
 	 *
 	 *	@param	rec	The instance interface to be deleted.
 	 */
-	public void protdeleteSecSysGrpInc( ICFSecProtAuthorization Authorization,
+	public void protdeleteSecSysGrpInc( ICFSecPubAuthorization Authorization,
 		ICFSecProtSecSysGrpInc rec );
 	/**
 	 *	Delete the SecSysGrpInc instance identified by the primary key attributes.
@@ -92,7 +92,7 @@ public interface ICFSecProtSecSysGrpIncTable
 	 *
 	 *	@param	InclName	The SecSysGrpInc key attribute of the instance generating the id.
 	 */
-	public void protdeleteSecSysGrpIncByIdIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSecSysGrpIncByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argSecSysGrpId,
 		String argInclName );
 	/**
@@ -102,7 +102,7 @@ public interface ICFSecProtSecSysGrpIncTable
 	 *
 	 *	@param	argKey	The primary key identifying the instance to be deleted.
 	 */
-	public void protdeleteSecSysGrpIncByIdIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSecSysGrpIncByIdIdx( ICFSecPubAuthorization Authorization,
 		ICFSecProtSecSysGrpIncPKey argKey );
 	/**
 	 *	Delete the SecSysGrpInc instances identified by the key SysGrpIdx.
@@ -111,7 +111,7 @@ public interface ICFSecProtSecSysGrpIncTable
 	 *
 	 *	@param	SecSysGrpId	The SecSysGrpInc key attribute of the instance generating the id.
 	 */
-	public void protdeleteSecSysGrpIncBySysGrpIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSecSysGrpIncBySysGrpIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argSecSysGrpId );
 
 	/**
@@ -121,7 +121,7 @@ public interface ICFSecProtSecSysGrpIncTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteSecSysGrpIncBySysGrpIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSecSysGrpIncBySysGrpIdx( ICFSecPubAuthorization Authorization,
 		ICFSecProtSecSysGrpIncBySysGrpIdxKey argKey );
 	/**
 	 *	Delete the SecSysGrpInc instances identified by the key NameIdx.
@@ -130,7 +130,7 @@ public interface ICFSecProtSecSysGrpIncTable
 	 *
 	 *	@param	InclName	The SecSysGrpInc key attribute of the instance generating the id.
 	 */
-	public void protdeleteSecSysGrpIncByNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSecSysGrpIncByNameIdx( ICFSecPubAuthorization Authorization,
 		String argInclName );
 
 	/**
@@ -140,7 +140,7 @@ public interface ICFSecProtSecSysGrpIncTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteSecSysGrpIncByNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSecSysGrpIncByNameIdx( ICFSecPubAuthorization Authorization,
 		ICFSecProtSecSysGrpIncByNameIdxKey argKey );
 
 
@@ -154,7 +154,7 @@ public interface ICFSecProtSecSysGrpIncTable
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFSecProtSecSysGrpInc protreadDerived( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecSysGrpInc protreadDerived( ICFSecPubAuthorization Authorization,
 		ICFSecProtSecSysGrpIncPKey PKey );
 
 	/**
@@ -165,7 +165,7 @@ public interface ICFSecProtSecSysGrpIncTable
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFSecProtSecSysGrpInc protreadDerived( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecSysGrpInc protreadDerived( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 SecSysGrpId,
 		String InclName );
 
@@ -179,7 +179,7 @@ public interface ICFSecProtSecSysGrpIncTable
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFSecProtSecSysGrpInc protlockDerived( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecSysGrpInc protlockDerived( ICFSecPubAuthorization Authorization,
 		ICFSecProtSecSysGrpIncPKey PKey );
 
 	/**
@@ -189,7 +189,7 @@ public interface ICFSecProtSecSysGrpIncTable
 	 *
 	 *	@return An array of derived record instances, potentially with 0 elements in the set.
 	 */
-	public ICFSecProtSecSysGrpInc[] protreadProtAllDerived( ICFSecProtAuthorization Authorization );
+	public ICFSecProtSecSysGrpInc[] protreadProtAllDerived( ICFSecPubAuthorization Authorization );
 
 	/**
 	 *	Read the derived SecSysGrpInc record instance identified by the unique key IdIdx.
@@ -203,7 +203,7 @@ public interface ICFSecProtSecSysGrpIncTable
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFSecProtSecSysGrpInc protreadDerivedByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecSysGrpInc protreadDerivedByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 SecSysGrpId,
 		String InclName );
 
@@ -216,7 +216,7 @@ public interface ICFSecProtSecSysGrpIncTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFSecProtSecSysGrpInc[] protreadDerivedBySysGrpIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecSysGrpInc[] protreadDerivedBySysGrpIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 SecSysGrpId );
 
 	/**
@@ -228,7 +228,7 @@ public interface ICFSecProtSecSysGrpIncTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFSecProtSecSysGrpInc[] protreadDerivedByNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecSysGrpInc[] protreadDerivedByNameIdx( ICFSecPubAuthorization Authorization,
 		String InclName );
 
 	/**
@@ -243,7 +243,7 @@ public interface ICFSecProtSecSysGrpIncTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFSecProtSecSysGrpInc protreadRec( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecSysGrpInc protreadRec( ICFSecPubAuthorization Authorization,
 		ICFSecProtSecSysGrpIncPKey PKey );
 
 	/**
@@ -258,7 +258,7 @@ public interface ICFSecProtSecSysGrpIncTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFSecProtSecSysGrpInc protreadRec( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecSysGrpInc protreadRec( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 SecSysGrpId,
 		String InclName );
 
@@ -274,7 +274,7 @@ public interface ICFSecProtSecSysGrpIncTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFSecProtSecSysGrpInc protlockRec( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecSysGrpInc protlockRec( ICFSecPubAuthorization Authorization,
 		ICFSecProtSecSysGrpIncPKey PKey );
 
 	/**
@@ -284,7 +284,7 @@ public interface ICFSecProtSecSysGrpIncTable
 	 *
 	 *	@return All the specific SecSysGrpInc instances in the database accessible for the Authorization.
 	 */
-	public ICFSecProtSecSysGrpInc[] protreadAllRec( ICFSecProtAuthorization Authorization );
+	public ICFSecProtSecSysGrpInc[] protreadAllRec( ICFSecPubAuthorization Authorization );
 
 	/**
 	 *	Read a page of all the specific SecSysGrpInc record instances.
@@ -293,7 +293,7 @@ public interface ICFSecProtSecSysGrpIncTable
 	 *
 	 *	@return All the specific SecSysGrpInc instances in the database accessible for the Authorization.
 	 */
-	public ICFSecProtSecSysGrpInc[] protpageAllRec( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecSysGrpInc[] protpageAllRec( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 priorSecSysGrpId,
 		String priorInclName );
 
@@ -311,7 +311,7 @@ public interface ICFSecProtSecSysGrpIncTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFSecProtSecSysGrpInc protreadRecByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecSysGrpInc protreadRecByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 SecSysGrpId,
 		String InclName );
 
@@ -326,7 +326,7 @@ public interface ICFSecProtSecSysGrpIncTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFSecProtSecSysGrpInc[] protreadRecBySysGrpIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecSysGrpInc[] protreadRecBySysGrpIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 SecSysGrpId );
 
 	/**
@@ -340,7 +340,7 @@ public interface ICFSecProtSecSysGrpIncTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFSecProtSecSysGrpInc[] protreadRecByNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecSysGrpInc[] protreadRecByNameIdx( ICFSecPubAuthorization Authorization,
 		String InclName );
 
 	/**
@@ -354,7 +354,7 @@ public interface ICFSecProtSecSysGrpIncTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFSecProtSecSysGrpInc[] protpageRecBySysGrpIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecSysGrpInc[] protpageRecBySysGrpIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 SecSysGrpId,
 		CFLibDbKeyHash256 priorSecSysGrpId,
 		String priorInclName );
@@ -370,7 +370,7 @@ public interface ICFSecProtSecSysGrpIncTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFSecProtSecSysGrpInc[] protpageRecByNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecSysGrpInc[] protpageRecByNameIdx( ICFSecPubAuthorization Authorization,
 		String InclName,
 		CFLibDbKeyHash256 priorSecSysGrpId,
 		String priorInclName );

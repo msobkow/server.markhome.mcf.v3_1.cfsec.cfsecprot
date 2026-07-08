@@ -36,7 +36,10 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 
 public interface ICFSecProtISOLangTableObj
 {
@@ -139,63 +142,63 @@ public interface ICFSecProtISOLangTableObj
 	List<ICFSecProtISOLangObj> readCachedAllISOLang();
 
 	/**
-	 *	Get the CFSecProtISOLangObj instance for the primary key attributes.
+	 *	Get the ICFSecProtISOLangObj instance for the primary key attributes.
 	 *
 	 *	@param	ISOLangId	The ISOLang key attribute of the instance generating the id.
 	 *
-	 *	@return	CFSecProtISOLangObj cached instance for the primary key, or
+	 *	@return	ICFSecProtISOLangObj cached instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
 	ICFSecProtISOLangObj readISOLangByIdIdx( short ISOLangId );
 
 	/**
-	 *	Get the CFSecProtISOLangObj instance for the primary key attributes.
+	 *	Get the ICFSecProtISOLangObj instance for the primary key attributes.
 	 *
 	 *	@param	ISOLangId	The ISOLang key attribute of the instance generating the id.
 	 *
-	 *	@return	CFSecProtISOLangObj refreshed instance for the primary key, or
+	 *	@return	ICFSecProtISOLangObj refreshed instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
 	ICFSecProtISOLangObj readISOLangByIdIdx( short ISOLangId,
 		boolean forceRead );
 
 	/**
-	 *	Get the CFSecProtISOLangObj instance for the unique Code3Idx key.
+	 *	Get the ICFSecProtISOLangObj instance for the unique Code3Idx key.
 	 *
 	 *	@param	ISO6392Code	The ISOLang key attribute of the instance generating the id.
 	 *
-	 *	@return	CFSecProtISOLangObj cached instance for the unique Code3Idx key, or
+	 *	@return	ICFSecProtISOLangObj cached instance for the unique Code3Idx key, or
 	 *		null if no such instance exists.
 	 */
 	ICFSecProtISOLangObj readISOLangByCode3Idx(String ISO6392Code );
 
 	/**
-	 *	Get the CFSecProtISOLangObj instance for the unique Code3Idx key.
+	 *	Get the ICFSecProtISOLangObj instance for the unique Code3Idx key.
 	 *
 	 *	@param	ISO6392Code	The ISOLang key attribute of the instance generating the id.
 	 *
-	 *	@return	CFSecProtISOLangObj refreshed instance for the unique Code3Idx key, or
+	 *	@return	ICFSecProtISOLangObj refreshed instance for the unique Code3Idx key, or
 	 *		null if no such instance exists.
 	 */
 	ICFSecProtISOLangObj readISOLangByCode3Idx(String ISO6392Code,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFSecProtISOLangObj instances sorted by their primary keys for the duplicate Code2Idx key.
+	 *	Get the map of List<ICFSecProtISOLangObj> instances sorted by their primary keys for the duplicate Code2Idx key.
 	 *
 	 *	@param	ISO6391Code	The ISOLang key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFSecProtISOLangObj cached instances sorted by their primary keys for the duplicate Code2Idx key,
+	 *	@return	List of List<ICFSecProtISOLangObj> cached instances sorted by their primary keys for the duplicate Code2Idx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFSecProtISOLangObj> readISOLangByCode2Idx( String ISO6391Code );
 
 	/**
-	 *	Get the map of CFSecProtISOLangObj instances sorted by their primary keys for the duplicate Code2Idx key.
+	 *	Get the map of List<ICFSecProtISOLangObj> instances sorted by their primary keys for the duplicate Code2Idx key.
 	 *
 	 *	@param	ISO6391Code	The ISOLang key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFSecProtISOLangObj cached instances sorted by their primary keys for the duplicate Code2Idx key,
+	 *	@return	List of List<ICFSecProtISOLangObj> cached instances sorted by their primary keys for the duplicate Code2Idx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFSecProtISOLangObj> readISOLangByCode2Idx( String ISO6391Code,
@@ -205,7 +208,7 @@ public interface ICFSecProtISOLangTableObj
 
 	ICFSecProtISOLangObj readCachedISOLangByCode3Idx( String ISO6392Code );
 
-	List<ICFSecProtISOLangObj> readCachedISOLangByCode2Idx( String ISO6391Code );
+	List<List<ICFSecProtISOLangObj>> readCachedISOLangByCode2Idx( String ISO6391Code );
 
 	void deepDisposeISOLangByIdIdx( short ISOLangId );
 

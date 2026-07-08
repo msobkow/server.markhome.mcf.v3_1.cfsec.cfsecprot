@@ -35,6 +35,7 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
+import server.markhome.mcf.v3_1.cflib.xml.CFLibXmlUtil;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
@@ -74,7 +75,6 @@ public interface ICFSecProtTableInfo
 	public List<ICFSecProtTableInfo> getOptionalChildrenSubRefs();
 	public void setOptionalParentSuperRef(ICFSecProtTableInfo argObj);
 	public void setOptionalParentSuperRef(String argSuperName);
-	public void setOptionalParentSuperRef(ICFSecPubTableInfo argObj);
 	public String getRequiredSchemaName();
 	public void setRequiredSchemaName( String value );
 	public String getRequiredTableName();

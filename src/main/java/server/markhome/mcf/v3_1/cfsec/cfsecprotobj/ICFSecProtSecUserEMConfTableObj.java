@@ -36,7 +36,10 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 
 public interface ICFSecProtSecUserEMConfTableObj
 {
@@ -147,105 +150,105 @@ public interface ICFSecProtSecUserEMConfTableObj
 	List<ICFSecProtSecUserEMConfObj> pageAllSecUserEMConf(CFLibDbKeyHash256 priorSecUserId );
 
 	/**
-	 *	Get the CFSecProtSecUserEMConfObj instance for the primary key attributes.
+	 *	Get the ICFSecProtSecUserEMConfObj instance for the primary key attributes.
 	 *
 	 *	@param	SecUserId	The SecUserEMConf key attribute of the instance generating the id.
 	 *
-	 *	@return	CFSecProtSecUserEMConfObj cached instance for the primary key, or
+	 *	@return	ICFSecProtSecUserEMConfObj cached instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
 	ICFSecProtSecUserEMConfObj readSecUserEMConfByIdIdx( CFLibDbKeyHash256 SecUserId );
 
 	/**
-	 *	Get the CFSecProtSecUserEMConfObj instance for the primary key attributes.
+	 *	Get the ICFSecProtSecUserEMConfObj instance for the primary key attributes.
 	 *
 	 *	@param	SecUserId	The SecUserEMConf key attribute of the instance generating the id.
 	 *
-	 *	@return	CFSecProtSecUserEMConfObj refreshed instance for the primary key, or
+	 *	@return	ICFSecProtSecUserEMConfObj refreshed instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
 	ICFSecProtSecUserEMConfObj readSecUserEMConfByIdIdx( CFLibDbKeyHash256 SecUserId,
 		boolean forceRead );
 
 	/**
-	 *	Get the CFSecProtSecUserEMConfObj instance for the unique UUuid6Idx key.
+	 *	Get the ICFSecProtSecUserEMConfObj instance for the unique UUuid6Idx key.
 	 *
 	 *	@param	EMConfirmationUuid6	The SecUserEMConf key attribute of the instance generating the id.
 	 *
-	 *	@return	CFSecProtSecUserEMConfObj cached instance for the unique UUuid6Idx key, or
+	 *	@return	ICFSecProtSecUserEMConfObj cached instance for the unique UUuid6Idx key, or
 	 *		null if no such instance exists.
 	 */
 	ICFSecProtSecUserEMConfObj readSecUserEMConfByUUuid6Idx(CFLibUuid6 EMConfirmationUuid6 );
 
 	/**
-	 *	Get the CFSecProtSecUserEMConfObj instance for the unique UUuid6Idx key.
+	 *	Get the ICFSecProtSecUserEMConfObj instance for the unique UUuid6Idx key.
 	 *
 	 *	@param	EMConfirmationUuid6	The SecUserEMConf key attribute of the instance generating the id.
 	 *
-	 *	@return	CFSecProtSecUserEMConfObj refreshed instance for the unique UUuid6Idx key, or
+	 *	@return	ICFSecProtSecUserEMConfObj refreshed instance for the unique UUuid6Idx key, or
 	 *		null if no such instance exists.
 	 */
 	ICFSecProtSecUserEMConfObj readSecUserEMConfByUUuid6Idx(CFLibUuid6 EMConfirmationUuid6,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFSecProtSecUserEMConfObj instances sorted by their primary keys for the duplicate ConfEMAddrIdx key.
+	 *	Get the map of List<ICFSecProtSecUserEMConfObj> instances sorted by their primary keys for the duplicate ConfEMAddrIdx key.
 	 *
 	 *	@param	ConfirmEMailAddr	The SecUserEMConf key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFSecProtSecUserEMConfObj cached instances sorted by their primary keys for the duplicate ConfEMAddrIdx key,
+	 *	@return	List of List<ICFSecProtSecUserEMConfObj> cached instances sorted by their primary keys for the duplicate ConfEMAddrIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFSecProtSecUserEMConfObj> readSecUserEMConfByConfEMAddrIdx( String ConfirmEMailAddr );
 
 	/**
-	 *	Get the map of CFSecProtSecUserEMConfObj instances sorted by their primary keys for the duplicate ConfEMAddrIdx key.
+	 *	Get the map of List<ICFSecProtSecUserEMConfObj> instances sorted by their primary keys for the duplicate ConfEMAddrIdx key.
 	 *
 	 *	@param	ConfirmEMailAddr	The SecUserEMConf key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFSecProtSecUserEMConfObj cached instances sorted by their primary keys for the duplicate ConfEMAddrIdx key,
+	 *	@return	List of List<ICFSecProtSecUserEMConfObj> cached instances sorted by their primary keys for the duplicate ConfEMAddrIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFSecProtSecUserEMConfObj> readSecUserEMConfByConfEMAddrIdx( String ConfirmEMailAddr,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFSecProtSecUserEMConfObj instances sorted by their primary keys for the duplicate SentStampIdx key.
+	 *	Get the map of List<ICFSecProtSecUserEMConfObj> instances sorted by their primary keys for the duplicate SentStampIdx key.
 	 *
 	 *	@param	EMailSentStamp	The SecUserEMConf key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFSecProtSecUserEMConfObj cached instances sorted by their primary keys for the duplicate SentStampIdx key,
+	 *	@return	List of List<ICFSecProtSecUserEMConfObj> cached instances sorted by their primary keys for the duplicate SentStampIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFSecProtSecUserEMConfObj> readSecUserEMConfBySentStampIdx( LocalDateTime EMailSentStamp );
 
 	/**
-	 *	Get the map of CFSecProtSecUserEMConfObj instances sorted by their primary keys for the duplicate SentStampIdx key.
+	 *	Get the map of List<ICFSecProtSecUserEMConfObj> instances sorted by their primary keys for the duplicate SentStampIdx key.
 	 *
 	 *	@param	EMailSentStamp	The SecUserEMConf key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFSecProtSecUserEMConfObj cached instances sorted by their primary keys for the duplicate SentStampIdx key,
+	 *	@return	List of List<ICFSecProtSecUserEMConfObj> cached instances sorted by their primary keys for the duplicate SentStampIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFSecProtSecUserEMConfObj> readSecUserEMConfBySentStampIdx( LocalDateTime EMailSentStamp,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFSecProtSecUserEMConfObj instances sorted by their primary keys for the duplicate NewAcctIdx key.
+	 *	Get the map of List<ICFSecProtSecUserEMConfObj> instances sorted by their primary keys for the duplicate NewAcctIdx key.
 	 *
 	 *	@param	NewAccount	The SecUserEMConf key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFSecProtSecUserEMConfObj cached instances sorted by their primary keys for the duplicate NewAcctIdx key,
+	 *	@return	List of List<ICFSecProtSecUserEMConfObj> cached instances sorted by their primary keys for the duplicate NewAcctIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFSecProtSecUserEMConfObj> readSecUserEMConfByNewAcctIdx( boolean NewAccount );
 
 	/**
-	 *	Get the map of CFSecProtSecUserEMConfObj instances sorted by their primary keys for the duplicate NewAcctIdx key.
+	 *	Get the map of List<ICFSecProtSecUserEMConfObj> instances sorted by their primary keys for the duplicate NewAcctIdx key.
 	 *
 	 *	@param	NewAccount	The SecUserEMConf key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFSecProtSecUserEMConfObj cached instances sorted by their primary keys for the duplicate NewAcctIdx key,
+	 *	@return	List of List<ICFSecProtSecUserEMConfObj> cached instances sorted by their primary keys for the duplicate NewAcctIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFSecProtSecUserEMConfObj> readSecUserEMConfByNewAcctIdx( boolean NewAccount,
@@ -255,11 +258,11 @@ public interface ICFSecProtSecUserEMConfTableObj
 
 	ICFSecProtSecUserEMConfObj readCachedSecUserEMConfByUUuid6Idx( CFLibUuid6 EMConfirmationUuid6 );
 
-	List<ICFSecProtSecUserEMConfObj> readCachedSecUserEMConfByConfEMAddrIdx( String ConfirmEMailAddr );
+	List<List<ICFSecProtSecUserEMConfObj>> readCachedSecUserEMConfByConfEMAddrIdx( String ConfirmEMailAddr );
 
-	List<ICFSecProtSecUserEMConfObj> readCachedSecUserEMConfBySentStampIdx( LocalDateTime EMailSentStamp );
+	List<List<ICFSecProtSecUserEMConfObj>> readCachedSecUserEMConfBySentStampIdx( LocalDateTime EMailSentStamp );
 
-	List<ICFSecProtSecUserEMConfObj> readCachedSecUserEMConfByNewAcctIdx( boolean NewAccount );
+	List<List<ICFSecProtSecUserEMConfObj>> readCachedSecUserEMConfByNewAcctIdx( boolean NewAccount );
 
 	void deepDisposeSecUserEMConfByIdIdx( CFLibDbKeyHash256 SecUserId );
 

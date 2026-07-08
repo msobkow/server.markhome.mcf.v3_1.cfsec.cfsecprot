@@ -58,7 +58,7 @@ public interface ICFSecProtSecTentGrpTable
 	 *
 	 *	@param	rec	The instance interface to be created.
 	 */
-	public ICFSecProtSecTentGrp protcreateSecTentGrp( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecTentGrp protcreateSecTentGrp( ICFSecPubAuthorization Authorization,
 		ICFSecProtSecTentGrp rec );
 
 
@@ -70,7 +70,7 @@ public interface ICFSecProtSecTentGrpTable
 	 *
 	 *	@param	rec	The instance interface to be updated
 	 */
-	public ICFSecProtSecTentGrp protupdateSecTentGrp( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecTentGrp protupdateSecTentGrp( ICFSecPubAuthorization Authorization,
 		ICFSecProtSecTentGrp rec );
 
 
@@ -81,7 +81,7 @@ public interface ICFSecProtSecTentGrpTable
 	 *
 	 *	@param	rec	The instance interface to be deleted.
 	 */
-	public void protdeleteSecTentGrp( ICFSecProtAuthorization Authorization,
+	public void protdeleteSecTentGrp( ICFSecPubAuthorization Authorization,
 		ICFSecProtSecTentGrp rec );
 	/**
 	 *	Delete the SecTentGrp instance identified by the primary key.
@@ -90,7 +90,7 @@ public interface ICFSecProtSecTentGrpTable
 	 *
 	 *	@param	argKey	The primary key identifying the instance to be deleted.
 	 */
-	public void protdeleteSecTentGrpByIdIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSecTentGrpByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argKey );
 	/**
 	 *	Delete the SecTentGrp instances identified by the key TenantIdx.
@@ -99,7 +99,7 @@ public interface ICFSecProtSecTentGrpTable
 	 *
 	 *	@param	TenantId	The SecTentGrp key attribute of the instance generating the id.
 	 */
-	public void protdeleteSecTentGrpByTenantIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSecTentGrpByTenantIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argTenantId );
 
 	/**
@@ -109,7 +109,7 @@ public interface ICFSecProtSecTentGrpTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteSecTentGrpByTenantIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSecTentGrpByTenantIdx( ICFSecPubAuthorization Authorization,
 		ICFSecProtSecTentGrpByTenantIdxKey argKey );
 	/**
 	 *	Delete the SecTentGrp instances identified by the key NameIdx.
@@ -118,7 +118,7 @@ public interface ICFSecProtSecTentGrpTable
 	 *
 	 *	@param	Name	The SecTentGrp key attribute of the instance generating the id.
 	 */
-	public void protdeleteSecTentGrpByNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSecTentGrpByNameIdx( ICFSecPubAuthorization Authorization,
 		String argName );
 
 	/**
@@ -128,7 +128,7 @@ public interface ICFSecProtSecTentGrpTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteSecTentGrpByNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSecTentGrpByNameIdx( ICFSecPubAuthorization Authorization,
 		ICFSecProtSecTentGrpByNameIdxKey argKey );
 	/**
 	 *	Delete the SecTentGrp instances identified by the key UNameIdx.
@@ -139,7 +139,7 @@ public interface ICFSecProtSecTentGrpTable
 	 *
 	 *	@param	Name	The SecTentGrp key attribute of the instance generating the id.
 	 */
-	public void protdeleteSecTentGrpByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSecTentGrpByUNameIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argTenantId,
 		String argName );
 
@@ -150,7 +150,7 @@ public interface ICFSecProtSecTentGrpTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteSecTentGrpByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSecTentGrpByUNameIdx( ICFSecPubAuthorization Authorization,
 		ICFSecProtSecTentGrpByUNameIdxKey argKey );
 
 
@@ -164,7 +164,7 @@ public interface ICFSecProtSecTentGrpTable
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFSecProtSecTentGrp protreadDerived( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecTentGrp protreadDerived( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -177,7 +177,7 @@ public interface ICFSecProtSecTentGrpTable
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFSecProtSecTentGrp protlockDerived( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecTentGrp protlockDerived( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -187,7 +187,7 @@ public interface ICFSecProtSecTentGrpTable
 	 *
 	 *	@return An array of derived record instances, potentially with 0 elements in the set.
 	 */
-	public ICFSecProtSecTentGrp[] protreadProtAllDerived( ICFSecProtAuthorization Authorization );
+	public ICFSecProtSecTentGrp[] protreadProtAllDerived( ICFSecPubAuthorization Authorization );
 
 	/**
 	 *	Read the derived SecTentGrp record instance identified by the unique key IdIdx.
@@ -199,7 +199,7 @@ public interface ICFSecProtSecTentGrpTable
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFSecProtSecTentGrp protreadDerivedByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecTentGrp protreadDerivedByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 SecTentGrpId );
 
 	/**
@@ -211,7 +211,7 @@ public interface ICFSecProtSecTentGrpTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFSecProtSecTentGrp[] protreadDerivedByTenantIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecTentGrp[] protreadDerivedByTenantIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 TenantId );
 
 	/**
@@ -223,7 +223,7 @@ public interface ICFSecProtSecTentGrpTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFSecProtSecTentGrp[] protreadDerivedByNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecTentGrp[] protreadDerivedByNameIdx( ICFSecPubAuthorization Authorization,
 		String Name );
 
 	/**
@@ -238,7 +238,7 @@ public interface ICFSecProtSecTentGrpTable
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFSecProtSecTentGrp protreadDerivedByUNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecTentGrp protreadDerivedByUNameIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 TenantId,
 		String Name );
 
@@ -254,7 +254,7 @@ public interface ICFSecProtSecTentGrpTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFSecProtSecTentGrp protreadRec( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecTentGrp protreadRec( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -269,7 +269,7 @@ public interface ICFSecProtSecTentGrpTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFSecProtSecTentGrp protlockRec( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecTentGrp protlockRec( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -279,7 +279,7 @@ public interface ICFSecProtSecTentGrpTable
 	 *
 	 *	@return All the specific SecTentGrp instances in the database accessible for the Authorization.
 	 */
-	public ICFSecProtSecTentGrp[] protreadAllRec( ICFSecProtAuthorization Authorization );
+	public ICFSecProtSecTentGrp[] protreadAllRec( ICFSecPubAuthorization Authorization );
 
 	/**
 	 *	Read the specific SecTentGrp record instance identified by the unique key IdIdx.
@@ -293,7 +293,7 @@ public interface ICFSecProtSecTentGrpTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFSecProtSecTentGrp protreadRecByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecTentGrp protreadRecByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 SecTentGrpId );
 
 	/**
@@ -307,7 +307,7 @@ public interface ICFSecProtSecTentGrpTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFSecProtSecTentGrp[] protreadRecByTenantIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecTentGrp[] protreadRecByTenantIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 TenantId );
 
 	/**
@@ -321,7 +321,7 @@ public interface ICFSecProtSecTentGrpTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFSecProtSecTentGrp[] protreadRecByNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecTentGrp[] protreadRecByNameIdx( ICFSecPubAuthorization Authorization,
 		String Name );
 
 	/**
@@ -338,7 +338,7 @@ public interface ICFSecProtSecTentGrpTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFSecProtSecTentGrp protreadRecByUNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecTentGrp protreadRecByUNameIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 TenantId,
 		String Name );
 }

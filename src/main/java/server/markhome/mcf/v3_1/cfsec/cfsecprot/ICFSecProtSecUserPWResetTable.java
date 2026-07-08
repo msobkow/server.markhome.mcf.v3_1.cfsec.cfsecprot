@@ -58,7 +58,7 @@ public interface ICFSecProtSecUserPWResetTable
 	 *
 	 *	@param	rec	The instance interface to be created.
 	 */
-	public ICFSecProtSecUserPWReset protcreateSecUserPWReset( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecUserPWReset protcreateSecUserPWReset( ICFSecPubAuthorization Authorization,
 		ICFSecProtSecUserPWReset rec );
 
 
@@ -70,7 +70,7 @@ public interface ICFSecProtSecUserPWResetTable
 	 *
 	 *	@param	rec	The instance interface to be updated
 	 */
-	public ICFSecProtSecUserPWReset protupdateSecUserPWReset( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecUserPWReset protupdateSecUserPWReset( ICFSecPubAuthorization Authorization,
 		ICFSecProtSecUserPWReset rec );
 
 
@@ -81,7 +81,7 @@ public interface ICFSecProtSecUserPWResetTable
 	 *
 	 *	@param	rec	The instance interface to be deleted.
 	 */
-	public void protdeleteSecUserPWReset( ICFSecProtAuthorization Authorization,
+	public void protdeleteSecUserPWReset( ICFSecPubAuthorization Authorization,
 		ICFSecProtSecUserPWReset rec );
 	/**
 	 *	Delete the SecUserPWReset instance identified by the primary key.
@@ -90,7 +90,7 @@ public interface ICFSecProtSecUserPWResetTable
 	 *
 	 *	@param	argKey	The primary key identifying the instance to be deleted.
 	 */
-	public void protdeleteSecUserPWResetByIdIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSecUserPWResetByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argKey );
 	/**
 	 *	Delete the SecUserPWReset instances identified by the key UUuid6Idx.
@@ -99,7 +99,7 @@ public interface ICFSecProtSecUserPWResetTable
 	 *
 	 *	@param	PasswordResetUuid6	The SecUserPWReset key attribute of the instance generating the id.
 	 */
-	public void protdeleteSecUserPWResetByUUuid6Idx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSecUserPWResetByUUuid6Idx( ICFSecPubAuthorization Authorization,
 		CFLibUuid6 argPasswordResetUuid6 );
 
 	/**
@@ -109,7 +109,7 @@ public interface ICFSecProtSecUserPWResetTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteSecUserPWResetByUUuid6Idx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSecUserPWResetByUUuid6Idx( ICFSecPubAuthorization Authorization,
 		ICFSecProtSecUserPWResetByUUuid6IdxKey argKey );
 	/**
 	 *	Delete the SecUserPWReset instances identified by the key SentEMAddrIdx.
@@ -118,7 +118,7 @@ public interface ICFSecProtSecUserPWResetTable
 	 *
 	 *	@param	SentToEMailAddr	The SecUserPWReset key attribute of the instance generating the id.
 	 */
-	public void protdeleteSecUserPWResetBySentEMAddrIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSecUserPWResetBySentEMAddrIdx( ICFSecPubAuthorization Authorization,
 		String argSentToEMailAddr );
 
 	/**
@@ -128,7 +128,7 @@ public interface ICFSecProtSecUserPWResetTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteSecUserPWResetBySentEMAddrIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSecUserPWResetBySentEMAddrIdx( ICFSecPubAuthorization Authorization,
 		ICFSecProtSecUserPWResetBySentEMAddrIdxKey argKey );
 	/**
 	 *	Delete the SecUserPWReset instances identified by the key NewAcctIdx.
@@ -137,7 +137,7 @@ public interface ICFSecProtSecUserPWResetTable
 	 *
 	 *	@param	NewAccount	The SecUserPWReset key attribute of the instance generating the id.
 	 */
-	public void protdeleteSecUserPWResetByNewAcctIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSecUserPWResetByNewAcctIdx( ICFSecPubAuthorization Authorization,
 		boolean argNewAccount );
 
 	/**
@@ -147,7 +147,7 @@ public interface ICFSecProtSecUserPWResetTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteSecUserPWResetByNewAcctIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSecUserPWResetByNewAcctIdx( ICFSecPubAuthorization Authorization,
 		ICFSecProtSecUserPWResetByNewAcctIdxKey argKey );
 
 
@@ -161,7 +161,7 @@ public interface ICFSecProtSecUserPWResetTable
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFSecProtSecUserPWReset protreadDerived( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecUserPWReset protreadDerived( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -174,7 +174,7 @@ public interface ICFSecProtSecUserPWResetTable
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFSecProtSecUserPWReset protlockDerived( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecUserPWReset protlockDerived( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -184,7 +184,7 @@ public interface ICFSecProtSecUserPWResetTable
 	 *
 	 *	@return An array of derived record instances, potentially with 0 elements in the set.
 	 */
-	public ICFSecProtSecUserPWReset[] protreadProtAllDerived( ICFSecProtAuthorization Authorization );
+	public ICFSecProtSecUserPWReset[] protreadProtAllDerived( ICFSecPubAuthorization Authorization );
 
 	/**
 	 *	Read the derived SecUserPWReset record instance identified by the unique key IdIdx.
@@ -196,7 +196,7 @@ public interface ICFSecProtSecUserPWResetTable
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFSecProtSecUserPWReset protreadDerivedByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecUserPWReset protreadDerivedByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 SecUserId );
 
 	/**
@@ -209,7 +209,7 @@ public interface ICFSecProtSecUserPWResetTable
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFSecProtSecUserPWReset protreadDerivedByUUuid6Idx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecUserPWReset protreadDerivedByUUuid6Idx( ICFSecPubAuthorization Authorization,
 		CFLibUuid6 PasswordResetUuid6 );
 
 	/**
@@ -221,7 +221,7 @@ public interface ICFSecProtSecUserPWResetTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFSecProtSecUserPWReset[] protreadDerivedBySentEMAddrIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecUserPWReset[] protreadDerivedBySentEMAddrIdx( ICFSecPubAuthorization Authorization,
 		String SentToEMailAddr );
 
 	/**
@@ -233,7 +233,7 @@ public interface ICFSecProtSecUserPWResetTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFSecProtSecUserPWReset[] protreadDerivedByNewAcctIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecUserPWReset[] protreadDerivedByNewAcctIdx( ICFSecPubAuthorization Authorization,
 		boolean NewAccount );
 
 	/**
@@ -248,7 +248,7 @@ public interface ICFSecProtSecUserPWResetTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFSecProtSecUserPWReset protreadRec( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecUserPWReset protreadRec( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -263,7 +263,7 @@ public interface ICFSecProtSecUserPWResetTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFSecProtSecUserPWReset protlockRec( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecUserPWReset protlockRec( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -273,7 +273,7 @@ public interface ICFSecProtSecUserPWResetTable
 	 *
 	 *	@return All the specific SecUserPWReset instances in the database accessible for the Authorization.
 	 */
-	public ICFSecProtSecUserPWReset[] protreadAllRec( ICFSecProtAuthorization Authorization );
+	public ICFSecProtSecUserPWReset[] protreadAllRec( ICFSecPubAuthorization Authorization );
 
 	/**
 	 *	Read a page of all the specific SecUserPWReset record instances.
@@ -282,7 +282,7 @@ public interface ICFSecProtSecUserPWResetTable
 	 *
 	 *	@return All the specific SecUserPWReset instances in the database accessible for the Authorization.
 	 */
-	public ICFSecProtSecUserPWReset[] protpageAllRec( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecUserPWReset[] protpageAllRec( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 priorSecUserId );
 
 	/**
@@ -297,7 +297,7 @@ public interface ICFSecProtSecUserPWResetTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFSecProtSecUserPWReset protreadRecByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecUserPWReset protreadRecByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 SecUserId );
 
 	/**
@@ -312,7 +312,7 @@ public interface ICFSecProtSecUserPWResetTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFSecProtSecUserPWReset protreadRecByUUuid6Idx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecUserPWReset protreadRecByUUuid6Idx( ICFSecPubAuthorization Authorization,
 		CFLibUuid6 PasswordResetUuid6 );
 
 	/**
@@ -326,7 +326,7 @@ public interface ICFSecProtSecUserPWResetTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFSecProtSecUserPWReset[] protreadRecBySentEMAddrIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecUserPWReset[] protreadRecBySentEMAddrIdx( ICFSecPubAuthorization Authorization,
 		String SentToEMailAddr );
 
 	/**
@@ -340,7 +340,7 @@ public interface ICFSecProtSecUserPWResetTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFSecProtSecUserPWReset[] protreadRecByNewAcctIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecUserPWReset[] protreadRecByNewAcctIdx( ICFSecPubAuthorization Authorization,
 		boolean NewAccount );
 
 	/**
@@ -354,7 +354,7 @@ public interface ICFSecProtSecUserPWResetTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFSecProtSecUserPWReset[] protpageRecBySentEMAddrIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecUserPWReset[] protpageRecBySentEMAddrIdx( ICFSecPubAuthorization Authorization,
 		String SentToEMailAddr,
 		CFLibDbKeyHash256 priorSecUserId );
 
@@ -369,7 +369,7 @@ public interface ICFSecProtSecUserPWResetTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFSecProtSecUserPWReset[] protpageRecByNewAcctIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecUserPWReset[] protpageRecByNewAcctIdx( ICFSecPubAuthorization Authorization,
 		boolean NewAccount,
 		CFLibDbKeyHash256 priorSecUserId );
 }

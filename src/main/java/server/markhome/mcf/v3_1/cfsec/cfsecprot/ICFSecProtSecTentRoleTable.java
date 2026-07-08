@@ -58,7 +58,7 @@ public interface ICFSecProtSecTentRoleTable
 	 *
 	 *	@param	rec	The instance interface to be created.
 	 */
-	public ICFSecProtSecTentRole protcreateSecTentRole( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecTentRole protcreateSecTentRole( ICFSecPubAuthorization Authorization,
 		ICFSecProtSecTentRole rec );
 
 
@@ -70,7 +70,7 @@ public interface ICFSecProtSecTentRoleTable
 	 *
 	 *	@param	rec	The instance interface to be updated
 	 */
-	public ICFSecProtSecTentRole protupdateSecTentRole( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecTentRole protupdateSecTentRole( ICFSecPubAuthorization Authorization,
 		ICFSecProtSecTentRole rec );
 
 
@@ -81,7 +81,7 @@ public interface ICFSecProtSecTentRoleTable
 	 *
 	 *	@param	rec	The instance interface to be deleted.
 	 */
-	public void protdeleteSecTentRole( ICFSecProtAuthorization Authorization,
+	public void protdeleteSecTentRole( ICFSecPubAuthorization Authorization,
 		ICFSecProtSecTentRole rec );
 	/**
 	 *	Delete the SecTentRole instance identified by the primary key.
@@ -90,7 +90,7 @@ public interface ICFSecProtSecTentRoleTable
 	 *
 	 *	@param	argKey	The primary key identifying the instance to be deleted.
 	 */
-	public void protdeleteSecTentRoleByIdIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSecTentRoleByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argKey );
 	/**
 	 *	Delete the SecTentRole instances identified by the key TenantIdx.
@@ -99,7 +99,7 @@ public interface ICFSecProtSecTentRoleTable
 	 *
 	 *	@param	TenantId	The SecTentRole key attribute of the instance generating the id.
 	 */
-	public void protdeleteSecTentRoleByTenantIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSecTentRoleByTenantIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argTenantId );
 
 	/**
@@ -109,7 +109,7 @@ public interface ICFSecProtSecTentRoleTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteSecTentRoleByTenantIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSecTentRoleByTenantIdx( ICFSecPubAuthorization Authorization,
 		ICFSecProtSecTentRoleByTenantIdxKey argKey );
 	/**
 	 *	Delete the SecTentRole instances identified by the key NameIdx.
@@ -118,7 +118,7 @@ public interface ICFSecProtSecTentRoleTable
 	 *
 	 *	@param	Name	The SecTentRole key attribute of the instance generating the id.
 	 */
-	public void protdeleteSecTentRoleByNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSecTentRoleByNameIdx( ICFSecPubAuthorization Authorization,
 		String argName );
 
 	/**
@@ -128,7 +128,7 @@ public interface ICFSecProtSecTentRoleTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteSecTentRoleByNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSecTentRoleByNameIdx( ICFSecPubAuthorization Authorization,
 		ICFSecProtSecTentRoleByNameIdxKey argKey );
 	/**
 	 *	Delete the SecTentRole instances identified by the key UNameIdx.
@@ -139,7 +139,7 @@ public interface ICFSecProtSecTentRoleTable
 	 *
 	 *	@param	Name	The SecTentRole key attribute of the instance generating the id.
 	 */
-	public void protdeleteSecTentRoleByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSecTentRoleByUNameIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argTenantId,
 		String argName );
 
@@ -150,7 +150,7 @@ public interface ICFSecProtSecTentRoleTable
 	 *
 	 *	@param	argKey	The key identifying the instances to be deleted.
 	 */
-	public void protdeleteSecTentRoleByUNameIdx( ICFSecProtAuthorization Authorization,
+	public void protdeleteSecTentRoleByUNameIdx( ICFSecPubAuthorization Authorization,
 		ICFSecProtSecTentRoleByUNameIdxKey argKey );
 
 
@@ -164,7 +164,7 @@ public interface ICFSecProtSecTentRoleTable
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFSecProtSecTentRole protreadDerived( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecTentRole protreadDerived( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -177,7 +177,7 @@ public interface ICFSecProtSecTentRoleTable
 	 *	@return The record instance for the specified primary key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFSecProtSecTentRole protlockDerived( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecTentRole protlockDerived( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -187,7 +187,7 @@ public interface ICFSecProtSecTentRoleTable
 	 *
 	 *	@return An array of derived record instances, potentially with 0 elements in the set.
 	 */
-	public ICFSecProtSecTentRole[] protreadProtAllDerived( ICFSecProtAuthorization Authorization );
+	public ICFSecProtSecTentRole[] protreadProtAllDerived( ICFSecPubAuthorization Authorization );
 
 	/**
 	 *	Read the derived SecTentRole record instance identified by the unique key IdIdx.
@@ -199,7 +199,7 @@ public interface ICFSecProtSecTentRoleTable
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFSecProtSecTentRole protreadDerivedByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecTentRole protreadDerivedByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 SecTentRoleId );
 
 	/**
@@ -211,7 +211,7 @@ public interface ICFSecProtSecTentRoleTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFSecProtSecTentRole[] protreadDerivedByTenantIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecTentRole[] protreadDerivedByTenantIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 TenantId );
 
 	/**
@@ -223,7 +223,7 @@ public interface ICFSecProtSecTentRoleTable
 	 *
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
-	public ICFSecProtSecTentRole[] protreadDerivedByNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecTentRole[] protreadDerivedByNameIdx( ICFSecPubAuthorization Authorization,
 		String Name );
 
 	/**
@@ -238,7 +238,7 @@ public interface ICFSecProtSecTentRoleTable
 	 *	@return The record instance for the specified key, or null if there is
 	 *		no such existing key value.
 	 */
-	public ICFSecProtSecTentRole protreadDerivedByUNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecTentRole protreadDerivedByUNameIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 TenantId,
 		String Name );
 
@@ -254,7 +254,7 @@ public interface ICFSecProtSecTentRoleTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFSecProtSecTentRole protreadRec( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecTentRole protreadRec( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -269,7 +269,7 @@ public interface ICFSecProtSecTentRoleTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFSecProtSecTentRole protlockRec( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecTentRole protlockRec( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**
@@ -279,7 +279,7 @@ public interface ICFSecProtSecTentRoleTable
 	 *
 	 *	@return All the specific SecTentRole instances in the database accessible for the Authorization.
 	 */
-	public ICFSecProtSecTentRole[] protreadAllRec( ICFSecProtAuthorization Authorization );
+	public ICFSecProtSecTentRole[] protreadAllRec( ICFSecPubAuthorization Authorization );
 
 	/**
 	 *	Read the specific SecTentRole record instance identified by the unique key IdIdx.
@@ -293,7 +293,7 @@ public interface ICFSecProtSecTentRoleTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFSecProtSecTentRole protreadRecByIdIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecTentRole protreadRecByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 SecTentRoleId );
 
 	/**
@@ -307,7 +307,7 @@ public interface ICFSecProtSecTentRoleTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFSecProtSecTentRole[] protreadRecByTenantIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecTentRole[] protreadRecByTenantIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 TenantId );
 
 	/**
@@ -321,7 +321,7 @@ public interface ICFSecProtSecTentRoleTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFSecProtSecTentRole[] protreadRecByNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecTentRole[] protreadRecByNameIdx( ICFSecPubAuthorization Authorization,
 		String Name );
 
 	/**
@@ -338,7 +338,7 @@ public interface ICFSecProtSecTentRoleTable
 	 *
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
-	public ICFSecProtSecTentRole protreadRecByUNameIdx( ICFSecProtAuthorization Authorization,
+	public ICFSecProtSecTentRole protreadRecByUNameIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 TenantId,
 		String Name );
 }

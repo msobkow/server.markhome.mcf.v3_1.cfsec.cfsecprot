@@ -35,8 +35,10 @@ import java.util.*;
 import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
-import server.markhome.mcf.v3_1.cflib.dbutil.*;import org.apache.commons.text.StringEscapeUtils;
+import server.markhome.mcf.v3_1.cflib.dbutil.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
 
 public interface ICFSecProtSecUserEditObj
 	extends ICFSecProtSecUserObj
@@ -196,18 +198,18 @@ public interface ICFSecProtSecUserEditObj
 	void setRequiredLoginId(String value);
 
 	/**
-	 *	Get the required ICFSecProtSchema.SecAccountStatusEnum attribute AccountStatus.
+	 *	Get the required ICFSecPubSchema.SecAccountStatusEnum attribute AccountStatus.
 	 *
-	 *	@return	The required ICFSecProtSchema.SecAccountStatusEnum attribute AccountStatus.
+	 *	@return	The required ICFSecPubSchema.SecAccountStatusEnum attribute AccountStatus.
 	 */
-	ICFSecProtSchema.SecAccountStatusEnum getRequiredAccountStatus();
+	ICFSecPubSchema.SecAccountStatusEnum getRequiredAccountStatus();
 
 	/**
-	 *	Set the required ICFSecProtSchema.SecAccountStatusEnum attribute AccountStatus.
+	 *	Set the required ICFSecPubSchema.SecAccountStatusEnum attribute AccountStatus.
 	 *
-	 *	@param value The required ICFSecProtSchema.SecAccountStatusEnum attribute AccountStatus value to be applied.
+	 *	@param value The required ICFSecPubSchema.SecAccountStatusEnum attribute AccountStatus value to be applied.
 	 */
-	void setRequiredAccountStatus(ICFSecProtSchema.SecAccountStatusEnum value);
+	void setRequiredAccountStatus(ICFSecPubSchema.SecAccountStatusEnum value);
 
 	/**
 	 *	Get the optional String attribute DfltSysGrpName.

@@ -36,7 +36,10 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 
 public interface ICFSecProtISOCtryCcyTableObj
 {
@@ -158,26 +161,26 @@ public interface ICFSecProtISOCtryCcyTableObj
 	List<ICFSecProtISOCtryCcyObj> readCachedAllISOCtryCcy();
 
 	/**
-	 *	Get the CFSecProtISOCtryCcyObj instance for the primary key attributes.
+	 *	Get the ICFSecProtISOCtryCcyObj instance for the primary key attributes.
 	 *
 	 *	@param	ISOCtryId	The ISOCtryCcy key attribute of the instance generating the id.
 	 *
 	 *	@param	ISOCcyId	The ISOCtryCcy key attribute of the instance generating the id.
 	 *
-	 *	@return	CFSecProtISOCtryCcyObj cached instance for the primary key, or
+	 *	@return	ICFSecProtISOCtryCcyObj cached instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
 	ICFSecProtISOCtryCcyObj readISOCtryCcyByIdIdx( short ISOCtryId,
 		short ISOCcyId );
 
 	/**
-	 *	Get the CFSecProtISOCtryCcyObj instance for the primary key attributes.
+	 *	Get the ICFSecProtISOCtryCcyObj instance for the primary key attributes.
 	 *
 	 *	@param	ISOCtryId	The ISOCtryCcy key attribute of the instance generating the id.
 	 *
 	 *	@param	ISOCcyId	The ISOCtryCcy key attribute of the instance generating the id.
 	 *
-	 *	@return	CFSecProtISOCtryCcyObj refreshed instance for the primary key, or
+	 *	@return	ICFSecProtISOCtryCcyObj refreshed instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
 	ICFSecProtISOCtryCcyObj readISOCtryCcyByIdIdx( short ISOCtryId,
@@ -185,42 +188,42 @@ public interface ICFSecProtISOCtryCcyTableObj
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFSecProtISOCtryCcyObj instances sorted by their primary keys for the duplicate CtryIdx key.
+	 *	Get the map of List<ICFSecProtISOCtryCcyObj> instances sorted by their primary keys for the duplicate CtryIdx key.
 	 *
 	 *	@param	ISOCtryId	The ISOCtryCcy key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFSecProtISOCtryCcyObj cached instances sorted by their primary keys for the duplicate CtryIdx key,
+	 *	@return	List of List<ICFSecProtISOCtryCcyObj> cached instances sorted by their primary keys for the duplicate CtryIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFSecProtISOCtryCcyObj> readISOCtryCcyByCtryIdx( short ISOCtryId );
 
 	/**
-	 *	Get the map of CFSecProtISOCtryCcyObj instances sorted by their primary keys for the duplicate CtryIdx key.
+	 *	Get the map of List<ICFSecProtISOCtryCcyObj> instances sorted by their primary keys for the duplicate CtryIdx key.
 	 *
 	 *	@param	ISOCtryId	The ISOCtryCcy key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFSecProtISOCtryCcyObj cached instances sorted by their primary keys for the duplicate CtryIdx key,
+	 *	@return	List of List<ICFSecProtISOCtryCcyObj> cached instances sorted by their primary keys for the duplicate CtryIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFSecProtISOCtryCcyObj> readISOCtryCcyByCtryIdx( short ISOCtryId,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFSecProtISOCtryCcyObj instances sorted by their primary keys for the duplicate CcyIdx key.
+	 *	Get the map of List<ICFSecProtISOCtryCcyObj> instances sorted by their primary keys for the duplicate CcyIdx key.
 	 *
 	 *	@param	ISOCcyId	The ISOCtryCcy key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFSecProtISOCtryCcyObj cached instances sorted by their primary keys for the duplicate CcyIdx key,
+	 *	@return	List of List<ICFSecProtISOCtryCcyObj> cached instances sorted by their primary keys for the duplicate CcyIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFSecProtISOCtryCcyObj> readISOCtryCcyByCcyIdx( short ISOCcyId );
 
 	/**
-	 *	Get the map of CFSecProtISOCtryCcyObj instances sorted by their primary keys for the duplicate CcyIdx key.
+	 *	Get the map of List<ICFSecProtISOCtryCcyObj> instances sorted by their primary keys for the duplicate CcyIdx key.
 	 *
 	 *	@param	ISOCcyId	The ISOCtryCcy key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFSecProtISOCtryCcyObj cached instances sorted by their primary keys for the duplicate CcyIdx key,
+	 *	@return	List of List<ICFSecProtISOCtryCcyObj> cached instances sorted by their primary keys for the duplicate CcyIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFSecProtISOCtryCcyObj> readISOCtryCcyByCcyIdx( short ISOCcyId,
@@ -229,9 +232,9 @@ public interface ICFSecProtISOCtryCcyTableObj
 	ICFSecProtISOCtryCcyObj readCachedISOCtryCcyByIdIdx( short ISOCtryId,
 		short ISOCcyId );
 
-	List<ICFSecProtISOCtryCcyObj> readCachedISOCtryCcyByCtryIdx( short ISOCtryId );
+	List<List<ICFSecProtISOCtryCcyObj>> readCachedISOCtryCcyByCtryIdx( short ISOCtryId );
 
-	List<ICFSecProtISOCtryCcyObj> readCachedISOCtryCcyByCcyIdx( short ISOCcyId );
+	List<List<ICFSecProtISOCtryCcyObj>> readCachedISOCtryCcyByCcyIdx( short ISOCcyId );
 
 	void deepDisposeISOCtryCcyByIdIdx( short ISOCtryId,
 		short ISOCcyId );

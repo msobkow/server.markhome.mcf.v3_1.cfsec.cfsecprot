@@ -36,7 +36,10 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 
 public interface ICFSecProtTableInfoTableObj
 {
@@ -139,110 +142,110 @@ public interface ICFSecProtTableInfoTableObj
 	List<ICFSecProtTableInfoObj> readCachedAllTableInfo();
 
 	/**
-	 *	Get the CFSecProtTableInfoObj instance for the primary key attributes.
+	 *	Get the ICFSecProtTableInfoObj instance for the primary key attributes.
 	 *
 	 *	@param	TableInfoId	The TableInfo key attribute of the instance generating the id.
 	 *
-	 *	@return	CFSecProtTableInfoObj cached instance for the primary key, or
+	 *	@return	ICFSecProtTableInfoObj cached instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
 	ICFSecProtTableInfoObj readTableInfoByIdIdx( int TableInfoId );
 
 	/**
-	 *	Get the CFSecProtTableInfoObj instance for the primary key attributes.
+	 *	Get the ICFSecProtTableInfoObj instance for the primary key attributes.
 	 *
 	 *	@param	TableInfoId	The TableInfo key attribute of the instance generating the id.
 	 *
-	 *	@return	CFSecProtTableInfoObj refreshed instance for the primary key, or
+	 *	@return	ICFSecProtTableInfoObj refreshed instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
 	ICFSecProtTableInfoObj readTableInfoByIdIdx( int TableInfoId,
 		boolean forceRead );
 
 	/**
-	 *	Get the CFSecProtTableInfoObj instance for the unique TableNameIdx key.
+	 *	Get the ICFSecProtTableInfoObj instance for the unique TableNameIdx key.
 	 *
 	 *	@param	TableName	The TableInfo key attribute of the instance generating the id.
 	 *
-	 *	@return	CFSecProtTableInfoObj cached instance for the unique TableNameIdx key, or
+	 *	@return	ICFSecProtTableInfoObj cached instance for the unique TableNameIdx key, or
 	 *		null if no such instance exists.
 	 */
 	ICFSecProtTableInfoObj readTableInfoByTableNameIdx(String TableName );
 
 	/**
-	 *	Get the CFSecProtTableInfoObj instance for the unique TableNameIdx key.
+	 *	Get the ICFSecProtTableInfoObj instance for the unique TableNameIdx key.
 	 *
 	 *	@param	TableName	The TableInfo key attribute of the instance generating the id.
 	 *
-	 *	@return	CFSecProtTableInfoObj refreshed instance for the unique TableNameIdx key, or
+	 *	@return	ICFSecProtTableInfoObj refreshed instance for the unique TableNameIdx key, or
 	 *		null if no such instance exists.
 	 */
 	ICFSecProtTableInfoObj readTableInfoByTableNameIdx(String TableName,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFSecProtTableInfoObj instances sorted by their primary keys for the duplicate SuperNameIdx key.
+	 *	Get the map of List<ICFSecProtTableInfoObj> instances sorted by their primary keys for the duplicate SuperNameIdx key.
 	 *
 	 *	@param	SuperName	The TableInfo key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFSecProtTableInfoObj cached instances sorted by their primary keys for the duplicate SuperNameIdx key,
+	 *	@return	List of List<ICFSecProtTableInfoObj> cached instances sorted by their primary keys for the duplicate SuperNameIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFSecProtTableInfoObj> readTableInfoBySuperNameIdx( String SuperName );
 
 	/**
-	 *	Get the map of CFSecProtTableInfoObj instances sorted by their primary keys for the duplicate SuperNameIdx key.
+	 *	Get the map of List<ICFSecProtTableInfoObj> instances sorted by their primary keys for the duplicate SuperNameIdx key.
 	 *
 	 *	@param	SuperName	The TableInfo key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFSecProtTableInfoObj cached instances sorted by their primary keys for the duplicate SuperNameIdx key,
+	 *	@return	List of List<ICFSecProtTableInfoObj> cached instances sorted by their primary keys for the duplicate SuperNameIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFSecProtTableInfoObj> readTableInfoBySuperNameIdx( String SuperName,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFSecProtTableInfoObj instances sorted by their primary keys for the duplicate SchemaNameIdx key.
+	 *	Get the map of List<ICFSecProtTableInfoObj> instances sorted by their primary keys for the duplicate SchemaNameIdx key.
 	 *
 	 *	@param	SchemaName	The TableInfo key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFSecProtTableInfoObj cached instances sorted by their primary keys for the duplicate SchemaNameIdx key,
+	 *	@return	List of List<ICFSecProtTableInfoObj> cached instances sorted by their primary keys for the duplicate SchemaNameIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFSecProtTableInfoObj> readTableInfoBySchemaNameIdx( String SchemaName );
 
 	/**
-	 *	Get the map of CFSecProtTableInfoObj instances sorted by their primary keys for the duplicate SchemaNameIdx key.
+	 *	Get the map of List<ICFSecProtTableInfoObj> instances sorted by their primary keys for the duplicate SchemaNameIdx key.
 	 *
 	 *	@param	SchemaName	The TableInfo key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFSecProtTableInfoObj cached instances sorted by their primary keys for the duplicate SchemaNameIdx key,
+	 *	@return	List of List<ICFSecProtTableInfoObj> cached instances sorted by their primary keys for the duplicate SchemaNameIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFSecProtTableInfoObj> readTableInfoBySchemaNameIdx( String SchemaName,
 		boolean forceRead );
 
 	/**
-	 *	Get the CFSecProtTableInfoObj instance for the unique SchemaBkCodeIdx key.
+	 *	Get the ICFSecProtTableInfoObj instance for the unique SchemaBkCodeIdx key.
 	 *
 	 *	@param	SchemaName	The TableInfo key attribute of the instance generating the id.
 	 *
 	 *	@param	BackingClassCode	The TableInfo key attribute of the instance generating the id.
 	 *
-	 *	@return	CFSecProtTableInfoObj cached instance for the unique SchemaBkCodeIdx key, or
+	 *	@return	ICFSecProtTableInfoObj cached instance for the unique SchemaBkCodeIdx key, or
 	 *		null if no such instance exists.
 	 */
 	ICFSecProtTableInfoObj readTableInfoBySchemaBkCodeIdx(String SchemaName,
 		int BackingClassCode );
 
 	/**
-	 *	Get the CFSecProtTableInfoObj instance for the unique SchemaBkCodeIdx key.
+	 *	Get the ICFSecProtTableInfoObj instance for the unique SchemaBkCodeIdx key.
 	 *
 	 *	@param	SchemaName	The TableInfo key attribute of the instance generating the id.
 	 *
 	 *	@param	BackingClassCode	The TableInfo key attribute of the instance generating the id.
 	 *
-	 *	@return	CFSecProtTableInfoObj refreshed instance for the unique SchemaBkCodeIdx key, or
+	 *	@return	ICFSecProtTableInfoObj refreshed instance for the unique SchemaBkCodeIdx key, or
 	 *		null if no such instance exists.
 	 */
 	ICFSecProtTableInfoObj readTableInfoBySchemaBkCodeIdx(String SchemaName,
@@ -250,21 +253,21 @@ public interface ICFSecProtTableInfoTableObj
 		boolean forceRead );
 
 	/**
-	 *	Get the CFSecProtTableInfoObj instance for the unique SchemaRTCodeIdx key.
+	 *	Get the ICFSecProtTableInfoObj instance for the unique SchemaRTCodeIdx key.
 	 *
 	 *	@param	RuntimeClassCode	The TableInfo key attribute of the instance generating the id.
 	 *
-	 *	@return	CFSecProtTableInfoObj cached instance for the unique SchemaRTCodeIdx key, or
+	 *	@return	ICFSecProtTableInfoObj cached instance for the unique SchemaRTCodeIdx key, or
 	 *		null if no such instance exists.
 	 */
 	ICFSecProtTableInfoObj readTableInfoBySchemaRTCodeIdx(int RuntimeClassCode );
 
 	/**
-	 *	Get the CFSecProtTableInfoObj instance for the unique SchemaRTCodeIdx key.
+	 *	Get the ICFSecProtTableInfoObj instance for the unique SchemaRTCodeIdx key.
 	 *
 	 *	@param	RuntimeClassCode	The TableInfo key attribute of the instance generating the id.
 	 *
-	 *	@return	CFSecProtTableInfoObj refreshed instance for the unique SchemaRTCodeIdx key, or
+	 *	@return	ICFSecProtTableInfoObj refreshed instance for the unique SchemaRTCodeIdx key, or
 	 *		null if no such instance exists.
 	 */
 	ICFSecProtTableInfoObj readTableInfoBySchemaRTCodeIdx(int RuntimeClassCode,
@@ -274,9 +277,9 @@ public interface ICFSecProtTableInfoTableObj
 
 	ICFSecProtTableInfoObj readCachedTableInfoByTableNameIdx( String TableName );
 
-	List<ICFSecProtTableInfoObj> readCachedTableInfoBySuperNameIdx( String SuperName );
+	List<List<ICFSecProtTableInfoObj>> readCachedTableInfoBySuperNameIdx( String SuperName );
 
-	List<ICFSecProtTableInfoObj> readCachedTableInfoBySchemaNameIdx( String SchemaName );
+	List<List<ICFSecProtTableInfoObj>> readCachedTableInfoBySchemaNameIdx( String SchemaName );
 
 	ICFSecProtTableInfoObj readCachedTableInfoBySchemaBkCodeIdx( String SchemaName,
 		int BackingClassCode );

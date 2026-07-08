@@ -36,7 +36,10 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 
 public interface ICFSecProtSecClusRoleMembTableObj
 {
@@ -167,26 +170,26 @@ public interface ICFSecProtSecClusRoleMembTableObj
 		String priorLoginId );
 
 	/**
-	 *	Get the CFSecProtSecClusRoleMembObj instance for the primary key attributes.
+	 *	Get the ICFSecProtSecClusRoleMembObj instance for the primary key attributes.
 	 *
 	 *	@param	SecClusRoleId	The SecClusRoleMemb key attribute of the instance generating the id.
 	 *
 	 *	@param	LoginId	The SecClusRoleMemb key attribute of the instance generating the id.
 	 *
-	 *	@return	CFSecProtSecClusRoleMembObj cached instance for the primary key, or
+	 *	@return	ICFSecProtSecClusRoleMembObj cached instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
 	ICFSecProtSecClusRoleMembObj readSecClusRoleMembByIdIdx( CFLibDbKeyHash256 SecClusRoleId,
 		String LoginId );
 
 	/**
-	 *	Get the CFSecProtSecClusRoleMembObj instance for the primary key attributes.
+	 *	Get the ICFSecProtSecClusRoleMembObj instance for the primary key attributes.
 	 *
 	 *	@param	SecClusRoleId	The SecClusRoleMemb key attribute of the instance generating the id.
 	 *
 	 *	@param	LoginId	The SecClusRoleMemb key attribute of the instance generating the id.
 	 *
-	 *	@return	CFSecProtSecClusRoleMembObj refreshed instance for the primary key, or
+	 *	@return	ICFSecProtSecClusRoleMembObj refreshed instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
 	ICFSecProtSecClusRoleMembObj readSecClusRoleMembByIdIdx( CFLibDbKeyHash256 SecClusRoleId,
@@ -194,42 +197,42 @@ public interface ICFSecProtSecClusRoleMembTableObj
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFSecProtSecClusRoleMembObj instances sorted by their primary keys for the duplicate ClusRoleIdx key.
+	 *	Get the map of List<ICFSecProtSecClusRoleMembObj> instances sorted by their primary keys for the duplicate ClusRoleIdx key.
 	 *
 	 *	@param	SecClusRoleId	The SecClusRoleMemb key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFSecProtSecClusRoleMembObj cached instances sorted by their primary keys for the duplicate ClusRoleIdx key,
+	 *	@return	List of List<ICFSecProtSecClusRoleMembObj> cached instances sorted by their primary keys for the duplicate ClusRoleIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFSecProtSecClusRoleMembObj> readSecClusRoleMembByClusRoleIdx( CFLibDbKeyHash256 SecClusRoleId );
 
 	/**
-	 *	Get the map of CFSecProtSecClusRoleMembObj instances sorted by their primary keys for the duplicate ClusRoleIdx key.
+	 *	Get the map of List<ICFSecProtSecClusRoleMembObj> instances sorted by their primary keys for the duplicate ClusRoleIdx key.
 	 *
 	 *	@param	SecClusRoleId	The SecClusRoleMemb key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFSecProtSecClusRoleMembObj cached instances sorted by their primary keys for the duplicate ClusRoleIdx key,
+	 *	@return	List of List<ICFSecProtSecClusRoleMembObj> cached instances sorted by their primary keys for the duplicate ClusRoleIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFSecProtSecClusRoleMembObj> readSecClusRoleMembByClusRoleIdx( CFLibDbKeyHash256 SecClusRoleId,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFSecProtSecClusRoleMembObj instances sorted by their primary keys for the duplicate LoginIdx key.
+	 *	Get the map of List<ICFSecProtSecClusRoleMembObj> instances sorted by their primary keys for the duplicate LoginIdx key.
 	 *
 	 *	@param	LoginId	The SecClusRoleMemb key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFSecProtSecClusRoleMembObj cached instances sorted by their primary keys for the duplicate LoginIdx key,
+	 *	@return	List of List<ICFSecProtSecClusRoleMembObj> cached instances sorted by their primary keys for the duplicate LoginIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFSecProtSecClusRoleMembObj> readSecClusRoleMembByLoginIdx( String LoginId );
 
 	/**
-	 *	Get the map of CFSecProtSecClusRoleMembObj instances sorted by their primary keys for the duplicate LoginIdx key.
+	 *	Get the map of List<ICFSecProtSecClusRoleMembObj> instances sorted by their primary keys for the duplicate LoginIdx key.
 	 *
 	 *	@param	LoginId	The SecClusRoleMemb key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFSecProtSecClusRoleMembObj cached instances sorted by their primary keys for the duplicate LoginIdx key,
+	 *	@return	List of List<ICFSecProtSecClusRoleMembObj> cached instances sorted by their primary keys for the duplicate LoginIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFSecProtSecClusRoleMembObj> readSecClusRoleMembByLoginIdx( String LoginId,
@@ -238,9 +241,9 @@ public interface ICFSecProtSecClusRoleMembTableObj
 	ICFSecProtSecClusRoleMembObj readCachedSecClusRoleMembByIdIdx( CFLibDbKeyHash256 SecClusRoleId,
 		String LoginId );
 
-	List<ICFSecProtSecClusRoleMembObj> readCachedSecClusRoleMembByClusRoleIdx( CFLibDbKeyHash256 SecClusRoleId );
+	List<List<ICFSecProtSecClusRoleMembObj>> readCachedSecClusRoleMembByClusRoleIdx( CFLibDbKeyHash256 SecClusRoleId );
 
-	List<ICFSecProtSecClusRoleMembObj> readCachedSecClusRoleMembByLoginIdx( String LoginId );
+	List<List<ICFSecProtSecClusRoleMembObj>> readCachedSecClusRoleMembByLoginIdx( String LoginId );
 
 	void deepDisposeSecClusRoleMembByIdIdx( CFLibDbKeyHash256 SecClusRoleId,
 		String LoginId );

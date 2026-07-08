@@ -36,7 +36,10 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 
 public interface ICFSecProtSecUserPasswordTableObj
 {
@@ -139,42 +142,42 @@ public interface ICFSecProtSecUserPasswordTableObj
 	List<ICFSecProtSecUserPasswordObj> readCachedAllSecUserPassword();
 
 	/**
-	 *	Get the CFSecProtSecUserPasswordObj instance for the primary key attributes.
+	 *	Get the ICFSecProtSecUserPasswordObj instance for the primary key attributes.
 	 *
 	 *	@param	SecUserId	The SecUserPassword key attribute of the instance generating the id.
 	 *
-	 *	@return	CFSecProtSecUserPasswordObj cached instance for the primary key, or
+	 *	@return	ICFSecProtSecUserPasswordObj cached instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
 	ICFSecProtSecUserPasswordObj readSecUserPasswordByIdIdx( CFLibDbKeyHash256 SecUserId );
 
 	/**
-	 *	Get the CFSecProtSecUserPasswordObj instance for the primary key attributes.
+	 *	Get the ICFSecProtSecUserPasswordObj instance for the primary key attributes.
 	 *
 	 *	@param	SecUserId	The SecUserPassword key attribute of the instance generating the id.
 	 *
-	 *	@return	CFSecProtSecUserPasswordObj refreshed instance for the primary key, or
+	 *	@return	ICFSecProtSecUserPasswordObj refreshed instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
 	ICFSecProtSecUserPasswordObj readSecUserPasswordByIdIdx( CFLibDbKeyHash256 SecUserId,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFSecProtSecUserPasswordObj instances sorted by their primary keys for the duplicate SetStampIdx key.
+	 *	Get the map of List<ICFSecProtSecUserPasswordObj> instances sorted by their primary keys for the duplicate SetStampIdx key.
 	 *
 	 *	@param	PWSetStamp	The SecUserPassword key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFSecProtSecUserPasswordObj cached instances sorted by their primary keys for the duplicate SetStampIdx key,
+	 *	@return	List of List<ICFSecProtSecUserPasswordObj> cached instances sorted by their primary keys for the duplicate SetStampIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFSecProtSecUserPasswordObj> readSecUserPasswordBySetStampIdx( LocalDateTime PWSetStamp );
 
 	/**
-	 *	Get the map of CFSecProtSecUserPasswordObj instances sorted by their primary keys for the duplicate SetStampIdx key.
+	 *	Get the map of List<ICFSecProtSecUserPasswordObj> instances sorted by their primary keys for the duplicate SetStampIdx key.
 	 *
 	 *	@param	PWSetStamp	The SecUserPassword key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFSecProtSecUserPasswordObj cached instances sorted by their primary keys for the duplicate SetStampIdx key,
+	 *	@return	List of List<ICFSecProtSecUserPasswordObj> cached instances sorted by their primary keys for the duplicate SetStampIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFSecProtSecUserPasswordObj> readSecUserPasswordBySetStampIdx( LocalDateTime PWSetStamp,
@@ -182,7 +185,7 @@ public interface ICFSecProtSecUserPasswordTableObj
 
 	ICFSecProtSecUserPasswordObj readCachedSecUserPasswordByIdIdx( CFLibDbKeyHash256 SecUserId );
 
-	List<ICFSecProtSecUserPasswordObj> readCachedSecUserPasswordBySetStampIdx( LocalDateTime PWSetStamp );
+	List<List<ICFSecProtSecUserPasswordObj>> readCachedSecUserPasswordBySetStampIdx( LocalDateTime PWSetStamp );
 
 	void deepDisposeSecUserPasswordByIdIdx( CFLibDbKeyHash256 SecUserId );
 

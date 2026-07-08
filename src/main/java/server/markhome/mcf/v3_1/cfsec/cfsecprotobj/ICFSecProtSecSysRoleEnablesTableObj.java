@@ -36,7 +36,10 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 
 public interface ICFSecProtSecSysRoleEnablesTableObj
 {
@@ -167,26 +170,26 @@ public interface ICFSecProtSecSysRoleEnablesTableObj
 		String priorEnableName );
 
 	/**
-	 *	Get the CFSecProtSecSysRoleEnablesObj instance for the primary key attributes.
+	 *	Get the ICFSecProtSecSysRoleEnablesObj instance for the primary key attributes.
 	 *
 	 *	@param	SecSysRoleId	The SecSysRoleEnables key attribute of the instance generating the id.
 	 *
 	 *	@param	EnableName	The SecSysRoleEnables key attribute of the instance generating the id.
 	 *
-	 *	@return	CFSecProtSecSysRoleEnablesObj cached instance for the primary key, or
+	 *	@return	ICFSecProtSecSysRoleEnablesObj cached instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
 	ICFSecProtSecSysRoleEnablesObj readSecSysRoleEnablesByIdIdx( CFLibDbKeyHash256 SecSysRoleId,
 		String EnableName );
 
 	/**
-	 *	Get the CFSecProtSecSysRoleEnablesObj instance for the primary key attributes.
+	 *	Get the ICFSecProtSecSysRoleEnablesObj instance for the primary key attributes.
 	 *
 	 *	@param	SecSysRoleId	The SecSysRoleEnables key attribute of the instance generating the id.
 	 *
 	 *	@param	EnableName	The SecSysRoleEnables key attribute of the instance generating the id.
 	 *
-	 *	@return	CFSecProtSecSysRoleEnablesObj refreshed instance for the primary key, or
+	 *	@return	ICFSecProtSecSysRoleEnablesObj refreshed instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
 	ICFSecProtSecSysRoleEnablesObj readSecSysRoleEnablesByIdIdx( CFLibDbKeyHash256 SecSysRoleId,
@@ -194,42 +197,42 @@ public interface ICFSecProtSecSysRoleEnablesTableObj
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFSecProtSecSysRoleEnablesObj instances sorted by their primary keys for the duplicate SysRoleIdx key.
+	 *	Get the map of List<ICFSecProtSecSysRoleEnablesObj> instances sorted by their primary keys for the duplicate SysRoleIdx key.
 	 *
 	 *	@param	SecSysRoleId	The SecSysRoleEnables key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFSecProtSecSysRoleEnablesObj cached instances sorted by their primary keys for the duplicate SysRoleIdx key,
+	 *	@return	List of List<ICFSecProtSecSysRoleEnablesObj> cached instances sorted by their primary keys for the duplicate SysRoleIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFSecProtSecSysRoleEnablesObj> readSecSysRoleEnablesBySysRoleIdx( CFLibDbKeyHash256 SecSysRoleId );
 
 	/**
-	 *	Get the map of CFSecProtSecSysRoleEnablesObj instances sorted by their primary keys for the duplicate SysRoleIdx key.
+	 *	Get the map of List<ICFSecProtSecSysRoleEnablesObj> instances sorted by their primary keys for the duplicate SysRoleIdx key.
 	 *
 	 *	@param	SecSysRoleId	The SecSysRoleEnables key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFSecProtSecSysRoleEnablesObj cached instances sorted by their primary keys for the duplicate SysRoleIdx key,
+	 *	@return	List of List<ICFSecProtSecSysRoleEnablesObj> cached instances sorted by their primary keys for the duplicate SysRoleIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFSecProtSecSysRoleEnablesObj> readSecSysRoleEnablesBySysRoleIdx( CFLibDbKeyHash256 SecSysRoleId,
 		boolean forceRead );
 
 	/**
-	 *	Get the map of CFSecProtSecSysRoleEnablesObj instances sorted by their primary keys for the duplicate NameIdx key.
+	 *	Get the map of List<ICFSecProtSecSysRoleEnablesObj> instances sorted by their primary keys for the duplicate NameIdx key.
 	 *
 	 *	@param	EnableName	The SecSysRoleEnables key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFSecProtSecSysRoleEnablesObj cached instances sorted by their primary keys for the duplicate NameIdx key,
+	 *	@return	List of List<ICFSecProtSecSysRoleEnablesObj> cached instances sorted by their primary keys for the duplicate NameIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFSecProtSecSysRoleEnablesObj> readSecSysRoleEnablesByNameIdx( String EnableName );
 
 	/**
-	 *	Get the map of CFSecProtSecSysRoleEnablesObj instances sorted by their primary keys for the duplicate NameIdx key.
+	 *	Get the map of List<ICFSecProtSecSysRoleEnablesObj> instances sorted by their primary keys for the duplicate NameIdx key.
 	 *
 	 *	@param	EnableName	The SecSysRoleEnables key attribute of the instance generating the id.
 	 *
-	 *	@return	List of CFSecProtSecSysRoleEnablesObj cached instances sorted by their primary keys for the duplicate NameIdx key,
+	 *	@return	List of List<ICFSecProtSecSysRoleEnablesObj> cached instances sorted by their primary keys for the duplicate NameIdx key,
 	 *		which may be an empty set.
 	 */
 	List<ICFSecProtSecSysRoleEnablesObj> readSecSysRoleEnablesByNameIdx( String EnableName,
@@ -238,9 +241,9 @@ public interface ICFSecProtSecSysRoleEnablesTableObj
 	ICFSecProtSecSysRoleEnablesObj readCachedSecSysRoleEnablesByIdIdx( CFLibDbKeyHash256 SecSysRoleId,
 		String EnableName );
 
-	List<ICFSecProtSecSysRoleEnablesObj> readCachedSecSysRoleEnablesBySysRoleIdx( CFLibDbKeyHash256 SecSysRoleId );
+	List<List<ICFSecProtSecSysRoleEnablesObj>> readCachedSecSysRoleEnablesBySysRoleIdx( CFLibDbKeyHash256 SecSysRoleId );
 
-	List<ICFSecProtSecSysRoleEnablesObj> readCachedSecSysRoleEnablesByNameIdx( String EnableName );
+	List<List<ICFSecProtSecSysRoleEnablesObj>> readCachedSecSysRoleEnablesByNameIdx( String EnableName );
 
 	void deepDisposeSecSysRoleEnablesByIdIdx( CFLibDbKeyHash256 SecSysRoleId,
 		String EnableName );
