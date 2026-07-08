@@ -39,12 +39,13 @@ import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 
 /*
  *	ICFSecProtClusterFactory protected interface for Cluster
  */
-public interface ICFSecProtClusterFactory
-extends ICFSecPubClusterFactory
+public interface ICFSecProtClusterFactory extends ICFSecPubClusterFactory
 {
 
 	/**
@@ -55,18 +56,39 @@ extends ICFSecPubClusterFactory
 	ICFSecProtClusterHPKey newProtHPKey();
 
 	/**
-	 *	Allocate a protected UDomNameIdx key over public Cluster instances.
+	 *	Allocate a public primary history key for Cluster instances from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	ICFSecPubClusterHPKey asPublic(ICFSecProtClusterHPKey src);
+
+	/**
+	 *	Allocate a protected UDomNameIdx key over protected Cluster instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFSecProtClusterByUDomNameIdxKey newProtByUDomNameIdxKey();
 
 	/**
-	 *	Allocate a protected UDescrIdx key over public Cluster instances.
+	 *	Allocate a public UDomNameIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFSecPubClusterByUDomNameIdxKey asPublic(ICFSecProtClusterByUDomNameIdxKey src);
+
+	/**
+	 *	Allocate a protected UDescrIdx key over protected Cluster instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFSecProtClusterByUDescrIdxKey newProtByUDescrIdxKey();
+
+	/**
+	 *	Allocate a public UDescrIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFSecPubClusterByUDescrIdxKey asPublic(ICFSecProtClusterByUDescrIdxKey src);
 
 	/**
 	 *	Allocate a protected Cluster interface implementation.
@@ -76,10 +98,24 @@ extends ICFSecPubClusterFactory
 	public ICFSecProtCluster newProtRec();
 
 	/**
+	 *	Allocate a public Cluster interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFSecPubCluster asPublic(ICFSecProtCluster src);
+
+	/**
 	 *	Allocate a protected Cluster history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFSecProtClusterH newProtHRec();
+
+	/**
+	 *	Allocate a public Cluster history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFSecPubClusterH asPublic(ICFSecProtClusterH src);
 
 }

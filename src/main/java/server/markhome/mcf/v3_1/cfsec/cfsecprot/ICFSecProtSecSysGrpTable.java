@@ -1,5 +1,5 @@
 
-// Description: Java 25 protected DbIO interface for SecSysGrp.
+// Description: Java 25 protlic DbIO interface for SecSysGrp.
 
 /*
  *	server.markhome.mcf.CFSec
@@ -39,12 +39,15 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 
 /*
- *	CFSecProtSecSysGrpTable protected database interface for SecSysGrp has CodeVis Public, meaning that any user interface or referencing schema can access it.
+ *	CFSecProtSecSysGrpTable protlic database interface for SecSysGrp has CodeVis Public, meaning that any user interface or referencing schema can access it.
  */
 public interface ICFSecProtSecSysGrpTable
+extends ICFSecPubSecSysGrpTable
 {
 	public static final String TABLE_NAME = "SecSysGrp";
 
@@ -59,6 +62,17 @@ public interface ICFSecProtSecSysGrpTable
 	public ICFSecProtSecSysGrp protcreateSecSysGrp( ICFSecProtAuthorization Authorization,
 		ICFSecProtSecSysGrp rec );
 
+	/**
+	 *	Create the instance in the database, and update the specified record
+	 *	with the assigned primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	rec	The instance interface to be created.
+	 */
+	public ICFSecProtSecSysGrp protcreateSecSysGrp( ICFSecProtAuthorization Authorization,
+		ICFSecPubSecSysGrp rec );
+
 
 	/**
 	 *	Update the instance in the database, and update the specified record
@@ -70,6 +84,17 @@ public interface ICFSecProtSecSysGrpTable
 	 */
 	public ICFSecProtSecSysGrp protupdateSecSysGrp( ICFSecProtAuthorization Authorization,
 		ICFSecProtSecSysGrp rec );
+
+	/**
+	 *	Update the instance in the database, and update the specified record
+	 *	with any calculated changes imposed by the associated stored procedure.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	rec	The instance interface to be updated
+	 */
+	public ICFSecProtSecSysGrp protupdateSecSysGrp( ICFSecProtAuthorization Authorization,
+		ICFSecPubSecSysGrp rec );
 
 
 	/**
@@ -110,6 +135,15 @@ public interface ICFSecProtSecSysGrpTable
 	public void protdeleteSecSysGrpByUNameIdx( ICFSecProtAuthorization Authorization,
 		ICFSecProtSecSysGrpByUNameIdxKey argKey );
 	/**
+	 *	Delete the SecSysGrp instances identified by the key UNameIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteSecSysGrpByUNameIdx( ICFSecProtAuthorization Authorization,
+		ICFSecPubSecSysGrpByUNameIdxKey argKey );
+	/**
 	 *	Delete the SecSysGrp instances identified by the key SecLevelIdx.
 	 *
 	 *	@param	Authorization	The session authorization information.
@@ -128,10 +162,81 @@ public interface ICFSecProtSecSysGrpTable
 	 */
 	public void protdeleteSecSysGrpBySecLevelIdx( ICFSecProtAuthorization Authorization,
 		ICFSecProtSecSysGrpBySecLevelIdxKey argKey );
+	/**
+	 *	Delete the SecSysGrp instances identified by the key SecLevelIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteSecSysGrpBySecLevelIdx( ICFSecProtAuthorization Authorization,
+		ICFSecPubSecSysGrpBySecLevelIdxKey argKey );
+
+	/**
+	 *	Delete the instance from the database.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	rec	The instance interface to be deleted.
+	 */
+	public void protdeleteSecSysGrp( ICFSecProtAuthorization Authorization,
+		ICFSecPubSecSysGrp rec );
+	/**
+	 *	Delete the SecSysGrp instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The primary key identifying the instance to be deleted.
+	 */
+	public void protdeleteSecSysGrpByIdIdx( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 argKey );
+	/**
+	 *	Delete the SecSysGrp instances identified by the key UNameIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteSecSysGrpByUNameIdx( ICFSecProtAuthorization Authorization,
+		ICFSecPubSecSysGrpByUNameIdxKey argKey );
+	/**
+	 *	Delete the SecSysGrp instances identified by the key SecLevelIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteSecSysGrpBySecLevelIdx( ICFSecProtAuthorization Authorization,
+		ICFSecPubSecSysGrpBySecLevelIdxKey argKey );
 
 
 	/**
-	 *	Read the derived SecSysGrp record instance by primary key.
+	 *	Read the derived SecSysGrp record instance by protected primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the SecSysGrp instance to be read.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 */
+	public ICFSecProtSecSysGrp protreadDerived( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+	/**
+	 *	Read the derived SecSysGrp record instance by protected primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the SecSysGrp instance to be read.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 */
+	public ICFSecPubSecSysGrp pubreadDerived( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Read the derived SecSysGrp record instance by public primary key.
 	 *
 	 *	@param	Authorization	The session authorization information.
 	 *
@@ -143,8 +248,9 @@ public interface ICFSecProtSecSysGrpTable
 	public ICFSecProtSecSysGrp protreadDerived( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
+
 	/**
-	 *	Lock the derived SecSysGrp record instance by primary key.
+	 *	Lock the derived SecSysGrp record instance by protected primary key.
 	 *
 	 *	@param	Authorization	The session authorization information.
 	 *
@@ -155,6 +261,32 @@ public interface ICFSecProtSecSysGrpTable
 	 */
 	public ICFSecProtSecSysGrp protlockDerived( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
+	/**
+	 *	Lock the derived SecSysGrp record instance by protected primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the SecSysGrp instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 */
+	public ICFSecPubSecSysGrp publockDerived( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Lock the derived SecSysGrp record instance by public primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the SecSysGrp instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 */
+	public ICFSecProtSecSysGrp protlockDerived( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
 
 	/**
 	 *	Read all SecSysGrp instances.
@@ -216,6 +348,66 @@ public interface ICFSecProtSecSysGrpTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFSecProtSecSysGrp protreadRec( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Read the specific SecSysGrp record instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the SecSysGrp instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 *
+	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
+	 */
+	public ICFSecProtSecSysGrp protreadRec( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Read the specific SecSysGrp record instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the SecSysGrp instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 *
+	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
+	 */
+	public ICFSecPubSecSysGrp pubreadRec( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Lock the specific SecSysGrp record instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the SecSysGrp instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 *
+	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
+	 */
+	public ICFSecProtSecSysGrp protlockRec( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Lock the specific SecSysGrp record instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the SecSysGrp instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 *
+	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
+	 */
+	public ICFSecPubSecSysGrp publockRec( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**

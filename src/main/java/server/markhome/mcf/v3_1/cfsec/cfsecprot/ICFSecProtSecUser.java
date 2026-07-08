@@ -35,8 +35,9 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
-import server.markhome.mcf.v3_1.cflib.xml.CFLibXmlUtil;
-//import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 
 /**
  *	ICFSecProtSecUser persistence instances have CodeVis Public, meaning that any user interface or referencing schema can access it.
@@ -45,17 +46,17 @@ public interface ICFSecProtSecUser
 {
 	public static final ICFSecProtSchema.SecAccountStatusEnum ACCOUNTSTATUS_MIN_VALUE = ICFSecProtSchema.SecAccountStatusEnum.System;
 	public static final ICFSecProtSchema.SecAccountStatusEnum ACCOUNTSTATUS_MAX_VALUE = ICFSecProtSchema.SecAccountStatusEnum.Locked;
-	public static final String S_INIT_CREATED_BY = "0000000000000000000000000000000000000000000000000000000000000000";
-	public static final CFLibDbKeyHash256 INIT_CREATED_BY = CFLibDbKeyHash256.fromHex(S_INIT_CREATED_BY);
-	public static final String S_INIT_UPDATED_BY = "0000000000000000000000000000000000000000000000000000000000000000";
-	public static final CFLibDbKeyHash256 INIT_UPDATED_BY = CFLibDbKeyHash256.fromHex(S_INIT_UPDATED_BY);
-	public static final String S_SECUSERID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
-	public static final CFLibDbKeyHash256 SECUSERID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_SECUSERID_INIT_VALUE );
-	public static final String LOGINID_INIT_VALUE = new String( "" );
-	public static final ICFSecProtSchema.SecAccountStatusEnum ACCOUNTSTATUS_INIT_VALUE = ICFSecProtSchema.ordinalToSecAccountStatusEnum( 5 );
-	public static final String DFLTSYSGRPNAME_INIT_VALUE = new String( "" );
-	public static final String DFLTCLUSGRPNAME_INIT_VALUE = new String( "" );
-	public static final String DFLTTENTGRPNAME_INIT_VALUE = new String( "" );
+	public static final String S_INIT_CREATED_BY = ICFSecPubSecUser.S_INIT_CREATED_BY;
+	public static final CFLibDbKeyHash256 INIT_CREATED_BY = ICFSecPubSecUser.INIT_CREATED_BY;
+	public static final String S_INIT_UPDATED_BY = ICFSecPubSecUser.S_INIT_UPDATED_BY;
+	public static final CFLibDbKeyHash256 INIT_UPDATED_BY = ICFSecPubSecUser.INIT_UPDATED_BY;
+	public static final String S_SECUSERID_INIT_VALUE = ICFSecPubSecUser.S_SECUSERID_INIT_VALUE;
+	public static final CFLibDbKeyHash256 SECUSERID_INIT_VALUE = ICFSecPubSecUser.SECUSERID_INIT_VALUE;
+	public static final String LOGINID_INIT_VALUE = ICFSecPubSecUser.LOGINID_INIT_VALUE;
+	public static final ICFSecProtSchema.SecAccountStatusEnum ACCOUNTSTATUS_INIT_VALUE = ICFSecPubSecUser.ACCOUNTSTATUS_INIT_VALUE;
+	public static final String DFLTSYSGRPNAME_INIT_VALUE = ICFSecPubSecUser.DFLTSYSGRPNAME_INIT_VALUE;
+	public static final String DFLTCLUSGRPNAME_INIT_VALUE = ICFSecPubSecUser.DFLTCLUSGRPNAME_INIT_VALUE;
+	public static final String DFLTTENTGRPNAME_INIT_VALUE = ICFSecPubSecUser.DFLTTENTGRPNAME_INIT_VALUE;
 	public static final String EMAILADDRESS_INIT_VALUE = new String( "" );
 	public final static int CLASS_CODE = 0xa009;
 	public final static String S_CLASS_CODE = "a009";
@@ -71,8 +72,8 @@ public interface ICFSecProtSecUser
 	public LocalDateTime getUpdatedAt();
 	public void setUpdatedAt( LocalDateTime value );
 
-	public CFLibDbKeyHash256 getProtPKey();
-	public void setProtPKey(CFLibDbKeyHash256 requiredSecUserId);
+	public CFLibDbKeyHash256 getPKey();
+	public void setPKey(CFLibDbKeyHash256 requiredSecUserId);
 	
 	public ICFSecProtSecUserPassword getOptionalComponentsPassword();
 	public ICFSecProtSecUserEMConf getOptionalComponentsEMConf();
@@ -107,9 +108,13 @@ public interface ICFSecProtSecUser
 	public int compareTo( Object obj );
 
 	public void set( ICFSecProtSecUser src );
-	public void setProtSecUser( ICFSecProtSecUser src );
+	public void setSecUser( ICFSecProtSecUser src );
+	public void set( ICFSecPubSecUser src );
 	public void set( ICFSecProtSecUserH src );
-	public void setProtSecUser( ICFSecProtSecUserH src );
+	public void setSecUser( ICFSecProtSecUserH src );
+	public void set( ICFSecPubSecUserH src );
+	public void setSecUser( ICFSecPubSecUserH src );
+
 
 	public String getXmlAttrFragment();
 

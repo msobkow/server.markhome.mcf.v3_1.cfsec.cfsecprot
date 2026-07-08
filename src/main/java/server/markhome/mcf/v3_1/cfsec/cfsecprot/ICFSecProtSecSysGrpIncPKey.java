@@ -1,4 +1,4 @@
-// Description: Java 25 protected inteface for a SecSysGrpInc primary key object.
+// Description: Java 25 protlic inteface for a SecSysGrpInc primary key object.
 
 /*
  *	server.markhome.mcf.CFSec
@@ -38,7 +38,7 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cflib.xml.CFLibXmlUtil;
 
 /**
- *	ICFSecProtSecSysGrpIncPKey protected primary key interface for SecSysGrpInc has CodeVis Protected, meaning that any only user interfaces and application code specific to the defining schema can access it.
+ *	ICFSecProtSecSysGrpIncPKey protlic primary key interface for SecSysGrpInc has CodeVis Protected, meaning that any only user interfaces and application code specific to the defining schema can access it.
  *		requiredSecSysGrpId	Required object attribute SecSysGrpId.
  *		requiredInclName	Required object attribute InclName.
  */

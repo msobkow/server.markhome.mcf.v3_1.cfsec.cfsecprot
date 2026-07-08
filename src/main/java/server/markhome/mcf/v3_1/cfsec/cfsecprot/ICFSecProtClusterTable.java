@@ -1,5 +1,5 @@
 
-// Description: Java 25 protected DbIO interface for Cluster.
+// Description: Java 25 protlic DbIO interface for Cluster.
 
 /*
  *	server.markhome.mcf.CFSec
@@ -39,12 +39,15 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 
 /*
- *	CFSecProtClusterTable protected database interface for Cluster has CodeVis Public, meaning that any user interface or referencing schema can access it.
+ *	CFSecProtClusterTable protlic database interface for Cluster has CodeVis Public, meaning that any user interface or referencing schema can access it.
  */
 public interface ICFSecProtClusterTable
+extends ICFSecPubClusterTable
 {
 	public static final String TABLE_NAME = "Cluster";
 
@@ -59,6 +62,17 @@ public interface ICFSecProtClusterTable
 	public ICFSecProtCluster protcreateCluster( ICFSecProtAuthorization Authorization,
 		ICFSecProtCluster rec );
 
+	/**
+	 *	Create the instance in the database, and update the specified record
+	 *	with the assigned primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	rec	The instance interface to be created.
+	 */
+	public ICFSecProtCluster protcreateCluster( ICFSecProtAuthorization Authorization,
+		ICFSecPubCluster rec );
+
 
 	/**
 	 *	Update the instance in the database, and update the specified record
@@ -70,6 +84,17 @@ public interface ICFSecProtClusterTable
 	 */
 	public ICFSecProtCluster protupdateCluster( ICFSecProtAuthorization Authorization,
 		ICFSecProtCluster rec );
+
+	/**
+	 *	Update the instance in the database, and update the specified record
+	 *	with any calculated changes imposed by the associated stored procedure.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	rec	The instance interface to be updated
+	 */
+	public ICFSecProtCluster protupdateCluster( ICFSecProtAuthorization Authorization,
+		ICFSecPubCluster rec );
 
 
 	/**
@@ -110,6 +135,15 @@ public interface ICFSecProtClusterTable
 	public void protdeleteClusterByUDomNameIdx( ICFSecProtAuthorization Authorization,
 		ICFSecProtClusterByUDomNameIdxKey argKey );
 	/**
+	 *	Delete the Cluster instances identified by the key UDomNameIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteClusterByUDomNameIdx( ICFSecProtAuthorization Authorization,
+		ICFSecPubClusterByUDomNameIdxKey argKey );
+	/**
 	 *	Delete the Cluster instances identified by the key UDescrIdx.
 	 *
 	 *	@param	Authorization	The session authorization information.
@@ -128,10 +162,81 @@ public interface ICFSecProtClusterTable
 	 */
 	public void protdeleteClusterByUDescrIdx( ICFSecProtAuthorization Authorization,
 		ICFSecProtClusterByUDescrIdxKey argKey );
+	/**
+	 *	Delete the Cluster instances identified by the key UDescrIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteClusterByUDescrIdx( ICFSecProtAuthorization Authorization,
+		ICFSecPubClusterByUDescrIdxKey argKey );
+
+	/**
+	 *	Delete the instance from the database.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	rec	The instance interface to be deleted.
+	 */
+	public void protdeleteCluster( ICFSecProtAuthorization Authorization,
+		ICFSecPubCluster rec );
+	/**
+	 *	Delete the Cluster instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The primary key identifying the instance to be deleted.
+	 */
+	public void protdeleteClusterByIdIdx( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 argKey );
+	/**
+	 *	Delete the Cluster instances identified by the key UDomNameIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteClusterByUDomNameIdx( ICFSecProtAuthorization Authorization,
+		ICFSecPubClusterByUDomNameIdxKey argKey );
+	/**
+	 *	Delete the Cluster instances identified by the key UDescrIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteClusterByUDescrIdx( ICFSecProtAuthorization Authorization,
+		ICFSecPubClusterByUDescrIdxKey argKey );
 
 
 	/**
-	 *	Read the derived Cluster record instance by primary key.
+	 *	Read the derived Cluster record instance by protected primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the Cluster instance to be read.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 */
+	public ICFSecProtCluster protreadDerived( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+	/**
+	 *	Read the derived Cluster record instance by protected primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the Cluster instance to be read.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 */
+	public ICFSecPubCluster pubreadDerived( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Read the derived Cluster record instance by public primary key.
 	 *
 	 *	@param	Authorization	The session authorization information.
 	 *
@@ -143,8 +248,9 @@ public interface ICFSecProtClusterTable
 	public ICFSecProtCluster protreadDerived( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
+
 	/**
-	 *	Lock the derived Cluster record instance by primary key.
+	 *	Lock the derived Cluster record instance by protected primary key.
 	 *
 	 *	@param	Authorization	The session authorization information.
 	 *
@@ -155,6 +261,32 @@ public interface ICFSecProtClusterTable
 	 */
 	public ICFSecProtCluster protlockDerived( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
+	/**
+	 *	Lock the derived Cluster record instance by protected primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the Cluster instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 */
+	public ICFSecPubCluster publockDerived( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Lock the derived Cluster record instance by public primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the Cluster instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 */
+	public ICFSecProtCluster protlockDerived( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
 
 	/**
 	 *	Read all Cluster instances.
@@ -217,6 +349,66 @@ public interface ICFSecProtClusterTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFSecProtCluster protreadRec( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Read the specific Cluster record instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the Cluster instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 *
+	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
+	 */
+	public ICFSecProtCluster protreadRec( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Read the specific Cluster record instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the Cluster instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 *
+	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
+	 */
+	public ICFSecPubCluster pubreadRec( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Lock the specific Cluster record instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the Cluster instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 *
+	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
+	 */
+	public ICFSecProtCluster protlockRec( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Lock the specific Cluster record instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the Cluster instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 *
+	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
+	 */
+	public ICFSecPubCluster publockRec( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**

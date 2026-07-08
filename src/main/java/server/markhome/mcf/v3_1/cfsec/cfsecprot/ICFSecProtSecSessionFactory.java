@@ -39,12 +39,13 @@ import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 
 /*
  *	ICFSecProtSecSessionFactory protected interface for SecSession
  */
-public interface ICFSecProtSecSessionFactory
-extends ICFSecPubSecSessionFactory
+public interface ICFSecProtSecSessionFactory extends ICFSecPubSecSessionFactory
 {
 
 	/**
@@ -55,28 +56,56 @@ extends ICFSecPubSecSessionFactory
 	ICFSecProtSecSessionHPKey newProtHPKey();
 
 	/**
-	 *	Allocate a protected SecUserIdx key over public SecSession instances.
+	 *	Allocate a public primary history key for SecSession instances from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	ICFSecPubSecSessionHPKey asPublic(ICFSecProtSecSessionHPKey src);
+
+	/**
+	 *	Allocate a protected SecUserIdx key over protected SecSession instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFSecProtSecSessionBySecUserIdxKey newProtBySecUserIdxKey();
 
 	/**
-	 *	Allocate a protected StartIdx key over public SecSession instances.
+	 *	Allocate a public SecUserIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFSecPubSecSessionBySecUserIdxKey asPublic(ICFSecProtSecSessionBySecUserIdxKey src);
+
+	/**
+	 *	Allocate a protected StartIdx key over protected SecSession instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFSecProtSecSessionByStartIdxKey newProtByStartIdxKey();
 
 	/**
-	 *	Allocate a protected FinishIdx key over public SecSession instances.
+	 *	Allocate a public StartIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFSecPubSecSessionByStartIdxKey asPublic(ICFSecProtSecSessionByStartIdxKey src);
+
+	/**
+	 *	Allocate a protected FinishIdx key over protected SecSession instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFSecProtSecSessionByFinishIdxKey newProtByFinishIdxKey();
 
 	/**
-	 *	Allocate a protected SecProxyIdx key over public SecSession instances.
+	 *	Allocate a public FinishIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFSecPubSecSessionByFinishIdxKey asPublic(ICFSecProtSecSessionByFinishIdxKey src);
+
+	/**
+	 *	Allocate a protected SecProxyIdx key over protected SecSession instances.
 	 *
 	 *	@return	The new instance.
 	 */
@@ -90,10 +119,24 @@ extends ICFSecPubSecSessionFactory
 	public ICFSecProtSecSession newProtRec();
 
 	/**
+	 *	Allocate a public SecSession interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFSecPubSecSession asPublic(ICFSecProtSecSession src);
+
+	/**
 	 *	Allocate a protected SecSession history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFSecProtSecSessionH newProtHRec();
+
+	/**
+	 *	Allocate a public SecSession history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFSecPubSecSessionH asPublic(ICFSecProtSecSessionH src);
 
 }

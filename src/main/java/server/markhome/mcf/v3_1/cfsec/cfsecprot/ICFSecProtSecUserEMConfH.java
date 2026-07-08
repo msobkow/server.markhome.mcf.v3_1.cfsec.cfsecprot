@@ -1,4 +1,4 @@
-// Description: Java 25 protected interface for a SecUserEMConf history object
+// Description: Java 25 protlic interface for a SecUserEMConf history object
 
 /*
  *	server.markhome.mcf.CFSec
@@ -39,7 +39,7 @@ import server.markhome.mcf.v3_1.cflib.xml.CFLibXmlUtil;
 //import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
 
 /**
- *	ICFSecProtSecUserEMConfH provides access to protected history records matching the CFSecProtSecUserEMConf object change history.
+ *	ICFSecProtSecUserEMConfH provides access to protlic history records matching the CFSecProtSecUserEMConf object change history.
  */
 public interface ICFSecProtSecUserEMConfH
 {

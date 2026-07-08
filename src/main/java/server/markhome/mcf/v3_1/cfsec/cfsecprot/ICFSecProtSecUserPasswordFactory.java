@@ -38,6 +38,9 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 
 /*
  *	ICFSecProtSecUserPasswordFactory protected interface for SecUserPassword
@@ -53,7 +56,7 @@ public interface ICFSecProtSecUserPasswordFactory
 	ICFSecProtSecUserPasswordHPKey newProtHPKey();
 
 	/**
-	 *	Allocate a protected SetStampIdx key over public SecUserPassword instances.
+	 *	Allocate a protected SetStampIdx key over protected SecUserPassword instances.
 	 *
 	 *	@return	The new instance.
 	 */

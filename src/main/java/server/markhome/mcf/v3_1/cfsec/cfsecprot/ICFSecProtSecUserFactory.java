@@ -39,12 +39,13 @@ import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 
 /*
  *	ICFSecProtSecUserFactory protected interface for SecUser
  */
-public interface ICFSecProtSecUserFactory
-extends ICFSecPubSecUserFactory
+public interface ICFSecProtSecUserFactory extends ICFSecPubSecUserFactory
 {
 
 	/**
@@ -55,14 +56,28 @@ extends ICFSecPubSecUserFactory
 	ICFSecProtSecUserHPKey newProtHPKey();
 
 	/**
-	 *	Allocate a protected ULoginIdx key over public SecUser instances.
+	 *	Allocate a public primary history key for SecUser instances from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	ICFSecPubSecUserHPKey asPublic(ICFSecProtSecUserHPKey src);
+
+	/**
+	 *	Allocate a protected ULoginIdx key over protected SecUser instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFSecProtSecUserByULoginIdxKey newProtByULoginIdxKey();
 
 	/**
-	 *	Allocate a protected EMAddrIdx key over public SecUser instances.
+	 *	Allocate a public ULoginIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFSecPubSecUserByULoginIdxKey asPublic(ICFSecProtSecUserByULoginIdxKey src);
+
+	/**
+	 *	Allocate a protected EMAddrIdx key over protected SecUser instances.
 	 *
 	 *	@return	The new instance.
 	 */
@@ -76,10 +91,24 @@ extends ICFSecPubSecUserFactory
 	public ICFSecProtSecUser newProtRec();
 
 	/**
+	 *	Allocate a public SecUser interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFSecPubSecUser asPublic(ICFSecProtSecUser src);
+
+	/**
 	 *	Allocate a protected SecUser history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFSecProtSecUserH newProtHRec();
+
+	/**
+	 *	Allocate a public SecUser history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFSecPubSecUserH asPublic(ICFSecProtSecUserH src);
 
 }

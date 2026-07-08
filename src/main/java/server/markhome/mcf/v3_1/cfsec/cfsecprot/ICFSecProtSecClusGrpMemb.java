@@ -35,8 +35,9 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
-import server.markhome.mcf.v3_1.cflib.xml.CFLibXmlUtil;
-//import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 
 /**
  *	ICFSecProtSecClusGrpMemb persistence instances have CodeVis Protected, meaning that any only user interfaces and application code specific to the defining schema can access it.
@@ -64,8 +65,8 @@ public interface ICFSecProtSecClusGrpMemb
 	public LocalDateTime getUpdatedAt();
 	public void setUpdatedAt( LocalDateTime value );
 
-	public ICFSecProtSecClusGrpMembPKey getProtPKey();
-	public void setProtPKey(ICFSecProtSecClusGrpMembPKey pkey );
+	public ICFSecProtSecClusGrpMembPKey getPKey();
+	public void setPKey(ICFSecProtSecClusGrpMembPKey pkey );
 	
 	public ICFSecProtSecClusGrp getRequiredContainerGroup();
 	public void setRequiredContainerGroup(ICFSecProtSecClusGrp argObj);
@@ -88,9 +89,9 @@ public interface ICFSecProtSecClusGrpMemb
 	public int compareTo( Object obj );
 
 	public void set( ICFSecProtSecClusGrpMemb src );
-	public void setProtSecClusGrpMemb( ICFSecProtSecClusGrpMemb src );
+	public void setSecClusGrpMemb( ICFSecProtSecClusGrpMemb src );
 	public void set( ICFSecProtSecClusGrpMembH src );
-	public void setProtSecClusGrpMemb( ICFSecProtSecClusGrpMembH src );
+	public void setSecClusGrpMemb( ICFSecProtSecClusGrpMembH src );
 
 	public String getXmlAttrFragment();
 

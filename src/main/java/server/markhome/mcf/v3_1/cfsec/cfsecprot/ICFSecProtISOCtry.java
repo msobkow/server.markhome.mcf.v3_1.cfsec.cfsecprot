@@ -35,8 +35,9 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
-import server.markhome.mcf.v3_1.cflib.xml.CFLibXmlUtil;
-//import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 
 /**
  *	ICFSecProtISOCtry persistence instances have CodeVis Public, meaning that any user interface or referencing schema can access it.
@@ -44,13 +45,13 @@ import server.markhome.mcf.v3_1.cflib.xml.CFLibXmlUtil;
 public interface ICFSecProtISOCtry
 {
 	public static final short ISOCTRYID_MIN_VALUE = (short)0;
-	public static final String S_INIT_CREATED_BY = "0000000000000000000000000000000000000000000000000000000000000000";
-	public static final CFLibDbKeyHash256 INIT_CREATED_BY = CFLibDbKeyHash256.fromHex(S_INIT_CREATED_BY);
-	public static final String S_INIT_UPDATED_BY = "0000000000000000000000000000000000000000000000000000000000000000";
-	public static final CFLibDbKeyHash256 INIT_UPDATED_BY = CFLibDbKeyHash256.fromHex(S_INIT_UPDATED_BY);
-	public static final short ISOCTRYID_INIT_VALUE = (short)0;
-	public static final String ISOCODE_INIT_VALUE = new String( "" );
-	public static final String NAME_INIT_VALUE = new String( "" );
+	public static final String S_INIT_CREATED_BY = ICFSecPubISOCtry.S_INIT_CREATED_BY;
+	public static final CFLibDbKeyHash256 INIT_CREATED_BY = ICFSecPubISOCtry.INIT_CREATED_BY;
+	public static final String S_INIT_UPDATED_BY = ICFSecPubISOCtry.S_INIT_UPDATED_BY;
+	public static final CFLibDbKeyHash256 INIT_UPDATED_BY = ICFSecPubISOCtry.INIT_UPDATED_BY;
+	public static final short ISOCTRYID_INIT_VALUE = ICFSecPubISOCtry.ISOCTRYID_INIT_VALUE;
+	public static final String ISOCODE_INIT_VALUE = ICFSecPubISOCtry.ISOCODE_INIT_VALUE;
+	public static final String NAME_INIT_VALUE = ICFSecPubISOCtry.NAME_INIT_VALUE;
 	public final static int CLASS_CODE = 0xa004;
 	public final static String S_CLASS_CODE = "a004";
 
@@ -65,8 +66,8 @@ public interface ICFSecProtISOCtry
 	public LocalDateTime getUpdatedAt();
 	public void setUpdatedAt( LocalDateTime value );
 
-	public Short getProtPKey();
-	public void setProtPKey(Short requiredISOCtryId);
+	public Short getPKey();
+	public void setPKey(Short requiredISOCtryId);
 	
 	public List<ICFSecProtISOCtryCcy> getOptionalComponentsCcy();
 	public List<ICFSecProtISOCtryLang> getOptionalComponentsLang();
@@ -89,9 +90,13 @@ public interface ICFSecProtISOCtry
 	public int compareTo( Object obj );
 
 	public void set( ICFSecProtISOCtry src );
-	public void setProtISOCtry( ICFSecProtISOCtry src );
+	public void setISOCtry( ICFSecProtISOCtry src );
+	public void set( ICFSecPubISOCtry src );
 	public void set( ICFSecProtISOCtryH src );
-	public void setProtISOCtry( ICFSecProtISOCtryH src );
+	public void setISOCtry( ICFSecProtISOCtryH src );
+	public void set( ICFSecPubISOCtryH src );
+	public void setISOCtry( ICFSecPubISOCtryH src );
+
 
 	public String getXmlAttrFragment();
 

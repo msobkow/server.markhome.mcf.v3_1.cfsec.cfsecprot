@@ -38,6 +38,9 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 
 /*
  *	ICFSecProtSecTentGrpFactory protected interface for SecTentGrp
@@ -53,21 +56,21 @@ public interface ICFSecProtSecTentGrpFactory
 	ICFSecProtSecTentGrpHPKey newProtHPKey();
 
 	/**
-	 *	Allocate a protected TenantIdx key over public SecTentGrp instances.
+	 *	Allocate a protected TenantIdx key over protected SecTentGrp instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFSecProtSecTentGrpByTenantIdxKey newProtByTenantIdxKey();
 
 	/**
-	 *	Allocate a protected NameIdx key over public SecTentGrp instances.
+	 *	Allocate a protected NameIdx key over protected SecTentGrp instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFSecProtSecTentGrpByNameIdxKey newProtByNameIdxKey();
 
 	/**
-	 *	Allocate a protected UNameIdx key over public SecTentGrp instances.
+	 *	Allocate a protected UNameIdx key over protected SecTentGrp instances.
 	 *
 	 *	@return	The new instance.
 	 */

@@ -38,6 +38,9 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 
 /*
  *	ICFSecProtSecUserPWResetFactory protected interface for SecUserPWReset
@@ -53,21 +56,21 @@ public interface ICFSecProtSecUserPWResetFactory
 	ICFSecProtSecUserPWResetHPKey newProtHPKey();
 
 	/**
-	 *	Allocate a protected UUuid6Idx key over public SecUserPWReset instances.
+	 *	Allocate a protected UUuid6Idx key over protected SecUserPWReset instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFSecProtSecUserPWResetByUUuid6IdxKey newProtByUUuid6IdxKey();
 
 	/**
-	 *	Allocate a protected SentEMAddrIdx key over public SecUserPWReset instances.
+	 *	Allocate a protected SentEMAddrIdx key over protected SecUserPWReset instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFSecProtSecUserPWResetBySentEMAddrIdxKey newProtBySentEMAddrIdxKey();
 
 	/**
-	 *	Allocate a protected NewAcctIdx key over public SecUserPWReset instances.
+	 *	Allocate a protected NewAcctIdx key over protected SecUserPWReset instances.
 	 *
 	 *	@return	The new instance.
 	 */

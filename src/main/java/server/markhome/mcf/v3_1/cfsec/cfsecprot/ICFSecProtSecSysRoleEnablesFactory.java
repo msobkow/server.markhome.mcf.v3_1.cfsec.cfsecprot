@@ -38,6 +38,9 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 
 /*
  *	ICFSecProtSecSysRoleEnablesFactory protected interface for SecSysRoleEnables
@@ -60,14 +63,14 @@ public interface ICFSecProtSecSysRoleEnablesFactory
 	ICFSecProtSecSysRoleEnablesHPKey newProtHPKey();
 
 	/**
-	 *	Allocate a protected SysRoleIdx key over public SecSysRoleEnables instances.
+	 *	Allocate a protected SysRoleIdx key over protected SecSysRoleEnables instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFSecProtSecSysRoleEnablesBySysRoleIdxKey newProtBySysRoleIdxKey();
 
 	/**
-	 *	Allocate a protected NameIdx key over public SecSysRoleEnables instances.
+	 *	Allocate a protected NameIdx key over protected SecSysRoleEnables instances.
 	 *
 	 *	@return	The new instance.
 	 */

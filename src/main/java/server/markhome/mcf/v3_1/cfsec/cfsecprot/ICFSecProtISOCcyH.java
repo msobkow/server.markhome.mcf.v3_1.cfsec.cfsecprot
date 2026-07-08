@@ -1,4 +1,4 @@
-// Description: Java 25 protected interface for a ISOCcy history object
+// Description: Java 25 protlic interface for a ISOCcy history object
 
 /*
  *	server.markhome.mcf.CFSec
@@ -39,7 +39,7 @@ import server.markhome.mcf.v3_1.cflib.xml.CFLibXmlUtil;
 //import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
 
 /**
- *	ICFSecProtISOCcyH provides access to protected history records matching the CFSecProtISOCcy object change history.
+ *	ICFSecProtISOCcyH provides access to protlic history records matching the CFSecProtISOCcy object change history.
  */
 public interface ICFSecProtISOCcyH
 {

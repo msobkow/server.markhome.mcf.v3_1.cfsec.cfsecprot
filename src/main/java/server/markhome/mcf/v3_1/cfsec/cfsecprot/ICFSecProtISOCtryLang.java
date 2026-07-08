@@ -35,8 +35,9 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
-import server.markhome.mcf.v3_1.cflib.xml.CFLibXmlUtil;
-//import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 
 /**
  *	ICFSecProtISOCtryLang persistence instances have CodeVis Public, meaning that any user interface or referencing schema can access it.
@@ -45,12 +46,12 @@ public interface ICFSecProtISOCtryLang
 {
 	public static final short ISOCTRYID_MIN_VALUE = (short)0;
 	public static final short ISOLANGID_MIN_VALUE = (short)0;
-	public static final String S_INIT_CREATED_BY = "0000000000000000000000000000000000000000000000000000000000000000";
-	public static final CFLibDbKeyHash256 INIT_CREATED_BY = CFLibDbKeyHash256.fromHex(S_INIT_CREATED_BY);
-	public static final String S_INIT_UPDATED_BY = "0000000000000000000000000000000000000000000000000000000000000000";
-	public static final CFLibDbKeyHash256 INIT_UPDATED_BY = CFLibDbKeyHash256.fromHex(S_INIT_UPDATED_BY);
-	public static final short ISOCTRYID_INIT_VALUE = (short)0;
-	public static final short ISOLANGID_INIT_VALUE = (short)0;
+	public static final String S_INIT_CREATED_BY = ICFSecPubISOCtryLang.S_INIT_CREATED_BY;
+	public static final CFLibDbKeyHash256 INIT_CREATED_BY = ICFSecPubISOCtryLang.INIT_CREATED_BY;
+	public static final String S_INIT_UPDATED_BY = ICFSecPubISOCtryLang.S_INIT_UPDATED_BY;
+	public static final CFLibDbKeyHash256 INIT_UPDATED_BY = ICFSecPubISOCtryLang.INIT_UPDATED_BY;
+	public static final short ISOCTRYID_INIT_VALUE = ICFSecPubISOCtryLang.ISOCTRYID_INIT_VALUE;
+	public static final short ISOLANGID_INIT_VALUE = ICFSecPubISOCtryLang.ISOLANGID_INIT_VALUE;
 	public final static int CLASS_CODE = 0xa006;
 	public final static String S_CLASS_CODE = "a006";
 
@@ -65,8 +66,8 @@ public interface ICFSecProtISOCtryLang
 	public LocalDateTime getUpdatedAt();
 	public void setUpdatedAt( LocalDateTime value );
 
-	public ICFSecProtISOCtryLangPKey getProtPKey();
-	public void setProtPKey(ICFSecProtISOCtryLangPKey pkey );
+	public ICFSecProtISOCtryLangPKey getPKey();
+	public void setPKey(ICFSecProtISOCtryLangPKey pkey );
 	
 	public ICFSecProtISOCtry getRequiredContainerCtry();
 	public void setRequiredContainerCtry(ICFSecProtISOCtry argObj);
@@ -89,9 +90,13 @@ public interface ICFSecProtISOCtryLang
 	public int compareTo( Object obj );
 
 	public void set( ICFSecProtISOCtryLang src );
-	public void setProtISOCtryLang( ICFSecProtISOCtryLang src );
+	public void setISOCtryLang( ICFSecProtISOCtryLang src );
+	public void set( ICFSecPubISOCtryLang src );
 	public void set( ICFSecProtISOCtryLangH src );
-	public void setProtISOCtryLang( ICFSecProtISOCtryLangH src );
+	public void setISOCtryLang( ICFSecProtISOCtryLangH src );
+	public void set( ICFSecPubISOCtryLangH src );
+	public void setISOCtryLang( ICFSecPubISOCtryLangH src );
+
 
 	public String getXmlAttrFragment();
 

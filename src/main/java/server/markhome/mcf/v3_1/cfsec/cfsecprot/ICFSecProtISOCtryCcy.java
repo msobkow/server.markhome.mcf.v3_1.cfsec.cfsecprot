@@ -35,8 +35,9 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
-import server.markhome.mcf.v3_1.cflib.xml.CFLibXmlUtil;
-//import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 
 /**
  *	ICFSecProtISOCtryCcy persistence instances have CodeVis Public, meaning that any user interface or referencing schema can access it.
@@ -45,12 +46,12 @@ public interface ICFSecProtISOCtryCcy
 {
 	public static final short ISOCTRYID_MIN_VALUE = (short)0;
 	public static final short ISOCCYID_MIN_VALUE = (short)0;
-	public static final String S_INIT_CREATED_BY = "0000000000000000000000000000000000000000000000000000000000000000";
-	public static final CFLibDbKeyHash256 INIT_CREATED_BY = CFLibDbKeyHash256.fromHex(S_INIT_CREATED_BY);
-	public static final String S_INIT_UPDATED_BY = "0000000000000000000000000000000000000000000000000000000000000000";
-	public static final CFLibDbKeyHash256 INIT_UPDATED_BY = CFLibDbKeyHash256.fromHex(S_INIT_UPDATED_BY);
-	public static final short ISOCTRYID_INIT_VALUE = (short)0;
-	public static final short ISOCCYID_INIT_VALUE = (short)0;
+	public static final String S_INIT_CREATED_BY = ICFSecPubISOCtryCcy.S_INIT_CREATED_BY;
+	public static final CFLibDbKeyHash256 INIT_CREATED_BY = ICFSecPubISOCtryCcy.INIT_CREATED_BY;
+	public static final String S_INIT_UPDATED_BY = ICFSecPubISOCtryCcy.S_INIT_UPDATED_BY;
+	public static final CFLibDbKeyHash256 INIT_UPDATED_BY = ICFSecPubISOCtryCcy.INIT_UPDATED_BY;
+	public static final short ISOCTRYID_INIT_VALUE = ICFSecPubISOCtryCcy.ISOCTRYID_INIT_VALUE;
+	public static final short ISOCCYID_INIT_VALUE = ICFSecPubISOCtryCcy.ISOCCYID_INIT_VALUE;
 	public final static int CLASS_CODE = 0xa005;
 	public final static String S_CLASS_CODE = "a005";
 
@@ -65,8 +66,8 @@ public interface ICFSecProtISOCtryCcy
 	public LocalDateTime getUpdatedAt();
 	public void setUpdatedAt( LocalDateTime value );
 
-	public ICFSecProtISOCtryCcyPKey getProtPKey();
-	public void setProtPKey(ICFSecProtISOCtryCcyPKey pkey );
+	public ICFSecProtISOCtryCcyPKey getPKey();
+	public void setPKey(ICFSecProtISOCtryCcyPKey pkey );
 	
 	public ICFSecProtISOCtry getRequiredContainerCtry();
 	public void setRequiredContainerCtry(ICFSecProtISOCtry argObj);
@@ -89,9 +90,13 @@ public interface ICFSecProtISOCtryCcy
 	public int compareTo( Object obj );
 
 	public void set( ICFSecProtISOCtryCcy src );
-	public void setProtISOCtryCcy( ICFSecProtISOCtryCcy src );
+	public void setISOCtryCcy( ICFSecProtISOCtryCcy src );
+	public void set( ICFSecPubISOCtryCcy src );
 	public void set( ICFSecProtISOCtryCcyH src );
-	public void setProtISOCtryCcy( ICFSecProtISOCtryCcyH src );
+	public void setISOCtryCcy( ICFSecProtISOCtryCcyH src );
+	public void set( ICFSecPubISOCtryCcyH src );
+	public void setISOCtryCcy( ICFSecPubISOCtryCcyH src );
+
 
 	public String getXmlAttrFragment();
 

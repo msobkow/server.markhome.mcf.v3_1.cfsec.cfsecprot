@@ -39,12 +39,13 @@ import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 
 /*
  *	ICFSecProtSysClusterFactory protected interface for SysCluster
  */
-public interface ICFSecProtSysClusterFactory
-extends ICFSecPubSysClusterFactory
+public interface ICFSecProtSysClusterFactory extends ICFSecPubSysClusterFactory
 {
 
 	/**
@@ -55,11 +56,25 @@ extends ICFSecPubSysClusterFactory
 	ICFSecProtSysClusterHPKey newProtHPKey();
 
 	/**
-	 *	Allocate a protected ClusterIdx key over public SysCluster instances.
+	 *	Allocate a public primary history key for SysCluster instances from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	ICFSecPubSysClusterHPKey asPublic(ICFSecProtSysClusterHPKey src);
+
+	/**
+	 *	Allocate a protected ClusterIdx key over protected SysCluster instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFSecProtSysClusterByClusterIdxKey newProtByClusterIdxKey();
+
+	/**
+	 *	Allocate a public ClusterIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFSecPubSysClusterByClusterIdxKey asPublic(ICFSecProtSysClusterByClusterIdxKey src);
 
 	/**
 	 *	Allocate a protected SysCluster interface implementation.
@@ -69,10 +84,24 @@ extends ICFSecPubSysClusterFactory
 	public ICFSecProtSysCluster newProtRec();
 
 	/**
+	 *	Allocate a public SysCluster interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFSecPubSysCluster asPublic(ICFSecProtSysCluster src);
+
+	/**
 	 *	Allocate a protected SysCluster history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFSecProtSysClusterH newProtHRec();
+
+	/**
+	 *	Allocate a public SysCluster history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFSecPubSysClusterH asPublic(ICFSecProtSysClusterH src);
 
 }

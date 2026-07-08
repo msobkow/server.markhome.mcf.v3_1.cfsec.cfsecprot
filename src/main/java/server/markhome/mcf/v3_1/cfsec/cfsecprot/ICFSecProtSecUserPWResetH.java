@@ -1,4 +1,4 @@
-// Description: Java 25 protected interface for a SecUserPWReset history object
+// Description: Java 25 protlic interface for a SecUserPWReset history object
 
 /*
  *	server.markhome.mcf.CFSec
@@ -39,7 +39,7 @@ import server.markhome.mcf.v3_1.cflib.xml.CFLibXmlUtil;
 //import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
 
 /**
- *	ICFSecProtSecUserPWResetH provides access to protected history records matching the CFSecProtSecUserPWReset object change history.
+ *	ICFSecProtSecUserPWResetH provides access to protlic history records matching the CFSecProtSecUserPWReset object change history.
  */
 public interface ICFSecProtSecUserPWResetH
 {

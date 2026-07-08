@@ -1,4 +1,4 @@
-// Description: Java 25 protected interface for a SecSysGrp history object
+// Description: Java 25 protlic interface for a SecSysGrp history object
 
 /*
  *	server.markhome.mcf.CFSec
@@ -39,7 +39,7 @@ import server.markhome.mcf.v3_1.cflib.xml.CFLibXmlUtil;
 //import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
 
 /**
- *	ICFSecProtSecSysGrpH provides access to protected history records matching the CFSecProtSecSysGrp object change history.
+ *	ICFSecProtSecSysGrpH provides access to protlic history records matching the CFSecProtSecSysGrp object change history.
  */
 public interface ICFSecProtSecSysGrpH
 {

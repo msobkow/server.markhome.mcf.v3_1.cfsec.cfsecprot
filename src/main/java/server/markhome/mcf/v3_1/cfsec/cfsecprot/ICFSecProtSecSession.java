@@ -35,19 +35,20 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
-import server.markhome.mcf.v3_1.cflib.xml.CFLibXmlUtil;
-//import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 
 /**
  *	ICFSecProtSecSession persistence instances have CodeVis Public, meaning that any user interface or referencing schema can access it.
  */
 public interface ICFSecProtSecSession
 {
-	public static final String S_SECSESSIONID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
-	public static final CFLibDbKeyHash256 SECSESSIONID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_SECSESSIONID_INIT_VALUE );
-	public static final String S_SECUSERID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
-	public static final CFLibDbKeyHash256 SECUSERID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_SECUSERID_INIT_VALUE );
-	public static final LocalDateTime START_INIT_VALUE = CFLibXmlUtil.parseTimestamp("2020-01-01T00:00:00");
+	public static final String S_SECSESSIONID_INIT_VALUE = ICFSecPubSecSession.S_SECSESSIONID_INIT_VALUE;
+	public static final CFLibDbKeyHash256 SECSESSIONID_INIT_VALUE = ICFSecPubSecSession.SECSESSIONID_INIT_VALUE;
+	public static final String S_SECUSERID_INIT_VALUE = ICFSecPubSecSession.S_SECUSERID_INIT_VALUE;
+	public static final CFLibDbKeyHash256 SECUSERID_INIT_VALUE = ICFSecPubSecSession.SECUSERID_INIT_VALUE;
+	public static final LocalDateTime START_INIT_VALUE = ICFSecPubSecSession.START_INIT_VALUE;
 	public static final String S_SECPROXYID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
 	public static final CFLibDbKeyHash256 SECPROXYID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_SECPROXYID_INIT_VALUE );
 	public final static int CLASS_CODE = 0xa01e;
@@ -55,8 +56,8 @@ public interface ICFSecProtSecSession
 
 	public int getClassCode();
 
-	public CFLibDbKeyHash256 getProtPKey();
-	public void setProtPKey(CFLibDbKeyHash256 requiredSecSessionId);
+	public CFLibDbKeyHash256 getPKey();
+	public void setPKey(CFLibDbKeyHash256 requiredSecSessionId);
 	
 	public CFLibDbKeyHash256 getRequiredSecSessionId();
 	public void setRequiredSecSessionId( CFLibDbKeyHash256 value );
@@ -81,9 +82,13 @@ public interface ICFSecProtSecSession
 	public int compareTo( Object obj );
 
 	public void set( ICFSecProtSecSession src );
-	public void setProtSecSession( ICFSecProtSecSession src );
+	public void setSecSession( ICFSecProtSecSession src );
+	public void set( ICFSecPubSecSession src );
 	public void set( ICFSecProtSecSessionH src );
-	public void setProtSecSession( ICFSecProtSecSessionH src );
+	public void setSecSession( ICFSecProtSecSessionH src );
+	public void set( ICFSecPubSecSessionH src );
+	public void setSecSession( ICFSecPubSecSessionH src );
+
 
 	public String getXmlAttrFragment();
 

@@ -39,12 +39,13 @@ import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 
 /*
  *	ICFSecProtISOCtryFactory protected interface for ISOCtry
  */
-public interface ICFSecProtISOCtryFactory
-extends ICFSecPubISOCtryFactory
+public interface ICFSecProtISOCtryFactory extends ICFSecPubISOCtryFactory
 {
 
 	/**
@@ -55,18 +56,39 @@ extends ICFSecPubISOCtryFactory
 	ICFSecProtISOCtryHPKey newProtHPKey();
 
 	/**
-	 *	Allocate a protected ISOCodeIdx key over public ISOCtry instances.
+	 *	Allocate a public primary history key for ISOCtry instances from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	ICFSecPubISOCtryHPKey asPublic(ICFSecProtISOCtryHPKey src);
+
+	/**
+	 *	Allocate a protected ISOCodeIdx key over protected ISOCtry instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFSecProtISOCtryByISOCodeIdxKey newProtByISOCodeIdxKey();
 
 	/**
-	 *	Allocate a protected NameIdx key over public ISOCtry instances.
+	 *	Allocate a public ISOCodeIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFSecPubISOCtryByISOCodeIdxKey asPublic(ICFSecProtISOCtryByISOCodeIdxKey src);
+
+	/**
+	 *	Allocate a protected NameIdx key over protected ISOCtry instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFSecProtISOCtryByNameIdxKey newProtByNameIdxKey();
+
+	/**
+	 *	Allocate a public NameIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFSecPubISOCtryByNameIdxKey asPublic(ICFSecProtISOCtryByNameIdxKey src);
 
 	/**
 	 *	Allocate a protected ISOCtry interface implementation.
@@ -76,10 +98,24 @@ extends ICFSecPubISOCtryFactory
 	public ICFSecProtISOCtry newProtRec();
 
 	/**
+	 *	Allocate a public ISOCtry interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFSecPubISOCtry asPublic(ICFSecProtISOCtry src);
+
+	/**
 	 *	Allocate a protected ISOCtry history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFSecProtISOCtryH newProtHRec();
+
+	/**
+	 *	Allocate a public ISOCtry history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFSecPubISOCtryH asPublic(ICFSecProtISOCtryH src);
 
 }

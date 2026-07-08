@@ -1,5 +1,5 @@
 
-// Description: Java 25 protected DbIO interface for SecUser.
+// Description: Java 25 protlic DbIO interface for SecUser.
 
 /*
  *	server.markhome.mcf.CFSec
@@ -39,12 +39,15 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 
 /*
- *	CFSecProtSecUserTable protected database interface for SecUser has CodeVis Public, meaning that any user interface or referencing schema can access it.
+ *	CFSecProtSecUserTable protlic database interface for SecUser has CodeVis Public, meaning that any user interface or referencing schema can access it.
  */
 public interface ICFSecProtSecUserTable
+extends ICFSecPubSecUserTable
 {
 	public static final String TABLE_NAME = "SecUser";
 
@@ -59,6 +62,17 @@ public interface ICFSecProtSecUserTable
 	public ICFSecProtSecUser protcreateSecUser( ICFSecProtAuthorization Authorization,
 		ICFSecProtSecUser rec );
 
+	/**
+	 *	Create the instance in the database, and update the specified record
+	 *	with the assigned primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	rec	The instance interface to be created.
+	 */
+	public ICFSecProtSecUser protcreateSecUser( ICFSecProtAuthorization Authorization,
+		ICFSecPubSecUser rec );
+
 
 	/**
 	 *	Update the instance in the database, and update the specified record
@@ -70,6 +84,17 @@ public interface ICFSecProtSecUserTable
 	 */
 	public ICFSecProtSecUser protupdateSecUser( ICFSecProtAuthorization Authorization,
 		ICFSecProtSecUser rec );
+
+	/**
+	 *	Update the instance in the database, and update the specified record
+	 *	with any calculated changes imposed by the associated stored procedure.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	rec	The instance interface to be updated
+	 */
+	public ICFSecProtSecUser protupdateSecUser( ICFSecProtAuthorization Authorization,
+		ICFSecPubSecUser rec );
 
 
 	/**
@@ -110,6 +135,15 @@ public interface ICFSecProtSecUserTable
 	public void protdeleteSecUserByULoginIdx( ICFSecProtAuthorization Authorization,
 		ICFSecProtSecUserByULoginIdxKey argKey );
 	/**
+	 *	Delete the SecUser instances identified by the key ULoginIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteSecUserByULoginIdx( ICFSecProtAuthorization Authorization,
+		ICFSecPubSecUserByULoginIdxKey argKey );
+	/**
 	 *	Delete the SecUser instances identified by the key EMAddrIdx.
 	 *
 	 *	@param	Authorization	The session authorization information.
@@ -129,9 +163,71 @@ public interface ICFSecProtSecUserTable
 	public void protdeleteSecUserByEMAddrIdx( ICFSecProtAuthorization Authorization,
 		ICFSecProtSecUserByEMAddrIdxKey argKey );
 
+	/**
+	 *	Delete the instance from the database.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	rec	The instance interface to be deleted.
+	 */
+	public void protdeleteSecUser( ICFSecProtAuthorization Authorization,
+		ICFSecPubSecUser rec );
+	/**
+	 *	Delete the SecUser instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The primary key identifying the instance to be deleted.
+	 */
+	public void protdeleteSecUserByIdIdx( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 argKey );
+	/**
+	 *	Delete the SecUser instances identified by the key ULoginIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteSecUserByULoginIdx( ICFSecProtAuthorization Authorization,
+		ICFSecPubSecUserByULoginIdxKey argKey );
+	/**
+	 *	Delete the SecUser instances identified by the key EMAddrIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteSecUserByEMAddrIdx( ICFSecProtAuthorization Authorization,
+		ICFSecPubSecUserByEMAddrIdxKey argKey );
+
 
 	/**
-	 *	Read the derived SecUser record instance by primary key.
+	 *	Read the derived SecUser record instance by protected primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the SecUser instance to be read.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 */
+	public ICFSecProtSecUser protreadDerived( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+	/**
+	 *	Read the derived SecUser record instance by protected primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the SecUser instance to be read.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 */
+	public ICFSecPubSecUser pubreadDerived( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Read the derived SecUser record instance by public primary key.
 	 *
 	 *	@param	Authorization	The session authorization information.
 	 *
@@ -143,8 +239,9 @@ public interface ICFSecProtSecUserTable
 	public ICFSecProtSecUser protreadDerived( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
+
 	/**
-	 *	Lock the derived SecUser record instance by primary key.
+	 *	Lock the derived SecUser record instance by protected primary key.
 	 *
 	 *	@param	Authorization	The session authorization information.
 	 *
@@ -155,6 +252,32 @@ public interface ICFSecProtSecUserTable
 	 */
 	public ICFSecProtSecUser protlockDerived( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
+	/**
+	 *	Lock the derived SecUser record instance by protected primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the SecUser instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 */
+	public ICFSecPubSecUser publockDerived( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Lock the derived SecUser record instance by public primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the SecUser instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 */
+	public ICFSecProtSecUser protlockDerived( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
 
 	/**
 	 *	Read all SecUser instances.
@@ -216,6 +339,66 @@ public interface ICFSecProtSecUserTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFSecProtSecUser protreadRec( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Read the specific SecUser record instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the SecUser instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 *
+	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
+	 */
+	public ICFSecProtSecUser protreadRec( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Read the specific SecUser record instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the SecUser instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 *
+	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
+	 */
+	public ICFSecPubSecUser pubreadRec( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Lock the specific SecUser record instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the SecUser instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 *
+	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
+	 */
+	public ICFSecProtSecUser protlockRec( ICFSecProtAuthorization Authorization,
+		CFLibDbKeyHash256 PKey );
+
+	/**
+	 *	Lock the specific SecUser record instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the SecUser instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 *
+	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
+	 */
+	public ICFSecPubSecUser publockRec( ICFSecProtAuthorization Authorization,
 		CFLibDbKeyHash256 PKey );
 
 	/**

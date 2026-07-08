@@ -35,23 +35,24 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
-import server.markhome.mcf.v3_1.cflib.xml.CFLibXmlUtil;
-//import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 
 /**
  *	ICFSecProtTenant persistence instances have CodeVis Public, meaning that any user interface or referencing schema can access it.
  */
 public interface ICFSecProtTenant
 {
-	public static final String S_INIT_CREATED_BY = "0000000000000000000000000000000000000000000000000000000000000000";
-	public static final CFLibDbKeyHash256 INIT_CREATED_BY = CFLibDbKeyHash256.fromHex(S_INIT_CREATED_BY);
-	public static final String S_INIT_UPDATED_BY = "0000000000000000000000000000000000000000000000000000000000000000";
-	public static final CFLibDbKeyHash256 INIT_UPDATED_BY = CFLibDbKeyHash256.fromHex(S_INIT_UPDATED_BY);
-	public static final String S_ID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
-	public static final CFLibDbKeyHash256 ID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_ID_INIT_VALUE );
-	public static final String S_CLUSTERID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
-	public static final CFLibDbKeyHash256 CLUSTERID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_CLUSTERID_INIT_VALUE );
-	public static final String TENANTNAME_INIT_VALUE = new String( "" );
+	public static final String S_INIT_CREATED_BY = ICFSecPubTenant.S_INIT_CREATED_BY;
+	public static final CFLibDbKeyHash256 INIT_CREATED_BY = ICFSecPubTenant.INIT_CREATED_BY;
+	public static final String S_INIT_UPDATED_BY = ICFSecPubTenant.S_INIT_UPDATED_BY;
+	public static final CFLibDbKeyHash256 INIT_UPDATED_BY = ICFSecPubTenant.INIT_UPDATED_BY;
+	public static final String S_ID_INIT_VALUE = ICFSecPubTenant.S_ID_INIT_VALUE;
+	public static final CFLibDbKeyHash256 ID_INIT_VALUE = ICFSecPubTenant.ID_INIT_VALUE;
+	public static final String S_CLUSTERID_INIT_VALUE = ICFSecPubTenant.S_CLUSTERID_INIT_VALUE;
+	public static final CFLibDbKeyHash256 CLUSTERID_INIT_VALUE = ICFSecPubTenant.CLUSTERID_INIT_VALUE;
+	public static final String TENANTNAME_INIT_VALUE = ICFSecPubTenant.TENANTNAME_INIT_VALUE;
 	public final static int CLASS_CODE = 0xa002;
 	public final static String S_CLASS_CODE = "a002";
 
@@ -66,8 +67,8 @@ public interface ICFSecProtTenant
 	public LocalDateTime getUpdatedAt();
 	public void setUpdatedAt( LocalDateTime value );
 
-	public CFLibDbKeyHash256 getProtPKey();
-	public void setProtPKey(CFLibDbKeyHash256 requiredId);
+	public CFLibDbKeyHash256 getPKey();
+	public void setPKey(CFLibDbKeyHash256 requiredId);
 	
 	public List<ICFSecProtSecTentGrp> getOptionalComponentsSecGroup();
 	public List<ICFSecProtSecTentRole> getOptionalComponentsSecRole();
@@ -79,6 +80,7 @@ public interface ICFSecProtTenant
 	public ICFSecProtCluster getRequiredContainerCluster();
 	public void setRequiredContainerCluster(ICFSecProtCluster argObj);
 	public void setRequiredContainerCluster(CFLibDbKeyHash256 argClusterId);
+	public void setRequiredContainerCluster(ICFSecPubCluster argObj);
 	public CFLibDbKeyHash256 getRequiredClusterId();
 	public String getRequiredTenantName();
 	public void setRequiredTenantName( String value );
@@ -92,9 +94,13 @@ public interface ICFSecProtTenant
 	public int compareTo( Object obj );
 
 	public void set( ICFSecProtTenant src );
-	public void setProtTenant( ICFSecProtTenant src );
+	public void setTenant( ICFSecProtTenant src );
+	public void set( ICFSecPubTenant src );
 	public void set( ICFSecProtTenantH src );
-	public void setProtTenant( ICFSecProtTenantH src );
+	public void setTenant( ICFSecProtTenantH src );
+	public void set( ICFSecPubTenantH src );
+	public void setTenant( ICFSecPubTenantH src );
+
 
 	public String getXmlAttrFragment();
 

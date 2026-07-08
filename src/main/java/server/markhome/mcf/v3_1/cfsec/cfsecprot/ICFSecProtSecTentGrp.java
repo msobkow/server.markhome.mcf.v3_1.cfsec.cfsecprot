@@ -35,8 +35,9 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
-import server.markhome.mcf.v3_1.cflib.xml.CFLibXmlUtil;
-//import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 
 /**
  *	ICFSecProtSecTentGrp persistence instances have CodeVis Protected, meaning that any only user interfaces and application code specific to the defining schema can access it.
@@ -66,8 +67,8 @@ public interface ICFSecProtSecTentGrp
 	public LocalDateTime getUpdatedAt();
 	public void setUpdatedAt( LocalDateTime value );
 
-	public CFLibDbKeyHash256 getProtPKey();
-	public void setProtPKey(CFLibDbKeyHash256 requiredSecTentGrpId);
+	public CFLibDbKeyHash256 getPKey();
+	public void setPKey(CFLibDbKeyHash256 requiredSecTentGrpId);
 	
 	public List<ICFSecProtSecTentGrpMemb> getOptionalChildrenMembByGrp();
 	public CFLibDbKeyHash256 getRequiredSecTentGrpId();
@@ -93,9 +94,9 @@ public interface ICFSecProtSecTentGrp
 	public int compareTo( Object obj );
 
 	public void set( ICFSecProtSecTentGrp src );
-	public void setProtSecTentGrp( ICFSecProtSecTentGrp src );
+	public void setSecTentGrp( ICFSecProtSecTentGrp src );
 	public void set( ICFSecProtSecTentGrpH src );
-	public void setProtSecTentGrp( ICFSecProtSecTentGrpH src );
+	public void setSecTentGrp( ICFSecProtSecTentGrpH src );
 
 	public String getXmlAttrFragment();
 

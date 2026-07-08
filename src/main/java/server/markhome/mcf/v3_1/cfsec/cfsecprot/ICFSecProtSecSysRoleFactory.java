@@ -39,12 +39,13 @@ import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 
 /*
  *	ICFSecProtSecSysRoleFactory protected interface for SecSysRole
  */
-public interface ICFSecProtSecSysRoleFactory
-extends ICFSecPubSecSysRoleFactory
+public interface ICFSecProtSecSysRoleFactory extends ICFSecPubSecSysRoleFactory
 {
 
 	/**
@@ -55,11 +56,25 @@ extends ICFSecPubSecSysRoleFactory
 	ICFSecProtSecSysRoleHPKey newProtHPKey();
 
 	/**
-	 *	Allocate a protected UNameIdx key over public SecSysRole instances.
+	 *	Allocate a public primary history key for SecSysRole instances from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	ICFSecPubSecSysRoleHPKey asPublic(ICFSecProtSecSysRoleHPKey src);
+
+	/**
+	 *	Allocate a protected UNameIdx key over protected SecSysRole instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFSecProtSecSysRoleByUNameIdxKey newProtByUNameIdxKey();
+
+	/**
+	 *	Allocate a public UNameIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFSecPubSecSysRoleByUNameIdxKey asPublic(ICFSecProtSecSysRoleByUNameIdxKey src);
 
 	/**
 	 *	Allocate a protected SecSysRole interface implementation.
@@ -69,10 +84,24 @@ extends ICFSecPubSecSysRoleFactory
 	public ICFSecProtSecSysRole newProtRec();
 
 	/**
+	 *	Allocate a public SecSysRole interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFSecPubSecSysRole asPublic(ICFSecProtSecSysRole src);
+
+	/**
 	 *	Allocate a protected SecSysRole history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFSecProtSecSysRoleH newProtHRec();
+
+	/**
+	 *	Allocate a public SecSysRole history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFSecPubSecSysRoleH asPublic(ICFSecProtSecSysRoleH src);
 
 }

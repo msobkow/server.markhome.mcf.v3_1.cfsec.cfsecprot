@@ -38,6 +38,9 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 
 /*
  *	ICFSecProtSecClusRoleMembFactory protected interface for SecClusRoleMemb
@@ -60,14 +63,14 @@ public interface ICFSecProtSecClusRoleMembFactory
 	ICFSecProtSecClusRoleMembHPKey newProtHPKey();
 
 	/**
-	 *	Allocate a protected ClusRoleIdx key over public SecClusRoleMemb instances.
+	 *	Allocate a protected ClusRoleIdx key over protected SecClusRoleMemb instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFSecProtSecClusRoleMembByClusRoleIdxKey newProtByClusRoleIdxKey();
 
 	/**
-	 *	Allocate a protected LoginIdx key over public SecClusRoleMemb instances.
+	 *	Allocate a protected LoginIdx key over protected SecClusRoleMemb instances.
 	 *
 	 *	@return	The new instance.
 	 */

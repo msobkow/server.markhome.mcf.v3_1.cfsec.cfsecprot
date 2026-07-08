@@ -1,4 +1,4 @@
-// Description: Java 25 protected interface for a SecClusRoleMemb history primary key object
+// Description: Java 25 protlic interface for a SecClusRoleMemb history primary key object
 
 /*
  *	server.markhome.mcf.CFSec

@@ -35,8 +35,9 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
-import server.markhome.mcf.v3_1.cflib.xml.CFLibXmlUtil;
-//import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 
 /**
  *	ICFSecProtSecSysGrp persistence instances have CodeVis Public, meaning that any user interface or referencing schema can access it.
@@ -45,14 +46,14 @@ public interface ICFSecProtSecSysGrp
 {
 	public static final ICFSecProtSchema.SecLevelEnum SECLEVEL_MIN_VALUE = ICFSecProtSchema.SecLevelEnum.System;
 	public static final ICFSecProtSchema.SecLevelEnum SECLEVEL_MAX_VALUE = ICFSecProtSchema.SecLevelEnum.TentRole;
-	public static final String S_INIT_CREATED_BY = "0000000000000000000000000000000000000000000000000000000000000000";
-	public static final CFLibDbKeyHash256 INIT_CREATED_BY = CFLibDbKeyHash256.fromHex(S_INIT_CREATED_BY);
-	public static final String S_INIT_UPDATED_BY = "0000000000000000000000000000000000000000000000000000000000000000";
-	public static final CFLibDbKeyHash256 INIT_UPDATED_BY = CFLibDbKeyHash256.fromHex(S_INIT_UPDATED_BY);
-	public static final String S_SECSYSGRPID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
-	public static final CFLibDbKeyHash256 SECSYSGRPID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_SECSYSGRPID_INIT_VALUE );
-	public static final String NAME_INIT_VALUE = new String( "" );
-	public static final ICFSecProtSchema.SecLevelEnum SECLEVEL_INIT_VALUE = ICFSecProtSchema.ordinalToSecLevelEnum( 0 );
+	public static final String S_INIT_CREATED_BY = ICFSecPubSecSysGrp.S_INIT_CREATED_BY;
+	public static final CFLibDbKeyHash256 INIT_CREATED_BY = ICFSecPubSecSysGrp.INIT_CREATED_BY;
+	public static final String S_INIT_UPDATED_BY = ICFSecPubSecSysGrp.S_INIT_UPDATED_BY;
+	public static final CFLibDbKeyHash256 INIT_UPDATED_BY = ICFSecPubSecSysGrp.INIT_UPDATED_BY;
+	public static final String S_SECSYSGRPID_INIT_VALUE = ICFSecPubSecSysGrp.S_SECSYSGRPID_INIT_VALUE;
+	public static final CFLibDbKeyHash256 SECSYSGRPID_INIT_VALUE = ICFSecPubSecSysGrp.SECSYSGRPID_INIT_VALUE;
+	public static final String NAME_INIT_VALUE = ICFSecPubSecSysGrp.NAME_INIT_VALUE;
+	public static final ICFSecProtSchema.SecLevelEnum SECLEVEL_INIT_VALUE = ICFSecPubSecSysGrp.SECLEVEL_INIT_VALUE;
 	public final static int CLASS_CODE = 0xa00e;
 	public final static String S_CLASS_CODE = "a00e";
 
@@ -67,8 +68,8 @@ public interface ICFSecProtSecSysGrp
 	public LocalDateTime getUpdatedAt();
 	public void setUpdatedAt( LocalDateTime value );
 
-	public CFLibDbKeyHash256 getProtPKey();
-	public void setProtPKey(CFLibDbKeyHash256 requiredSecSysGrpId);
+	public CFLibDbKeyHash256 getPKey();
+	public void setPKey(CFLibDbKeyHash256 requiredSecSysGrpId);
 	
 	public List<ICFSecProtSecSysGrpInc> getOptionalComponentsIncByGrp();
 	public List<ICFSecProtSecSysGrpMemb> getOptionalChildrenMembByGrp();
@@ -98,9 +99,13 @@ public interface ICFSecProtSecSysGrp
 	public int compareTo( Object obj );
 
 	public void set( ICFSecProtSecSysGrp src );
-	public void setProtSecSysGrp( ICFSecProtSecSysGrp src );
+	public void setSecSysGrp( ICFSecProtSecSysGrp src );
+	public void set( ICFSecPubSecSysGrp src );
 	public void set( ICFSecProtSecSysGrpH src );
-	public void setProtSecSysGrp( ICFSecProtSecSysGrpH src );
+	public void setSecSysGrp( ICFSecProtSecSysGrpH src );
+	public void set( ICFSecPubSecSysGrpH src );
+	public void setSecSysGrp( ICFSecPubSecSysGrpH src );
+
 
 	public String getXmlAttrFragment();
 

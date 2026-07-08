@@ -1,4 +1,4 @@
-// Description: Java 25 protected interface for a SecUserPWReset by NewAcctIdx index key object
+// Description: Java 25 protlic interface for a SecUserPWReset by NewAcctIdx index key object
 
 /*
  *	server.markhome.mcf.CFSec

@@ -39,12 +39,13 @@ import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 
 /*
  *	ICFSecProtSecSysGrpFactory protected interface for SecSysGrp
  */
-public interface ICFSecProtSecSysGrpFactory
-extends ICFSecPubSecSysGrpFactory
+public interface ICFSecProtSecSysGrpFactory extends ICFSecPubSecSysGrpFactory
 {
 
 	/**
@@ -55,18 +56,39 @@ extends ICFSecPubSecSysGrpFactory
 	ICFSecProtSecSysGrpHPKey newProtHPKey();
 
 	/**
-	 *	Allocate a protected UNameIdx key over public SecSysGrp instances.
+	 *	Allocate a public primary history key for SecSysGrp instances from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	ICFSecPubSecSysGrpHPKey asPublic(ICFSecProtSecSysGrpHPKey src);
+
+	/**
+	 *	Allocate a protected UNameIdx key over protected SecSysGrp instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFSecProtSecSysGrpByUNameIdxKey newProtByUNameIdxKey();
 
 	/**
-	 *	Allocate a protected SecLevelIdx key over public SecSysGrp instances.
+	 *	Allocate a public UNameIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFSecPubSecSysGrpByUNameIdxKey asPublic(ICFSecProtSecSysGrpByUNameIdxKey src);
+
+	/**
+	 *	Allocate a protected SecLevelIdx key over protected SecSysGrp instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFSecProtSecSysGrpBySecLevelIdxKey newProtBySecLevelIdxKey();
+
+	/**
+	 *	Allocate a public SecLevelIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFSecPubSecSysGrpBySecLevelIdxKey asPublic(ICFSecProtSecSysGrpBySecLevelIdxKey src);
 
 	/**
 	 *	Allocate a protected SecSysGrp interface implementation.
@@ -76,10 +98,24 @@ extends ICFSecPubSecSysGrpFactory
 	public ICFSecProtSecSysGrp newProtRec();
 
 	/**
+	 *	Allocate a public SecSysGrp interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFSecPubSecSysGrp asPublic(ICFSecProtSecSysGrp src);
+
+	/**
 	 *	Allocate a protected SecSysGrp history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFSecProtSecSysGrpH newProtHRec();
+
+	/**
+	 *	Allocate a public SecSysGrp history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFSecPubSecSysGrpH asPublic(ICFSecProtSecSysGrpH src);
 
 }

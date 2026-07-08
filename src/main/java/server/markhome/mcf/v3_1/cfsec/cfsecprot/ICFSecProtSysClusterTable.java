@@ -1,5 +1,5 @@
 
-// Description: Java 25 protected DbIO interface for SysCluster.
+// Description: Java 25 protlic DbIO interface for SysCluster.
 
 /*
  *	server.markhome.mcf.CFSec
@@ -39,12 +39,15 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 
 /*
- *	CFSecProtSysClusterTable protected database interface for SysCluster has CodeVis Public, meaning that any user interface or referencing schema can access it.
+ *	CFSecProtSysClusterTable protlic database interface for SysCluster has CodeVis Public, meaning that any user interface or referencing schema can access it.
  */
 public interface ICFSecProtSysClusterTable
+extends ICFSecPubSysClusterTable
 {
 	public static final String TABLE_NAME = "SysCluster";
 
@@ -59,6 +62,17 @@ public interface ICFSecProtSysClusterTable
 	public ICFSecProtSysCluster protcreateSysCluster( ICFSecProtAuthorization Authorization,
 		ICFSecProtSysCluster rec );
 
+	/**
+	 *	Create the instance in the database, and update the specified record
+	 *	with the assigned primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	rec	The instance interface to be created.
+	 */
+	public ICFSecProtSysCluster protcreateSysCluster( ICFSecProtAuthorization Authorization,
+		ICFSecPubSysCluster rec );
+
 
 	/**
 	 *	Update the instance in the database, and update the specified record
@@ -70,6 +84,17 @@ public interface ICFSecProtSysClusterTable
 	 */
 	public ICFSecProtSysCluster protupdateSysCluster( ICFSecProtAuthorization Authorization,
 		ICFSecProtSysCluster rec );
+
+	/**
+	 *	Update the instance in the database, and update the specified record
+	 *	with any calculated changes imposed by the associated stored procedure.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	rec	The instance interface to be updated
+	 */
+	public ICFSecProtSysCluster protupdateSysCluster( ICFSecProtAuthorization Authorization,
+		ICFSecPubSysCluster rec );
 
 
 	/**
@@ -109,10 +134,72 @@ public interface ICFSecProtSysClusterTable
 	 */
 	public void protdeleteSysClusterByClusterIdx( ICFSecProtAuthorization Authorization,
 		ICFSecProtSysClusterByClusterIdxKey argKey );
+	/**
+	 *	Delete the SysCluster instances identified by the key ClusterIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteSysClusterByClusterIdx( ICFSecProtAuthorization Authorization,
+		ICFSecPubSysClusterByClusterIdxKey argKey );
+
+	/**
+	 *	Delete the instance from the database.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	rec	The instance interface to be deleted.
+	 */
+	public void protdeleteSysCluster( ICFSecProtAuthorization Authorization,
+		ICFSecPubSysCluster rec );
+	/**
+	 *	Delete the SysCluster instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The primary key identifying the instance to be deleted.
+	 */
+	public void protdeleteSysClusterByIdIdx( ICFSecProtAuthorization Authorization,
+		Integer argKey );
+	/**
+	 *	Delete the SysCluster instances identified by the key ClusterIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteSysClusterByClusterIdx( ICFSecProtAuthorization Authorization,
+		ICFSecPubSysClusterByClusterIdxKey argKey );
 
 
 	/**
-	 *	Read the derived SysCluster record instance by primary key.
+	 *	Read the derived SysCluster record instance by protected primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the SysCluster instance to be read.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 */
+	public ICFSecProtSysCluster protreadDerived( ICFSecProtAuthorization Authorization,
+		Integer PKey );
+	/**
+	 *	Read the derived SysCluster record instance by protected primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the SysCluster instance to be read.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 */
+	public ICFSecPubSysCluster pubreadDerived( ICFSecProtAuthorization Authorization,
+		Integer PKey );
+
+	/**
+	 *	Read the derived SysCluster record instance by public primary key.
 	 *
 	 *	@param	Authorization	The session authorization information.
 	 *
@@ -124,8 +211,9 @@ public interface ICFSecProtSysClusterTable
 	public ICFSecProtSysCluster protreadDerived( ICFSecProtAuthorization Authorization,
 		Integer PKey );
 
+
 	/**
-	 *	Lock the derived SysCluster record instance by primary key.
+	 *	Lock the derived SysCluster record instance by protected primary key.
 	 *
 	 *	@param	Authorization	The session authorization information.
 	 *
@@ -136,6 +224,32 @@ public interface ICFSecProtSysClusterTable
 	 */
 	public ICFSecProtSysCluster protlockDerived( ICFSecProtAuthorization Authorization,
 		Integer PKey );
+	/**
+	 *	Lock the derived SysCluster record instance by protected primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the SysCluster instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 */
+	public ICFSecPubSysCluster publockDerived( ICFSecProtAuthorization Authorization,
+		Integer PKey );
+
+	/**
+	 *	Lock the derived SysCluster record instance by public primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the SysCluster instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 */
+	public ICFSecProtSysCluster protlockDerived( ICFSecProtAuthorization Authorization,
+		Integer PKey );
+
 
 	/**
 	 *	Read all SysCluster instances.
@@ -184,6 +298,66 @@ public interface ICFSecProtSysClusterTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFSecProtSysCluster protreadRec( ICFSecProtAuthorization Authorization,
+		Integer PKey );
+
+	/**
+	 *	Read the specific SysCluster record instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the SysCluster instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 *
+	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
+	 */
+	public ICFSecProtSysCluster protreadRec( ICFSecProtAuthorization Authorization,
+		Integer PKey );
+
+	/**
+	 *	Read the specific SysCluster record instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the SysCluster instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 *
+	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
+	 */
+	public ICFSecPubSysCluster pubreadRec( ICFSecProtAuthorization Authorization,
+		Integer PKey );
+
+	/**
+	 *	Lock the specific SysCluster record instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the SysCluster instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 *
+	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
+	 */
+	public ICFSecProtSysCluster protlockRec( ICFSecProtAuthorization Authorization,
+		Integer PKey );
+
+	/**
+	 *	Lock the specific SysCluster record instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the SysCluster instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 *
+	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
+	 */
+	public ICFSecPubSysCluster publockRec( ICFSecProtAuthorization Authorization,
 		Integer PKey );
 
 	/**

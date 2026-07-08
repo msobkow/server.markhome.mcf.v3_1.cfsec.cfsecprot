@@ -35,8 +35,9 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
-import server.markhome.mcf.v3_1.cflib.xml.CFLibXmlUtil;
-//import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 
 /**
  *	ICFSecProtISOLang persistence instances have CodeVis Public, meaning that any user interface or referencing schema can access it.
@@ -44,14 +45,14 @@ import server.markhome.mcf.v3_1.cflib.xml.CFLibXmlUtil;
 public interface ICFSecProtISOLang
 {
 	public static final short ISOLANGID_MIN_VALUE = (short)0;
-	public static final String S_INIT_CREATED_BY = "0000000000000000000000000000000000000000000000000000000000000000";
-	public static final CFLibDbKeyHash256 INIT_CREATED_BY = CFLibDbKeyHash256.fromHex(S_INIT_CREATED_BY);
-	public static final String S_INIT_UPDATED_BY = "0000000000000000000000000000000000000000000000000000000000000000";
-	public static final CFLibDbKeyHash256 INIT_UPDATED_BY = CFLibDbKeyHash256.fromHex(S_INIT_UPDATED_BY);
-	public static final short ISOLANGID_INIT_VALUE = (short)0;
-	public static final String ISO6392CODE_INIT_VALUE = new String( "" );
-	public static final String ISO6391CODE_INIT_VALUE = new String( "" );
-	public static final String ENGLISHNAME_INIT_VALUE = new String( "" );
+	public static final String S_INIT_CREATED_BY = ICFSecPubISOLang.S_INIT_CREATED_BY;
+	public static final CFLibDbKeyHash256 INIT_CREATED_BY = ICFSecPubISOLang.INIT_CREATED_BY;
+	public static final String S_INIT_UPDATED_BY = ICFSecPubISOLang.S_INIT_UPDATED_BY;
+	public static final CFLibDbKeyHash256 INIT_UPDATED_BY = ICFSecPubISOLang.INIT_UPDATED_BY;
+	public static final short ISOLANGID_INIT_VALUE = ICFSecPubISOLang.ISOLANGID_INIT_VALUE;
+	public static final String ISO6392CODE_INIT_VALUE = ICFSecPubISOLang.ISO6392CODE_INIT_VALUE;
+	public static final String ISO6391CODE_INIT_VALUE = ICFSecPubISOLang.ISO6391CODE_INIT_VALUE;
+	public static final String ENGLISHNAME_INIT_VALUE = ICFSecPubISOLang.ENGLISHNAME_INIT_VALUE;
 	public final static int CLASS_CODE = 0xa007;
 	public final static String S_CLASS_CODE = "a007";
 
@@ -66,8 +67,8 @@ public interface ICFSecProtISOLang
 	public LocalDateTime getUpdatedAt();
 	public void setUpdatedAt( LocalDateTime value );
 
-	public Short getProtPKey();
-	public void setProtPKey(Short requiredISOLangId);
+	public Short getPKey();
+	public void setPKey(Short requiredISOLangId);
 	
 	public List<ICFSecProtISOCtryLang> getOptionalChildrenCtry();
 	public short getRequiredISOLangId();
@@ -91,9 +92,13 @@ public interface ICFSecProtISOLang
 	public int compareTo( Object obj );
 
 	public void set( ICFSecProtISOLang src );
-	public void setProtISOLang( ICFSecProtISOLang src );
+	public void setISOLang( ICFSecProtISOLang src );
+	public void set( ICFSecPubISOLang src );
 	public void set( ICFSecProtISOLangH src );
-	public void setProtISOLang( ICFSecProtISOLangH src );
+	public void setISOLang( ICFSecProtISOLangH src );
+	public void set( ICFSecPubISOLangH src );
+	public void setISOLang( ICFSecPubISOLangH src );
+
 
 	public String getXmlAttrFragment();
 

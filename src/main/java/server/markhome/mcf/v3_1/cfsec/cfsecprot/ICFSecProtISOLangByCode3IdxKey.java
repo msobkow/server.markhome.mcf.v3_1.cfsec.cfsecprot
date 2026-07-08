@@ -1,4 +1,4 @@
-// Description: Java 25 protected interface for a ISOLang by Code3Idx index key object
+// Description: Java 25 protlic interface for a ISOLang by Code3Idx index key object
 
 /*
  *	server.markhome.mcf.CFSec

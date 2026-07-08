@@ -39,12 +39,13 @@ import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 
 /*
  *	ICFSecProtTableInfoFactory protected interface for TableInfo
  */
-public interface ICFSecProtTableInfoFactory
-extends ICFSecPubTableInfoFactory
+public interface ICFSecProtTableInfoFactory extends ICFSecPubTableInfoFactory
 {
 
 	/**
@@ -55,39 +56,81 @@ extends ICFSecPubTableInfoFactory
 	ICFSecProtTableInfoHPKey newProtHPKey();
 
 	/**
-	 *	Allocate a protected TableNameIdx key over public TableInfo instances.
+	 *	Allocate a public primary history key for TableInfo instances from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	ICFSecPubTableInfoHPKey asPublic(ICFSecProtTableInfoHPKey src);
+
+	/**
+	 *	Allocate a protected TableNameIdx key over protected TableInfo instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFSecProtTableInfoByTableNameIdxKey newProtByTableNameIdxKey();
 
 	/**
-	 *	Allocate a protected SuperNameIdx key over public TableInfo instances.
+	 *	Allocate a public TableNameIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFSecPubTableInfoByTableNameIdxKey asPublic(ICFSecProtTableInfoByTableNameIdxKey src);
+
+	/**
+	 *	Allocate a protected SuperNameIdx key over protected TableInfo instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFSecProtTableInfoBySuperNameIdxKey newProtBySuperNameIdxKey();
 
 	/**
-	 *	Allocate a protected SchemaNameIdx key over public TableInfo instances.
+	 *	Allocate a public SuperNameIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFSecPubTableInfoBySuperNameIdxKey asPublic(ICFSecProtTableInfoBySuperNameIdxKey src);
+
+	/**
+	 *	Allocate a protected SchemaNameIdx key over protected TableInfo instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFSecProtTableInfoBySchemaNameIdxKey newProtBySchemaNameIdxKey();
 
 	/**
-	 *	Allocate a protected SchemaBkCodeIdx key over public TableInfo instances.
+	 *	Allocate a public SchemaNameIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFSecPubTableInfoBySchemaNameIdxKey asPublic(ICFSecProtTableInfoBySchemaNameIdxKey src);
+
+	/**
+	 *	Allocate a protected SchemaBkCodeIdx key over protected TableInfo instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFSecProtTableInfoBySchemaBkCodeIdxKey newProtBySchemaBkCodeIdxKey();
 
 	/**
-	 *	Allocate a protected SchemaRTCodeIdx key over public TableInfo instances.
+	 *	Allocate a public SchemaBkCodeIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFSecPubTableInfoBySchemaBkCodeIdxKey asPublic(ICFSecProtTableInfoBySchemaBkCodeIdxKey src);
+
+	/**
+	 *	Allocate a protected SchemaRTCodeIdx key over protected TableInfo instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFSecProtTableInfoBySchemaRTCodeIdxKey newProtBySchemaRTCodeIdxKey();
+
+	/**
+	 *	Allocate a public SchemaRTCodeIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFSecPubTableInfoBySchemaRTCodeIdxKey asPublic(ICFSecProtTableInfoBySchemaRTCodeIdxKey src);
 
 	/**
 	 *	Allocate a protected TableInfo interface implementation.
@@ -97,10 +140,24 @@ extends ICFSecPubTableInfoFactory
 	public ICFSecProtTableInfo newProtRec();
 
 	/**
+	 *	Allocate a public TableInfo interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFSecPubTableInfo asPublic(ICFSecProtTableInfo src);
+
+	/**
 	 *	Allocate a protected TableInfo history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFSecProtTableInfoH newProtHRec();
+
+	/**
+	 *	Allocate a public TableInfo history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFSecPubTableInfoH asPublic(ICFSecProtTableInfoH src);
 
 }

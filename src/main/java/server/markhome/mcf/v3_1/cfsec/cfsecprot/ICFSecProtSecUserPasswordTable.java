@@ -1,5 +1,5 @@
 
-// Description: Java 25 protected DbIO interface for SecUserPassword.
+// Description: Java 25 protlic DbIO interface for SecUserPassword.
 
 /*
  *	server.markhome.mcf.CFSec
@@ -39,10 +39,12 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 
 /*
- *	CFSecProtSecUserPasswordTable protected database interface for SecUserPassword has CodeVis Protected, meaning that any only user interfaces and application code specific to the defining schema can access it.
+ *	CFSecProtSecUserPasswordTable protlic database interface for SecUserPassword has CodeVis Protected, meaning that any only user interfaces and application code specific to the defining schema can access it.
  */
 public interface ICFSecProtSecUserPasswordTable
 {
@@ -112,7 +114,7 @@ public interface ICFSecProtSecUserPasswordTable
 
 
 	/**
-	 *	Read the derived SecUserPassword record instance by primary key.
+	 *	Read the derived SecUserPassword record instance by protected primary key.
 	 *
 	 *	@param	Authorization	The session authorization information.
 	 *
@@ -125,7 +127,7 @@ public interface ICFSecProtSecUserPasswordTable
 		CFLibDbKeyHash256 PKey );
 
 	/**
-	 *	Lock the derived SecUserPassword record instance by primary key.
+	 *	Lock the derived SecUserPassword record instance by protected primary key.
 	 *
 	 *	@param	Authorization	The session authorization information.
 	 *

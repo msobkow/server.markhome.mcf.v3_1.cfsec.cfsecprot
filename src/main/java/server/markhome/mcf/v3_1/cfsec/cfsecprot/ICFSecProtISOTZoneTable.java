@@ -1,5 +1,5 @@
 
-// Description: Java 25 protected DbIO interface for ISOTZone.
+// Description: Java 25 protlic DbIO interface for ISOTZone.
 
 /*
  *	server.markhome.mcf.CFSec
@@ -39,12 +39,15 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 
 /*
- *	CFSecProtISOTZoneTable protected database interface for ISOTZone has CodeVis Public, meaning that any user interface or referencing schema can access it.
+ *	CFSecProtISOTZoneTable protlic database interface for ISOTZone has CodeVis Public, meaning that any user interface or referencing schema can access it.
  */
 public interface ICFSecProtISOTZoneTable
+extends ICFSecPubISOTZoneTable
 {
 	public static final String TABLE_NAME = "ISOTZone";
 
@@ -59,6 +62,17 @@ public interface ICFSecProtISOTZoneTable
 	public ICFSecProtISOTZone protcreateISOTZone( ICFSecProtAuthorization Authorization,
 		ICFSecProtISOTZone rec );
 
+	/**
+	 *	Create the instance in the database, and update the specified record
+	 *	with the assigned primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	rec	The instance interface to be created.
+	 */
+	public ICFSecProtISOTZone protcreateISOTZone( ICFSecProtAuthorization Authorization,
+		ICFSecPubISOTZone rec );
+
 
 	/**
 	 *	Update the instance in the database, and update the specified record
@@ -70,6 +84,17 @@ public interface ICFSecProtISOTZoneTable
 	 */
 	public ICFSecProtISOTZone protupdateISOTZone( ICFSecProtAuthorization Authorization,
 		ICFSecProtISOTZone rec );
+
+	/**
+	 *	Update the instance in the database, and update the specified record
+	 *	with any calculated changes imposed by the associated stored procedure.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	rec	The instance interface to be updated
+	 */
+	public ICFSecProtISOTZone protupdateISOTZone( ICFSecProtAuthorization Authorization,
+		ICFSecPubISOTZone rec );
 
 
 	/**
@@ -113,6 +138,15 @@ public interface ICFSecProtISOTZoneTable
 	public void protdeleteISOTZoneByOffsetIdx( ICFSecProtAuthorization Authorization,
 		ICFSecProtISOTZoneByOffsetIdxKey argKey );
 	/**
+	 *	Delete the ISOTZone instances identified by the key OffsetIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteISOTZoneByOffsetIdx( ICFSecProtAuthorization Authorization,
+		ICFSecPubISOTZoneByOffsetIdxKey argKey );
+	/**
 	 *	Delete the ISOTZone instances identified by the key UTZNameIdx.
 	 *
 	 *	@param	Authorization	The session authorization information.
@@ -132,6 +166,15 @@ public interface ICFSecProtISOTZoneTable
 	public void protdeleteISOTZoneByUTZNameIdx( ICFSecProtAuthorization Authorization,
 		ICFSecProtISOTZoneByUTZNameIdxKey argKey );
 	/**
+	 *	Delete the ISOTZone instances identified by the key UTZNameIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteISOTZoneByUTZNameIdx( ICFSecProtAuthorization Authorization,
+		ICFSecPubISOTZoneByUTZNameIdxKey argKey );
+	/**
 	 *	Delete the ISOTZone instances identified by the key Iso8601Idx.
 	 *
 	 *	@param	Authorization	The session authorization information.
@@ -150,10 +193,90 @@ public interface ICFSecProtISOTZoneTable
 	 */
 	public void protdeleteISOTZoneByIso8601Idx( ICFSecProtAuthorization Authorization,
 		ICFSecProtISOTZoneByIso8601IdxKey argKey );
+	/**
+	 *	Delete the ISOTZone instances identified by the key Iso8601Idx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteISOTZoneByIso8601Idx( ICFSecProtAuthorization Authorization,
+		ICFSecPubISOTZoneByIso8601IdxKey argKey );
+
+	/**
+	 *	Delete the instance from the database.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	rec	The instance interface to be deleted.
+	 */
+	public void protdeleteISOTZone( ICFSecProtAuthorization Authorization,
+		ICFSecPubISOTZone rec );
+	/**
+	 *	Delete the ISOTZone instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The primary key identifying the instance to be deleted.
+	 */
+	public void protdeleteISOTZoneByIdIdx( ICFSecProtAuthorization Authorization,
+		Short argKey );
+	/**
+	 *	Delete the ISOTZone instances identified by the key OffsetIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteISOTZoneByOffsetIdx( ICFSecProtAuthorization Authorization,
+		ICFSecPubISOTZoneByOffsetIdxKey argKey );
+	/**
+	 *	Delete the ISOTZone instances identified by the key UTZNameIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteISOTZoneByUTZNameIdx( ICFSecProtAuthorization Authorization,
+		ICFSecPubISOTZoneByUTZNameIdxKey argKey );
+	/**
+	 *	Delete the ISOTZone instances identified by the key Iso8601Idx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteISOTZoneByIso8601Idx( ICFSecProtAuthorization Authorization,
+		ICFSecPubISOTZoneByIso8601IdxKey argKey );
 
 
 	/**
-	 *	Read the derived ISOTZone record instance by primary key.
+	 *	Read the derived ISOTZone record instance by protected primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the ISOTZone instance to be read.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 */
+	public ICFSecProtISOTZone protreadDerived( ICFSecProtAuthorization Authorization,
+		Short PKey );
+	/**
+	 *	Read the derived ISOTZone record instance by protected primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the ISOTZone instance to be read.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 */
+	public ICFSecPubISOTZone pubreadDerived( ICFSecProtAuthorization Authorization,
+		Short PKey );
+
+	/**
+	 *	Read the derived ISOTZone record instance by public primary key.
 	 *
 	 *	@param	Authorization	The session authorization information.
 	 *
@@ -165,8 +288,9 @@ public interface ICFSecProtISOTZoneTable
 	public ICFSecProtISOTZone protreadDerived( ICFSecProtAuthorization Authorization,
 		Short PKey );
 
+
 	/**
-	 *	Lock the derived ISOTZone record instance by primary key.
+	 *	Lock the derived ISOTZone record instance by protected primary key.
 	 *
 	 *	@param	Authorization	The session authorization information.
 	 *
@@ -177,6 +301,32 @@ public interface ICFSecProtISOTZoneTable
 	 */
 	public ICFSecProtISOTZone protlockDerived( ICFSecProtAuthorization Authorization,
 		Short PKey );
+	/**
+	 *	Lock the derived ISOTZone record instance by protected primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the ISOTZone instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 */
+	public ICFSecPubISOTZone publockDerived( ICFSecProtAuthorization Authorization,
+		Short PKey );
+
+	/**
+	 *	Lock the derived ISOTZone record instance by public primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the ISOTZone instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 */
+	public ICFSecProtISOTZone protlockDerived( ICFSecProtAuthorization Authorization,
+		Short PKey );
+
 
 	/**
 	 *	Read all ISOTZone instances.
@@ -253,6 +403,66 @@ public interface ICFSecProtISOTZoneTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFSecProtISOTZone protreadRec( ICFSecProtAuthorization Authorization,
+		Short PKey );
+
+	/**
+	 *	Read the specific ISOTZone record instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the ISOTZone instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 *
+	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
+	 */
+	public ICFSecProtISOTZone protreadRec( ICFSecProtAuthorization Authorization,
+		Short PKey );
+
+	/**
+	 *	Read the specific ISOTZone record instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the ISOTZone instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 *
+	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
+	 */
+	public ICFSecPubISOTZone pubreadRec( ICFSecProtAuthorization Authorization,
+		Short PKey );
+
+	/**
+	 *	Lock the specific ISOTZone record instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the ISOTZone instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 *
+	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
+	 */
+	public ICFSecProtISOTZone protlockRec( ICFSecProtAuthorization Authorization,
+		Short PKey );
+
+	/**
+	 *	Lock the specific ISOTZone record instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the ISOTZone instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 *
+	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
+	 */
+	public ICFSecPubISOTZone publockRec( ICFSecProtAuthorization Authorization,
 		Short PKey );
 
 	/**

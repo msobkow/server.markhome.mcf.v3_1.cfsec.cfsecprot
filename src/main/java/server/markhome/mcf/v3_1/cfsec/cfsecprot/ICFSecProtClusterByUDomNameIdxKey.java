@@ -1,4 +1,4 @@
-// Description: Java 25 protected interface for a Cluster by UDomNameIdx index key object
+// Description: Java 25 protlic interface for a Cluster by UDomNameIdx index key object
 
 /*
  *	server.markhome.mcf.CFSec

@@ -38,6 +38,9 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 
 /*
  *	ICFSecProtSecSysGrpIncFactory protected interface for SecSysGrpInc
@@ -60,14 +63,14 @@ public interface ICFSecProtSecSysGrpIncFactory
 	ICFSecProtSecSysGrpIncHPKey newProtHPKey();
 
 	/**
-	 *	Allocate a protected SysGrpIdx key over public SecSysGrpInc instances.
+	 *	Allocate a protected SysGrpIdx key over protected SecSysGrpInc instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFSecProtSecSysGrpIncBySysGrpIdxKey newProtBySysGrpIdxKey();
 
 	/**
-	 *	Allocate a protected NameIdx key over public SecSysGrpInc instances.
+	 *	Allocate a protected NameIdx key over protected SecSysGrpInc instances.
 	 *
 	 *	@return	The new instance.
 	 */

@@ -39,12 +39,13 @@ import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 
 /*
  *	ICFSecProtTenantFactory protected interface for Tenant
  */
-public interface ICFSecProtTenantFactory
-extends ICFSecPubTenantFactory
+public interface ICFSecProtTenantFactory extends ICFSecPubTenantFactory
 {
 
 	/**
@@ -55,18 +56,39 @@ extends ICFSecPubTenantFactory
 	ICFSecProtTenantHPKey newProtHPKey();
 
 	/**
-	 *	Allocate a protected ClusterIdx key over public Tenant instances.
+	 *	Allocate a public primary history key for Tenant instances from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	ICFSecPubTenantHPKey asPublic(ICFSecProtTenantHPKey src);
+
+	/**
+	 *	Allocate a protected ClusterIdx key over protected Tenant instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFSecProtTenantByClusterIdxKey newProtByClusterIdxKey();
 
 	/**
-	 *	Allocate a protected UNameIdx key over public Tenant instances.
+	 *	Allocate a public ClusterIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFSecPubTenantByClusterIdxKey asPublic(ICFSecProtTenantByClusterIdxKey src);
+
+	/**
+	 *	Allocate a protected UNameIdx key over protected Tenant instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFSecProtTenantByUNameIdxKey newProtByUNameIdxKey();
+
+	/**
+	 *	Allocate a public UNameIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFSecPubTenantByUNameIdxKey asPublic(ICFSecProtTenantByUNameIdxKey src);
 
 	/**
 	 *	Allocate a protected Tenant interface implementation.
@@ -76,10 +98,24 @@ extends ICFSecPubTenantFactory
 	public ICFSecProtTenant newProtRec();
 
 	/**
+	 *	Allocate a public Tenant interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFSecPubTenant asPublic(ICFSecProtTenant src);
+
+	/**
 	 *	Allocate a protected Tenant history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFSecProtTenantH newProtHRec();
+
+	/**
+	 *	Allocate a public Tenant history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFSecPubTenantH asPublic(ICFSecProtTenantH src);
 
 }

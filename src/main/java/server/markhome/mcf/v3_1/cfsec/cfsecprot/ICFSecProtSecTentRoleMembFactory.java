@@ -38,6 +38,9 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 
 /*
  *	ICFSecProtSecTentRoleMembFactory protected interface for SecTentRoleMemb
@@ -60,14 +63,14 @@ public interface ICFSecProtSecTentRoleMembFactory
 	ICFSecProtSecTentRoleMembHPKey newProtHPKey();
 
 	/**
-	 *	Allocate a protected TentRoleIdx key over public SecTentRoleMemb instances.
+	 *	Allocate a protected TentRoleIdx key over protected SecTentRoleMemb instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFSecProtSecTentRoleMembByTentRoleIdxKey newProtByTentRoleIdxKey();
 
 	/**
-	 *	Allocate a protected UserIdx key over public SecTentRoleMemb instances.
+	 *	Allocate a protected UserIdx key over protected SecTentRoleMemb instances.
 	 *
 	 *	@return	The new instance.
 	 */

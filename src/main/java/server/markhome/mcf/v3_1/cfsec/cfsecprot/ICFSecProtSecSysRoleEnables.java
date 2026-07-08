@@ -35,8 +35,9 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
-import server.markhome.mcf.v3_1.cflib.xml.CFLibXmlUtil;
-//import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 
 /**
  *	ICFSecProtSecSysRoleEnables persistence instances have CodeVis Protected, meaning that any only user interfaces and application code specific to the defining schema can access it.
@@ -64,8 +65,8 @@ public interface ICFSecProtSecSysRoleEnables
 	public LocalDateTime getUpdatedAt();
 	public void setUpdatedAt( LocalDateTime value );
 
-	public ICFSecProtSecSysRoleEnablesPKey getProtPKey();
-	public void setProtPKey(ICFSecProtSecSysRoleEnablesPKey pkey );
+	public ICFSecProtSecSysRoleEnablesPKey getPKey();
+	public void setPKey(ICFSecProtSecSysRoleEnablesPKey pkey );
 	
 	public ICFSecProtSecSysRole getRequiredContainerSysRole();
 	public void setRequiredContainerSysRole(ICFSecProtSecSysRole argObj);
@@ -88,9 +89,9 @@ public interface ICFSecProtSecSysRoleEnables
 	public int compareTo( Object obj );
 
 	public void set( ICFSecProtSecSysRoleEnables src );
-	public void setProtSecSysRoleEnables( ICFSecProtSecSysRoleEnables src );
+	public void setSecSysRoleEnables( ICFSecProtSecSysRoleEnables src );
 	public void set( ICFSecProtSecSysRoleEnablesH src );
-	public void setProtSecSysRoleEnables( ICFSecProtSecSysRoleEnablesH src );
+	public void setSecSysRoleEnables( ICFSecProtSecSysRoleEnablesH src );
 
 	public String getXmlAttrFragment();
 

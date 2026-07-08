@@ -1,5 +1,5 @@
 
-// Description: Java 25 protected DbIO interface for SecSysRoleEnables.
+// Description: Java 25 protlic DbIO interface for SecSysRoleEnables.
 
 /*
  *	server.markhome.mcf.CFSec
@@ -39,10 +39,12 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 
 /*
- *	CFSecProtSecSysRoleEnablesTable protected database interface for SecSysRoleEnables has CodeVis Protected, meaning that any only user interfaces and application code specific to the defining schema can access it.
+ *	CFSecProtSecSysRoleEnablesTable protlic database interface for SecSysRoleEnables has CodeVis Protected, meaning that any only user interfaces and application code specific to the defining schema can access it.
  */
 public interface ICFSecProtSecSysRoleEnablesTable
 {
@@ -143,7 +145,7 @@ public interface ICFSecProtSecSysRoleEnablesTable
 
 
 	/**
-	 *	Read the derived SecSysRoleEnables record instance by primary key.
+	 *	Read the derived SecSysRoleEnables record instance by protected primary key.
 	 *
 	 *	@param	Authorization	The session authorization information.
 	 *
@@ -168,7 +170,7 @@ public interface ICFSecProtSecSysRoleEnablesTable
 		String EnableName );
 
 	/**
-	 *	Lock the derived SecSysRoleEnables record instance by primary key.
+	 *	Lock the derived SecSysRoleEnables record instance by protected primary key.
 	 *
 	 *	@param	Authorization	The session authorization information.
 	 *

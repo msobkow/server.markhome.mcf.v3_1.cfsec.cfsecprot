@@ -1,5 +1,5 @@
 
-// Description: Java 25 protected DbIO interface for ISOLang.
+// Description: Java 25 protlic DbIO interface for ISOLang.
 
 /*
  *	server.markhome.mcf.CFSec
@@ -39,12 +39,15 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 
 /*
- *	CFSecProtISOLangTable protected database interface for ISOLang has CodeVis Public, meaning that any user interface or referencing schema can access it.
+ *	CFSecProtISOLangTable protlic database interface for ISOLang has CodeVis Public, meaning that any user interface or referencing schema can access it.
  */
 public interface ICFSecProtISOLangTable
+extends ICFSecPubISOLangTable
 {
 	public static final String TABLE_NAME = "ISOLang";
 
@@ -59,6 +62,17 @@ public interface ICFSecProtISOLangTable
 	public ICFSecProtISOLang protcreateISOLang( ICFSecProtAuthorization Authorization,
 		ICFSecProtISOLang rec );
 
+	/**
+	 *	Create the instance in the database, and update the specified record
+	 *	with the assigned primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	rec	The instance interface to be created.
+	 */
+	public ICFSecProtISOLang protcreateISOLang( ICFSecProtAuthorization Authorization,
+		ICFSecPubISOLang rec );
+
 
 	/**
 	 *	Update the instance in the database, and update the specified record
@@ -70,6 +84,17 @@ public interface ICFSecProtISOLangTable
 	 */
 	public ICFSecProtISOLang protupdateISOLang( ICFSecProtAuthorization Authorization,
 		ICFSecProtISOLang rec );
+
+	/**
+	 *	Update the instance in the database, and update the specified record
+	 *	with any calculated changes imposed by the associated stored procedure.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	rec	The instance interface to be updated
+	 */
+	public ICFSecProtISOLang protupdateISOLang( ICFSecProtAuthorization Authorization,
+		ICFSecPubISOLang rec );
 
 
 	/**
@@ -110,6 +135,15 @@ public interface ICFSecProtISOLangTable
 	public void protdeleteISOLangByCode3Idx( ICFSecProtAuthorization Authorization,
 		ICFSecProtISOLangByCode3IdxKey argKey );
 	/**
+	 *	Delete the ISOLang instances identified by the key Code3Idx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteISOLangByCode3Idx( ICFSecProtAuthorization Authorization,
+		ICFSecPubISOLangByCode3IdxKey argKey );
+	/**
 	 *	Delete the ISOLang instances identified by the key Code2Idx.
 	 *
 	 *	@param	Authorization	The session authorization information.
@@ -128,10 +162,81 @@ public interface ICFSecProtISOLangTable
 	 */
 	public void protdeleteISOLangByCode2Idx( ICFSecProtAuthorization Authorization,
 		ICFSecProtISOLangByCode2IdxKey argKey );
+	/**
+	 *	Delete the ISOLang instances identified by the key Code2Idx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteISOLangByCode2Idx( ICFSecProtAuthorization Authorization,
+		ICFSecPubISOLangByCode2IdxKey argKey );
+
+	/**
+	 *	Delete the instance from the database.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	rec	The instance interface to be deleted.
+	 */
+	public void protdeleteISOLang( ICFSecProtAuthorization Authorization,
+		ICFSecPubISOLang rec );
+	/**
+	 *	Delete the ISOLang instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The primary key identifying the instance to be deleted.
+	 */
+	public void protdeleteISOLangByIdIdx( ICFSecProtAuthorization Authorization,
+		Short argKey );
+	/**
+	 *	Delete the ISOLang instances identified by the key Code3Idx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteISOLangByCode3Idx( ICFSecProtAuthorization Authorization,
+		ICFSecPubISOLangByCode3IdxKey argKey );
+	/**
+	 *	Delete the ISOLang instances identified by the key Code2Idx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteISOLangByCode2Idx( ICFSecProtAuthorization Authorization,
+		ICFSecPubISOLangByCode2IdxKey argKey );
 
 
 	/**
-	 *	Read the derived ISOLang record instance by primary key.
+	 *	Read the derived ISOLang record instance by protected primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the ISOLang instance to be read.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 */
+	public ICFSecProtISOLang protreadDerived( ICFSecProtAuthorization Authorization,
+		Short PKey );
+	/**
+	 *	Read the derived ISOLang record instance by protected primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the ISOLang instance to be read.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 */
+	public ICFSecPubISOLang pubreadDerived( ICFSecProtAuthorization Authorization,
+		Short PKey );
+
+	/**
+	 *	Read the derived ISOLang record instance by public primary key.
 	 *
 	 *	@param	Authorization	The session authorization information.
 	 *
@@ -143,8 +248,9 @@ public interface ICFSecProtISOLangTable
 	public ICFSecProtISOLang protreadDerived( ICFSecProtAuthorization Authorization,
 		Short PKey );
 
+
 	/**
-	 *	Lock the derived ISOLang record instance by primary key.
+	 *	Lock the derived ISOLang record instance by protected primary key.
 	 *
 	 *	@param	Authorization	The session authorization information.
 	 *
@@ -155,6 +261,32 @@ public interface ICFSecProtISOLangTable
 	 */
 	public ICFSecProtISOLang protlockDerived( ICFSecProtAuthorization Authorization,
 		Short PKey );
+	/**
+	 *	Lock the derived ISOLang record instance by protected primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the ISOLang instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 */
+	public ICFSecPubISOLang publockDerived( ICFSecProtAuthorization Authorization,
+		Short PKey );
+
+	/**
+	 *	Lock the derived ISOLang record instance by public primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the ISOLang instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 */
+	public ICFSecProtISOLang protlockDerived( ICFSecProtAuthorization Authorization,
+		Short PKey );
+
 
 	/**
 	 *	Read all ISOLang instances.
@@ -216,6 +348,66 @@ public interface ICFSecProtISOLangTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFSecProtISOLang protreadRec( ICFSecProtAuthorization Authorization,
+		Short PKey );
+
+	/**
+	 *	Read the specific ISOLang record instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the ISOLang instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 *
+	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
+	 */
+	public ICFSecProtISOLang protreadRec( ICFSecProtAuthorization Authorization,
+		Short PKey );
+
+	/**
+	 *	Read the specific ISOLang record instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the ISOLang instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 *
+	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
+	 */
+	public ICFSecPubISOLang pubreadRec( ICFSecProtAuthorization Authorization,
+		Short PKey );
+
+	/**
+	 *	Lock the specific ISOLang record instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the ISOLang instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 *
+	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
+	 */
+	public ICFSecProtISOLang protlockRec( ICFSecProtAuthorization Authorization,
+		Short PKey );
+
+	/**
+	 *	Lock the specific ISOLang record instance identified by the primary key.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	PKey	The primary key of the ISOLang instance to be locked.
+	 *
+	 *	@return The record instance for the specified primary key, or null if there is
+	 *		no such existing key value.
+	 *
+	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
+	 */
+	public ICFSecPubISOLang publockRec( ICFSecProtAuthorization Authorization,
 		Short PKey );
 
 	/**

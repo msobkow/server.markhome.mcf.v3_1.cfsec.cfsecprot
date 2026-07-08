@@ -1,4 +1,4 @@
-// Description: Java 25 protected interface for a SecSysGrpInc by SysGrpIdx index key object
+// Description: Java 25 protlic interface for a SecSysGrpInc by SysGrpIdx index key object
 
 /*
  *	server.markhome.mcf.CFSec

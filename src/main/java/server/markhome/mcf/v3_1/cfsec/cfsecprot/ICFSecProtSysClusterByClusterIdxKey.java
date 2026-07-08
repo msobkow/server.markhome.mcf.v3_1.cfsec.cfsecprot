@@ -1,4 +1,4 @@
-// Description: Java 25 protected interface for a SysCluster by ClusterIdx index key object
+// Description: Java 25 protlic interface for a SysCluster by ClusterIdx index key object
 
 /*
  *	server.markhome.mcf.CFSec

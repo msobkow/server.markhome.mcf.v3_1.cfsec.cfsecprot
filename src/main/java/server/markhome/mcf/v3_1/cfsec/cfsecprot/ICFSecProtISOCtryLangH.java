@@ -1,4 +1,4 @@
-// Description: Java 25 protected interface for a ISOCtryLang history object
+// Description: Java 25 protlic interface for a ISOCtryLang history object
 
 /*
  *	server.markhome.mcf.CFSec
@@ -39,7 +39,7 @@ import server.markhome.mcf.v3_1.cflib.xml.CFLibXmlUtil;
 //import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
 
 /**
- *	ICFSecProtISOCtryLangH provides access to protected history records matching the CFSecProtISOCtryLang object change history.
+ *	ICFSecProtISOCtryLangH provides access to protlic history records matching the CFSecProtISOCtryLang object change history.
  */
 public interface ICFSecProtISOCtryLangH
 {

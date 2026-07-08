@@ -35,8 +35,9 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
-import server.markhome.mcf.v3_1.cflib.xml.CFLibXmlUtil;
-//import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 
 /**
  *	ICFSecProtSysCluster persistence instances have CodeVis Public, meaning that any user interface or referencing schema can access it.
@@ -45,16 +46,16 @@ public interface ICFSecProtSysCluster
 {
 	public static final int SINGLETONID_MIN_VALUE = 1;
 	public static final int SINGLETONID_MAX_VALUE = 1;
-	public static final int SINGLETONID_INIT_VALUE = 1;
-	public static final String S_CLUSTERID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
-	public static final CFLibDbKeyHash256 CLUSTERID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_CLUSTERID_INIT_VALUE );
+	public static final int SINGLETONID_INIT_VALUE = ICFSecPubSysCluster.SINGLETONID_INIT_VALUE;
+	public static final String S_CLUSTERID_INIT_VALUE = ICFSecPubSysCluster.S_CLUSTERID_INIT_VALUE;
+	public static final CFLibDbKeyHash256 CLUSTERID_INIT_VALUE = ICFSecPubSysCluster.CLUSTERID_INIT_VALUE;
 	public final static int CLASS_CODE = 0xa01f;
 	public final static String S_CLASS_CODE = "a01f";
 
 	public int getClassCode();
 
-	public Integer getProtPKey();
-	public void setProtPKey(Integer requiredSingletonId);
+	public Integer getPKey();
+	public void setPKey(Integer requiredSingletonId);
 	
 	public int getRequiredSingletonId();
 	public void setRequiredSingletonId( int value );
@@ -64,6 +65,7 @@ public interface ICFSecProtSysCluster
 	public ICFSecProtCluster getRequiredContainerCluster();
 	public void setRequiredContainerCluster(ICFSecProtCluster argObj);
 	public void setRequiredContainerCluster(CFLibDbKeyHash256 argClusterId);
+	public void setRequiredContainerCluster(ICFSecPubCluster argObj);
 	public CFLibDbKeyHash256 getRequiredClusterId();
 	@Override
 	public boolean equals( Object obj );
@@ -75,9 +77,13 @@ public interface ICFSecProtSysCluster
 	public int compareTo( Object obj );
 
 	public void set( ICFSecProtSysCluster src );
-	public void setProtSysCluster( ICFSecProtSysCluster src );
+	public void setSysCluster( ICFSecProtSysCluster src );
+	public void set( ICFSecPubSysCluster src );
 	public void set( ICFSecProtSysClusterH src );
-	public void setProtSysCluster( ICFSecProtSysClusterH src );
+	public void setSysCluster( ICFSecProtSysClusterH src );
+	public void set( ICFSecPubSysClusterH src );
+	public void setSysCluster( ICFSecPubSysClusterH src );
+
 
 	public String getXmlAttrFragment();
 

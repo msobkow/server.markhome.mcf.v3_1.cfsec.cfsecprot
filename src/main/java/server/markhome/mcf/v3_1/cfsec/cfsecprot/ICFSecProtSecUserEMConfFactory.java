@@ -38,6 +38,9 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 
 /*
  *	ICFSecProtSecUserEMConfFactory protected interface for SecUserEMConf
@@ -53,28 +56,28 @@ public interface ICFSecProtSecUserEMConfFactory
 	ICFSecProtSecUserEMConfHPKey newProtHPKey();
 
 	/**
-	 *	Allocate a protected UUuid6Idx key over public SecUserEMConf instances.
+	 *	Allocate a protected UUuid6Idx key over protected SecUserEMConf instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFSecProtSecUserEMConfByUUuid6IdxKey newProtByUUuid6IdxKey();
 
 	/**
-	 *	Allocate a protected ConfEMAddrIdx key over public SecUserEMConf instances.
+	 *	Allocate a protected ConfEMAddrIdx key over protected SecUserEMConf instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFSecProtSecUserEMConfByConfEMAddrIdxKey newProtByConfEMAddrIdxKey();
 
 	/**
-	 *	Allocate a protected SentStampIdx key over public SecUserEMConf instances.
+	 *	Allocate a protected SentStampIdx key over protected SecUserEMConf instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFSecProtSecUserEMConfBySentStampIdxKey newProtBySentStampIdxKey();
 
 	/**
-	 *	Allocate a protected NewAcctIdx key over public SecUserEMConf instances.
+	 *	Allocate a protected NewAcctIdx key over protected SecUserEMConf instances.
 	 *
 	 *	@return	The new instance.
 	 */

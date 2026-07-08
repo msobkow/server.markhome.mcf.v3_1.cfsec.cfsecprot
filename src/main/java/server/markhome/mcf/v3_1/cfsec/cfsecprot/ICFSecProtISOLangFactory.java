@@ -39,12 +39,13 @@ import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 
 /*
  *	ICFSecProtISOLangFactory protected interface for ISOLang
  */
-public interface ICFSecProtISOLangFactory
-extends ICFSecPubISOLangFactory
+public interface ICFSecProtISOLangFactory extends ICFSecPubISOLangFactory
 {
 
 	/**
@@ -55,18 +56,39 @@ extends ICFSecPubISOLangFactory
 	ICFSecProtISOLangHPKey newProtHPKey();
 
 	/**
-	 *	Allocate a protected Code3Idx key over public ISOLang instances.
+	 *	Allocate a public primary history key for ISOLang instances from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	ICFSecPubISOLangHPKey asPublic(ICFSecProtISOLangHPKey src);
+
+	/**
+	 *	Allocate a protected Code3Idx key over protected ISOLang instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFSecProtISOLangByCode3IdxKey newProtByCode3IdxKey();
 
 	/**
-	 *	Allocate a protected Code2Idx key over public ISOLang instances.
+	 *	Allocate a public Code3Idx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFSecPubISOLangByCode3IdxKey asPublic(ICFSecProtISOLangByCode3IdxKey src);
+
+	/**
+	 *	Allocate a protected Code2Idx key over protected ISOLang instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFSecProtISOLangByCode2IdxKey newProtByCode2IdxKey();
+
+	/**
+	 *	Allocate a public Code2Idx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFSecPubISOLangByCode2IdxKey asPublic(ICFSecProtISOLangByCode2IdxKey src);
 
 	/**
 	 *	Allocate a protected ISOLang interface implementation.
@@ -76,10 +98,24 @@ extends ICFSecPubISOLangFactory
 	public ICFSecProtISOLang newProtRec();
 
 	/**
+	 *	Allocate a public ISOLang interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFSecPubISOLang asPublic(ICFSecProtISOLang src);
+
+	/**
 	 *	Allocate a protected ISOLang history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFSecProtISOLangH newProtHRec();
+
+	/**
+	 *	Allocate a public ISOLang history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFSecPubISOLangH asPublic(ICFSecProtISOLangH src);
 
 }

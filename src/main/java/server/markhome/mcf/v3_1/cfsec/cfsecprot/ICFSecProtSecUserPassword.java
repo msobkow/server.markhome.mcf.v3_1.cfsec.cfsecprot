@@ -35,8 +35,9 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
-import server.markhome.mcf.v3_1.cflib.xml.CFLibXmlUtil;
-//import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 
 /**
  *	ICFSecProtSecUserPassword persistence instances have CodeVis Protected, meaning that any only user interfaces and application code specific to the defining schema can access it.
@@ -51,8 +52,8 @@ public interface ICFSecProtSecUserPassword
 
 	public int getClassCode();
 
-	public CFLibDbKeyHash256 getProtPKey();
-	public void setProtPKey(CFLibDbKeyHash256 requiredSecUserId);
+	public CFLibDbKeyHash256 getPKey();
+	public void setPKey(CFLibDbKeyHash256 requiredSecUserId);
 	
 	public ICFSecProtSecUser getRequiredContainerUser();
 	public void setRequiredContainerUser(ICFSecProtSecUser argObj);
@@ -73,9 +74,9 @@ public interface ICFSecProtSecUserPassword
 	public int compareTo( Object obj );
 
 	public void set( ICFSecProtSecUserPassword src );
-	public void setProtSecUserPassword( ICFSecProtSecUserPassword src );
+	public void setSecUserPassword( ICFSecProtSecUserPassword src );
 	public void set( ICFSecProtSecUserPasswordH src );
-	public void setProtSecUserPassword( ICFSecProtSecUserPasswordH src );
+	public void setSecUserPassword( ICFSecProtSecUserPasswordH src );
 
 	public String getXmlAttrFragment();
 

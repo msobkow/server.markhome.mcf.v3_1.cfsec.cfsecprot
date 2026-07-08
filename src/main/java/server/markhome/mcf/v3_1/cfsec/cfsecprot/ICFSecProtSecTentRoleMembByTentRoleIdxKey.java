@@ -1,4 +1,4 @@
-// Description: Java 25 protected interface for a SecTentRoleMemb by TentRoleIdx index key object
+// Description: Java 25 protlic interface for a SecTentRoleMemb by TentRoleIdx index key object
 
 /*
  *	server.markhome.mcf.CFSec

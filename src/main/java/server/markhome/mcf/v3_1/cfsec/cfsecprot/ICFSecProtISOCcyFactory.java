@@ -39,12 +39,13 @@ import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
+import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 
 /*
  *	ICFSecProtISOCcyFactory protected interface for ISOCcy
  */
-public interface ICFSecProtISOCcyFactory
-extends ICFSecPubISOCcyFactory
+public interface ICFSecProtISOCcyFactory extends ICFSecPubISOCcyFactory
 {
 
 	/**
@@ -55,18 +56,39 @@ extends ICFSecPubISOCcyFactory
 	ICFSecProtISOCcyHPKey newProtHPKey();
 
 	/**
-	 *	Allocate a protected CcyCdIdx key over public ISOCcy instances.
+	 *	Allocate a public primary history key for ISOCcy instances from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	ICFSecPubISOCcyHPKey asPublic(ICFSecProtISOCcyHPKey src);
+
+	/**
+	 *	Allocate a protected CcyCdIdx key over protected ISOCcy instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFSecProtISOCcyByCcyCdIdxKey newProtByCcyCdIdxKey();
 
 	/**
-	 *	Allocate a protected CcyNmIdx key over public ISOCcy instances.
+	 *	Allocate a public CcyCdIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFSecPubISOCcyByCcyCdIdxKey asPublic(ICFSecProtISOCcyByCcyCdIdxKey src);
+
+	/**
+	 *	Allocate a protected CcyNmIdx key over protected ISOCcy instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFSecProtISOCcyByCcyNmIdxKey newProtByCcyNmIdxKey();
+
+	/**
+	 *	Allocate a public CcyNmIdx key from a protected instance.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFSecPubISOCcyByCcyNmIdxKey asPublic(ICFSecProtISOCcyByCcyNmIdxKey src);
 
 	/**
 	 *	Allocate a protected ISOCcy interface implementation.
@@ -76,10 +98,24 @@ extends ICFSecPubISOCcyFactory
 	public ICFSecProtISOCcy newProtRec();
 
 	/**
+	 *	Allocate a public ISOCcy interface from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFSecPubISOCcy asPublic(ICFSecProtISOCcy src);
+
+	/**
 	 *	Allocate a protected ISOCcy history interface implementation.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFSecProtISOCcyH newProtHRec();
+
+	/**
+	 *	Allocate a public ISOCcy history interface implementation from a protected interface.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFSecPubISOCcyH asPublic(ICFSecProtISOCcyH src);
 
 }

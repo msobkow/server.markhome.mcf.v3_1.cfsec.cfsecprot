@@ -1,4 +1,4 @@
-// Description: Java 25 protected inteface for a SecTentRoleMemb primary key object.
+// Description: Java 25 protlic inteface for a SecTentRoleMemb primary key object.
 
 /*
  *	server.markhome.mcf.CFSec
@@ -38,7 +38,7 @@ import server.markhome.mcf.v3_1.cflib.dbutil.*;
 import server.markhome.mcf.v3_1.cflib.xml.CFLibXmlUtil;
 
 /**
- *	ICFSecProtSecTentRoleMembPKey protected primary key interface for SecTentRoleMemb has CodeVis Protected, meaning that any only user interfaces and application code specific to the defining schema can access it.
+ *	ICFSecProtSecTentRoleMembPKey protlic primary key interface for SecTentRoleMemb has CodeVis Protected, meaning that any only user interfaces and application code specific to the defining schema can access it.
  *		requiredSecTentRoleId	Required object attribute SecTentRoleId.
  *		requiredLoginId	Required object attribute LoginId.
  */
