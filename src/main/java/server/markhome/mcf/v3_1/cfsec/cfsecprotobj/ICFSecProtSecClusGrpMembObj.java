@@ -215,34 +215,6 @@ public interface ICFSecProtSecClusGrpMembObj
 	void setIsNew( boolean value );
 
 	/**
-	 *	Get the required ICFSecProtSecClusGrpObj instance referenced by the Group key.
-	 *
-	 *	@return	The required ICFSecProtSecClusGrpObj instance referenced by the Group key.
-	 */
-	ICFSecProtSecClusGrpObj getRequiredContainerGroup();
-
-	/**
-	 *	Get the required ICFSecProtSecClusGrpObj instance referenced by the Group key.
-	 *
-	 *	@return	The required ICFSecProtSecClusGrpObj instance referenced by the Group key.
-	 */
-	ICFSecProtSecClusGrpObj getRequiredContainerGroup( boolean forceRead );
-
-	/**
-	 *	Get the required ICFSecProtSecUserObj instance referenced by the User key.
-	 *
-	 *	@return	The required ICFSecProtSecUserObj instance referenced by the User key.
-	 */
-	ICFSecProtSecUserObj getRequiredParentUser();
-
-	/**
-	 *	Get the required ICFSecProtSecUserObj instance referenced by the User key.
-	 *
-	 *	@return	The required ICFSecProtSecUserObj instance referenced by the User key.
-	 */
-	ICFSecProtSecUserObj getRequiredParentUser( boolean forceRead );
-
-	/**
 	 *	Get the required CFLibDbKeyHash256 attribute SecClusGrpId.
 	 *
 	 *	@return	The required CFLibDbKeyHash256 attribute SecClusGrpId.

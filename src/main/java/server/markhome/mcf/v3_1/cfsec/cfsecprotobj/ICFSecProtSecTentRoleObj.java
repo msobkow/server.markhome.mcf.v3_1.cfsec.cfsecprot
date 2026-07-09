@@ -215,48 +215,6 @@ public interface ICFSecProtSecTentRoleObj
 	void setIsNew( boolean value );
 
 	/**
-	 *	Get the required ICFSecProtTenantObj instance referenced by the Tenant key.
-	 *
-	 *	@return	The required ICFSecProtTenantObj instance referenced by the Tenant key.
-	 */
-	ICFSecProtTenantObj getRequiredOwnerTenant();
-
-	/**
-	 *	Get the required ICFSecProtTenantObj instance referenced by the Tenant key.
-	 *
-	 *	@return	The required ICFSecProtTenantObj instance referenced by the Tenant key.
-	 */
-	ICFSecProtTenantObj getRequiredOwnerTenant( boolean forceRead );
-
-	/**
-	 *	Get the required ICFSecProtSecSysGrpObj instance referenced by the SysRole key.
-	 *
-	 *	@return	The required ICFSecProtSecSysGrpObj instance referenced by the SysRole key.
-	 */
-	ICFSecProtSecSysGrpObj getRequiredContainerSysRole();
-
-	/**
-	 *	Get the required ICFSecProtSecSysGrpObj instance referenced by the SysRole key.
-	 *
-	 *	@return	The required ICFSecProtSecSysGrpObj instance referenced by the SysRole key.
-	 */
-	ICFSecProtSecSysGrpObj getRequiredContainerSysRole( boolean forceRead );
-
-	/**
-	 *	Get the array of optional ICFSecProtSecTentRoleMembObj array of instances referenced by the MembByRole key.
-	 *
-	 *	@return	The optional ICFSecProtSecTentRoleMembObj[] array of instances referenced by the MembByRole key.
-	 */
-	List<ICFSecProtSecTentRoleMembObj> getOptionalChildrenMembByRole();
-
-	/**
-	 *	Get the array of optional ICFSecProtSecTentRoleMembObj array of instances referenced by the MembByRole key.
-	 *
-	 *	@return	The optional ICFSecProtSecTentRoleMembObj[] array of instances referenced by the MembByRole key.
-	 */
-	List<ICFSecProtSecTentRoleMembObj> getOptionalChildrenMembByRole( boolean forceRead );
-
-	/**
 	 *	Get the required CFLibDbKeyHash256 attribute SecTentRoleId.
 	 *
 	 *	@return	The required CFLibDbKeyHash256 attribute SecTentRoleId.

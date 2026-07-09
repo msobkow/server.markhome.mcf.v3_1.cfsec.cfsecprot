@@ -215,34 +215,6 @@ public interface ICFSecProtSecSysRoleObj
 	void setIsNew( boolean value );
 
 	/**
-	 *	Get the array of optional ICFSecProtSecSysRoleEnablesObj array of instances referenced by the EnabledByRole key.
-	 *
-	 *	@return	The optional ICFSecProtSecSysRoleEnablesObj[] array of instances referenced by the EnabledByRole key.
-	 */
-	List<ICFSecProtSecSysRoleEnablesObj> getOptionalComponentsEnabledByRole();
-
-	/**
-	 *	Get the array of optional ICFSecProtSecSysRoleEnablesObj array of instances referenced by the EnabledByRole key.
-	 *
-	 *	@return	The optional ICFSecProtSecSysRoleEnablesObj[] array of instances referenced by the EnabledByRole key.
-	 */
-	List<ICFSecProtSecSysRoleEnablesObj> getOptionalComponentsEnabledByRole( boolean forceRead );
-
-	/**
-	 *	Get the array of optional ICFSecProtSecSysRoleMembObj array of instances referenced by the MembByRole key.
-	 *
-	 *	@return	The optional ICFSecProtSecSysRoleMembObj[] array of instances referenced by the MembByRole key.
-	 */
-	List<ICFSecProtSecSysRoleMembObj> getOptionalChildrenMembByRole();
-
-	/**
-	 *	Get the array of optional ICFSecProtSecSysRoleMembObj array of instances referenced by the MembByRole key.
-	 *
-	 *	@return	The optional ICFSecProtSecSysRoleMembObj[] array of instances referenced by the MembByRole key.
-	 */
-	List<ICFSecProtSecSysRoleMembObj> getOptionalChildrenMembByRole( boolean forceRead );
-
-	/**
 	 *	Get the required CFLibDbKeyHash256 attribute SecSysRoleId.
 	 *
 	 *	@return	The required CFLibDbKeyHash256 attribute SecSysRoleId.

@@ -215,34 +215,6 @@ public interface ICFSecProtSecSysRoleMembObj
 	void setIsNew( boolean value );
 
 	/**
-	 *	Get the required ICFSecProtSecSysRoleObj instance referenced by the SysRole key.
-	 *
-	 *	@return	The required ICFSecProtSecSysRoleObj instance referenced by the SysRole key.
-	 */
-	ICFSecProtSecSysRoleObj getRequiredContainerSysRole();
-
-	/**
-	 *	Get the required ICFSecProtSecSysRoleObj instance referenced by the SysRole key.
-	 *
-	 *	@return	The required ICFSecProtSecSysRoleObj instance referenced by the SysRole key.
-	 */
-	ICFSecProtSecSysRoleObj getRequiredContainerSysRole( boolean forceRead );
-
-	/**
-	 *	Get the required ICFSecProtSecUserObj instance referenced by the User key.
-	 *
-	 *	@return	The required ICFSecProtSecUserObj instance referenced by the User key.
-	 */
-	ICFSecProtSecUserObj getRequiredParentUser();
-
-	/**
-	 *	Get the required ICFSecProtSecUserObj instance referenced by the User key.
-	 *
-	 *	@return	The required ICFSecProtSecUserObj instance referenced by the User key.
-	 */
-	ICFSecProtSecUserObj getRequiredParentUser( boolean forceRead );
-
-	/**
 	 *	Get the required CFLibDbKeyHash256 attribute SecSysRoleId.
 	 *
 	 *	@return	The required CFLibDbKeyHash256 attribute SecSysRoleId.

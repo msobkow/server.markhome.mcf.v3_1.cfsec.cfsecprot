@@ -229,34 +229,6 @@ public interface ICFSecProtTenantObj
 	ICFSecProtClusterObj getRequiredContainerCluster( boolean forceRead );
 
 	/**
-	 *	Get the array of optional ICFSecProtSecTentGrpObj array of instances referenced by the SecGroup key.
-	 *
-	 *	@return	The optional ICFSecProtSecTentGrpObj[] array of instances referenced by the SecGroup key.
-	 */
-	List<ICFSecProtSecTentGrpObj> getOptionalComponentsSecGroup();
-
-	/**
-	 *	Get the array of optional ICFSecProtSecTentGrpObj array of instances referenced by the SecGroup key.
-	 *
-	 *	@return	The optional ICFSecProtSecTentGrpObj[] array of instances referenced by the SecGroup key.
-	 */
-	List<ICFSecProtSecTentGrpObj> getOptionalComponentsSecGroup( boolean forceRead );
-
-	/**
-	 *	Get the array of optional ICFSecProtSecTentRoleObj array of instances referenced by the SecRole key.
-	 *
-	 *	@return	The optional ICFSecProtSecTentRoleObj[] array of instances referenced by the SecRole key.
-	 */
-	List<ICFSecProtSecTentRoleObj> getOptionalComponentsSecRole();
-
-	/**
-	 *	Get the array of optional ICFSecProtSecTentRoleObj array of instances referenced by the SecRole key.
-	 *
-	 *	@return	The optional ICFSecProtSecTentRoleObj[] array of instances referenced by the SecRole key.
-	 */
-	List<ICFSecProtSecTentRoleObj> getOptionalComponentsSecRole( boolean forceRead );
-
-	/**
 	 *	Get the required CFLibDbKeyHash256 attribute Id.
 	 *
 	 *	@return	The required CFLibDbKeyHash256 attribute Id.

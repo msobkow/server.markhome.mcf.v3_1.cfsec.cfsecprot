@@ -229,34 +229,6 @@ public interface ICFSecProtClusterObj
 	List<ICFSecProtTenantObj> getOptionalComponentsTenant( boolean forceRead );
 
 	/**
-	 *	Get the array of optional ICFSecProtSecClusGrpObj array of instances referenced by the SecGroup key.
-	 *
-	 *	@return	The optional ICFSecProtSecClusGrpObj[] array of instances referenced by the SecGroup key.
-	 */
-	List<ICFSecProtSecClusGrpObj> getOptionalComponentsSecGroup();
-
-	/**
-	 *	Get the array of optional ICFSecProtSecClusGrpObj array of instances referenced by the SecGroup key.
-	 *
-	 *	@return	The optional ICFSecProtSecClusGrpObj[] array of instances referenced by the SecGroup key.
-	 */
-	List<ICFSecProtSecClusGrpObj> getOptionalComponentsSecGroup( boolean forceRead );
-
-	/**
-	 *	Get the array of optional ICFSecProtSecClusRoleObj array of instances referenced by the SecRole key.
-	 *
-	 *	@return	The optional ICFSecProtSecClusRoleObj[] array of instances referenced by the SecRole key.
-	 */
-	List<ICFSecProtSecClusRoleObj> getOptionalComponentsSecRole();
-
-	/**
-	 *	Get the array of optional ICFSecProtSecClusRoleObj array of instances referenced by the SecRole key.
-	 *
-	 *	@return	The optional ICFSecProtSecClusRoleObj[] array of instances referenced by the SecRole key.
-	 */
-	List<ICFSecProtSecClusRoleObj> getOptionalComponentsSecRole( boolean forceRead );
-
-	/**
 	 *	Get the array of optional ICFSecProtSysClusterObj array of instances referenced by the SysCluster key.
 	 *
 	 *	@return	The optional ICFSecProtSysClusterObj[] array of instances referenced by the SysCluster key.

@@ -215,48 +215,6 @@ public interface ICFSecProtSecTentGrpObj
 	void setIsNew( boolean value );
 
 	/**
-	 *	Get the required ICFSecProtTenantObj instance referenced by the Tenant key.
-	 *
-	 *	@return	The required ICFSecProtTenantObj instance referenced by the Tenant key.
-	 */
-	ICFSecProtTenantObj getRequiredOwnerTenant();
-
-	/**
-	 *	Get the required ICFSecProtTenantObj instance referenced by the Tenant key.
-	 *
-	 *	@return	The required ICFSecProtTenantObj instance referenced by the Tenant key.
-	 */
-	ICFSecProtTenantObj getRequiredOwnerTenant( boolean forceRead );
-
-	/**
-	 *	Get the required ICFSecProtSecSysGrpObj instance referenced by the SysGrp key.
-	 *
-	 *	@return	The required ICFSecProtSecSysGrpObj instance referenced by the SysGrp key.
-	 */
-	ICFSecProtSecSysGrpObj getRequiredContainerSysGrp();
-
-	/**
-	 *	Get the required ICFSecProtSecSysGrpObj instance referenced by the SysGrp key.
-	 *
-	 *	@return	The required ICFSecProtSecSysGrpObj instance referenced by the SysGrp key.
-	 */
-	ICFSecProtSecSysGrpObj getRequiredContainerSysGrp( boolean forceRead );
-
-	/**
-	 *	Get the array of optional ICFSecProtSecTentGrpMembObj array of instances referenced by the MembByGrp key.
-	 *
-	 *	@return	The optional ICFSecProtSecTentGrpMembObj[] array of instances referenced by the MembByGrp key.
-	 */
-	List<ICFSecProtSecTentGrpMembObj> getOptionalChildrenMembByGrp();
-
-	/**
-	 *	Get the array of optional ICFSecProtSecTentGrpMembObj array of instances referenced by the MembByGrp key.
-	 *
-	 *	@return	The optional ICFSecProtSecTentGrpMembObj[] array of instances referenced by the MembByGrp key.
-	 */
-	List<ICFSecProtSecTentGrpMembObj> getOptionalChildrenMembByGrp( boolean forceRead );
-
-	/**
 	 *	Get the required CFLibDbKeyHash256 attribute SecTentGrpId.
 	 *
 	 *	@return	The required CFLibDbKeyHash256 attribute SecTentGrpId.

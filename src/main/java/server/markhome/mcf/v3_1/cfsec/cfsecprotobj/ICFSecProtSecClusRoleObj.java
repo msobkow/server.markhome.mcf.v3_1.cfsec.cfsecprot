@@ -215,48 +215,6 @@ public interface ICFSecProtSecClusRoleObj
 	void setIsNew( boolean value );
 
 	/**
-	 *	Get the required ICFSecProtClusterObj instance referenced by the Cluster key.
-	 *
-	 *	@return	The required ICFSecProtClusterObj instance referenced by the Cluster key.
-	 */
-	ICFSecProtClusterObj getRequiredOwnerCluster();
-
-	/**
-	 *	Get the required ICFSecProtClusterObj instance referenced by the Cluster key.
-	 *
-	 *	@return	The required ICFSecProtClusterObj instance referenced by the Cluster key.
-	 */
-	ICFSecProtClusterObj getRequiredOwnerCluster( boolean forceRead );
-
-	/**
-	 *	Get the required ICFSecProtSecSysGrpObj instance referenced by the SysRole key.
-	 *
-	 *	@return	The required ICFSecProtSecSysGrpObj instance referenced by the SysRole key.
-	 */
-	ICFSecProtSecSysGrpObj getRequiredContainerSysRole();
-
-	/**
-	 *	Get the required ICFSecProtSecSysGrpObj instance referenced by the SysRole key.
-	 *
-	 *	@return	The required ICFSecProtSecSysGrpObj instance referenced by the SysRole key.
-	 */
-	ICFSecProtSecSysGrpObj getRequiredContainerSysRole( boolean forceRead );
-
-	/**
-	 *	Get the array of optional ICFSecProtSecClusRoleMembObj array of instances referenced by the MembByGrp key.
-	 *
-	 *	@return	The optional ICFSecProtSecClusRoleMembObj[] array of instances referenced by the MembByGrp key.
-	 */
-	List<ICFSecProtSecClusRoleMembObj> getOptionalChildrenMembByGrp();
-
-	/**
-	 *	Get the array of optional ICFSecProtSecClusRoleMembObj array of instances referenced by the MembByGrp key.
-	 *
-	 *	@return	The optional ICFSecProtSecClusRoleMembObj[] array of instances referenced by the MembByGrp key.
-	 */
-	List<ICFSecProtSecClusRoleMembObj> getOptionalChildrenMembByGrp( boolean forceRead );
-
-	/**
 	 *	Get the required CFLibDbKeyHash256 attribute SecClusRoleId.
 	 *
 	 *	@return	The required CFLibDbKeyHash256 attribute SecClusRoleId.

@@ -215,48 +215,6 @@ public interface ICFSecProtSecClusGrpObj
 	void setIsNew( boolean value );
 
 	/**
-	 *	Get the required ICFSecProtClusterObj instance referenced by the Cluster key.
-	 *
-	 *	@return	The required ICFSecProtClusterObj instance referenced by the Cluster key.
-	 */
-	ICFSecProtClusterObj getRequiredOwnerCluster();
-
-	/**
-	 *	Get the required ICFSecProtClusterObj instance referenced by the Cluster key.
-	 *
-	 *	@return	The required ICFSecProtClusterObj instance referenced by the Cluster key.
-	 */
-	ICFSecProtClusterObj getRequiredOwnerCluster( boolean forceRead );
-
-	/**
-	 *	Get the required ICFSecProtSecSysGrpObj instance referenced by the SysGrp key.
-	 *
-	 *	@return	The required ICFSecProtSecSysGrpObj instance referenced by the SysGrp key.
-	 */
-	ICFSecProtSecSysGrpObj getRequiredContainerSysGrp();
-
-	/**
-	 *	Get the required ICFSecProtSecSysGrpObj instance referenced by the SysGrp key.
-	 *
-	 *	@return	The required ICFSecProtSecSysGrpObj instance referenced by the SysGrp key.
-	 */
-	ICFSecProtSecSysGrpObj getRequiredContainerSysGrp( boolean forceRead );
-
-	/**
-	 *	Get the array of optional ICFSecProtSecClusGrpMembObj array of instances referenced by the MembByGrp key.
-	 *
-	 *	@return	The optional ICFSecProtSecClusGrpMembObj[] array of instances referenced by the MembByGrp key.
-	 */
-	List<ICFSecProtSecClusGrpMembObj> getOptionalChildrenMembByGrp();
-
-	/**
-	 *	Get the array of optional ICFSecProtSecClusGrpMembObj array of instances referenced by the MembByGrp key.
-	 *
-	 *	@return	The optional ICFSecProtSecClusGrpMembObj[] array of instances referenced by the MembByGrp key.
-	 */
-	List<ICFSecProtSecClusGrpMembObj> getOptionalChildrenMembByGrp( boolean forceRead );
-
-	/**
 	 *	Get the required CFLibDbKeyHash256 attribute SecClusGrpId.
 	 *
 	 *	@return	The required CFLibDbKeyHash256 attribute SecClusGrpId.

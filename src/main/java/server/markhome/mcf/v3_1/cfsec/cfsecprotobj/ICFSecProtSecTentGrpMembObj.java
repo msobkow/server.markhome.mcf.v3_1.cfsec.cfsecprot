@@ -215,34 +215,6 @@ public interface ICFSecProtSecTentGrpMembObj
 	void setIsNew( boolean value );
 
 	/**
-	 *	Get the required ICFSecProtSecTentGrpObj instance referenced by the Group key.
-	 *
-	 *	@return	The required ICFSecProtSecTentGrpObj instance referenced by the Group key.
-	 */
-	ICFSecProtSecTentGrpObj getRequiredContainerGroup();
-
-	/**
-	 *	Get the required ICFSecProtSecTentGrpObj instance referenced by the Group key.
-	 *
-	 *	@return	The required ICFSecProtSecTentGrpObj instance referenced by the Group key.
-	 */
-	ICFSecProtSecTentGrpObj getRequiredContainerGroup( boolean forceRead );
-
-	/**
-	 *	Get the required ICFSecProtSecUserObj instance referenced by the User key.
-	 *
-	 *	@return	The required ICFSecProtSecUserObj instance referenced by the User key.
-	 */
-	ICFSecProtSecUserObj getRequiredParentUser();
-
-	/**
-	 *	Get the required ICFSecProtSecUserObj instance referenced by the User key.
-	 *
-	 *	@return	The required ICFSecProtSecUserObj instance referenced by the User key.
-	 */
-	ICFSecProtSecUserObj getRequiredParentUser( boolean forceRead );
-
-	/**
 	 *	Get the required CFLibDbKeyHash256 attribute SecTentGrpId.
 	 *
 	 *	@return	The required CFLibDbKeyHash256 attribute SecTentGrpId.
