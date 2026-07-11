@@ -74,6 +74,7 @@ public interface ICFSecProtTableInfo
 	public ICFSecProtTableInfo getOptionalParentSuperRef();
 	public List<ICFSecProtTableInfo> getOptionalChildrenSubRefs();
 	public void setOptionalParentSuperRef(ICFSecProtTableInfo argObj);
+	public void setOptionalParentSuperRef(ICFSecPubTableInfo argObj);
 	public void setOptionalParentSuperRef(String argSuperName);
 	public String getRequiredSchemaName();
 	public void setRequiredSchemaName( String value );
