@@ -65,6 +65,10 @@ public interface ICFSecProtSecSessionH
 
 	public CFLibDbKeyHash256 getRequiredSecUserId();
 	public void setRequiredSecUserId( CFLibDbKeyHash256 value );
+	public LocalDateTime getRequiredStart();
+	public void setRequiredStart( LocalDateTime value );
+	public LocalDateTime getOptionalFinish();
+	public void setOptionalFinish( LocalDateTime value );
 	public CFLibDbKeyHash256 getOptionalSecProxyId();
 	public void setOptionalSecProxyId( CFLibDbKeyHash256 value );
 	@Override

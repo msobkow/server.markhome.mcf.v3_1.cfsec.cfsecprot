@@ -183,13 +183,38 @@ public interface ICFSecProtISOCcyTableObj
 	ICFSecProtISOCcyObj readISOCcyByCcyCdIdx(String ISOCode,
 		boolean forceRead );
 
+	/**
+	 *	Get the ICFSecProtISOCcyObj instance for the unique CcyNmIdx key.
+	 *
+	 *	@param	Name	The ISOCcy key attribute of the instance generating the id.
+	 *
+	 *	@return	ICFSecProtISOCcyObj cached instance for the unique CcyNmIdx key, or
+	 *		null if no such instance exists.
+	 */
+	ICFSecProtISOCcyObj readISOCcyByCcyNmIdx(String Name );
+
+	/**
+	 *	Get the ICFSecProtISOCcyObj instance for the unique CcyNmIdx key.
+	 *
+	 *	@param	Name	The ISOCcy key attribute of the instance generating the id.
+	 *
+	 *	@return	ICFSecProtISOCcyObj refreshed instance for the unique CcyNmIdx key, or
+	 *		null if no such instance exists.
+	 */
+	ICFSecProtISOCcyObj readISOCcyByCcyNmIdx(String Name,
+		boolean forceRead );
+
 	ICFSecProtISOCcyObj readCachedISOCcyByIdIdx( short ISOCcyId );
 
 	ICFSecProtISOCcyObj readCachedISOCcyByCcyCdIdx( String ISOCode );
 
+	ICFSecProtISOCcyObj readCachedISOCcyByCcyNmIdx( String Name );
+
 	void deepDisposeISOCcyByIdIdx( short ISOCcyId );
 
 	void deepDisposeISOCcyByCcyCdIdx( String ISOCode );
+
+	void deepDisposeISOCcyByCcyNmIdx( String Name );
 
 	/**
 	 *	Internal use only.
@@ -214,4 +239,11 @@ public interface ICFSecProtISOCcyTableObj
 	 *	@param	ISOCode	The ISOCcy key attribute of the instance generating the id.
 	 */
 	void deleteISOCcyByCcyCdIdx(String ISOCode );
+
+	/**
+	 *	Internal use only.
+	 *
+	 *	@param	Name	The ISOCcy key attribute of the instance generating the id.
+	 */
+	void deleteISOCcyByCcyNmIdx(String Name );
 }

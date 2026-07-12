@@ -47,6 +47,7 @@ public interface ICFSecProtSecUserPassword
 {
 	public static final String S_SECUSERID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
 	public static final CFLibDbKeyHash256 SECUSERID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_SECUSERID_INIT_VALUE );
+	public static final LocalDateTime PWSETSTAMP_INIT_VALUE = CFLibXmlUtil.parseTimestamp("2020-01-01T00:00:00");
 	public final static int CLASS_CODE = 0xa00a;
 	public final static String S_CLASS_CODE = "a00a";
 
@@ -62,6 +63,8 @@ public interface ICFSecProtSecUserPassword
 	public int getRequiredRevision();
 	public void setRequiredRevision( int value );
 
+	public LocalDateTime getRequiredPWSetStamp();
+	public void setRequiredPWSetStamp( LocalDateTime value );
 	@Override
 	public boolean equals( Object obj );
 	

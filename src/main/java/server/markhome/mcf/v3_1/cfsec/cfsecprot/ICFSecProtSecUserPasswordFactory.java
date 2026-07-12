@@ -56,6 +56,13 @@ public interface ICFSecProtSecUserPasswordFactory
 	ICFSecProtSecUserPasswordHPKey newProtHPKey();
 
 	/**
+	 *	Allocate a protected SetStampIdx key over protected SecUserPassword instances.
+	 *
+	 *	@return	The new instance.
+	 */
+	public ICFSecProtSecUserPasswordBySetStampIdxKey newProtBySetStampIdxKey();
+
+	/**
 	 *	Allocate a protected SecUserPassword interface implementation.
 	 *
 	 *	@return	The new instance.

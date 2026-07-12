@@ -195,6 +195,13 @@ public interface ICFSecProtSecUserPasswordObj
 	CFLibDbKeyHash256 getRequiredSecUserId();
 
 	/**
+	 *	Get the required LocalDateTime attribute PWSetStamp.
+	 *
+	 *	@return	The required LocalDateTime attribute PWSetStamp.
+	 */
+	LocalDateTime getRequiredPWSetStamp();
+
+	/**
 	 *	Internal use only.
 	 */
 	void copyPKeyToRec();

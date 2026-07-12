@@ -148,6 +148,20 @@ public interface ICFSecProtISOCtryEditObj
 	 */
 	void setRequiredISOCode(String value);
 
+	/**
+	 *	Get the required String attribute Name.
+	 *
+	 *	@return	The required String attribute Name.
+	 */
+	String getRequiredName();
+
+	/**
+	 *	Set the required String attribute Name.
+	 *
+	 *	@param value The required String attribute Name value to be applied.
+	 */
+	void setRequiredName(String value);
+
 	public void copyRecToOrig();
 	public void copyOrigToRec();
 

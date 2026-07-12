@@ -162,9 +162,34 @@ public interface ICFSecProtSecUserPasswordTableObj
 	ICFSecProtSecUserPasswordObj readSecUserPasswordByIdIdx( CFLibDbKeyHash256 SecUserId,
 		boolean forceRead );
 
+	/**
+	 *	Get the map of List<ICFSecProtSecUserPasswordObj> instances sorted by their primary keys for the duplicate SetStampIdx key.
+	 *
+	 *	@param	PWSetStamp	The SecUserPassword key attribute of the instance generating the id.
+	 *
+	 *	@return	List of List<ICFSecProtSecUserPasswordObj> cached instances sorted by their primary keys for the duplicate SetStampIdx key,
+	 *		which may be an empty set.
+	 */
+	List<ICFSecProtSecUserPasswordObj> readSecUserPasswordBySetStampIdx( LocalDateTime PWSetStamp );
+
+	/**
+	 *	Get the map of List<ICFSecProtSecUserPasswordObj> instances sorted by their primary keys for the duplicate SetStampIdx key.
+	 *
+	 *	@param	PWSetStamp	The SecUserPassword key attribute of the instance generating the id.
+	 *
+	 *	@return	List of List<ICFSecProtSecUserPasswordObj> cached instances sorted by their primary keys for the duplicate SetStampIdx key,
+	 *		which may be an empty set.
+	 */
+	List<ICFSecProtSecUserPasswordObj> readSecUserPasswordBySetStampIdx( LocalDateTime PWSetStamp,
+		boolean forceRead );
+
 	ICFSecProtSecUserPasswordObj readCachedSecUserPasswordByIdIdx( CFLibDbKeyHash256 SecUserId );
 
+	List<List<ICFSecProtSecUserPasswordObj>> readCachedSecUserPasswordBySetStampIdx( LocalDateTime PWSetStamp );
+
 	void deepDisposeSecUserPasswordByIdIdx( CFLibDbKeyHash256 SecUserId );
+
+	void deepDisposeSecUserPasswordBySetStampIdx( LocalDateTime PWSetStamp );
 
 	/**
 	 *	Internal use only.
@@ -182,4 +207,11 @@ public interface ICFSecProtSecUserPasswordTableObj
 	 *	@param	SecUserId	The SecUserPassword key attribute of the instance generating the id.
 	 */
 	void deleteSecUserPasswordByIdIdx( CFLibDbKeyHash256 SecUserId );
+
+	/**
+	 *	Internal use only.
+	 *
+	 *	@param	PWSetStamp	The SecUserPassword key attribute of the instance generating the id.
+	 */
+	void deleteSecUserPasswordBySetStampIdx( LocalDateTime PWSetStamp );
 }

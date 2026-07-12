@@ -115,6 +115,149 @@ extends ICFSecPubTableInfoTable
 	 */
 	public void protdeleteTableInfoByIdIdx( ICFSecPubAuthorization Authorization,
 		Integer argKey );
+	/**
+	 *	Delete the TableInfo instances identified by the key TableNameIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	TableName	The TableInfo key attribute of the instance generating the id.
+	 */
+	public void protdeleteTableInfoByTableNameIdx( ICFSecPubAuthorization Authorization,
+		String argTableName );
+
+	/**
+	 *	Delete the TableInfo instances identified by the key TableNameIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteTableInfoByTableNameIdx( ICFSecPubAuthorization Authorization,
+		ICFSecProtTableInfoByTableNameIdxKey argKey );
+	/**
+	 *	Delete the TableInfo instances identified by the key TableNameIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteTableInfoByTableNameIdx( ICFSecPubAuthorization Authorization,
+		ICFSecPubTableInfoByTableNameIdxKey argKey );
+	/**
+	 *	Delete the TableInfo instances identified by the key SuperNameIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	SuperName	The TableInfo key attribute of the instance generating the id.
+	 */
+	public void protdeleteTableInfoBySuperNameIdx( ICFSecPubAuthorization Authorization,
+		String argSuperName );
+
+	/**
+	 *	Delete the TableInfo instances identified by the key SuperNameIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteTableInfoBySuperNameIdx( ICFSecPubAuthorization Authorization,
+		ICFSecProtTableInfoBySuperNameIdxKey argKey );
+	/**
+	 *	Delete the TableInfo instances identified by the key SuperNameIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteTableInfoBySuperNameIdx( ICFSecPubAuthorization Authorization,
+		ICFSecPubTableInfoBySuperNameIdxKey argKey );
+	/**
+	 *	Delete the TableInfo instances identified by the key SchemaNameIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	SchemaName	The TableInfo key attribute of the instance generating the id.
+	 */
+	public void protdeleteTableInfoBySchemaNameIdx( ICFSecPubAuthorization Authorization,
+		String argSchemaName );
+
+	/**
+	 *	Delete the TableInfo instances identified by the key SchemaNameIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteTableInfoBySchemaNameIdx( ICFSecPubAuthorization Authorization,
+		ICFSecProtTableInfoBySchemaNameIdxKey argKey );
+	/**
+	 *	Delete the TableInfo instances identified by the key SchemaNameIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteTableInfoBySchemaNameIdx( ICFSecPubAuthorization Authorization,
+		ICFSecPubTableInfoBySchemaNameIdxKey argKey );
+	/**
+	 *	Delete the TableInfo instances identified by the key SchemaBkCodeIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	SchemaName	The TableInfo key attribute of the instance generating the id.
+	 *
+	 *	@param	BackingClassCode	The TableInfo key attribute of the instance generating the id.
+	 */
+	public void protdeleteTableInfoBySchemaBkCodeIdx( ICFSecPubAuthorization Authorization,
+		String argSchemaName,
+		int argBackingClassCode );
+
+	/**
+	 *	Delete the TableInfo instances identified by the key SchemaBkCodeIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteTableInfoBySchemaBkCodeIdx( ICFSecPubAuthorization Authorization,
+		ICFSecProtTableInfoBySchemaBkCodeIdxKey argKey );
+	/**
+	 *	Delete the TableInfo instances identified by the key SchemaBkCodeIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteTableInfoBySchemaBkCodeIdx( ICFSecPubAuthorization Authorization,
+		ICFSecPubTableInfoBySchemaBkCodeIdxKey argKey );
+	/**
+	 *	Delete the TableInfo instances identified by the key SchemaRTCodeIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	RuntimeClassCode	The TableInfo key attribute of the instance generating the id.
+	 */
+	public void protdeleteTableInfoBySchemaRTCodeIdx( ICFSecPubAuthorization Authorization,
+		int argRuntimeClassCode );
+
+	/**
+	 *	Delete the TableInfo instances identified by the key SchemaRTCodeIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteTableInfoBySchemaRTCodeIdx( ICFSecPubAuthorization Authorization,
+		ICFSecProtTableInfoBySchemaRTCodeIdxKey argKey );
+	/**
+	 *	Delete the TableInfo instances identified by the key SchemaRTCodeIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	argKey	The key identifying the instances to be deleted.
+	 */
+	public void protdeleteTableInfoBySchemaRTCodeIdx( ICFSecPubAuthorization Authorization,
+		ICFSecPubTableInfoBySchemaRTCodeIdxKey argKey );
 
 	/**
 	 *	Delete the instance from the database.
@@ -176,6 +319,72 @@ extends ICFSecPubTableInfoTable
 		int TableInfoId );
 
 	/**
+	 *	Read the derived TableInfo record instance identified by the unique key TableNameIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	TableName	The TableInfo key attribute of the instance generating the id.
+	 *
+	 *	@return The record instance for the specified key, or null if there is
+	 *		no such existing key value.
+	 */
+	public ICFSecProtTableInfo protreadDerivedByTableNameIdx( ICFSecPubAuthorization Authorization,
+		String TableName );
+
+	/**
+	 *	Read an array of the derived TableInfo record instances identified by the duplicate key SuperNameIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	SuperName	The TableInfo key attribute of the instance generating the id.
+	 *
+	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
+	 */
+	public ICFSecProtTableInfo[] protreadDerivedBySuperNameIdx( ICFSecPubAuthorization Authorization,
+		String SuperName );
+
+	/**
+	 *	Read an array of the derived TableInfo record instances identified by the duplicate key SchemaNameIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	SchemaName	The TableInfo key attribute of the instance generating the id.
+	 *
+	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
+	 */
+	public ICFSecProtTableInfo[] protreadDerivedBySchemaNameIdx( ICFSecPubAuthorization Authorization,
+		String SchemaName );
+
+	/**
+	 *	Read the derived TableInfo record instance identified by the unique key SchemaBkCodeIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	SchemaName	The TableInfo key attribute of the instance generating the id.
+	 *
+	 *	@param	BackingClassCode	The TableInfo key attribute of the instance generating the id.
+	 *
+	 *	@return The record instance for the specified key, or null if there is
+	 *		no such existing key value.
+	 */
+	public ICFSecProtTableInfo protreadDerivedBySchemaBkCodeIdx( ICFSecPubAuthorization Authorization,
+		String SchemaName,
+		int BackingClassCode );
+
+	/**
+	 *	Read the derived TableInfo record instance identified by the unique key SchemaRTCodeIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	RuntimeClassCode	The TableInfo key attribute of the instance generating the id.
+	 *
+	 *	@return The record instance for the specified key, or null if there is
+	 *		no such existing key value.
+	 */
+	public ICFSecProtTableInfo protreadDerivedBySchemaRTCodeIdx( ICFSecPubAuthorization Authorization,
+		int RuntimeClassCode );
+
+	/**
 	 *	Read the specific TableInfo record instance identified by the primary key.
 	 *
 	 *	@param	Authorization	The session authorization information.
@@ -228,4 +437,80 @@ extends ICFSecPubTableInfoTable
 	 */
 	public ICFSecProtTableInfo protreadRecByIdIdx( ICFSecPubAuthorization Authorization,
 		int TableInfoId );
+
+	/**
+	 *	Read the specific TableInfo record instance identified by the unique key TableNameIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	TableName	The TableInfo key attribute of the instance generating the id.
+	 *
+	 *	@return The record instance for the specified key, or null if there is
+	 *		no such existing key value.
+	 *
+	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
+	 */
+	public ICFSecProtTableInfo protreadRecByTableNameIdx( ICFSecPubAuthorization Authorization,
+		String TableName );
+
+	/**
+	 *	Read an array of the specific TableInfo record instances identified by the duplicate key SuperNameIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	SuperName	The TableInfo key attribute of the instance generating the id.
+	 *
+	 *	@return An array of derived record instances for the specified key, potentially with 0 elements in the set.
+	 *
+	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
+	 */
+	public ICFSecProtTableInfo[] protreadRecBySuperNameIdx( ICFSecPubAuthorization Authorization,
+		String SuperName );
+
+	/**
+	 *	Read an array of the specific TableInfo record instances identified by the duplicate key SchemaNameIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	SchemaName	The TableInfo key attribute of the instance generating the id.
+	 *
+	 *	@return An array of derived record instances for the specified key, potentially with 0 elements in the set.
+	 *
+	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
+	 */
+	public ICFSecProtTableInfo[] protreadRecBySchemaNameIdx( ICFSecPubAuthorization Authorization,
+		String SchemaName );
+
+	/**
+	 *	Read the specific TableInfo record instance identified by the unique key SchemaBkCodeIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	SchemaName	The TableInfo key attribute of the instance generating the id.
+	 *
+	 *	@param	BackingClassCode	The TableInfo key attribute of the instance generating the id.
+	 *
+	 *	@return The record instance for the specified key, or null if there is
+	 *		no such existing key value.
+	 *
+	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
+	 */
+	public ICFSecProtTableInfo protreadRecBySchemaBkCodeIdx( ICFSecPubAuthorization Authorization,
+		String SchemaName,
+		int BackingClassCode );
+
+	/**
+	 *	Read the specific TableInfo record instance identified by the unique key SchemaRTCodeIdx.
+	 *
+	 *	@param	Authorization	The session authorization information.
+	 *
+	 *	@param	RuntimeClassCode	The TableInfo key attribute of the instance generating the id.
+	 *
+	 *	@return The record instance for the specified key, or null if there is
+	 *		no such existing key value.
+	 *
+	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
+	 */
+	public ICFSecProtTableInfo protreadRecBySchemaRTCodeIdx( ICFSecPubAuthorization Authorization,
+		int RuntimeClassCode );
 }

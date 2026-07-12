@@ -52,6 +52,7 @@ public interface ICFSecProtSecUserPWReset
 	public static final String S_SECUSERID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
 	public static final CFLibDbKeyHash256 SECUSERID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_SECUSERID_INIT_VALUE );
 	public static final String SENTTOEMAILADDR_INIT_VALUE = new String( "" );
+	public final static boolean NEWACCOUNT_INIT_VALUE = false;
 	public final static int CLASS_CODE = 0xa00c;
 	public final static String S_CLASS_CODE = "a00c";
 
@@ -78,6 +79,10 @@ public interface ICFSecProtSecUserPWReset
 
 	public String getRequiredSentToEMailAddr();
 	public void setRequiredSentToEMailAddr( String value );
+	public CFLibUuid6 getRequiredPasswordResetUuid6();
+	public void setRequiredPasswordResetUuid6( CFLibUuid6 value );
+	public boolean getRequiredNewAccount();
+	public void setRequiredNewAccount( boolean value );
 	@Override
 	public boolean equals( Object obj );
 	

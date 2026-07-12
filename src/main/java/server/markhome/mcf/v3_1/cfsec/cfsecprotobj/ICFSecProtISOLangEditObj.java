@@ -155,6 +155,20 @@ public interface ICFSecProtISOLangEditObj
 	 */
 	void setOptionalISO6391Code(String value);
 
+	/**
+	 *	Get the required String attribute EnglishName.
+	 *
+	 *	@return	The required String attribute EnglishName.
+	 */
+	String getRequiredEnglishName();
+
+	/**
+	 *	Set the required String attribute EnglishName.
+	 *
+	 *	@param value The required String attribute EnglishName value to be applied.
+	 */
+	void setRequiredEnglishName(String value);
+
 	public void copyRecToOrig();
 	public void copyOrigToRec();
 

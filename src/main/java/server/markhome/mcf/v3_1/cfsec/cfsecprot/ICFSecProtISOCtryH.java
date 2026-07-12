@@ -74,6 +74,8 @@ public interface ICFSecProtISOCtryH
 
 	public String getRequiredISOCode();
 	public void setRequiredISOCode( String value );
+	public String getRequiredName();
+	public void setRequiredName( String value );
 	@Override
 	public boolean equals( Object obj );
 

@@ -162,9 +162,142 @@ public interface ICFSecProtTableInfoTableObj
 	ICFSecProtTableInfoObj readTableInfoByIdIdx( int TableInfoId,
 		boolean forceRead );
 
+	/**
+	 *	Get the ICFSecProtTableInfoObj instance for the unique TableNameIdx key.
+	 *
+	 *	@param	TableName	The TableInfo key attribute of the instance generating the id.
+	 *
+	 *	@return	ICFSecProtTableInfoObj cached instance for the unique TableNameIdx key, or
+	 *		null if no such instance exists.
+	 */
+	ICFSecProtTableInfoObj readTableInfoByTableNameIdx(String TableName );
+
+	/**
+	 *	Get the ICFSecProtTableInfoObj instance for the unique TableNameIdx key.
+	 *
+	 *	@param	TableName	The TableInfo key attribute of the instance generating the id.
+	 *
+	 *	@return	ICFSecProtTableInfoObj refreshed instance for the unique TableNameIdx key, or
+	 *		null if no such instance exists.
+	 */
+	ICFSecProtTableInfoObj readTableInfoByTableNameIdx(String TableName,
+		boolean forceRead );
+
+	/**
+	 *	Get the map of List<ICFSecProtTableInfoObj> instances sorted by their primary keys for the duplicate SuperNameIdx key.
+	 *
+	 *	@param	SuperName	The TableInfo key attribute of the instance generating the id.
+	 *
+	 *	@return	List of List<ICFSecProtTableInfoObj> cached instances sorted by their primary keys for the duplicate SuperNameIdx key,
+	 *		which may be an empty set.
+	 */
+	List<ICFSecProtTableInfoObj> readTableInfoBySuperNameIdx( String SuperName );
+
+	/**
+	 *	Get the map of List<ICFSecProtTableInfoObj> instances sorted by their primary keys for the duplicate SuperNameIdx key.
+	 *
+	 *	@param	SuperName	The TableInfo key attribute of the instance generating the id.
+	 *
+	 *	@return	List of List<ICFSecProtTableInfoObj> cached instances sorted by their primary keys for the duplicate SuperNameIdx key,
+	 *		which may be an empty set.
+	 */
+	List<ICFSecProtTableInfoObj> readTableInfoBySuperNameIdx( String SuperName,
+		boolean forceRead );
+
+	/**
+	 *	Get the map of List<ICFSecProtTableInfoObj> instances sorted by their primary keys for the duplicate SchemaNameIdx key.
+	 *
+	 *	@param	SchemaName	The TableInfo key attribute of the instance generating the id.
+	 *
+	 *	@return	List of List<ICFSecProtTableInfoObj> cached instances sorted by their primary keys for the duplicate SchemaNameIdx key,
+	 *		which may be an empty set.
+	 */
+	List<ICFSecProtTableInfoObj> readTableInfoBySchemaNameIdx( String SchemaName );
+
+	/**
+	 *	Get the map of List<ICFSecProtTableInfoObj> instances sorted by their primary keys for the duplicate SchemaNameIdx key.
+	 *
+	 *	@param	SchemaName	The TableInfo key attribute of the instance generating the id.
+	 *
+	 *	@return	List of List<ICFSecProtTableInfoObj> cached instances sorted by their primary keys for the duplicate SchemaNameIdx key,
+	 *		which may be an empty set.
+	 */
+	List<ICFSecProtTableInfoObj> readTableInfoBySchemaNameIdx( String SchemaName,
+		boolean forceRead );
+
+	/**
+	 *	Get the ICFSecProtTableInfoObj instance for the unique SchemaBkCodeIdx key.
+	 *
+	 *	@param	SchemaName	The TableInfo key attribute of the instance generating the id.
+	 *
+	 *	@param	BackingClassCode	The TableInfo key attribute of the instance generating the id.
+	 *
+	 *	@return	ICFSecProtTableInfoObj cached instance for the unique SchemaBkCodeIdx key, or
+	 *		null if no such instance exists.
+	 */
+	ICFSecProtTableInfoObj readTableInfoBySchemaBkCodeIdx(String SchemaName,
+		int BackingClassCode );
+
+	/**
+	 *	Get the ICFSecProtTableInfoObj instance for the unique SchemaBkCodeIdx key.
+	 *
+	 *	@param	SchemaName	The TableInfo key attribute of the instance generating the id.
+	 *
+	 *	@param	BackingClassCode	The TableInfo key attribute of the instance generating the id.
+	 *
+	 *	@return	ICFSecProtTableInfoObj refreshed instance for the unique SchemaBkCodeIdx key, or
+	 *		null if no such instance exists.
+	 */
+	ICFSecProtTableInfoObj readTableInfoBySchemaBkCodeIdx(String SchemaName,
+		int BackingClassCode,
+		boolean forceRead );
+
+	/**
+	 *	Get the ICFSecProtTableInfoObj instance for the unique SchemaRTCodeIdx key.
+	 *
+	 *	@param	RuntimeClassCode	The TableInfo key attribute of the instance generating the id.
+	 *
+	 *	@return	ICFSecProtTableInfoObj cached instance for the unique SchemaRTCodeIdx key, or
+	 *		null if no such instance exists.
+	 */
+	ICFSecProtTableInfoObj readTableInfoBySchemaRTCodeIdx(int RuntimeClassCode );
+
+	/**
+	 *	Get the ICFSecProtTableInfoObj instance for the unique SchemaRTCodeIdx key.
+	 *
+	 *	@param	RuntimeClassCode	The TableInfo key attribute of the instance generating the id.
+	 *
+	 *	@return	ICFSecProtTableInfoObj refreshed instance for the unique SchemaRTCodeIdx key, or
+	 *		null if no such instance exists.
+	 */
+	ICFSecProtTableInfoObj readTableInfoBySchemaRTCodeIdx(int RuntimeClassCode,
+		boolean forceRead );
+
 	ICFSecProtTableInfoObj readCachedTableInfoByIdIdx( int TableInfoId );
 
+	ICFSecProtTableInfoObj readCachedTableInfoByTableNameIdx( String TableName );
+
+	List<List<ICFSecProtTableInfoObj>> readCachedTableInfoBySuperNameIdx( String SuperName );
+
+	List<List<ICFSecProtTableInfoObj>> readCachedTableInfoBySchemaNameIdx( String SchemaName );
+
+	ICFSecProtTableInfoObj readCachedTableInfoBySchemaBkCodeIdx( String SchemaName,
+		int BackingClassCode );
+
+	ICFSecProtTableInfoObj readCachedTableInfoBySchemaRTCodeIdx( int RuntimeClassCode );
+
 	void deepDisposeTableInfoByIdIdx( int TableInfoId );
+
+	void deepDisposeTableInfoByTableNameIdx( String TableName );
+
+	void deepDisposeTableInfoBySuperNameIdx( String SuperName );
+
+	void deepDisposeTableInfoBySchemaNameIdx( String SchemaName );
+
+	void deepDisposeTableInfoBySchemaBkCodeIdx( String SchemaName,
+		int BackingClassCode );
+
+	void deepDisposeTableInfoBySchemaRTCodeIdx( int RuntimeClassCode );
 
 	/**
 	 *	Internal use only.
@@ -182,4 +315,42 @@ public interface ICFSecProtTableInfoTableObj
 	 *	@param	TableInfoId	The TableInfo key attribute of the instance generating the id.
 	 */
 	void deleteTableInfoByIdIdx( int TableInfoId );
+
+	/**
+	 *	Internal use only.
+	 *
+	 *	@param	TableName	The TableInfo key attribute of the instance generating the id.
+	 */
+	void deleteTableInfoByTableNameIdx(String TableName );
+
+	/**
+	 *	Internal use only.
+	 *
+	 *	@param	SuperName	The TableInfo key attribute of the instance generating the id.
+	 */
+	void deleteTableInfoBySuperNameIdx( String SuperName );
+
+	/**
+	 *	Internal use only.
+	 *
+	 *	@param	SchemaName	The TableInfo key attribute of the instance generating the id.
+	 */
+	void deleteTableInfoBySchemaNameIdx( String SchemaName );
+
+	/**
+	 *	Internal use only.
+	 *
+	 *	@param	SchemaName	The TableInfo key attribute of the instance generating the id.
+	 *
+	 *	@param	BackingClassCode	The TableInfo key attribute of the instance generating the id.
+	 */
+	void deleteTableInfoBySchemaBkCodeIdx(String SchemaName,
+		int BackingClassCode );
+
+	/**
+	 *	Internal use only.
+	 *
+	 *	@param	RuntimeClassCode	The TableInfo key attribute of the instance generating the id.
+	 */
+	void deleteTableInfoBySchemaRTCodeIdx(int RuntimeClassCode );
 }

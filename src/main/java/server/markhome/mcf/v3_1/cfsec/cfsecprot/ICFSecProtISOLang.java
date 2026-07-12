@@ -53,6 +53,7 @@ public interface ICFSecProtISOLang
 	public static final short ISOLANGID_INIT_VALUE = ICFSecPubISOLang.ISOLANGID_INIT_VALUE;
 	public static final String ISO6392CODE_INIT_VALUE = ICFSecPubISOLang.ISO6392CODE_INIT_VALUE;
 	public static final String ISO6391CODE_INIT_VALUE = ICFSecPubISOLang.ISO6391CODE_INIT_VALUE;
+	public static final String ENGLISHNAME_INIT_VALUE = ICFSecPubISOLang.ENGLISHNAME_INIT_VALUE;
 	public final static int CLASS_CODE = 0xa007;
 	public final static String S_CLASS_CODE = "a007";
 
@@ -80,6 +81,8 @@ public interface ICFSecProtISOLang
 	public void setRequiredISO6392Code( String value );
 	public String getOptionalISO6391Code();
 	public void setOptionalISO6391Code( String value );
+	public String getRequiredEnglishName();
+	public void setRequiredEnglishName( String value );
 	@Override
 	public boolean equals( Object obj );
 	
