@@ -45,8 +45,8 @@ import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
  */
 public interface ICFSecProtSecSysGrp
 {
-	public static final ICFSecProtSchema.SecLevelEnum SECLEVEL_MIN_VALUE = ICFSecProtSchema.SecLevelEnum.System;
-	public static final ICFSecProtSchema.SecLevelEnum SECLEVEL_MAX_VALUE = ICFSecProtSchema.SecLevelEnum.TentRole;
+	public static final ICFSecPubSchema.SecLevelEnum SECLEVEL_MIN_VALUE = ICFSecPubSchema.SecLevelEnum.System;
+	public static final ICFSecPubSchema.SecLevelEnum SECLEVEL_MAX_VALUE = ICFSecPubSchema.SecLevelEnum.TentRole;
 	public static final String S_INIT_CREATED_BY = ICFSecPubSecSysGrp.S_INIT_CREATED_BY;
 	public static final CFLibDbKeyHash256 INIT_CREATED_BY = ICFSecPubSecSysGrp.INIT_CREATED_BY;
 	public static final String S_INIT_UPDATED_BY = ICFSecPubSecSysGrp.S_INIT_UPDATED_BY;

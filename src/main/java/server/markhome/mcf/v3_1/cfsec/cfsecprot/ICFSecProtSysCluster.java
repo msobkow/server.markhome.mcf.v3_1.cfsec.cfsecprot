@@ -65,7 +65,15 @@ public interface ICFSecProtSysCluster
 
 	public ICFSecProtCluster getRequiredContainerCluster();
 	public void setRequiredContainerCluster(ICFSecProtCluster argObj);
-	public void setRequiredContainerCluster(ICFSecPubCluster argObj);
+	public default void setRequiredContainerCluster(ICFSecPubCluster argObj) {
+		if (argObj == null) {
+			setRequiredContainerCluster((ICFSecProtCluster)null);
+		}
+		else {
+			setRequiredContainerCluster(argObj.getRequiredId());
+		}
+	}
+
 	public void setRequiredContainerCluster(CFLibDbKeyHash256 argClusterId);
 	public CFLibDbKeyHash256 getRequiredClusterId();
 	@Override

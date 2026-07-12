@@ -36,6 +36,7 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.text.StringEscapeUtils;
 import server.markhome.mcf.v3_1.cflib.*;
 import server.markhome.mcf.v3_1.cflib.dbutil.*;
+
 import server.markhome.mcf.v3_1.cfsec.cfsecpub.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecpubobj.*;
@@ -105,20 +106,6 @@ public interface ICFSecProtSecUserEditObj
 	 *	@param	value	The Calendar value for the create time of the instance.
 	 */
 	void setUpdatedAt( LocalDateTime value );
-
-	/**
-	 *	Get the ICFSecProtSecUserPasswordObj instance referenced by the Password key.
-	 *
-	 *	@return	The ICFSecProtSecUserPasswordObj instance referenced by the Password key.
-	 */
-	ICFSecProtSecUserPasswordObj getOptionalComponentsPassword();
-
-	/**
-	 *	Get the optional ICFSecProtSecUserPasswordObj instance referenced by the Password key.
-	 *
-	 *	@return	The optional ICFSecProtSecUserPasswordObj instance referenced by the Password key.
-	 */
-	ICFSecProtSecUserPasswordObj getOptionalComponentsPassword( boolean forceRead );
 
 	/**
 	 *	Get the ICFSecProtSecUserEMConfObj instance referenced by the EMConf key.

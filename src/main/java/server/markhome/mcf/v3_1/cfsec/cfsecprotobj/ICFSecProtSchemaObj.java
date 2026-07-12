@@ -246,13 +246,6 @@ public interface ICFSecProtSchemaObj
 	ICFSecProtSecUserPWResetTableObj getSecUserPWResetTableObj();
 
 	/**
-	 *	Get the SecUserPassword interface for the schema.
-	 *
-	 *	@return	The ICFSecProtSecUserPasswordTableObj interface implementation for the schema.
-	 */
-	ICFSecProtSecUserPasswordTableObj getSecUserPasswordTableObj();
-
-	/**
 	 *	Get the SysCluster interface for the schema.
 	 *
 	 *	@return	The ICFSecProtSysClusterTableObj interface implementation for the schema.

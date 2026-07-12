@@ -45,8 +45,8 @@ import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
  */
 public interface ICFSecProtSecUser
 {
-	public static final ICFSecProtSchema.SecAccountStatusEnum ACCOUNTSTATUS_MIN_VALUE = ICFSecProtSchema.SecAccountStatusEnum.System;
-	public static final ICFSecProtSchema.SecAccountStatusEnum ACCOUNTSTATUS_MAX_VALUE = ICFSecProtSchema.SecAccountStatusEnum.Locked;
+	public static final ICFSecPubSchema.SecAccountStatusEnum ACCOUNTSTATUS_MIN_VALUE = ICFSecPubSchema.SecAccountStatusEnum.System;
+	public static final ICFSecPubSchema.SecAccountStatusEnum ACCOUNTSTATUS_MAX_VALUE = ICFSecPubSchema.SecAccountStatusEnum.Locked;
 	public static final String S_INIT_CREATED_BY = ICFSecPubSecUser.S_INIT_CREATED_BY;
 	public static final CFLibDbKeyHash256 INIT_CREATED_BY = ICFSecPubSecUser.INIT_CREATED_BY;
 	public static final String S_INIT_UPDATED_BY = ICFSecPubSecUser.S_INIT_UPDATED_BY;
@@ -76,7 +76,6 @@ public interface ICFSecProtSecUser
 	public CFLibDbKeyHash256 getPKey();
 	public void setPKey(CFLibDbKeyHash256 requiredSecUserId);
 	
-	public ICFSecProtSecUserPassword getOptionalComponentsPassword();
 	public ICFSecProtSecUserEMConf getOptionalComponentsEMConf();
 	public ICFSecProtSecUserPWReset getOptionalComponentsPWReset();
 	public CFLibDbKeyHash256 getRequiredSecUserId();
