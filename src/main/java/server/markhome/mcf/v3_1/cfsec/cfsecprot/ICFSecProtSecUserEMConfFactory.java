@@ -56,32 +56,11 @@ public interface ICFSecProtSecUserEMConfFactory
 	ICFSecProtSecUserEMConfHPKey newProtHPKey();
 
 	/**
-	 *	Allocate a protected UUuid6Idx key over protected SecUserEMConf instances.
-	 *
-	 *	@return	The new instance.
-	 */
-	public ICFSecProtSecUserEMConfByUUuid6IdxKey newProtByUUuid6IdxKey();
-
-	/**
 	 *	Allocate a protected ConfEMAddrIdx key over protected SecUserEMConf instances.
 	 *
 	 *	@return	The new instance.
 	 */
 	public ICFSecProtSecUserEMConfByConfEMAddrIdxKey newProtByConfEMAddrIdxKey();
-
-	/**
-	 *	Allocate a protected SentStampIdx key over protected SecUserEMConf instances.
-	 *
-	 *	@return	The new instance.
-	 */
-	public ICFSecProtSecUserEMConfBySentStampIdxKey newProtBySentStampIdxKey();
-
-	/**
-	 *	Allocate a protected NewAcctIdx key over protected SecUserEMConf instances.
-	 *
-	 *	@return	The new instance.
-	 */
-	public ICFSecProtSecUserEMConfByNewAcctIdxKey newProtByNewAcctIdxKey();
 
 	/**
 	 *	Allocate a protected SecUserEMConf interface implementation.

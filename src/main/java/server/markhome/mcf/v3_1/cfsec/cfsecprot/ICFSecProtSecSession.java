@@ -49,7 +49,6 @@ public interface ICFSecProtSecSession
 	public static final CFLibDbKeyHash256 SECSESSIONID_INIT_VALUE = ICFSecPubSecSession.SECSESSIONID_INIT_VALUE;
 	public static final String S_SECUSERID_INIT_VALUE = ICFSecPubSecSession.S_SECUSERID_INIT_VALUE;
 	public static final CFLibDbKeyHash256 SECUSERID_INIT_VALUE = ICFSecPubSecSession.SECUSERID_INIT_VALUE;
-	public static final LocalDateTime START_INIT_VALUE = ICFSecPubSecSession.START_INIT_VALUE;
 	public static final String S_SECPROXYID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
 	public static final CFLibDbKeyHash256 SECPROXYID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_SECPROXYID_INIT_VALUE );
 	public final static int CLASS_CODE = 0xa01e;
@@ -67,10 +66,6 @@ public interface ICFSecProtSecSession
 
 	public CFLibDbKeyHash256 getRequiredSecUserId();
 	public void setRequiredSecUserId( CFLibDbKeyHash256 value );
-	public LocalDateTime getRequiredStart();
-	public void setRequiredStart( LocalDateTime value );
-	public LocalDateTime getOptionalFinish();
-	public void setOptionalFinish( LocalDateTime value );
 	public CFLibDbKeyHash256 getOptionalSecProxyId();
 	public void setOptionalSecProxyId( CFLibDbKeyHash256 value );
 	@Override

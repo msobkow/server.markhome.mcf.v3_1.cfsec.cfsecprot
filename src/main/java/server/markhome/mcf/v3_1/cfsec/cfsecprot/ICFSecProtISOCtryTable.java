@@ -143,34 +143,6 @@ extends ICFSecPubISOCtryTable
 	 */
 	public void protdeleteISOCtryByISOCodeIdx( ICFSecPubAuthorization Authorization,
 		ICFSecPubISOCtryByISOCodeIdxKey argKey );
-	/**
-	 *	Delete the ISOCtry instances identified by the key NameIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	Name	The ISOCtry key attribute of the instance generating the id.
-	 */
-	public void protdeleteISOCtryByNameIdx( ICFSecPubAuthorization Authorization,
-		String argName );
-
-	/**
-	 *	Delete the ISOCtry instances identified by the key NameIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteISOCtryByNameIdx( ICFSecPubAuthorization Authorization,
-		ICFSecProtISOCtryByNameIdxKey argKey );
-	/**
-	 *	Delete the ISOCtry instances identified by the key NameIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteISOCtryByNameIdx( ICFSecPubAuthorization Authorization,
-		ICFSecPubISOCtryByNameIdxKey argKey );
 
 	/**
 	 *	Delete the instance from the database.
@@ -245,19 +217,6 @@ extends ICFSecPubISOCtryTable
 		String ISOCode );
 
 	/**
-	 *	Read the derived ISOCtry record instance identified by the unique key NameIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	Name	The ISOCtry key attribute of the instance generating the id.
-	 *
-	 *	@return The record instance for the specified key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFSecProtISOCtry protreadDerivedByNameIdx( ICFSecPubAuthorization Authorization,
-		String Name );
-
-	/**
 	 *	Read the specific ISOCtry record instance identified by the primary key.
 	 *
 	 *	@param	Authorization	The session authorization information.
@@ -325,19 +284,4 @@ extends ICFSecPubISOCtryTable
 	 */
 	public ICFSecProtISOCtry protreadRecByISOCodeIdx( ICFSecPubAuthorization Authorization,
 		String ISOCode );
-
-	/**
-	 *	Read the specific ISOCtry record instance identified by the unique key NameIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	Name	The ISOCtry key attribute of the instance generating the id.
-	 *
-	 *	@return The record instance for the specified key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFSecProtISOCtry protreadRecByNameIdx( ICFSecPubAuthorization Authorization,
-		String Name );
 }

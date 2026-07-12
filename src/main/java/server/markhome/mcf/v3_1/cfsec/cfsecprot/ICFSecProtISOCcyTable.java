@@ -143,34 +143,6 @@ extends ICFSecPubISOCcyTable
 	 */
 	public void protdeleteISOCcyByCcyCdIdx( ICFSecPubAuthorization Authorization,
 		ICFSecPubISOCcyByCcyCdIdxKey argKey );
-	/**
-	 *	Delete the ISOCcy instances identified by the key CcyNmIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	Name	The ISOCcy key attribute of the instance generating the id.
-	 */
-	public void protdeleteISOCcyByCcyNmIdx( ICFSecPubAuthorization Authorization,
-		String argName );
-
-	/**
-	 *	Delete the ISOCcy instances identified by the key CcyNmIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteISOCcyByCcyNmIdx( ICFSecPubAuthorization Authorization,
-		ICFSecProtISOCcyByCcyNmIdxKey argKey );
-	/**
-	 *	Delete the ISOCcy instances identified by the key CcyNmIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteISOCcyByCcyNmIdx( ICFSecPubAuthorization Authorization,
-		ICFSecPubISOCcyByCcyNmIdxKey argKey );
 
 	/**
 	 *	Delete the instance from the database.
@@ -245,19 +217,6 @@ extends ICFSecPubISOCcyTable
 		String ISOCode );
 
 	/**
-	 *	Read the derived ISOCcy record instance identified by the unique key CcyNmIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	Name	The ISOCcy key attribute of the instance generating the id.
-	 *
-	 *	@return The record instance for the specified key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFSecProtISOCcy protreadDerivedByCcyNmIdx( ICFSecPubAuthorization Authorization,
-		String Name );
-
-	/**
 	 *	Read the specific ISOCcy record instance identified by the primary key.
 	 *
 	 *	@param	Authorization	The session authorization information.
@@ -325,19 +284,4 @@ extends ICFSecPubISOCcyTable
 	 */
 	public ICFSecProtISOCcy protreadRecByCcyCdIdx( ICFSecPubAuthorization Authorization,
 		String ISOCode );
-
-	/**
-	 *	Read the specific ISOCcy record instance identified by the unique key CcyNmIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	Name	The ISOCcy key attribute of the instance generating the id.
-	 *
-	 *	@return The record instance for the specified key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFSecProtISOCcy protreadRecByCcyNmIdx( ICFSecPubAuthorization Authorization,
-		String Name );
 }

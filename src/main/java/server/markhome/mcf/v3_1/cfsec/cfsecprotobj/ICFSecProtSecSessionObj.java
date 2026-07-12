@@ -202,20 +202,6 @@ public interface ICFSecProtSecSessionObj
 	CFLibDbKeyHash256 getRequiredSecUserId();
 
 	/**
-	 *	Get the required LocalDateTime attribute Start.
-	 *
-	 *	@return	The required LocalDateTime attribute Start.
-	 */
-	LocalDateTime getRequiredStart();
-
-	/**
-	 *	Get the optional LocalDateTime attribute Finish.
-	 *
-	 *	@return	The optional LocalDateTime attribute Finish.
-	 */
-	LocalDateTime getOptionalFinish();
-
-	/**
 	 *	Get the optional CFLibDbKeyHash256 attribute SecProxyId.
 	 *
 	 *	@return	The optional CFLibDbKeyHash256 attribute SecProxyId.

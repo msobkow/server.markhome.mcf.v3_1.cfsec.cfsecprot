@@ -171,27 +171,6 @@ public interface ICFSecProtSecUserEMConfTableObj
 		boolean forceRead );
 
 	/**
-	 *	Get the ICFSecProtSecUserEMConfObj instance for the unique UUuid6Idx key.
-	 *
-	 *	@param	EMConfirmationUuid6	The SecUserEMConf key attribute of the instance generating the id.
-	 *
-	 *	@return	ICFSecProtSecUserEMConfObj cached instance for the unique UUuid6Idx key, or
-	 *		null if no such instance exists.
-	 */
-	ICFSecProtSecUserEMConfObj readSecUserEMConfByUUuid6Idx(CFLibUuid6 EMConfirmationUuid6 );
-
-	/**
-	 *	Get the ICFSecProtSecUserEMConfObj instance for the unique UUuid6Idx key.
-	 *
-	 *	@param	EMConfirmationUuid6	The SecUserEMConf key attribute of the instance generating the id.
-	 *
-	 *	@return	ICFSecProtSecUserEMConfObj refreshed instance for the unique UUuid6Idx key, or
-	 *		null if no such instance exists.
-	 */
-	ICFSecProtSecUserEMConfObj readSecUserEMConfByUUuid6Idx(CFLibUuid6 EMConfirmationUuid6,
-		boolean forceRead );
-
-	/**
 	 *	Get the map of List<ICFSecProtSecUserEMConfObj> instances sorted by their primary keys for the duplicate ConfEMAddrIdx key.
 	 *
 	 *	@param	ConfirmEMailAddr	The SecUserEMConf key attribute of the instance generating the id.
@@ -212,67 +191,13 @@ public interface ICFSecProtSecUserEMConfTableObj
 	List<ICFSecProtSecUserEMConfObj> readSecUserEMConfByConfEMAddrIdx( String ConfirmEMailAddr,
 		boolean forceRead );
 
-	/**
-	 *	Get the map of List<ICFSecProtSecUserEMConfObj> instances sorted by their primary keys for the duplicate SentStampIdx key.
-	 *
-	 *	@param	EMailSentStamp	The SecUserEMConf key attribute of the instance generating the id.
-	 *
-	 *	@return	List of List<ICFSecProtSecUserEMConfObj> cached instances sorted by their primary keys for the duplicate SentStampIdx key,
-	 *		which may be an empty set.
-	 */
-	List<ICFSecProtSecUserEMConfObj> readSecUserEMConfBySentStampIdx( LocalDateTime EMailSentStamp );
-
-	/**
-	 *	Get the map of List<ICFSecProtSecUserEMConfObj> instances sorted by their primary keys for the duplicate SentStampIdx key.
-	 *
-	 *	@param	EMailSentStamp	The SecUserEMConf key attribute of the instance generating the id.
-	 *
-	 *	@return	List of List<ICFSecProtSecUserEMConfObj> cached instances sorted by their primary keys for the duplicate SentStampIdx key,
-	 *		which may be an empty set.
-	 */
-	List<ICFSecProtSecUserEMConfObj> readSecUserEMConfBySentStampIdx( LocalDateTime EMailSentStamp,
-		boolean forceRead );
-
-	/**
-	 *	Get the map of List<ICFSecProtSecUserEMConfObj> instances sorted by their primary keys for the duplicate NewAcctIdx key.
-	 *
-	 *	@param	NewAccount	The SecUserEMConf key attribute of the instance generating the id.
-	 *
-	 *	@return	List of List<ICFSecProtSecUserEMConfObj> cached instances sorted by their primary keys for the duplicate NewAcctIdx key,
-	 *		which may be an empty set.
-	 */
-	List<ICFSecProtSecUserEMConfObj> readSecUserEMConfByNewAcctIdx( boolean NewAccount );
-
-	/**
-	 *	Get the map of List<ICFSecProtSecUserEMConfObj> instances sorted by their primary keys for the duplicate NewAcctIdx key.
-	 *
-	 *	@param	NewAccount	The SecUserEMConf key attribute of the instance generating the id.
-	 *
-	 *	@return	List of List<ICFSecProtSecUserEMConfObj> cached instances sorted by their primary keys for the duplicate NewAcctIdx key,
-	 *		which may be an empty set.
-	 */
-	List<ICFSecProtSecUserEMConfObj> readSecUserEMConfByNewAcctIdx( boolean NewAccount,
-		boolean forceRead );
-
 	ICFSecProtSecUserEMConfObj readCachedSecUserEMConfByIdIdx( CFLibDbKeyHash256 SecUserId );
-
-	ICFSecProtSecUserEMConfObj readCachedSecUserEMConfByUUuid6Idx( CFLibUuid6 EMConfirmationUuid6 );
 
 	List<List<ICFSecProtSecUserEMConfObj>> readCachedSecUserEMConfByConfEMAddrIdx( String ConfirmEMailAddr );
 
-	List<List<ICFSecProtSecUserEMConfObj>> readCachedSecUserEMConfBySentStampIdx( LocalDateTime EMailSentStamp );
-
-	List<List<ICFSecProtSecUserEMConfObj>> readCachedSecUserEMConfByNewAcctIdx( boolean NewAccount );
-
 	void deepDisposeSecUserEMConfByIdIdx( CFLibDbKeyHash256 SecUserId );
 
-	void deepDisposeSecUserEMConfByUUuid6Idx( CFLibUuid6 EMConfirmationUuid6 );
-
 	void deepDisposeSecUserEMConfByConfEMAddrIdx( String ConfirmEMailAddr );
-
-	void deepDisposeSecUserEMConfBySentStampIdx( LocalDateTime EMailSentStamp );
-
-	void deepDisposeSecUserEMConfByNewAcctIdx( boolean NewAccount );
 
 	/**
 	 *	Read a page of data as a List of SecUserEMConf-derived instances sorted by their primary keys,
@@ -284,30 +209,6 @@ public interface ICFSecProtSecUserEMConfTableObj
 	 *		as identified by the key attributes, which may be an empty set.
 	 */
 	List<ICFSecProtSecUserEMConfObj> pageSecUserEMConfByConfEMAddrIdx( String ConfirmEMailAddr,
-		CFLibDbKeyHash256 priorSecUserId );
-
-	/**
-	 *	Read a page of data as a List of SecUserEMConf-derived instances sorted by their primary keys,
-	 *	as identified by the duplicate SentStampIdx key attributes.
-	 *
-	 *	@param	EMailSentStamp	The SecUserEMConf key attribute of the instance generating the id.
-	 *
-	 *	@return	A List of SecUserEMConf-derived instances sorted by their primary keys,
-	 *		as identified by the key attributes, which may be an empty set.
-	 */
-	List<ICFSecProtSecUserEMConfObj> pageSecUserEMConfBySentStampIdx( LocalDateTime EMailSentStamp,
-		CFLibDbKeyHash256 priorSecUserId );
-
-	/**
-	 *	Read a page of data as a List of SecUserEMConf-derived instances sorted by their primary keys,
-	 *	as identified by the duplicate NewAcctIdx key attributes.
-	 *
-	 *	@param	NewAccount	The SecUserEMConf key attribute of the instance generating the id.
-	 *
-	 *	@return	A List of SecUserEMConf-derived instances sorted by their primary keys,
-	 *		as identified by the key attributes, which may be an empty set.
-	 */
-	List<ICFSecProtSecUserEMConfObj> pageSecUserEMConfByNewAcctIdx( boolean NewAccount,
 		CFLibDbKeyHash256 priorSecUserId );
 
 	/**
@@ -330,28 +231,7 @@ public interface ICFSecProtSecUserEMConfTableObj
 	/**
 	 *	Internal use only.
 	 *
-	 *	@param	EMConfirmationUuid6	The SecUserEMConf key attribute of the instance generating the id.
-	 */
-	void deleteSecUserEMConfByUUuid6Idx(CFLibUuid6 EMConfirmationUuid6 );
-
-	/**
-	 *	Internal use only.
-	 *
 	 *	@param	ConfirmEMailAddr	The SecUserEMConf key attribute of the instance generating the id.
 	 */
 	void deleteSecUserEMConfByConfEMAddrIdx( String ConfirmEMailAddr );
-
-	/**
-	 *	Internal use only.
-	 *
-	 *	@param	EMailSentStamp	The SecUserEMConf key attribute of the instance generating the id.
-	 */
-	void deleteSecUserEMConfBySentStampIdx( LocalDateTime EMailSentStamp );
-
-	/**
-	 *	Internal use only.
-	 *
-	 *	@param	NewAccount	The SecUserEMConf key attribute of the instance generating the id.
-	 */
-	void deleteSecUserEMConfByNewAcctIdx( boolean NewAccount );
 }

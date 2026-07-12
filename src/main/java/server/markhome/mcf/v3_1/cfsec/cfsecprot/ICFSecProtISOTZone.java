@@ -46,21 +46,11 @@ import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 public interface ICFSecProtISOTZone
 {
 	public static final short ISOTZONEID_MIN_VALUE = (short)0;
-	public static final short TZHOUROFFSET_MIN_VALUE = (short)-12;
-	public static final short TZMINOFFSET_MIN_VALUE = (short)-59;
-	public static final short TZHOUROFFSET_MAX_VALUE = (short)12;
-	public static final short TZMINOFFSET_MAX_VALUE = (short)59;
 	public static final String S_INIT_CREATED_BY = ICFSecPubISOTZone.S_INIT_CREATED_BY;
 	public static final CFLibDbKeyHash256 INIT_CREATED_BY = ICFSecPubISOTZone.INIT_CREATED_BY;
 	public static final String S_INIT_UPDATED_BY = ICFSecPubISOTZone.S_INIT_UPDATED_BY;
 	public static final CFLibDbKeyHash256 INIT_UPDATED_BY = ICFSecPubISOTZone.INIT_UPDATED_BY;
 	public static final short ISOTZONEID_INIT_VALUE = ICFSecPubISOTZone.ISOTZONEID_INIT_VALUE;
-	public static final String ISO8601_INIT_VALUE = ICFSecPubISOTZone.ISO8601_INIT_VALUE;
-	public static final String TZNAME_INIT_VALUE = ICFSecPubISOTZone.TZNAME_INIT_VALUE;
-	public static final short TZHOUROFFSET_INIT_VALUE = ICFSecPubISOTZone.TZHOUROFFSET_INIT_VALUE;
-	public static final short TZMINOFFSET_INIT_VALUE = ICFSecPubISOTZone.TZMINOFFSET_INIT_VALUE;
-	public static final String DESCRIPTION_INIT_VALUE = ICFSecPubISOTZone.DESCRIPTION_INIT_VALUE;
-	public final static boolean VISIBLE_INIT_VALUE = ICFSecPubISOTZone.VISIBLE_INIT_VALUE;
 	public final static int CLASS_CODE = 0xa008;
 	public final static String S_CLASS_CODE = "a008";
 
@@ -83,18 +73,6 @@ public interface ICFSecProtISOTZone
 	public int getRequiredRevision();
 	public void setRequiredRevision( int value );
 
-	public String getRequiredIso8601();
-	public void setRequiredIso8601( String value );
-	public String getRequiredTZName();
-	public void setRequiredTZName( String value );
-	public short getRequiredTZHourOffset();
-	public void setRequiredTZHourOffset( short value );
-	public short getRequiredTZMinOffset();
-	public void setRequiredTZMinOffset( short value );
-	public String getRequiredDescription();
-	public void setRequiredDescription( String value );
-	public boolean getRequiredVisible();
-	public void setRequiredVisible( boolean value );
 	@Override
 	public boolean equals( Object obj );
 	

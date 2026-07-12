@@ -77,20 +77,6 @@ public interface ICFSecProtISOCtryFactory extends ICFSecPubISOCtryFactory
 	public ICFSecPubISOCtryByISOCodeIdxKey asPublic(ICFSecProtISOCtryByISOCodeIdxKey src);
 
 	/**
-	 *	Allocate a protected NameIdx key over protected ISOCtry instances.
-	 *
-	 *	@return	The new instance.
-	 */
-	public ICFSecProtISOCtryByNameIdxKey newProtByNameIdxKey();
-
-	/**
-	 *	Allocate a public NameIdx key from a protected instance.
-	 *
-	 *	@return	The new instance.
-	 */
-	public ICFSecPubISOCtryByNameIdxKey asPublic(ICFSecProtISOCtryByNameIdxKey src);
-
-	/**
 	 *	Allocate a protected ISOCtry interface implementation.
 	 *
 	 *	@return	The new instance.

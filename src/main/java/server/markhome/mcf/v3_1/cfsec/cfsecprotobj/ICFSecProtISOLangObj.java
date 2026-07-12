@@ -250,13 +250,6 @@ public interface ICFSecProtISOLangObj
 	String getOptionalISO6391Code();
 
 	/**
-	 *	Get the required String attribute EnglishName.
-	 *
-	 *	@return	The required String attribute EnglishName.
-	 */
-	String getRequiredEnglishName();
-
-	/**
 	 *	Internal use only.
 	 */
 	void copyPKeyToRec();

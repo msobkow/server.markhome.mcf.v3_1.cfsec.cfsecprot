@@ -74,8 +74,6 @@ public interface ICFSecProtTenantH
 
 	public CFLibDbKeyHash256 getRequiredClusterId();
 	public void setRequiredClusterId( CFLibDbKeyHash256 value );
-	public String getRequiredTenantName();
-	public void setRequiredTenantName( String value );
 	@Override
 	public boolean equals( Object obj );
 

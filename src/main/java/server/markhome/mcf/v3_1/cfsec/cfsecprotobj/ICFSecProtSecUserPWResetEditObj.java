@@ -148,34 +148,6 @@ public interface ICFSecProtSecUserPWResetEditObj
 	 */
 	void setRequiredSentToEMailAddr(String value);
 
-	/**
-	 *	Get the required CFLibUuid6 attribute PasswordResetUuid6.
-	 *
-	 *	@return	The required CFLibUuid6 attribute PasswordResetUuid6.
-	 */
-	CFLibUuid6 getRequiredPasswordResetUuid6();
-
-	/**
-	 *	Set the required CFLibUuid6 attribute PasswordResetUuid6.
-	 *
-	 *	@param value The required CFLibUuid6 attribute PasswordResetUuid6 value to be applied.
-	 */
-	void setRequiredPasswordResetUuid6(CFLibUuid6 value);
-
-	/**
-	 *	Get the required boolean attribute NewAccount.
-	 *
-	 *	@return	The required boolean attribute NewAccount.
-	 */
-	boolean getRequiredNewAccount();
-
-	/**
-	 *	Set the required boolean attribute NewAccount.
-	 *
-	 *	@param value The required boolean attribute NewAccount value to be applied.
-	 */
-	void setRequiredNewAccount(boolean value);
-
 	public void copyRecToOrig();
 	public void copyOrigToRec();
 

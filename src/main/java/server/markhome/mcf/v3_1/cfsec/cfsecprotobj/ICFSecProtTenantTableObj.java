@@ -191,46 +191,13 @@ public interface ICFSecProtTenantTableObj
 	List<ICFSecProtTenantObj> readTenantByClusterIdx( CFLibDbKeyHash256 ClusterId,
 		boolean forceRead );
 
-	/**
-	 *	Get the ICFSecProtTenantObj instance for the unique UNameIdx key.
-	 *
-	 *	@param	ClusterId	The Tenant key attribute of the instance generating the id.
-	 *
-	 *	@param	TenantName	The Tenant key attribute of the instance generating the id.
-	 *
-	 *	@return	ICFSecProtTenantObj cached instance for the unique UNameIdx key, or
-	 *		null if no such instance exists.
-	 */
-	ICFSecProtTenantObj readTenantByUNameIdx(CFLibDbKeyHash256 ClusterId,
-		String TenantName );
-
-	/**
-	 *	Get the ICFSecProtTenantObj instance for the unique UNameIdx key.
-	 *
-	 *	@param	ClusterId	The Tenant key attribute of the instance generating the id.
-	 *
-	 *	@param	TenantName	The Tenant key attribute of the instance generating the id.
-	 *
-	 *	@return	ICFSecProtTenantObj refreshed instance for the unique UNameIdx key, or
-	 *		null if no such instance exists.
-	 */
-	ICFSecProtTenantObj readTenantByUNameIdx(CFLibDbKeyHash256 ClusterId,
-		String TenantName,
-		boolean forceRead );
-
 	ICFSecProtTenantObj readCachedTenantByIdIdx( CFLibDbKeyHash256 Id );
 
 	List<List<ICFSecProtTenantObj>> readCachedTenantByClusterIdx( CFLibDbKeyHash256 ClusterId );
 
-	ICFSecProtTenantObj readCachedTenantByUNameIdx( CFLibDbKeyHash256 ClusterId,
-		String TenantName );
-
 	void deepDisposeTenantByIdIdx( CFLibDbKeyHash256 Id );
 
 	void deepDisposeTenantByClusterIdx( CFLibDbKeyHash256 ClusterId );
-
-	void deepDisposeTenantByUNameIdx( CFLibDbKeyHash256 ClusterId,
-		String TenantName );
 
 	/**
 	 *	Read a page of data as a List of Tenant-derived instances sorted by their primary keys,
@@ -267,14 +234,4 @@ public interface ICFSecProtTenantTableObj
 	 *	@param	ClusterId	The Tenant key attribute of the instance generating the id.
 	 */
 	void deleteTenantByClusterIdx( CFLibDbKeyHash256 ClusterId );
-
-	/**
-	 *	Internal use only.
-	 *
-	 *	@param	ClusterId	The Tenant key attribute of the instance generating the id.
-	 *
-	 *	@param	TenantName	The Tenant key attribute of the instance generating the id.
-	 */
-	void deleteTenantByUNameIdx(CFLibDbKeyHash256 ClusterId,
-		String TenantName );
 }

@@ -92,25 +92,6 @@ public interface ICFSecProtSecUserPasswordTable
 	 */
 	public void protdeleteSecUserPasswordByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argKey );
-	/**
-	 *	Delete the SecUserPassword instances identified by the key SetStampIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PWSetStamp	The SecUserPassword key attribute of the instance generating the id.
-	 */
-	public void protdeleteSecUserPasswordBySetStampIdx( ICFSecPubAuthorization Authorization,
-		LocalDateTime argPWSetStamp );
-
-	/**
-	 *	Delete the SecUserPassword instances identified by the key SetStampIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteSecUserPasswordBySetStampIdx( ICFSecPubAuthorization Authorization,
-		ICFSecProtSecUserPasswordBySetStampIdxKey argKey );
 
 
 	/**
@@ -160,18 +141,6 @@ public interface ICFSecProtSecUserPasswordTable
 	 */
 	public ICFSecProtSecUserPassword protreadDerivedByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 SecUserId );
-
-	/**
-	 *	Read an array of the derived SecUserPassword record instances identified by the duplicate key SetStampIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PWSetStamp	The SecUserPassword key attribute of the instance generating the id.
-	 *
-	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
-	 */
-	public ICFSecProtSecUserPassword[] protreadDerivedBySetStampIdx( ICFSecPubAuthorization Authorization,
-		LocalDateTime PWSetStamp );
 
 	/**
 	 *	Read the specific SecUserPassword record instance identified by the primary key.
@@ -226,18 +195,4 @@ public interface ICFSecProtSecUserPasswordTable
 	 */
 	public ICFSecProtSecUserPassword protreadRecByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 SecUserId );
-
-	/**
-	 *	Read an array of the specific SecUserPassword record instances identified by the duplicate key SetStampIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	PWSetStamp	The SecUserPassword key attribute of the instance generating the id.
-	 *
-	 *	@return An array of derived record instances for the specified key, potentially with 0 elements in the set.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFSecProtSecUserPassword[] protreadRecBySetStampIdx( ICFSecPubAuthorization Authorization,
-		LocalDateTime PWSetStamp );
 }

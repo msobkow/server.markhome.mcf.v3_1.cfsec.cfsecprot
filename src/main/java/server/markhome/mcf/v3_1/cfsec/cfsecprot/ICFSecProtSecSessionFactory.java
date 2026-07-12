@@ -77,34 +77,6 @@ public interface ICFSecProtSecSessionFactory extends ICFSecPubSecSessionFactory
 	public ICFSecPubSecSessionBySecUserIdxKey asPublic(ICFSecProtSecSessionBySecUserIdxKey src);
 
 	/**
-	 *	Allocate a protected StartIdx key over protected SecSession instances.
-	 *
-	 *	@return	The new instance.
-	 */
-	public ICFSecProtSecSessionByStartIdxKey newProtByStartIdxKey();
-
-	/**
-	 *	Allocate a public StartIdx key from a protected instance.
-	 *
-	 *	@return	The new instance.
-	 */
-	public ICFSecPubSecSessionByStartIdxKey asPublic(ICFSecProtSecSessionByStartIdxKey src);
-
-	/**
-	 *	Allocate a protected FinishIdx key over protected SecSession instances.
-	 *
-	 *	@return	The new instance.
-	 */
-	public ICFSecProtSecSessionByFinishIdxKey newProtByFinishIdxKey();
-
-	/**
-	 *	Allocate a public FinishIdx key from a protected instance.
-	 *
-	 *	@return	The new instance.
-	 */
-	public ICFSecPubSecSessionByFinishIdxKey asPublic(ICFSecProtSecSessionByFinishIdxKey src);
-
-	/**
 	 *	Allocate a protected SecProxyIdx key over protected SecSession instances.
 	 *
 	 *	@return	The new instance.

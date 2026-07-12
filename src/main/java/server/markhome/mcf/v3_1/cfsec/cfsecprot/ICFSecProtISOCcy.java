@@ -46,16 +46,12 @@ import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 public interface ICFSecProtISOCcy
 {
 	public static final short ISOCCYID_MIN_VALUE = (short)0;
-	public static final short PRECIS_MIN_VALUE = (short)0;
-	public static final short PRECIS_MAX_VALUE = (short)5;
 	public static final String S_INIT_CREATED_BY = ICFSecPubISOCcy.S_INIT_CREATED_BY;
 	public static final CFLibDbKeyHash256 INIT_CREATED_BY = ICFSecPubISOCcy.INIT_CREATED_BY;
 	public static final String S_INIT_UPDATED_BY = ICFSecPubISOCcy.S_INIT_UPDATED_BY;
 	public static final CFLibDbKeyHash256 INIT_UPDATED_BY = ICFSecPubISOCcy.INIT_UPDATED_BY;
 	public static final short ISOCCYID_INIT_VALUE = ICFSecPubISOCcy.ISOCCYID_INIT_VALUE;
 	public static final String ISOCODE_INIT_VALUE = ICFSecPubISOCcy.ISOCODE_INIT_VALUE;
-	public static final String NAME_INIT_VALUE = ICFSecPubISOCcy.NAME_INIT_VALUE;
-	public static final short PRECIS_INIT_VALUE = ICFSecPubISOCcy.PRECIS_INIT_VALUE;
 	public final static int CLASS_CODE = 0xa003;
 	public final static String S_CLASS_CODE = "a003";
 
@@ -81,12 +77,6 @@ public interface ICFSecProtISOCcy
 
 	public String getRequiredISOCode();
 	public void setRequiredISOCode( String value );
-	public String getRequiredName();
-	public void setRequiredName( String value );
-	public String getOptionalUnitSymbol();
-	public void setOptionalUnitSymbol( String value );
-	public short getRequiredPrecis();
-	public void setRequiredPrecis( short value );
 	@Override
 	public boolean equals( Object obj );
 	

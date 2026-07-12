@@ -52,8 +52,6 @@ public interface ICFSecProtSecUserEMConf
 	public static final String S_SECUSERID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
 	public static final CFLibDbKeyHash256 SECUSERID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_SECUSERID_INIT_VALUE );
 	public static final String CONFIRMEMAILADDR_INIT_VALUE = new String( "" );
-	public static final LocalDateTime EMAILSENTSTAMP_INIT_VALUE = CFLibXmlUtil.parseTimestamp("2020-01-01T00:00:00");
-	public final static boolean NEWACCOUNT_INIT_VALUE = false;
 	public final static int CLASS_CODE = 0xa00b;
 	public final static String S_CLASS_CODE = "a00b";
 
@@ -80,12 +78,6 @@ public interface ICFSecProtSecUserEMConf
 
 	public String getRequiredConfirmEMailAddr();
 	public void setRequiredConfirmEMailAddr( String value );
-	public LocalDateTime getRequiredEMailSentStamp();
-	public void setRequiredEMailSentStamp( LocalDateTime value );
-	public CFLibUuid6 getRequiredEMConfirmationUuid6();
-	public void setRequiredEMConfirmationUuid6( CFLibUuid6 value );
-	public boolean getRequiredNewAccount();
-	public void setRequiredNewAccount( boolean value );
 	@Override
 	public boolean equals( Object obj );
 	

@@ -53,7 +53,6 @@ public interface ICFSecProtTenant
 	public static final CFLibDbKeyHash256 ID_INIT_VALUE = ICFSecPubTenant.ID_INIT_VALUE;
 	public static final String S_CLUSTERID_INIT_VALUE = ICFSecPubTenant.S_CLUSTERID_INIT_VALUE;
 	public static final CFLibDbKeyHash256 CLUSTERID_INIT_VALUE = ICFSecPubTenant.CLUSTERID_INIT_VALUE;
-	public static final String TENANTNAME_INIT_VALUE = ICFSecPubTenant.TENANTNAME_INIT_VALUE;
 	public final static int CLASS_CODE = 0xa002;
 	public final static String S_CLASS_CODE = "a002";
 
@@ -83,8 +82,6 @@ public interface ICFSecProtTenant
 	public void setRequiredContainerCluster(ICFSecPubCluster argObj);
 	public void setRequiredContainerCluster(CFLibDbKeyHash256 argClusterId);
 	public CFLibDbKeyHash256 getRequiredClusterId();
-	public String getRequiredTenantName();
-	public void setRequiredTenantName( String value );
 	@Override
 	public boolean equals( Object obj );
 	

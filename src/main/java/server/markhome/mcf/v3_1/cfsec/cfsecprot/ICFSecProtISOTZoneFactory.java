@@ -63,48 +63,6 @@ public interface ICFSecProtISOTZoneFactory extends ICFSecPubISOTZoneFactory
 	ICFSecPubISOTZoneHPKey asPublic(ICFSecProtISOTZoneHPKey src);
 
 	/**
-	 *	Allocate a protected OffsetIdx key over protected ISOTZone instances.
-	 *
-	 *	@return	The new instance.
-	 */
-	public ICFSecProtISOTZoneByOffsetIdxKey newProtByOffsetIdxKey();
-
-	/**
-	 *	Allocate a public OffsetIdx key from a protected instance.
-	 *
-	 *	@return	The new instance.
-	 */
-	public ICFSecPubISOTZoneByOffsetIdxKey asPublic(ICFSecProtISOTZoneByOffsetIdxKey src);
-
-	/**
-	 *	Allocate a protected UTZNameIdx key over protected ISOTZone instances.
-	 *
-	 *	@return	The new instance.
-	 */
-	public ICFSecProtISOTZoneByUTZNameIdxKey newProtByUTZNameIdxKey();
-
-	/**
-	 *	Allocate a public UTZNameIdx key from a protected instance.
-	 *
-	 *	@return	The new instance.
-	 */
-	public ICFSecPubISOTZoneByUTZNameIdxKey asPublic(ICFSecProtISOTZoneByUTZNameIdxKey src);
-
-	/**
-	 *	Allocate a protected Iso8601Idx key over protected ISOTZone instances.
-	 *
-	 *	@return	The new instance.
-	 */
-	public ICFSecProtISOTZoneByIso8601IdxKey newProtByIso8601IdxKey();
-
-	/**
-	 *	Allocate a public Iso8601Idx key from a protected instance.
-	 *
-	 *	@return	The new instance.
-	 */
-	public ICFSecPubISOTZoneByIso8601IdxKey asPublic(ICFSecProtISOTZoneByIso8601IdxKey src);
-
-	/**
 	 *	Allocate a protected ISOTZone interface implementation.
 	 *
 	 *	@return	The new instance.

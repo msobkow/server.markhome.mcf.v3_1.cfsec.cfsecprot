@@ -46,18 +46,7 @@ import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 public interface ICFSecProtTableInfo
 {
 	public static final int TABLEINFOID_MIN_VALUE = 0;
-	public static final int BACKINGCLASSCODE_MIN_VALUE = 0;
-	public static final int RUNTIMECLASSCODE_MIN_VALUE = 0;
 	public static final int TABLEINFOID_INIT_VALUE = ICFSecPubTableInfo.TABLEINFOID_INIT_VALUE;
-	public static final String SCHEMANAME_INIT_VALUE = ICFSecPubTableInfo.SCHEMANAME_INIT_VALUE;
-	public static final String TABLENAME_INIT_VALUE = ICFSecPubTableInfo.TABLENAME_INIT_VALUE;
-	public static final String SUPERNAME_INIT_VALUE = ICFSecPubTableInfo.SUPERNAME_INIT_VALUE;
-	public static final int BACKINGCLASSCODE_INIT_VALUE = ICFSecPubTableInfo.BACKINGCLASSCODE_INIT_VALUE;
-	public static final int RUNTIMECLASSCODE_INIT_VALUE = ICFSecPubTableInfo.RUNTIMECLASSCODE_INIT_VALUE;
-	public final static boolean HASHISTORY_INIT_VALUE = ICFSecPubTableInfo.HASHISTORY_INIT_VALUE;
-	public final static boolean ISMUTABLE_INIT_VALUE = ICFSecPubTableInfo.ISMUTABLE_INIT_VALUE;
-	public static final String SECSCOPENAME_INIT_VALUE = ICFSecPubTableInfo.SECSCOPENAME_INIT_VALUE;
-	public static final String CODEVIS_INIT_VALUE = ICFSecPubTableInfo.CODEVIS_INIT_VALUE;
 	public final static int CLASS_CODE = 0xa020;
 	public final static String S_CLASS_CODE = "a020";
 
@@ -71,28 +60,6 @@ public interface ICFSecProtTableInfo
 	public int getRequiredRevision();
 	public void setRequiredRevision( int value );
 
-	public ICFSecProtTableInfo getOptionalParentSuperRef();
-	public List<ICFSecProtTableInfo> getOptionalChildrenSubRefs();
-	public void setOptionalParentSuperRef(ICFSecProtTableInfo argObj);
-	public void setOptionalParentSuperRef(ICFSecPubTableInfo argObj);
-	public void setOptionalParentSuperRef(String argSuperName);
-	public String getRequiredSchemaName();
-	public void setRequiredSchemaName( String value );
-	public String getRequiredTableName();
-	public void setRequiredTableName( String value );
-	public String getOptionalSuperName();
-	public int getRequiredBackingClassCode();
-	public void setRequiredBackingClassCode( int value );
-	public int getRequiredRuntimeClassCode();
-	public void setRequiredRuntimeClassCode( int value );
-	public boolean getRequiredHasHistory();
-	public void setRequiredHasHistory( boolean value );
-	public boolean getRequiredIsMutable();
-	public void setRequiredIsMutable( boolean value );
-	public String getRequiredSecScopeName();
-	public void setRequiredSecScopeName( String value );
-	public String getRequiredCodeVis();
-	public void setRequiredCodeVis( String value );
 	@Override
 	public boolean equals( Object obj );
 	

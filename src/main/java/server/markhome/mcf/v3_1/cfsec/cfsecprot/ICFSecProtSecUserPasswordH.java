@@ -63,8 +63,6 @@ public interface ICFSecProtSecUserPasswordH
 	public CFLibDbKeyHash256 getRequiredSecUserId();
 	public void setRequiredSecUserId( CFLibDbKeyHash256 requiredSecUserId );
 
-	public LocalDateTime getRequiredPWSetStamp();
-	public void setRequiredPWSetStamp( LocalDateTime value );
 	@Override
 	public boolean equals( Object obj );
 

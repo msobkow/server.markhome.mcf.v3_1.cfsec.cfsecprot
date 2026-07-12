@@ -229,27 +229,6 @@ public interface ICFSecProtSecUserEMConfObj
 	String getRequiredConfirmEMailAddr();
 
 	/**
-	 *	Get the required LocalDateTime attribute EMailSentStamp.
-	 *
-	 *	@return	The required LocalDateTime attribute EMailSentStamp.
-	 */
-	LocalDateTime getRequiredEMailSentStamp();
-
-	/**
-	 *	Get the required CFLibUuid6 attribute EMConfirmationUuid6.
-	 *
-	 *	@return	The required CFLibUuid6 attribute EMConfirmationUuid6.
-	 */
-	CFLibUuid6 getRequiredEMConfirmationUuid6();
-
-	/**
-	 *	Get the required boolean attribute NewAccount.
-	 *
-	 *	@return	The required boolean attribute NewAccount.
-	 */
-	boolean getRequiredNewAccount();
-
-	/**
 	 *	Internal use only.
 	 */
 	void copyPKeyToRec();

@@ -51,8 +51,6 @@ public interface ICFSecProtCluster
 	public static final CFLibDbKeyHash256 INIT_UPDATED_BY = ICFSecPubCluster.INIT_UPDATED_BY;
 	public static final String S_ID_INIT_VALUE = ICFSecPubCluster.S_ID_INIT_VALUE;
 	public static final CFLibDbKeyHash256 ID_INIT_VALUE = ICFSecPubCluster.ID_INIT_VALUE;
-	public static final String FULLDOMNAME_INIT_VALUE = ICFSecPubCluster.FULLDOMNAME_INIT_VALUE;
-	public static final String DESCRIPTION_INIT_VALUE = ICFSecPubCluster.DESCRIPTION_INIT_VALUE;
 	public final static int CLASS_CODE = 0xa001;
 	public final static String S_CLASS_CODE = "a001";
 
@@ -79,10 +77,6 @@ public interface ICFSecProtCluster
 	public int getRequiredRevision();
 	public void setRequiredRevision( int value );
 
-	public String getRequiredFullDomName();
-	public void setRequiredFullDomName( String value );
-	public String getRequiredDescription();
-	public void setRequiredDescription( String value );
 	@Override
 	public boolean equals( Object obj );
 	

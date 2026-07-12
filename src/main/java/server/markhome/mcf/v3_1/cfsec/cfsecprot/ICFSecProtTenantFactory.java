@@ -77,20 +77,6 @@ public interface ICFSecProtTenantFactory extends ICFSecPubTenantFactory
 	public ICFSecPubTenantByClusterIdxKey asPublic(ICFSecProtTenantByClusterIdxKey src);
 
 	/**
-	 *	Allocate a protected UNameIdx key over protected Tenant instances.
-	 *
-	 *	@return	The new instance.
-	 */
-	public ICFSecProtTenantByUNameIdxKey newProtByUNameIdxKey();
-
-	/**
-	 *	Allocate a public UNameIdx key from a protected instance.
-	 *
-	 *	@return	The new instance.
-	 */
-	public ICFSecPubTenantByUNameIdxKey asPublic(ICFSecProtTenantByUNameIdxKey src);
-
-	/**
 	 *	Allocate a protected Tenant interface implementation.
 	 *
 	 *	@return	The new instance.

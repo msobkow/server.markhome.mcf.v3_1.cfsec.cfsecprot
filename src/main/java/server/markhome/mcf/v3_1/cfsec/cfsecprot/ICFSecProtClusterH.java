@@ -72,10 +72,6 @@ public interface ICFSecProtClusterH
 	public CFLibDbKeyHash256 getRequiredId();
 	public void setRequiredId( CFLibDbKeyHash256 requiredId );
 
-	public String getRequiredFullDomName();
-	public void setRequiredFullDomName( String value );
-	public String getRequiredDescription();
-	public void setRequiredDescription( String value );
 	@Override
 	public boolean equals( Object obj );
 

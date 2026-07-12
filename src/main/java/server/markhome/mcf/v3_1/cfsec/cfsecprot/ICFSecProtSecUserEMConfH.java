@@ -74,12 +74,6 @@ public interface ICFSecProtSecUserEMConfH
 
 	public String getRequiredConfirmEMailAddr();
 	public void setRequiredConfirmEMailAddr( String value );
-	public LocalDateTime getRequiredEMailSentStamp();
-	public void setRequiredEMailSentStamp( LocalDateTime value );
-	public CFLibUuid6 getRequiredEMConfirmationUuid6();
-	public void setRequiredEMConfirmationUuid6( CFLibUuid6 value );
-	public boolean getRequiredNewAccount();
-	public void setRequiredNewAccount( boolean value );
 	@Override
 	public boolean equals( Object obj );
 

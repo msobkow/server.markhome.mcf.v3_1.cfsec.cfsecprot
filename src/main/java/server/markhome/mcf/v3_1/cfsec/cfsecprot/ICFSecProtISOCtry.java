@@ -52,7 +52,6 @@ public interface ICFSecProtISOCtry
 	public static final CFLibDbKeyHash256 INIT_UPDATED_BY = ICFSecPubISOCtry.INIT_UPDATED_BY;
 	public static final short ISOCTRYID_INIT_VALUE = ICFSecPubISOCtry.ISOCTRYID_INIT_VALUE;
 	public static final String ISOCODE_INIT_VALUE = ICFSecPubISOCtry.ISOCODE_INIT_VALUE;
-	public static final String NAME_INIT_VALUE = ICFSecPubISOCtry.NAME_INIT_VALUE;
 	public final static int CLASS_CODE = 0xa004;
 	public final static String S_CLASS_CODE = "a004";
 
@@ -79,8 +78,6 @@ public interface ICFSecProtISOCtry
 
 	public String getRequiredISOCode();
 	public void setRequiredISOCode( String value );
-	public String getRequiredName();
-	public void setRequiredName( String value );
 	@Override
 	public boolean equals( Object obj );
 	

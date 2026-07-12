@@ -93,25 +93,6 @@ public interface ICFSecProtSecUserEMConfTable
 	public void protdeleteSecUserEMConfByIdIdx( ICFSecPubAuthorization Authorization,
 		CFLibDbKeyHash256 argKey );
 	/**
-	 *	Delete the SecUserEMConf instances identified by the key UUuid6Idx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	EMConfirmationUuid6	The SecUserEMConf key attribute of the instance generating the id.
-	 */
-	public void protdeleteSecUserEMConfByUUuid6Idx( ICFSecPubAuthorization Authorization,
-		CFLibUuid6 argEMConfirmationUuid6 );
-
-	/**
-	 *	Delete the SecUserEMConf instances identified by the key UUuid6Idx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteSecUserEMConfByUUuid6Idx( ICFSecPubAuthorization Authorization,
-		ICFSecProtSecUserEMConfByUUuid6IdxKey argKey );
-	/**
 	 *	Delete the SecUserEMConf instances identified by the key ConfEMAddrIdx.
 	 *
 	 *	@param	Authorization	The session authorization information.
@@ -130,44 +111,6 @@ public interface ICFSecProtSecUserEMConfTable
 	 */
 	public void protdeleteSecUserEMConfByConfEMAddrIdx( ICFSecPubAuthorization Authorization,
 		ICFSecProtSecUserEMConfByConfEMAddrIdxKey argKey );
-	/**
-	 *	Delete the SecUserEMConf instances identified by the key SentStampIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	EMailSentStamp	The SecUserEMConf key attribute of the instance generating the id.
-	 */
-	public void protdeleteSecUserEMConfBySentStampIdx( ICFSecPubAuthorization Authorization,
-		LocalDateTime argEMailSentStamp );
-
-	/**
-	 *	Delete the SecUserEMConf instances identified by the key SentStampIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteSecUserEMConfBySentStampIdx( ICFSecPubAuthorization Authorization,
-		ICFSecProtSecUserEMConfBySentStampIdxKey argKey );
-	/**
-	 *	Delete the SecUserEMConf instances identified by the key NewAcctIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	NewAccount	The SecUserEMConf key attribute of the instance generating the id.
-	 */
-	public void protdeleteSecUserEMConfByNewAcctIdx( ICFSecPubAuthorization Authorization,
-		boolean argNewAccount );
-
-	/**
-	 *	Delete the SecUserEMConf instances identified by the key NewAcctIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	argKey	The key identifying the instances to be deleted.
-	 */
-	public void protdeleteSecUserEMConfByNewAcctIdx( ICFSecPubAuthorization Authorization,
-		ICFSecProtSecUserEMConfByNewAcctIdxKey argKey );
 
 
 	/**
@@ -219,19 +162,6 @@ public interface ICFSecProtSecUserEMConfTable
 		CFLibDbKeyHash256 SecUserId );
 
 	/**
-	 *	Read the derived SecUserEMConf record instance identified by the unique key UUuid6Idx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	EMConfirmationUuid6	The SecUserEMConf key attribute of the instance generating the id.
-	 *
-	 *	@return The record instance for the specified key, or null if there is
-	 *		no such existing key value.
-	 */
-	public ICFSecProtSecUserEMConf protreadDerivedByUUuid6Idx( ICFSecPubAuthorization Authorization,
-		CFLibUuid6 EMConfirmationUuid6 );
-
-	/**
 	 *	Read an array of the derived SecUserEMConf record instances identified by the duplicate key ConfEMAddrIdx.
 	 *
 	 *	@param	Authorization	The session authorization information.
@@ -242,30 +172,6 @@ public interface ICFSecProtSecUserEMConfTable
 	 */
 	public ICFSecProtSecUserEMConf[] protreadDerivedByConfEMAddrIdx( ICFSecPubAuthorization Authorization,
 		String ConfirmEMailAddr );
-
-	/**
-	 *	Read an array of the derived SecUserEMConf record instances identified by the duplicate key SentStampIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	EMailSentStamp	The SecUserEMConf key attribute of the instance generating the id.
-	 *
-	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
-	 */
-	public ICFSecProtSecUserEMConf[] protreadDerivedBySentStampIdx( ICFSecPubAuthorization Authorization,
-		LocalDateTime EMailSentStamp );
-
-	/**
-	 *	Read an array of the derived SecUserEMConf record instances identified by the duplicate key NewAcctIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	NewAccount	The SecUserEMConf key attribute of the instance generating the id.
-	 *
-	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
-	 */
-	public ICFSecProtSecUserEMConf[] protreadDerivedByNewAcctIdx( ICFSecPubAuthorization Authorization,
-		boolean NewAccount );
 
 	/**
 	 *	Read the specific SecUserEMConf record instance identified by the primary key.
@@ -332,21 +238,6 @@ public interface ICFSecProtSecUserEMConfTable
 		CFLibDbKeyHash256 SecUserId );
 
 	/**
-	 *	Read the specific SecUserEMConf record instance identified by the unique key UUuid6Idx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	EMConfirmationUuid6	The SecUserEMConf key attribute of the instance generating the id.
-	 *
-	 *	@return The record instance for the specified key, or null if there is
-	 *		no such existing key value.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFSecProtSecUserEMConf protreadRecByUUuid6Idx( ICFSecPubAuthorization Authorization,
-		CFLibUuid6 EMConfirmationUuid6 );
-
-	/**
 	 *	Read an array of the specific SecUserEMConf record instances identified by the duplicate key ConfEMAddrIdx.
 	 *
 	 *	@param	Authorization	The session authorization information.
@@ -361,34 +252,6 @@ public interface ICFSecProtSecUserEMConfTable
 		String ConfirmEMailAddr );
 
 	/**
-	 *	Read an array of the specific SecUserEMConf record instances identified by the duplicate key SentStampIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	EMailSentStamp	The SecUserEMConf key attribute of the instance generating the id.
-	 *
-	 *	@return An array of derived record instances for the specified key, potentially with 0 elements in the set.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFSecProtSecUserEMConf[] protreadRecBySentStampIdx( ICFSecPubAuthorization Authorization,
-		LocalDateTime EMailSentStamp );
-
-	/**
-	 *	Read an array of the specific SecUserEMConf record instances identified by the duplicate key NewAcctIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	NewAccount	The SecUserEMConf key attribute of the instance generating the id.
-	 *
-	 *	@return An array of derived record instances for the specified key, potentially with 0 elements in the set.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFSecProtSecUserEMConf[] protreadRecByNewAcctIdx( ICFSecPubAuthorization Authorization,
-		boolean NewAccount );
-
-	/**
 	 *	Read a page array of the specific SecUserEMConf record instances identified by the duplicate key ConfEMAddrIdx.
 	 *
 	 *	@param	Authorization	The session authorization information.
@@ -401,35 +264,5 @@ public interface ICFSecProtSecUserEMConfTable
 	 */
 	public ICFSecProtSecUserEMConf[] protpageRecByConfEMAddrIdx( ICFSecPubAuthorization Authorization,
 		String ConfirmEMailAddr,
-		CFLibDbKeyHash256 priorSecUserId );
-
-	/**
-	 *	Read a page array of the specific SecUserEMConf record instances identified by the duplicate key SentStampIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	EMailSentStamp	The SecUserEMConf key attribute of the instance generating the id.
-	 *
-	 *	@return An array of derived record instances for the specified key, potentially with 0 elements in the set.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFSecProtSecUserEMConf[] protpageRecBySentStampIdx( ICFSecPubAuthorization Authorization,
-		LocalDateTime EMailSentStamp,
-		CFLibDbKeyHash256 priorSecUserId );
-
-	/**
-	 *	Read a page array of the specific SecUserEMConf record instances identified by the duplicate key NewAcctIdx.
-	 *
-	 *	@param	Authorization	The session authorization information.
-	 *
-	 *	@param	NewAccount	The SecUserEMConf key attribute of the instance generating the id.
-	 *
-	 *	@return An array of derived record instances for the specified key, potentially with 0 elements in the set.
-	 *
-	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
-	 */
-	public ICFSecProtSecUserEMConf[] protpageRecByNewAcctIdx( ICFSecPubAuthorization Authorization,
-		boolean NewAccount,
 		CFLibDbKeyHash256 priorSecUserId );
 }

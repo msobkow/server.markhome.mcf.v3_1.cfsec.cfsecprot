@@ -77,20 +77,6 @@ public interface ICFSecProtISOCcyFactory extends ICFSecPubISOCcyFactory
 	public ICFSecPubISOCcyByCcyCdIdxKey asPublic(ICFSecProtISOCcyByCcyCdIdxKey src);
 
 	/**
-	 *	Allocate a protected CcyNmIdx key over protected ISOCcy instances.
-	 *
-	 *	@return	The new instance.
-	 */
-	public ICFSecProtISOCcyByCcyNmIdxKey newProtByCcyNmIdxKey();
-
-	/**
-	 *	Allocate a public CcyNmIdx key from a protected instance.
-	 *
-	 *	@return	The new instance.
-	 */
-	public ICFSecPubISOCcyByCcyNmIdxKey asPublic(ICFSecProtISOCcyByCcyNmIdxKey src);
-
-	/**
 	 *	Allocate a protected ISOCcy interface implementation.
 	 *
 	 *	@return	The new instance.
