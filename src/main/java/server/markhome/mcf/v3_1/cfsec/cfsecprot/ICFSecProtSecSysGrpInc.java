@@ -80,10 +80,14 @@ public interface ICFSecProtSecSysGrpInc
 	public void setRequiredContainerGroup(CFLibDbKeyHash256 argSecSysGrpId);
 
 
+	public void setRequiredContainerGroup(ICFSecProtSecSysGrp argObj);
+
 	public ICFSecProtSecSysGrp getRequiredParentSubGroup();
 
 	public void setRequiredParentSubGroup(String argInclName);
 
+
+	public void setRequiredParentSubGroup(ICFSecProtSecSysGrp argObj);
 
 	public CFLibDbKeyHash256 getRequiredSecSysGrpId();
 

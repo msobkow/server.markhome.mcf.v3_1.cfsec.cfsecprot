@@ -81,10 +81,18 @@ public interface ICFSecProtISOCtryLang
 	public void setRequiredContainerCtry(short argISOCtryId);
 
 
+	public void setRequiredContainerCtry(ICFSecProtISOCtry argObj);
+
+	public void setRequiredContainerCtry(ICFSecPubISOCtry argObj);
+
 	public ICFSecProtISOLang getRequiredParentLang();
 
 	public void setRequiredParentLang(short argISOLangId);
 
+
+	public void setRequiredParentLang(ICFSecProtISOLang argObj);
+
+	public void setRequiredParentLang(ICFSecPubISOLang argObj);
 
 	public short getRequiredISOCtryId();
 

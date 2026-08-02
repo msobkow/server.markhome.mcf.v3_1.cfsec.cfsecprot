@@ -80,10 +80,14 @@ public interface ICFSecProtSecClusGrpMemb
 	public void setRequiredContainerGroup(CFLibDbKeyHash256 argSecClusGrpId);
 
 
+	public void setRequiredContainerGroup(ICFSecProtSecClusGrp argObj);
+
 	public ICFSecProtSecUser getRequiredParentUser();
 
 	public void setRequiredParentUser(String argLoginId);
 
+
+	public void setRequiredParentUser(ICFSecProtSecUser argObj);
 
 	public CFLibDbKeyHash256 getRequiredSecClusGrpId();
 

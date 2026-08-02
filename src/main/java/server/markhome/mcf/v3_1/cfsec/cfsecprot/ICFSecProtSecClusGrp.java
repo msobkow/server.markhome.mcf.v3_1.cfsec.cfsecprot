@@ -89,10 +89,14 @@ public interface ICFSecProtSecClusGrp
 	public void setRequiredOwnerCluster(CFLibDbKeyHash256 argClusterId);
 
 
+	public void setRequiredOwnerCluster(ICFSecProtCluster argObj);
+
 	public ICFSecProtSecSysGrp getRequiredContainerSysGrp();
 
 	public void setRequiredContainerSysGrp(String argName);
 
+
+	public void setRequiredContainerSysGrp(ICFSecProtSecSysGrp argObj);
 
 	public CFLibDbKeyHash256 getRequiredClusterId();
 	public String getRequiredName();

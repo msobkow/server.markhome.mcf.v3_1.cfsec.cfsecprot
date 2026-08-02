@@ -81,10 +81,18 @@ public interface ICFSecProtISOCtryCcy
 	public void setRequiredContainerCtry(short argISOCtryId);
 
 
+	public void setRequiredContainerCtry(ICFSecProtISOCtry argObj);
+
+	public void setRequiredContainerCtry(ICFSecPubISOCtry argObj);
+
 	public ICFSecProtISOCcy getRequiredParentCcy();
 
 	public void setRequiredParentCcy(short argISOCcyId);
 
+
+	public void setRequiredParentCcy(ICFSecProtISOCcy argObj);
+
+	public void setRequiredParentCcy(ICFSecPubISOCcy argObj);
 
 	public short getRequiredISOCtryId();
 

@@ -80,10 +80,14 @@ public interface ICFSecProtSecClusRoleMemb
 	public void setRequiredContainerRole(CFLibDbKeyHash256 argSecClusRoleId);
 
 
+	public void setRequiredContainerRole(ICFSecProtSecClusRole argObj);
+
 	public ICFSecProtSecUser getRequiredParentUser();
 
 	public void setRequiredParentUser(String argLoginId);
 
+
+	public void setRequiredParentUser(ICFSecProtSecUser argObj);
 
 	public CFLibDbKeyHash256 getRequiredSecClusRoleId();
 

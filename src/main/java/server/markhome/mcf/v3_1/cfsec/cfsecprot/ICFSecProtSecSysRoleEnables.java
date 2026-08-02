@@ -80,10 +80,14 @@ public interface ICFSecProtSecSysRoleEnables
 	public void setRequiredContainerSysRole(CFLibDbKeyHash256 argSecSysRoleId);
 
 
+	public void setRequiredContainerSysRole(ICFSecProtSecSysRole argObj);
+
 	public ICFSecProtSecSysGrp getRequiredParentEnableGroup();
 
 	public void setRequiredParentEnableGroup(String argEnableName);
 
+
+	public void setRequiredParentEnableGroup(ICFSecProtSecSysGrp argObj);
 
 	public CFLibDbKeyHash256 getRequiredSecSysRoleId();
 

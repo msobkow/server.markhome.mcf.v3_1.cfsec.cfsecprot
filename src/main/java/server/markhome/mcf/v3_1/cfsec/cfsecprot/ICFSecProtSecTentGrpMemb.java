@@ -80,10 +80,14 @@ public interface ICFSecProtSecTentGrpMemb
 	public void setRequiredContainerGroup(CFLibDbKeyHash256 argSecTentGrpId);
 
 
+	public void setRequiredContainerGroup(ICFSecProtSecTentGrp argObj);
+
 	public ICFSecProtSecUser getRequiredParentUser();
 
 	public void setRequiredParentUser(String argLoginId);
 
+
+	public void setRequiredParentUser(ICFSecProtSecUser argObj);
 
 	public CFLibDbKeyHash256 getRequiredSecTentGrpId();
 
