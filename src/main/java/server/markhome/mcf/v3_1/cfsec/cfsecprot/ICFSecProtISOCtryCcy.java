@@ -47,60 +47,79 @@ public interface ICFSecProtISOCtryCcy
 {
 	public static final short ISOCTRYID_MIN_VALUE = (short)0;
 	public static final short ISOCCYID_MIN_VALUE = (short)0;
-	public static final String S_INIT_CREATED_BY = ICFSecPubISOCtryCcy.S_INIT_CREATED_BY;
-	public static final CFLibDbKeyHash256 INIT_CREATED_BY = ICFSecPubISOCtryCcy.INIT_CREATED_BY;
-	public static final String S_INIT_UPDATED_BY = ICFSecPubISOCtryCcy.S_INIT_UPDATED_BY;
-	public static final CFLibDbKeyHash256 INIT_UPDATED_BY = ICFSecPubISOCtryCcy.INIT_UPDATED_BY;
-	public static final short ISOCTRYID_INIT_VALUE = ICFSecPubISOCtryCcy.ISOCTRYID_INIT_VALUE;
-	public static final short ISOCCYID_INIT_VALUE = ICFSecPubISOCtryCcy.ISOCCYID_INIT_VALUE;
+	public static final String S_INIT_CREATED_BY = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 INIT_CREATED_BY = CFLibDbKeyHash256.fromHex(S_INIT_CREATED_BY);
+	public static final String S_INIT_UPDATED_BY = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 INIT_UPDATED_BY = CFLibDbKeyHash256.fromHex(S_INIT_UPDATED_BY);
+	public static final short ISOCTRYID_INIT_VALUE = (short)0;
+	public static final short ISOCCYID_INIT_VALUE = (short)0;
 	public final static int CLASS_CODE = 0xa005;
 	public final static String S_CLASS_CODE = "a005";
 
 	public int getClassCode();
 
 	public CFLibDbKeyHash256 getCreatedByUserId();
+
 	public void setCreatedByUserId( CFLibDbKeyHash256 value );
+
 	public LocalDateTime getCreatedAt();
+
 	public void setCreatedAt( LocalDateTime value );
+
 	public CFLibDbKeyHash256 getUpdatedByUserId();
+
 	public void setUpdatedByUserId( CFLibDbKeyHash256 value );
+
 	public LocalDateTime getUpdatedAt();
+
 	public void setUpdatedAt( LocalDateTime value );
 
 	public ICFSecProtISOCtryCcyPKey getPKey();
 	public void setPKey(ICFSecProtISOCtryCcyPKey pkey );
-	
 	public ICFSecProtISOCtry getRequiredContainerCtry();
-	public void setRequiredContainerCtry(ICFSecProtISOCtry argObj);
+
 	public void setRequiredContainerCtry(short argISOCtryId);
+
+
 	public ICFSecProtISOCcy getRequiredParentCcy();
-	public void setRequiredParentCcy(ICFSecProtISOCcy argObj);
+
 	public void setRequiredParentCcy(short argISOCcyId);
+
+
 	public short getRequiredISOCtryId();
+
+	public void setRequiredISOCtryId(short value);
+
 	public short getRequiredISOCcyId();
+
+	public void setRequiredISOCcyId(short value);
+
 	public int getRequiredRevision();
 	public void setRequiredRevision( int value );
 
-	@Override
 	public boolean equals( Object obj );
-	
-	@Override
+
 	public int hashCode();
 
-	//@Override not necessary because interfaces aren't able to implement Comparable, but they can double-team on the requirement
 	public int compareTo( Object obj );
 
 	public void set( ICFSecProtISOCtryCcy src );
-	public void setISOCtryCcy( ICFSecProtISOCtryCcy src );
-	public void set( ICFSecPubISOCtryCcy src );
-	public void set( ICFSecProtISOCtryCcyH src );
-	public void setISOCtryCcy( ICFSecProtISOCtryCcyH src );
-	public void set( ICFSecPubISOCtryCcyH src );
-	public void setISOCtryCcy( ICFSecPubISOCtryCcyH src );
 
+	public void setISOCtryCcy( ICFSecProtISOCtryCcy src );
+
+	public void set( ICFSecProtISOCtryCcyH src );
+
+	public void setISOCtryCcy( ICFSecProtISOCtryCcyH src );
+
+	public void set( ICFSecPubISOCtryCcy src );
+
+	public void setISOCtryCcy( ICFSecPubISOCtryCcy src );
+
+	public void set( ICFSecPubISOCtryCcyH src );
+
+	public void setISOCtryCcy( ICFSecPubISOCtryCcyH src );
 
 	public String getXmlAttrFragment();
 
-	@Override
 	public String toString();
 }

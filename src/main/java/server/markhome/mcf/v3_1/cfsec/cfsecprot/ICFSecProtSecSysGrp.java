@@ -47,69 +47,87 @@ public interface ICFSecProtSecSysGrp
 {
 	public static final ICFSecPubSchema.SecLevelEnum SECLEVEL_MIN_VALUE = ICFSecPubSchema.SecLevelEnum.System;
 	public static final ICFSecPubSchema.SecLevelEnum SECLEVEL_MAX_VALUE = ICFSecPubSchema.SecLevelEnum.TentRole;
-	public static final String S_INIT_CREATED_BY = ICFSecPubSecSysGrp.S_INIT_CREATED_BY;
-	public static final CFLibDbKeyHash256 INIT_CREATED_BY = ICFSecPubSecSysGrp.INIT_CREATED_BY;
-	public static final String S_INIT_UPDATED_BY = ICFSecPubSecSysGrp.S_INIT_UPDATED_BY;
-	public static final CFLibDbKeyHash256 INIT_UPDATED_BY = ICFSecPubSecSysGrp.INIT_UPDATED_BY;
-	public static final String S_SECSYSGRPID_INIT_VALUE = ICFSecPubSecSysGrp.S_SECSYSGRPID_INIT_VALUE;
-	public static final CFLibDbKeyHash256 SECSYSGRPID_INIT_VALUE = ICFSecPubSecSysGrp.SECSYSGRPID_INIT_VALUE;
-	public static final String NAME_INIT_VALUE = ICFSecPubSecSysGrp.NAME_INIT_VALUE;
-	public static final ICFSecPubSchema.SecLevelEnum SECLEVEL_INIT_VALUE = ICFSecPubSecSysGrp.SECLEVEL_INIT_VALUE;
+	public static final String S_INIT_CREATED_BY = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 INIT_CREATED_BY = CFLibDbKeyHash256.fromHex(S_INIT_CREATED_BY);
+	public static final String S_INIT_UPDATED_BY = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 INIT_UPDATED_BY = CFLibDbKeyHash256.fromHex(S_INIT_UPDATED_BY);
+	public static final String S_SECSYSGRPID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 SECSYSGRPID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_SECSYSGRPID_INIT_VALUE );
+	public static final String NAME_INIT_VALUE = new String( "" );
+	public static final ICFSecPubSchema.SecLevelEnum SECLEVEL_INIT_VALUE = ICFSecPubSchema.ordinalToSecLevelEnum( 0 );
 	public final static int CLASS_CODE = 0xa00e;
 	public final static String S_CLASS_CODE = "a00e";
 
 	public int getClassCode();
 
 	public CFLibDbKeyHash256 getCreatedByUserId();
+
 	public void setCreatedByUserId( CFLibDbKeyHash256 value );
+
 	public LocalDateTime getCreatedAt();
+
 	public void setCreatedAt( LocalDateTime value );
+
 	public CFLibDbKeyHash256 getUpdatedByUserId();
+
 	public void setUpdatedByUserId( CFLibDbKeyHash256 value );
+
 	public LocalDateTime getUpdatedAt();
+
 	public void setUpdatedAt( LocalDateTime value );
 
 	public CFLibDbKeyHash256 getPKey();
 	public void setPKey(CFLibDbKeyHash256 requiredSecSysGrpId);
-	
 	public List<ICFSecProtSecSysGrpInc> getOptionalComponentsIncByGrp();
+
 	public List<ICFSecProtSecSysGrpMemb> getOptionalChildrenMembByGrp();
+
 	public ICFSecProtSecSysRole getOptionalComponentsImplSysRole();
+
 	public CFLibDbKeyHash256 getRequiredSecSysGrpId();
 	public void setRequiredSecSysGrpId( CFLibDbKeyHash256 value );
 	public int getRequiredRevision();
 	public void setRequiredRevision( int value );
 
 	public List<ICFSecProtSecClusGrp> getOptionalComponentsImplClusGrp();
+
 	public List<ICFSecProtSecTentGrp> getOptionalComponentsImplTentGrp();
+
 	public List<ICFSecProtSecClusRole> getOptionalComponentsImplClusRole();
+
 	public List<ICFSecProtSecTentRole> getOptionalComponentsImplTentRole();
+
 	public List<ICFSecProtSecSysGrpInc> getOptionalChildrenSysGrpByName();
+
 	public List<ICFSecProtSecSysRoleEnables> getOptionalChildrenRoleByEnableName();
+
 	public String getRequiredName();
 	public void setRequiredName( String value );
 	public ICFSecPubSchema.SecLevelEnum getRequiredSecLevel();
 	public void setRequiredSecLevel( ICFSecPubSchema.SecLevelEnum value );
-	@Override
 	public boolean equals( Object obj );
-	
-	@Override
+
 	public int hashCode();
 
-	//@Override not necessary because interfaces aren't able to implement Comparable, but they can double-team on the requirement
 	public int compareTo( Object obj );
 
 	public void set( ICFSecProtSecSysGrp src );
-	public void setSecSysGrp( ICFSecProtSecSysGrp src );
-	public void set( ICFSecPubSecSysGrp src );
-	public void set( ICFSecProtSecSysGrpH src );
-	public void setSecSysGrp( ICFSecProtSecSysGrpH src );
-	public void set( ICFSecPubSecSysGrpH src );
-	public void setSecSysGrp( ICFSecPubSecSysGrpH src );
 
+	public void setSecSysGrp( ICFSecProtSecSysGrp src );
+
+	public void set( ICFSecProtSecSysGrpH src );
+
+	public void setSecSysGrp( ICFSecProtSecSysGrpH src );
+
+	public void set( ICFSecPubSecSysGrp src );
+
+	public void setSecSysGrp( ICFSecPubSecSysGrp src );
+
+	public void set( ICFSecPubSecSysGrpH src );
+
+	public void setSecSysGrp( ICFSecPubSecSysGrpH src );
 
 	public String getXmlAttrFragment();
 
-	@Override
 	public String toString();
 }

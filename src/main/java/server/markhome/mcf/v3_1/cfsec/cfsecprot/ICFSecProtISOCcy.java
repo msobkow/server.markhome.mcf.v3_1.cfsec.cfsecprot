@@ -48,32 +48,39 @@ public interface ICFSecProtISOCcy
 	public static final short ISOCCYID_MIN_VALUE = (short)0;
 	public static final short PRECIS_MIN_VALUE = (short)0;
 	public static final short PRECIS_MAX_VALUE = (short)5;
-	public static final String S_INIT_CREATED_BY = ICFSecPubISOCcy.S_INIT_CREATED_BY;
-	public static final CFLibDbKeyHash256 INIT_CREATED_BY = ICFSecPubISOCcy.INIT_CREATED_BY;
-	public static final String S_INIT_UPDATED_BY = ICFSecPubISOCcy.S_INIT_UPDATED_BY;
-	public static final CFLibDbKeyHash256 INIT_UPDATED_BY = ICFSecPubISOCcy.INIT_UPDATED_BY;
-	public static final short ISOCCYID_INIT_VALUE = ICFSecPubISOCcy.ISOCCYID_INIT_VALUE;
-	public static final String ISOCODE_INIT_VALUE = ICFSecPubISOCcy.ISOCODE_INIT_VALUE;
-	public static final String NAME_INIT_VALUE = ICFSecPubISOCcy.NAME_INIT_VALUE;
-	public static final short PRECIS_INIT_VALUE = ICFSecPubISOCcy.PRECIS_INIT_VALUE;
+	public static final String S_INIT_CREATED_BY = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 INIT_CREATED_BY = CFLibDbKeyHash256.fromHex(S_INIT_CREATED_BY);
+	public static final String S_INIT_UPDATED_BY = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 INIT_UPDATED_BY = CFLibDbKeyHash256.fromHex(S_INIT_UPDATED_BY);
+	public static final short ISOCCYID_INIT_VALUE = (short)0;
+	public static final String ISOCODE_INIT_VALUE = new String( "" );
+	public static final String NAME_INIT_VALUE = new String( "" );
+	public static final short PRECIS_INIT_VALUE = (short)0;
 	public final static int CLASS_CODE = 0xa003;
 	public final static String S_CLASS_CODE = "a003";
 
 	public int getClassCode();
 
 	public CFLibDbKeyHash256 getCreatedByUserId();
+
 	public void setCreatedByUserId( CFLibDbKeyHash256 value );
+
 	public LocalDateTime getCreatedAt();
+
 	public void setCreatedAt( LocalDateTime value );
+
 	public CFLibDbKeyHash256 getUpdatedByUserId();
+
 	public void setUpdatedByUserId( CFLibDbKeyHash256 value );
+
 	public LocalDateTime getUpdatedAt();
+
 	public void setUpdatedAt( LocalDateTime value );
 
 	public Short getPKey();
 	public void setPKey(Short requiredISOCcyId);
-	
 	public List<ICFSecProtISOCtryCcy> getOptionalChildrenCtry();
+
 	public short getRequiredISOCcyId();
 	public void setRequiredISOCcyId( short value );
 	public int getRequiredRevision();
@@ -87,26 +94,29 @@ public interface ICFSecProtISOCcy
 	public void setOptionalUnitSymbol( String value );
 	public short getRequiredPrecis();
 	public void setRequiredPrecis( short value );
-	@Override
 	public boolean equals( Object obj );
-	
-	@Override
+
 	public int hashCode();
 
-	//@Override not necessary because interfaces aren't able to implement Comparable, but they can double-team on the requirement
 	public int compareTo( Object obj );
 
 	public void set( ICFSecProtISOCcy src );
-	public void setISOCcy( ICFSecProtISOCcy src );
-	public void set( ICFSecPubISOCcy src );
-	public void set( ICFSecProtISOCcyH src );
-	public void setISOCcy( ICFSecProtISOCcyH src );
-	public void set( ICFSecPubISOCcyH src );
-	public void setISOCcy( ICFSecPubISOCcyH src );
 
+	public void setISOCcy( ICFSecProtISOCcy src );
+
+	public void set( ICFSecProtISOCcyH src );
+
+	public void setISOCcy( ICFSecProtISOCcyH src );
+
+	public void set( ICFSecPubISOCcy src );
+
+	public void setISOCcy( ICFSecPubISOCcy src );
+
+	public void set( ICFSecPubISOCcyH src );
+
+	public void setISOCcy( ICFSecPubISOCcyH src );
 
 	public String getXmlAttrFragment();
 
-	@Override
 	public String toString();
 }

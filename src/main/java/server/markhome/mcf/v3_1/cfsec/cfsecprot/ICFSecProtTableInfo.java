@@ -48,16 +48,16 @@ public interface ICFSecProtTableInfo
 	public static final int TABLEINFOID_MIN_VALUE = 0;
 	public static final int BACKINGCLASSCODE_MIN_VALUE = 0;
 	public static final int RUNTIMECLASSCODE_MIN_VALUE = 0;
-	public static final int TABLEINFOID_INIT_VALUE = ICFSecPubTableInfo.TABLEINFOID_INIT_VALUE;
-	public static final String SCHEMANAME_INIT_VALUE = ICFSecPubTableInfo.SCHEMANAME_INIT_VALUE;
-	public static final String TABLENAME_INIT_VALUE = ICFSecPubTableInfo.TABLENAME_INIT_VALUE;
-	public static final String SUPERNAME_INIT_VALUE = ICFSecPubTableInfo.SUPERNAME_INIT_VALUE;
-	public static final int BACKINGCLASSCODE_INIT_VALUE = ICFSecPubTableInfo.BACKINGCLASSCODE_INIT_VALUE;
-	public static final int RUNTIMECLASSCODE_INIT_VALUE = ICFSecPubTableInfo.RUNTIMECLASSCODE_INIT_VALUE;
-	public final static boolean HASHISTORY_INIT_VALUE = ICFSecPubTableInfo.HASHISTORY_INIT_VALUE;
-	public final static boolean ISMUTABLE_INIT_VALUE = ICFSecPubTableInfo.ISMUTABLE_INIT_VALUE;
-	public static final String SECSCOPENAME_INIT_VALUE = ICFSecPubTableInfo.SECSCOPENAME_INIT_VALUE;
-	public static final String CODEVIS_INIT_VALUE = ICFSecPubTableInfo.CODEVIS_INIT_VALUE;
+	public static final int TABLEINFOID_INIT_VALUE = 0;
+	public static final String SCHEMANAME_INIT_VALUE = new String( "" );
+	public static final String TABLENAME_INIT_VALUE = new String( "" );
+	public static final String SUPERNAME_INIT_VALUE = new String( "" );
+	public static final int BACKINGCLASSCODE_INIT_VALUE = 0;
+	public static final int RUNTIMECLASSCODE_INIT_VALUE = 0;
+	public final static boolean HASHISTORY_INIT_VALUE = false;
+	public final static boolean ISMUTABLE_INIT_VALUE = false;
+	public static final String SECSCOPENAME_INIT_VALUE = new String( "" );
+	public static final String CODEVIS_INIT_VALUE = new String( "" );
 	public final static int CLASS_CODE = 0xa020;
 	public final static String S_CLASS_CODE = "a020";
 
@@ -65,25 +65,18 @@ public interface ICFSecProtTableInfo
 
 	public Integer getPKey();
 	public void setPKey(Integer requiredTableInfoId);
-	
 	public int getRequiredTableInfoId();
 	public void setRequiredTableInfoId( int value );
 	public int getRequiredRevision();
 	public void setRequiredRevision( int value );
 
 	public ICFSecProtTableInfo getOptionalParentSuperRef();
-	public List<ICFSecProtTableInfo> getOptionalChildrenSubRefs();
-	public void setOptionalParentSuperRef(ICFSecProtTableInfo argObj);
-	public default void setOptionalParentSuperRef(ICFSecPubTableInfo argObj) {
-		if (argObj == null) {
-			setOptionalParentSuperRef((ICFSecProtTableInfo)null);
-		}
-		else {
-			setOptionalParentSuperRef(argObj.getRequiredTableName());
-		}
-	}
 
 	public void setOptionalParentSuperRef(String argSuperName);
+
+
+	public List<ICFSecProtTableInfo> getOptionalChildrenSubRefs();
+
 	public String getRequiredSchemaName();
 	public void setRequiredSchemaName( String value );
 	public String getRequiredTableName();
@@ -101,26 +94,29 @@ public interface ICFSecProtTableInfo
 	public void setRequiredSecScopeName( String value );
 	public String getRequiredCodeVis();
 	public void setRequiredCodeVis( String value );
-	@Override
 	public boolean equals( Object obj );
-	
-	@Override
+
 	public int hashCode();
 
-	//@Override not necessary because interfaces aren't able to implement Comparable, but they can double-team on the requirement
 	public int compareTo( Object obj );
 
 	public void set( ICFSecProtTableInfo src );
-	public void setTableInfo( ICFSecProtTableInfo src );
-	public void set( ICFSecPubTableInfo src );
-	public void set( ICFSecProtTableInfoH src );
-	public void setTableInfo( ICFSecProtTableInfoH src );
-	public void set( ICFSecPubTableInfoH src );
-	public void setTableInfo( ICFSecPubTableInfoH src );
 
+	public void setTableInfo( ICFSecProtTableInfo src );
+
+	public void set( ICFSecProtTableInfoH src );
+
+	public void setTableInfo( ICFSecProtTableInfoH src );
+
+	public void set( ICFSecPubTableInfo src );
+
+	public void setTableInfo( ICFSecPubTableInfo src );
+
+	public void set( ICFSecPubTableInfoH src );
+
+	public void setTableInfo( ICFSecPubTableInfoH src );
 
 	public String getXmlAttrFragment();
 
-	@Override
 	public String toString();
 }

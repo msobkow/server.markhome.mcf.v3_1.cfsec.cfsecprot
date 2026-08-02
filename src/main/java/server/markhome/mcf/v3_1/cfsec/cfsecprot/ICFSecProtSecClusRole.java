@@ -60,47 +60,57 @@ public interface ICFSecProtSecClusRole
 	public int getClassCode();
 
 	public CFLibDbKeyHash256 getCreatedByUserId();
+
 	public void setCreatedByUserId( CFLibDbKeyHash256 value );
+
 	public LocalDateTime getCreatedAt();
+
 	public void setCreatedAt( LocalDateTime value );
+
 	public CFLibDbKeyHash256 getUpdatedByUserId();
+
 	public void setUpdatedByUserId( CFLibDbKeyHash256 value );
+
 	public LocalDateTime getUpdatedAt();
+
 	public void setUpdatedAt( LocalDateTime value );
 
 	public CFLibDbKeyHash256 getPKey();
 	public void setPKey(CFLibDbKeyHash256 requiredSecClusRoleId);
-	
 	public List<ICFSecProtSecClusRoleMemb> getOptionalChildrenMembByGrp();
+
 	public CFLibDbKeyHash256 getRequiredSecClusRoleId();
 	public void setRequiredSecClusRoleId( CFLibDbKeyHash256 value );
 	public int getRequiredRevision();
 	public void setRequiredRevision( int value );
 
 	public ICFSecProtCluster getRequiredOwnerCluster();
-	public ICFSecProtSecSysGrp getRequiredContainerSysRole();
-	public void setRequiredOwnerCluster(ICFSecProtCluster argObj);
+
 	public void setRequiredOwnerCluster(CFLibDbKeyHash256 argClusterId);
-	public void setRequiredContainerSysRole(ICFSecProtSecSysGrp argObj);
+
+
+	public ICFSecProtSecSysGrp getRequiredContainerSysRole();
+
 	public void setRequiredContainerSysRole(String argName);
+
+
 	public CFLibDbKeyHash256 getRequiredClusterId();
 	public String getRequiredName();
-	@Override
 	public boolean equals( Object obj );
-	
-	@Override
+
 	public int hashCode();
 
-	//@Override not necessary because interfaces aren't able to implement Comparable, but they can double-team on the requirement
 	public int compareTo( Object obj );
 
 	public void set( ICFSecProtSecClusRole src );
+
 	public void setSecClusRole( ICFSecProtSecClusRole src );
+
 	public void set( ICFSecProtSecClusRoleH src );
+
 	public void setSecClusRole( ICFSecProtSecClusRoleH src );
 
 	public String getXmlAttrFragment();
 
-	@Override
 	public String toString();
 }

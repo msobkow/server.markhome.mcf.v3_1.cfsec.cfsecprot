@@ -46,32 +46,40 @@ import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 public interface ICFSecProtISOCtry
 {
 	public static final short ISOCTRYID_MIN_VALUE = (short)0;
-	public static final String S_INIT_CREATED_BY = ICFSecPubISOCtry.S_INIT_CREATED_BY;
-	public static final CFLibDbKeyHash256 INIT_CREATED_BY = ICFSecPubISOCtry.INIT_CREATED_BY;
-	public static final String S_INIT_UPDATED_BY = ICFSecPubISOCtry.S_INIT_UPDATED_BY;
-	public static final CFLibDbKeyHash256 INIT_UPDATED_BY = ICFSecPubISOCtry.INIT_UPDATED_BY;
-	public static final short ISOCTRYID_INIT_VALUE = ICFSecPubISOCtry.ISOCTRYID_INIT_VALUE;
-	public static final String ISOCODE_INIT_VALUE = ICFSecPubISOCtry.ISOCODE_INIT_VALUE;
-	public static final String NAME_INIT_VALUE = ICFSecPubISOCtry.NAME_INIT_VALUE;
+	public static final String S_INIT_CREATED_BY = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 INIT_CREATED_BY = CFLibDbKeyHash256.fromHex(S_INIT_CREATED_BY);
+	public static final String S_INIT_UPDATED_BY = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 INIT_UPDATED_BY = CFLibDbKeyHash256.fromHex(S_INIT_UPDATED_BY);
+	public static final short ISOCTRYID_INIT_VALUE = (short)0;
+	public static final String ISOCODE_INIT_VALUE = new String( "" );
+	public static final String NAME_INIT_VALUE = new String( "" );
 	public final static int CLASS_CODE = 0xa004;
 	public final static String S_CLASS_CODE = "a004";
 
 	public int getClassCode();
 
 	public CFLibDbKeyHash256 getCreatedByUserId();
+
 	public void setCreatedByUserId( CFLibDbKeyHash256 value );
+
 	public LocalDateTime getCreatedAt();
+
 	public void setCreatedAt( LocalDateTime value );
+
 	public CFLibDbKeyHash256 getUpdatedByUserId();
+
 	public void setUpdatedByUserId( CFLibDbKeyHash256 value );
+
 	public LocalDateTime getUpdatedAt();
+
 	public void setUpdatedAt( LocalDateTime value );
 
 	public Short getPKey();
 	public void setPKey(Short requiredISOCtryId);
-	
 	public List<ICFSecProtISOCtryCcy> getOptionalComponentsCcy();
+
 	public List<ICFSecProtISOCtryLang> getOptionalComponentsLang();
+
 	public short getRequiredISOCtryId();
 	public void setRequiredISOCtryId( short value );
 	public int getRequiredRevision();
@@ -81,26 +89,29 @@ public interface ICFSecProtISOCtry
 	public void setRequiredISOCode( String value );
 	public String getRequiredName();
 	public void setRequiredName( String value );
-	@Override
 	public boolean equals( Object obj );
-	
-	@Override
+
 	public int hashCode();
 
-	//@Override not necessary because interfaces aren't able to implement Comparable, but they can double-team on the requirement
 	public int compareTo( Object obj );
 
 	public void set( ICFSecProtISOCtry src );
-	public void setISOCtry( ICFSecProtISOCtry src );
-	public void set( ICFSecPubISOCtry src );
-	public void set( ICFSecProtISOCtryH src );
-	public void setISOCtry( ICFSecProtISOCtryH src );
-	public void set( ICFSecPubISOCtryH src );
-	public void setISOCtry( ICFSecPubISOCtryH src );
 
+	public void setISOCtry( ICFSecProtISOCtry src );
+
+	public void set( ICFSecProtISOCtryH src );
+
+	public void setISOCtry( ICFSecProtISOCtryH src );
+
+	public void set( ICFSecPubISOCtry src );
+
+	public void setISOCtry( ICFSecPubISOCtry src );
+
+	public void set( ICFSecPubISOCtryH src );
+
+	public void setISOCtry( ICFSecPubISOCtryH src );
 
 	public String getXmlAttrFragment();
 
-	@Override
 	public String toString();
 }

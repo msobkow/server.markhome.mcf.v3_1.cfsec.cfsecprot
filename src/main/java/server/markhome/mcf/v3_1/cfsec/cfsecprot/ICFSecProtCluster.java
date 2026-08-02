@@ -45,35 +45,45 @@ import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
  */
 public interface ICFSecProtCluster
 {
-	public static final String S_INIT_CREATED_BY = ICFSecPubCluster.S_INIT_CREATED_BY;
-	public static final CFLibDbKeyHash256 INIT_CREATED_BY = ICFSecPubCluster.INIT_CREATED_BY;
-	public static final String S_INIT_UPDATED_BY = ICFSecPubCluster.S_INIT_UPDATED_BY;
-	public static final CFLibDbKeyHash256 INIT_UPDATED_BY = ICFSecPubCluster.INIT_UPDATED_BY;
-	public static final String S_ID_INIT_VALUE = ICFSecPubCluster.S_ID_INIT_VALUE;
-	public static final CFLibDbKeyHash256 ID_INIT_VALUE = ICFSecPubCluster.ID_INIT_VALUE;
-	public static final String FULLDOMNAME_INIT_VALUE = ICFSecPubCluster.FULLDOMNAME_INIT_VALUE;
-	public static final String DESCRIPTION_INIT_VALUE = ICFSecPubCluster.DESCRIPTION_INIT_VALUE;
+	public static final String S_INIT_CREATED_BY = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 INIT_CREATED_BY = CFLibDbKeyHash256.fromHex(S_INIT_CREATED_BY);
+	public static final String S_INIT_UPDATED_BY = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 INIT_UPDATED_BY = CFLibDbKeyHash256.fromHex(S_INIT_UPDATED_BY);
+	public static final String S_ID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 ID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_ID_INIT_VALUE );
+	public static final String FULLDOMNAME_INIT_VALUE = new String( "" );
+	public static final String DESCRIPTION_INIT_VALUE = new String( "" );
 	public final static int CLASS_CODE = 0xa001;
 	public final static String S_CLASS_CODE = "a001";
 
 	public int getClassCode();
 
 	public CFLibDbKeyHash256 getCreatedByUserId();
+
 	public void setCreatedByUserId( CFLibDbKeyHash256 value );
+
 	public LocalDateTime getCreatedAt();
+
 	public void setCreatedAt( LocalDateTime value );
+
 	public CFLibDbKeyHash256 getUpdatedByUserId();
+
 	public void setUpdatedByUserId( CFLibDbKeyHash256 value );
+
 	public LocalDateTime getUpdatedAt();
+
 	public void setUpdatedAt( LocalDateTime value );
 
 	public CFLibDbKeyHash256 getPKey();
 	public void setPKey(CFLibDbKeyHash256 requiredId);
-	
 	public List<ICFSecProtTenant> getOptionalComponentsTenant();
+
 	public List<ICFSecProtSecClusGrp> getOptionalComponentsSecGroup();
+
 	public List<ICFSecProtSecClusRole> getOptionalComponentsSecRole();
+
 	public List<ICFSecProtSysCluster> getOptionalComponentsSysCluster();
+
 	public CFLibDbKeyHash256 getRequiredId();
 	public void setRequiredId( CFLibDbKeyHash256 value );
 	public int getRequiredRevision();
@@ -83,26 +93,29 @@ public interface ICFSecProtCluster
 	public void setRequiredFullDomName( String value );
 	public String getRequiredDescription();
 	public void setRequiredDescription( String value );
-	@Override
 	public boolean equals( Object obj );
-	
-	@Override
+
 	public int hashCode();
 
-	//@Override not necessary because interfaces aren't able to implement Comparable, but they can double-team on the requirement
 	public int compareTo( Object obj );
 
 	public void set( ICFSecProtCluster src );
-	public void setCluster( ICFSecProtCluster src );
-	public void set( ICFSecPubCluster src );
-	public void set( ICFSecProtClusterH src );
-	public void setCluster( ICFSecProtClusterH src );
-	public void set( ICFSecPubClusterH src );
-	public void setCluster( ICFSecPubClusterH src );
 
+	public void setCluster( ICFSecProtCluster src );
+
+	public void set( ICFSecProtClusterH src );
+
+	public void setCluster( ICFSecProtClusterH src );
+
+	public void set( ICFSecPubCluster src );
+
+	public void setCluster( ICFSecPubCluster src );
+
+	public void set( ICFSecPubClusterH src );
+
+	public void setCluster( ICFSecPubClusterH src );
 
 	public String getXmlAttrFragment();
 
-	@Override
 	public String toString();
 }

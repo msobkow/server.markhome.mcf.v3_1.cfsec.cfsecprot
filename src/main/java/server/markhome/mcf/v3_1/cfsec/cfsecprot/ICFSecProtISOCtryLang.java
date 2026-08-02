@@ -47,60 +47,79 @@ public interface ICFSecProtISOCtryLang
 {
 	public static final short ISOCTRYID_MIN_VALUE = (short)0;
 	public static final short ISOLANGID_MIN_VALUE = (short)0;
-	public static final String S_INIT_CREATED_BY = ICFSecPubISOCtryLang.S_INIT_CREATED_BY;
-	public static final CFLibDbKeyHash256 INIT_CREATED_BY = ICFSecPubISOCtryLang.INIT_CREATED_BY;
-	public static final String S_INIT_UPDATED_BY = ICFSecPubISOCtryLang.S_INIT_UPDATED_BY;
-	public static final CFLibDbKeyHash256 INIT_UPDATED_BY = ICFSecPubISOCtryLang.INIT_UPDATED_BY;
-	public static final short ISOCTRYID_INIT_VALUE = ICFSecPubISOCtryLang.ISOCTRYID_INIT_VALUE;
-	public static final short ISOLANGID_INIT_VALUE = ICFSecPubISOCtryLang.ISOLANGID_INIT_VALUE;
+	public static final String S_INIT_CREATED_BY = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 INIT_CREATED_BY = CFLibDbKeyHash256.fromHex(S_INIT_CREATED_BY);
+	public static final String S_INIT_UPDATED_BY = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 INIT_UPDATED_BY = CFLibDbKeyHash256.fromHex(S_INIT_UPDATED_BY);
+	public static final short ISOCTRYID_INIT_VALUE = (short)0;
+	public static final short ISOLANGID_INIT_VALUE = (short)0;
 	public final static int CLASS_CODE = 0xa006;
 	public final static String S_CLASS_CODE = "a006";
 
 	public int getClassCode();
 
 	public CFLibDbKeyHash256 getCreatedByUserId();
+
 	public void setCreatedByUserId( CFLibDbKeyHash256 value );
+
 	public LocalDateTime getCreatedAt();
+
 	public void setCreatedAt( LocalDateTime value );
+
 	public CFLibDbKeyHash256 getUpdatedByUserId();
+
 	public void setUpdatedByUserId( CFLibDbKeyHash256 value );
+
 	public LocalDateTime getUpdatedAt();
+
 	public void setUpdatedAt( LocalDateTime value );
 
 	public ICFSecProtISOCtryLangPKey getPKey();
 	public void setPKey(ICFSecProtISOCtryLangPKey pkey );
-	
 	public ICFSecProtISOCtry getRequiredContainerCtry();
-	public void setRequiredContainerCtry(ICFSecProtISOCtry argObj);
+
 	public void setRequiredContainerCtry(short argISOCtryId);
+
+
 	public ICFSecProtISOLang getRequiredParentLang();
-	public void setRequiredParentLang(ICFSecProtISOLang argObj);
+
 	public void setRequiredParentLang(short argISOLangId);
+
+
 	public short getRequiredISOCtryId();
+
+	public void setRequiredISOCtryId(short value);
+
 	public short getRequiredISOLangId();
+
+	public void setRequiredISOLangId(short value);
+
 	public int getRequiredRevision();
 	public void setRequiredRevision( int value );
 
-	@Override
 	public boolean equals( Object obj );
-	
-	@Override
+
 	public int hashCode();
 
-	//@Override not necessary because interfaces aren't able to implement Comparable, but they can double-team on the requirement
 	public int compareTo( Object obj );
 
 	public void set( ICFSecProtISOCtryLang src );
-	public void setISOCtryLang( ICFSecProtISOCtryLang src );
-	public void set( ICFSecPubISOCtryLang src );
-	public void set( ICFSecProtISOCtryLangH src );
-	public void setISOCtryLang( ICFSecProtISOCtryLangH src );
-	public void set( ICFSecPubISOCtryLangH src );
-	public void setISOCtryLang( ICFSecPubISOCtryLangH src );
 
+	public void setISOCtryLang( ICFSecProtISOCtryLang src );
+
+	public void set( ICFSecProtISOCtryLangH src );
+
+	public void setISOCtryLang( ICFSecProtISOCtryLangH src );
+
+	public void set( ICFSecPubISOCtryLang src );
+
+	public void setISOCtryLang( ICFSecPubISOCtryLang src );
+
+	public void set( ICFSecPubISOCtryLangH src );
+
+	public void setISOCtryLang( ICFSecPubISOCtryLangH src );
 
 	public String getXmlAttrFragment();
 
-	@Override
 	public String toString();
 }

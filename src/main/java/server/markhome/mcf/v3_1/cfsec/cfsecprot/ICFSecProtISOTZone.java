@@ -50,34 +50,40 @@ public interface ICFSecProtISOTZone
 	public static final short TZMINOFFSET_MIN_VALUE = (short)-59;
 	public static final short TZHOUROFFSET_MAX_VALUE = (short)12;
 	public static final short TZMINOFFSET_MAX_VALUE = (short)59;
-	public static final String S_INIT_CREATED_BY = ICFSecPubISOTZone.S_INIT_CREATED_BY;
-	public static final CFLibDbKeyHash256 INIT_CREATED_BY = ICFSecPubISOTZone.INIT_CREATED_BY;
-	public static final String S_INIT_UPDATED_BY = ICFSecPubISOTZone.S_INIT_UPDATED_BY;
-	public static final CFLibDbKeyHash256 INIT_UPDATED_BY = ICFSecPubISOTZone.INIT_UPDATED_BY;
-	public static final short ISOTZONEID_INIT_VALUE = ICFSecPubISOTZone.ISOTZONEID_INIT_VALUE;
-	public static final String ISO8601_INIT_VALUE = ICFSecPubISOTZone.ISO8601_INIT_VALUE;
-	public static final String TZNAME_INIT_VALUE = ICFSecPubISOTZone.TZNAME_INIT_VALUE;
-	public static final short TZHOUROFFSET_INIT_VALUE = ICFSecPubISOTZone.TZHOUROFFSET_INIT_VALUE;
-	public static final short TZMINOFFSET_INIT_VALUE = ICFSecPubISOTZone.TZMINOFFSET_INIT_VALUE;
-	public static final String DESCRIPTION_INIT_VALUE = ICFSecPubISOTZone.DESCRIPTION_INIT_VALUE;
-	public final static boolean VISIBLE_INIT_VALUE = ICFSecPubISOTZone.VISIBLE_INIT_VALUE;
+	public static final String S_INIT_CREATED_BY = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 INIT_CREATED_BY = CFLibDbKeyHash256.fromHex(S_INIT_CREATED_BY);
+	public static final String S_INIT_UPDATED_BY = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 INIT_UPDATED_BY = CFLibDbKeyHash256.fromHex(S_INIT_UPDATED_BY);
+	public static final short ISOTZONEID_INIT_VALUE = (short)0;
+	public static final String ISO8601_INIT_VALUE = new String( "" );
+	public static final String TZNAME_INIT_VALUE = new String( "" );
+	public static final short TZHOUROFFSET_INIT_VALUE = (short)0;
+	public static final short TZMINOFFSET_INIT_VALUE = (short)0;
+	public static final String DESCRIPTION_INIT_VALUE = new String( "" );
+	public final static boolean VISIBLE_INIT_VALUE = true;
 	public final static int CLASS_CODE = 0xa008;
 	public final static String S_CLASS_CODE = "a008";
 
 	public int getClassCode();
 
 	public CFLibDbKeyHash256 getCreatedByUserId();
+
 	public void setCreatedByUserId( CFLibDbKeyHash256 value );
+
 	public LocalDateTime getCreatedAt();
+
 	public void setCreatedAt( LocalDateTime value );
+
 	public CFLibDbKeyHash256 getUpdatedByUserId();
+
 	public void setUpdatedByUserId( CFLibDbKeyHash256 value );
+
 	public LocalDateTime getUpdatedAt();
+
 	public void setUpdatedAt( LocalDateTime value );
 
 	public Short getPKey();
 	public void setPKey(Short requiredISOTZoneId);
-	
 	public short getRequiredISOTZoneId();
 	public void setRequiredISOTZoneId( short value );
 	public int getRequiredRevision();
@@ -95,26 +101,29 @@ public interface ICFSecProtISOTZone
 	public void setRequiredDescription( String value );
 	public boolean getRequiredVisible();
 	public void setRequiredVisible( boolean value );
-	@Override
 	public boolean equals( Object obj );
-	
-	@Override
+
 	public int hashCode();
 
-	//@Override not necessary because interfaces aren't able to implement Comparable, but they can double-team on the requirement
 	public int compareTo( Object obj );
 
 	public void set( ICFSecProtISOTZone src );
-	public void setISOTZone( ICFSecProtISOTZone src );
-	public void set( ICFSecPubISOTZone src );
-	public void set( ICFSecProtISOTZoneH src );
-	public void setISOTZone( ICFSecProtISOTZoneH src );
-	public void set( ICFSecPubISOTZoneH src );
-	public void setISOTZone( ICFSecPubISOTZoneH src );
 
+	public void setISOTZone( ICFSecProtISOTZone src );
+
+	public void set( ICFSecProtISOTZoneH src );
+
+	public void setISOTZone( ICFSecProtISOTZoneH src );
+
+	public void set( ICFSecPubISOTZone src );
+
+	public void setISOTZone( ICFSecPubISOTZone src );
+
+	public void set( ICFSecPubISOTZoneH src );
+
+	public void setISOTZone( ICFSecPubISOTZoneH src );
 
 	public String getXmlAttrFragment();
 
-	@Override
 	public String toString();
 }

@@ -46,32 +46,39 @@ import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 public interface ICFSecProtISOLang
 {
 	public static final short ISOLANGID_MIN_VALUE = (short)0;
-	public static final String S_INIT_CREATED_BY = ICFSecPubISOLang.S_INIT_CREATED_BY;
-	public static final CFLibDbKeyHash256 INIT_CREATED_BY = ICFSecPubISOLang.INIT_CREATED_BY;
-	public static final String S_INIT_UPDATED_BY = ICFSecPubISOLang.S_INIT_UPDATED_BY;
-	public static final CFLibDbKeyHash256 INIT_UPDATED_BY = ICFSecPubISOLang.INIT_UPDATED_BY;
-	public static final short ISOLANGID_INIT_VALUE = ICFSecPubISOLang.ISOLANGID_INIT_VALUE;
-	public static final String ISO6392CODE_INIT_VALUE = ICFSecPubISOLang.ISO6392CODE_INIT_VALUE;
-	public static final String ISO6391CODE_INIT_VALUE = ICFSecPubISOLang.ISO6391CODE_INIT_VALUE;
-	public static final String ENGLISHNAME_INIT_VALUE = ICFSecPubISOLang.ENGLISHNAME_INIT_VALUE;
+	public static final String S_INIT_CREATED_BY = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 INIT_CREATED_BY = CFLibDbKeyHash256.fromHex(S_INIT_CREATED_BY);
+	public static final String S_INIT_UPDATED_BY = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 INIT_UPDATED_BY = CFLibDbKeyHash256.fromHex(S_INIT_UPDATED_BY);
+	public static final short ISOLANGID_INIT_VALUE = (short)0;
+	public static final String ISO6392CODE_INIT_VALUE = new String( "" );
+	public static final String ISO6391CODE_INIT_VALUE = new String( "" );
+	public static final String ENGLISHNAME_INIT_VALUE = new String( "" );
 	public final static int CLASS_CODE = 0xa007;
 	public final static String S_CLASS_CODE = "a007";
 
 	public int getClassCode();
 
 	public CFLibDbKeyHash256 getCreatedByUserId();
+
 	public void setCreatedByUserId( CFLibDbKeyHash256 value );
+
 	public LocalDateTime getCreatedAt();
+
 	public void setCreatedAt( LocalDateTime value );
+
 	public CFLibDbKeyHash256 getUpdatedByUserId();
+
 	public void setUpdatedByUserId( CFLibDbKeyHash256 value );
+
 	public LocalDateTime getUpdatedAt();
+
 	public void setUpdatedAt( LocalDateTime value );
 
 	public Short getPKey();
 	public void setPKey(Short requiredISOLangId);
-	
 	public List<ICFSecProtISOCtryLang> getOptionalChildrenCtry();
+
 	public short getRequiredISOLangId();
 	public void setRequiredISOLangId( short value );
 	public int getRequiredRevision();
@@ -83,26 +90,29 @@ public interface ICFSecProtISOLang
 	public void setOptionalISO6391Code( String value );
 	public String getRequiredEnglishName();
 	public void setRequiredEnglishName( String value );
-	@Override
 	public boolean equals( Object obj );
-	
-	@Override
+
 	public int hashCode();
 
-	//@Override not necessary because interfaces aren't able to implement Comparable, but they can double-team on the requirement
 	public int compareTo( Object obj );
 
 	public void set( ICFSecProtISOLang src );
-	public void setISOLang( ICFSecProtISOLang src );
-	public void set( ICFSecPubISOLang src );
-	public void set( ICFSecProtISOLangH src );
-	public void setISOLang( ICFSecProtISOLangH src );
-	public void set( ICFSecPubISOLangH src );
-	public void setISOLang( ICFSecPubISOLangH src );
 
+	public void setISOLang( ICFSecProtISOLang src );
+
+	public void set( ICFSecProtISOLangH src );
+
+	public void setISOLang( ICFSecProtISOLangH src );
+
+	public void set( ICFSecPubISOLang src );
+
+	public void setISOLang( ICFSecPubISOLang src );
+
+	public void set( ICFSecPubISOLangH src );
+
+	public void setISOLang( ICFSecPubISOLangH src );
 
 	public String getXmlAttrFragment();
 
-	@Override
 	public String toString();
 }

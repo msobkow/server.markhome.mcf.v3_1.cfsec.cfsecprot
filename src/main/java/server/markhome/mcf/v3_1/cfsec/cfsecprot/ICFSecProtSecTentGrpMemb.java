@@ -58,44 +58,59 @@ public interface ICFSecProtSecTentGrpMemb
 	public int getClassCode();
 
 	public CFLibDbKeyHash256 getCreatedByUserId();
+
 	public void setCreatedByUserId( CFLibDbKeyHash256 value );
+
 	public LocalDateTime getCreatedAt();
+
 	public void setCreatedAt( LocalDateTime value );
+
 	public CFLibDbKeyHash256 getUpdatedByUserId();
+
 	public void setUpdatedByUserId( CFLibDbKeyHash256 value );
+
 	public LocalDateTime getUpdatedAt();
+
 	public void setUpdatedAt( LocalDateTime value );
 
 	public ICFSecProtSecTentGrpMembPKey getPKey();
 	public void setPKey(ICFSecProtSecTentGrpMembPKey pkey );
-	
 	public ICFSecProtSecTentGrp getRequiredContainerGroup();
-	public void setRequiredContainerGroup(ICFSecProtSecTentGrp argObj);
+
 	public void setRequiredContainerGroup(CFLibDbKeyHash256 argSecTentGrpId);
+
+
 	public ICFSecProtSecUser getRequiredParentUser();
-	public void setRequiredParentUser(ICFSecProtSecUser argObj);
+
 	public void setRequiredParentUser(String argLoginId);
+
+
 	public CFLibDbKeyHash256 getRequiredSecTentGrpId();
+
+	public void setRequiredSecTentGrpId(CFLibDbKeyHash256 value);
+
 	public String getRequiredLoginId();
+
+	public void setRequiredLoginId(String value);
+
 	public int getRequiredRevision();
 	public void setRequiredRevision( int value );
 
-	@Override
 	public boolean equals( Object obj );
-	
-	@Override
+
 	public int hashCode();
 
-	//@Override not necessary because interfaces aren't able to implement Comparable, but they can double-team on the requirement
 	public int compareTo( Object obj );
 
 	public void set( ICFSecProtSecTentGrpMemb src );
+
 	public void setSecTentGrpMemb( ICFSecProtSecTentGrpMemb src );
+
 	public void set( ICFSecProtSecTentGrpMembH src );
+
 	public void setSecTentGrpMemb( ICFSecProtSecTentGrpMembH src );
 
 	public String getXmlAttrFragment();
 
-	@Override
 	public String toString();
 }

@@ -47,9 +47,9 @@ public interface ICFSecProtSysCluster
 {
 	public static final int SINGLETONID_MIN_VALUE = 1;
 	public static final int SINGLETONID_MAX_VALUE = 1;
-	public static final int SINGLETONID_INIT_VALUE = ICFSecPubSysCluster.SINGLETONID_INIT_VALUE;
-	public static final String S_CLUSTERID_INIT_VALUE = ICFSecPubSysCluster.S_CLUSTERID_INIT_VALUE;
-	public static final CFLibDbKeyHash256 CLUSTERID_INIT_VALUE = ICFSecPubSysCluster.CLUSTERID_INIT_VALUE;
+	public static final int SINGLETONID_INIT_VALUE = 1;
+	public static final String S_CLUSTERID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 CLUSTERID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_CLUSTERID_INIT_VALUE );
 	public final static int CLASS_CODE = 0xa01f;
 	public final static String S_CLASS_CODE = "a01f";
 
@@ -57,45 +57,40 @@ public interface ICFSecProtSysCluster
 
 	public Integer getPKey();
 	public void setPKey(Integer requiredSingletonId);
-	
 	public int getRequiredSingletonId();
 	public void setRequiredSingletonId( int value );
 	public int getRequiredRevision();
 	public void setRequiredRevision( int value );
 
 	public ICFSecProtCluster getRequiredContainerCluster();
-	public void setRequiredContainerCluster(ICFSecProtCluster argObj);
-	public default void setRequiredContainerCluster(ICFSecPubCluster argObj) {
-		if (argObj == null) {
-			setRequiredContainerCluster((ICFSecProtCluster)null);
-		}
-		else {
-			setRequiredContainerCluster(argObj.getRequiredId());
-		}
-	}
 
 	public void setRequiredContainerCluster(CFLibDbKeyHash256 argClusterId);
+
+
 	public CFLibDbKeyHash256 getRequiredClusterId();
-	@Override
 	public boolean equals( Object obj );
-	
-	@Override
+
 	public int hashCode();
 
-	//@Override not necessary because interfaces aren't able to implement Comparable, but they can double-team on the requirement
 	public int compareTo( Object obj );
 
 	public void set( ICFSecProtSysCluster src );
-	public void setSysCluster( ICFSecProtSysCluster src );
-	public void set( ICFSecPubSysCluster src );
-	public void set( ICFSecProtSysClusterH src );
-	public void setSysCluster( ICFSecProtSysClusterH src );
-	public void set( ICFSecPubSysClusterH src );
-	public void setSysCluster( ICFSecPubSysClusterH src );
 
+	public void setSysCluster( ICFSecProtSysCluster src );
+
+	public void set( ICFSecProtSysClusterH src );
+
+	public void setSysCluster( ICFSecProtSysClusterH src );
+
+	public void set( ICFSecPubSysCluster src );
+
+	public void setSysCluster( ICFSecPubSysCluster src );
+
+	public void set( ICFSecPubSysClusterH src );
+
+	public void setSysCluster( ICFSecPubSysClusterH src );
 
 	public String getXmlAttrFragment();
 
-	@Override
 	public String toString();
 }

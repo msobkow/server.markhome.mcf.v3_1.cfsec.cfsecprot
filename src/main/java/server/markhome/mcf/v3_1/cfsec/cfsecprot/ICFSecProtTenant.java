@@ -45,74 +45,78 @@ import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
  */
 public interface ICFSecProtTenant
 {
-	public static final String S_INIT_CREATED_BY = ICFSecPubTenant.S_INIT_CREATED_BY;
-	public static final CFLibDbKeyHash256 INIT_CREATED_BY = ICFSecPubTenant.INIT_CREATED_BY;
-	public static final String S_INIT_UPDATED_BY = ICFSecPubTenant.S_INIT_UPDATED_BY;
-	public static final CFLibDbKeyHash256 INIT_UPDATED_BY = ICFSecPubTenant.INIT_UPDATED_BY;
-	public static final String S_ID_INIT_VALUE = ICFSecPubTenant.S_ID_INIT_VALUE;
-	public static final CFLibDbKeyHash256 ID_INIT_VALUE = ICFSecPubTenant.ID_INIT_VALUE;
-	public static final String S_CLUSTERID_INIT_VALUE = ICFSecPubTenant.S_CLUSTERID_INIT_VALUE;
-	public static final CFLibDbKeyHash256 CLUSTERID_INIT_VALUE = ICFSecPubTenant.CLUSTERID_INIT_VALUE;
-	public static final String TENANTNAME_INIT_VALUE = ICFSecPubTenant.TENANTNAME_INIT_VALUE;
+	public static final String S_INIT_CREATED_BY = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 INIT_CREATED_BY = CFLibDbKeyHash256.fromHex(S_INIT_CREATED_BY);
+	public static final String S_INIT_UPDATED_BY = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 INIT_UPDATED_BY = CFLibDbKeyHash256.fromHex(S_INIT_UPDATED_BY);
+	public static final String S_ID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 ID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_ID_INIT_VALUE );
+	public static final String S_CLUSTERID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 CLUSTERID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_CLUSTERID_INIT_VALUE );
+	public static final String TENANTNAME_INIT_VALUE = new String( "" );
 	public final static int CLASS_CODE = 0xa002;
 	public final static String S_CLASS_CODE = "a002";
 
 	public int getClassCode();
 
 	public CFLibDbKeyHash256 getCreatedByUserId();
+
 	public void setCreatedByUserId( CFLibDbKeyHash256 value );
+
 	public LocalDateTime getCreatedAt();
+
 	public void setCreatedAt( LocalDateTime value );
+
 	public CFLibDbKeyHash256 getUpdatedByUserId();
+
 	public void setUpdatedByUserId( CFLibDbKeyHash256 value );
+
 	public LocalDateTime getUpdatedAt();
+
 	public void setUpdatedAt( LocalDateTime value );
 
 	public CFLibDbKeyHash256 getPKey();
 	public void setPKey(CFLibDbKeyHash256 requiredId);
-	
 	public List<ICFSecProtSecTentGrp> getOptionalComponentsSecGroup();
+
 	public List<ICFSecProtSecTentRole> getOptionalComponentsSecRole();
+
 	public CFLibDbKeyHash256 getRequiredId();
 	public void setRequiredId( CFLibDbKeyHash256 value );
 	public int getRequiredRevision();
 	public void setRequiredRevision( int value );
 
 	public ICFSecProtCluster getRequiredContainerCluster();
-	public void setRequiredContainerCluster(ICFSecProtCluster argObj);
-	public default void setRequiredContainerCluster(ICFSecPubCluster argObj) {
-		if (argObj == null) {
-			setRequiredContainerCluster((ICFSecProtCluster)null);
-		}
-		else {
-			setRequiredContainerCluster(argObj.getRequiredId());
-		}
-	}
 
 	public void setRequiredContainerCluster(CFLibDbKeyHash256 argClusterId);
+
+
 	public CFLibDbKeyHash256 getRequiredClusterId();
 	public String getRequiredTenantName();
 	public void setRequiredTenantName( String value );
-	@Override
 	public boolean equals( Object obj );
-	
-	@Override
+
 	public int hashCode();
 
-	//@Override not necessary because interfaces aren't able to implement Comparable, but they can double-team on the requirement
 	public int compareTo( Object obj );
 
 	public void set( ICFSecProtTenant src );
-	public void setTenant( ICFSecProtTenant src );
-	public void set( ICFSecPubTenant src );
-	public void set( ICFSecProtTenantH src );
-	public void setTenant( ICFSecProtTenantH src );
-	public void set( ICFSecPubTenantH src );
-	public void setTenant( ICFSecPubTenantH src );
 
+	public void setTenant( ICFSecProtTenant src );
+
+	public void set( ICFSecProtTenantH src );
+
+	public void setTenant( ICFSecProtTenantH src );
+
+	public void set( ICFSecPubTenant src );
+
+	public void setTenant( ICFSecPubTenant src );
+
+	public void set( ICFSecPubTenantH src );
+
+	public void setTenant( ICFSecPubTenantH src );
 
 	public String getXmlAttrFragment();
 
-	@Override
 	public String toString();
 }

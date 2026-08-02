@@ -45,32 +45,40 @@ import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
  */
 public interface ICFSecProtSecSysRole
 {
-	public static final String S_INIT_CREATED_BY = ICFSecPubSecSysRole.S_INIT_CREATED_BY;
-	public static final CFLibDbKeyHash256 INIT_CREATED_BY = ICFSecPubSecSysRole.INIT_CREATED_BY;
-	public static final String S_INIT_UPDATED_BY = ICFSecPubSecSysRole.S_INIT_UPDATED_BY;
-	public static final CFLibDbKeyHash256 INIT_UPDATED_BY = ICFSecPubSecSysRole.INIT_UPDATED_BY;
-	public static final String S_SECSYSROLEID_INIT_VALUE = ICFSecPubSecSysRole.S_SECSYSROLEID_INIT_VALUE;
-	public static final CFLibDbKeyHash256 SECSYSROLEID_INIT_VALUE = ICFSecPubSecSysRole.SECSYSROLEID_INIT_VALUE;
-	public static final String NAME_INIT_VALUE = ICFSecPubSecSysRole.NAME_INIT_VALUE;
+	public static final String S_INIT_CREATED_BY = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 INIT_CREATED_BY = CFLibDbKeyHash256.fromHex(S_INIT_CREATED_BY);
+	public static final String S_INIT_UPDATED_BY = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 INIT_UPDATED_BY = CFLibDbKeyHash256.fromHex(S_INIT_UPDATED_BY);
+	public static final String S_SECSYSROLEID_INIT_VALUE = "0000000000000000000000000000000000000000000000000000000000000000";
+	public static final CFLibDbKeyHash256 SECSYSROLEID_INIT_VALUE = CFLibDbKeyHash256.fromHex( S_SECSYSROLEID_INIT_VALUE );
+	public static final String NAME_INIT_VALUE = new String( "" );
 	public final static int CLASS_CODE = 0xa017;
 	public final static String S_CLASS_CODE = "a017";
 
 	public int getClassCode();
 
 	public CFLibDbKeyHash256 getCreatedByUserId();
+
 	public void setCreatedByUserId( CFLibDbKeyHash256 value );
+
 	public LocalDateTime getCreatedAt();
+
 	public void setCreatedAt( LocalDateTime value );
+
 	public CFLibDbKeyHash256 getUpdatedByUserId();
+
 	public void setUpdatedByUserId( CFLibDbKeyHash256 value );
+
 	public LocalDateTime getUpdatedAt();
+
 	public void setUpdatedAt( LocalDateTime value );
 
 	public CFLibDbKeyHash256 getPKey();
 	public void setPKey(CFLibDbKeyHash256 requiredSecSysRoleId);
-	
 	public List<ICFSecProtSecSysRoleEnables> getOptionalComponentsEnabledByRole();
+
 	public List<ICFSecProtSecSysRoleMemb> getOptionalChildrenMembByRole();
+
 	public CFLibDbKeyHash256 getRequiredSecSysRoleId();
 	public void setRequiredSecSysRoleId( CFLibDbKeyHash256 value );
 	public int getRequiredRevision();
@@ -78,26 +86,29 @@ public interface ICFSecProtSecSysRole
 
 	public String getRequiredName();
 	public void setRequiredName( String value );
-	@Override
 	public boolean equals( Object obj );
-	
-	@Override
+
 	public int hashCode();
 
-	//@Override not necessary because interfaces aren't able to implement Comparable, but they can double-team on the requirement
 	public int compareTo( Object obj );
 
 	public void set( ICFSecProtSecSysRole src );
-	public void setSecSysRole( ICFSecProtSecSysRole src );
-	public void set( ICFSecPubSecSysRole src );
-	public void set( ICFSecProtSecSysRoleH src );
-	public void setSecSysRole( ICFSecProtSecSysRoleH src );
-	public void set( ICFSecPubSecSysRoleH src );
-	public void setSecSysRole( ICFSecPubSecSysRoleH src );
 
+	public void setSecSysRole( ICFSecProtSecSysRole src );
+
+	public void set( ICFSecProtSecSysRoleH src );
+
+	public void setSecSysRole( ICFSecProtSecSysRoleH src );
+
+	public void set( ICFSecPubSecSysRole src );
+
+	public void setSecSysRole( ICFSecPubSecSysRole src );
+
+	public void set( ICFSecPubSecSysRoleH src );
+
+	public void setSecSysRole( ICFSecPubSecSysRoleH src );
 
 	public String getXmlAttrFragment();
 
-	@Override
 	public String toString();
 }

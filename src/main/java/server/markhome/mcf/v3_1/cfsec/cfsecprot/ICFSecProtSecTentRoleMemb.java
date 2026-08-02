@@ -58,44 +58,59 @@ public interface ICFSecProtSecTentRoleMemb
 	public int getClassCode();
 
 	public CFLibDbKeyHash256 getCreatedByUserId();
+
 	public void setCreatedByUserId( CFLibDbKeyHash256 value );
+
 	public LocalDateTime getCreatedAt();
+
 	public void setCreatedAt( LocalDateTime value );
+
 	public CFLibDbKeyHash256 getUpdatedByUserId();
+
 	public void setUpdatedByUserId( CFLibDbKeyHash256 value );
+
 	public LocalDateTime getUpdatedAt();
+
 	public void setUpdatedAt( LocalDateTime value );
 
 	public ICFSecProtSecTentRoleMembPKey getPKey();
 	public void setPKey(ICFSecProtSecTentRoleMembPKey pkey );
-	
 	public ICFSecProtSecTentRole getRequiredContainerRole();
-	public void setRequiredContainerRole(ICFSecProtSecTentRole argObj);
+
 	public void setRequiredContainerRole(CFLibDbKeyHash256 argSecTentRoleId);
+
+
 	public ICFSecProtSecUser getRequiredParentUser();
-	public void setRequiredParentUser(ICFSecProtSecUser argObj);
+
 	public void setRequiredParentUser(String argLoginId);
+
+
 	public CFLibDbKeyHash256 getRequiredSecTentRoleId();
+
+	public void setRequiredSecTentRoleId(CFLibDbKeyHash256 value);
+
 	public String getRequiredLoginId();
+
+	public void setRequiredLoginId(String value);
+
 	public int getRequiredRevision();
 	public void setRequiredRevision( int value );
 
-	@Override
 	public boolean equals( Object obj );
-	
-	@Override
+
 	public int hashCode();
 
-	//@Override not necessary because interfaces aren't able to implement Comparable, but they can double-team on the requirement
 	public int compareTo( Object obj );
 
 	public void set( ICFSecProtSecTentRoleMemb src );
+
 	public void setSecTentRoleMemb( ICFSecProtSecTentRoleMemb src );
+
 	public void set( ICFSecProtSecTentRoleMembH src );
+
 	public void setSecTentRoleMemb( ICFSecProtSecTentRoleMembH src );
 
 	public String getXmlAttrFragment();
 
-	@Override
 	public String toString();
 }
