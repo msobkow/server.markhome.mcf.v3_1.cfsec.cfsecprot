@@ -56,7 +56,7 @@ public interface ICFSecProtSecSysRoleMembPKey
 	public int hashCode();
 
 	//@Override
-	public int compareTo( ICFSecProtSecSysRoleMembPKey rhs );
+	public int compareTo( Object rhs );
 
 	public String getXmlAttrFragment();
 
