@@ -58,13 +58,13 @@ public class CFSecProtSecSysRoleEnablesPKey
 	protected String requiredEnableName;
 
 	public CFSecProtSecSysRoleEnablesPKey() {
-		requiredSecSysRoleId = CFLibDbKeyHash256.fromHex( ICFSecSecSysRoleEnables.SECSYSROLEID_INIT_VALUE.toString() );
+		requiredSecSysRoleId = CFLibDbKeyHash256.fromHex( ICFSecProtSecSysRoleEnables.SECSYSROLEID_INIT_VALUE.toString() );
 		requiredEnableName = ICFSecProtSecSysRoleEnables.ENABLENAME_INIT_VALUE;
 	}
 
 	@Override
 	public CFLibDbKeyHash256 getRequiredSecSysRoleId() {
-		return(  );
+		return( requiredSecSysRoleId );
 	}
 
 	public void setRequiredSecSysRoleId( CFLibDbKeyHash256 value ) {
@@ -80,7 +80,7 @@ public class CFSecProtSecSysRoleEnablesPKey
 
 	@Override
 	public String getRequiredEnableName() {
-		return(  );
+		return( requiredEnableName );
 	}
 
 	public void setRequiredEnableName( String value ) {
@@ -250,10 +250,6 @@ public class CFSecProtSecSysRoleEnablesPKey
 	@Override
 	public int hashCode() {
 		int hashCode = 0;
-		hashCode = hashCode + getCreatedByUserId().hashCode();
-		hashCode = hashCode + getCreatedAt().hashCode();
-		hashCode = hashCode + getUpdatedByUserId().hashCode();
-		hashCode = hashCode + getUpdatedAt().hashCode();
 		hashCode = hashCode + getRequiredSecSysRoleId().hashCode();
 		if( getRequiredEnableName() != null ) {
 			hashCode = hashCode + getRequiredEnableName().hashCode();

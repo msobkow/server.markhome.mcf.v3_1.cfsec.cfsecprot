@@ -58,13 +58,13 @@ public class CFSecProtSecTentRoleMembPKey
 	protected String requiredLoginId;
 
 	public CFSecProtSecTentRoleMembPKey() {
-		requiredSecTentRoleId = CFLibDbKeyHash256.fromHex( ICFSecSecTentRoleMemb.SECTENTROLEID_INIT_VALUE.toString() );
+		requiredSecTentRoleId = CFLibDbKeyHash256.fromHex( ICFSecProtSecTentRoleMemb.SECTENTROLEID_INIT_VALUE.toString() );
 		requiredLoginId = ICFSecProtSecTentRoleMemb.LOGINID_INIT_VALUE;
 	}
 
 	@Override
 	public CFLibDbKeyHash256 getRequiredSecTentRoleId() {
-		return(  );
+		return( requiredSecTentRoleId );
 	}
 
 	public void setRequiredSecTentRoleId( CFLibDbKeyHash256 value ) {
@@ -80,7 +80,7 @@ public class CFSecProtSecTentRoleMembPKey
 
 	@Override
 	public String getRequiredLoginId() {
-		return(  );
+		return( requiredLoginId );
 	}
 
 	public void setRequiredLoginId( String value ) {
@@ -250,10 +250,6 @@ public class CFSecProtSecTentRoleMembPKey
 	@Override
 	public int hashCode() {
 		int hashCode = 0;
-		hashCode = hashCode + getCreatedByUserId().hashCode();
-		hashCode = hashCode + getCreatedAt().hashCode();
-		hashCode = hashCode + getUpdatedByUserId().hashCode();
-		hashCode = hashCode + getUpdatedAt().hashCode();
 		hashCode = hashCode + getRequiredSecTentRoleId().hashCode();
 		if( getRequiredLoginId() != null ) {
 			hashCode = hashCode + getRequiredLoginId().hashCode();

@@ -204,10 +204,6 @@ public class CFSecProtISOCtryLangPKey
 	@Override
 	public int hashCode() {
 		int hashCode = 0;
-		hashCode = hashCode + getCreatedByUserId().hashCode();
-		hashCode = hashCode + getCreatedAt().hashCode();
-		hashCode = hashCode + getUpdatedByUserId().hashCode();
-		hashCode = hashCode + getUpdatedAt().hashCode();
 		hashCode = ( hashCode * 0x10000 ) + getRequiredISOCtryId();
 		hashCode = ( hashCode * 0x10000 ) + getRequiredISOLangId();
 		return( hashCode & 0x7fffffff );

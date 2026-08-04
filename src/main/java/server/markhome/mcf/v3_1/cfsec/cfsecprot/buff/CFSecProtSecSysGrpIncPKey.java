@@ -58,13 +58,13 @@ public class CFSecProtSecSysGrpIncPKey
 	protected String requiredInclName;
 
 	public CFSecProtSecSysGrpIncPKey() {
-		requiredSecSysGrpId = CFLibDbKeyHash256.fromHex( ICFSecSecSysGrpInc.SECSYSGRPID_INIT_VALUE.toString() );
+		requiredSecSysGrpId = CFLibDbKeyHash256.fromHex( ICFSecProtSecSysGrpInc.SECSYSGRPID_INIT_VALUE.toString() );
 		requiredInclName = ICFSecProtSecSysGrpInc.INCLNAME_INIT_VALUE;
 	}
 
 	@Override
 	public CFLibDbKeyHash256 getRequiredSecSysGrpId() {
-		return(  );
+		return( requiredSecSysGrpId );
 	}
 
 	public void setRequiredSecSysGrpId( CFLibDbKeyHash256 value ) {
@@ -80,7 +80,7 @@ public class CFSecProtSecSysGrpIncPKey
 
 	@Override
 	public String getRequiredInclName() {
-		return(  );
+		return( requiredInclName );
 	}
 
 	public void setRequiredInclName( String value ) {
@@ -250,10 +250,6 @@ public class CFSecProtSecSysGrpIncPKey
 	@Override
 	public int hashCode() {
 		int hashCode = 0;
-		hashCode = hashCode + getCreatedByUserId().hashCode();
-		hashCode = hashCode + getCreatedAt().hashCode();
-		hashCode = hashCode + getUpdatedByUserId().hashCode();
-		hashCode = hashCode + getUpdatedAt().hashCode();
 		hashCode = hashCode + getRequiredSecSysGrpId().hashCode();
 		if( getRequiredInclName() != null ) {
 			hashCode = hashCode + getRequiredInclName().hashCode();
