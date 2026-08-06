@@ -64,7 +64,7 @@ public class CFSecProtSecTentRoleMembPKey
 
 	@Override
 	public CFLibDbKeyHash256 getRequiredSecTentRoleId() {
-		return( requiredSecTentRoleId );
+		return(requiredSecTentRoleId);
 	}
 
 	public void setRequiredSecTentRoleId( CFLibDbKeyHash256 value ) {
@@ -74,13 +74,12 @@ public class CFSecProtSecTentRoleMembPKey
 				1,
 				"value" );
 		}
-		
 		requiredSecTentRoleId = value;
 	}
 
 	@Override
 	public String getRequiredLoginId() {
-		return( requiredLoginId );
+		return(requiredLoginId);
 	}
 
 	public void setRequiredLoginId( String value ) {
@@ -98,7 +97,6 @@ public class CFSecProtSecTentRoleMembPKey
 				value.length(),
 				32 );
 		}
-		
 		requiredLoginId = value;
 	}
 

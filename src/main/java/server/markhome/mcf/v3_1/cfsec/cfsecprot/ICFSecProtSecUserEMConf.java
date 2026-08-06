@@ -85,6 +85,7 @@ public interface ICFSecProtSecUserEMConf
 	public void setRequiredContainerUser(ICFSecProtSecUser argObj);
 
 	public CFLibDbKeyHash256 getRequiredSecUserId();
+	public void setRequiredSecUserId( CFLibDbKeyHash256 value );
 	public int getRequiredRevision();
 	public void setRequiredRevision( int value );
 

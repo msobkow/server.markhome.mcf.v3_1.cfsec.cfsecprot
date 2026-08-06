@@ -99,7 +99,9 @@ public interface ICFSecProtSecTentGrp
 	public void setRequiredContainerSysGrp(ICFSecProtSecSysGrp argObj);
 
 	public CFLibDbKeyHash256 getRequiredTenantId();
+	public void setRequiredTenantId( CFLibDbKeyHash256 value );
 	public String getRequiredName();
+	public void setRequiredName( String value );
 	public boolean equals( Object obj );
 
 	public int hashCode();
