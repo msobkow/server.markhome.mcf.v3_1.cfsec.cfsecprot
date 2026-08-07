@@ -64,6 +64,24 @@ public interface ICFSecProtSecSession
 	public int getRequiredRevision();
 	public void setRequiredRevision( int value );
 
+	public ICFSecProtSecUser getRequiredContainerSecUser();
+
+	public void setRequiredContainerSecUser(CFLibDbKeyHash256 argSecUserId);
+
+
+	public void setRequiredContainerSecUser(ICFSecProtSecUser argObj);
+
+	public void setRequiredContainerSecUser(ICFSecPubSecUser argObj);
+
+	public ICFSecProtSecUser getRequiredParentSecProxy();
+
+	public void setRequiredParentSecProxy(CFLibDbKeyHash256 argSecProxyId);
+
+
+	public void setRequiredParentSecProxy(ICFSecProtSecUser argObj);
+
+	public void setRequiredParentSecProxy(ICFSecPubSecUser argObj);
+
 	public CFLibDbKeyHash256 getRequiredSecUserId();
 	public void setRequiredSecUserId( CFLibDbKeyHash256 value );
 	public LocalDateTime getRequiredStart();

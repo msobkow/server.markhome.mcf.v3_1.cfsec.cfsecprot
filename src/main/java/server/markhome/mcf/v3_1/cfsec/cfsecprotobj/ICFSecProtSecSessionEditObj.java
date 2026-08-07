@@ -80,6 +80,48 @@ public interface ICFSecProtSecSessionEditObj
 	ICFSecProtSecSessionEditObj deleteInstance();
 
 	/**
+	 *	Get the ICFSecProtSecUserObj instance referenced by the SecUser key.
+	 *
+	 *	@return	The ICFSecProtSecUserObj instance referenced by the SecUser key.
+	 */
+	ICFSecProtSecUserObj getRequiredContainerSecUser();
+
+	/**
+	 *	Get the required ICFSecProtSecUserObj instance referenced by the SecUser key.
+	 *
+	 *	@return	The required ICFSecProtSecUserObj instance referenced by the SecUser key.
+	 */
+	ICFSecProtSecUserObj getRequiredContainerSecUser( boolean forceRead );
+
+	/**
+	 *	Set the ICFSecProtSecUserObj instance referenced by the SecUser key.
+	 *
+	 *	@param	value	the ICFSecProtSecUserObj instance to be referenced by the SecUser key.
+	 */
+	void setRequiredContainerSecUser( ICFSecProtSecUserObj value );
+
+	/**
+	 *	Get the ICFSecProtSecUserObj instance referenced by the SecProxy key.
+	 *
+	 *	@return	The ICFSecProtSecUserObj instance referenced by the SecProxy key.
+	 */
+	ICFSecProtSecUserObj getRequiredParentSecProxy();
+
+	/**
+	 *	Get the required ICFSecProtSecUserObj instance referenced by the SecProxy key.
+	 *
+	 *	@return	The required ICFSecProtSecUserObj instance referenced by the SecProxy key.
+	 */
+	ICFSecProtSecUserObj getRequiredParentSecProxy( boolean forceRead );
+
+	/**
+	 *	Set the ICFSecProtSecUserObj instance referenced by the SecProxy key.
+	 *
+	 *	@param	value	the ICFSecProtSecUserObj instance to be referenced by the SecProxy key.
+	 */
+	void setRequiredParentSecProxy( ICFSecProtSecUserObj value );
+
+	/**
 	 *	Get the required CFLibDbKeyHash256 attribute SecSessionId.
 	 *
 	 *	@return	The required CFLibDbKeyHash256 attribute SecSessionId.
@@ -99,13 +141,6 @@ public interface ICFSecProtSecSessionEditObj
 	 *	@return	The required CFLibDbKeyHash256 attribute SecUserId.
 	 */
 	CFLibDbKeyHash256 getRequiredSecUserId();
-
-	/**
-	 *	Set the required CFLibDbKeyHash256 attribute SecUserId.
-	 *
-	 *	@param value The required CFLibDbKeyHash256 attribute SecUserId value to be applied.
-	 */
-	void setRequiredSecUserId(CFLibDbKeyHash256 value);
 
 	/**
 	 *	Get the required LocalDateTime attribute Start.
@@ -141,13 +176,6 @@ public interface ICFSecProtSecSessionEditObj
 	 *	@return	The optional CFLibDbKeyHash256 attribute SecProxyId.
 	 */
 	CFLibDbKeyHash256 getOptionalSecProxyId();
-
-	/**
-	 *	Set the optional CFLibDbKeyHash256 attribute SecProxyId.
-	 *
-	 *	@param value The optional CFLibDbKeyHash256 attribute SecProxyId value to be applied.
-	 */
-	void setOptionalSecProxyId(CFLibDbKeyHash256 value);
 
 	public void copyRecToOrig();
 	public void copyOrigToRec();

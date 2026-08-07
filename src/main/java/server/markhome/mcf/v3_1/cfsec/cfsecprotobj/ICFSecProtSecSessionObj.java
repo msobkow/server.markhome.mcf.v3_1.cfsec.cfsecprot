@@ -189,6 +189,20 @@ public interface ICFSecProtSecSessionObj
 	void setIsNew( boolean value );
 
 	/**
+	 *	Get the required ICFSecProtSecUserObj instance referenced by the SecUser key.
+	 *
+	 *	@return	The required ICFSecProtSecUserObj instance referenced by the SecUser key.
+	 */
+	ICFSecProtSecUserObj getRequiredContainerSecUser();
+
+	/**
+	 *	Get the required ICFSecProtSecUserObj instance referenced by the SecUser key.
+	 *
+	 *	@return	The required ICFSecProtSecUserObj instance referenced by the SecUser key.
+	 */
+	ICFSecProtSecUserObj getRequiredContainerSecUser( boolean forceRead );
+
+	/**
 	 *	Get the required CFLibDbKeyHash256 attribute SecSessionId.
 	 *
 	 *	@return	The required CFLibDbKeyHash256 attribute SecSessionId.

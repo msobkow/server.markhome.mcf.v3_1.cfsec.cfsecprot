@@ -82,6 +82,10 @@ public interface ICFSecProtSecUser
 
 	public CFLibDbKeyHash256 getPKey();
 	public void setPKey(CFLibDbKeyHash256 requiredSecUserId);
+	public List<ICFSecProtSecSession> getOptionalComponentsSecSess();
+
+	public List<ICFSecProtSecSession> getOptionalChildrenSecProxy();
+
 	public ICFSecProtSecUserEMConf getOptionalComponentsEMConf();
 
 	public ICFSecProtSecUserPWReset getOptionalComponentsPWReset();

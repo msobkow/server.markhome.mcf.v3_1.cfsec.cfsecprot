@@ -108,6 +108,20 @@ public interface ICFSecProtSecUserEditObj
 	void setUpdatedAt( LocalDateTime value );
 
 	/**
+	 *	Get a list ICFSecProtSecSessionObj instances referenced by the SecSess key.
+	 *
+	 *	@return	The (potentially empty) list of ICFSecProtSecSessionObj instances referenced by the SecSess key.
+	 */
+	List<ICFSecProtSecSessionObj> getOptionalComponentsSecSess();
+
+	/**
+	 *	Get a list ICFSecProtSecSessionObj instances referenced by the SecProxy key.
+	 *
+	 *	@return	The (potentially empty) list of ICFSecProtSecSessionObj instances referenced by the SecProxy key.
+	 */
+	List<ICFSecProtSecSessionObj> getOptionalChildrenSecProxy();
+
+	/**
 	 *	Get the ICFSecProtSecUserEMConfObj instance referenced by the EMConf key.
 	 *
 	 *	@return	The ICFSecProtSecUserEMConfObj instance referenced by the EMConf key.
