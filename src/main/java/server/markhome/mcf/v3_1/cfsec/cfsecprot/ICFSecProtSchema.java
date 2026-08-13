@@ -174,7 +174,7 @@ public interface ICFSecProtSchema
 		final static ArrayList<ICFSecProtSchema.ClassMapEntry> entries = new ArrayList<>();
 		final static HashMap<Integer,ICFSecProtSchema.ClassMapEntry> mapBackingClassCodeToEntry = new HashMap<>();
 		final static HashMap<Integer,ICFSecProtSchema.ClassMapEntry> mapRuntimeClassCodeToEntry = new HashMap<>();
-		final static AtomicReference<ICFSecProtSchema> backingCFSecProtSchema = new AtomicReference<>();
+		final static AtomicReference<ICFSecProtSchema> backingCFSec = new AtomicReference<>();
 	final static AtomicReference<ICFSecProtAuthorizationCallback> authorizationCallback = new AtomicReference<>();
 	
 	public static ICFSecProtAuthorizationCallback getAuthorizationCallback() {
@@ -290,16 +290,16 @@ public interface ICFSecProtSchema
 		}
 	}
 
-		public static ICFSecProtSchema getBackingCFSecProtSchema() {
-			return( ICFSecProtSchema.backingCFSecProtSchema.get() );
+		public static ICFSecProtSchema getBackingCFSec() {
+			return( ICFSecProtSchema.backingCFSec.get() );
 		}
 		
-		public static void setBackingCFSecProtSchema(ICFSecProtSchema backingSchema) {
-			ICFSecProtSchema.backingCFSecProtSchema.set(backingSchema);
+		public static void setBackingCFSec(ICFSecProtSchema backingSchema) {
+			ICFSecProtSchema.backingCFSec.set(backingSchema);
 		}
 		
-		public ICFSecProtSchema getCFSecProtSchema();
-		public void setCFSecProtSchema(ICFSecProtSchema schema);
+		public ICFSecProtSchema getCFSecSchema();
+		public void setCFSecSchema(ICFSecProtSchema schema);
 		
 		public static int doInitClassMapEntries(int value) {
 			if (ICFSecProtSchema.entries.isEmpty()) {
