@@ -54,8 +54,8 @@ import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 public class CFSecProtSecTentGrpMembPKey
 	implements ICFSecProtSecTentGrpMembPKey, Comparable<Object>, Serializable
 {
-	protected CFLibDbKeyHash256 requiredSecTentGrpId;
-	protected String requiredLoginId;
+	protected $implJavaAtomType$ requiredSecTentGrpId;
+	protected $implJavaAtomType$ requiredLoginId;
 
 	public CFSecProtSecTentGrpMembPKey() {
 		requiredSecTentGrpId = CFLibDbKeyHash256.fromHex( ICFSecProtSecTentGrpMemb.SECTENTGRPID_INIT_VALUE.toString() );

@@ -75,8 +75,8 @@ public interface ICFSecProtSecClusRole
 
 	public void setUpdatedAt( LocalDateTime value );
 
-	public CFLibDbKeyHash256 getPKey();
-	public void setPKey(CFLibDbKeyHash256 requiredSecClusRoleId);
+	public ICFLibKeyHash256 getPKey();
+	public void setPKey(ICFLibKeyHash256 requiredSecClusRoleId);
 	public List<ICFSecProtSecClusRoleMemb> getOptionalChildrenMembByGrp();
 
 	public CFLibDbKeyHash256 getRequiredSecClusRoleId();
@@ -86,7 +86,7 @@ public interface ICFSecProtSecClusRole
 
 	public ICFSecProtCluster getRequiredOwnerCluster();
 
-	public void setRequiredOwnerCluster(CFLibDbKeyHash256 argClusterId);
+	public void setRequiredOwnerCluster(ICFLibKeyHash256 argClusterId);
 
 
 	public void setRequiredOwnerCluster(ICFSecProtCluster argObj);

@@ -75,8 +75,8 @@ public interface ICFSecProtSecTentRole
 
 	public void setUpdatedAt( LocalDateTime value );
 
-	public CFLibDbKeyHash256 getPKey();
-	public void setPKey(CFLibDbKeyHash256 requiredSecTentRoleId);
+	public ICFLibKeyHash256 getPKey();
+	public void setPKey(ICFLibKeyHash256 requiredSecTentRoleId);
 	public List<ICFSecProtSecTentRoleMemb> getOptionalChildrenMembByRole();
 
 	public CFLibDbKeyHash256 getRequiredSecTentRoleId();
@@ -86,7 +86,7 @@ public interface ICFSecProtSecTentRole
 
 	public ICFSecProtTenant getRequiredOwnerTenant();
 
-	public void setRequiredOwnerTenant(CFLibDbKeyHash256 argTenantId);
+	public void setRequiredOwnerTenant(ICFLibKeyHash256 argTenantId);
 
 
 	public void setRequiredOwnerTenant(ICFSecProtTenant argObj);

@@ -54,8 +54,8 @@ import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 public class CFSecProtSecSysRoleEnablesPKey
 	implements ICFSecProtSecSysRoleEnablesPKey, Comparable<Object>, Serializable
 {
-	protected CFLibDbKeyHash256 requiredSecSysRoleId;
-	protected String requiredEnableName;
+	protected $implJavaAtomType$ requiredSecSysRoleId;
+	protected $implJavaAtomType$ requiredEnableName;
 
 	public CFSecProtSecSysRoleEnablesPKey() {
 		requiredSecSysRoleId = CFLibDbKeyHash256.fromHex( ICFSecProtSecSysRoleEnables.SECSYSROLEID_INIT_VALUE.toString() );

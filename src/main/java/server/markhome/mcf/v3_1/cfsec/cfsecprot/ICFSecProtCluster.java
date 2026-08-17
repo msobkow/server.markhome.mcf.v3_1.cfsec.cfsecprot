@@ -74,8 +74,8 @@ public interface ICFSecProtCluster
 
 	public void setUpdatedAt( LocalDateTime value );
 
-	public CFLibDbKeyHash256 getPKey();
-	public void setPKey(CFLibDbKeyHash256 requiredId);
+	public ICFLibKeyHash256 getPKey();
+	public void setPKey(ICFLibKeyHash256 requiredId);
 	public List<ICFSecProtTenant> getOptionalComponentsTenant();
 
 	public List<ICFSecProtSecClusGrp> getOptionalComponentsSecGroup();

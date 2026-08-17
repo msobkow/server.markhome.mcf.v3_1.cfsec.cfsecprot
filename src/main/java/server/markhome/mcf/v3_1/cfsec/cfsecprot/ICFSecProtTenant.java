@@ -75,8 +75,8 @@ public interface ICFSecProtTenant
 
 	public void setUpdatedAt( LocalDateTime value );
 
-	public CFLibDbKeyHash256 getPKey();
-	public void setPKey(CFLibDbKeyHash256 requiredId);
+	public ICFLibKeyHash256 getPKey();
+	public void setPKey(ICFLibKeyHash256 requiredId);
 	public List<ICFSecProtSecTentGrp> getOptionalComponentsSecGroup();
 
 	public List<ICFSecProtSecTentRole> getOptionalComponentsSecRole();
@@ -88,7 +88,7 @@ public interface ICFSecProtTenant
 
 	public ICFSecProtCluster getRequiredContainerCluster();
 
-	public void setRequiredContainerCluster(CFLibDbKeyHash256 argClusterId);
+	public void setRequiredContainerCluster(ICFLibKeyHash256 argClusterId);
 
 
 	public void setRequiredContainerCluster(ICFSecProtCluster argObj);

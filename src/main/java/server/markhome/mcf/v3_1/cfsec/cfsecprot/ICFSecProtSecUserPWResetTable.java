@@ -356,7 +356,7 @@ public interface ICFSecProtSecUserPWResetTable
 	 */
 	public ICFSecProtSecUserPWReset[] protpageRecBySentEMAddrIdx( ICFSecPubAuthorization Authorization,
 		String SentToEMailAddr,
-		CFLibDbKeyHash256 priorSecUserId );
+		ICFLibKeyHash256 priorSecUserId );
 
 	/**
 	 *	Read a page array of the specific SecUserPWReset record instances identified by the duplicate key NewAcctIdx.
@@ -371,5 +371,5 @@ public interface ICFSecProtSecUserPWResetTable
 	 */
 	public ICFSecProtSecUserPWReset[] protpageRecByNewAcctIdx( ICFSecPubAuthorization Authorization,
 		boolean NewAccount,
-		CFLibDbKeyHash256 priorSecUserId );
+		ICFLibKeyHash256 priorSecUserId );
 }

@@ -353,5 +353,5 @@ extends ICFSecPubSecUserTable
 	 */
 	public ICFSecProtSecUser[] protpageRecByEMAddrIdx( ICFSecPubAuthorization Authorization,
 		String EMailAddress,
-		CFLibDbKeyHash256 priorSecUserId );
+		ICFLibKeyHash256 priorSecUserId );
 }

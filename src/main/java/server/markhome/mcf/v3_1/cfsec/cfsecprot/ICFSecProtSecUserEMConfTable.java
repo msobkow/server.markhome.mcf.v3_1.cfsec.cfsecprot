@@ -401,7 +401,7 @@ public interface ICFSecProtSecUserEMConfTable
 	 */
 	public ICFSecProtSecUserEMConf[] protpageRecByConfEMAddrIdx( ICFSecPubAuthorization Authorization,
 		String ConfirmEMailAddr,
-		CFLibDbKeyHash256 priorSecUserId );
+		ICFLibKeyHash256 priorSecUserId );
 
 	/**
 	 *	Read a page array of the specific SecUserEMConf record instances identified by the duplicate key SentStampIdx.
@@ -416,7 +416,7 @@ public interface ICFSecProtSecUserEMConfTable
 	 */
 	public ICFSecProtSecUserEMConf[] protpageRecBySentStampIdx( ICFSecPubAuthorization Authorization,
 		LocalDateTime EMailSentStamp,
-		CFLibDbKeyHash256 priorSecUserId );
+		ICFLibKeyHash256 priorSecUserId );
 
 	/**
 	 *	Read a page array of the specific SecUserEMConf record instances identified by the duplicate key NewAcctIdx.
@@ -431,5 +431,5 @@ public interface ICFSecProtSecUserEMConfTable
 	 */
 	public ICFSecProtSecUserEMConf[] protpageRecByNewAcctIdx( ICFSecPubAuthorization Authorization,
 		boolean NewAccount,
-		CFLibDbKeyHash256 priorSecUserId );
+		ICFLibKeyHash256 priorSecUserId );
 }

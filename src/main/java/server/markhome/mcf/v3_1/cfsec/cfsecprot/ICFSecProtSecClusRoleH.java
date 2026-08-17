@@ -69,8 +69,8 @@ public interface ICFSecProtSecClusRoleH
 	public CFLibDbKeyHash256 getAuditSessionId();
 	public void setAuditSessionId(CFLibDbKeyHash256 auditSessionId);
 
-	public CFLibDbKeyHash256 getRequiredSecClusRoleId();
-	public void setRequiredSecClusRoleId( CFLibDbKeyHash256 requiredSecClusRoleId );
+	public ICFLibKeyHash256 getRequiredSecClusRoleId();
+	public void setRequiredSecClusRoleId( ICFLibKeyHash256 requiredSecClusRoleId );
 
 	public CFLibDbKeyHash256 getRequiredClusterId();
 	public void setRequiredClusterId( CFLibDbKeyHash256 value );

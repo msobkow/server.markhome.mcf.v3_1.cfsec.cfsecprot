@@ -355,8 +355,8 @@ public interface ICFSecProtSecClusRoleMembTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFSecProtSecClusRoleMemb[] protpageRecByClusRoleIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 SecClusRoleId,
-		CFLibDbKeyHash256 priorSecClusRoleId,
+		ICFLibKeyHash256 SecClusRoleId,
+		ICFLibKeyHash256 priorSecClusRoleId,
 		String priorLoginId );
 
 	/**
@@ -372,6 +372,6 @@ public interface ICFSecProtSecClusRoleMembTable
 	 */
 	public ICFSecProtSecClusRoleMemb[] protpageRecByLoginIdx( ICFSecPubAuthorization Authorization,
 		String LoginId,
-		CFLibDbKeyHash256 priorSecClusRoleId,
+		ICFLibKeyHash256 priorSecClusRoleId,
 		String priorLoginId );
 }

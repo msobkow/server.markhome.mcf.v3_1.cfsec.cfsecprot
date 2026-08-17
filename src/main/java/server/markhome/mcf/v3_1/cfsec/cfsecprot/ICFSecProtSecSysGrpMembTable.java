@@ -355,8 +355,8 @@ public interface ICFSecProtSecSysGrpMembTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFSecProtSecSysGrpMemb[] protpageRecBySysGrpIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 SecSysGrpId,
-		CFLibDbKeyHash256 priorSecSysGrpId,
+		ICFLibKeyHash256 SecSysGrpId,
+		ICFLibKeyHash256 priorSecSysGrpId,
 		String priorLoginId );
 
 	/**
@@ -372,6 +372,6 @@ public interface ICFSecProtSecSysGrpMembTable
 	 */
 	public ICFSecProtSecSysGrpMemb[] protpageRecByLoginIdx( ICFSecPubAuthorization Authorization,
 		String LoginId,
-		CFLibDbKeyHash256 priorSecSysGrpId,
+		ICFLibKeyHash256 priorSecSysGrpId,
 		String priorLoginId );
 }

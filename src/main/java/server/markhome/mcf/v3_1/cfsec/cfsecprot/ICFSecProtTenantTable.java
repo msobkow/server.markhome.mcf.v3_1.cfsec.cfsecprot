@@ -370,6 +370,6 @@ extends ICFSecPubTenantTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFSecProtTenant[] protpageRecByClusterIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ClusterId,
-		CFLibDbKeyHash256 priorId );
+		ICFLibKeyHash256 ClusterId,
+		ICFLibKeyHash256 priorId );
 }

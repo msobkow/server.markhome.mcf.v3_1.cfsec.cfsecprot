@@ -74,11 +74,11 @@ public interface ICFSecProtSecUserPWReset
 
 	public void setUpdatedAt( LocalDateTime value );
 
-	public CFLibDbKeyHash256 getPKey();
-	public void setPKey(CFLibDbKeyHash256 requiredSecUserId);
+	public ICFLibKeyHash256 getPKey();
+	public void setPKey(ICFLibKeyHash256 requiredSecUserId);
 	public ICFSecProtSecUser getRequiredContainerUser();
 
-	public void setRequiredContainerUser(CFLibDbKeyHash256 argSecUserId);
+	public void setRequiredContainerUser(ICFLibKeyHash256 argSecUserId);
 
 
 	public void setRequiredContainerUser(ICFSecProtSecUser argObj);

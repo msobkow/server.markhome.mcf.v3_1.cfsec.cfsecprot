@@ -355,8 +355,8 @@ public interface ICFSecProtSecSysRoleEnablesTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFSecProtSecSysRoleEnables[] protpageRecBySysRoleIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 SecSysRoleId,
-		CFLibDbKeyHash256 priorSecSysRoleId,
+		ICFLibKeyHash256 SecSysRoleId,
+		ICFLibKeyHash256 priorSecSysRoleId,
 		String priorEnableName );
 
 	/**
@@ -372,6 +372,6 @@ public interface ICFSecProtSecSysRoleEnablesTable
 	 */
 	public ICFSecProtSecSysRoleEnables[] protpageRecByNameIdx( ICFSecPubAuthorization Authorization,
 		String EnableName,
-		CFLibDbKeyHash256 priorSecSysRoleId,
+		ICFLibKeyHash256 priorSecSysRoleId,
 		String priorEnableName );
 }

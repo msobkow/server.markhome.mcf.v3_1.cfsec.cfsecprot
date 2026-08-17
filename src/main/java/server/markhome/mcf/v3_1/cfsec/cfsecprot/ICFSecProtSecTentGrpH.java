@@ -69,8 +69,8 @@ public interface ICFSecProtSecTentGrpH
 	public CFLibDbKeyHash256 getAuditSessionId();
 	public void setAuditSessionId(CFLibDbKeyHash256 auditSessionId);
 
-	public CFLibDbKeyHash256 getRequiredSecTentGrpId();
-	public void setRequiredSecTentGrpId( CFLibDbKeyHash256 requiredSecTentGrpId );
+	public ICFLibKeyHash256 getRequiredSecTentGrpId();
+	public void setRequiredSecTentGrpId( ICFLibKeyHash256 requiredSecTentGrpId );
 
 	public CFLibDbKeyHash256 getRequiredTenantId();
 	public void setRequiredTenantId( CFLibDbKeyHash256 value );
