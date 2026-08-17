@@ -80,8 +80,8 @@ public interface ICFSecProtSecClusRole
 	public void setPKey(ICFLibKeyHash256 requiredSecClusRoleId);
 	public List<ICFSecProtSecClusRoleMemb> getOptionalChildrenMembByGrp();
 
-	public CFLibDbKeyHash256 getRequiredSecClusRoleId();
-	public void setRequiredSecClusRoleId( CFLibDbKeyHash256 value );
+	public ICFLibKeyHash256 getRequiredSecClusRoleId();
+	public void setRequiredSecClusRoleId( ICFLibKeyHash256 value );
 	public int getRequiredRevision();
 	public void setRequiredRevision( int value );
 
@@ -99,8 +99,8 @@ public interface ICFSecProtSecClusRole
 
 	public void setRequiredContainerSysRole(ICFSecProtSecSysGrp argObj);
 
-	public CFLibDbKeyHash256 getRequiredClusterId();
-	public void setRequiredClusterId( CFLibDbKeyHash256 value );
+	public ICFLibKeyHash256 getRequiredClusterId();
+	public void setRequiredClusterId( ICFLibKeyHash256 value );
 	public String getRequiredName();
 	public void setRequiredName( String value );
 	public boolean equals( Object obj );

@@ -46,8 +46,8 @@ import server.markhome.mcf.v3_1.cflib.xml.CFLibXmlUtil;
 public interface ICFSecProtSecTentRoleMembPKey
 {
 
-	public CFLibDbKeyHash256 getRequiredSecTentRoleId();
-	public void setRequiredSecTentRoleId( CFLibDbKeyHash256 value );
+	public ICFLibKeyHash256 getRequiredSecTentRoleId();
+	public void setRequiredSecTentRoleId( ICFLibKeyHash256 value );
 	public String getRequiredLoginId();
 	public void setRequiredLoginId( String value );
 	@Override

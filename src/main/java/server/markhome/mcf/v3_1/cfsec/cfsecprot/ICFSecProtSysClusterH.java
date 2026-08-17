@@ -64,8 +64,8 @@ public interface ICFSecProtSysClusterH
 	public int getRequiredSingletonId();
 	public void setRequiredSingletonId( int requiredSingletonId );
 
-	public CFLibDbKeyHash256 getRequiredClusterId();
-	public void setRequiredClusterId( CFLibDbKeyHash256 value );
+	public ICFLibKeyHash256 getRequiredClusterId();
+	public void setRequiredClusterId( ICFLibKeyHash256 value );
 	@Override
 	public boolean equals( Object obj );
 

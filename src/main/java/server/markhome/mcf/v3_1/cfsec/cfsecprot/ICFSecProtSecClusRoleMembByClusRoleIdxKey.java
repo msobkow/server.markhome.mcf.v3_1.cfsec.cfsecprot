@@ -46,8 +46,8 @@ import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
  */
 public interface ICFSecProtSecClusRoleMembByClusRoleIdxKey
 {
-	public CFLibDbKeyHash256 getRequiredSecClusRoleId();
-	public void setRequiredSecClusRoleId( CFLibDbKeyHash256 value );
+	public ICFLibKeyHash256 getRequiredSecClusRoleId();
+	public void setRequiredSecClusRoleId( ICFLibKeyHash256 value );
 	@Override
 	public boolean equals( Object obj );
 

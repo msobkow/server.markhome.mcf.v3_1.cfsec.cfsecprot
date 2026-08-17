@@ -80,8 +80,8 @@ public interface ICFSecProtSecClusGrp
 	public void setPKey(ICFLibKeyHash256 requiredSecClusGrpId);
 	public List<ICFSecProtSecClusGrpMemb> getOptionalChildrenMembByGrp();
 
-	public CFLibDbKeyHash256 getRequiredSecClusGrpId();
-	public void setRequiredSecClusGrpId( CFLibDbKeyHash256 value );
+	public ICFLibKeyHash256 getRequiredSecClusGrpId();
+	public void setRequiredSecClusGrpId( ICFLibKeyHash256 value );
 	public int getRequiredRevision();
 	public void setRequiredRevision( int value );
 
@@ -99,8 +99,8 @@ public interface ICFSecProtSecClusGrp
 
 	public void setRequiredContainerSysGrp(ICFSecProtSecSysGrp argObj);
 
-	public CFLibDbKeyHash256 getRequiredClusterId();
-	public void setRequiredClusterId( CFLibDbKeyHash256 value );
+	public ICFLibKeyHash256 getRequiredClusterId();
+	public void setRequiredClusterId( ICFLibKeyHash256 value );
 	public String getRequiredName();
 	public void setRequiredName( String value );
 	public boolean equals( Object obj );

@@ -46,8 +46,8 @@ import server.markhome.mcf.v3_1.cflib.xml.CFLibXmlUtil;
 public interface ICFSecProtSecClusGrpMembPKey
 {
 
-	public CFLibDbKeyHash256 getRequiredSecClusGrpId();
-	public void setRequiredSecClusGrpId( CFLibDbKeyHash256 value );
+	public ICFLibKeyHash256 getRequiredSecClusGrpId();
+	public void setRequiredSecClusGrpId( ICFLibKeyHash256 value );
 	public String getRequiredLoginId();
 	public void setRequiredLoginId( String value );
 	@Override

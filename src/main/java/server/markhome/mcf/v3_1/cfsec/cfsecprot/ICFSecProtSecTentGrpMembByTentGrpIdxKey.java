@@ -46,8 +46,8 @@ import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
  */
 public interface ICFSecProtSecTentGrpMembByTentGrpIdxKey
 {
-	public CFLibDbKeyHash256 getRequiredSecTentGrpId();
-	public void setRequiredSecTentGrpId( CFLibDbKeyHash256 value );
+	public ICFLibKeyHash256 getRequiredSecTentGrpId();
+	public void setRequiredSecTentGrpId( ICFLibKeyHash256 value );
 	@Override
 	public boolean equals( Object obj );
 

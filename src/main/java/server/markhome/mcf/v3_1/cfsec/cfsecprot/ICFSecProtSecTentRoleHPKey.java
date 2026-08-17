@@ -60,8 +60,8 @@ public interface ICFSecProtSecTentRoleHPKey
 	public CFLibDbKeyHash256 getAuditSessionId();
 	public void setAuditSessionId( CFLibDbKeyHash256 value );
 
-	public CFLibDbKeyHash256 getRequiredSecTentRoleId();
-	public void setRequiredSecTentRoleId( CFLibDbKeyHash256 value );
+	public ICFLibKeyHash256 getRequiredSecTentRoleId();
+	public void setRequiredSecTentRoleId( ICFLibKeyHash256 value );
 	@Override
 	public boolean equals( Object obj );
 

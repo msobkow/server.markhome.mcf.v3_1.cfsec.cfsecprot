@@ -60,8 +60,8 @@ public interface ICFSecProtSecSession
 
 	public ICFLibKeyHash256 getPKey();
 	public void setPKey(ICFLibKeyHash256 requiredSecSessionId);
-	public CFLibDbKeyHash256 getRequiredSecSessionId();
-	public void setRequiredSecSessionId( CFLibDbKeyHash256 value );
+	public ICFLibKeyHash256 getRequiredSecSessionId();
+	public void setRequiredSecSessionId( ICFLibKeyHash256 value );
 	public int getRequiredRevision();
 	public void setRequiredRevision( int value );
 
@@ -83,14 +83,14 @@ public interface ICFSecProtSecSession
 
 	public void setRequiredParentSecProxy(ICFSecPubSecUser argObj);
 
-	public CFLibDbKeyHash256 getRequiredSecUserId();
-	public void setRequiredSecUserId( CFLibDbKeyHash256 value );
+	public ICFLibKeyHash256 getRequiredSecUserId();
+	public void setRequiredSecUserId( ICFLibKeyHash256 value );
 	public LocalDateTime getRequiredStart();
 	public void setRequiredStart( LocalDateTime value );
 	public LocalDateTime getOptionalFinish();
 	public void setOptionalFinish( LocalDateTime value );
-	public CFLibDbKeyHash256 getOptionalSecProxyId();
-	public void setOptionalSecProxyId( CFLibDbKeyHash256 value );
+	public ICFLibKeyHash256 getOptionalSecProxyId();
+	public void setOptionalSecProxyId( ICFLibKeyHash256 value );
 	public boolean equals( Object obj );
 
 	public int hashCode();

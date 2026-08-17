@@ -73,8 +73,8 @@ public interface ICFSecProtSecTentRoleH
 	public ICFLibKeyHash256 getRequiredSecTentRoleId();
 	public void setRequiredSecTentRoleId( ICFLibKeyHash256 requiredSecTentRoleId );
 
-	public CFLibDbKeyHash256 getRequiredTenantId();
-	public void setRequiredTenantId( CFLibDbKeyHash256 value );
+	public ICFLibKeyHash256 getRequiredTenantId();
+	public void setRequiredTenantId( ICFLibKeyHash256 value );
 	public String getRequiredName();
 	public void setRequiredName( String value );
 	@Override

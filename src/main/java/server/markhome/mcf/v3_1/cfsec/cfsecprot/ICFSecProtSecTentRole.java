@@ -80,8 +80,8 @@ public interface ICFSecProtSecTentRole
 	public void setPKey(ICFLibKeyHash256 requiredSecTentRoleId);
 	public List<ICFSecProtSecTentRoleMemb> getOptionalChildrenMembByRole();
 
-	public CFLibDbKeyHash256 getRequiredSecTentRoleId();
-	public void setRequiredSecTentRoleId( CFLibDbKeyHash256 value );
+	public ICFLibKeyHash256 getRequiredSecTentRoleId();
+	public void setRequiredSecTentRoleId( ICFLibKeyHash256 value );
 	public int getRequiredRevision();
 	public void setRequiredRevision( int value );
 
@@ -99,8 +99,8 @@ public interface ICFSecProtSecTentRole
 
 	public void setRequiredContainerSysRole(ICFSecProtSecSysGrp argObj);
 
-	public CFLibDbKeyHash256 getRequiredTenantId();
-	public void setRequiredTenantId( CFLibDbKeyHash256 value );
+	public ICFLibKeyHash256 getRequiredTenantId();
+	public void setRequiredTenantId( ICFLibKeyHash256 value );
 	public String getRequiredName();
 	public void setRequiredName( String value );
 	public boolean equals( Object obj );

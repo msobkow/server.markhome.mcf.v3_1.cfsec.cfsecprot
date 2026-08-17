@@ -82,8 +82,8 @@ public interface ICFSecProtTenant
 
 	public List<ICFSecProtSecTentRole> getOptionalComponentsSecRole();
 
-	public CFLibDbKeyHash256 getRequiredId();
-	public void setRequiredId( CFLibDbKeyHash256 value );
+	public ICFLibKeyHash256 getRequiredId();
+	public void setRequiredId( ICFLibKeyHash256 value );
 	public int getRequiredRevision();
 	public void setRequiredRevision( int value );
 
@@ -96,8 +96,8 @@ public interface ICFSecProtTenant
 
 	public void setRequiredContainerCluster(ICFSecPubCluster argObj);
 
-	public CFLibDbKeyHash256 getRequiredClusterId();
-	public void setRequiredClusterId( CFLibDbKeyHash256 value );
+	public ICFLibKeyHash256 getRequiredClusterId();
+	public void setRequiredClusterId( ICFLibKeyHash256 value );
 	public String getRequiredTenantName();
 	public void setRequiredTenantName( String value );
 	public boolean equals( Object obj );
