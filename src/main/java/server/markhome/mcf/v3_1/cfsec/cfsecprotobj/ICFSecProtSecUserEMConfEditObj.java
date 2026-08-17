@@ -165,18 +165,18 @@ public interface ICFSecProtSecUserEMConfEditObj
 	void setRequiredEMailSentStamp(LocalDateTime value);
 
 	/**
-	 *	Get the required CFLibUuid6 attribute EMConfirmationUuid6.
+	 *	Get the required ICFLibUuid6 attribute EMConfirmationUuid6.
 	 *
-	 *	@return	The required CFLibUuid6 attribute EMConfirmationUuid6.
+	 *	@return	The required ICFLibUuid6 attribute EMConfirmationUuid6.
 	 */
-	CFLibUuid6 getRequiredEMConfirmationUuid6();
+	ICFLibUuid6 getRequiredEMConfirmationUuid6();
 
 	/**
-	 *	Set the required CFLibUuid6 attribute EMConfirmationUuid6.
+	 *	Set the required ICFLibUuid6 attribute EMConfirmationUuid6.
 	 *
-	 *	@param value The required CFLibUuid6 attribute EMConfirmationUuid6 value to be applied.
+	 *	@param value The required ICFLibUuid6 attribute EMConfirmationUuid6 value to be applied.
 	 */
-	void setRequiredEMConfirmationUuid6(CFLibUuid6 value);
+	void setRequiredEMConfirmationUuid6(ICFLibUuid6 value);
 
 	/**
 	 *	Get the required boolean attribute NewAccount.

@@ -101,7 +101,7 @@ public interface ICFSecProtSecUserEMConfTable
 	 *	@param	EMConfirmationUuid6	The SecUserEMConf key attribute of the instance generating the id.
 	 */
 	public void protdeleteSecUserEMConfByUUuid6Idx( ICFSecPubAuthorization Authorization,
-		CFLibUuid6 argEMConfirmationUuid6 );
+		ICFLibUuid6 argEMConfirmationUuid6 );
 
 	/**
 	 *	Delete the SecUserEMConf instances identified by the key UUuid6Idx.
@@ -230,7 +230,7 @@ public interface ICFSecProtSecUserEMConfTable
 	 *		no such existing key value.
 	 */
 	public ICFSecProtSecUserEMConf protreadDerivedByUUuid6Idx( ICFSecPubAuthorization Authorization,
-		CFLibUuid6 EMConfirmationUuid6 );
+		ICFLibUuid6 EMConfirmationUuid6 );
 
 	/**
 	 *	Read an array of the derived SecUserEMConf record instances identified by the duplicate key ConfEMAddrIdx.
@@ -345,7 +345,7 @@ public interface ICFSecProtSecUserEMConfTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFSecProtSecUserEMConf protreadRecByUUuid6Idx( ICFSecPubAuthorization Authorization,
-		CFLibUuid6 EMConfirmationUuid6 );
+		ICFLibUuid6 EMConfirmationUuid6 );
 
 	/**
 	 *	Read an array of the specific SecUserEMConf record instances identified by the duplicate key ConfEMAddrIdx.

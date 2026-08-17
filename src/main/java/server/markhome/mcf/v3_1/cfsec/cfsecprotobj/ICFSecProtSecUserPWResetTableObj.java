@@ -178,7 +178,7 @@ public interface ICFSecProtSecUserPWResetTableObj
 	 *	@return	ICFSecProtSecUserPWResetObj cached instance for the unique UUuid6Idx key, or
 	 *		null if no such instance exists.
 	 */
-	ICFSecProtSecUserPWResetObj readSecUserPWResetByUUuid6Idx(CFLibUuid6 PasswordResetUuid6 );
+	ICFSecProtSecUserPWResetObj readSecUserPWResetByUUuid6Idx(ICFLibUuid6 PasswordResetUuid6 );
 
 	/**
 	 *	Get the ICFSecProtSecUserPWResetObj instance for the unique UUuid6Idx key.
@@ -188,7 +188,7 @@ public interface ICFSecProtSecUserPWResetTableObj
 	 *	@return	ICFSecProtSecUserPWResetObj refreshed instance for the unique UUuid6Idx key, or
 	 *		null if no such instance exists.
 	 */
-	ICFSecProtSecUserPWResetObj readSecUserPWResetByUUuid6Idx(CFLibUuid6 PasswordResetUuid6,
+	ICFSecProtSecUserPWResetObj readSecUserPWResetByUUuid6Idx(ICFLibUuid6 PasswordResetUuid6,
 		boolean forceRead );
 
 	/**
@@ -235,7 +235,7 @@ public interface ICFSecProtSecUserPWResetTableObj
 
 	ICFSecProtSecUserPWResetObj readCachedSecUserPWResetByIdIdx( CFLibDbKeyHash256 SecUserId );
 
-	ICFSecProtSecUserPWResetObj readCachedSecUserPWResetByUUuid6Idx( CFLibUuid6 PasswordResetUuid6 );
+	ICFSecProtSecUserPWResetObj readCachedSecUserPWResetByUUuid6Idx( ICFLibUuid6 PasswordResetUuid6 );
 
 	List<List<ICFSecProtSecUserPWResetObj>> readCachedSecUserPWResetBySentEMAddrIdx( String SentToEMailAddr );
 
@@ -243,7 +243,7 @@ public interface ICFSecProtSecUserPWResetTableObj
 
 	void deepDisposeSecUserPWResetByIdIdx( CFLibDbKeyHash256 SecUserId );
 
-	void deepDisposeSecUserPWResetByUUuid6Idx( CFLibUuid6 PasswordResetUuid6 );
+	void deepDisposeSecUserPWResetByUUuid6Idx( ICFLibUuid6 PasswordResetUuid6 );
 
 	void deepDisposeSecUserPWResetBySentEMAddrIdx( String SentToEMailAddr );
 
@@ -295,7 +295,7 @@ public interface ICFSecProtSecUserPWResetTableObj
 	 *
 	 *	@param	PasswordResetUuid6	The SecUserPWReset key attribute of the instance generating the id.
 	 */
-	void deleteSecUserPWResetByUUuid6Idx(CFLibUuid6 PasswordResetUuid6 );
+	void deleteSecUserPWResetByUUuid6Idx(ICFLibUuid6 PasswordResetUuid6 );
 
 	/**
 	 *	Internal use only.

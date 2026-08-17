@@ -101,7 +101,7 @@ public interface ICFSecProtSecUserPWResetTable
 	 *	@param	PasswordResetUuid6	The SecUserPWReset key attribute of the instance generating the id.
 	 */
 	public void protdeleteSecUserPWResetByUUuid6Idx( ICFSecPubAuthorization Authorization,
-		CFLibUuid6 argPasswordResetUuid6 );
+		ICFLibUuid6 argPasswordResetUuid6 );
 
 	/**
 	 *	Delete the SecUserPWReset instances identified by the key UUuid6Idx.
@@ -211,7 +211,7 @@ public interface ICFSecProtSecUserPWResetTable
 	 *		no such existing key value.
 	 */
 	public ICFSecProtSecUserPWReset protreadDerivedByUUuid6Idx( ICFSecPubAuthorization Authorization,
-		CFLibUuid6 PasswordResetUuid6 );
+		ICFLibUuid6 PasswordResetUuid6 );
 
 	/**
 	 *	Read an array of the derived SecUserPWReset record instances identified by the duplicate key SentEMAddrIdx.
@@ -314,7 +314,7 @@ public interface ICFSecProtSecUserPWResetTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFSecProtSecUserPWReset protreadRecByUUuid6Idx( ICFSecPubAuthorization Authorization,
-		CFLibUuid6 PasswordResetUuid6 );
+		ICFLibUuid6 PasswordResetUuid6 );
 
 	/**
 	 *	Read an array of the specific SecUserPWReset record instances identified by the duplicate key SentEMAddrIdx.

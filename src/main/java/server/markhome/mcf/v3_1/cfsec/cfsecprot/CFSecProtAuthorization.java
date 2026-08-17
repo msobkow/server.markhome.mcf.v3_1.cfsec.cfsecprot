@@ -53,7 +53,7 @@ public class CFSecProtAuthorization extends CFSecPubAuthorization implements ICF
 		super();
 	}
 
-	public CFSecProtAuthorization(CFLibUuid6 authUuid6, CFLibDbKeyHash256 secSessionId, CFLibDbKeyHash256 secUserId, CFLibDbKeyHash256 secClusterId, CFLibDbKeyHash256 secTenantId) {
+	public CFSecProtAuthorization(ICFLibUuid6 authUuid6, CFLibDbKeyHash256 secSessionId, CFLibDbKeyHash256 secUserId, CFLibDbKeyHash256 secClusterId, CFLibDbKeyHash256 secTenantId) {
 		super(authUuid6, secSessionId, secUserId, secClusterId, secTenantId);
 	}
 

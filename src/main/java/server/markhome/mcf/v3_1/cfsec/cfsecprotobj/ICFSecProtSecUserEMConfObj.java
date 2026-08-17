@@ -238,11 +238,11 @@ public interface ICFSecProtSecUserEMConfObj
 	LocalDateTime getRequiredEMailSentStamp();
 
 	/**
-	 *	Get the required CFLibUuid6 attribute EMConfirmationUuid6.
+	 *	Get the required ICFLibUuid6 attribute EMConfirmationUuid6.
 	 *
-	 *	@return	The required CFLibUuid6 attribute EMConfirmationUuid6.
+	 *	@return	The required ICFLibUuid6 attribute EMConfirmationUuid6.
 	 */
-	CFLibUuid6 getRequiredEMConfirmationUuid6();
+	ICFLibUuid6 getRequiredEMConfirmationUuid6();
 
 	/**
 	 *	Get the required boolean attribute NewAccount.

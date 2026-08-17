@@ -178,7 +178,7 @@ public interface ICFSecProtSecUserEMConfTableObj
 	 *	@return	ICFSecProtSecUserEMConfObj cached instance for the unique UUuid6Idx key, or
 	 *		null if no such instance exists.
 	 */
-	ICFSecProtSecUserEMConfObj readSecUserEMConfByUUuid6Idx(CFLibUuid6 EMConfirmationUuid6 );
+	ICFSecProtSecUserEMConfObj readSecUserEMConfByUUuid6Idx(ICFLibUuid6 EMConfirmationUuid6 );
 
 	/**
 	 *	Get the ICFSecProtSecUserEMConfObj instance for the unique UUuid6Idx key.
@@ -188,7 +188,7 @@ public interface ICFSecProtSecUserEMConfTableObj
 	 *	@return	ICFSecProtSecUserEMConfObj refreshed instance for the unique UUuid6Idx key, or
 	 *		null if no such instance exists.
 	 */
-	ICFSecProtSecUserEMConfObj readSecUserEMConfByUUuid6Idx(CFLibUuid6 EMConfirmationUuid6,
+	ICFSecProtSecUserEMConfObj readSecUserEMConfByUUuid6Idx(ICFLibUuid6 EMConfirmationUuid6,
 		boolean forceRead );
 
 	/**
@@ -256,7 +256,7 @@ public interface ICFSecProtSecUserEMConfTableObj
 
 	ICFSecProtSecUserEMConfObj readCachedSecUserEMConfByIdIdx( CFLibDbKeyHash256 SecUserId );
 
-	ICFSecProtSecUserEMConfObj readCachedSecUserEMConfByUUuid6Idx( CFLibUuid6 EMConfirmationUuid6 );
+	ICFSecProtSecUserEMConfObj readCachedSecUserEMConfByUUuid6Idx( ICFLibUuid6 EMConfirmationUuid6 );
 
 	List<List<ICFSecProtSecUserEMConfObj>> readCachedSecUserEMConfByConfEMAddrIdx( String ConfirmEMailAddr );
 
@@ -266,7 +266,7 @@ public interface ICFSecProtSecUserEMConfTableObj
 
 	void deepDisposeSecUserEMConfByIdIdx( CFLibDbKeyHash256 SecUserId );
 
-	void deepDisposeSecUserEMConfByUUuid6Idx( CFLibUuid6 EMConfirmationUuid6 );
+	void deepDisposeSecUserEMConfByUUuid6Idx( ICFLibUuid6 EMConfirmationUuid6 );
 
 	void deepDisposeSecUserEMConfByConfEMAddrIdx( String ConfirmEMailAddr );
 
@@ -332,7 +332,7 @@ public interface ICFSecProtSecUserEMConfTableObj
 	 *
 	 *	@param	EMConfirmationUuid6	The SecUserEMConf key attribute of the instance generating the id.
 	 */
-	void deleteSecUserEMConfByUUuid6Idx(CFLibUuid6 EMConfirmationUuid6 );
+	void deleteSecUserEMConfByUUuid6Idx(ICFLibUuid6 EMConfirmationUuid6 );
 
 	/**
 	 *	Internal use only.
