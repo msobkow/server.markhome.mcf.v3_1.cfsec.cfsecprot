@@ -58,8 +58,8 @@ public interface ICFSecProtSecSession
 
 	public int getClassCode();
 
-	public ICFLibKeyHash256 getPKey();
-	public void setPKey(ICFLibKeyHash256 requiredSecSessionId);
+	public CFLibDbKeyHash256 getPKey();
+	public void setPKey(CFLibDbKeyHash256 requiredSecSessionId);
 	public ICFLibKeyHash256 getRequiredSecSessionId();
 	public void setRequiredSecSessionId( ICFLibKeyHash256 value );
 	public int getRequiredRevision();

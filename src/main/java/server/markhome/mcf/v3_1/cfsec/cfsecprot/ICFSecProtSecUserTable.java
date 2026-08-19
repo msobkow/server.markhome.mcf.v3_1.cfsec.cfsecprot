@@ -221,7 +221,7 @@ extends ICFSecPubSecUserTable
 	 *		no such existing key value.
 	 */
 	public ICFSecProtSecUser protreadDerivedByIdIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 SecUserId );
+		ICFLibKeyHash256 SecUserId );
 
 	/**
 	 *	Read the derived SecUser record instance identified by the unique key ULoginIdx.
@@ -310,7 +310,7 @@ extends ICFSecPubSecUserTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFSecProtSecUser protreadRecByIdIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 SecUserId );
+		ICFLibKeyHash256 SecUserId );
 
 	/**
 	 *	Read the specific SecUser record instance identified by the unique key ULoginIdx.

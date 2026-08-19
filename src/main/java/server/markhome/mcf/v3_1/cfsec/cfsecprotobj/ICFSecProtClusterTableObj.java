@@ -157,7 +157,7 @@ public interface ICFSecProtClusterTableObj
 	 *	@return	ICFSecProtClusterObj cached instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
-	ICFSecProtClusterObj readClusterByIdIdx( CFLibDbKeyHash256 Id );
+	ICFSecProtClusterObj readClusterByIdIdx( ICFLibKeyHash256 Id );
 
 	/**
 	 *	Get the ICFSecProtClusterObj instance for the primary key attributes.
@@ -167,7 +167,7 @@ public interface ICFSecProtClusterTableObj
 	 *	@return	ICFSecProtClusterObj refreshed instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
-	ICFSecProtClusterObj readClusterByIdIdx( CFLibDbKeyHash256 Id,
+	ICFSecProtClusterObj readClusterByIdIdx( ICFLibKeyHash256 Id,
 		boolean forceRead );
 
 	/**
@@ -212,13 +212,13 @@ public interface ICFSecProtClusterTableObj
 	ICFSecProtClusterObj readClusterByUDescrIdx(String Description,
 		boolean forceRead );
 
-	ICFSecProtClusterObj readCachedClusterByIdIdx( CFLibDbKeyHash256 Id );
+	ICFSecProtClusterObj readCachedClusterByIdIdx( ICFLibKeyHash256 Id );
 
 	ICFSecProtClusterObj readCachedClusterByUDomNameIdx( String FullDomName );
 
 	ICFSecProtClusterObj readCachedClusterByUDescrIdx( String Description );
 
-	void deepDisposeClusterByIdIdx( CFLibDbKeyHash256 Id );
+	void deepDisposeClusterByIdIdx( ICFLibKeyHash256 Id );
 
 	void deepDisposeClusterByUDomNameIdx( String FullDomName );
 
@@ -239,7 +239,7 @@ public interface ICFSecProtClusterTableObj
 	 *
 	 *	@param	Id	The Cluster key attribute of the instance generating the id.
 	 */
-	void deleteClusterByIdIdx( CFLibDbKeyHash256 Id );
+	void deleteClusterByIdIdx( ICFLibKeyHash256 Id );
 
 	/**
 	 *	Internal use only.

@@ -157,7 +157,7 @@ public interface ICFSecProtSecUserTableObj
 	 *	@return	ICFSecProtSecUserObj cached instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
-	ICFSecProtSecUserObj readSecUserByIdIdx( CFLibDbKeyHash256 SecUserId );
+	ICFSecProtSecUserObj readSecUserByIdIdx( ICFLibKeyHash256 SecUserId );
 
 	/**
 	 *	Get the ICFSecProtSecUserObj instance for the primary key attributes.
@@ -167,7 +167,7 @@ public interface ICFSecProtSecUserTableObj
 	 *	@return	ICFSecProtSecUserObj refreshed instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
-	ICFSecProtSecUserObj readSecUserByIdIdx( CFLibDbKeyHash256 SecUserId,
+	ICFSecProtSecUserObj readSecUserByIdIdx( ICFLibKeyHash256 SecUserId,
 		boolean forceRead );
 
 	/**
@@ -212,13 +212,13 @@ public interface ICFSecProtSecUserTableObj
 	List<ICFSecProtSecUserObj> readSecUserByEMAddrIdx( String EMailAddress,
 		boolean forceRead );
 
-	ICFSecProtSecUserObj readCachedSecUserByIdIdx( CFLibDbKeyHash256 SecUserId );
+	ICFSecProtSecUserObj readCachedSecUserByIdIdx( ICFLibKeyHash256 SecUserId );
 
 	ICFSecProtSecUserObj readCachedSecUserByULoginIdx( String LoginId );
 
 	List<List<ICFSecProtSecUserObj>> readCachedSecUserByEMAddrIdx( String EMailAddress );
 
-	void deepDisposeSecUserByIdIdx( CFLibDbKeyHash256 SecUserId );
+	void deepDisposeSecUserByIdIdx( ICFLibKeyHash256 SecUserId );
 
 	void deepDisposeSecUserByULoginIdx( String LoginId );
 
@@ -251,7 +251,7 @@ public interface ICFSecProtSecUserTableObj
 	 *
 	 *	@param	SecUserId	The SecUser key attribute of the instance generating the id.
 	 */
-	void deleteSecUserByIdIdx( CFLibDbKeyHash256 SecUserId );
+	void deleteSecUserByIdIdx( ICFLibKeyHash256 SecUserId );
 
 	/**
 	 *	Internal use only.

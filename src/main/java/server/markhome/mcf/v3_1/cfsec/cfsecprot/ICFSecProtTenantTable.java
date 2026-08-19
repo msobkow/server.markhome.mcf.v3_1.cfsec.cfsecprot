@@ -124,7 +124,7 @@ extends ICFSecPubTenantTable
 	 *	@param	ClusterId	The Tenant key attribute of the instance generating the id.
 	 */
 	public void protdeleteTenantByClusterIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argClusterId );
+		ICFLibKeyHash256 argClusterId );
 
 	/**
 	 *	Delete the Tenant instances identified by the key ClusterIdx.
@@ -154,7 +154,7 @@ extends ICFSecPubTenantTable
 	 *	@param	TenantName	The Tenant key attribute of the instance generating the id.
 	 */
 	public void protdeleteTenantByUNameIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argClusterId,
+		ICFLibKeyHash256 argClusterId,
 		String argTenantName );
 
 	/**
@@ -233,7 +233,7 @@ extends ICFSecPubTenantTable
 	 *		no such existing key value.
 	 */
 	public ICFSecProtTenant protreadDerivedByIdIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 Id );
+		ICFLibKeyHash256 Id );
 
 	/**
 	 *	Read an array of the derived Tenant record instances identified by the duplicate key ClusterIdx.
@@ -245,7 +245,7 @@ extends ICFSecPubTenantTable
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
 	public ICFSecProtTenant[] protreadDerivedByClusterIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ClusterId );
+		ICFLibKeyHash256 ClusterId );
 
 	/**
 	 *	Read the derived Tenant record instance identified by the unique key UNameIdx.
@@ -260,7 +260,7 @@ extends ICFSecPubTenantTable
 	 *		no such existing key value.
 	 */
 	public ICFSecProtTenant protreadDerivedByUNameIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ClusterId,
+		ICFLibKeyHash256 ClusterId,
 		String TenantName );
 
 	/**
@@ -325,7 +325,7 @@ extends ICFSecPubTenantTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFSecProtTenant protreadRecByIdIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 Id );
+		ICFLibKeyHash256 Id );
 
 	/**
 	 *	Read an array of the specific Tenant record instances identified by the duplicate key ClusterIdx.
@@ -339,7 +339,7 @@ extends ICFSecPubTenantTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFSecProtTenant[] protreadRecByClusterIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ClusterId );
+		ICFLibKeyHash256 ClusterId );
 
 	/**
 	 *	Read the specific Tenant record instance identified by the unique key UNameIdx.
@@ -356,7 +356,7 @@ extends ICFSecPubTenantTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFSecProtTenant protreadRecByUNameIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ClusterId,
+		ICFLibKeyHash256 ClusterId,
 		String TenantName );
 
 	/**

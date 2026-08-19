@@ -230,7 +230,7 @@ extends ICFSecPubSecSysGrpTable
 	 *		no such existing key value.
 	 */
 	public ICFSecProtSecSysGrp protreadDerivedByIdIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 SecSysGrpId );
+		ICFLibKeyHash256 SecSysGrpId );
 
 	/**
 	 *	Read the derived SecSysGrp record instance identified by the unique key UNameIdx.
@@ -309,7 +309,7 @@ extends ICFSecPubSecSysGrpTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFSecProtSecSysGrp protreadRecByIdIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 SecSysGrpId );
+		ICFLibKeyHash256 SecSysGrpId );
 
 	/**
 	 *	Read the specific SecSysGrp record instance identified by the unique key UNameIdx.

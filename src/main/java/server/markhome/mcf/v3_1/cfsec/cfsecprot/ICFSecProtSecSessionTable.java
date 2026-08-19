@@ -124,7 +124,7 @@ extends ICFSecPubSecSessionTable
 	 *	@param	SecUserId	The SecSession key attribute of the instance generating the id.
 	 */
 	public void protdeleteSecSessionBySecUserIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argSecUserId );
+		ICFLibKeyHash256 argSecUserId );
 
 	/**
 	 *	Delete the SecSession instances identified by the key SecUserIdx.
@@ -154,7 +154,7 @@ extends ICFSecPubSecSessionTable
 	 *	@param	Start	The SecSession key attribute of the instance generating the id.
 	 */
 	public void protdeleteSecSessionByStartIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argSecUserId,
+		ICFLibKeyHash256 argSecUserId,
 		LocalDateTime argStart );
 
 	/**
@@ -185,7 +185,7 @@ extends ICFSecPubSecSessionTable
 	 *	@param	Finish	The SecSession key attribute of the instance generating the id.
 	 */
 	public void protdeleteSecSessionByFinishIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argSecUserId,
+		ICFLibKeyHash256 argSecUserId,
 		LocalDateTime argFinish );
 
 	/**
@@ -283,7 +283,7 @@ extends ICFSecPubSecSessionTable
 	 *		no such existing key value.
 	 */
 	public ICFSecProtSecSession protreadDerivedByIdIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 SecSessionId );
+		ICFLibKeyHash256 SecSessionId );
 
 	/**
 	 *	Read an array of the derived SecSession record instances identified by the duplicate key SecUserIdx.
@@ -295,7 +295,7 @@ extends ICFSecPubSecSessionTable
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
 	public ICFSecProtSecSession[] protreadDerivedBySecUserIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 SecUserId );
+		ICFLibKeyHash256 SecUserId );
 
 	/**
 	 *	Read the derived SecSession record instance identified by the unique key StartIdx.
@@ -310,7 +310,7 @@ extends ICFSecPubSecSessionTable
 	 *		no such existing key value.
 	 */
 	public ICFSecProtSecSession protreadDerivedByStartIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 SecUserId,
+		ICFLibKeyHash256 SecUserId,
 		LocalDateTime Start );
 
 	/**
@@ -325,7 +325,7 @@ extends ICFSecPubSecSessionTable
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
 	public ICFSecProtSecSession[] protreadDerivedByFinishIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 SecUserId,
+		ICFLibKeyHash256 SecUserId,
 		LocalDateTime Finish );
 
 	/**
@@ -402,7 +402,7 @@ extends ICFSecPubSecSessionTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFSecProtSecSession protreadRecByIdIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 SecSessionId );
+		ICFLibKeyHash256 SecSessionId );
 
 	/**
 	 *	Read an array of the specific SecSession record instances identified by the duplicate key SecUserIdx.
@@ -416,7 +416,7 @@ extends ICFSecPubSecSessionTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFSecProtSecSession[] protreadRecBySecUserIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 SecUserId );
+		ICFLibKeyHash256 SecUserId );
 
 	/**
 	 *	Read the specific SecSession record instance identified by the unique key StartIdx.
@@ -433,7 +433,7 @@ extends ICFSecPubSecSessionTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFSecProtSecSession protreadRecByStartIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 SecUserId,
+		ICFLibKeyHash256 SecUserId,
 		LocalDateTime Start );
 
 	/**
@@ -450,7 +450,7 @@ extends ICFSecPubSecSessionTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFSecProtSecSession[] protreadRecByFinishIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 SecUserId,
+		ICFLibKeyHash256 SecUserId,
 		LocalDateTime Finish );
 
 	/**

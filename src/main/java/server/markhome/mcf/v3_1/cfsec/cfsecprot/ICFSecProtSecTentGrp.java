@@ -76,8 +76,8 @@ public interface ICFSecProtSecTentGrp
 
 	public void setUpdatedAt( LocalDateTime value );
 
-	public ICFLibKeyHash256 getPKey();
-	public void setPKey(ICFLibKeyHash256 requiredSecTentGrpId);
+	public CFLibDbKeyHash256 getPKey();
+	public void setPKey(CFLibDbKeyHash256 requiredSecTentGrpId);
 	public List<ICFSecProtSecTentGrpMemb> getOptionalChildrenMembByGrp();
 
 	public ICFLibKeyHash256 getRequiredSecTentGrpId();

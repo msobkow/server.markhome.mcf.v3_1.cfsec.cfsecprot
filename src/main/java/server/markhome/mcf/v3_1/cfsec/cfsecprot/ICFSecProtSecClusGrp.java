@@ -76,8 +76,8 @@ public interface ICFSecProtSecClusGrp
 
 	public void setUpdatedAt( LocalDateTime value );
 
-	public ICFLibKeyHash256 getPKey();
-	public void setPKey(ICFLibKeyHash256 requiredSecClusGrpId);
+	public CFLibDbKeyHash256 getPKey();
+	public void setPKey(CFLibDbKeyHash256 requiredSecClusGrpId);
 	public List<ICFSecProtSecClusGrpMemb> getOptionalChildrenMembByGrp();
 
 	public ICFLibKeyHash256 getRequiredSecClusGrpId();

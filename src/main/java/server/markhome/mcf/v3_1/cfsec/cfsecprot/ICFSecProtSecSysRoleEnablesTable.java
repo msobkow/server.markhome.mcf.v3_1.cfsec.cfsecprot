@@ -94,7 +94,7 @@ public interface ICFSecProtSecSysRoleEnablesTable
 	 *	@param	EnableName	The SecSysRoleEnables key attribute of the instance generating the id.
 	 */
 	public void protdeleteSecSysRoleEnablesByIdIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argSecSysRoleId,
+		ICFLibKeyHash256 argSecSysRoleId,
 		String argEnableName );
 	/**
 	 *	Delete the SecSysRoleEnables instance identified by the primary key.
@@ -113,7 +113,7 @@ public interface ICFSecProtSecSysRoleEnablesTable
 	 *	@param	SecSysRoleId	The SecSysRoleEnables key attribute of the instance generating the id.
 	 */
 	public void protdeleteSecSysRoleEnablesBySysRoleIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argSecSysRoleId );
+		ICFLibKeyHash256 argSecSysRoleId );
 
 	/**
 	 *	Delete the SecSysRoleEnables instances identified by the key SysRoleIdx.
@@ -167,7 +167,7 @@ public interface ICFSecProtSecSysRoleEnablesTable
 	 *		no such existing key value.
 	 */
 	public ICFSecProtSecSysRoleEnables protreadDerived( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 SecSysRoleId,
+		ICFLibKeyHash256 SecSysRoleId,
 		String EnableName );
 
 	/**
@@ -205,7 +205,7 @@ public interface ICFSecProtSecSysRoleEnablesTable
 	 *		no such existing key value.
 	 */
 	public ICFSecProtSecSysRoleEnables protreadDerivedByIdIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 SecSysRoleId,
+		ICFLibKeyHash256 SecSysRoleId,
 		String EnableName );
 
 	/**
@@ -218,7 +218,7 @@ public interface ICFSecProtSecSysRoleEnablesTable
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
 	public ICFSecProtSecSysRoleEnables[] protreadDerivedBySysRoleIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 SecSysRoleId );
+		ICFLibKeyHash256 SecSysRoleId );
 
 	/**
 	 *	Read an array of the derived SecSysRoleEnables record instances identified by the duplicate key NameIdx.
@@ -260,7 +260,7 @@ public interface ICFSecProtSecSysRoleEnablesTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFSecProtSecSysRoleEnables protreadRec( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 SecSysRoleId,
+		ICFLibKeyHash256 SecSysRoleId,
 		String EnableName );
 
 	/**
@@ -313,7 +313,7 @@ public interface ICFSecProtSecSysRoleEnablesTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFSecProtSecSysRoleEnables protreadRecByIdIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 SecSysRoleId,
+		ICFLibKeyHash256 SecSysRoleId,
 		String EnableName );
 
 	/**
@@ -328,7 +328,7 @@ public interface ICFSecProtSecSysRoleEnablesTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFSecProtSecSysRoleEnables[] protreadRecBySysRoleIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 SecSysRoleId );
+		ICFLibKeyHash256 SecSysRoleId );
 
 	/**
 	 *	Read an array of the specific SecSysRoleEnables record instances identified by the duplicate key NameIdx.

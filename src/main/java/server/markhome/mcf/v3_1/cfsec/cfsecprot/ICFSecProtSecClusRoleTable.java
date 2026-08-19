@@ -101,7 +101,7 @@ public interface ICFSecProtSecClusRoleTable
 	 *	@param	ClusterId	The SecClusRole key attribute of the instance generating the id.
 	 */
 	public void protdeleteSecClusRoleByClusterIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argClusterId );
+		ICFLibKeyHash256 argClusterId );
 
 	/**
 	 *	Delete the SecClusRole instances identified by the key ClusterIdx.
@@ -141,7 +141,7 @@ public interface ICFSecProtSecClusRoleTable
 	 *	@param	Name	The SecClusRole key attribute of the instance generating the id.
 	 */
 	public void protdeleteSecClusRoleByUNameIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argClusterId,
+		ICFLibKeyHash256 argClusterId,
 		String argName );
 
 	/**
@@ -201,7 +201,7 @@ public interface ICFSecProtSecClusRoleTable
 	 *		no such existing key value.
 	 */
 	public ICFSecProtSecClusRole protreadDerivedByIdIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 SecClusRoleId );
+		ICFLibKeyHash256 SecClusRoleId );
 
 	/**
 	 *	Read an array of the derived SecClusRole record instances identified by the duplicate key ClusterIdx.
@@ -213,7 +213,7 @@ public interface ICFSecProtSecClusRoleTable
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
 	public ICFSecProtSecClusRole[] protreadDerivedByClusterIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ClusterId );
+		ICFLibKeyHash256 ClusterId );
 
 	/**
 	 *	Read an array of the derived SecClusRole record instances identified by the duplicate key NameIdx.
@@ -240,7 +240,7 @@ public interface ICFSecProtSecClusRoleTable
 	 *		no such existing key value.
 	 */
 	public ICFSecProtSecClusRole protreadDerivedByUNameIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ClusterId,
+		ICFLibKeyHash256 ClusterId,
 		String Name );
 
 	/**
@@ -295,7 +295,7 @@ public interface ICFSecProtSecClusRoleTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFSecProtSecClusRole protreadRecByIdIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 SecClusRoleId );
+		ICFLibKeyHash256 SecClusRoleId );
 
 	/**
 	 *	Read an array of the specific SecClusRole record instances identified by the duplicate key ClusterIdx.
@@ -309,7 +309,7 @@ public interface ICFSecProtSecClusRoleTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFSecProtSecClusRole[] protreadRecByClusterIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ClusterId );
+		ICFLibKeyHash256 ClusterId );
 
 	/**
 	 *	Read an array of the specific SecClusRole record instances identified by the duplicate key NameIdx.
@@ -340,6 +340,6 @@ public interface ICFSecProtSecClusRoleTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFSecProtSecClusRole protreadRecByUNameIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ClusterId,
+		ICFLibKeyHash256 ClusterId,
 		String Name );
 }

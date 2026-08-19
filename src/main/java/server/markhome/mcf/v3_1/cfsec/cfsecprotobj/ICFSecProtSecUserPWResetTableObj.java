@@ -157,7 +157,7 @@ public interface ICFSecProtSecUserPWResetTableObj
 	 *	@return	ICFSecProtSecUserPWResetObj cached instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
-	ICFSecProtSecUserPWResetObj readSecUserPWResetByIdIdx( CFLibDbKeyHash256 SecUserId );
+	ICFSecProtSecUserPWResetObj readSecUserPWResetByIdIdx( ICFLibKeyHash256 SecUserId );
 
 	/**
 	 *	Get the ICFSecProtSecUserPWResetObj instance for the primary key attributes.
@@ -167,7 +167,7 @@ public interface ICFSecProtSecUserPWResetTableObj
 	 *	@return	ICFSecProtSecUserPWResetObj refreshed instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
-	ICFSecProtSecUserPWResetObj readSecUserPWResetByIdIdx( CFLibDbKeyHash256 SecUserId,
+	ICFSecProtSecUserPWResetObj readSecUserPWResetByIdIdx( ICFLibKeyHash256 SecUserId,
 		boolean forceRead );
 
 	/**
@@ -233,7 +233,7 @@ public interface ICFSecProtSecUserPWResetTableObj
 	List<ICFSecProtSecUserPWResetObj> readSecUserPWResetByNewAcctIdx( boolean NewAccount,
 		boolean forceRead );
 
-	ICFSecProtSecUserPWResetObj readCachedSecUserPWResetByIdIdx( CFLibDbKeyHash256 SecUserId );
+	ICFSecProtSecUserPWResetObj readCachedSecUserPWResetByIdIdx( ICFLibKeyHash256 SecUserId );
 
 	ICFSecProtSecUserPWResetObj readCachedSecUserPWResetByUUuid6Idx( ICFLibUuid6 PasswordResetUuid6 );
 
@@ -241,7 +241,7 @@ public interface ICFSecProtSecUserPWResetTableObj
 
 	List<List<ICFSecProtSecUserPWResetObj>> readCachedSecUserPWResetByNewAcctIdx( boolean NewAccount );
 
-	void deepDisposeSecUserPWResetByIdIdx( CFLibDbKeyHash256 SecUserId );
+	void deepDisposeSecUserPWResetByIdIdx( ICFLibKeyHash256 SecUserId );
 
 	void deepDisposeSecUserPWResetByUUuid6Idx( ICFLibUuid6 PasswordResetUuid6 );
 
@@ -288,7 +288,7 @@ public interface ICFSecProtSecUserPWResetTableObj
 	 *
 	 *	@param	SecUserId	The SecUserPWReset key attribute of the instance generating the id.
 	 */
-	void deleteSecUserPWResetByIdIdx( CFLibDbKeyHash256 SecUserId );
+	void deleteSecUserPWResetByIdIdx( ICFLibKeyHash256 SecUserId );
 
 	/**
 	 *	Internal use only.

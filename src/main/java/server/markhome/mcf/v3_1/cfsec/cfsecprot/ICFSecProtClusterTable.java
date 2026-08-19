@@ -230,7 +230,7 @@ extends ICFSecPubClusterTable
 	 *		no such existing key value.
 	 */
 	public ICFSecProtCluster protreadDerivedByIdIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 Id );
+		ICFLibKeyHash256 Id );
 
 	/**
 	 *	Read the derived Cluster record instance identified by the unique key UDomNameIdx.
@@ -320,7 +320,7 @@ extends ICFSecPubClusterTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFSecProtCluster protreadRecByIdIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 Id );
+		ICFLibKeyHash256 Id );
 
 	/**
 	 *	Read the specific Cluster record instance identified by the unique key UDomNameIdx.

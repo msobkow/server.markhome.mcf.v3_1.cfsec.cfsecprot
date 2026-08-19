@@ -202,7 +202,7 @@ extends ICFSecPubSecSysRoleTable
 	 *		no such existing key value.
 	 */
 	public ICFSecProtSecSysRole protreadDerivedByIdIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 SecSysRoleId );
+		ICFLibKeyHash256 SecSysRoleId );
 
 	/**
 	 *	Read the derived SecSysRole record instance identified by the unique key UNameIdx.
@@ -269,7 +269,7 @@ extends ICFSecPubSecSysRoleTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFSecProtSecSysRole protreadRecByIdIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 SecSysRoleId );
+		ICFLibKeyHash256 SecSysRoleId );
 
 	/**
 	 *	Read the specific SecSysRole record instance identified by the unique key UNameIdx.

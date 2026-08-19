@@ -217,18 +217,18 @@ public interface ICFSecProtSecTentGrpObj
 	void setIsNew( boolean value );
 
 	/**
-	 *	Get the required CFLibDbKeyHash256 attribute SecTentGrpId.
+	 *	Get the required ICFLibKeyHash256 attribute SecTentGrpId.
 	 *
-	 *	@return	The required CFLibDbKeyHash256 attribute SecTentGrpId.
+	 *	@return	The required ICFLibKeyHash256 attribute SecTentGrpId.
 	 */
-	CFLibDbKeyHash256 getRequiredSecTentGrpId();
+	ICFLibKeyHash256 getRequiredSecTentGrpId();
 
 	/**
-	 *	Get the required CFLibDbKeyHash256 attribute TenantId.
+	 *	Get the required ICFLibKeyHash256 attribute TenantId.
 	 *
-	 *	@return	The required CFLibDbKeyHash256 attribute TenantId.
+	 *	@return	The required ICFLibKeyHash256 attribute TenantId.
 	 */
-	CFLibDbKeyHash256 getRequiredTenantId();
+	ICFLibKeyHash256 getRequiredTenantId();
 
 	/**
 	 *	Get the required String attribute Name.

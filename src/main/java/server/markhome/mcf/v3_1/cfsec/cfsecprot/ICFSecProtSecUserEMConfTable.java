@@ -217,7 +217,7 @@ public interface ICFSecProtSecUserEMConfTable
 	 *		no such existing key value.
 	 */
 	public ICFSecProtSecUserEMConf protreadDerivedByIdIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 SecUserId );
+		ICFLibKeyHash256 SecUserId );
 
 	/**
 	 *	Read the derived SecUserEMConf record instance identified by the unique key UUuid6Idx.
@@ -330,7 +330,7 @@ public interface ICFSecProtSecUserEMConfTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFSecProtSecUserEMConf protreadRecByIdIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 SecUserId );
+		ICFLibKeyHash256 SecUserId );
 
 	/**
 	 *	Read the specific SecUserEMConf record instance identified by the unique key UUuid6Idx.

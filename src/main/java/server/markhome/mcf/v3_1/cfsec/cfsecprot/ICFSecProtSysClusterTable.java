@@ -124,7 +124,7 @@ extends ICFSecPubSysClusterTable
 	 *	@param	ClusterId	The SysCluster key attribute of the instance generating the id.
 	 */
 	public void protdeleteSysClusterByClusterIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argClusterId );
+		ICFLibKeyHash256 argClusterId );
 
 	/**
 	 *	Delete the SysCluster instances identified by the key ClusterIdx.
@@ -214,7 +214,7 @@ extends ICFSecPubSysClusterTable
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
 	public ICFSecProtSysCluster[] protreadDerivedByClusterIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ClusterId );
+		ICFLibKeyHash256 ClusterId );
 
 	/**
 	 *	Read the specific SysCluster record instance identified by the primary key.
@@ -282,5 +282,5 @@ extends ICFSecPubSysClusterTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFSecProtSysCluster[] protreadRecByClusterIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ClusterId );
+		ICFLibKeyHash256 ClusterId );
 }

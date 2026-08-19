@@ -149,7 +149,7 @@ public interface ICFSecProtSecTentGrpTableObj
 	 *	@return	ICFSecProtSecTentGrpObj cached instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
-	ICFSecProtSecTentGrpObj readSecTentGrpByIdIdx( CFLibDbKeyHash256 SecTentGrpId );
+	ICFSecProtSecTentGrpObj readSecTentGrpByIdIdx( ICFLibKeyHash256 SecTentGrpId );
 
 	/**
 	 *	Get the ICFSecProtSecTentGrpObj instance for the primary key attributes.
@@ -159,7 +159,7 @@ public interface ICFSecProtSecTentGrpTableObj
 	 *	@return	ICFSecProtSecTentGrpObj refreshed instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
-	ICFSecProtSecTentGrpObj readSecTentGrpByIdIdx( CFLibDbKeyHash256 SecTentGrpId,
+	ICFSecProtSecTentGrpObj readSecTentGrpByIdIdx( ICFLibKeyHash256 SecTentGrpId,
 		boolean forceRead );
 
 	/**
@@ -170,7 +170,7 @@ public interface ICFSecProtSecTentGrpTableObj
 	 *	@return	List of List<ICFSecProtSecTentGrpObj> cached instances sorted by their primary keys for the duplicate TenantIdx key,
 	 *		which may be an empty set.
 	 */
-	List<ICFSecProtSecTentGrpObj> readSecTentGrpByTenantIdx( CFLibDbKeyHash256 TenantId );
+	List<ICFSecProtSecTentGrpObj> readSecTentGrpByTenantIdx( ICFLibKeyHash256 TenantId );
 
 	/**
 	 *	Get the map of List<ICFSecProtSecTentGrpObj> instances sorted by their primary keys for the duplicate TenantIdx key.
@@ -180,7 +180,7 @@ public interface ICFSecProtSecTentGrpTableObj
 	 *	@return	List of List<ICFSecProtSecTentGrpObj> cached instances sorted by their primary keys for the duplicate TenantIdx key,
 	 *		which may be an empty set.
 	 */
-	List<ICFSecProtSecTentGrpObj> readSecTentGrpByTenantIdx( CFLibDbKeyHash256 TenantId,
+	List<ICFSecProtSecTentGrpObj> readSecTentGrpByTenantIdx( ICFLibKeyHash256 TenantId,
 		boolean forceRead );
 
 	/**
@@ -214,7 +214,7 @@ public interface ICFSecProtSecTentGrpTableObj
 	 *	@return	ICFSecProtSecTentGrpObj cached instance for the unique UNameIdx key, or
 	 *		null if no such instance exists.
 	 */
-	ICFSecProtSecTentGrpObj readSecTentGrpByUNameIdx(CFLibDbKeyHash256 TenantId,
+	ICFSecProtSecTentGrpObj readSecTentGrpByUNameIdx(ICFLibKeyHash256 TenantId,
 		String Name );
 
 	/**
@@ -227,26 +227,26 @@ public interface ICFSecProtSecTentGrpTableObj
 	 *	@return	ICFSecProtSecTentGrpObj refreshed instance for the unique UNameIdx key, or
 	 *		null if no such instance exists.
 	 */
-	ICFSecProtSecTentGrpObj readSecTentGrpByUNameIdx(CFLibDbKeyHash256 TenantId,
+	ICFSecProtSecTentGrpObj readSecTentGrpByUNameIdx(ICFLibKeyHash256 TenantId,
 		String Name,
 		boolean forceRead );
 
-	ICFSecProtSecTentGrpObj readCachedSecTentGrpByIdIdx( CFLibDbKeyHash256 SecTentGrpId );
+	ICFSecProtSecTentGrpObj readCachedSecTentGrpByIdIdx( ICFLibKeyHash256 SecTentGrpId );
 
-	List<List<ICFSecProtSecTentGrpObj>> readCachedSecTentGrpByTenantIdx( CFLibDbKeyHash256 TenantId );
+	List<List<ICFSecProtSecTentGrpObj>> readCachedSecTentGrpByTenantIdx( ICFLibKeyHash256 TenantId );
 
 	List<List<ICFSecProtSecTentGrpObj>> readCachedSecTentGrpByNameIdx( String Name );
 
-	ICFSecProtSecTentGrpObj readCachedSecTentGrpByUNameIdx( CFLibDbKeyHash256 TenantId,
+	ICFSecProtSecTentGrpObj readCachedSecTentGrpByUNameIdx( ICFLibKeyHash256 TenantId,
 		String Name );
 
-	void deepDisposeSecTentGrpByIdIdx( CFLibDbKeyHash256 SecTentGrpId );
+	void deepDisposeSecTentGrpByIdIdx( ICFLibKeyHash256 SecTentGrpId );
 
-	void deepDisposeSecTentGrpByTenantIdx( CFLibDbKeyHash256 TenantId );
+	void deepDisposeSecTentGrpByTenantIdx( ICFLibKeyHash256 TenantId );
 
 	void deepDisposeSecTentGrpByNameIdx( String Name );
 
-	void deepDisposeSecTentGrpByUNameIdx( CFLibDbKeyHash256 TenantId,
+	void deepDisposeSecTentGrpByUNameIdx( ICFLibKeyHash256 TenantId,
 		String Name );
 
 	/**
@@ -264,14 +264,14 @@ public interface ICFSecProtSecTentGrpTableObj
 	 *
 	 *	@param	SecTentGrpId	The SecTentGrp key attribute of the instance generating the id.
 	 */
-	void deleteSecTentGrpByIdIdx( CFLibDbKeyHash256 SecTentGrpId );
+	void deleteSecTentGrpByIdIdx( ICFLibKeyHash256 SecTentGrpId );
 
 	/**
 	 *	Internal use only.
 	 *
 	 *	@param	TenantId	The SecTentGrp key attribute of the instance generating the id.
 	 */
-	void deleteSecTentGrpByTenantIdx( CFLibDbKeyHash256 TenantId );
+	void deleteSecTentGrpByTenantIdx( ICFLibKeyHash256 TenantId );
 
 	/**
 	 *	Internal use only.
@@ -287,6 +287,6 @@ public interface ICFSecProtSecTentGrpTableObj
 	 *
 	 *	@param	Name	The SecTentGrp key attribute of the instance generating the id.
 	 */
-	void deleteSecTentGrpByUNameIdx(CFLibDbKeyHash256 TenantId,
+	void deleteSecTentGrpByUNameIdx(ICFLibKeyHash256 TenantId,
 		String Name );
 }

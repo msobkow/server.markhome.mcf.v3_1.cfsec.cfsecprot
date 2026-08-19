@@ -204,18 +204,18 @@ public interface ICFSecProtSecSessionObj
 	ICFSecProtSecUserObj getRequiredContainerSecUser( boolean forceRead );
 
 	/**
-	 *	Get the required CFLibDbKeyHash256 attribute SecSessionId.
+	 *	Get the required ICFLibKeyHash256 attribute SecSessionId.
 	 *
-	 *	@return	The required CFLibDbKeyHash256 attribute SecSessionId.
+	 *	@return	The required ICFLibKeyHash256 attribute SecSessionId.
 	 */
-	CFLibDbKeyHash256 getRequiredSecSessionId();
+	ICFLibKeyHash256 getRequiredSecSessionId();
 
 	/**
-	 *	Get the required CFLibDbKeyHash256 attribute SecUserId.
+	 *	Get the required ICFLibKeyHash256 attribute SecUserId.
 	 *
-	 *	@return	The required CFLibDbKeyHash256 attribute SecUserId.
+	 *	@return	The required ICFLibKeyHash256 attribute SecUserId.
 	 */
-	CFLibDbKeyHash256 getRequiredSecUserId();
+	ICFLibKeyHash256 getRequiredSecUserId();
 
 	/**
 	 *	Get the required LocalDateTime attribute Start.

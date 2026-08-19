@@ -74,8 +74,8 @@ public interface ICFSecProtSecSysRole
 
 	public void setUpdatedAt( LocalDateTime value );
 
-	public ICFLibKeyHash256 getPKey();
-	public void setPKey(ICFLibKeyHash256 requiredSecSysRoleId);
+	public CFLibDbKeyHash256 getPKey();
+	public void setPKey(CFLibDbKeyHash256 requiredSecSysRoleId);
 	public List<ICFSecProtSecSysRoleEnables> getOptionalComponentsEnabledByRole();
 
 	public List<ICFSecProtSecSysRoleMemb> getOptionalChildrenMembByRole();

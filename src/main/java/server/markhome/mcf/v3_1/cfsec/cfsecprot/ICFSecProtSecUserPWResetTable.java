@@ -198,7 +198,7 @@ public interface ICFSecProtSecUserPWResetTable
 	 *		no such existing key value.
 	 */
 	public ICFSecProtSecUserPWReset protreadDerivedByIdIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 SecUserId );
+		ICFLibKeyHash256 SecUserId );
 
 	/**
 	 *	Read the derived SecUserPWReset record instance identified by the unique key UUuid6Idx.
@@ -299,7 +299,7 @@ public interface ICFSecProtSecUserPWResetTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFSecProtSecUserPWReset protreadRecByIdIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 SecUserId );
+		ICFLibKeyHash256 SecUserId );
 
 	/**
 	 *	Read the specific SecUserPWReset record instance identified by the unique key UUuid6Idx.

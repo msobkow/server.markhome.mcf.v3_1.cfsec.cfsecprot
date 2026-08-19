@@ -101,7 +101,7 @@ public interface ICFSecProtSecClusGrpTable
 	 *	@param	ClusterId	The SecClusGrp key attribute of the instance generating the id.
 	 */
 	public void protdeleteSecClusGrpByClusterIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argClusterId );
+		ICFLibKeyHash256 argClusterId );
 
 	/**
 	 *	Delete the SecClusGrp instances identified by the key ClusterIdx.
@@ -141,7 +141,7 @@ public interface ICFSecProtSecClusGrpTable
 	 *	@param	Name	The SecClusGrp key attribute of the instance generating the id.
 	 */
 	public void protdeleteSecClusGrpByUNameIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 argClusterId,
+		ICFLibKeyHash256 argClusterId,
 		String argName );
 
 	/**
@@ -201,7 +201,7 @@ public interface ICFSecProtSecClusGrpTable
 	 *		no such existing key value.
 	 */
 	public ICFSecProtSecClusGrp protreadDerivedByIdIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 SecClusGrpId );
+		ICFLibKeyHash256 SecClusGrpId );
 
 	/**
 	 *	Read an array of the derived SecClusGrp record instances identified by the duplicate key ClusterIdx.
@@ -213,7 +213,7 @@ public interface ICFSecProtSecClusGrpTable
 	 *	@return An array of derived instances for the specified key, potentially with 0 elements in the set.
 	 */
 	public ICFSecProtSecClusGrp[] protreadDerivedByClusterIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ClusterId );
+		ICFLibKeyHash256 ClusterId );
 
 	/**
 	 *	Read an array of the derived SecClusGrp record instances identified by the duplicate key NameIdx.
@@ -240,7 +240,7 @@ public interface ICFSecProtSecClusGrpTable
 	 *		no such existing key value.
 	 */
 	public ICFSecProtSecClusGrp protreadDerivedByUNameIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ClusterId,
+		ICFLibKeyHash256 ClusterId,
 		String Name );
 
 	/**
@@ -295,7 +295,7 @@ public interface ICFSecProtSecClusGrpTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFSecProtSecClusGrp protreadRecByIdIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 SecClusGrpId );
+		ICFLibKeyHash256 SecClusGrpId );
 
 	/**
 	 *	Read an array of the specific SecClusGrp record instances identified by the duplicate key ClusterIdx.
@@ -309,7 +309,7 @@ public interface ICFSecProtSecClusGrpTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFSecProtSecClusGrp[] protreadRecByClusterIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ClusterId );
+		ICFLibKeyHash256 ClusterId );
 
 	/**
 	 *	Read an array of the specific SecClusGrp record instances identified by the duplicate key NameIdx.
@@ -340,6 +340,6 @@ public interface ICFSecProtSecClusGrpTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFSecProtSecClusGrp protreadRecByUNameIdx( ICFSecPubAuthorization Authorization,
-		CFLibDbKeyHash256 ClusterId,
+		ICFLibKeyHash256 ClusterId,
 		String Name );
 }

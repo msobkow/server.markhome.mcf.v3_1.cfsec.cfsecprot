@@ -149,7 +149,7 @@ public interface ICFSecProtSecClusRoleTableObj
 	 *	@return	ICFSecProtSecClusRoleObj cached instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
-	ICFSecProtSecClusRoleObj readSecClusRoleByIdIdx( CFLibDbKeyHash256 SecClusRoleId );
+	ICFSecProtSecClusRoleObj readSecClusRoleByIdIdx( ICFLibKeyHash256 SecClusRoleId );
 
 	/**
 	 *	Get the ICFSecProtSecClusRoleObj instance for the primary key attributes.
@@ -159,7 +159,7 @@ public interface ICFSecProtSecClusRoleTableObj
 	 *	@return	ICFSecProtSecClusRoleObj refreshed instance for the primary key, or
 	 *		null if no such instance exists.
 	 */
-	ICFSecProtSecClusRoleObj readSecClusRoleByIdIdx( CFLibDbKeyHash256 SecClusRoleId,
+	ICFSecProtSecClusRoleObj readSecClusRoleByIdIdx( ICFLibKeyHash256 SecClusRoleId,
 		boolean forceRead );
 
 	/**
@@ -170,7 +170,7 @@ public interface ICFSecProtSecClusRoleTableObj
 	 *	@return	List of List<ICFSecProtSecClusRoleObj> cached instances sorted by their primary keys for the duplicate ClusterIdx key,
 	 *		which may be an empty set.
 	 */
-	List<ICFSecProtSecClusRoleObj> readSecClusRoleByClusterIdx( CFLibDbKeyHash256 ClusterId );
+	List<ICFSecProtSecClusRoleObj> readSecClusRoleByClusterIdx( ICFLibKeyHash256 ClusterId );
 
 	/**
 	 *	Get the map of List<ICFSecProtSecClusRoleObj> instances sorted by their primary keys for the duplicate ClusterIdx key.
@@ -180,7 +180,7 @@ public interface ICFSecProtSecClusRoleTableObj
 	 *	@return	List of List<ICFSecProtSecClusRoleObj> cached instances sorted by their primary keys for the duplicate ClusterIdx key,
 	 *		which may be an empty set.
 	 */
-	List<ICFSecProtSecClusRoleObj> readSecClusRoleByClusterIdx( CFLibDbKeyHash256 ClusterId,
+	List<ICFSecProtSecClusRoleObj> readSecClusRoleByClusterIdx( ICFLibKeyHash256 ClusterId,
 		boolean forceRead );
 
 	/**
@@ -214,7 +214,7 @@ public interface ICFSecProtSecClusRoleTableObj
 	 *	@return	ICFSecProtSecClusRoleObj cached instance for the unique UNameIdx key, or
 	 *		null if no such instance exists.
 	 */
-	ICFSecProtSecClusRoleObj readSecClusRoleByUNameIdx(CFLibDbKeyHash256 ClusterId,
+	ICFSecProtSecClusRoleObj readSecClusRoleByUNameIdx(ICFLibKeyHash256 ClusterId,
 		String Name );
 
 	/**
@@ -227,26 +227,26 @@ public interface ICFSecProtSecClusRoleTableObj
 	 *	@return	ICFSecProtSecClusRoleObj refreshed instance for the unique UNameIdx key, or
 	 *		null if no such instance exists.
 	 */
-	ICFSecProtSecClusRoleObj readSecClusRoleByUNameIdx(CFLibDbKeyHash256 ClusterId,
+	ICFSecProtSecClusRoleObj readSecClusRoleByUNameIdx(ICFLibKeyHash256 ClusterId,
 		String Name,
 		boolean forceRead );
 
-	ICFSecProtSecClusRoleObj readCachedSecClusRoleByIdIdx( CFLibDbKeyHash256 SecClusRoleId );
+	ICFSecProtSecClusRoleObj readCachedSecClusRoleByIdIdx( ICFLibKeyHash256 SecClusRoleId );
 
-	List<List<ICFSecProtSecClusRoleObj>> readCachedSecClusRoleByClusterIdx( CFLibDbKeyHash256 ClusterId );
+	List<List<ICFSecProtSecClusRoleObj>> readCachedSecClusRoleByClusterIdx( ICFLibKeyHash256 ClusterId );
 
 	List<List<ICFSecProtSecClusRoleObj>> readCachedSecClusRoleByNameIdx( String Name );
 
-	ICFSecProtSecClusRoleObj readCachedSecClusRoleByUNameIdx( CFLibDbKeyHash256 ClusterId,
+	ICFSecProtSecClusRoleObj readCachedSecClusRoleByUNameIdx( ICFLibKeyHash256 ClusterId,
 		String Name );
 
-	void deepDisposeSecClusRoleByIdIdx( CFLibDbKeyHash256 SecClusRoleId );
+	void deepDisposeSecClusRoleByIdIdx( ICFLibKeyHash256 SecClusRoleId );
 
-	void deepDisposeSecClusRoleByClusterIdx( CFLibDbKeyHash256 ClusterId );
+	void deepDisposeSecClusRoleByClusterIdx( ICFLibKeyHash256 ClusterId );
 
 	void deepDisposeSecClusRoleByNameIdx( String Name );
 
-	void deepDisposeSecClusRoleByUNameIdx( CFLibDbKeyHash256 ClusterId,
+	void deepDisposeSecClusRoleByUNameIdx( ICFLibKeyHash256 ClusterId,
 		String Name );
 
 	/**
@@ -264,14 +264,14 @@ public interface ICFSecProtSecClusRoleTableObj
 	 *
 	 *	@param	SecClusRoleId	The SecClusRole key attribute of the instance generating the id.
 	 */
-	void deleteSecClusRoleByIdIdx( CFLibDbKeyHash256 SecClusRoleId );
+	void deleteSecClusRoleByIdIdx( ICFLibKeyHash256 SecClusRoleId );
 
 	/**
 	 *	Internal use only.
 	 *
 	 *	@param	ClusterId	The SecClusRole key attribute of the instance generating the id.
 	 */
-	void deleteSecClusRoleByClusterIdx( CFLibDbKeyHash256 ClusterId );
+	void deleteSecClusRoleByClusterIdx( ICFLibKeyHash256 ClusterId );
 
 	/**
 	 *	Internal use only.
@@ -287,6 +287,6 @@ public interface ICFSecProtSecClusRoleTableObj
 	 *
 	 *	@param	Name	The SecClusRole key attribute of the instance generating the id.
 	 */
-	void deleteSecClusRoleByUNameIdx(CFLibDbKeyHash256 ClusterId,
+	void deleteSecClusRoleByUNameIdx(ICFLibKeyHash256 ClusterId,
 		String Name );
 }
