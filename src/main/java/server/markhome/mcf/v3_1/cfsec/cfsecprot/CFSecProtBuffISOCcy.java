@@ -48,7 +48,7 @@ import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 
 public class CFSecProtBuffISOCcy
-	implements ICFSecISOCcy, Comparable<Object>, Serializable
+	implements ICFSecProtISOCcy, Comparable<Object>, Serializable
 {
 	protected short requiredISOCcyId;
 	protected int requiredRevision;
@@ -77,7 +77,7 @@ public class CFSecProtBuffISOCcy
 	}
 
 	@Override
-	public void setJustProtPKey(Short requiredISOCcyId) {
+	public void setPKey(Short requiredISOCcyId) {
 		if(requiredISOCcyId != null) {
 			this.requiredISOCcyId = requiredISOCcyId;
 		}
@@ -102,60 +102,60 @@ public class CFSecProtBuffISOCcy
 	}
 
 	@Override
-	public List<ICFSecISOCtryCcy> getOptionalChildrenCtry() {
+	public List<ICFSecProtISOCtryCcy> getOptionalChildrenCtry() {
 		ICFSecSchema targetBackingCFSec = ICFSecSchema.getBackingCFSec();
 		if (targetBackingCFSec == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalChildrenCtry", 0, "ICFSecSchema.getBackingCFSec()");
 		}
-		ICFSecISOCtryCcyTable targetTable = targetBackingCFSec.getTableISOCtryCcy();
+		ICFSecProtISOCtryCcyTable targetTable = targetBackingCFSec.getTableISOCtryCcy();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalChildrenCtry", 0, "ICFSecSchema.getBackingCFSec().getTableISOCtryCcy()");
 		}
-		ICFSecISOCtryCcy[] targetArr = targetTable.readDerivedByCcyIdx(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredISOCcyId());
+		ICFSecProtISOCtryCcy[] targetArr = targetTable.readDerivedByCcyIdx(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredISOCcyId());
 		if( targetArr != null ) {
-			List<ICFSecISOCtryCcy> results = new ArrayList<>(targetArr.length);
+			List<ICFSecProtISOCtryCcy> results = new ArrayList<>(targetArr.length);
 			for (int idx = 0; idx < targetArr.length; idx++) {
 				results.add(targetArr[idx]);
 			}
 			return( results );
 		}
 		else {
-			List<ICFSecISOCtryCcy> results = new ArrayList<>();
+			List<ICFSecProtISOCtryCcy> results = new ArrayList<>();
 			return( results );
 		}
 	}
 
 	@Override
-	public List<ICFSecISOCtryCcy> getOptionalChildrenCtry() {
+	public List<ICFSecProtISOCtryCcy> getOptionalChildrenCtry() {
 		ICFSecSchema targetBackingCFSec = ICFSecSchema.getBackingCFSec();
 		if (targetBackingCFSec == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalChildrenCtry", 0, "ICFSecSchema.getBackingCFSec()");
 		}
-		ICFSecISOCtryCcyTable targetTable = targetBackingCFSec.getTableISOCtryCcy();
+		ICFSecProtISOCtryCcyTable targetTable = targetBackingCFSec.getTableISOCtryCcy();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalChildrenCtry", 0, "ICFSecSchema.getBackingCFSec().getTableISOCtryCcy()");
 		}
-		ICFSecISOCtryCcy[] targetArr = targetTable.readDerivedByCcyIdx(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredISOCcyId());
+		ICFSecProtISOCtryCcy[] targetArr = targetTable.readDerivedByCcyIdx(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredISOCcyId());
 		if( targetArr != null ) {
-			List<ICFSecISOCtryCcy> results = new ArrayList<>(targetArr.length);
+			List<ICFSecProtISOCtryCcy> results = new ArrayList<>(targetArr.length);
 			for (int idx = 0; idx < targetArr.length; idx++) {
 				results.add(targetArr[idx]);
 			}
 			return( results );
 		}
 		else {
-			List<ICFSecISOCtryCcy> results = new ArrayList<>();
+			List<ICFSecProtISOCtryCcy> results = new ArrayList<>();
 			return( results );
 		}
 	}
 
 	@Override
-	public List<ICFSecISOCtryCcy> getOptionalChildrenCtry() {
+	public List<ICFSecProtISOCtryCcy> getOptionalChildrenCtry() {
 		ICFSecSchema targetBackingCFSec = ICFSecSchema.getBackingCFSec();
 		if (targetBackingCFSec == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalChildrenCtry", 0, "ICFSecSchema.getBackingCFSec()");
 		}
-		ICFSecISOCtryCcyTable targetTable = targetBackingCFSec.getTableISOCtryCcy();
+		ICFSecProtISOCtryCcyTable targetTable = targetBackingCFSec.getTableISOCtryCcy();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalChildrenCtry", 0, "ICFSecSchema.getBackingCFSec().getTableISOCtryCcy()");
 		}
@@ -225,7 +225,7 @@ public class CFSecProtBuffISOCcy
 
 	@Override
 	public int getClassCode() {
-		return( ICFSecISOCcy.CLASS_CODE );
+		return( ICFSecProtISOCcy.CLASS_CODE );
 	}
 
 	@Override
@@ -442,8 +442,8 @@ public class CFSecProtBuffISOCcy
 			}
 			return( true );
 		}
-		else if( obj instanceof ICFSecISOCcyHPKey ) {
-			ICFSecProtISOCcyHPKey rhs = (ICFSecISOCcyHPKey)obj;
+		else if( obj instanceof ICFSecProtISOCcyHPKey ) {
+			ICFSecProtISOCcyHPKey rhs = (ICFSecProtISOCcyHPKey)obj;
 			if( getRequiredISOCcyId() != rhs.getRequiredISOCcyId() ) {
 				return( false );
 			}
@@ -998,7 +998,7 @@ public class CFSecProtBuffISOCcy
 			}
 			return( 0 );
 		}
-		else if( obj instanceof ICFSecISOCcyByCcyCdIdxKey rhs ) {
+		else if( obj instanceof ICFSecProtISOCcyByCcyCdIdxKey rhs ) {
 			if (getRequiredISOCode() != null) {
 				if (rhs.getRequiredISOCode() != null) {
 					cmp = getRequiredISOCode().compareTo( rhs.getRequiredISOCode() );
@@ -1014,7 +1014,7 @@ public class CFSecProtBuffISOCcy
 				return( -1 );
 			}			return( 0 );
 		}
-		else if( obj instanceof ICFSecISOCcyByCcyNmIdxKey rhs ) {
+		else if( obj instanceof ICFSecProtISOCcyByCcyNmIdxKey rhs ) {
 			if (getRequiredName() != null) {
 				if (rhs.getRequiredName() != null) {
 					cmp = getRequiredName().compareTo( rhs.getRequiredName() );
@@ -1228,12 +1228,12 @@ public class CFSecProtBuffISOCcy
 	}
 
 	@Override
-	public void setJustProt( ICFSecISOCcy src ) {
+	public void set( ICFSecProtISOCcy src ) {
 		setJustProtISOCcy( src );
 	}
 
 	@Override
-	public void setJustProtISOCcy( ICFSecISOCcy src ) {
+	public void setISOCcy( ICFSecProtISOCcy src ) {
 		setJustProtRequiredISOCcyId(src.getRequiredISOCcyId());
 		setJustProtRequiredRevision( src.getRequiredRevision() );
 		setJustProtCreatedByUserId( src.getCreatedByUserId() );
@@ -1247,12 +1247,12 @@ public class CFSecProtBuffISOCcy
 	}
 
 	@Override
-	public void setJustProt( ICFSecISOCcyH src ) {
+	public void set( ICFSecProtISOCcyH src ) {
 		setJustProtISOCcy( src );
 	}
 
 	@Override
-	public void setJustProtISOCcy( ICFSecISOCcyH src ) {
+	public void setISOCcy( ICFSecProtISOCcyH src ) {
 		setJustProtRequiredISOCcyId(src.getRequiredISOCcyId());
 		setJustProtRequiredISOCode(src.getRequiredISOCode());
 		setJustProtRequiredName(src.getRequiredName());
@@ -1261,45 +1261,12 @@ public class CFSecProtBuffISOCcy
 	}
 
 	@Override
-	public void setJustProt( ICFSecProtISOCcy src ) {
+	public void set( ICFSecProtISOCcy src ) {
 		setJustProtISOCcy( src );
 	}
 
 	@Override
-	public void setJustProtISOCcy( ICFSecProtISOCcy src ) {
-		setJustProtRequiredISOCcyId(src.getRequiredISOCcyId());
-		setJustProtRequiredRevision( src.getRequiredRevision() );
-		setJustProtCreatedByUserId( src.getCreatedByUserId() );
-		setJustProtCreatedAt( src.getCreatedAt() );
-		setJustProtUpdatedByUserId( src.getUpdatedByUserId() );
-		setJustProtUpdatedAt( src.getUpdatedAt() );
-		setJustProtRequiredISOCode(src.getRequiredISOCode());
-		setJustProtRequiredName(src.getRequiredName());
-		setJustProtOptionalUnitSymbol(src.getOptionalUnitSymbol());
-		setJustProtRequiredPrecis(src.getRequiredPrecis());
-	}
-
-	@Override
-	public void setJustProt( ICFSecProtISOCcyH src ) {
-		setJustProtISOCcy( src );
-	}
-
-	@Override
-	public void setJustProtISOCcy( ICFSecProtISOCcyH src ) {
-		setJustProtRequiredISOCcyId(src.getRequiredISOCcyId());
-		setJustProtRequiredISOCode(src.getRequiredISOCode());
-		setJustProtRequiredName(src.getRequiredName());
-		setJustProtOptionalUnitSymbol(src.getOptionalUnitSymbol());
-		setJustProtRequiredPrecis(src.getRequiredPrecis());
-	}
-
-	@Override
-	public void setJustProt( ICFSecPubISOCcy src ) {
-		setJustProtISOCcy( src );
-	}
-
-	@Override
-	public void setJustProtISOCcy( ICFSecPubISOCcy src ) {
+	public void setISOCcy( ICFSecProtISOCcy src ) {
 		setJustProtRequiredISOCcyId(src.getRequiredISOCcyId());
 		setJustProtRequiredRevision( src.getRequiredRevision() );
 		setJustProtCreatedByUserId( src.getCreatedByUserId() );
@@ -1313,12 +1280,45 @@ public class CFSecProtBuffISOCcy
 	}
 
 	@Override
-	public void setJustProt( ICFSecPubISOCcyH src ) {
+	public void set( ICFSecProtISOCcyH src ) {
 		setJustProtISOCcy( src );
 	}
 
 	@Override
-	public void setJustProtISOCcy( ICFSecPubISOCcyH src ) {
+	public void setISOCcy( ICFSecProtISOCcyH src ) {
+		setJustProtRequiredISOCcyId(src.getRequiredISOCcyId());
+		setJustProtRequiredISOCode(src.getRequiredISOCode());
+		setJustProtRequiredName(src.getRequiredName());
+		setJustProtOptionalUnitSymbol(src.getOptionalUnitSymbol());
+		setJustProtRequiredPrecis(src.getRequiredPrecis());
+	}
+
+	@Override
+	public void set( ICFSecPubISOCcy src ) {
+		setJustProtISOCcy( src );
+	}
+
+	@Override
+	public void setISOCcy( ICFSecPubISOCcy src ) {
+		setJustProtRequiredISOCcyId(src.getRequiredISOCcyId());
+		setJustProtRequiredRevision( src.getRequiredRevision() );
+		setJustProtCreatedByUserId( src.getCreatedByUserId() );
+		setJustProtCreatedAt( src.getCreatedAt() );
+		setJustProtUpdatedByUserId( src.getUpdatedByUserId() );
+		setJustProtUpdatedAt( src.getUpdatedAt() );
+		setJustProtRequiredISOCode(src.getRequiredISOCode());
+		setJustProtRequiredName(src.getRequiredName());
+		setJustProtOptionalUnitSymbol(src.getOptionalUnitSymbol());
+		setJustProtRequiredPrecis(src.getRequiredPrecis());
+	}
+
+	@Override
+	public void set( ICFSecPubISOCcyH src ) {
+		setJustProtISOCcy( src );
+	}
+
+	@Override
+	public void setISOCcy( ICFSecPubISOCcyH src ) {
 		setJustProtRequiredISOCcyId(src.getRequiredISOCcyId());
 		setJustProtRequiredISOCode(src.getRequiredISOCode());
 		setJustProtRequiredName(src.getRequiredName());

@@ -48,7 +48,7 @@ import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 
 public class CFSecProtBuffISOLang
-	implements ICFSecISOLang, Comparable<Object>, Serializable
+	implements ICFSecProtISOLang, Comparable<Object>, Serializable
 {
 	protected short requiredISOLangId;
 	protected int requiredRevision;
@@ -75,7 +75,7 @@ public class CFSecProtBuffISOLang
 	}
 
 	@Override
-	public void setJustProtPKey(Short requiredISOLangId) {
+	public void setPKey(Short requiredISOLangId) {
 		if(requiredISOLangId != null) {
 			this.requiredISOLangId = requiredISOLangId;
 		}
@@ -100,60 +100,60 @@ public class CFSecProtBuffISOLang
 	}
 
 	@Override
-	public List<ICFSecISOCtryLang> getOptionalChildrenCtry() {
+	public List<ICFSecProtISOCtryLang> getOptionalChildrenCtry() {
 		ICFSecSchema targetBackingCFSec = ICFSecSchema.getBackingCFSec();
 		if (targetBackingCFSec == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalChildrenCtry", 0, "ICFSecSchema.getBackingCFSec()");
 		}
-		ICFSecISOCtryLangTable targetTable = targetBackingCFSec.getTableISOCtryLang();
+		ICFSecProtISOCtryLangTable targetTable = targetBackingCFSec.getTableISOCtryLang();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalChildrenCtry", 0, "ICFSecSchema.getBackingCFSec().getTableISOCtryLang()");
 		}
-		ICFSecISOCtryLang[] targetArr = targetTable.readDerivedByLangIdx(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredISOLangId());
+		ICFSecProtISOCtryLang[] targetArr = targetTable.readDerivedByLangIdx(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredISOLangId());
 		if( targetArr != null ) {
-			List<ICFSecISOCtryLang> results = new ArrayList<>(targetArr.length);
+			List<ICFSecProtISOCtryLang> results = new ArrayList<>(targetArr.length);
 			for (int idx = 0; idx < targetArr.length; idx++) {
 				results.add(targetArr[idx]);
 			}
 			return( results );
 		}
 		else {
-			List<ICFSecISOCtryLang> results = new ArrayList<>();
+			List<ICFSecProtISOCtryLang> results = new ArrayList<>();
 			return( results );
 		}
 	}
 
 	@Override
-	public List<ICFSecISOCtryLang> getOptionalChildrenCtry() {
+	public List<ICFSecProtISOCtryLang> getOptionalChildrenCtry() {
 		ICFSecSchema targetBackingCFSec = ICFSecSchema.getBackingCFSec();
 		if (targetBackingCFSec == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalChildrenCtry", 0, "ICFSecSchema.getBackingCFSec()");
 		}
-		ICFSecISOCtryLangTable targetTable = targetBackingCFSec.getTableISOCtryLang();
+		ICFSecProtISOCtryLangTable targetTable = targetBackingCFSec.getTableISOCtryLang();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalChildrenCtry", 0, "ICFSecSchema.getBackingCFSec().getTableISOCtryLang()");
 		}
-		ICFSecISOCtryLang[] targetArr = targetTable.readDerivedByLangIdx(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredISOLangId());
+		ICFSecProtISOCtryLang[] targetArr = targetTable.readDerivedByLangIdx(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredISOLangId());
 		if( targetArr != null ) {
-			List<ICFSecISOCtryLang> results = new ArrayList<>(targetArr.length);
+			List<ICFSecProtISOCtryLang> results = new ArrayList<>(targetArr.length);
 			for (int idx = 0; idx < targetArr.length; idx++) {
 				results.add(targetArr[idx]);
 			}
 			return( results );
 		}
 		else {
-			List<ICFSecISOCtryLang> results = new ArrayList<>();
+			List<ICFSecProtISOCtryLang> results = new ArrayList<>();
 			return( results );
 		}
 	}
 
 	@Override
-	public List<ICFSecISOCtryLang> getOptionalChildrenCtry() {
+	public List<ICFSecProtISOCtryLang> getOptionalChildrenCtry() {
 		ICFSecSchema targetBackingCFSec = ICFSecSchema.getBackingCFSec();
 		if (targetBackingCFSec == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalChildrenCtry", 0, "ICFSecSchema.getBackingCFSec()");
 		}
-		ICFSecISOCtryLangTable targetTable = targetBackingCFSec.getTableISOCtryLang();
+		ICFSecProtISOCtryLangTable targetTable = targetBackingCFSec.getTableISOCtryLang();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalChildrenCtry", 0, "ICFSecSchema.getBackingCFSec().getTableISOCtryLang()");
 		}
@@ -223,7 +223,7 @@ public class CFSecProtBuffISOLang
 
 	@Override
 	public int getClassCode() {
-		return( ICFSecISOLang.CLASS_CODE );
+		return( ICFSecProtISOLang.CLASS_CODE );
 	}
 
 	@Override
@@ -408,8 +408,8 @@ public class CFSecProtBuffISOLang
 			}
 			return( true );
 		}
-		else if( obj instanceof ICFSecISOLangHPKey ) {
-			ICFSecProtISOLangHPKey rhs = (ICFSecISOLangHPKey)obj;
+		else if( obj instanceof ICFSecProtISOLangHPKey ) {
+			ICFSecProtISOLangHPKey rhs = (ICFSecProtISOLangHPKey)obj;
 			if( getRequiredISOLangId() != rhs.getRequiredISOLangId() ) {
 				return( false );
 			}
@@ -939,7 +939,7 @@ public class CFSecProtBuffISOLang
 			}
 			return( 0 );
 		}
-		else if( obj instanceof ICFSecISOLangByCode3IdxKey rhs ) {
+		else if( obj instanceof ICFSecProtISOLangByCode3IdxKey rhs ) {
 			if (getRequiredISO6392Code() != null) {
 				if (rhs.getRequiredISO6392Code() != null) {
 					cmp = getRequiredISO6392Code().compareTo( rhs.getRequiredISO6392Code() );
@@ -955,7 +955,7 @@ public class CFSecProtBuffISOLang
 				return( -1 );
 			}			return( 0 );
 		}
-		else if( obj instanceof ICFSecISOLangByCode2IdxKey rhs ) {
+		else if( obj instanceof ICFSecProtISOLangByCode2IdxKey rhs ) {
 			if( getOptionalISO6391Code() != null ) {
 				if( rhs.getOptionalISO6391Code() != null ) {
 					cmp = getOptionalISO6391Code().compareTo( rhs.getOptionalISO6391Code() );
@@ -1161,12 +1161,12 @@ public class CFSecProtBuffISOLang
 	}
 
 	@Override
-	public void setJustProt( ICFSecISOLang src ) {
+	public void set( ICFSecProtISOLang src ) {
 		setJustProtISOLang( src );
 	}
 
 	@Override
-	public void setJustProtISOLang( ICFSecISOLang src ) {
+	public void setISOLang( ICFSecProtISOLang src ) {
 		setJustProtRequiredISOLangId(src.getRequiredISOLangId());
 		setJustProtRequiredRevision( src.getRequiredRevision() );
 		setJustProtCreatedByUserId( src.getCreatedByUserId() );
@@ -1179,12 +1179,12 @@ public class CFSecProtBuffISOLang
 	}
 
 	@Override
-	public void setJustProt( ICFSecISOLangH src ) {
+	public void set( ICFSecProtISOLangH src ) {
 		setJustProtISOLang( src );
 	}
 
 	@Override
-	public void setJustProtISOLang( ICFSecISOLangH src ) {
+	public void setISOLang( ICFSecProtISOLangH src ) {
 		setJustProtRequiredISOLangId(src.getRequiredISOLangId());
 		setJustProtRequiredISO6392Code(src.getRequiredISO6392Code());
 		setJustProtOptionalISO6391Code(src.getOptionalISO6391Code());
@@ -1192,43 +1192,12 @@ public class CFSecProtBuffISOLang
 	}
 
 	@Override
-	public void setJustProt( ICFSecProtISOLang src ) {
+	public void set( ICFSecProtISOLang src ) {
 		setJustProtISOLang( src );
 	}
 
 	@Override
-	public void setJustProtISOLang( ICFSecProtISOLang src ) {
-		setJustProtRequiredISOLangId(src.getRequiredISOLangId());
-		setJustProtRequiredRevision( src.getRequiredRevision() );
-		setJustProtCreatedByUserId( src.getCreatedByUserId() );
-		setJustProtCreatedAt( src.getCreatedAt() );
-		setJustProtUpdatedByUserId( src.getUpdatedByUserId() );
-		setJustProtUpdatedAt( src.getUpdatedAt() );
-		setJustProtRequiredISO6392Code(src.getRequiredISO6392Code());
-		setJustProtOptionalISO6391Code(src.getOptionalISO6391Code());
-		setJustProtRequiredEnglishName(src.getRequiredEnglishName());
-	}
-
-	@Override
-	public void setJustProt( ICFSecProtISOLangH src ) {
-		setJustProtISOLang( src );
-	}
-
-	@Override
-	public void setJustProtISOLang( ICFSecProtISOLangH src ) {
-		setJustProtRequiredISOLangId(src.getRequiredISOLangId());
-		setJustProtRequiredISO6392Code(src.getRequiredISO6392Code());
-		setJustProtOptionalISO6391Code(src.getOptionalISO6391Code());
-		setJustProtRequiredEnglishName(src.getRequiredEnglishName());
-	}
-
-	@Override
-	public void setJustProt( ICFSecPubISOLang src ) {
-		setJustProtISOLang( src );
-	}
-
-	@Override
-	public void setJustProtISOLang( ICFSecPubISOLang src ) {
+	public void setISOLang( ICFSecProtISOLang src ) {
 		setJustProtRequiredISOLangId(src.getRequiredISOLangId());
 		setJustProtRequiredRevision( src.getRequiredRevision() );
 		setJustProtCreatedByUserId( src.getCreatedByUserId() );
@@ -1241,12 +1210,43 @@ public class CFSecProtBuffISOLang
 	}
 
 	@Override
-	public void setJustProt( ICFSecPubISOLangH src ) {
+	public void set( ICFSecProtISOLangH src ) {
 		setJustProtISOLang( src );
 	}
 
 	@Override
-	public void setJustProtISOLang( ICFSecPubISOLangH src ) {
+	public void setISOLang( ICFSecProtISOLangH src ) {
+		setJustProtRequiredISOLangId(src.getRequiredISOLangId());
+		setJustProtRequiredISO6392Code(src.getRequiredISO6392Code());
+		setJustProtOptionalISO6391Code(src.getOptionalISO6391Code());
+		setJustProtRequiredEnglishName(src.getRequiredEnglishName());
+	}
+
+	@Override
+	public void set( ICFSecPubISOLang src ) {
+		setJustProtISOLang( src );
+	}
+
+	@Override
+	public void setISOLang( ICFSecPubISOLang src ) {
+		setJustProtRequiredISOLangId(src.getRequiredISOLangId());
+		setJustProtRequiredRevision( src.getRequiredRevision() );
+		setJustProtCreatedByUserId( src.getCreatedByUserId() );
+		setJustProtCreatedAt( src.getCreatedAt() );
+		setJustProtUpdatedByUserId( src.getUpdatedByUserId() );
+		setJustProtUpdatedAt( src.getUpdatedAt() );
+		setJustProtRequiredISO6392Code(src.getRequiredISO6392Code());
+		setJustProtOptionalISO6391Code(src.getOptionalISO6391Code());
+		setJustProtRequiredEnglishName(src.getRequiredEnglishName());
+	}
+
+	@Override
+	public void set( ICFSecPubISOLangH src ) {
+		setJustProtISOLang( src );
+	}
+
+	@Override
+	public void setISOLang( ICFSecPubISOLangH src ) {
 		setJustProtRequiredISOLangId(src.getRequiredISOLangId());
 		setJustProtRequiredISO6392Code(src.getRequiredISO6392Code());
 		setJustProtOptionalISO6391Code(src.getOptionalISO6391Code());

@@ -48,7 +48,7 @@ import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 
 public class CFSecProtBuffSysCluster
-	implements ICFSecSysCluster, Comparable<Object>, Serializable
+	implements ICFSecProtSysCluster, Comparable<Object>, Serializable
 {
 	protected int requiredSingletonId;
 	protected int requiredRevision;
@@ -65,7 +65,7 @@ public class CFSecProtBuffSysCluster
 	}
 
 	@Override
-	public void setJustProtPKey(Integer requiredSingletonId) {
+	public void setPKey(Integer requiredSingletonId) {
 		if(requiredSingletonId != null) {
 			this.requiredSingletonId = requiredSingletonId;
 		}
@@ -109,44 +109,44 @@ public class CFSecProtBuffSysCluster
 
 	@Override
 	public int getClassCode() {
-		return( ICFSecSysCluster.CLASS_CODE );
+		return( ICFSecProtSysCluster.CLASS_CODE );
 	}
 
 	@Override
-	public ICFSecCluster getRequiredContainerCluster() {
+	public ICFSecProtCluster getRequiredContainerCluster() {
 		ICFSecSchema targetBackingCFSec = ICFSecSchema.getBackingCFSec();
 		if (targetBackingCFSec == null) {
 			throw new CFLibNullArgumentException(getClass(), "getRequiredContainerCluster", 0, "ICFSecSchema.getBackingCFSec()");
 		}
-		ICFSecClusterTable targetTable = targetBackingCFSec.getTableCluster();
+		ICFSecProtClusterTable targetTable = targetBackingCFSec.getTableCluster();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getRequiredContainerCluster", 0, "ICFSecSchema.getBackingCFSec().getTableCluster()");
 		}
-		ICFSecCluster targetRec = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredClusterId());
+		ICFSecProtCluster targetRec = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredClusterId());
 		return(targetRec);
 	}
 
 	@Override
-	public ICFSecCluster getRequiredContainerCluster() {
+	public ICFSecProtCluster getRequiredContainerCluster() {
 		ICFSecSchema targetBackingCFSec = ICFSecSchema.getBackingCFSec();
 		if (targetBackingCFSec == null) {
 			throw new CFLibNullArgumentException(getClass(), "getRequiredContainerCluster", 0, "ICFSecSchema.getBackingCFSec()");
 		}
-		ICFSecClusterTable targetTable = targetBackingCFSec.getTableCluster();
+		ICFSecProtClusterTable targetTable = targetBackingCFSec.getTableCluster();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getRequiredContainerCluster", 0, "ICFSecSchema.getBackingCFSec().getTableCluster()");
 		}
-		ICFSecCluster targetRec = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredClusterId());
+		ICFSecProtCluster targetRec = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredClusterId());
 		return(targetRec);
 	}
 
 	@Override
-	public ICFSecCluster getRequiredContainerCluster() {
+	public ICFSecProtCluster getRequiredContainerCluster() {
 		ICFSecSchema targetBackingCFSec = ICFSecSchema.getBackingCFSec();
 		if (targetBackingCFSec == null) {
 			throw new CFLibNullArgumentException(getClass(), "getRequiredContainerCluster", 0, "ICFSecSchema.getBackingCFSec()");
 		}
-		ICFSecClusterTable targetTable = targetBackingCFSec.getTableCluster();
+		ICFSecProtClusterTable targetTable = targetBackingCFSec.getTableCluster();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getRequiredContainerCluster", 0, "ICFSecSchema.getBackingCFSec().getTableCluster()");
 		}
@@ -155,31 +155,31 @@ public class CFSecProtBuffSysCluster
 	}
 
 	@Override
-	public void setJustProtRequiredContainerCluster(ICFLibKeyHash256 argClusterId) {
+	public void setRequiredContainerCluster(ICFLibKeyHash256 argClusterId) {
 		ICFSecSchema targetBackingCFSec = ICFSecSchema.getBackingCFSec();
 		if (targetBackingCFSec == null) {
-			throw new CFLibNullArgumentException(getClass(), "setJustProtRequiredContainerCluster-args", 0, "ICFSecSchema.getBackingCFSec()");
+			throw new CFLibNullArgumentException(getClass(), "setRequiredContainerCluster-args", 0, "ICFSecSchema.getBackingCFSec()");
 		}
 		ICFSecProtClusterTable targetTable = targetBackingCFSec.getTableCluster();
 		if (targetTable == null) {
-			throw new CFLibNullArgumentException(getClass(), "setJustProtRequiredContainerCluster", 0, "ICFSecSchema.getBackingCFSec()");
+			throw new CFLibNullArgumentException(getClass(), "setRequiredContainerCluster", 0, "ICFSecSchema.getBackingCFSec()");
 		}
 		ICFSecProtCluster found = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), argClusterId);
 		if (found == null) {
-			throw new CFLibNullArgumentException(getClass(), "setJustProtRequiredContainerCluster-args", 0, "found");
+			throw new CFLibNullArgumentException(getClass(), "setRequiredContainerCluster-args", 0, "found");
 		}
 		else if ((found instanceof ICFSecProtCluster) || (found instanceof ICFSecPubCluster)) {
 		requiredClusterId = argClusterId;
 		}
 		else {
-			throw new CFLibUnsupportedClassException(getClass(), "setJustProtRequiredContainerCluster-args", "found", found, "ICFSecProtClusterICFSecPubCluster");
+			throw new CFLibUnsupportedClassException(getClass(), "setRequiredContainerCluster-args", "found", found, "ICFSecProtClusterICFSecPubCluster");
 		}
 	}
 
 	@Override
-	public void setJustProtRequiredContainerCluster(ICFSecCluster argObj) {
+	public void setRequiredContainerCluster(ICFSecProtCluster argObj) {
 		if(argObj == null) {
-			throw new CFLibNullArgumentException(getClass(), "setJustProtContainerCluster", 1, "argObj");
+			throw new CFLibNullArgumentException(getClass(), "setContainerCluster", 1, "argObj");
 		}
 		else {
 			setJustProtRequiredClusterId(argObj.getRequiredId());
@@ -248,8 +248,8 @@ public class CFSecProtBuffSysCluster
 			}
 			return( true );
 		}
-		else if( obj instanceof ICFSecSysClusterHPKey ) {
-			ICFSecProtSysClusterHPKey rhs = (ICFSecSysClusterHPKey)obj;
+		else if( obj instanceof ICFSecProtSysClusterHPKey ) {
+			ICFSecProtSysClusterHPKey rhs = (ICFSecProtSysClusterHPKey)obj;
 			if( getRequiredSingletonId() != rhs.getRequiredSingletonId() ) {
 				return( false );
 			}
@@ -488,7 +488,7 @@ public class CFSecProtBuffSysCluster
 			}
 			return( 0 );
 		}
-		else if( obj instanceof ICFSecSysClusterByClusterIdxKey rhs ) {
+		else if( obj instanceof ICFSecProtSysClusterByClusterIdxKey rhs ) {
 			if (getRequiredClusterId() != null) {
 				if (rhs.getRequiredClusterId() != null) {
 					cmp = getRequiredClusterId().compareTo( rhs.getRequiredClusterId() );
@@ -593,12 +593,12 @@ public class CFSecProtBuffSysCluster
 	}
 
 	@Override
-	public void setJustProt( ICFSecSysCluster src ) {
+	public void set( ICFSecProtSysCluster src ) {
 		setJustProtSysCluster( src );
 	}
 
 	@Override
-	public void setJustProtSysCluster( ICFSecSysCluster src ) {
+	public void setSysCluster( ICFSecProtSysCluster src ) {
 		setJustProtRequiredSingletonId(src.getRequiredSingletonId());
 		setJustProtRequiredRevision( src.getRequiredRevision() );
 		setJustProtRequiredContainerCluster(src.getRequiredContainerCluster());
@@ -606,49 +606,24 @@ public class CFSecProtBuffSysCluster
 	}
 
 	@Override
-	public void setJustProt( ICFSecSysClusterH src ) {
+	public void set( ICFSecProtSysClusterH src ) {
 		setJustProtSysCluster( src );
 	}
 
 	@Override
-	public void setJustProtSysCluster( ICFSecSysClusterH src ) {
+	public void setSysCluster( ICFSecProtSysClusterH src ) {
 		setJustProtRequiredSingletonId(src.getRequiredSingletonId());
 		setJustProtRequiredContainerCluster(src.getRequiredContainerCluster());
 		setJustProtRequiredClusterId(src.getRequiredClusterId());
 	}
 
 	@Override
-	public void setJustProt( ICFSecProtSysCluster src ) {
+	public void set( ICFSecProtSysCluster src ) {
 		setJustProtSysCluster( src );
 	}
 
 	@Override
-	public void setJustProtSysCluster( ICFSecProtSysCluster src ) {
-		setJustProtRequiredSingletonId(src.getRequiredSingletonId());
-		setJustProtRequiredRevision( src.getRequiredRevision() );
-		setJustProtRequiredContainerCluster(src.getRequiredContainerCluster());
-		setJustProtRequiredClusterId(src.getRequiredClusterId());
-	}
-
-	@Override
-	public void setJustProt( ICFSecProtSysClusterH src ) {
-		setJustProtSysCluster( src );
-	}
-
-	@Override
-	public void setJustProtSysCluster( ICFSecProtSysClusterH src ) {
-		setJustProtRequiredSingletonId(src.getRequiredSingletonId());
-		setJustProtRequiredContainerCluster(src.getRequiredContainerCluster());
-		setJustProtRequiredClusterId(src.getRequiredClusterId());
-	}
-
-	@Override
-	public void setJustProt( ICFSecPubSysCluster src ) {
-		setJustProtSysCluster( src );
-	}
-
-	@Override
-	public void setJustProtSysCluster( ICFSecPubSysCluster src ) {
+	public void setSysCluster( ICFSecProtSysCluster src ) {
 		setJustProtRequiredSingletonId(src.getRequiredSingletonId());
 		setJustProtRequiredRevision( src.getRequiredRevision() );
 		setJustProtRequiredContainerCluster(src.getRequiredContainerCluster());
@@ -656,12 +631,37 @@ public class CFSecProtBuffSysCluster
 	}
 
 	@Override
-	public void setJustProt( ICFSecPubSysClusterH src ) {
+	public void set( ICFSecProtSysClusterH src ) {
 		setJustProtSysCluster( src );
 	}
 
 	@Override
-	public void setJustProtSysCluster( ICFSecPubSysClusterH src ) {
+	public void setSysCluster( ICFSecProtSysClusterH src ) {
+		setJustProtRequiredSingletonId(src.getRequiredSingletonId());
+		setJustProtRequiredContainerCluster(src.getRequiredContainerCluster());
+		setJustProtRequiredClusterId(src.getRequiredClusterId());
+	}
+
+	@Override
+	public void set( ICFSecPubSysCluster src ) {
+		setJustProtSysCluster( src );
+	}
+
+	@Override
+	public void setSysCluster( ICFSecPubSysCluster src ) {
+		setJustProtRequiredSingletonId(src.getRequiredSingletonId());
+		setJustProtRequiredRevision( src.getRequiredRevision() );
+		setJustProtRequiredContainerCluster(src.getRequiredContainerCluster());
+		setJustProtRequiredClusterId(src.getRequiredClusterId());
+	}
+
+	@Override
+	public void set( ICFSecPubSysClusterH src ) {
+		setJustProtSysCluster( src );
+	}
+
+	@Override
+	public void setSysCluster( ICFSecPubSysClusterH src ) {
 		setJustProtRequiredSingletonId(src.getRequiredSingletonId());
 		setJustProtRequiredContainerCluster(src.getRequiredContainerCluster());
 		setJustProtRequiredClusterId(src.getRequiredClusterId());

@@ -48,7 +48,7 @@ import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 
 public class CFSecProtBuffSecSysRole
-	implements ICFSecSecSysRole, Comparable<Object>, Serializable
+	implements ICFSecProtSecSysRole, Comparable<Object>, Serializable
 {
 	protected ICFLibKeyHash256 requiredSecSysRoleId;
 	protected int requiredRevision;
@@ -71,7 +71,7 @@ public class CFSecProtBuffSecSysRole
 	}
 
 	@Override
-	public void setJustProtPKey(ICFLibKeyHash256 requiredSecSysRoleId) {
+	public void setPKey(ICFLibKeyHash256 requiredSecSysRoleId) {
 		if(requiredSecSysRoleId != null) {
 			this.requiredSecSysRoleId = requiredSecSysRoleId;
 		}
@@ -93,97 +93,97 @@ public class CFSecProtBuffSecSysRole
 	}
 
 	@Override
-	public List<ICFSecSecSysRoleEnables> getOptionalComponentsEnabledByRole() {
+	public List<ICFSecProtSecSysRoleEnables> getOptionalComponentsEnabledByRole() {
 		ICFSecSchema targetBackingCFSec = ICFSecSchema.getBackingCFSec();
 		if (targetBackingCFSec == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalComponentsEnabledByRole", 0, "ICFSecSchema.getBackingCFSec()");
 		}
-		ICFSecSecSysRoleEnablesTable targetTable = targetBackingCFSec.getTableSecSysRoleEnables();
+		ICFSecProtSecSysRoleEnablesTable targetTable = targetBackingCFSec.getTableSecSysRoleEnables();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalComponentsEnabledByRole", 0, "ICFSecSchema.getBackingCFSec().getTableSecSysRoleEnables()");
 		}
-		ICFSecSecSysRoleEnables[] targetArr = targetTable.readDerivedBySysRoleIdx(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredSecSysRoleId());
+		ICFSecProtSecSysRoleEnables[] targetArr = targetTable.readDerivedBySysRoleIdx(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredSecSysRoleId());
 		if( targetArr != null ) {
-			List<ICFSecSecSysRoleEnables> results = new ArrayList<>(targetArr.length);
+			List<ICFSecProtSecSysRoleEnables> results = new ArrayList<>(targetArr.length);
 			for (int idx = 0; idx < targetArr.length; idx++) {
 				results.add(targetArr[idx]);
 			}
 			return( results );
 		}
 		else {
-			List<ICFSecSecSysRoleEnables> results = new ArrayList<>();
+			List<ICFSecProtSecSysRoleEnables> results = new ArrayList<>();
 			return( results );
 		}
 	}
 
 	@Override
-	public List<ICFSecSecSysRoleEnables> getOptionalComponentsEnabledByRole() {
+	public List<ICFSecProtSecSysRoleEnables> getOptionalComponentsEnabledByRole() {
 		ICFSecSchema targetBackingCFSec = ICFSecSchema.getBackingCFSec();
 		if (targetBackingCFSec == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalComponentsEnabledByRole", 0, "ICFSecSchema.getBackingCFSec()");
 		}
-		ICFSecSecSysRoleEnablesTable targetTable = targetBackingCFSec.getTableSecSysRoleEnables();
+		ICFSecProtSecSysRoleEnablesTable targetTable = targetBackingCFSec.getTableSecSysRoleEnables();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalComponentsEnabledByRole", 0, "ICFSecSchema.getBackingCFSec().getTableSecSysRoleEnables()");
 		}
-		ICFSecSecSysRoleEnables[] targetArr = targetTable.readDerivedBySysRoleIdx(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredSecSysRoleId());
+		ICFSecProtSecSysRoleEnables[] targetArr = targetTable.readDerivedBySysRoleIdx(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredSecSysRoleId());
 		if( targetArr != null ) {
-			List<ICFSecSecSysRoleEnables> results = new ArrayList<>(targetArr.length);
+			List<ICFSecProtSecSysRoleEnables> results = new ArrayList<>(targetArr.length);
 			for (int idx = 0; idx < targetArr.length; idx++) {
 				results.add(targetArr[idx]);
 			}
 			return( results );
 		}
 		else {
-			List<ICFSecSecSysRoleEnables> results = new ArrayList<>();
+			List<ICFSecProtSecSysRoleEnables> results = new ArrayList<>();
 			return( results );
 		}
 	}
 
 	@Override
-	public List<ICFSecSecSysRoleMemb> getOptionalChildrenMembByRole() {
+	public List<ICFSecProtSecSysRoleMemb> getOptionalChildrenMembByRole() {
 		ICFSecSchema targetBackingCFSec = ICFSecSchema.getBackingCFSec();
 		if (targetBackingCFSec == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalChildrenMembByRole", 0, "ICFSecSchema.getBackingCFSec()");
 		}
-		ICFSecSecSysRoleMembTable targetTable = targetBackingCFSec.getTableSecSysRoleMemb();
+		ICFSecProtSecSysRoleMembTable targetTable = targetBackingCFSec.getTableSecSysRoleMemb();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalChildrenMembByRole", 0, "ICFSecSchema.getBackingCFSec().getTableSecSysRoleMemb()");
 		}
-		ICFSecSecSysRoleMemb[] targetArr = targetTable.readDerivedBySysRoleIdx(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredSecSysRoleId());
+		ICFSecProtSecSysRoleMemb[] targetArr = targetTable.readDerivedBySysRoleIdx(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredSecSysRoleId());
 		if( targetArr != null ) {
-			List<ICFSecSecSysRoleMemb> results = new ArrayList<>(targetArr.length);
+			List<ICFSecProtSecSysRoleMemb> results = new ArrayList<>(targetArr.length);
 			for (int idx = 0; idx < targetArr.length; idx++) {
 				results.add(targetArr[idx]);
 			}
 			return( results );
 		}
 		else {
-			List<ICFSecSecSysRoleMemb> results = new ArrayList<>();
+			List<ICFSecProtSecSysRoleMemb> results = new ArrayList<>();
 			return( results );
 		}
 	}
 
 	@Override
-	public List<ICFSecSecSysRoleMemb> getOptionalChildrenMembByRole() {
+	public List<ICFSecProtSecSysRoleMemb> getOptionalChildrenMembByRole() {
 		ICFSecSchema targetBackingCFSec = ICFSecSchema.getBackingCFSec();
 		if (targetBackingCFSec == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalChildrenMembByRole", 0, "ICFSecSchema.getBackingCFSec()");
 		}
-		ICFSecSecSysRoleMembTable targetTable = targetBackingCFSec.getTableSecSysRoleMemb();
+		ICFSecProtSecSysRoleMembTable targetTable = targetBackingCFSec.getTableSecSysRoleMemb();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getOptionalChildrenMembByRole", 0, "ICFSecSchema.getBackingCFSec().getTableSecSysRoleMemb()");
 		}
-		ICFSecSecSysRoleMemb[] targetArr = targetTable.readDerivedBySysRoleIdx(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredSecSysRoleId());
+		ICFSecProtSecSysRoleMemb[] targetArr = targetTable.readDerivedBySysRoleIdx(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredSecSysRoleId());
 		if( targetArr != null ) {
-			List<ICFSecSecSysRoleMemb> results = new ArrayList<>(targetArr.length);
+			List<ICFSecProtSecSysRoleMemb> results = new ArrayList<>(targetArr.length);
 			for (int idx = 0; idx < targetArr.length; idx++) {
 				results.add(targetArr[idx]);
 			}
 			return( results );
 		}
 		else {
-			List<ICFSecSecSysRoleMemb> results = new ArrayList<>();
+			List<ICFSecProtSecSysRoleMemb> results = new ArrayList<>();
 			return( results );
 		}
 	}
@@ -240,7 +240,7 @@ public class CFSecProtBuffSecSysRole
 
 	@Override
 	public int getClassCode() {
-		return( ICFSecSecSysRole.CLASS_CODE );
+		return( ICFSecProtSecSysRole.CLASS_CODE );
 	}
 
 	@Override
@@ -349,8 +349,8 @@ public class CFSecProtBuffSecSysRole
 			}
 			return( true );
 		}
-		else if( obj instanceof ICFSecSecSysRoleHPKey ) {
-			ICFSecProtSecSysRoleHPKey rhs = (ICFSecSecSysRoleHPKey)obj;
+		else if( obj instanceof ICFSecProtSecSysRoleHPKey ) {
+			ICFSecProtSecSysRoleHPKey rhs = (ICFSecProtSecSysRoleHPKey)obj;
 			if( getRequiredSecSysRoleId() != null ) {
 				if( rhs.getRequiredSecSysRoleId() != null ) {
 					if( ! getRequiredSecSysRoleId().equals( rhs.getRequiredSecSysRoleId() ) ) {
@@ -748,7 +748,7 @@ public class CFSecProtBuffSecSysRole
 			}
 			return( 0 );
 		}
-		else if( obj instanceof ICFSecSecSysRoleByUNameIdxKey rhs ) {
+		else if( obj instanceof ICFSecProtSecSysRoleByUNameIdxKey rhs ) {
 			if (getRequiredName() != null) {
 				if (rhs.getRequiredName() != null) {
 					cmp = getRequiredName().compareTo( rhs.getRequiredName() );
@@ -898,12 +898,12 @@ public class CFSecProtBuffSecSysRole
 	}
 
 	@Override
-	public void setJustProt( ICFSecSecSysRole src ) {
+	public void set( ICFSecProtSecSysRole src ) {
 		setJustProtSecSysRole( src );
 	}
 
 	@Override
-	public void setJustProtSecSysRole( ICFSecSecSysRole src ) {
+	public void setSecSysRole( ICFSecProtSecSysRole src ) {
 		setJustProtRequiredSecSysRoleId(src.getRequiredSecSysRoleId());
 		setJustProtRequiredRevision( src.getRequiredRevision() );
 		setJustProtCreatedByUserId( src.getCreatedByUserId() );
@@ -914,50 +914,23 @@ public class CFSecProtBuffSecSysRole
 	}
 
 	@Override
-	public void setJustProt( ICFSecSecSysRoleH src ) {
+	public void set( ICFSecProtSecSysRoleH src ) {
 		setJustProtSecSysRole( src );
 	}
 
 	@Override
-	public void setJustProtSecSysRole( ICFSecSecSysRoleH src ) {
+	public void setSecSysRole( ICFSecProtSecSysRoleH src ) {
 		setJustProtRequiredSecSysRoleId(src.getRequiredSecSysRoleId());
 		setJustProtRequiredName(src.getRequiredName());
 	}
 
 	@Override
-	public void setJustProt( ICFSecProtSecSysRole src ) {
+	public void set( ICFSecProtSecSysRole src ) {
 		setJustProtSecSysRole( src );
 	}
 
 	@Override
-	public void setJustProtSecSysRole( ICFSecProtSecSysRole src ) {
-		setJustProtRequiredSecSysRoleId(src.getRequiredSecSysRoleId());
-		setJustProtRequiredRevision( src.getRequiredRevision() );
-		setJustProtCreatedByUserId( src.getCreatedByUserId() );
-		setJustProtCreatedAt( src.getCreatedAt() );
-		setJustProtUpdatedByUserId( src.getUpdatedByUserId() );
-		setJustProtUpdatedAt( src.getUpdatedAt() );
-		setJustProtRequiredName(src.getRequiredName());
-	}
-
-	@Override
-	public void setJustProt( ICFSecProtSecSysRoleH src ) {
-		setJustProtSecSysRole( src );
-	}
-
-	@Override
-	public void setJustProtSecSysRole( ICFSecProtSecSysRoleH src ) {
-		setJustProtRequiredSecSysRoleId(src.getRequiredSecSysRoleId());
-		setJustProtRequiredName(src.getRequiredName());
-	}
-
-	@Override
-	public void setJustProt( ICFSecPubSecSysRole src ) {
-		setJustProtSecSysRole( src );
-	}
-
-	@Override
-	public void setJustProtSecSysRole( ICFSecPubSecSysRole src ) {
+	public void setSecSysRole( ICFSecProtSecSysRole src ) {
 		setJustProtRequiredSecSysRoleId(src.getRequiredSecSysRoleId());
 		setJustProtRequiredRevision( src.getRequiredRevision() );
 		setJustProtCreatedByUserId( src.getCreatedByUserId() );
@@ -968,12 +941,39 @@ public class CFSecProtBuffSecSysRole
 	}
 
 	@Override
-	public void setJustProt( ICFSecPubSecSysRoleH src ) {
+	public void set( ICFSecProtSecSysRoleH src ) {
 		setJustProtSecSysRole( src );
 	}
 
 	@Override
-	public void setJustProtSecSysRole( ICFSecPubSecSysRoleH src ) {
+	public void setSecSysRole( ICFSecProtSecSysRoleH src ) {
+		setJustProtRequiredSecSysRoleId(src.getRequiredSecSysRoleId());
+		setJustProtRequiredName(src.getRequiredName());
+	}
+
+	@Override
+	public void set( ICFSecPubSecSysRole src ) {
+		setJustProtSecSysRole( src );
+	}
+
+	@Override
+	public void setSecSysRole( ICFSecPubSecSysRole src ) {
+		setJustProtRequiredSecSysRoleId(src.getRequiredSecSysRoleId());
+		setJustProtRequiredRevision( src.getRequiredRevision() );
+		setJustProtCreatedByUserId( src.getCreatedByUserId() );
+		setJustProtCreatedAt( src.getCreatedAt() );
+		setJustProtUpdatedByUserId( src.getUpdatedByUserId() );
+		setJustProtUpdatedAt( src.getUpdatedAt() );
+		setJustProtRequiredName(src.getRequiredName());
+	}
+
+	@Override
+	public void set( ICFSecPubSecSysRoleH src ) {
+		setJustProtSecSysRole( src );
+	}
+
+	@Override
+	public void setSecSysRole( ICFSecPubSecSysRoleH src ) {
 		setJustProtRequiredSecSysRoleId(src.getRequiredSecSysRoleId());
 		setJustProtRequiredName(src.getRequiredName());
 	}

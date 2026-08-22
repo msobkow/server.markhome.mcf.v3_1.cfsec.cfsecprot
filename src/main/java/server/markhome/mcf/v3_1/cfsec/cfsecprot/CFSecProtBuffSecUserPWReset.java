@@ -48,7 +48,7 @@ import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 
 public class CFSecProtBuffSecUserPWReset
-	implements ICFSecSecUserPWReset, Comparable<Object>, Serializable
+	implements ICFSecProtSecUserPWReset, Comparable<Object>, Serializable
 {
 	protected ICFLibKeyHash256 requiredSecUserId;
 	protected int requiredRevision;
@@ -74,7 +74,7 @@ public class CFSecProtBuffSecUserPWReset
 	}
 
 	@Override
-	public void setJustProtPKey(ICFLibKeyHash256 requiredSecUserId) {
+	public void setPKey(ICFLibKeyHash256 requiredSecUserId) {
 		if(requiredSecUserId != null) {
 			this.requiredSecUserId = requiredSecUserId;
 		}
@@ -96,40 +96,40 @@ public class CFSecProtBuffSecUserPWReset
 	}
 
 	@Override
-	public ICFSecSecUser getRequiredContainerUser() {
+	public ICFSecProtSecUser getRequiredContainerUser() {
 		ICFSecSchema targetBackingCFSec = ICFSecSchema.getBackingCFSec();
 		if (targetBackingCFSec == null) {
 			throw new CFLibNullArgumentException(getClass(), "getRequiredContainerUser", 0, "ICFSecSchema.getBackingCFSec()");
 		}
-		ICFSecSecUserTable targetTable = targetBackingCFSec.getTableSecUser();
+		ICFSecProtSecUserTable targetTable = targetBackingCFSec.getTableSecUser();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getRequiredContainerUser", 0, "ICFSecSchema.getBackingCFSec().getTableSecUser()");
 		}
-		ICFSecSecUser targetRec = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredSecUserId());
+		ICFSecProtSecUser targetRec = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredSecUserId());
 		return(targetRec);
 	}
 
 	@Override
-	public ICFSecSecUser getRequiredContainerUser() {
+	public ICFSecProtSecUser getRequiredContainerUser() {
 		ICFSecSchema targetBackingCFSec = ICFSecSchema.getBackingCFSec();
 		if (targetBackingCFSec == null) {
 			throw new CFLibNullArgumentException(getClass(), "getRequiredContainerUser", 0, "ICFSecSchema.getBackingCFSec()");
 		}
-		ICFSecSecUserTable targetTable = targetBackingCFSec.getTableSecUser();
+		ICFSecProtSecUserTable targetTable = targetBackingCFSec.getTableSecUser();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getRequiredContainerUser", 0, "ICFSecSchema.getBackingCFSec().getTableSecUser()");
 		}
-		ICFSecSecUser targetRec = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredSecUserId());
+		ICFSecProtSecUser targetRec = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredSecUserId());
 		return(targetRec);
 	}
 
 	@Override
-	public ICFSecSecUser getRequiredContainerUser() {
+	public ICFSecProtSecUser getRequiredContainerUser() {
 		ICFSecSchema targetBackingCFSec = ICFSecSchema.getBackingCFSec();
 		if (targetBackingCFSec == null) {
 			throw new CFLibNullArgumentException(getClass(), "getRequiredContainerUser", 0, "ICFSecSchema.getBackingCFSec()");
 		}
-		ICFSecSecUserTable targetTable = targetBackingCFSec.getTableSecUser();
+		ICFSecProtSecUserTable targetTable = targetBackingCFSec.getTableSecUser();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getRequiredContainerUser", 0, "ICFSecSchema.getBackingCFSec().getTableSecUser()");
 		}
@@ -138,9 +138,9 @@ public class CFSecProtBuffSecUserPWReset
 	}
 
 	@Override
-	public void setJustProtRequiredContainerUser(ICFSecSecUser argObj) {
+	public void setRequiredContainerUser(ICFSecProtSecUser argObj) {
 		if(argObj == null) {
-			throw new CFLibNullArgumentException(getClass(), "setJustProtContainerUser", 1, "argObj");
+			throw new CFLibNullArgumentException(getClass(), "setContainerUser", 1, "argObj");
 		}
 		else {
 			setJustProtRequiredSecUserId(argObj.getRequiredSecUserId());
@@ -148,9 +148,9 @@ public class CFSecProtBuffSecUserPWReset
 	}
 
 	@Override
-	public void setJustProtRequiredContainerUser(ICFSecProtSecUser argObj) {
+	public void setRequiredContainerUser(ICFSecProtSecUser argObj) {
 		if(argObj == null) {
-			throw new CFLibNullArgumentException(getClass(), "setJustProtContainerUser", 1, "argObj");
+			throw new CFLibNullArgumentException(getClass(), "setContainerUser", 1, "argObj");
 		}
 		else {
 			setJustProtRequiredSecUserId(argObj.getRequiredSecUserId());
@@ -158,9 +158,9 @@ public class CFSecProtBuffSecUserPWReset
 	}
 
 	@Override
-	public void setJustProtRequiredContainerUser(ICFSecPubSecUser argObj) {
+	public void setRequiredContainerUser(ICFSecPubSecUser argObj) {
 		if(argObj == null) {
-			throw new CFLibNullArgumentException(getClass(), "setJustProtContainerUser", 1, "argObj");
+			throw new CFLibNullArgumentException(getClass(), "setContainerUser", 1, "argObj");
 		}
 		else {
 			setJustProtRequiredSecUserId(argObj.getRequiredSecUserId());
@@ -219,7 +219,7 @@ public class CFSecProtBuffSecUserPWReset
 
 	@Override
 	public int getClassCode() {
-		return( ICFSecSecUserPWReset.CLASS_CODE );
+		return( ICFSecProtSecUserPWReset.CLASS_CODE );
 	}
 
 	@Override
@@ -388,8 +388,8 @@ public class CFSecProtBuffSecUserPWReset
 			}
 			return( true );
 		}
-		else if( obj instanceof ICFSecSecUserPWResetHPKey ) {
-			ICFSecProtSecUserPWResetHPKey rhs = (ICFSecSecUserPWResetHPKey)obj;
+		else if( obj instanceof ICFSecProtSecUserPWResetHPKey ) {
+			ICFSecProtSecUserPWResetHPKey rhs = (ICFSecProtSecUserPWResetHPKey)obj;
 			if( getRequiredSecUserId() != null ) {
 				if( rhs.getRequiredSecUserId() != null ) {
 					if( ! getRequiredSecUserId().equals( rhs.getRequiredSecUserId() ) ) {
@@ -812,7 +812,7 @@ public class CFSecProtBuffSecUserPWReset
 			}
 			return( 0 );
 		}
-		else if( obj instanceof ICFSecSecUserPWResetByUUuid6IdxKey rhs ) {
+		else if( obj instanceof ICFSecProtSecUserPWResetByUUuid6IdxKey rhs ) {
 			if (getRequiredPasswordResetUuid6() != null) {
 				if (rhs.getRequiredPasswordResetUuid6() != null) {
 					cmp = getRequiredPasswordResetUuid6().compareTo( rhs.getRequiredPasswordResetUuid6() );
@@ -828,7 +828,7 @@ public class CFSecProtBuffSecUserPWReset
 				return( -1 );
 			}			return( 0 );
 		}
-		else if( obj instanceof ICFSecSecUserPWResetBySentEMAddrIdxKey rhs ) {
+		else if( obj instanceof ICFSecProtSecUserPWResetBySentEMAddrIdxKey rhs ) {
 			if (getRequiredSentToEMailAddr() != null) {
 				if (rhs.getRequiredSentToEMailAddr() != null) {
 					cmp = getRequiredSentToEMailAddr().compareTo( rhs.getRequiredSentToEMailAddr() );
@@ -844,7 +844,7 @@ public class CFSecProtBuffSecUserPWReset
 				return( -1 );
 			}			return( 0 );
 		}
-		else if( obj instanceof ICFSecSecUserPWResetByNewAcctIdxKey rhs ) {
+		else if( obj instanceof ICFSecProtSecUserPWResetByNewAcctIdxKey rhs ) {
 			if( getRequiredNewAccount() ) {
 				if( ! rhs.getRequiredNewAccount() ) {
 					return( 1 );
@@ -866,12 +866,12 @@ public class CFSecProtBuffSecUserPWReset
 	}
 
 	@Override
-	public void setJustProt( ICFSecSecUserPWReset src ) {
+	public void set( ICFSecProtSecUserPWReset src ) {
 		setJustProtSecUserPWReset( src );
 	}
 
 	@Override
-	public void setJustProtSecUserPWReset( ICFSecSecUserPWReset src ) {
+	public void setSecUserPWReset( ICFSecProtSecUserPWReset src ) {
 		setJustProtRequiredContainerUser(src.getRequiredContainerUser());
 		setJustProtRequiredSecUserId(src.getRequiredSecUserId());
 		setJustProtRequiredRevision( src.getRequiredRevision() );
@@ -885,12 +885,12 @@ public class CFSecProtBuffSecUserPWReset
 	}
 
 	@Override
-	public void setJustProt( ICFSecSecUserPWResetH src ) {
+	public void set( ICFSecProtSecUserPWResetH src ) {
 		setJustProtSecUserPWReset( src );
 	}
 
 	@Override
-	public void setJustProtSecUserPWReset( ICFSecSecUserPWResetH src ) {
+	public void setSecUserPWReset( ICFSecProtSecUserPWResetH src ) {
 		setJustProtRequiredContainerUser(src.getRequiredContainerUser());
 		setJustProtRequiredSecUserId(src.getRequiredSecUserId());
 		setJustProtRequiredSentToEMailAddr(src.getRequiredSentToEMailAddr());
@@ -899,12 +899,12 @@ public class CFSecProtBuffSecUserPWReset
 	}
 
 	@Override
-	public void setJustProt( ICFSecProtSecUserPWReset src ) {
+	public void set( ICFSecProtSecUserPWReset src ) {
 		setJustProtSecUserPWReset( src );
 	}
 
 	@Override
-	public void setJustProtSecUserPWReset( ICFSecProtSecUserPWReset src ) {
+	public void setSecUserPWReset( ICFSecProtSecUserPWReset src ) {
 		setJustProtRequiredContainerUser(src.getRequiredContainerUser());
 		setJustProtRequiredSecUserId(src.getRequiredSecUserId());
 		setJustProtRequiredRevision( src.getRequiredRevision() );
@@ -918,12 +918,12 @@ public class CFSecProtBuffSecUserPWReset
 	}
 
 	@Override
-	public void setJustProt( ICFSecProtSecUserPWResetH src ) {
+	public void set( ICFSecProtSecUserPWResetH src ) {
 		setJustProtSecUserPWReset( src );
 	}
 
 	@Override
-	public void setJustProtSecUserPWReset( ICFSecProtSecUserPWResetH src ) {
+	public void setSecUserPWReset( ICFSecProtSecUserPWResetH src ) {
 		setJustProtRequiredContainerUser(src.getRequiredContainerUser());
 		setJustProtRequiredSecUserId(src.getRequiredSecUserId());
 		setJustProtRequiredSentToEMailAddr(src.getRequiredSentToEMailAddr());

@@ -48,7 +48,7 @@ import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 
 public class CFSecProtBuffISOTZone
-	implements ICFSecISOTZone, Comparable<Object>, Serializable
+	implements ICFSecProtISOTZone, Comparable<Object>, Serializable
 {
 	protected short requiredISOTZoneId;
 	protected int requiredRevision;
@@ -81,7 +81,7 @@ public class CFSecProtBuffISOTZone
 	}
 
 	@Override
-	public void setJustProtPKey(Short requiredISOTZoneId) {
+	public void setPKey(Short requiredISOTZoneId) {
 		if(requiredISOTZoneId != null) {
 			this.requiredISOTZoneId = requiredISOTZoneId;
 		}
@@ -157,7 +157,7 @@ public class CFSecProtBuffISOTZone
 
 	@Override
 	public int getClassCode() {
-		return( ICFSecISOTZone.CLASS_CODE );
+		return( ICFSecProtISOTZone.CLASS_CODE );
 	}
 
 	@Override
@@ -427,8 +427,8 @@ public class CFSecProtBuffISOTZone
 			}
 			return( true );
 		}
-		else if( obj instanceof ICFSecISOTZoneHPKey ) {
-			ICFSecProtISOTZoneHPKey rhs = (ICFSecISOTZoneHPKey)obj;
+		else if( obj instanceof ICFSecProtISOTZoneHPKey ) {
+			ICFSecProtISOTZoneHPKey rhs = (ICFSecProtISOTZoneHPKey)obj;
 			if( getRequiredISOTZoneId() != rhs.getRequiredISOTZoneId() ) {
 				return( false );
 			}
@@ -1069,7 +1069,7 @@ public class CFSecProtBuffISOTZone
 			}
 			return( 0 );
 		}
-		else if( obj instanceof ICFSecISOTZoneByOffsetIdxKey rhs ) {
+		else if( obj instanceof ICFSecProtISOTZoneByOffsetIdxKey rhs ) {
 			if( getRequiredTZHourOffset() < rhs.getRequiredTZHourOffset() ) {
 				return( -1 );
 			}
@@ -1083,7 +1083,7 @@ public class CFSecProtBuffISOTZone
 				return( 1 );
 			}			return( 0 );
 		}
-		else if( obj instanceof ICFSecISOTZoneByUTZNameIdxKey rhs ) {
+		else if( obj instanceof ICFSecProtISOTZoneByUTZNameIdxKey rhs ) {
 			if (getRequiredTZName() != null) {
 				if (rhs.getRequiredTZName() != null) {
 					cmp = getRequiredTZName().compareTo( rhs.getRequiredTZName() );
@@ -1099,7 +1099,7 @@ public class CFSecProtBuffISOTZone
 				return( -1 );
 			}			return( 0 );
 		}
-		else if( obj instanceof ICFSecISOTZoneByIso8601IdxKey rhs ) {
+		else if( obj instanceof ICFSecProtISOTZoneByIso8601IdxKey rhs ) {
 			if (getRequiredIso8601() != null) {
 				if (rhs.getRequiredIso8601() != null) {
 					cmp = getRequiredIso8601().compareTo( rhs.getRequiredIso8601() );
@@ -1355,12 +1355,12 @@ public class CFSecProtBuffISOTZone
 	}
 
 	@Override
-	public void setJustProt( ICFSecISOTZone src ) {
+	public void set( ICFSecProtISOTZone src ) {
 		setJustProtISOTZone( src );
 	}
 
 	@Override
-	public void setJustProtISOTZone( ICFSecISOTZone src ) {
+	public void setISOTZone( ICFSecProtISOTZone src ) {
 		setJustProtRequiredISOTZoneId(src.getRequiredISOTZoneId());
 		setJustProtRequiredRevision( src.getRequiredRevision() );
 		setJustProtCreatedByUserId( src.getCreatedByUserId() );
@@ -1376,12 +1376,12 @@ public class CFSecProtBuffISOTZone
 	}
 
 	@Override
-	public void setJustProt( ICFSecISOTZoneH src ) {
+	public void set( ICFSecProtISOTZoneH src ) {
 		setJustProtISOTZone( src );
 	}
 
 	@Override
-	public void setJustProtISOTZone( ICFSecISOTZoneH src ) {
+	public void setISOTZone( ICFSecProtISOTZoneH src ) {
 		setJustProtRequiredISOTZoneId(src.getRequiredISOTZoneId());
 		setJustProtRequiredIso8601(src.getRequiredIso8601());
 		setJustProtRequiredTZName(src.getRequiredTZName());
@@ -1392,49 +1392,12 @@ public class CFSecProtBuffISOTZone
 	}
 
 	@Override
-	public void setJustProt( ICFSecProtISOTZone src ) {
+	public void set( ICFSecProtISOTZone src ) {
 		setJustProtISOTZone( src );
 	}
 
 	@Override
-	public void setJustProtISOTZone( ICFSecProtISOTZone src ) {
-		setJustProtRequiredISOTZoneId(src.getRequiredISOTZoneId());
-		setJustProtRequiredRevision( src.getRequiredRevision() );
-		setJustProtCreatedByUserId( src.getCreatedByUserId() );
-		setJustProtCreatedAt( src.getCreatedAt() );
-		setJustProtUpdatedByUserId( src.getUpdatedByUserId() );
-		setJustProtUpdatedAt( src.getUpdatedAt() );
-		setJustProtRequiredIso8601(src.getRequiredIso8601());
-		setJustProtRequiredTZName(src.getRequiredTZName());
-		setJustProtRequiredTZHourOffset(src.getRequiredTZHourOffset());
-		setJustProtRequiredTZMinOffset(src.getRequiredTZMinOffset());
-		setJustProtRequiredDescription(src.getRequiredDescription());
-		setJustProtRequiredVisible(src.getRequiredVisible());
-	}
-
-	@Override
-	public void setJustProt( ICFSecProtISOTZoneH src ) {
-		setJustProtISOTZone( src );
-	}
-
-	@Override
-	public void setJustProtISOTZone( ICFSecProtISOTZoneH src ) {
-		setJustProtRequiredISOTZoneId(src.getRequiredISOTZoneId());
-		setJustProtRequiredIso8601(src.getRequiredIso8601());
-		setJustProtRequiredTZName(src.getRequiredTZName());
-		setJustProtRequiredTZHourOffset(src.getRequiredTZHourOffset());
-		setJustProtRequiredTZMinOffset(src.getRequiredTZMinOffset());
-		setJustProtRequiredDescription(src.getRequiredDescription());
-		setJustProtRequiredVisible(src.getRequiredVisible());
-	}
-
-	@Override
-	public void setJustProt( ICFSecPubISOTZone src ) {
-		setJustProtISOTZone( src );
-	}
-
-	@Override
-	public void setJustProtISOTZone( ICFSecPubISOTZone src ) {
+	public void setISOTZone( ICFSecProtISOTZone src ) {
 		setJustProtRequiredISOTZoneId(src.getRequiredISOTZoneId());
 		setJustProtRequiredRevision( src.getRequiredRevision() );
 		setJustProtCreatedByUserId( src.getCreatedByUserId() );
@@ -1450,12 +1413,49 @@ public class CFSecProtBuffISOTZone
 	}
 
 	@Override
-	public void setJustProt( ICFSecPubISOTZoneH src ) {
+	public void set( ICFSecProtISOTZoneH src ) {
 		setJustProtISOTZone( src );
 	}
 
 	@Override
-	public void setJustProtISOTZone( ICFSecPubISOTZoneH src ) {
+	public void setISOTZone( ICFSecProtISOTZoneH src ) {
+		setJustProtRequiredISOTZoneId(src.getRequiredISOTZoneId());
+		setJustProtRequiredIso8601(src.getRequiredIso8601());
+		setJustProtRequiredTZName(src.getRequiredTZName());
+		setJustProtRequiredTZHourOffset(src.getRequiredTZHourOffset());
+		setJustProtRequiredTZMinOffset(src.getRequiredTZMinOffset());
+		setJustProtRequiredDescription(src.getRequiredDescription());
+		setJustProtRequiredVisible(src.getRequiredVisible());
+	}
+
+	@Override
+	public void set( ICFSecPubISOTZone src ) {
+		setJustProtISOTZone( src );
+	}
+
+	@Override
+	public void setISOTZone( ICFSecPubISOTZone src ) {
+		setJustProtRequiredISOTZoneId(src.getRequiredISOTZoneId());
+		setJustProtRequiredRevision( src.getRequiredRevision() );
+		setJustProtCreatedByUserId( src.getCreatedByUserId() );
+		setJustProtCreatedAt( src.getCreatedAt() );
+		setJustProtUpdatedByUserId( src.getUpdatedByUserId() );
+		setJustProtUpdatedAt( src.getUpdatedAt() );
+		setJustProtRequiredIso8601(src.getRequiredIso8601());
+		setJustProtRequiredTZName(src.getRequiredTZName());
+		setJustProtRequiredTZHourOffset(src.getRequiredTZHourOffset());
+		setJustProtRequiredTZMinOffset(src.getRequiredTZMinOffset());
+		setJustProtRequiredDescription(src.getRequiredDescription());
+		setJustProtRequiredVisible(src.getRequiredVisible());
+	}
+
+	@Override
+	public void set( ICFSecPubISOTZoneH src ) {
+		setJustProtISOTZone( src );
+	}
+
+	@Override
+	public void setISOTZone( ICFSecPubISOTZoneH src ) {
 		setJustProtRequiredISOTZoneId(src.getRequiredISOTZoneId());
 		setJustProtRequiredIso8601(src.getRequiredIso8601());
 		setJustProtRequiredTZName(src.getRequiredTZName());

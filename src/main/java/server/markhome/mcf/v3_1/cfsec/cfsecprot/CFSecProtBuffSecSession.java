@@ -48,7 +48,7 @@ import server.markhome.mcf.v3_1.cfsec.cfsecprot.*;
 import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 
 public class CFSecProtBuffSecSession
-	implements ICFSecSecSession, Comparable<Object>, Serializable
+	implements ICFSecProtSecSession, Comparable<Object>, Serializable
 {
 	protected ICFLibKeyHash256 requiredSecSessionId;
 	protected int requiredRevision;
@@ -71,7 +71,7 @@ public class CFSecProtBuffSecSession
 	}
 
 	@Override
-	public void setJustProtPKey(ICFLibKeyHash256 requiredSecSessionId) {
+	public void setPKey(ICFLibKeyHash256 requiredSecSessionId) {
 		if(requiredSecSessionId != null) {
 			this.requiredSecSessionId = requiredSecSessionId;
 		}
@@ -104,44 +104,44 @@ public class CFSecProtBuffSecSession
 
 	@Override
 	public int getClassCode() {
-		return( ICFSecSecSession.CLASS_CODE );
+		return( ICFSecProtSecSession.CLASS_CODE );
 	}
 
 	@Override
-	public ICFSecSecUser getRequiredContainerSecUser() {
+	public ICFSecProtSecUser getRequiredContainerSecUser() {
 		ICFSecSchema targetBackingCFSec = ICFSecSchema.getBackingCFSec();
 		if (targetBackingCFSec == null) {
 			throw new CFLibNullArgumentException(getClass(), "getRequiredContainerSecUser", 0, "ICFSecSchema.getBackingCFSec()");
 		}
-		ICFSecSecUserTable targetTable = targetBackingCFSec.getTableSecUser();
+		ICFSecProtSecUserTable targetTable = targetBackingCFSec.getTableSecUser();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getRequiredContainerSecUser", 0, "ICFSecSchema.getBackingCFSec().getTableSecUser()");
 		}
-		ICFSecSecUser targetRec = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredSecUserId());
+		ICFSecProtSecUser targetRec = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredSecUserId());
 		return(targetRec);
 	}
 
 	@Override
-	public ICFSecSecUser getRequiredContainerSecUser() {
+	public ICFSecProtSecUser getRequiredContainerSecUser() {
 		ICFSecSchema targetBackingCFSec = ICFSecSchema.getBackingCFSec();
 		if (targetBackingCFSec == null) {
 			throw new CFLibNullArgumentException(getClass(), "getRequiredContainerSecUser", 0, "ICFSecSchema.getBackingCFSec()");
 		}
-		ICFSecSecUserTable targetTable = targetBackingCFSec.getTableSecUser();
+		ICFSecProtSecUserTable targetTable = targetBackingCFSec.getTableSecUser();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getRequiredContainerSecUser", 0, "ICFSecSchema.getBackingCFSec().getTableSecUser()");
 		}
-		ICFSecSecUser targetRec = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredSecUserId());
+		ICFSecProtSecUser targetRec = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredSecUserId());
 		return(targetRec);
 	}
 
 	@Override
-	public ICFSecSecUser getRequiredContainerSecUser() {
+	public ICFSecProtSecUser getRequiredContainerSecUser() {
 		ICFSecSchema targetBackingCFSec = ICFSecSchema.getBackingCFSec();
 		if (targetBackingCFSec == null) {
 			throw new CFLibNullArgumentException(getClass(), "getRequiredContainerSecUser", 0, "ICFSecSchema.getBackingCFSec()");
 		}
-		ICFSecSecUserTable targetTable = targetBackingCFSec.getTableSecUser();
+		ICFSecProtSecUserTable targetTable = targetBackingCFSec.getTableSecUser();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getRequiredContainerSecUser", 0, "ICFSecSchema.getBackingCFSec().getTableSecUser()");
 		}
@@ -150,31 +150,31 @@ public class CFSecProtBuffSecSession
 	}
 
 	@Override
-	public void setJustProtRequiredContainerSecUser(ICFLibKeyHash256 argSecUserId) {
+	public void setRequiredContainerSecUser(ICFLibKeyHash256 argSecUserId) {
 		ICFSecSchema targetBackingCFSec = ICFSecSchema.getBackingCFSec();
 		if (targetBackingCFSec == null) {
-			throw new CFLibNullArgumentException(getClass(), "setJustProtRequiredContainerSecUser-args", 0, "ICFSecSchema.getBackingCFSec()");
+			throw new CFLibNullArgumentException(getClass(), "setRequiredContainerSecUser-args", 0, "ICFSecSchema.getBackingCFSec()");
 		}
 		ICFSecProtSecUserTable targetTable = targetBackingCFSec.getTableSecUser();
 		if (targetTable == null) {
-			throw new CFLibNullArgumentException(getClass(), "setJustProtRequiredContainerSecUser", 0, "ICFSecSchema.getBackingCFSec()");
+			throw new CFLibNullArgumentException(getClass(), "setRequiredContainerSecUser", 0, "ICFSecSchema.getBackingCFSec()");
 		}
 		ICFSecProtSecUser found = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), argSecUserId);
 		if (found == null) {
-			throw new CFLibNullArgumentException(getClass(), "setJustProtRequiredContainerSecUser-args", 0, "found");
+			throw new CFLibNullArgumentException(getClass(), "setRequiredContainerSecUser-args", 0, "found");
 		}
 		else if ((found instanceof ICFSecProtSecUser) || (found instanceof ICFSecPubSecUser)) {
 		requiredSecUserId = argSecUserId;
 		}
 		else {
-			throw new CFLibUnsupportedClassException(getClass(), "setJustProtRequiredContainerSecUser-args", "found", found, "ICFSecProtSecUserICFSecPubSecUser");
+			throw new CFLibUnsupportedClassException(getClass(), "setRequiredContainerSecUser-args", "found", found, "ICFSecProtSecUserICFSecPubSecUser");
 		}
 	}
 
 	@Override
-	public void setJustProtRequiredContainerSecUser(ICFSecSecUser argObj) {
+	public void setRequiredContainerSecUser(ICFSecProtSecUser argObj) {
 		if(argObj == null) {
-			throw new CFLibNullArgumentException(getClass(), "setJustProtContainerSecUser", 1, "argObj");
+			throw new CFLibNullArgumentException(getClass(), "setContainerSecUser", 1, "argObj");
 		}
 		else {
 			setJustProtRequiredSecUserId(argObj.getRequiredSecUserId());
@@ -182,40 +182,40 @@ public class CFSecProtBuffSecSession
 	}
 
 	@Override
-	public ICFSecSecUser getRequiredParentSecProxy() {
+	public ICFSecProtSecUser getRequiredParentSecProxy() {
 		ICFSecSchema targetBackingCFSec = ICFSecSchema.getBackingCFSec();
 		if (targetBackingCFSec == null) {
 			throw new CFLibNullArgumentException(getClass(), "getRequiredParentSecProxy", 0, "ICFSecSchema.getBackingCFSec()");
 		}
-		ICFSecSecUserTable targetTable = targetBackingCFSec.getTableSecUser();
+		ICFSecProtSecUserTable targetTable = targetBackingCFSec.getTableSecUser();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getRequiredParentSecProxy", 0, "ICFSecSchema.getBackingCFSec().getTableSecUser()");
 		}
-		ICFSecSecUser targetRec = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getOptionalSecProxyId());
+		ICFSecProtSecUser targetRec = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getOptionalSecProxyId());
 		return(targetRec);
 	}
 
 	@Override
-	public ICFSecSecUser getRequiredParentSecProxy() {
+	public ICFSecProtSecUser getRequiredParentSecProxy() {
 		ICFSecSchema targetBackingCFSec = ICFSecSchema.getBackingCFSec();
 		if (targetBackingCFSec == null) {
 			throw new CFLibNullArgumentException(getClass(), "getRequiredParentSecProxy", 0, "ICFSecSchema.getBackingCFSec()");
 		}
-		ICFSecSecUserTable targetTable = targetBackingCFSec.getTableSecUser();
+		ICFSecProtSecUserTable targetTable = targetBackingCFSec.getTableSecUser();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getRequiredParentSecProxy", 0, "ICFSecSchema.getBackingCFSec().getTableSecUser()");
 		}
-		ICFSecSecUser targetRec = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getOptionalSecProxyId());
+		ICFSecProtSecUser targetRec = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getOptionalSecProxyId());
 		return(targetRec);
 	}
 
 	@Override
-	public ICFSecSecUser getRequiredParentSecProxy() {
+	public ICFSecProtSecUser getRequiredParentSecProxy() {
 		ICFSecSchema targetBackingCFSec = ICFSecSchema.getBackingCFSec();
 		if (targetBackingCFSec == null) {
 			throw new CFLibNullArgumentException(getClass(), "getRequiredParentSecProxy", 0, "ICFSecSchema.getBackingCFSec()");
 		}
-		ICFSecSecUserTable targetTable = targetBackingCFSec.getTableSecUser();
+		ICFSecProtSecUserTable targetTable = targetBackingCFSec.getTableSecUser();
 		if (targetTable == null) {
 			throw new CFLibNullArgumentException(getClass(), "getRequiredParentSecProxy", 0, "ICFSecSchema.getBackingCFSec().getTableSecUser()");
 		}
@@ -224,31 +224,31 @@ public class CFSecProtBuffSecSession
 	}
 
 	@Override
-	public void setJustProtRequiredParentSecProxy(ICFLibKeyHash256 argSecProxyId) {
+	public void setRequiredParentSecProxy(ICFLibKeyHash256 argSecProxyId) {
 		ICFSecSchema targetBackingCFSec = ICFSecSchema.getBackingCFSec();
 		if (targetBackingCFSec == null) {
-			throw new CFLibNullArgumentException(getClass(), "setJustProtRequiredParentSecProxy-args", 0, "ICFSecSchema.getBackingCFSec()");
+			throw new CFLibNullArgumentException(getClass(), "setRequiredParentSecProxy-args", 0, "ICFSecSchema.getBackingCFSec()");
 		}
 		ICFSecProtSecUserTable targetTable = targetBackingCFSec.getTableSecUser();
 		if (targetTable == null) {
-			throw new CFLibNullArgumentException(getClass(), "setJustProtRequiredParentSecProxy", 0, "ICFSecSchema.getBackingCFSec()");
+			throw new CFLibNullArgumentException(getClass(), "setRequiredParentSecProxy", 0, "ICFSecSchema.getBackingCFSec()");
 		}
 		ICFSecProtSecUser found = targetTable.readDerived(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), argSecProxyId);
 		if (found == null) {
-			throw new CFLibNullArgumentException(getClass(), "setJustProtRequiredParentSecProxy-args", 0, "found");
+			throw new CFLibNullArgumentException(getClass(), "setRequiredParentSecProxy-args", 0, "found");
 		}
 		else if ((found instanceof ICFSecProtSecUser) || (found instanceof ICFSecPubSecUser)) {
 		optionalSecProxyId = argSecProxyId;
 		}
 		else {
-			throw new CFLibUnsupportedClassException(getClass(), "setJustProtRequiredParentSecProxy-args", "found", found, "ICFSecProtSecUserICFSecPubSecUser");
+			throw new CFLibUnsupportedClassException(getClass(), "setRequiredParentSecProxy-args", "found", found, "ICFSecProtSecUserICFSecPubSecUser");
 		}
 	}
 
 	@Override
-	public void setJustProtRequiredParentSecProxy(ICFSecSecUser argObj) {
+	public void setRequiredParentSecProxy(ICFSecProtSecUser argObj) {
 		if(argObj == null) {
-			throw new CFLibNullArgumentException(getClass(), "setJustProtParentSecProxy", 1, "argObj");
+			throw new CFLibNullArgumentException(getClass(), "setParentSecProxy", 1, "argObj");
 		}
 		else {
 			setJustProtOptionalSecProxyId(argObj.getRequiredSecUserId());
@@ -464,8 +464,8 @@ public class CFSecProtBuffSecSession
 			}
 			return( true );
 		}
-		else if( obj instanceof ICFSecSecSessionHPKey ) {
-			ICFSecProtSecSessionHPKey rhs = (ICFSecSecSessionHPKey)obj;
+		else if( obj instanceof ICFSecProtSecSessionHPKey ) {
+			ICFSecProtSecSessionHPKey rhs = (ICFSecProtSecSessionHPKey)obj;
 			if( getRequiredSecSessionId() != null ) {
 				if( rhs.getRequiredSecSessionId() != null ) {
 					if( ! getRequiredSecSessionId().equals( rhs.getRequiredSecSessionId() ) ) {
@@ -1297,7 +1297,7 @@ public class CFSecProtBuffSecSession
 			}
 			return( 0 );
 		}
-		else if( obj instanceof ICFSecSecSessionBySecUserIdxKey rhs ) {
+		else if( obj instanceof ICFSecProtSecSessionBySecUserIdxKey rhs ) {
 			if (getRequiredSecUserId() != null) {
 				if (rhs.getRequiredSecUserId() != null) {
 					cmp = getRequiredSecUserId().compareTo( rhs.getRequiredSecUserId() );
@@ -1313,7 +1313,7 @@ public class CFSecProtBuffSecSession
 				return( -1 );
 			}			return( 0 );
 		}
-		else if( obj instanceof ICFSecSecSessionByStartIdxKey rhs ) {
+		else if( obj instanceof ICFSecProtSecSessionByStartIdxKey rhs ) {
 			if (getRequiredSecUserId() != null) {
 				if (rhs.getRequiredSecUserId() != null) {
 					cmp = getRequiredSecUserId().compareTo( rhs.getRequiredSecUserId() );
@@ -1343,7 +1343,7 @@ public class CFSecProtBuffSecSession
 				return( -1 );
 			}			return( 0 );
 		}
-		else if( obj instanceof ICFSecSecSessionByFinishIdxKey rhs ) {
+		else if( obj instanceof ICFSecProtSecSessionByFinishIdxKey rhs ) {
 			if (getRequiredSecUserId() != null) {
 				if (rhs.getRequiredSecUserId() != null) {
 					cmp = getRequiredSecUserId().compareTo( rhs.getRequiredSecUserId() );
@@ -1375,7 +1375,7 @@ public class CFSecProtBuffSecSession
 				}
 			}			return( 0 );
 		}
-		else if( obj instanceof ICFSecSecSessionBySecProxyIdxKey rhs ) {
+		else if( obj instanceof ICFSecProtSecSessionBySecProxyIdxKey rhs ) {
 			if( getOptionalSecProxyId() != null ) {
 				if( rhs.getOptionalSecProxyId() != null ) {
 					cmp = getOptionalSecProxyId().compareTo( rhs.getOptionalSecProxyId() );
@@ -1628,12 +1628,12 @@ public class CFSecProtBuffSecSession
 	}
 
 	@Override
-	public void setJustProt( ICFSecSecSession src ) {
+	public void set( ICFSecProtSecSession src ) {
 		setJustProtSecSession( src );
 	}
 
 	@Override
-	public void setJustProtSecSession( ICFSecSecSession src ) {
+	public void setSecSession( ICFSecProtSecSession src ) {
 		setJustProtRequiredSecSessionId(src.getRequiredSecSessionId());
 		setJustProtRequiredRevision( src.getRequiredRevision() );
 		setJustProtRequiredContainerSecUser(src.getRequiredContainerSecUser());
@@ -1645,12 +1645,12 @@ public class CFSecProtBuffSecSession
 	}
 
 	@Override
-	public void setJustProt( ICFSecSecSessionH src ) {
+	public void set( ICFSecProtSecSessionH src ) {
 		setJustProtSecSession( src );
 	}
 
 	@Override
-	public void setJustProtSecSession( ICFSecSecSessionH src ) {
+	public void setSecSession( ICFSecProtSecSessionH src ) {
 		setJustProtRequiredSecSessionId(src.getRequiredSecSessionId());
 		setJustProtRequiredContainerSecUser(src.getRequiredContainerSecUser());
 		setJustProtRequiredParentSecProxy(src.getRequiredParentSecProxy());
@@ -1661,12 +1661,12 @@ public class CFSecProtBuffSecSession
 	}
 
 	@Override
-	public void setJustProt( ICFSecProtSecSession src ) {
+	public void set( ICFSecProtSecSession src ) {
 		setJustProtSecSession( src );
 	}
 
 	@Override
-	public void setJustProtSecSession( ICFSecProtSecSession src ) {
+	public void setSecSession( ICFSecProtSecSession src ) {
 		setJustProtRequiredSecSessionId(src.getRequiredSecSessionId());
 		setJustProtRequiredRevision( src.getRequiredRevision() );
 		setJustProtRequiredContainerSecUser(src.getRequiredContainerSecUser());
@@ -1678,12 +1678,12 @@ public class CFSecProtBuffSecSession
 	}
 
 	@Override
-	public void setJustProt( ICFSecProtSecSessionH src ) {
+	public void set( ICFSecProtSecSessionH src ) {
 		setJustProtSecSession( src );
 	}
 
 	@Override
-	public void setJustProtSecSession( ICFSecProtSecSessionH src ) {
+	public void setSecSession( ICFSecProtSecSessionH src ) {
 		setJustProtRequiredSecSessionId(src.getRequiredSecSessionId());
 		setJustProtRequiredContainerSecUser(src.getRequiredContainerSecUser());
 		setJustProtRequiredParentSecProxy(src.getRequiredParentSecProxy());
@@ -1694,12 +1694,12 @@ public class CFSecProtBuffSecSession
 	}
 
 	@Override
-	public void setJustProt( ICFSecPubSecSession src ) {
+	public void set( ICFSecPubSecSession src ) {
 		setJustProtSecSession( src );
 	}
 
 	@Override
-	public void setJustProtSecSession( ICFSecPubSecSession src ) {
+	public void setSecSession( ICFSecPubSecSession src ) {
 		setJustProtRequiredSecSessionId(src.getRequiredSecSessionId());
 		setJustProtRequiredRevision( src.getRequiredRevision() );
 		setJustProtRequiredContainerSecUser(src.getRequiredContainerSecUser());
@@ -1709,12 +1709,12 @@ public class CFSecProtBuffSecSession
 	}
 
 	@Override
-	public void setJustProt( ICFSecPubSecSessionH src ) {
+	public void set( ICFSecPubSecSessionH src ) {
 		setJustProtSecSession( src );
 	}
 
 	@Override
-	public void setJustProtSecSession( ICFSecPubSecSessionH src ) {
+	public void setSecSession( ICFSecPubSecSessionH src ) {
 		setJustProtRequiredSecSessionId(src.getRequiredSecSessionId());
 		setJustProtRequiredContainerSecUser(src.getRequiredContainerSecUser());
 		setJustProtRequiredSecUserId(src.getRequiredSecUserId());
