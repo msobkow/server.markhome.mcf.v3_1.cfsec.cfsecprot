@@ -101,13 +101,13 @@ public class CFSecProtBuffISOLang
 
 	@Override
 	public List<ICFSecProtISOCtryLang> getOptionalChildrenCtry() {
-		ICFSecSchema targetBackingCFSec = ICFSecSchema.getBackingCFSec();
+		ICFSecProtSchema targetBackingCFSec = ICFSecProtSchema.getBackingCFSec();
 		if (targetBackingCFSec == null) {
-			throw new CFLibNullArgumentException(getClass(), "getOptionalChildrenCtry", 0, "ICFSecSchema.getBackingCFSec()");
+			throw new CFLibNullArgumentException(getClass(), "getOptionalChildrenCtry", 0, "ICFSecProtSchema.getBackingCFSec()");
 		}
 		ICFSecProtISOCtryLangTable targetTable = targetBackingCFSec.getTableISOCtryLang();
 		if (targetTable == null) {
-			throw new CFLibNullArgumentException(getClass(), "getOptionalChildrenCtry", 0, "ICFSecSchema.getBackingCFSec().getTableISOCtryLang()");
+			throw new CFLibNullArgumentException(getClass(), "getOptionalChildrenCtry", 0, "ICFSecProtSchema.getBackingCFSec().getTableISOCtryLang()");
 		}
 		ICFSecProtISOCtryLang[] targetArr = targetTable.readDerivedByLangIdx(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredISOLangId());
 		if( targetArr != null ) {
@@ -119,54 +119,6 @@ public class CFSecProtBuffISOLang
 		}
 		else {
 			List<ICFSecProtISOCtryLang> results = new ArrayList<>();
-			return( results );
-		}
-	}
-
-	@Override
-	public List<ICFSecProtISOCtryLang> getOptionalChildrenCtry() {
-		ICFSecSchema targetBackingCFSec = ICFSecSchema.getBackingCFSec();
-		if (targetBackingCFSec == null) {
-			throw new CFLibNullArgumentException(getClass(), "getOptionalChildrenCtry", 0, "ICFSecSchema.getBackingCFSec()");
-		}
-		ICFSecProtISOCtryLangTable targetTable = targetBackingCFSec.getTableISOCtryLang();
-		if (targetTable == null) {
-			throw new CFLibNullArgumentException(getClass(), "getOptionalChildrenCtry", 0, "ICFSecSchema.getBackingCFSec().getTableISOCtryLang()");
-		}
-		ICFSecProtISOCtryLang[] targetArr = targetTable.readDerivedByLangIdx(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredISOLangId());
-		if( targetArr != null ) {
-			List<ICFSecProtISOCtryLang> results = new ArrayList<>(targetArr.length);
-			for (int idx = 0; idx < targetArr.length; idx++) {
-				results.add(targetArr[idx]);
-			}
-			return( results );
-		}
-		else {
-			List<ICFSecProtISOCtryLang> results = new ArrayList<>();
-			return( results );
-		}
-	}
-
-	@Override
-	public List<ICFSecProtISOCtryLang> getOptionalChildrenCtry() {
-		ICFSecSchema targetBackingCFSec = ICFSecSchema.getBackingCFSec();
-		if (targetBackingCFSec == null) {
-			throw new CFLibNullArgumentException(getClass(), "getOptionalChildrenCtry", 0, "ICFSecSchema.getBackingCFSec()");
-		}
-		ICFSecProtISOCtryLangTable targetTable = targetBackingCFSec.getTableISOCtryLang();
-		if (targetTable == null) {
-			throw new CFLibNullArgumentException(getClass(), "getOptionalChildrenCtry", 0, "ICFSecSchema.getBackingCFSec().getTableISOCtryLang()");
-		}
-		ICFSecPubISOCtryLang[] targetArr = targetTable.readDerivedByLangIdx(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredISOLangId());
-		if( targetArr != null ) {
-			List<ICFSecPubISOCtryLang> results = new ArrayList<>(targetArr.length);
-			for (int idx = 0; idx < targetArr.length; idx++) {
-				results.add(targetArr[idx]);
-			}
-			return( results );
-		}
-		else {
-			List<ICFSecPubISOCtryLang> results = new ArrayList<>();
 			return( results );
 		}
 	}
@@ -410,162 +362,6 @@ public class CFSecProtBuffISOLang
 		}
 		else if( obj instanceof ICFSecProtISOLangHPKey ) {
 			ICFSecProtISOLangHPKey rhs = (ICFSecProtISOLangHPKey)obj;
-			if( getRequiredISOLangId() != rhs.getRequiredISOLangId() ) {
-				return( false );
-			}
-			return( true );
-		}
-		else if( obj instanceof ICFSecProtISOLangByCode3IdxKey rhs ) {
-			if( getRequiredISO6392Code() != null ) {
-				if( rhs.getRequiredISO6392Code() != null ) {
-					if( ! getRequiredISO6392Code().equals( rhs.getRequiredISO6392Code() ) ) {
-						return( false );
-					}
-				}
-				else {
-					return( false );
-				}
-			}
-			else {
-				if( rhs.getRequiredISO6392Code() != null ) {
-					return( false );
-				}
-			}
-			return( true );
-		}
-		else if( obj instanceof ICFSecProtISOLangByCode2IdxKey rhs ) {
-			if( getOptionalISO6391Code() != null ) {
-				if( rhs.getOptionalISO6391Code() != null ) {
-					if( ! getOptionalISO6391Code().equals( rhs.getOptionalISO6391Code() ) ) {
-						return( false );
-					}
-				}
-				else {
-					return( false );
-				}
-			}
-			else {
-				if( rhs.getOptionalISO6391Code() != null ) {
-					return( false );
-				}
-			}
-			return( true );
-		}
-		else if( obj instanceof ICFSecProtISOLang rhs ) {
-			if( ! getCreatedByUserId().equals( rhs.getCreatedByUserId() ) ) {
-				return( false );
-			}
-			if( ! getCreatedAt().equals( rhs.getCreatedAt() ) ) {
-				return( false );
-			}
-			if( ! getUpdatedByUserId().equals( rhs.getUpdatedByUserId() ) ) {
-				return( false );
-			}
-			if( ! getUpdatedAt().equals( rhs.getUpdatedAt() ) ) {
-				return( false );
-			}
-			if( getRequiredISOLangId() != rhs.getRequiredISOLangId() ) {
-				return( false );
-			}
-			if( getRequiredISO6392Code() != null ) {
-				if( rhs.getRequiredISO6392Code() != null ) {
-					if( ! getRequiredISO6392Code().equals( rhs.getRequiredISO6392Code() ) ) {
-						return( false );
-					}
-				}
-				else {
-					return( false );
-				}
-			}
-			else {
-				if( rhs.getRequiredISO6392Code() != null ) {
-					return( false );
-				}
-			}
-			if( getOptionalISO6391Code() != null ) {
-				if( rhs.getOptionalISO6391Code() != null ) {
-					if( ! getOptionalISO6391Code().equals( rhs.getOptionalISO6391Code() ) ) {
-						return( false );
-					}
-				}
-				else {
-					return( false );
-				}
-			}
-			else {
-				if( rhs.getOptionalISO6391Code() != null ) {
-					return( false );
-				}
-			}
-			if( getRequiredEnglishName() != null ) {
-				if( rhs.getRequiredEnglishName() != null ) {
-					if( ! getRequiredEnglishName().equals( rhs.getRequiredEnglishName() ) ) {
-						return( false );
-					}
-				}
-				else {
-					return( false );
-				}
-			}
-			else {
-				if( rhs.getRequiredEnglishName() != null ) {
-					return( false );
-				}
-			}
-			return( true );
-		}
-		else if( obj instanceof ICFSecProtISOLangH rhs ) {
-			if( getRequiredISOLangId() != rhs.getRequiredISOLangId() ) {
-				return( false );
-			}
-			if( getRequiredISO6392Code() != null ) {
-				if( rhs.getRequiredISO6392Code() != null ) {
-					if( ! getRequiredISO6392Code().equals( rhs.getRequiredISO6392Code() ) ) {
-						return( false );
-					}
-				}
-				else {
-					return( false );
-				}
-			}
-			else {
-				if( rhs.getRequiredISO6392Code() != null ) {
-					return( false );
-				}
-			}
-			if( getOptionalISO6391Code() != null ) {
-				if( rhs.getOptionalISO6391Code() != null ) {
-					if( ! getOptionalISO6391Code().equals( rhs.getOptionalISO6391Code() ) ) {
-						return( false );
-					}
-				}
-				else {
-					return( false );
-				}
-			}
-			else {
-				if( rhs.getOptionalISO6391Code() != null ) {
-					return( false );
-				}
-			}
-			if( getRequiredEnglishName() != null ) {
-				if( rhs.getRequiredEnglishName() != null ) {
-					if( ! getRequiredEnglishName().equals( rhs.getRequiredEnglishName() ) ) {
-						return( false );
-					}
-				}
-				else {
-					return( false );
-				}
-			}
-			else {
-				if( rhs.getRequiredEnglishName() != null ) {
-					return( false );
-				}
-			}
-			return( true );
-		}
-		else if( obj instanceof ICFSecProtISOLangHPKey rhs ) {
 			if( getRequiredISOLangId() != rhs.getRequiredISOLangId() ) {
 				return( false );
 			}
@@ -1158,37 +954,6 @@ public class CFSecProtBuffISOLang
 				obj,
 				null );
 		}
-	}
-
-	@Override
-	public void set( ICFSecProtISOLang src ) {
-		setJustProtISOLang( src );
-	}
-
-	@Override
-	public void setISOLang( ICFSecProtISOLang src ) {
-		setJustProtRequiredISOLangId(src.getRequiredISOLangId());
-		setJustProtRequiredRevision( src.getRequiredRevision() );
-		setJustProtCreatedByUserId( src.getCreatedByUserId() );
-		setJustProtCreatedAt( src.getCreatedAt() );
-		setJustProtUpdatedByUserId( src.getUpdatedByUserId() );
-		setJustProtUpdatedAt( src.getUpdatedAt() );
-		setJustProtRequiredISO6392Code(src.getRequiredISO6392Code());
-		setJustProtOptionalISO6391Code(src.getOptionalISO6391Code());
-		setJustProtRequiredEnglishName(src.getRequiredEnglishName());
-	}
-
-	@Override
-	public void set( ICFSecProtISOLangH src ) {
-		setJustProtISOLang( src );
-	}
-
-	@Override
-	public void setISOLang( ICFSecProtISOLangH src ) {
-		setJustProtRequiredISOLangId(src.getRequiredISOLangId());
-		setJustProtRequiredISO6392Code(src.getRequiredISO6392Code());
-		setJustProtOptionalISO6391Code(src.getOptionalISO6391Code());
-		setJustProtRequiredEnglishName(src.getRequiredEnglishName());
 	}
 
 	@Override

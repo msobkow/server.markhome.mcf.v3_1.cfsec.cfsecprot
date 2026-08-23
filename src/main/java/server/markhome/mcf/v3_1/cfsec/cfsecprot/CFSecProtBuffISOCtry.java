@@ -99,13 +99,13 @@ public class CFSecProtBuffISOCtry
 
 	@Override
 	public List<ICFSecProtISOCtryCcy> getOptionalComponentsCcy() {
-		ICFSecSchema targetBackingCFSec = ICFSecSchema.getBackingCFSec();
+		ICFSecProtSchema targetBackingCFSec = ICFSecProtSchema.getBackingCFSec();
 		if (targetBackingCFSec == null) {
-			throw new CFLibNullArgumentException(getClass(), "getOptionalComponentsCcy", 0, "ICFSecSchema.getBackingCFSec()");
+			throw new CFLibNullArgumentException(getClass(), "getOptionalComponentsCcy", 0, "ICFSecProtSchema.getBackingCFSec()");
 		}
 		ICFSecProtISOCtryCcyTable targetTable = targetBackingCFSec.getTableISOCtryCcy();
 		if (targetTable == null) {
-			throw new CFLibNullArgumentException(getClass(), "getOptionalComponentsCcy", 0, "ICFSecSchema.getBackingCFSec().getTableISOCtryCcy()");
+			throw new CFLibNullArgumentException(getClass(), "getOptionalComponentsCcy", 0, "ICFSecProtSchema.getBackingCFSec().getTableISOCtryCcy()");
 		}
 		ICFSecProtISOCtryCcy[] targetArr = targetTable.readDerivedByCtryIdx(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredISOCtryId());
 		if( targetArr != null ) {
@@ -122,62 +122,14 @@ public class CFSecProtBuffISOCtry
 	}
 
 	@Override
-	public List<ICFSecProtISOCtryCcy> getOptionalComponentsCcy() {
-		ICFSecSchema targetBackingCFSec = ICFSecSchema.getBackingCFSec();
-		if (targetBackingCFSec == null) {
-			throw new CFLibNullArgumentException(getClass(), "getOptionalComponentsCcy", 0, "ICFSecSchema.getBackingCFSec()");
-		}
-		ICFSecProtISOCtryCcyTable targetTable = targetBackingCFSec.getTableISOCtryCcy();
-		if (targetTable == null) {
-			throw new CFLibNullArgumentException(getClass(), "getOptionalComponentsCcy", 0, "ICFSecSchema.getBackingCFSec().getTableISOCtryCcy()");
-		}
-		ICFSecProtISOCtryCcy[] targetArr = targetTable.readDerivedByCtryIdx(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredISOCtryId());
-		if( targetArr != null ) {
-			List<ICFSecProtISOCtryCcy> results = new ArrayList<>(targetArr.length);
-			for (int idx = 0; idx < targetArr.length; idx++) {
-				results.add(targetArr[idx]);
-			}
-			return( results );
-		}
-		else {
-			List<ICFSecProtISOCtryCcy> results = new ArrayList<>();
-			return( results );
-		}
-	}
-
-	@Override
-	public List<ICFSecProtISOCtryCcy> getOptionalComponentsCcy() {
-		ICFSecSchema targetBackingCFSec = ICFSecSchema.getBackingCFSec();
-		if (targetBackingCFSec == null) {
-			throw new CFLibNullArgumentException(getClass(), "getOptionalComponentsCcy", 0, "ICFSecSchema.getBackingCFSec()");
-		}
-		ICFSecProtISOCtryCcyTable targetTable = targetBackingCFSec.getTableISOCtryCcy();
-		if (targetTable == null) {
-			throw new CFLibNullArgumentException(getClass(), "getOptionalComponentsCcy", 0, "ICFSecSchema.getBackingCFSec().getTableISOCtryCcy()");
-		}
-		ICFSecPubISOCtryCcy[] targetArr = targetTable.readDerivedByCtryIdx(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredISOCtryId());
-		if( targetArr != null ) {
-			List<ICFSecPubISOCtryCcy> results = new ArrayList<>(targetArr.length);
-			for (int idx = 0; idx < targetArr.length; idx++) {
-				results.add(targetArr[idx]);
-			}
-			return( results );
-		}
-		else {
-			List<ICFSecPubISOCtryCcy> results = new ArrayList<>();
-			return( results );
-		}
-	}
-
-	@Override
 	public List<ICFSecProtISOCtryLang> getOptionalComponentsLang() {
-		ICFSecSchema targetBackingCFSec = ICFSecSchema.getBackingCFSec();
+		ICFSecProtSchema targetBackingCFSec = ICFSecProtSchema.getBackingCFSec();
 		if (targetBackingCFSec == null) {
-			throw new CFLibNullArgumentException(getClass(), "getOptionalComponentsLang", 0, "ICFSecSchema.getBackingCFSec()");
+			throw new CFLibNullArgumentException(getClass(), "getOptionalComponentsLang", 0, "ICFSecProtSchema.getBackingCFSec()");
 		}
 		ICFSecProtISOCtryLangTable targetTable = targetBackingCFSec.getTableISOCtryLang();
 		if (targetTable == null) {
-			throw new CFLibNullArgumentException(getClass(), "getOptionalComponentsLang", 0, "ICFSecSchema.getBackingCFSec().getTableISOCtryLang()");
+			throw new CFLibNullArgumentException(getClass(), "getOptionalComponentsLang", 0, "ICFSecProtSchema.getBackingCFSec().getTableISOCtryLang()");
 		}
 		ICFSecProtISOCtryLang[] targetArr = targetTable.readDerivedByCtryIdx(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredISOCtryId());
 		if( targetArr != null ) {
@@ -189,54 +141,6 @@ public class CFSecProtBuffISOCtry
 		}
 		else {
 			List<ICFSecProtISOCtryLang> results = new ArrayList<>();
-			return( results );
-		}
-	}
-
-	@Override
-	public List<ICFSecProtISOCtryLang> getOptionalComponentsLang() {
-		ICFSecSchema targetBackingCFSec = ICFSecSchema.getBackingCFSec();
-		if (targetBackingCFSec == null) {
-			throw new CFLibNullArgumentException(getClass(), "getOptionalComponentsLang", 0, "ICFSecSchema.getBackingCFSec()");
-		}
-		ICFSecProtISOCtryLangTable targetTable = targetBackingCFSec.getTableISOCtryLang();
-		if (targetTable == null) {
-			throw new CFLibNullArgumentException(getClass(), "getOptionalComponentsLang", 0, "ICFSecSchema.getBackingCFSec().getTableISOCtryLang()");
-		}
-		ICFSecProtISOCtryLang[] targetArr = targetTable.readDerivedByCtryIdx(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredISOCtryId());
-		if( targetArr != null ) {
-			List<ICFSecProtISOCtryLang> results = new ArrayList<>(targetArr.length);
-			for (int idx = 0; idx < targetArr.length; idx++) {
-				results.add(targetArr[idx]);
-			}
-			return( results );
-		}
-		else {
-			List<ICFSecProtISOCtryLang> results = new ArrayList<>();
-			return( results );
-		}
-	}
-
-	@Override
-	public List<ICFSecProtISOCtryLang> getOptionalComponentsLang() {
-		ICFSecSchema targetBackingCFSec = ICFSecSchema.getBackingCFSec();
-		if (targetBackingCFSec == null) {
-			throw new CFLibNullArgumentException(getClass(), "getOptionalComponentsLang", 0, "ICFSecSchema.getBackingCFSec()");
-		}
-		ICFSecProtISOCtryLangTable targetTable = targetBackingCFSec.getTableISOCtryLang();
-		if (targetTable == null) {
-			throw new CFLibNullArgumentException(getClass(), "getOptionalComponentsLang", 0, "ICFSecSchema.getBackingCFSec().getTableISOCtryLang()");
-		}
-		ICFSecPubISOCtryLang[] targetArr = targetTable.readDerivedByCtryIdx(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredISOCtryId());
-		if( targetArr != null ) {
-			List<ICFSecPubISOCtryLang> results = new ArrayList<>(targetArr.length);
-			for (int idx = 0; idx < targetArr.length; idx++) {
-				results.add(targetArr[idx]);
-			}
-			return( results );
-		}
-		else {
-			List<ICFSecPubISOCtryLang> results = new ArrayList<>();
 			return( results );
 		}
 	}
@@ -433,132 +337,6 @@ public class CFSecProtBuffISOCtry
 		}
 		else if( obj instanceof ICFSecProtISOCtryHPKey ) {
 			ICFSecProtISOCtryHPKey rhs = (ICFSecProtISOCtryHPKey)obj;
-			if( getRequiredISOCtryId() != rhs.getRequiredISOCtryId() ) {
-				return( false );
-			}
-			return( true );
-		}
-		else if( obj instanceof ICFSecProtISOCtryByISOCodeIdxKey rhs ) {
-			if( getRequiredISOCode() != null ) {
-				if( rhs.getRequiredISOCode() != null ) {
-					if( ! getRequiredISOCode().equals( rhs.getRequiredISOCode() ) ) {
-						return( false );
-					}
-				}
-				else {
-					return( false );
-				}
-			}
-			else {
-				if( rhs.getRequiredISOCode() != null ) {
-					return( false );
-				}
-			}
-			return( true );
-		}
-		else if( obj instanceof ICFSecProtISOCtryByNameIdxKey rhs ) {
-			if( getRequiredName() != null ) {
-				if( rhs.getRequiredName() != null ) {
-					if( ! getRequiredName().equals( rhs.getRequiredName() ) ) {
-						return( false );
-					}
-				}
-				else {
-					return( false );
-				}
-			}
-			else {
-				if( rhs.getRequiredName() != null ) {
-					return( false );
-				}
-			}
-			return( true );
-		}
-		else if( obj instanceof ICFSecProtISOCtry rhs ) {
-			if( ! getCreatedByUserId().equals( rhs.getCreatedByUserId() ) ) {
-				return( false );
-			}
-			if( ! getCreatedAt().equals( rhs.getCreatedAt() ) ) {
-				return( false );
-			}
-			if( ! getUpdatedByUserId().equals( rhs.getUpdatedByUserId() ) ) {
-				return( false );
-			}
-			if( ! getUpdatedAt().equals( rhs.getUpdatedAt() ) ) {
-				return( false );
-			}
-			if( getRequiredISOCtryId() != rhs.getRequiredISOCtryId() ) {
-				return( false );
-			}
-			if( getRequiredISOCode() != null ) {
-				if( rhs.getRequiredISOCode() != null ) {
-					if( ! getRequiredISOCode().equals( rhs.getRequiredISOCode() ) ) {
-						return( false );
-					}
-				}
-				else {
-					return( false );
-				}
-			}
-			else {
-				if( rhs.getRequiredISOCode() != null ) {
-					return( false );
-				}
-			}
-			if( getRequiredName() != null ) {
-				if( rhs.getRequiredName() != null ) {
-					if( ! getRequiredName().equals( rhs.getRequiredName() ) ) {
-						return( false );
-					}
-				}
-				else {
-					return( false );
-				}
-			}
-			else {
-				if( rhs.getRequiredName() != null ) {
-					return( false );
-				}
-			}
-			return( true );
-		}
-		else if( obj instanceof ICFSecProtISOCtryH rhs ) {
-			if( getRequiredISOCtryId() != rhs.getRequiredISOCtryId() ) {
-				return( false );
-			}
-			if( getRequiredISOCode() != null ) {
-				if( rhs.getRequiredISOCode() != null ) {
-					if( ! getRequiredISOCode().equals( rhs.getRequiredISOCode() ) ) {
-						return( false );
-					}
-				}
-				else {
-					return( false );
-				}
-			}
-			else {
-				if( rhs.getRequiredISOCode() != null ) {
-					return( false );
-				}
-			}
-			if( getRequiredName() != null ) {
-				if( rhs.getRequiredName() != null ) {
-					if( ! getRequiredName().equals( rhs.getRequiredName() ) ) {
-						return( false );
-					}
-				}
-				else {
-					return( false );
-				}
-			}
-			else {
-				if( rhs.getRequiredName() != null ) {
-					return( false );
-				}
-			}
-			return( true );
-		}
-		else if( obj instanceof ICFSecProtISOCtryHPKey rhs ) {
 			if( getRequiredISOCtryId() != rhs.getRequiredISOCtryId() ) {
 				return( false );
 			}
@@ -1050,35 +828,6 @@ public class CFSecProtBuffISOCtry
 				obj,
 				null );
 		}
-	}
-
-	@Override
-	public void set( ICFSecProtISOCtry src ) {
-		setJustProtISOCtry( src );
-	}
-
-	@Override
-	public void setISOCtry( ICFSecProtISOCtry src ) {
-		setJustProtRequiredISOCtryId(src.getRequiredISOCtryId());
-		setJustProtRequiredRevision( src.getRequiredRevision() );
-		setJustProtCreatedByUserId( src.getCreatedByUserId() );
-		setJustProtCreatedAt( src.getCreatedAt() );
-		setJustProtUpdatedByUserId( src.getUpdatedByUserId() );
-		setJustProtUpdatedAt( src.getUpdatedAt() );
-		setJustProtRequiredISOCode(src.getRequiredISOCode());
-		setJustProtRequiredName(src.getRequiredName());
-	}
-
-	@Override
-	public void set( ICFSecProtISOCtryH src ) {
-		setJustProtISOCtry( src );
-	}
-
-	@Override
-	public void setISOCtry( ICFSecProtISOCtryH src ) {
-		setJustProtRequiredISOCtryId(src.getRequiredISOCtryId());
-		setJustProtRequiredISOCode(src.getRequiredISOCode());
-		setJustProtRequiredName(src.getRequiredName());
 	}
 
 	@Override
