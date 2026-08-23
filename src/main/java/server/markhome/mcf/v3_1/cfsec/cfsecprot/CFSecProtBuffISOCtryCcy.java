@@ -113,7 +113,7 @@ public class CFSecProtBuffISOCtryCcy
 		}
 		getPKey().setRequiredISOCcyId(value);
 	}
-$implJustProtSchemaProtBuffTableProtRelationGetterSetter$$implJustProtSchemaProtBuffTableProtRelationGetterSetter$
+$implJustProtSchemaProtBuffTableProtRelationGetterSetterWithArgs$$implJustProtSchemaProtBuffTableProtRelationGetterSetterWithArgs$
 	@Override
 	public CFLibDbKeyHash256 getCreatedByUserId() {
 		return( createdByUserId );

@@ -117,11 +117,11 @@ public class CFSecProtBuffISOCcy
 			for (int idx = 0; idx < targetArr.length; idx++) {
 				results.add(targetArr[idx]);
 			}
-			return( results );
+			return(results);
 		}
 		else {
 			List<ICFSecProtISOCtryCcy> results = new ArrayList<>();
-			return( results );
+			return(results);
 		}
 	}
 

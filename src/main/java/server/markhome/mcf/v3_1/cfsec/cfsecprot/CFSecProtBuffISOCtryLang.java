@@ -113,7 +113,7 @@ public class CFSecProtBuffISOCtryLang
 		}
 		getPKey().setRequiredISOLangId(value);
 	}
-$implJustProtSchemaProtBuffTableProtRelationGetterSetter$$implJustProtSchemaProtBuffTableProtRelationGetterSetter$
+$implJustProtSchemaProtBuffTableProtRelationGetterSetterWithArgs$$implJustProtSchemaProtBuffTableProtRelationGetterSetterWithArgs$
 	@Override
 	public CFLibDbKeyHash256 getCreatedByUserId() {
 		return( createdByUserId );

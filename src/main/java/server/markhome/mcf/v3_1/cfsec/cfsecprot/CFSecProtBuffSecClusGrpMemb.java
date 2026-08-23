@@ -115,7 +115,7 @@ public class CFSecProtBuffSecClusGrpMemb
 		}
 		getPKey().setRequiredLoginId(value);
 	}
-$implJustProtSchemaProtBuffTableProtRelationGetterSetter$$implJustProtSchemaProtBuffTableProtRelationGetterSetter$
+$implJustProtSchemaProtBuffTableProtRelationGetterSetterWithArgs$$implJustProtSchemaProtBuffTableProtRelationGetterSetterWithArgs$
 	@Override
 	public CFLibDbKeyHash256 getCreatedByUserId() {
 		return( createdByUserId );
