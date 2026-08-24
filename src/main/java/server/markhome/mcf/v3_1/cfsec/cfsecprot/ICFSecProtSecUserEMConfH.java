@@ -70,17 +70,17 @@ public interface ICFSecProtSecUserEMConfH
 	public CFLibDbKeyHash256 getAuditSessionId();
 	public void setAuditSessionId(CFLibDbKeyHash256 auditSessionId);
 
-	public ICFLibKeyHash256 getRequiredSecUserId();
+	public $implIJavaAtomType first implIJavaAtomType each implCommaIJavaAtomType empty empty )$ getRequiredSecUserId();
 	public void setRequiredSecUserId( ICFLibKeyHash256 requiredSecUserId );
 
-	public String getRequiredConfirmEMailAddr();
-	public void setRequiredConfirmEMailAddr( String value );
-	public LocalDateTime getRequiredEMailSentStamp();
-	public void setRequiredEMailSentStamp( LocalDateTime value );
-	public ICFLibUuid6 getRequiredEMConfirmationUuid6();
-	public void setRequiredEMConfirmationUuid6( ICFLibUuid6 value );
-	public boolean getRequiredNewAccount();
-	public void setRequiredNewAccount( boolean value );
+	public $implIJavaAtomType$ getRequiredConfirmEMailAddr();
+	public void setRequiredConfirmEMailAddr( $implIJavaAtomType$ value );
+	public $implIJavaAtomType$ getRequiredEMailSentStamp();
+	public void setRequiredEMailSentStamp( $implIJavaAtomType$ value );
+	public $implIJavaAtomType$ getRequiredEMConfirmationUuid6();
+	public void setRequiredEMConfirmationUuid6( $implIJavaAtomType$ value );
+	public $implIJavaAtomType$ getRequiredNewAccount();
+	public void setRequiredNewAccount( $implIJavaAtomType$ value );
 	@Override
 	public boolean equals( Object obj );
 

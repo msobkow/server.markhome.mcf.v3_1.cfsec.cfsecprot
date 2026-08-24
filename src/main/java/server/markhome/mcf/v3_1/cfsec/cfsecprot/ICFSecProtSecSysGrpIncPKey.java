@@ -46,10 +46,10 @@ import server.markhome.mcf.v3_1.cflib.xml.CFLibXmlUtil;
 public interface ICFSecProtSecSysGrpIncPKey
 {
 
-	public ICFLibKeyHash256 getRequiredSecSysGrpId();
-	public void setRequiredSecSysGrpId( ICFLibKeyHash256 value );
-	public String getRequiredInclName();
-	public void setRequiredInclName( String value );
+	public $implIJavaAtomType$ getRequiredSecSysGrpId();
+	public void setRequiredSecSysGrpId( $implIJavaAtomType$ value );
+	public $implIJavaAtomType$ getRequiredInclName();
+	public void setRequiredInclName( $implIJavaAtomType$ value );
 	@Override
 	public boolean equals( Object obj );
 

@@ -55,8 +55,8 @@ import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 public class CFSecProtISOCtryLangPKey
 	implements ICFSecProtISOCtryLangPKey, Comparable<Object>, Serializable
 {
-	protected short requiredISOCtryId;
-	protected short requiredISOLangId;
+	protected $implIJavaAtomType first implIJavaAtomType each implCommaIJavaAtomType empty empty )$ requiredISOCtryId;
+	protected $implIJavaAtomType first implIJavaAtomType each implCommaIJavaAtomType empty empty )$ requiredISOLangId;
 
 	public CFSecProtISOCtryLangPKey() {
 		requiredISOCtryId = ICFSecProtISOCtryLang.ISOCTRYID_INIT_VALUE;
@@ -64,12 +64,12 @@ public class CFSecProtISOCtryLangPKey
 	}
 
 	@Override
-	public short getRequiredISOCtryId() {
+	public $reference DataCol switch IsNullable yes implIJavaOptAtomType default implIJavaReqAtomType$ getRequiredISOCtryId() {
 		return(requiredISOCtryId);
 	}
 
 	@Override
-	public void setRequiredISOCtryId( short value ) {
+	public void setRequiredISOCtryId( $reference DataCol switch IsNullable yes implIJavaOptAtomType default implIJavaReqAtomType$ value ) {
 		if( value < ICFSecPubISOCtryLang.ISOCTRYID_MIN_VALUE ) {
 			throw new CFLibArgumentUnderflowException( getClass(),
 				"setRequiredISOCtryId",
@@ -82,12 +82,12 @@ public class CFSecProtISOCtryLangPKey
 	}
 
 	@Override
-	public short getRequiredISOLangId() {
+	public $reference DataCol switch IsNullable yes implIJavaOptAtomType default implIJavaReqAtomType$ getRequiredISOLangId() {
 		return(requiredISOLangId);
 	}
 
 	@Override
-	public void setRequiredISOLangId( short value ) {
+	public void setRequiredISOLangId( $reference DataCol switch IsNullable yes implIJavaOptAtomType default implIJavaReqAtomType$ value ) {
 		if( value < ICFSecPubISOCtryLang.ISOLANGID_MIN_VALUE ) {
 			throw new CFLibArgumentUnderflowException( getClass(),
 				"setRequiredISOLangId",

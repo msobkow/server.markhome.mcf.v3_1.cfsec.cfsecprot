@@ -79,7 +79,7 @@ public interface ICFSecProtISOCtryCcy
 	public void setPKey(ICFSecProtISOCtryCcyPKey pkey );
 	public ICFSecProtISOCtry getRequiredContainerCtry();
 
-	public void setRequiredContainerCtry(short argISOCtryId);
+	public void setRequiredContainerCtry($reference DataCol switch IsNullable yes implIJavaOptAtomType default implIJavaReqAtomType$ argISOCtryId);
 
 
 	public void setRequiredContainerCtry(ICFSecProtISOCtry argObj);
@@ -88,7 +88,7 @@ public interface ICFSecProtISOCtryCcy
 
 	public ICFSecProtISOCcy getRequiredParentCcy();
 
-	public void setRequiredParentCcy(short argISOCcyId);
+	public void setRequiredParentCcy($reference DataCol switch IsNullable yes implIJavaOptAtomType default implIJavaReqAtomType$ argISOCcyId);
 
 
 	public void setRequiredParentCcy(ICFSecProtISOCcy argObj);

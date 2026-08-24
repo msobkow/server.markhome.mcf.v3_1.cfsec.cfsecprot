@@ -60,14 +60,14 @@ public interface ICFSecProtSecSession
 
 	public CFLibDbKeyHash256 getPKey();
 	public void setPKey(CFLibDbKeyHash256 requiredSecSessionId);
-	public ICFLibKeyHash256 getRequiredSecSessionId();
-	public void setRequiredSecSessionId( ICFLibKeyHash256 value );
+	public $implIJavaAtomType$ getRequiredSecSessionId();
+	public void setRequiredSecSessionId( $implIJavaAtomType$ value );
 	public int getRequiredRevision();
 	public void setRequiredRevision( int value );
 
 	public ICFSecProtSecUser getRequiredContainerSecUser();
 
-	public void setRequiredContainerSecUser(ICFLibKeyHash256 argSecUserId);
+	public void setRequiredContainerSecUser($implIJavaAtomType$ argSecUserId);
 
 
 	public void setRequiredContainerSecUser(ICFSecProtSecUser argObj);
@@ -76,21 +76,21 @@ public interface ICFSecProtSecSession
 
 	public ICFSecProtSecUser getRequiredParentSecProxy();
 
-	public void setRequiredParentSecProxy(ICFLibKeyHash256 argSecProxyId);
+	public void setRequiredParentSecProxy($implIJavaAtomType$ argSecProxyId);
 
 
 	public void setRequiredParentSecProxy(ICFSecProtSecUser argObj);
 
 	public void setRequiredParentSecProxy(ICFSecPubSecUser argObj);
 
-	public ICFLibKeyHash256 getRequiredSecUserId();
-	public void setRequiredSecUserId( ICFLibKeyHash256 value );
-	public LocalDateTime getRequiredStart();
-	public void setRequiredStart( LocalDateTime value );
-	public LocalDateTime getOptionalFinish();
-	public void setOptionalFinish( LocalDateTime value );
-	public ICFLibKeyHash256 getOptionalSecProxyId();
-	public void setOptionalSecProxyId( ICFLibKeyHash256 value );
+	public $implIJavaAtomType$ getRequiredSecUserId();
+	public void setRequiredSecUserId( $implIJavaAtomType$ value );
+	public $implIJavaAtomType$ getRequiredStart();
+	public void setRequiredStart( $implIJavaAtomType$ value );
+	public $implIJavaAtomType$ getOptionalFinish();
+	public void setOptionalFinish( $implIJavaAtomType$ value );
+	public $implIJavaAtomType$ getOptionalSecProxyId();
+	public void setOptionalSecProxyId( $implIJavaAtomType$ value );
 	public boolean equals( Object obj );
 
 	public int hashCode();

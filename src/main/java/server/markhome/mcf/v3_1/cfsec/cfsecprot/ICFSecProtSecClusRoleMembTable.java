@@ -356,9 +356,9 @@ public interface ICFSecProtSecClusRoleMembTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFSecProtSecClusRoleMemb[] protpageRecByClusRoleIdx( ICFSecPubAuthorization Authorization,
-		ICFLibKeyHash256 SecClusRoleId,
-		ICFLibKeyHash256 priorSecClusRoleId,
-		String priorLoginId );
+		$implIJavaAtomType$ SecClusRoleId,
+		$implIJavaOptAtomType$ priorSecClusRoleId,
+		$implIJavaOptAtomType$ priorLoginId );
 
 	/**
 	 *	Read a page array of the specific SecClusRoleMemb record instances identified by the duplicate key LoginIdx.
@@ -372,7 +372,7 @@ public interface ICFSecProtSecClusRoleMembTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFSecProtSecClusRoleMemb[] protpageRecByLoginIdx( ICFSecPubAuthorization Authorization,
-		String LoginId,
-		ICFLibKeyHash256 priorSecClusRoleId,
-		String priorLoginId );
+		$implIJavaAtomType$ LoginId,
+		$implIJavaOptAtomType$ priorSecClusRoleId,
+		$implIJavaOptAtomType$ priorLoginId );
 }

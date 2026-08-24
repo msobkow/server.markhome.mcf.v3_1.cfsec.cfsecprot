@@ -46,8 +46,8 @@ import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
  */
 public interface ICFSecProtISOCtryCcyByCtryIdxKey
 {
-	public short getRequiredISOCtryId();
-	public void setRequiredISOCtryId( short value );
+	public $reference DataCol switch IsNullable yes implIJavaOptAtomType default implIJavaReqAtomType$ getRequiredISOCtryId();
+	public void setRequiredISOCtryId( $reference DataCol switch IsNullable yes implIJavaOptAtomType default implIJavaReqAtomType$ value );
 	@Override
 	public boolean equals( Object obj );
 

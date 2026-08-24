@@ -70,13 +70,13 @@ public interface ICFSecProtTenantH
 	public CFLibDbKeyHash256 getAuditSessionId();
 	public void setAuditSessionId(CFLibDbKeyHash256 auditSessionId);
 
-	public ICFLibKeyHash256 getRequiredId();
+	public $implIJavaAtomType first implIJavaAtomType each implCommaIJavaAtomType empty empty )$ getRequiredId();
 	public void setRequiredId( ICFLibKeyHash256 requiredId );
 
-	public ICFLibKeyHash256 getRequiredClusterId();
-	public void setRequiredClusterId( ICFLibKeyHash256 value );
-	public String getRequiredTenantName();
-	public void setRequiredTenantName( String value );
+	public $implIJavaAtomType$ getRequiredClusterId();
+	public void setRequiredClusterId( $implIJavaAtomType$ value );
+	public $implIJavaAtomType$ getRequiredTenantName();
+	public void setRequiredTenantName( $implIJavaAtomType$ value );
 	@Override
 	public boolean equals( Object obj );
 

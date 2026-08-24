@@ -79,12 +79,12 @@ public class CFSecProtBuffISOCtryCcy
 	}
 
 	@Override
-	public short getRequiredISOCtryId() {
+	public $reference DataCol switch IsNullable yes implIJavaOptAtomType default implIJavaReqAtomType$ getRequiredISOCtryId() {
 		return(getPKey().getRequiredISOCtryId());
 	}
 
 	@Override
-	public void setRequiredISOCtryId( short value ) {
+	public void setRequiredISOCtryId( $reference DataCol switch IsNullable yes implIJavaOptAtomType default implIJavaReqAtomType$ value ) {
 		if( value < ICFSecPubISOCtryCcy.ISOCTRYID_MIN_VALUE ) {
 			throw new CFLibArgumentUnderflowException( getClass(),
 				"setRequiredISOCtryId",
@@ -97,12 +97,12 @@ public class CFSecProtBuffISOCtryCcy
 	}
 
 	@Override
-	public short getRequiredISOCcyId() {
+	public $reference DataCol switch IsNullable yes implIJavaOptAtomType default implIJavaReqAtomType$ getRequiredISOCcyId() {
 		return(getPKey().getRequiredISOCcyId());
 	}
 
 	@Override
-	public void setRequiredISOCcyId( short value ) {
+	public void setRequiredISOCcyId( $reference DataCol switch IsNullable yes implIJavaOptAtomType default implIJavaReqAtomType$ value ) {
 		if( value < ICFSecPubISOCtryCcy.ISOCCYID_MIN_VALUE ) {
 			throw new CFLibArgumentUnderflowException( getClass(),
 				"setRequiredISOCcyId",

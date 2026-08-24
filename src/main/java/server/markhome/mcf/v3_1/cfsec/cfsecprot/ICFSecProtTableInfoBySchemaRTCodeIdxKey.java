@@ -46,8 +46,8 @@ import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
  */
 public interface ICFSecProtTableInfoBySchemaRTCodeIdxKey
 {
-	public int getRequiredRuntimeClassCode();
-	public void setRequiredRuntimeClassCode( int value );
+	public $implIJavaAtomType$ getRequiredRuntimeClassCode();
+	public void setRequiredRuntimeClassCode( $implIJavaAtomType$ value );
 	@Override
 	public boolean equals( Object obj );
 

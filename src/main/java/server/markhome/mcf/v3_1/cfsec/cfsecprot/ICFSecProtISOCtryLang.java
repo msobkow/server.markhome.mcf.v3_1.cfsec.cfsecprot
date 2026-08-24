@@ -79,7 +79,7 @@ public interface ICFSecProtISOCtryLang
 	public void setPKey(ICFSecProtISOCtryLangPKey pkey );
 	public ICFSecProtISOCtry getRequiredContainerCtry();
 
-	public void setRequiredContainerCtry(short argISOCtryId);
+	public void setRequiredContainerCtry($reference DataCol switch IsNullable yes implIJavaOptAtomType default implIJavaReqAtomType$ argISOCtryId);
 
 
 	public void setRequiredContainerCtry(ICFSecProtISOCtry argObj);
@@ -88,7 +88,7 @@ public interface ICFSecProtISOCtryLang
 
 	public ICFSecProtISOLang getRequiredParentLang();
 
-	public void setRequiredParentLang(short argISOLangId);
+	public void setRequiredParentLang($reference DataCol switch IsNullable yes implIJavaOptAtomType default implIJavaReqAtomType$ argISOLangId);
 
 
 	public void setRequiredParentLang(ICFSecProtISOLang argObj);

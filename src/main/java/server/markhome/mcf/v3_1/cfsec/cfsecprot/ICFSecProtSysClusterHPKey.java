@@ -60,8 +60,8 @@ public interface ICFSecProtSysClusterHPKey
 	public CFLibDbKeyHash256 getAuditSessionId();
 	public void setAuditSessionId( CFLibDbKeyHash256 value );
 
-	public int getRequiredSingletonId();
-	public void setRequiredSingletonId( int value );
+	public $implIJavaAtomType$ getRequiredSingletonId();
+	public void setRequiredSingletonId( $implIJavaAtomType$ value );
 	@Override
 	public boolean equals( Object obj );
 

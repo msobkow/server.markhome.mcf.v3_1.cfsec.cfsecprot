@@ -80,29 +80,29 @@ public interface ICFSecProtSecClusGrp
 	public void setPKey(CFLibDbKeyHash256 requiredSecClusGrpId);
 	public List<ICFSecProtSecClusGrpMemb> getOptionalChildrenMembByGrp();
 
-	public ICFLibKeyHash256 getRequiredSecClusGrpId();
-	public void setRequiredSecClusGrpId( ICFLibKeyHash256 value );
+	public $reference DataCol switch IsNullable yes implIJavaOptAtomType default implIJavaReqAtomType$ getRequiredSecClusGrpId();
+	public void setRequiredSecClusGrpId( $reference DataCol switch IsNullable yes implIJavaOptAtomType default implIJavaReqAtomType$ value );
 	public int getRequiredRevision();
 	public void setRequiredRevision( int value );
 
 	public ICFSecProtCluster getRequiredOwnerCluster();
 
-	public void setRequiredOwnerCluster(ICFLibKeyHash256 argClusterId);
+	public void setRequiredOwnerCluster($reference DataCol switch IsNullable yes implIJavaOptAtomType default implIJavaReqAtomType$ argClusterId);
 
 
 	public void setRequiredOwnerCluster(ICFSecProtCluster argObj);
 
 	public ICFSecProtSecSysGrp getRequiredContainerSysGrp();
 
-	public void setRequiredContainerSysGrp(String argName);
+	public void setRequiredContainerSysGrp($reference DataCol switch IsNullable yes implIJavaOptAtomType default implIJavaReqAtomType$ argName);
 
 
 	public void setRequiredContainerSysGrp(ICFSecProtSecSysGrp argObj);
 
-	public ICFLibKeyHash256 getRequiredClusterId();
-	public void setRequiredClusterId( ICFLibKeyHash256 value );
-	public String getRequiredName();
-	public void setRequiredName( String value );
+	public $reference DataCol switch IsNullable yes implIJavaOptAtomType default implIJavaReqAtomType$ getRequiredClusterId();
+	public void setRequiredClusterId( $reference DataCol switch IsNullable yes implIJavaOptAtomType default implIJavaReqAtomType$ value );
+	public $reference DataCol switch IsNullable yes implIJavaOptAtomType default implIJavaReqAtomType$ getRequiredName();
+	public void setRequiredName( $reference DataCol switch IsNullable yes implIJavaOptAtomType default implIJavaReqAtomType$ value );
 	public boolean equals( Object obj );
 
 	public int hashCode();

@@ -55,8 +55,8 @@ import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 public class CFSecProtISOCtryCcyPKey
 	implements ICFSecProtISOCtryCcyPKey, Comparable<Object>, Serializable
 {
-	protected short requiredISOCtryId;
-	protected short requiredISOCcyId;
+	protected $implIJavaAtomType first implIJavaAtomType each implCommaIJavaAtomType empty empty )$ requiredISOCtryId;
+	protected $implIJavaAtomType first implIJavaAtomType each implCommaIJavaAtomType empty empty )$ requiredISOCcyId;
 
 	public CFSecProtISOCtryCcyPKey() {
 		requiredISOCtryId = ICFSecProtISOCtryCcy.ISOCTRYID_INIT_VALUE;
@@ -64,12 +64,12 @@ public class CFSecProtISOCtryCcyPKey
 	}
 
 	@Override
-	public short getRequiredISOCtryId() {
+	public $reference DataCol switch IsNullable yes implIJavaOptAtomType default implIJavaReqAtomType$ getRequiredISOCtryId() {
 		return(requiredISOCtryId);
 	}
 
 	@Override
-	public void setRequiredISOCtryId( short value ) {
+	public void setRequiredISOCtryId( $reference DataCol switch IsNullable yes implIJavaOptAtomType default implIJavaReqAtomType$ value ) {
 		if( value < ICFSecPubISOCtryCcy.ISOCTRYID_MIN_VALUE ) {
 			throw new CFLibArgumentUnderflowException( getClass(),
 				"setRequiredISOCtryId",
@@ -82,12 +82,12 @@ public class CFSecProtISOCtryCcyPKey
 	}
 
 	@Override
-	public short getRequiredISOCcyId() {
+	public $reference DataCol switch IsNullable yes implIJavaOptAtomType default implIJavaReqAtomType$ getRequiredISOCcyId() {
 		return(requiredISOCcyId);
 	}
 
 	@Override
-	public void setRequiredISOCcyId( short value ) {
+	public void setRequiredISOCcyId( $reference DataCol switch IsNullable yes implIJavaOptAtomType default implIJavaReqAtomType$ value ) {
 		if( value < ICFSecPubISOCtryCcy.ISOCCYID_MIN_VALUE ) {
 			throw new CFLibArgumentUnderflowException( getClass(),
 				"setRequiredISOCcyId",

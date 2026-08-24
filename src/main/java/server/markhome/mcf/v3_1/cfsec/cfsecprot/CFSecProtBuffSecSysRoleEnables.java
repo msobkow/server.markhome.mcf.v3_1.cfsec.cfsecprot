@@ -79,11 +79,11 @@ public class CFSecProtBuffSecSysRoleEnables
 	}
 
 	@Override
-	public ICFLibKeyHash256 getRequiredSecSysRoleId() {
+	public $implIJavaAtomType$ getRequiredSecSysRoleId() {
 		return(getPKey().getRequiredSecSysRoleId());
 	}
 
-	public void setRequiredSecSysRoleId( ICFLibKeyHash256 value ) {
+	public void setRequiredSecSysRoleId( $implIJavaAtomType$ value ) {
 		if( value == null || value.isNull() ) {
 			throw new CFLibNullArgumentException( getClass(),
 				"setRequiredSecSysRoleId",
@@ -94,11 +94,11 @@ public class CFSecProtBuffSecSysRoleEnables
 	}
 
 	@Override
-	public String getRequiredEnableName() {
+	public $implIJavaAtomType$ getRequiredEnableName() {
 		return(getPKey().getRequiredEnableName());
 	}
 
-	public void setRequiredEnableName( String value ) {
+	public void setRequiredEnableName( $implIJavaAtomType$ value ) {
 		if( value == null ) {
 			throw new CFLibNullArgumentException( getClass(),
 				"setRequiredEnableName",

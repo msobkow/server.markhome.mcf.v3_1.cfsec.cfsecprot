@@ -80,24 +80,24 @@ public interface ICFSecProtSecUserEMConf
 	public void setPKey(CFLibDbKeyHash256 requiredSecUserId);
 	public ICFSecProtSecUser getRequiredContainerUser();
 
-	public void setRequiredContainerUser(ICFLibKeyHash256 argSecUserId);
+	public void setRequiredContainerUser($implIJavaAtomType$ argSecUserId);
 
 
 	public void setRequiredContainerUser(ICFSecProtSecUser argObj);
 
-	public ICFLibKeyHash256 getRequiredSecUserId();
-	public void setRequiredSecUserId( ICFLibKeyHash256 value );
+	public $implIJavaAtomType$ getRequiredSecUserId();
+	public void setRequiredSecUserId( $implIJavaAtomType$ value );
 	public int getRequiredRevision();
 	public void setRequiredRevision( int value );
 
-	public String getRequiredConfirmEMailAddr();
-	public void setRequiredConfirmEMailAddr( String value );
-	public LocalDateTime getRequiredEMailSentStamp();
-	public void setRequiredEMailSentStamp( LocalDateTime value );
-	public ICFLibUuid6 getRequiredEMConfirmationUuid6();
-	public void setRequiredEMConfirmationUuid6( ICFLibUuid6 value );
-	public boolean getRequiredNewAccount();
-	public void setRequiredNewAccount( boolean value );
+	public $implIJavaAtomType$ getRequiredConfirmEMailAddr();
+	public void setRequiredConfirmEMailAddr( $implIJavaAtomType$ value );
+	public $implIJavaAtomType$ getRequiredEMailSentStamp();
+	public void setRequiredEMailSentStamp( $implIJavaAtomType$ value );
+	public $implIJavaAtomType$ getRequiredEMConfirmationUuid6();
+	public void setRequiredEMConfirmationUuid6( $implIJavaAtomType$ value );
+	public $implIJavaAtomType$ getRequiredNewAccount();
+	public void setRequiredNewAccount( $implIJavaAtomType$ value );
 	public boolean equals( Object obj );
 
 	public int hashCode();

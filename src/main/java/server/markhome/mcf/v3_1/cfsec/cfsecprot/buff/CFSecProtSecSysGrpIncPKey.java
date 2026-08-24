@@ -55,8 +55,8 @@ import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 public class CFSecProtSecSysGrpIncPKey
 	implements ICFSecProtSecSysGrpIncPKey, Comparable<Object>, Serializable
 {
-	protected ICFLibKeyHash256 requiredSecSysGrpId;
-	protected String requiredInclName;
+	protected $implIJavaAtomType first implIJavaAtomType each implCommaIJavaAtomType empty empty )$ requiredSecSysGrpId;
+	protected $implIJavaAtomType first implIJavaAtomType each implCommaIJavaAtomType empty empty )$ requiredInclName;
 
 	public CFSecProtSecSysGrpIncPKey() {
 		requiredSecSysGrpId = CFLibDbKeyHash256.fromHex( ICFSecProtSecSysGrpInc.SECSYSGRPID_INIT_VALUE.toString() );
@@ -64,11 +64,11 @@ public class CFSecProtSecSysGrpIncPKey
 	}
 
 	@Override
-	public ICFLibKeyHash256 getRequiredSecSysGrpId() {
+	public $implIJavaAtomType$ getRequiredSecSysGrpId() {
 		return(requiredSecSysGrpId);
 	}
 
-	public void setRequiredSecSysGrpId( ICFLibKeyHash256 value ) {
+	public void setRequiredSecSysGrpId( $implIJavaAtomType$ value ) {
 		if( value == null || value.isNull() ) {
 			throw new CFLibNullArgumentException( getClass(),
 				"setRequiredSecSysGrpId",
@@ -79,11 +79,11 @@ public class CFSecProtSecSysGrpIncPKey
 	}
 
 	@Override
-	public String getRequiredInclName() {
+	public $implIJavaAtomType$ getRequiredInclName() {
 		return(requiredInclName);
 	}
 
-	public void setRequiredInclName( String value ) {
+	public void setRequiredInclName( $implIJavaAtomType$ value ) {
 		if( value == null ) {
 			throw new CFLibNullArgumentException( getClass(),
 				"setRequiredInclName",

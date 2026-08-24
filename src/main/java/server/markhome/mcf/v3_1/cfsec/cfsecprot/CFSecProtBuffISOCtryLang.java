@@ -79,12 +79,12 @@ public class CFSecProtBuffISOCtryLang
 	}
 
 	@Override
-	public short getRequiredISOCtryId() {
+	public $reference DataCol switch IsNullable yes implIJavaOptAtomType default implIJavaReqAtomType$ getRequiredISOCtryId() {
 		return(getPKey().getRequiredISOCtryId());
 	}
 
 	@Override
-	public void setRequiredISOCtryId( short value ) {
+	public void setRequiredISOCtryId( $reference DataCol switch IsNullable yes implIJavaOptAtomType default implIJavaReqAtomType$ value ) {
 		if( value < ICFSecPubISOCtryLang.ISOCTRYID_MIN_VALUE ) {
 			throw new CFLibArgumentUnderflowException( getClass(),
 				"setRequiredISOCtryId",
@@ -97,12 +97,12 @@ public class CFSecProtBuffISOCtryLang
 	}
 
 	@Override
-	public short getRequiredISOLangId() {
+	public $reference DataCol switch IsNullable yes implIJavaOptAtomType default implIJavaReqAtomType$ getRequiredISOLangId() {
 		return(getPKey().getRequiredISOLangId());
 	}
 
 	@Override
-	public void setRequiredISOLangId( short value ) {
+	public void setRequiredISOLangId( $reference DataCol switch IsNullable yes implIJavaOptAtomType default implIJavaReqAtomType$ value ) {
 		if( value < ICFSecPubISOCtryLang.ISOLANGID_MIN_VALUE ) {
 			throw new CFLibArgumentUnderflowException( getClass(),
 				"setRequiredISOLangId",

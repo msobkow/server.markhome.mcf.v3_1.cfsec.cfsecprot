@@ -80,13 +80,13 @@ public interface ICFSecProtSecSysRole
 
 	public List<ICFSecProtSecSysRoleMemb> getOptionalChildrenMembByRole();
 
-	public ICFLibKeyHash256 getRequiredSecSysRoleId();
-	public void setRequiredSecSysRoleId( ICFLibKeyHash256 value );
+	public $implIJavaAtomType$ getRequiredSecSysRoleId();
+	public void setRequiredSecSysRoleId( $implIJavaAtomType$ value );
 	public int getRequiredRevision();
 	public void setRequiredRevision( int value );
 
-	public String getRequiredName();
-	public void setRequiredName( String value );
+	public $implIJavaAtomType$ getRequiredName();
+	public void setRequiredName( $implIJavaAtomType$ value );
 	public boolean equals( Object obj );
 
 	public int hashCode();

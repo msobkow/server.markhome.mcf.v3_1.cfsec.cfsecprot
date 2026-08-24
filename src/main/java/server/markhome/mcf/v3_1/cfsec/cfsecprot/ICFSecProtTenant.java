@@ -82,24 +82,24 @@ public interface ICFSecProtTenant
 
 	public List<ICFSecProtSecTentRole> getOptionalComponentsSecRole();
 
-	public ICFLibKeyHash256 getRequiredId();
-	public void setRequiredId( ICFLibKeyHash256 value );
+	public $implIJavaAtomType$ getRequiredId();
+	public void setRequiredId( $implIJavaAtomType$ value );
 	public int getRequiredRevision();
 	public void setRequiredRevision( int value );
 
 	public ICFSecProtCluster getRequiredContainerCluster();
 
-	public void setRequiredContainerCluster(ICFLibKeyHash256 argClusterId);
+	public void setRequiredContainerCluster($implIJavaAtomType$ argClusterId);
 
 
 	public void setRequiredContainerCluster(ICFSecProtCluster argObj);
 
 	public void setRequiredContainerCluster(ICFSecPubCluster argObj);
 
-	public ICFLibKeyHash256 getRequiredClusterId();
-	public void setRequiredClusterId( ICFLibKeyHash256 value );
-	public String getRequiredTenantName();
-	public void setRequiredTenantName( String value );
+	public $implIJavaAtomType$ getRequiredClusterId();
+	public void setRequiredClusterId( $implIJavaAtomType$ value );
+	public $implIJavaAtomType$ getRequiredTenantName();
+	public void setRequiredTenantName( $implIJavaAtomType$ value );
 	public boolean equals( Object obj );
 
 	public int hashCode();

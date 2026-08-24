@@ -80,29 +80,29 @@ public interface ICFSecProtSecTentRole
 	public void setPKey(CFLibDbKeyHash256 requiredSecTentRoleId);
 	public List<ICFSecProtSecTentRoleMemb> getOptionalChildrenMembByRole();
 
-	public ICFLibKeyHash256 getRequiredSecTentRoleId();
-	public void setRequiredSecTentRoleId( ICFLibKeyHash256 value );
+	public $implIJavaAtomType$ getRequiredSecTentRoleId();
+	public void setRequiredSecTentRoleId( $implIJavaAtomType$ value );
 	public int getRequiredRevision();
 	public void setRequiredRevision( int value );
 
 	public ICFSecProtTenant getRequiredOwnerTenant();
 
-	public void setRequiredOwnerTenant(ICFLibKeyHash256 argTenantId);
+	public void setRequiredOwnerTenant($implIJavaAtomType$ argTenantId);
 
 
 	public void setRequiredOwnerTenant(ICFSecProtTenant argObj);
 
 	public ICFSecProtSecSysGrp getRequiredContainerSysRole();
 
-	public void setRequiredContainerSysRole(String argName);
+	public void setRequiredContainerSysRole($implIJavaAtomType$ argName);
 
 
 	public void setRequiredContainerSysRole(ICFSecProtSecSysGrp argObj);
 
-	public ICFLibKeyHash256 getRequiredTenantId();
-	public void setRequiredTenantId( ICFLibKeyHash256 value );
-	public String getRequiredName();
-	public void setRequiredName( String value );
+	public $implIJavaAtomType$ getRequiredTenantId();
+	public void setRequiredTenantId( $implIJavaAtomType$ value );
+	public $implIJavaAtomType$ getRequiredName();
+	public void setRequiredName( $implIJavaAtomType$ value );
 	public boolean equals( Object obj );
 
 	public int hashCode();

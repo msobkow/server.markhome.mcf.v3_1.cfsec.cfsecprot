@@ -356,9 +356,9 @@ public interface ICFSecProtSecSysRoleEnablesTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFSecProtSecSysRoleEnables[] protpageRecBySysRoleIdx( ICFSecPubAuthorization Authorization,
-		ICFLibKeyHash256 SecSysRoleId,
-		ICFLibKeyHash256 priorSecSysRoleId,
-		String priorEnableName );
+		$implIJavaAtomType$ SecSysRoleId,
+		$implIJavaOptAtomType$ priorSecSysRoleId,
+		$implIJavaOptAtomType$ priorEnableName );
 
 	/**
 	 *	Read a page array of the specific SecSysRoleEnables record instances identified by the duplicate key NameIdx.
@@ -372,7 +372,7 @@ public interface ICFSecProtSecSysRoleEnablesTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFSecProtSecSysRoleEnables[] protpageRecByNameIdx( ICFSecPubAuthorization Authorization,
-		String EnableName,
-		ICFLibKeyHash256 priorSecSysRoleId,
-		String priorEnableName );
+		$implIJavaAtomType$ EnableName,
+		$implIJavaOptAtomType$ priorSecSysRoleId,
+		$implIJavaOptAtomType$ priorEnableName );
 }

@@ -70,13 +70,13 @@ public interface ICFSecProtSecClusRoleH
 	public CFLibDbKeyHash256 getAuditSessionId();
 	public void setAuditSessionId(CFLibDbKeyHash256 auditSessionId);
 
-	public ICFLibKeyHash256 getRequiredSecClusRoleId();
+	public $implIJavaAtomType first implIJavaAtomType each implCommaIJavaAtomType empty empty )$ getRequiredSecClusRoleId();
 	public void setRequiredSecClusRoleId( ICFLibKeyHash256 requiredSecClusRoleId );
 
-	public ICFLibKeyHash256 getRequiredClusterId();
-	public void setRequiredClusterId( ICFLibKeyHash256 value );
-	public String getRequiredName();
-	public void setRequiredName( String value );
+	public $implIJavaAtomType$ getRequiredClusterId();
+	public void setRequiredClusterId( $implIJavaAtomType$ value );
+	public $implIJavaAtomType$ getRequiredName();
+	public void setRequiredName( $implIJavaAtomType$ value );
 	@Override
 	public boolean equals( Object obj );
 

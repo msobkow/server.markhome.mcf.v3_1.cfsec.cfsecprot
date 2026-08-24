@@ -55,8 +55,8 @@ import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
 public class CFSecProtSecClusRoleMembPKey
 	implements ICFSecProtSecClusRoleMembPKey, Comparable<Object>, Serializable
 {
-	protected ICFLibKeyHash256 requiredSecClusRoleId;
-	protected String requiredLoginId;
+	protected $implIJavaAtomType first implIJavaAtomType each implCommaIJavaAtomType empty empty )$ requiredSecClusRoleId;
+	protected $implIJavaAtomType first implIJavaAtomType each implCommaIJavaAtomType empty empty )$ requiredLoginId;
 
 	public CFSecProtSecClusRoleMembPKey() {
 		requiredSecClusRoleId = CFLibDbKeyHash256.fromHex( ICFSecProtSecClusRoleMemb.SECCLUSROLEID_INIT_VALUE.toString() );
@@ -64,11 +64,11 @@ public class CFSecProtSecClusRoleMembPKey
 	}
 
 	@Override
-	public ICFLibKeyHash256 getRequiredSecClusRoleId() {
+	public $implIJavaAtomType$ getRequiredSecClusRoleId() {
 		return(requiredSecClusRoleId);
 	}
 
-	public void setRequiredSecClusRoleId( ICFLibKeyHash256 value ) {
+	public void setRequiredSecClusRoleId( $implIJavaAtomType$ value ) {
 		if( value == null || value.isNull() ) {
 			throw new CFLibNullArgumentException( getClass(),
 				"setRequiredSecClusRoleId",
@@ -79,11 +79,11 @@ public class CFSecProtSecClusRoleMembPKey
 	}
 
 	@Override
-	public String getRequiredLoginId() {
+	public $implIJavaAtomType$ getRequiredLoginId() {
 		return(requiredLoginId);
 	}
 
-	public void setRequiredLoginId( String value ) {
+	public void setRequiredLoginId( $implIJavaAtomType$ value ) {
 		if( value == null ) {
 			throw new CFLibNullArgumentException( getClass(),
 				"setRequiredLoginId",

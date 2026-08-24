@@ -356,9 +356,9 @@ public interface ICFSecProtSecClusGrpMembTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFSecProtSecClusGrpMemb[] protpageRecByClusGrpIdx( ICFSecPubAuthorization Authorization,
-		ICFLibKeyHash256 SecClusGrpId,
-		ICFLibKeyHash256 priorSecClusGrpId,
-		String priorLoginId );
+		$implIJavaAtomType$ SecClusGrpId,
+		$implIJavaOptAtomType$ priorSecClusGrpId,
+		$implIJavaOptAtomType$ priorLoginId );
 
 	/**
 	 *	Read a page array of the specific SecClusGrpMemb record instances identified by the duplicate key LoginIdx.
@@ -372,7 +372,7 @@ public interface ICFSecProtSecClusGrpMembTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFSecProtSecClusGrpMemb[] protpageRecByLoginIdx( ICFSecPubAuthorization Authorization,
-		String LoginId,
-		ICFLibKeyHash256 priorSecClusGrpId,
-		String priorLoginId );
+		$implIJavaAtomType$ LoginId,
+		$implIJavaOptAtomType$ priorSecClusGrpId,
+		$implIJavaOptAtomType$ priorLoginId );
 }

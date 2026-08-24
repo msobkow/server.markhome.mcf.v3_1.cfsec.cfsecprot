@@ -85,8 +85,8 @@ public interface ICFSecProtSecSysGrp
 
 	public ICFSecProtSecSysRole getOptionalComponentsImplSysRole();
 
-	public ICFLibKeyHash256 getRequiredSecSysGrpId();
-	public void setRequiredSecSysGrpId( ICFLibKeyHash256 value );
+	public $implIJavaAtomType$ getRequiredSecSysGrpId();
+	public void setRequiredSecSysGrpId( $implIJavaAtomType$ value );
 	public int getRequiredRevision();
 	public void setRequiredRevision( int value );
 
@@ -102,10 +102,10 @@ public interface ICFSecProtSecSysGrp
 
 	public List<ICFSecProtSecSysRoleEnables> getOptionalChildrenRoleByEnableName();
 
-	public String getRequiredName();
-	public void setRequiredName( String value );
-	public ICFSecPubSchema.SecLevelEnum getRequiredSecLevel();
-	public void setRequiredSecLevel( ICFSecPubSchema.SecLevelEnum value );
+	public $implIJavaAtomType$ getRequiredName();
+	public void setRequiredName( $implIJavaAtomType$ value );
+	public $implIJavaAtomType$ getRequiredSecLevel();
+	public void setRequiredSecLevel( $implIJavaAtomType$ value );
 	public boolean equals( Object obj );
 
 	public int hashCode();

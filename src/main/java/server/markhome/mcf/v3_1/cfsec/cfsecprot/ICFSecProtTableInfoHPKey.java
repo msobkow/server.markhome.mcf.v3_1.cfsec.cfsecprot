@@ -60,8 +60,8 @@ public interface ICFSecProtTableInfoHPKey
 	public CFLibDbKeyHash256 getAuditSessionId();
 	public void setAuditSessionId( CFLibDbKeyHash256 value );
 
-	public int getRequiredTableInfoId();
-	public void setRequiredTableInfoId( int value );
+	public $implIJavaAtomType$ getRequiredTableInfoId();
+	public void setRequiredTableInfoId( $implIJavaAtomType$ value );
 	@Override
 	public boolean equals( Object obj );
 

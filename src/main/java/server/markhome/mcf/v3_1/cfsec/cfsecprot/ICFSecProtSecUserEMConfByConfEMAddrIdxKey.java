@@ -46,8 +46,8 @@ import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
  */
 public interface ICFSecProtSecUserEMConfByConfEMAddrIdxKey
 {
-	public String getRequiredConfirmEMailAddr();
-	public void setRequiredConfirmEMailAddr( String value );
+	public $implIJavaAtomType$ getRequiredConfirmEMailAddr();
+	public void setRequiredConfirmEMailAddr( $implIJavaAtomType$ value );
 	@Override
 	public boolean equals( Object obj );
 

@@ -60,8 +60,8 @@ public interface ICFSecProtISOTZoneHPKey
 	public CFLibDbKeyHash256 getAuditSessionId();
 	public void setAuditSessionId( CFLibDbKeyHash256 value );
 
-	public short getRequiredISOTZoneId();
-	public void setRequiredISOTZoneId( short value );
+	public $reference DataCol switch IsNullable yes implIJavaOptAtomType default implIJavaReqAtomType$ getRequiredISOTZoneId();
+	public void setRequiredISOTZoneId( $reference DataCol switch IsNullable yes implIJavaOptAtomType default implIJavaReqAtomType$ value );
 	@Override
 	public boolean equals( Object obj );
 

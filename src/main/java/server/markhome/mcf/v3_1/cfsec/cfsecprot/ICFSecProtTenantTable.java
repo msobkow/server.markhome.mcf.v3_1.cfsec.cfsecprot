@@ -371,6 +371,6 @@ extends ICFSecPubTenantTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFSecProtTenant[] protpageRecByClusterIdx( ICFSecPubAuthorization Authorization,
-		ICFLibKeyHash256 ClusterId,
-		ICFLibKeyHash256 priorId );
+		$implIJavaAtomType$ ClusterId,
+		$implIJavaOptAtomType$ priorId );
 }

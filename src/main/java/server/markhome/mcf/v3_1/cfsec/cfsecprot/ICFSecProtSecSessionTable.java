@@ -479,8 +479,8 @@ extends ICFSecPubSecSessionTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFSecProtSecSession[] protpageRecBySecUserIdx( ICFSecPubAuthorization Authorization,
-		ICFLibKeyHash256 SecUserId,
-		ICFLibKeyHash256 priorSecSessionId );
+		$implIJavaAtomType$ SecUserId,
+		$implIJavaOptAtomType$ priorSecSessionId );
 
 	/**
 	 *	Read a page array of the specific SecSession record instances identified by the duplicate key FinishIdx.
@@ -496,9 +496,9 @@ extends ICFSecPubSecSessionTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFSecProtSecSession[] protpageRecByFinishIdx( ICFSecPubAuthorization Authorization,
-		ICFLibKeyHash256 SecUserId,
-		LocalDateTime Finish,
-		ICFLibKeyHash256 priorSecSessionId );
+		$implIJavaAtomType$ SecUserId,
+		$implIJavaAtomType$ Finish,
+		$implIJavaOptAtomType$ priorSecSessionId );
 
 	/**
 	 *	Read a page array of the specific SecSession record instances identified by the duplicate key SecProxyIdx.
@@ -512,6 +512,6 @@ extends ICFSecPubSecSessionTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFSecProtSecSession[] protpageRecBySecProxyIdx( ICFSecPubAuthorization Authorization,
-		ICFLibKeyHash256 SecProxyId,
-		ICFLibKeyHash256 priorSecSessionId );
+		$implIJavaAtomType$ SecProxyId,
+		$implIJavaOptAtomType$ priorSecSessionId );
 }

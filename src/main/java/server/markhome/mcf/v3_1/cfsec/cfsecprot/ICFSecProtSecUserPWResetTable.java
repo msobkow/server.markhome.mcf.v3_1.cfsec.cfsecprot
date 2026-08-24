@@ -356,8 +356,8 @@ public interface ICFSecProtSecUserPWResetTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFSecProtSecUserPWReset[] protpageRecBySentEMAddrIdx( ICFSecPubAuthorization Authorization,
-		String SentToEMailAddr,
-		ICFLibKeyHash256 priorSecUserId );
+		$implIJavaAtomType$ SentToEMailAddr,
+		$implIJavaOptAtomType$ priorSecUserId );
 
 	/**
 	 *	Read a page array of the specific SecUserPWReset record instances identified by the duplicate key NewAcctIdx.
@@ -371,6 +371,6 @@ public interface ICFSecProtSecUserPWResetTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFSecProtSecUserPWReset[] protpageRecByNewAcctIdx( ICFSecPubAuthorization Authorization,
-		boolean NewAccount,
-		ICFLibKeyHash256 priorSecUserId );
+		$implIJavaAtomType$ NewAccount,
+		$implIJavaOptAtomType$ priorSecUserId );
 }

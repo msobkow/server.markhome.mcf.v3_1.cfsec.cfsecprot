@@ -46,8 +46,8 @@ import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
  */
 public interface ICFSecProtTableInfoByTableNameIdxKey
 {
-	public String getRequiredTableName();
-	public void setRequiredTableName( String value );
+	public $implIJavaAtomType$ getRequiredTableName();
+	public void setRequiredTableName( $implIJavaAtomType$ value );
 	@Override
 	public boolean equals( Object obj );
 

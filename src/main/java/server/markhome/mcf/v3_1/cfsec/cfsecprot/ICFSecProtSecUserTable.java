@@ -353,6 +353,6 @@ extends ICFSecPubSecUserTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFSecProtSecUser[] protpageRecByEMAddrIdx( ICFSecPubAuthorization Authorization,
-		String EMailAddress,
-		ICFLibKeyHash256 priorSecUserId );
+		$implIJavaAtomType$ EMailAddress,
+		$implIJavaOptAtomType$ priorSecUserId );
 }
