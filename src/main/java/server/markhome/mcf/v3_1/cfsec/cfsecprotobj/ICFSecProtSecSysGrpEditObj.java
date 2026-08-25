@@ -113,70 +113,70 @@ public interface ICFSecProtSecSysGrpEditObj
 	 *
 	 *	@return	The (potentially empty) list of ICFSecProtSecSysGrpIncObj instances referenced by the IncByGrp key.
 	 */
-	List<ICFSecProtSecSysGrpIncObj> getOptionalComponentsIncByGrp();
+	List<ICFSecProtSecSysGrpIncObj> get$OptionalOrRequired$ComponentsIncByGrp();
 
 	/**
 	 *	Get a list ICFSecProtSecSysGrpMembObj instances referenced by the MembByGrp key.
 	 *
 	 *	@return	The (potentially empty) list of ICFSecProtSecSysGrpMembObj instances referenced by the MembByGrp key.
 	 */
-	List<ICFSecProtSecSysGrpMembObj> getOptionalChildrenMembByGrp();
+	List<ICFSecProtSecSysGrpMembObj> get$OptionalOrRequired$ChildrenMembByGrp();
 
 	/**
 	 *	Get a list ICFSecProtSecClusGrpObj instances referenced by the ImplClusGrp key.
 	 *
 	 *	@return	The (potentially empty) list of ICFSecProtSecClusGrpObj instances referenced by the ImplClusGrp key.
 	 */
-	List<ICFSecProtSecClusGrpObj> getOptionalComponentsImplClusGrp();
+	List<ICFSecProtSecClusGrpObj> get$OptionalOrRequired$ComponentsImplClusGrp();
 
 	/**
 	 *	Get a list ICFSecProtSecTentGrpObj instances referenced by the ImplTentGrp key.
 	 *
 	 *	@return	The (potentially empty) list of ICFSecProtSecTentGrpObj instances referenced by the ImplTentGrp key.
 	 */
-	List<ICFSecProtSecTentGrpObj> getOptionalComponentsImplTentGrp();
+	List<ICFSecProtSecTentGrpObj> get$OptionalOrRequired$ComponentsImplTentGrp();
 
 	/**
 	 *	Get the ICFSecProtSecSysRoleObj instance referenced by the ImplSysRole key.
 	 *
 	 *	@return	The ICFSecProtSecSysRoleObj instance referenced by the ImplSysRole key.
 	 */
-	ICFSecProtSecSysRoleObj getOptionalComponentsImplSysRole();
+	ICFSecProtSecSysRoleObj get$OptionalOrRequired$ComponentsImplSysRole();
 
 	/**
-	 *	Get the optional ICFSecProtSecSysRoleObj instance referenced by the ImplSysRole key.
+	 *	Get the $optionalorrequired$ ICFSecProtSecSysRoleObj instance referenced by the ImplSysRole key.
 	 *
-	 *	@return	The optional ICFSecProtSecSysRoleObj instance referenced by the ImplSysRole key.
+	 *	@return	The $optionalorrequired$ ICFSecProtSecSysRoleObj instance referenced by the ImplSysRole key.
 	 */
-	ICFSecProtSecSysRoleObj getOptionalComponentsImplSysRole( boolean forceRead );
+	ICFSecProtSecSysRoleObj get$OptionalOrRequired$ComponentsImplSysRole( boolean forceRead );
 
 	/**
 	 *	Get a list ICFSecProtSecClusRoleObj instances referenced by the ImplClusRole key.
 	 *
 	 *	@return	The (potentially empty) list of ICFSecProtSecClusRoleObj instances referenced by the ImplClusRole key.
 	 */
-	List<ICFSecProtSecClusRoleObj> getOptionalComponentsImplClusRole();
+	List<ICFSecProtSecClusRoleObj> get$OptionalOrRequired$ComponentsImplClusRole();
 
 	/**
 	 *	Get a list ICFSecProtSecTentRoleObj instances referenced by the ImplTentRole key.
 	 *
 	 *	@return	The (potentially empty) list of ICFSecProtSecTentRoleObj instances referenced by the ImplTentRole key.
 	 */
-	List<ICFSecProtSecTentRoleObj> getOptionalComponentsImplTentRole();
+	List<ICFSecProtSecTentRoleObj> get$OptionalOrRequired$ComponentsImplTentRole();
 
 	/**
 	 *	Get a list ICFSecProtSecSysGrpIncObj instances referenced by the SysGrpByName key.
 	 *
 	 *	@return	The (potentially empty) list of ICFSecProtSecSysGrpIncObj instances referenced by the SysGrpByName key.
 	 */
-	List<ICFSecProtSecSysGrpIncObj> getOptionalChildrenSysGrpByName();
+	List<ICFSecProtSecSysGrpIncObj> get$OptionalOrRequired$ChildrenSysGrpByName();
 
 	/**
 	 *	Get a list ICFSecProtSecSysRoleEnablesObj instances referenced by the RoleByEnableName key.
 	 *
 	 *	@return	The (potentially empty) list of ICFSecProtSecSysRoleEnablesObj instances referenced by the RoleByEnableName key.
 	 */
-	List<ICFSecProtSecSysRoleEnablesObj> getOptionalChildrenRoleByEnableName();
+	List<ICFSecProtSecSysRoleEnablesObj> get$OptionalOrRequired$ChildrenRoleByEnableName();
 
 	/**
 	 *	Get the required ICFLibKeyHash256 attribute SecSysGrpId.

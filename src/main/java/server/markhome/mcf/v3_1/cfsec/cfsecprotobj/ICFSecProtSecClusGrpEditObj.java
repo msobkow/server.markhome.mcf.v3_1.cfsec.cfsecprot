@@ -113,49 +113,49 @@ public interface ICFSecProtSecClusGrpEditObj
 	 *
 	 *	@return	The ICFSecProtClusterObj instance referenced by the Cluster key.
 	 */
-	ICFSecProtClusterObj getRequiredOwnerCluster();
+	ICFSecProtClusterObj get$OptionalOrRequired$OwnerCluster();
 
 	/**
-	 *	Get the required ICFSecProtClusterObj instance referenced by the Cluster key.
+	 *	Get the $optionalorrequired$ ICFSecProtClusterObj instance referenced by the Cluster key.
 	 *
-	 *	@return	The required ICFSecProtClusterObj instance referenced by the Cluster key.
+	 *	@return	The $optionalorrequired$ ICFSecProtClusterObj instance referenced by the Cluster key.
 	 */
-	ICFSecProtClusterObj getRequiredOwnerCluster( boolean forceRead );
+	ICFSecProtClusterObj get$OptionalOrRequired$OwnerCluster( boolean forceRead );
 
 	/**
 	 *	Set the ICFSecProtClusterObj instance referenced by the Cluster key.
 	 *
 	 *	@param	value	the ICFSecProtClusterObj instance to be referenced by the Cluster key.
 	 */
-	void setRequiredOwnerCluster( ICFSecProtClusterObj value );
+	void set$OptionalOrRequired$OwnerCluster( ICFSecProtClusterObj value );
 
 	/**
 	 *	Get the ICFSecProtSecSysGrpObj instance referenced by the SysGrp key.
 	 *
 	 *	@return	The ICFSecProtSecSysGrpObj instance referenced by the SysGrp key.
 	 */
-	ICFSecProtSecSysGrpObj getRequiredContainerSysGrp();
+	ICFSecProtSecSysGrpObj get$OptionalOrRequired$ContainerSysGrp();
 
 	/**
-	 *	Get the required ICFSecProtSecSysGrpObj instance referenced by the SysGrp key.
+	 *	Get the $optionalorrequired$ ICFSecProtSecSysGrpObj instance referenced by the SysGrp key.
 	 *
-	 *	@return	The required ICFSecProtSecSysGrpObj instance referenced by the SysGrp key.
+	 *	@return	The $optionalorrequired$ ICFSecProtSecSysGrpObj instance referenced by the SysGrp key.
 	 */
-	ICFSecProtSecSysGrpObj getRequiredContainerSysGrp( boolean forceRead );
+	ICFSecProtSecSysGrpObj get$OptionalOrRequired$ContainerSysGrp( boolean forceRead );
 
 	/**
 	 *	Set the ICFSecProtSecSysGrpObj instance referenced by the SysGrp key.
 	 *
 	 *	@param	value	the ICFSecProtSecSysGrpObj instance to be referenced by the SysGrp key.
 	 */
-	void setRequiredContainerSysGrp( ICFSecProtSecSysGrpObj value );
+	void set$OptionalOrRequired$ContainerSysGrp( ICFSecProtSecSysGrpObj value );
 
 	/**
 	 *	Get a list ICFSecProtSecClusGrpMembObj instances referenced by the MembByGrp key.
 	 *
 	 *	@return	The (potentially empty) list of ICFSecProtSecClusGrpMembObj instances referenced by the MembByGrp key.
 	 */
-	List<ICFSecProtSecClusGrpMembObj> getOptionalChildrenMembByGrp();
+	List<ICFSecProtSecClusGrpMembObj> get$OptionalOrRequired$ChildrenMembByGrp();
 
 	/**
 	 *	Get the required ICFLibKeyHash256 attribute SecClusGrpId.

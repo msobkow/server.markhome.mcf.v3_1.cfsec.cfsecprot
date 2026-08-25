@@ -113,49 +113,49 @@ public interface ICFSecProtSecClusRoleEditObj
 	 *
 	 *	@return	The ICFSecProtClusterObj instance referenced by the Cluster key.
 	 */
-	ICFSecProtClusterObj getRequiredOwnerCluster();
+	ICFSecProtClusterObj get$OptionalOrRequired$OwnerCluster();
 
 	/**
-	 *	Get the required ICFSecProtClusterObj instance referenced by the Cluster key.
+	 *	Get the $optionalorrequired$ ICFSecProtClusterObj instance referenced by the Cluster key.
 	 *
-	 *	@return	The required ICFSecProtClusterObj instance referenced by the Cluster key.
+	 *	@return	The $optionalorrequired$ ICFSecProtClusterObj instance referenced by the Cluster key.
 	 */
-	ICFSecProtClusterObj getRequiredOwnerCluster( boolean forceRead );
+	ICFSecProtClusterObj get$OptionalOrRequired$OwnerCluster( boolean forceRead );
 
 	/**
 	 *	Set the ICFSecProtClusterObj instance referenced by the Cluster key.
 	 *
 	 *	@param	value	the ICFSecProtClusterObj instance to be referenced by the Cluster key.
 	 */
-	void setRequiredOwnerCluster( ICFSecProtClusterObj value );
+	void set$OptionalOrRequired$OwnerCluster( ICFSecProtClusterObj value );
 
 	/**
 	 *	Get the ICFSecProtSecSysGrpObj instance referenced by the SysRole key.
 	 *
 	 *	@return	The ICFSecProtSecSysGrpObj instance referenced by the SysRole key.
 	 */
-	ICFSecProtSecSysGrpObj getRequiredContainerSysRole();
+	ICFSecProtSecSysGrpObj get$OptionalOrRequired$ContainerSysRole();
 
 	/**
-	 *	Get the required ICFSecProtSecSysGrpObj instance referenced by the SysRole key.
+	 *	Get the $optionalorrequired$ ICFSecProtSecSysGrpObj instance referenced by the SysRole key.
 	 *
-	 *	@return	The required ICFSecProtSecSysGrpObj instance referenced by the SysRole key.
+	 *	@return	The $optionalorrequired$ ICFSecProtSecSysGrpObj instance referenced by the SysRole key.
 	 */
-	ICFSecProtSecSysGrpObj getRequiredContainerSysRole( boolean forceRead );
+	ICFSecProtSecSysGrpObj get$OptionalOrRequired$ContainerSysRole( boolean forceRead );
 
 	/**
 	 *	Set the ICFSecProtSecSysGrpObj instance referenced by the SysRole key.
 	 *
 	 *	@param	value	the ICFSecProtSecSysGrpObj instance to be referenced by the SysRole key.
 	 */
-	void setRequiredContainerSysRole( ICFSecProtSecSysGrpObj value );
+	void set$OptionalOrRequired$ContainerSysRole( ICFSecProtSecSysGrpObj value );
 
 	/**
 	 *	Get a list ICFSecProtSecClusRoleMembObj instances referenced by the MembByGrp key.
 	 *
 	 *	@return	The (potentially empty) list of ICFSecProtSecClusRoleMembObj instances referenced by the MembByGrp key.
 	 */
-	List<ICFSecProtSecClusRoleMembObj> getOptionalChildrenMembByGrp();
+	List<ICFSecProtSecClusRoleMembObj> get$OptionalOrRequired$ChildrenMembByGrp();
 
 	/**
 	 *	Get the required ICFLibKeyHash256 attribute SecClusRoleId.

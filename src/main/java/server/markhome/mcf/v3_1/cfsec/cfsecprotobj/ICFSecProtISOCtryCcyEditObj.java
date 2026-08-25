@@ -113,42 +113,42 @@ public interface ICFSecProtISOCtryCcyEditObj
 	 *
 	 *	@return	The ICFSecProtISOCtryObj instance referenced by the Ctry key.
 	 */
-	ICFSecProtISOCtryObj getRequiredContainerCtry();
+	ICFSecProtISOCtryObj get$OptionalOrRequired$ContainerCtry();
 
 	/**
-	 *	Get the required ICFSecProtISOCtryObj instance referenced by the Ctry key.
+	 *	Get the $optionalorrequired$ ICFSecProtISOCtryObj instance referenced by the Ctry key.
 	 *
-	 *	@return	The required ICFSecProtISOCtryObj instance referenced by the Ctry key.
+	 *	@return	The $optionalorrequired$ ICFSecProtISOCtryObj instance referenced by the Ctry key.
 	 */
-	ICFSecProtISOCtryObj getRequiredContainerCtry( boolean forceRead );
+	ICFSecProtISOCtryObj get$OptionalOrRequired$ContainerCtry( boolean forceRead );
 
 	/**
 	 *	Set the ICFSecProtISOCtryObj instance referenced by the Ctry key.
 	 *
 	 *	@param	value	the ICFSecProtISOCtryObj instance to be referenced by the Ctry key.
 	 */
-	void setRequiredContainerCtry( ICFSecProtISOCtryObj value );
+	void set$OptionalOrRequired$ContainerCtry( ICFSecProtISOCtryObj value );
 
 	/**
 	 *	Get the ICFSecProtISOCcyObj instance referenced by the Ccy key.
 	 *
 	 *	@return	The ICFSecProtISOCcyObj instance referenced by the Ccy key.
 	 */
-	ICFSecProtISOCcyObj getRequiredParentCcy();
+	ICFSecProtISOCcyObj get$OptionalOrRequired$ParentCcy();
 
 	/**
-	 *	Get the required ICFSecProtISOCcyObj instance referenced by the Ccy key.
+	 *	Get the $optionalorrequired$ ICFSecProtISOCcyObj instance referenced by the Ccy key.
 	 *
-	 *	@return	The required ICFSecProtISOCcyObj instance referenced by the Ccy key.
+	 *	@return	The $optionalorrequired$ ICFSecProtISOCcyObj instance referenced by the Ccy key.
 	 */
-	ICFSecProtISOCcyObj getRequiredParentCcy( boolean forceRead );
+	ICFSecProtISOCcyObj get$OptionalOrRequired$ParentCcy( boolean forceRead );
 
 	/**
 	 *	Set the ICFSecProtISOCcyObj instance referenced by the Ccy key.
 	 *
 	 *	@param	value	the ICFSecProtISOCcyObj instance to be referenced by the Ccy key.
 	 */
-	void setRequiredParentCcy( ICFSecProtISOCcyObj value );
+	void set$OptionalOrRequired$ParentCcy( ICFSecProtISOCcyObj value );
 
 	/**
 	 *	Get the required short attribute ISOCtryId.

@@ -46,8 +46,8 @@ import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
  */
 public interface ICFSecProtISOCtryLangByCtryIdxKey
 {
-	public $reference DataCol switch IsNullable yes implIJavaOptAtomType default implIJavaReqAtomType$ getRequiredISOCtryId();
-	public void setRequiredISOCtryId( $reference DataCol switch IsNullable yes implIJavaOptAtomType default implIJavaReqAtomType$ value );
+	public $implIJavaAtomType$ getRequiredISOCtryId();
+	public void setRequiredISOCtryId( $implIJavaAtomType$ value );
 	@Override
 	public boolean equals( Object obj );
 

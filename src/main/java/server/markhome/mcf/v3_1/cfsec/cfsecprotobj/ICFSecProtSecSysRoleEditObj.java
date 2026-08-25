@@ -113,14 +113,14 @@ public interface ICFSecProtSecSysRoleEditObj
 	 *
 	 *	@return	The (potentially empty) list of ICFSecProtSecSysRoleEnablesObj instances referenced by the EnabledByRole key.
 	 */
-	List<ICFSecProtSecSysRoleEnablesObj> getOptionalComponentsEnabledByRole();
+	List<ICFSecProtSecSysRoleEnablesObj> get$OptionalOrRequired$ComponentsEnabledByRole();
 
 	/**
 	 *	Get a list ICFSecProtSecSysRoleMembObj instances referenced by the MembByRole key.
 	 *
 	 *	@return	The (potentially empty) list of ICFSecProtSecSysRoleMembObj instances referenced by the MembByRole key.
 	 */
-	List<ICFSecProtSecSysRoleMembObj> getOptionalChildrenMembByRole();
+	List<ICFSecProtSecSysRoleMembObj> get$OptionalOrRequired$ChildrenMembByRole();
 
 	/**
 	 *	Get the required ICFLibKeyHash256 attribute SecSysRoleId.

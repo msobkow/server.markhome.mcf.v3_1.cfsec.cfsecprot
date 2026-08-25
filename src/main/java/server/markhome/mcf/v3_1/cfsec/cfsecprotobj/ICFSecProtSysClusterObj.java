@@ -190,18 +190,18 @@ public interface ICFSecProtSysClusterObj
 	void setIsNew( boolean value );
 
 	/**
-	 *	Get the required ICFSecProtClusterObj instance referenced by the Cluster key.
+	 *	Get the $optionalorrequired$ ICFSecProtClusterObj instance referenced by the Cluster key.
 	 *
-	 *	@return	The required ICFSecProtClusterObj instance referenced by the Cluster key.
+	 *	@return	The $optionalorrequired$ ICFSecProtClusterObj instance referenced by the Cluster key.
 	 */
-	ICFSecProtClusterObj getRequiredContainerCluster();
+	ICFSecProtClusterObj get$OptionalOrRequired$ContainerCluster();
 
 	/**
-	 *	Get the required ICFSecProtClusterObj instance referenced by the Cluster key.
+	 *	Get the $optionalorrequired$ ICFSecProtClusterObj instance referenced by the Cluster key.
 	 *
-	 *	@return	The required ICFSecProtClusterObj instance referenced by the Cluster key.
+	 *	@return	The $optionalorrequired$ ICFSecProtClusterObj instance referenced by the Cluster key.
 	 */
-	ICFSecProtClusterObj getRequiredContainerCluster( boolean forceRead );
+	ICFSecProtClusterObj get$OptionalOrRequired$ContainerCluster( boolean forceRead );
 
 	/**
 	 *	Get the required int attribute SingletonId.

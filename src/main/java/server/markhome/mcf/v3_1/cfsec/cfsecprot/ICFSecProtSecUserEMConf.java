@@ -78,12 +78,12 @@ public interface ICFSecProtSecUserEMConf
 
 	public CFLibDbKeyHash256 getPKey();
 	public void setPKey(CFLibDbKeyHash256 requiredSecUserId);
-	public ICFSecProtSecUser getRequiredContainerUser();
+	public ICFSecProtSecUser get$OptionalOrRequired$ContainerUser();
 
-	public void setRequiredContainerUser($implIJavaAtomType$ argSecUserId);
+	public void set$OptionalOrRequired$ContainerUser($implIJavaAtomType$ argSecUserId);
 
 
-	public void setRequiredContainerUser(ICFSecProtSecUser argObj);
+	public void set$OptionalOrRequired$ContainerUser(ICFSecProtSecUser argObj);
 
 	public $implIJavaAtomType$ getRequiredSecUserId();
 	public void setRequiredSecUserId( $implIJavaAtomType$ value );

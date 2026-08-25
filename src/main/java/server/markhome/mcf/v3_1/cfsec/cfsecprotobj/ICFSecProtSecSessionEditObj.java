@@ -85,42 +85,42 @@ public interface ICFSecProtSecSessionEditObj
 	 *
 	 *	@return	The ICFSecProtSecUserObj instance referenced by the SecUser key.
 	 */
-	ICFSecProtSecUserObj getRequiredContainerSecUser();
+	ICFSecProtSecUserObj get$OptionalOrRequired$ContainerSecUser();
 
 	/**
-	 *	Get the required ICFSecProtSecUserObj instance referenced by the SecUser key.
+	 *	Get the $optionalorrequired$ ICFSecProtSecUserObj instance referenced by the SecUser key.
 	 *
-	 *	@return	The required ICFSecProtSecUserObj instance referenced by the SecUser key.
+	 *	@return	The $optionalorrequired$ ICFSecProtSecUserObj instance referenced by the SecUser key.
 	 */
-	ICFSecProtSecUserObj getRequiredContainerSecUser( boolean forceRead );
+	ICFSecProtSecUserObj get$OptionalOrRequired$ContainerSecUser( boolean forceRead );
 
 	/**
 	 *	Set the ICFSecProtSecUserObj instance referenced by the SecUser key.
 	 *
 	 *	@param	value	the ICFSecProtSecUserObj instance to be referenced by the SecUser key.
 	 */
-	void setRequiredContainerSecUser( ICFSecProtSecUserObj value );
+	void set$OptionalOrRequired$ContainerSecUser( ICFSecProtSecUserObj value );
 
 	/**
 	 *	Get the ICFSecProtSecUserObj instance referenced by the SecProxy key.
 	 *
 	 *	@return	The ICFSecProtSecUserObj instance referenced by the SecProxy key.
 	 */
-	ICFSecProtSecUserObj getRequiredParentSecProxy();
+	ICFSecProtSecUserObj get$OptionalOrRequired$ParentSecProxy();
 
 	/**
-	 *	Get the required ICFSecProtSecUserObj instance referenced by the SecProxy key.
+	 *	Get the $optionalorrequired$ ICFSecProtSecUserObj instance referenced by the SecProxy key.
 	 *
-	 *	@return	The required ICFSecProtSecUserObj instance referenced by the SecProxy key.
+	 *	@return	The $optionalorrequired$ ICFSecProtSecUserObj instance referenced by the SecProxy key.
 	 */
-	ICFSecProtSecUserObj getRequiredParentSecProxy( boolean forceRead );
+	ICFSecProtSecUserObj get$OptionalOrRequired$ParentSecProxy( boolean forceRead );
 
 	/**
 	 *	Set the ICFSecProtSecUserObj instance referenced by the SecProxy key.
 	 *
 	 *	@param	value	the ICFSecProtSecUserObj instance to be referenced by the SecProxy key.
 	 */
-	void setRequiredParentSecProxy( ICFSecProtSecUserObj value );
+	void set$OptionalOrRequired$ParentSecProxy( ICFSecProtSecUserObj value );
 
 	/**
 	 *	Get the required ICFLibKeyHash256 attribute SecSessionId.

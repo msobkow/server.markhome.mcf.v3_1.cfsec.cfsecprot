@@ -46,8 +46,8 @@ import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
  */
 public interface ICFSecProtClusterByUDomNameIdxKey
 {
-	public String getRequiredFullDomName();
-	public void setRequiredFullDomName( String value );
+	public $implIJavaAtomType$ getRequiredFullDomName();
+	public void setRequiredFullDomName( $implIJavaAtomType$ value );
 	@Override
 	public boolean equals( Object obj );
 

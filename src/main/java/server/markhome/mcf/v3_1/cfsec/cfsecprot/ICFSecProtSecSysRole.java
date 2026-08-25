@@ -76,9 +76,9 @@ public interface ICFSecProtSecSysRole
 
 	public CFLibDbKeyHash256 getPKey();
 	public void setPKey(CFLibDbKeyHash256 requiredSecSysRoleId);
-	public List<ICFSecProtSecSysRoleEnables> getOptionalComponentsEnabledByRole();
+	public List<ICFSecProtSecSysRoleEnables> get$OptionalOrRequired$ComponentsEnabledByRole();
 
-	public List<ICFSecProtSecSysRoleMemb> getOptionalChildrenMembByRole();
+	public List<ICFSecProtSecSysRoleMemb> get$OptionalOrRequired$ChildrenMembByRole();
 
 	public $implIJavaAtomType$ getRequiredSecSysRoleId();
 	public void setRequiredSecSysRoleId( $implIJavaAtomType$ value );

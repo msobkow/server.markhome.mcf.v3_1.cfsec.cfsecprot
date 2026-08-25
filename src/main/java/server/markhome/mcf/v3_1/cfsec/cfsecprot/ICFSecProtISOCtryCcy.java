@@ -77,23 +77,23 @@ public interface ICFSecProtISOCtryCcy
 
 	public ICFSecProtISOCtryCcyPKey getPKey();
 	public void setPKey(ICFSecProtISOCtryCcyPKey pkey );
-	public ICFSecProtISOCtry getRequiredContainerCtry();
+	public ICFSecProtISOCtry get$OptionalOrRequired$ContainerCtry();
 
-	public void setRequiredContainerCtry($reference DataCol switch IsNullable yes implIJavaOptAtomType default implIJavaReqAtomType$ argISOCtryId);
-
-
-	public void setRequiredContainerCtry(ICFSecProtISOCtry argObj);
-
-	public void setRequiredContainerCtry(ICFSecPubISOCtry argObj);
-
-	public ICFSecProtISOCcy getRequiredParentCcy();
-
-	public void setRequiredParentCcy($reference DataCol switch IsNullable yes implIJavaOptAtomType default implIJavaReqAtomType$ argISOCcyId);
+	public void set$OptionalOrRequired$ContainerCtry($implIJavaAtomType$ argISOCtryId);
 
 
-	public void setRequiredParentCcy(ICFSecProtISOCcy argObj);
+	public void set$OptionalOrRequired$ContainerCtry(ICFSecProtISOCtry argObj);
 
-	public void setRequiredParentCcy(ICFSecPubISOCcy argObj);
+	public void set$OptionalOrRequired$ContainerCtry(ICFSecPubISOCtry argObj);
+
+	public ICFSecProtISOCcy get$OptionalOrRequired$ParentCcy();
+
+	public void set$OptionalOrRequired$ParentCcy($implIJavaAtomType$ argISOCcyId);
+
+
+	public void set$OptionalOrRequired$ParentCcy(ICFSecProtISOCcy argObj);
+
+	public void set$OptionalOrRequired$ParentCcy(ICFSecPubISOCcy argObj);
 
 	public short getRequiredISOCtryId();
 

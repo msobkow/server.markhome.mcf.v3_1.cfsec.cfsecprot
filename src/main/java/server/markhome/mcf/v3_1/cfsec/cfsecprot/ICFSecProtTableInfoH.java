@@ -61,7 +61,7 @@ public interface ICFSecProtTableInfoH
 	public CFLibDbKeyHash256 getAuditSessionId();
 	public void setAuditSessionId(CFLibDbKeyHash256 auditSessionId);
 
-	public $implIJavaAtomType first implIJavaAtomType each implCommaIJavaAtomType empty empty )$ getRequiredTableInfoId();
+	public $implIJavaAtomType$ getRequiredTableInfoId();
 	public void setRequiredTableInfoId( int requiredTableInfoId );
 
 	public $implIJavaAtomType$ getRequiredSchemaName();

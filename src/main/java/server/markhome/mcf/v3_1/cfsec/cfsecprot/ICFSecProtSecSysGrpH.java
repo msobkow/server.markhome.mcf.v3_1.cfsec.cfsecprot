@@ -70,7 +70,7 @@ public interface ICFSecProtSecSysGrpH
 	public CFLibDbKeyHash256 getAuditSessionId();
 	public void setAuditSessionId(CFLibDbKeyHash256 auditSessionId);
 
-	public $implIJavaAtomType first implIJavaAtomType each implCommaIJavaAtomType empty empty )$ getRequiredSecSysGrpId();
+	public $implIJavaAtomType$ getRequiredSecSysGrpId();
 	public void setRequiredSecSysGrpId( ICFLibKeyHash256 requiredSecSysGrpId );
 
 	public $implIJavaAtomType$ getRequiredName();

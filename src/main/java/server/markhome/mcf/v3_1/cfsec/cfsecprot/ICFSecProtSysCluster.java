@@ -63,14 +63,14 @@ public interface ICFSecProtSysCluster
 	public int getRequiredRevision();
 	public void setRequiredRevision( int value );
 
-	public ICFSecProtCluster getRequiredContainerCluster();
+	public ICFSecProtCluster get$OptionalOrRequired$ContainerCluster();
 
-	public void setRequiredContainerCluster($implIJavaAtomType$ argClusterId);
+	public void set$OptionalOrRequired$ContainerCluster($implIJavaAtomType$ argClusterId);
 
 
-	public void setRequiredContainerCluster(ICFSecProtCluster argObj);
+	public void set$OptionalOrRequired$ContainerCluster(ICFSecProtCluster argObj);
 
-	public void setRequiredContainerCluster(ICFSecPubCluster argObj);
+	public void set$OptionalOrRequired$ContainerCluster(ICFSecPubCluster argObj);
 
 	public $implIJavaAtomType$ getRequiredClusterId();
 	public void setRequiredClusterId( $implIJavaAtomType$ value );

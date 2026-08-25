@@ -76,19 +76,19 @@ public interface ICFSecProtSecSysGrpMemb
 
 	public ICFSecProtSecSysGrpMembPKey getPKey();
 	public void setPKey(ICFSecProtSecSysGrpMembPKey pkey );
-	public ICFSecProtSecSysGrp getRequiredContainerGroup();
+	public ICFSecProtSecSysGrp get$OptionalOrRequired$ContainerGroup();
 
-	public void setRequiredContainerGroup($implIJavaAtomType$ argSecSysGrpId);
-
-
-	public void setRequiredContainerGroup(ICFSecProtSecSysGrp argObj);
-
-	public ICFSecProtSecUser getRequiredParentUser();
-
-	public void setRequiredParentUser($implIJavaAtomType$ argLoginId);
+	public void set$OptionalOrRequired$ContainerGroup($implIJavaAtomType$ argSecSysGrpId);
 
 
-	public void setRequiredParentUser(ICFSecProtSecUser argObj);
+	public void set$OptionalOrRequired$ContainerGroup(ICFSecProtSecSysGrp argObj);
+
+	public ICFSecProtSecUser get$OptionalOrRequired$ParentUser();
+
+	public void set$OptionalOrRequired$ParentUser($implIJavaAtomType$ argLoginId);
+
+
+	public void set$OptionalOrRequired$ParentUser(ICFSecProtSecUser argObj);
 
 	public ICFLibKeyHash256 getRequiredSecSysGrpId();
 

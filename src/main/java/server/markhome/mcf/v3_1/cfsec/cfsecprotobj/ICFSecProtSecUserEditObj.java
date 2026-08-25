@@ -113,63 +113,63 @@ public interface ICFSecProtSecUserEditObj
 	 *
 	 *	@return	The (potentially empty) list of ICFSecProtSecSessionObj instances referenced by the SecSess key.
 	 */
-	List<ICFSecProtSecSessionObj> getOptionalComponentsSecSess();
+	List<ICFSecProtSecSessionObj> get$OptionalOrRequired$ComponentsSecSess();
 
 	/**
 	 *	Get a list ICFSecProtSecSessionObj instances referenced by the SecProxy key.
 	 *
 	 *	@return	The (potentially empty) list of ICFSecProtSecSessionObj instances referenced by the SecProxy key.
 	 */
-	List<ICFSecProtSecSessionObj> getOptionalChildrenSecProxy();
+	List<ICFSecProtSecSessionObj> get$OptionalOrRequired$ChildrenSecProxy();
 
 	/**
 	 *	Get the ICFSecProtSecUserEMConfObj instance referenced by the EMConf key.
 	 *
 	 *	@return	The ICFSecProtSecUserEMConfObj instance referenced by the EMConf key.
 	 */
-	ICFSecProtSecUserEMConfObj getOptionalComponentsEMConf();
+	ICFSecProtSecUserEMConfObj get$OptionalOrRequired$ComponentsEMConf();
 
 	/**
-	 *	Get the optional ICFSecProtSecUserEMConfObj instance referenced by the EMConf key.
+	 *	Get the $optionalorrequired$ ICFSecProtSecUserEMConfObj instance referenced by the EMConf key.
 	 *
-	 *	@return	The optional ICFSecProtSecUserEMConfObj instance referenced by the EMConf key.
+	 *	@return	The $optionalorrequired$ ICFSecProtSecUserEMConfObj instance referenced by the EMConf key.
 	 */
-	ICFSecProtSecUserEMConfObj getOptionalComponentsEMConf( boolean forceRead );
+	ICFSecProtSecUserEMConfObj get$OptionalOrRequired$ComponentsEMConf( boolean forceRead );
 
 	/**
 	 *	Get the ICFSecProtSecUserPWResetObj instance referenced by the PWReset key.
 	 *
 	 *	@return	The ICFSecProtSecUserPWResetObj instance referenced by the PWReset key.
 	 */
-	ICFSecProtSecUserPWResetObj getOptionalComponentsPWReset();
+	ICFSecProtSecUserPWResetObj get$OptionalOrRequired$ComponentsPWReset();
 
 	/**
-	 *	Get the optional ICFSecProtSecUserPWResetObj instance referenced by the PWReset key.
+	 *	Get the $optionalorrequired$ ICFSecProtSecUserPWResetObj instance referenced by the PWReset key.
 	 *
-	 *	@return	The optional ICFSecProtSecUserPWResetObj instance referenced by the PWReset key.
+	 *	@return	The $optionalorrequired$ ICFSecProtSecUserPWResetObj instance referenced by the PWReset key.
 	 */
-	ICFSecProtSecUserPWResetObj getOptionalComponentsPWReset( boolean forceRead );
+	ICFSecProtSecUserPWResetObj get$OptionalOrRequired$ComponentsPWReset( boolean forceRead );
 
 	/**
 	 *	Get a list ICFSecProtSecSysGrpMembObj instances referenced by the SysSecGrpMemb key.
 	 *
 	 *	@return	The (potentially empty) list of ICFSecProtSecSysGrpMembObj instances referenced by the SysSecGrpMemb key.
 	 */
-	List<ICFSecProtSecSysGrpMembObj> getOptionalChildrenSysSecGrpMemb();
+	List<ICFSecProtSecSysGrpMembObj> get$OptionalOrRequired$ChildrenSysSecGrpMemb();
 
 	/**
 	 *	Get a list ICFSecProtSecClusGrpMembObj instances referenced by the ClusSecGrpMemb key.
 	 *
 	 *	@return	The (potentially empty) list of ICFSecProtSecClusGrpMembObj instances referenced by the ClusSecGrpMemb key.
 	 */
-	List<ICFSecProtSecClusGrpMembObj> getOptionalChildrenClusSecGrpMemb();
+	List<ICFSecProtSecClusGrpMembObj> get$OptionalOrRequired$ChildrenClusSecGrpMemb();
 
 	/**
 	 *	Get a list ICFSecProtSecTentGrpMembObj instances referenced by the TentSecGrpMemb key.
 	 *
 	 *	@return	The (potentially empty) list of ICFSecProtSecTentGrpMembObj instances referenced by the TentSecGrpMemb key.
 	 */
-	List<ICFSecProtSecTentGrpMembObj> getOptionalChildrenTentSecGrpMemb();
+	List<ICFSecProtSecTentGrpMembObj> get$OptionalOrRequired$ChildrenTentSecGrpMemb();
 
 	/**
 	 *	Get the required ICFLibKeyHash256 attribute SecUserId.

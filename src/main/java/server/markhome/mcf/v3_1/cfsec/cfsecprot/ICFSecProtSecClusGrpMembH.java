@@ -70,10 +70,10 @@ public interface ICFSecProtSecClusGrpMembH
 	public CFLibDbKeyHash256 getAuditSessionId();
 	public void setAuditSessionId(CFLibDbKeyHash256 auditSessionId);
 
-	public $implIJavaAtomType first implIJavaAtomType each implCommaIJavaAtomType empty empty )$ getRequiredSecClusGrpId();
+	public $implIJavaAtomType$ getRequiredSecClusGrpId();
 	public void setRequiredSecClusGrpId( ICFLibKeyHash256 requiredSecClusGrpId );
 
-	public $implIJavaAtomType first implIJavaAtomType each implCommaIJavaAtomType empty empty )$ getRequiredLoginId();
+	public $implIJavaAtomType$ getRequiredLoginId();
 	public void setRequiredLoginId( String requiredLoginId );
 
 	@Override

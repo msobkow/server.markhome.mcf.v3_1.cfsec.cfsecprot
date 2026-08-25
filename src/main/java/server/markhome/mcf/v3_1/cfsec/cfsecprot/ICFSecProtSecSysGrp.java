@@ -79,28 +79,28 @@ public interface ICFSecProtSecSysGrp
 
 	public CFLibDbKeyHash256 getPKey();
 	public void setPKey(CFLibDbKeyHash256 requiredSecSysGrpId);
-	public List<ICFSecProtSecSysGrpInc> getOptionalComponentsIncByGrp();
+	public List<ICFSecProtSecSysGrpInc> get$OptionalOrRequired$ComponentsIncByGrp();
 
-	public List<ICFSecProtSecSysGrpMemb> getOptionalChildrenMembByGrp();
+	public List<ICFSecProtSecSysGrpMemb> get$OptionalOrRequired$ChildrenMembByGrp();
 
-	public ICFSecProtSecSysRole getOptionalComponentsImplSysRole();
+	public ICFSecProtSecSysRole get$OptionalOrRequired$ComponentsImplSysRole();
 
 	public $implIJavaAtomType$ getRequiredSecSysGrpId();
 	public void setRequiredSecSysGrpId( $implIJavaAtomType$ value );
 	public int getRequiredRevision();
 	public void setRequiredRevision( int value );
 
-	public List<ICFSecProtSecClusGrp> getOptionalComponentsImplClusGrp();
+	public List<ICFSecProtSecClusGrp> get$OptionalOrRequired$ComponentsImplClusGrp();
 
-	public List<ICFSecProtSecTentGrp> getOptionalComponentsImplTentGrp();
+	public List<ICFSecProtSecTentGrp> get$OptionalOrRequired$ComponentsImplTentGrp();
 
-	public List<ICFSecProtSecClusRole> getOptionalComponentsImplClusRole();
+	public List<ICFSecProtSecClusRole> get$OptionalOrRequired$ComponentsImplClusRole();
 
-	public List<ICFSecProtSecTentRole> getOptionalComponentsImplTentRole();
+	public List<ICFSecProtSecTentRole> get$OptionalOrRequired$ComponentsImplTentRole();
 
-	public List<ICFSecProtSecSysGrpInc> getOptionalChildrenSysGrpByName();
+	public List<ICFSecProtSecSysGrpInc> get$OptionalOrRequired$ChildrenSysGrpByName();
 
-	public List<ICFSecProtSecSysRoleEnables> getOptionalChildrenRoleByEnableName();
+	public List<ICFSecProtSecSysRoleEnables> get$OptionalOrRequired$ChildrenRoleByEnableName();
 
 	public $implIJavaAtomType$ getRequiredName();
 	public void setRequiredName( $implIJavaAtomType$ value );

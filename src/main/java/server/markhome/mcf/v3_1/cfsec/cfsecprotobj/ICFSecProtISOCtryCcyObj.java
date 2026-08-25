@@ -217,32 +217,32 @@ public interface ICFSecProtISOCtryCcyObj
 	void setIsNew( boolean value );
 
 	/**
-	 *	Get the required ICFSecProtISOCtryObj instance referenced by the Ctry key.
+	 *	Get the $optionalorrequired$ ICFSecProtISOCtryObj instance referenced by the Ctry key.
 	 *
-	 *	@return	The required ICFSecProtISOCtryObj instance referenced by the Ctry key.
+	 *	@return	The $optionalorrequired$ ICFSecProtISOCtryObj instance referenced by the Ctry key.
 	 */
-	ICFSecProtISOCtryObj getRequiredContainerCtry();
+	ICFSecProtISOCtryObj get$OptionalOrRequired$ContainerCtry();
 
 	/**
-	 *	Get the required ICFSecProtISOCtryObj instance referenced by the Ctry key.
+	 *	Get the $optionalorrequired$ ICFSecProtISOCtryObj instance referenced by the Ctry key.
 	 *
-	 *	@return	The required ICFSecProtISOCtryObj instance referenced by the Ctry key.
+	 *	@return	The $optionalorrequired$ ICFSecProtISOCtryObj instance referenced by the Ctry key.
 	 */
-	ICFSecProtISOCtryObj getRequiredContainerCtry( boolean forceRead );
+	ICFSecProtISOCtryObj get$OptionalOrRequired$ContainerCtry( boolean forceRead );
 
 	/**
-	 *	Get the required ICFSecProtISOCcyObj instance referenced by the Ccy key.
+	 *	Get the $optionalorrequired$ ICFSecProtISOCcyObj instance referenced by the Ccy key.
 	 *
-	 *	@return	The required ICFSecProtISOCcyObj instance referenced by the Ccy key.
+	 *	@return	The $optionalorrequired$ ICFSecProtISOCcyObj instance referenced by the Ccy key.
 	 */
-	ICFSecProtISOCcyObj getRequiredParentCcy();
+	ICFSecProtISOCcyObj get$OptionalOrRequired$ParentCcy();
 
 	/**
-	 *	Get the required ICFSecProtISOCcyObj instance referenced by the Ccy key.
+	 *	Get the $optionalorrequired$ ICFSecProtISOCcyObj instance referenced by the Ccy key.
 	 *
-	 *	@return	The required ICFSecProtISOCcyObj instance referenced by the Ccy key.
+	 *	@return	The $optionalorrequired$ ICFSecProtISOCcyObj instance referenced by the Ccy key.
 	 */
-	ICFSecProtISOCcyObj getRequiredParentCcy( boolean forceRead );
+	ICFSecProtISOCcyObj get$OptionalOrRequired$ParentCcy( boolean forceRead );
 
 	/**
 	 *	Get the required short attribute ISOCtryId.

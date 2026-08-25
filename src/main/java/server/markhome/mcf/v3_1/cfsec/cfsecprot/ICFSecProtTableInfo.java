@@ -71,16 +71,16 @@ public interface ICFSecProtTableInfo
 	public int getRequiredRevision();
 	public void setRequiredRevision( int value );
 
-	public ICFSecProtTableInfo getOptionalParentSuperRef();
+	public ICFSecProtTableInfo get$OptionalOrRequired$ParentSuperRef();
 
-	public void setOptionalParentSuperRef($implIJavaAtomType$ argSuperName);
+	public void set$OptionalOrRequired$ParentSuperRef($implIJavaAtomType$ argSuperName);
 
 
-	public void setOptionalParentSuperRef(ICFSecProtTableInfo argObj);
+	public void set$OptionalOrRequired$ParentSuperRef(ICFSecProtTableInfo argObj);
 
-	public void setOptionalParentSuperRef(ICFSecPubTableInfo argObj);
+	public void set$OptionalOrRequired$ParentSuperRef(ICFSecPubTableInfo argObj);
 
-	public List<ICFSecProtTableInfo> getOptionalChildrenSubRefs();
+	public List<ICFSecProtTableInfo> get$OptionalOrRequired$ChildrenSubRefs();
 
 	public $implIJavaAtomType$ getRequiredSchemaName();
 	public void setRequiredSchemaName( $implIJavaAtomType$ value );

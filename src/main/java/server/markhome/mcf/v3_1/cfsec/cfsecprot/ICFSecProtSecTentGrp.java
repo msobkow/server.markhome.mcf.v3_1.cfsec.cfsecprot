@@ -78,26 +78,26 @@ public interface ICFSecProtSecTentGrp
 
 	public CFLibDbKeyHash256 getPKey();
 	public void setPKey(CFLibDbKeyHash256 requiredSecTentGrpId);
-	public List<ICFSecProtSecTentGrpMemb> getOptionalChildrenMembByGrp();
+	public List<ICFSecProtSecTentGrpMemb> get$OptionalOrRequired$ChildrenMembByGrp();
 
 	public $implIJavaAtomType$ getRequiredSecTentGrpId();
 	public void setRequiredSecTentGrpId( $implIJavaAtomType$ value );
 	public int getRequiredRevision();
 	public void setRequiredRevision( int value );
 
-	public ICFSecProtTenant getRequiredOwnerTenant();
+	public ICFSecProtTenant get$OptionalOrRequired$OwnerTenant();
 
-	public void setRequiredOwnerTenant($implIJavaAtomType$ argTenantId);
-
-
-	public void setRequiredOwnerTenant(ICFSecProtTenant argObj);
-
-	public ICFSecProtSecSysGrp getRequiredContainerSysGrp();
-
-	public void setRequiredContainerSysGrp($implIJavaAtomType$ argName);
+	public void set$OptionalOrRequired$OwnerTenant($implIJavaAtomType$ argTenantId);
 
 
-	public void setRequiredContainerSysGrp(ICFSecProtSecSysGrp argObj);
+	public void set$OptionalOrRequired$OwnerTenant(ICFSecProtTenant argObj);
+
+	public ICFSecProtSecSysGrp get$OptionalOrRequired$ContainerSysGrp();
+
+	public void set$OptionalOrRequired$ContainerSysGrp($implIJavaAtomType$ argName);
+
+
+	public void set$OptionalOrRequired$ContainerSysGrp(ICFSecProtSecSysGrp argObj);
 
 	public $implIJavaAtomType$ getRequiredTenantId();
 	public void setRequiredTenantId( $implIJavaAtomType$ value );

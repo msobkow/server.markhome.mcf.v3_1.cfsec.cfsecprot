@@ -113,21 +113,21 @@ public interface ICFSecProtSecUserEMConfEditObj
 	 *
 	 *	@return	The ICFSecProtSecUserObj instance referenced by the User key.
 	 */
-	ICFSecProtSecUserObj getRequiredContainerUser();
+	ICFSecProtSecUserObj get$OptionalOrRequired$ContainerUser();
 
 	/**
-	 *	Get the required ICFSecProtSecUserObj instance referenced by the User key.
+	 *	Get the $optionalorrequired$ ICFSecProtSecUserObj instance referenced by the User key.
 	 *
-	 *	@return	The required ICFSecProtSecUserObj instance referenced by the User key.
+	 *	@return	The $optionalorrequired$ ICFSecProtSecUserObj instance referenced by the User key.
 	 */
-	ICFSecProtSecUserObj getRequiredContainerUser( boolean forceRead );
+	ICFSecProtSecUserObj get$OptionalOrRequired$ContainerUser( boolean forceRead );
 
 	/**
 	 *	Set the ICFSecProtSecUserObj instance referenced by the User key.
 	 *
 	 *	@param	value	the ICFSecProtSecUserObj instance to be referenced by the User key.
 	 */
-	void setRequiredContainerUser( ICFSecProtSecUserObj value );
+	void set$OptionalOrRequired$ContainerUser( ICFSecProtSecUserObj value );
 
 	/**
 	 *	Get the required ICFLibKeyHash256 attribute SecUserId.

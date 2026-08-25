@@ -46,10 +46,10 @@ import server.markhome.mcf.v3_1.cflib.xml.CFLibXmlUtil;
 public interface ICFSecProtISOCtryCcyPKey
 {
 
-	public $reference DataCol switch IsNullable yes implIJavaOptAtomType default implIJavaReqAtomType$ getRequiredISOCtryId();
-	public void setRequiredISOCtryId( $reference DataCol switch IsNullable yes implIJavaOptAtomType default implIJavaReqAtomType$ value );
-	public $reference DataCol switch IsNullable yes implIJavaOptAtomType default implIJavaReqAtomType$ getRequiredISOCcyId();
-	public void setRequiredISOCcyId( $reference DataCol switch IsNullable yes implIJavaOptAtomType default implIJavaReqAtomType$ value );
+	public $implIJavaAtomType$ getRequiredISOCtryId();
+	public void setRequiredISOCtryId( $implIJavaAtomType$ value );
+	public $implIJavaAtomType$ getRequiredISOCcyId();
+	public void setRequiredISOCcyId( $implIJavaAtomType$ value );
 	@Override
 	public boolean equals( Object obj );
 

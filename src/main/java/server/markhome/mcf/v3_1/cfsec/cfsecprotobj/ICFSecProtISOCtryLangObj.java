@@ -217,32 +217,32 @@ public interface ICFSecProtISOCtryLangObj
 	void setIsNew( boolean value );
 
 	/**
-	 *	Get the required ICFSecProtISOCtryObj instance referenced by the Ctry key.
+	 *	Get the $optionalorrequired$ ICFSecProtISOCtryObj instance referenced by the Ctry key.
 	 *
-	 *	@return	The required ICFSecProtISOCtryObj instance referenced by the Ctry key.
+	 *	@return	The $optionalorrequired$ ICFSecProtISOCtryObj instance referenced by the Ctry key.
 	 */
-	ICFSecProtISOCtryObj getRequiredContainerCtry();
+	ICFSecProtISOCtryObj get$OptionalOrRequired$ContainerCtry();
 
 	/**
-	 *	Get the required ICFSecProtISOCtryObj instance referenced by the Ctry key.
+	 *	Get the $optionalorrequired$ ICFSecProtISOCtryObj instance referenced by the Ctry key.
 	 *
-	 *	@return	The required ICFSecProtISOCtryObj instance referenced by the Ctry key.
+	 *	@return	The $optionalorrequired$ ICFSecProtISOCtryObj instance referenced by the Ctry key.
 	 */
-	ICFSecProtISOCtryObj getRequiredContainerCtry( boolean forceRead );
+	ICFSecProtISOCtryObj get$OptionalOrRequired$ContainerCtry( boolean forceRead );
 
 	/**
-	 *	Get the required ICFSecProtISOLangObj instance referenced by the Lang key.
+	 *	Get the $optionalorrequired$ ICFSecProtISOLangObj instance referenced by the Lang key.
 	 *
-	 *	@return	The required ICFSecProtISOLangObj instance referenced by the Lang key.
+	 *	@return	The $optionalorrequired$ ICFSecProtISOLangObj instance referenced by the Lang key.
 	 */
-	ICFSecProtISOLangObj getRequiredParentLang();
+	ICFSecProtISOLangObj get$OptionalOrRequired$ParentLang();
 
 	/**
-	 *	Get the required ICFSecProtISOLangObj instance referenced by the Lang key.
+	 *	Get the $optionalorrequired$ ICFSecProtISOLangObj instance referenced by the Lang key.
 	 *
-	 *	@return	The required ICFSecProtISOLangObj instance referenced by the Lang key.
+	 *	@return	The $optionalorrequired$ ICFSecProtISOLangObj instance referenced by the Lang key.
 	 */
-	ICFSecProtISOLangObj getRequiredParentLang( boolean forceRead );
+	ICFSecProtISOLangObj get$OptionalOrRequired$ParentLang( boolean forceRead );
 
 	/**
 	 *	Get the required short attribute ISOCtryId.

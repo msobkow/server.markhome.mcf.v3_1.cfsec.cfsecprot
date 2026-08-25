@@ -113,42 +113,42 @@ public interface ICFSecProtSecSysRoleEnablesEditObj
 	 *
 	 *	@return	The ICFSecProtSecSysRoleObj instance referenced by the SysRole key.
 	 */
-	ICFSecProtSecSysRoleObj getRequiredContainerSysRole();
+	ICFSecProtSecSysRoleObj get$OptionalOrRequired$ContainerSysRole();
 
 	/**
-	 *	Get the required ICFSecProtSecSysRoleObj instance referenced by the SysRole key.
+	 *	Get the $optionalorrequired$ ICFSecProtSecSysRoleObj instance referenced by the SysRole key.
 	 *
-	 *	@return	The required ICFSecProtSecSysRoleObj instance referenced by the SysRole key.
+	 *	@return	The $optionalorrequired$ ICFSecProtSecSysRoleObj instance referenced by the SysRole key.
 	 */
-	ICFSecProtSecSysRoleObj getRequiredContainerSysRole( boolean forceRead );
+	ICFSecProtSecSysRoleObj get$OptionalOrRequired$ContainerSysRole( boolean forceRead );
 
 	/**
 	 *	Set the ICFSecProtSecSysRoleObj instance referenced by the SysRole key.
 	 *
 	 *	@param	value	the ICFSecProtSecSysRoleObj instance to be referenced by the SysRole key.
 	 */
-	void setRequiredContainerSysRole( ICFSecProtSecSysRoleObj value );
+	void set$OptionalOrRequired$ContainerSysRole( ICFSecProtSecSysRoleObj value );
 
 	/**
 	 *	Get the ICFSecProtSecSysGrpObj instance referenced by the EnableGroup key.
 	 *
 	 *	@return	The ICFSecProtSecSysGrpObj instance referenced by the EnableGroup key.
 	 */
-	ICFSecProtSecSysGrpObj getRequiredParentEnableGroup();
+	ICFSecProtSecSysGrpObj get$OptionalOrRequired$ParentEnableGroup();
 
 	/**
-	 *	Get the required ICFSecProtSecSysGrpObj instance referenced by the EnableGroup key.
+	 *	Get the $optionalorrequired$ ICFSecProtSecSysGrpObj instance referenced by the EnableGroup key.
 	 *
-	 *	@return	The required ICFSecProtSecSysGrpObj instance referenced by the EnableGroup key.
+	 *	@return	The $optionalorrequired$ ICFSecProtSecSysGrpObj instance referenced by the EnableGroup key.
 	 */
-	ICFSecProtSecSysGrpObj getRequiredParentEnableGroup( boolean forceRead );
+	ICFSecProtSecSysGrpObj get$OptionalOrRequired$ParentEnableGroup( boolean forceRead );
 
 	/**
 	 *	Set the ICFSecProtSecSysGrpObj instance referenced by the EnableGroup key.
 	 *
 	 *	@param	value	the ICFSecProtSecSysGrpObj instance to be referenced by the EnableGroup key.
 	 */
-	void setRequiredParentEnableGroup( ICFSecProtSecSysGrpObj value );
+	void set$OptionalOrRequired$ParentEnableGroup( ICFSecProtSecSysGrpObj value );
 
 	/**
 	 *	Get the required ICFLibKeyHash256 attribute SecSysRoleId.

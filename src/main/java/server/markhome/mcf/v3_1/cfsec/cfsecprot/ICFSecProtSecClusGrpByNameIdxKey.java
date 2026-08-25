@@ -46,8 +46,8 @@ import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
  */
 public interface ICFSecProtSecClusGrpByNameIdxKey
 {
-	public $reference DataCol switch IsNullable yes implIJavaOptAtomType default implIJavaReqAtomType$ getRequiredName();
-	public void setRequiredName( $reference DataCol switch IsNullable yes implIJavaOptAtomType default implIJavaReqAtomType$ value );
+	public $implIJavaAtomType$ getRequiredName();
+	public void setRequiredName( $implIJavaAtomType$ value );
 	@Override
 	public boolean equals( Object obj );
 

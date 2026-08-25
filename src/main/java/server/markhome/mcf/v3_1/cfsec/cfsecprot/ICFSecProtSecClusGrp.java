@@ -78,31 +78,31 @@ public interface ICFSecProtSecClusGrp
 
 	public CFLibDbKeyHash256 getPKey();
 	public void setPKey(CFLibDbKeyHash256 requiredSecClusGrpId);
-	public List<ICFSecProtSecClusGrpMemb> getOptionalChildrenMembByGrp();
+	public List<ICFSecProtSecClusGrpMemb> get$OptionalOrRequired$ChildrenMembByGrp();
 
-	public $reference DataCol switch IsNullable yes implIJavaOptAtomType default implIJavaReqAtomType$ getRequiredSecClusGrpId();
-	public void setRequiredSecClusGrpId( $reference DataCol switch IsNullable yes implIJavaOptAtomType default implIJavaReqAtomType$ value );
+	public $implIJavaAtomType$ getRequiredSecClusGrpId();
+	public void setRequiredSecClusGrpId( $implIJavaAtomType$ value );
 	public int getRequiredRevision();
 	public void setRequiredRevision( int value );
 
-	public ICFSecProtCluster getRequiredOwnerCluster();
+	public ICFSecProtCluster get$OptionalOrRequired$OwnerCluster();
 
-	public void setRequiredOwnerCluster($reference DataCol switch IsNullable yes implIJavaOptAtomType default implIJavaReqAtomType$ argClusterId);
-
-
-	public void setRequiredOwnerCluster(ICFSecProtCluster argObj);
-
-	public ICFSecProtSecSysGrp getRequiredContainerSysGrp();
-
-	public void setRequiredContainerSysGrp($reference DataCol switch IsNullable yes implIJavaOptAtomType default implIJavaReqAtomType$ argName);
+	public void set$OptionalOrRequired$OwnerCluster($implIJavaAtomType$ argClusterId);
 
 
-	public void setRequiredContainerSysGrp(ICFSecProtSecSysGrp argObj);
+	public void set$OptionalOrRequired$OwnerCluster(ICFSecProtCluster argObj);
 
-	public $reference DataCol switch IsNullable yes implIJavaOptAtomType default implIJavaReqAtomType$ getRequiredClusterId();
-	public void setRequiredClusterId( $reference DataCol switch IsNullable yes implIJavaOptAtomType default implIJavaReqAtomType$ value );
-	public $reference DataCol switch IsNullable yes implIJavaOptAtomType default implIJavaReqAtomType$ getRequiredName();
-	public void setRequiredName( $reference DataCol switch IsNullable yes implIJavaOptAtomType default implIJavaReqAtomType$ value );
+	public ICFSecProtSecSysGrp get$OptionalOrRequired$ContainerSysGrp();
+
+	public void set$OptionalOrRequired$ContainerSysGrp($implIJavaAtomType$ argName);
+
+
+	public void set$OptionalOrRequired$ContainerSysGrp(ICFSecProtSecSysGrp argObj);
+
+	public $implIJavaAtomType$ getRequiredClusterId();
+	public void setRequiredClusterId( $implIJavaAtomType$ value );
+	public $implIJavaAtomType$ getRequiredName();
+	public void setRequiredName( $implIJavaAtomType$ value );
 	public boolean equals( Object obj );
 
 	public int hashCode();

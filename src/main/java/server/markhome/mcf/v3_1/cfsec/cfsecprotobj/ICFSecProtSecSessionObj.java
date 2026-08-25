@@ -190,18 +190,18 @@ public interface ICFSecProtSecSessionObj
 	void setIsNew( boolean value );
 
 	/**
-	 *	Get the required ICFSecProtSecUserObj instance referenced by the SecUser key.
+	 *	Get the $optionalorrequired$ ICFSecProtSecUserObj instance referenced by the SecUser key.
 	 *
-	 *	@return	The required ICFSecProtSecUserObj instance referenced by the SecUser key.
+	 *	@return	The $optionalorrequired$ ICFSecProtSecUserObj instance referenced by the SecUser key.
 	 */
-	ICFSecProtSecUserObj getRequiredContainerSecUser();
+	ICFSecProtSecUserObj get$OptionalOrRequired$ContainerSecUser();
 
 	/**
-	 *	Get the required ICFSecProtSecUserObj instance referenced by the SecUser key.
+	 *	Get the $optionalorrequired$ ICFSecProtSecUserObj instance referenced by the SecUser key.
 	 *
-	 *	@return	The required ICFSecProtSecUserObj instance referenced by the SecUser key.
+	 *	@return	The $optionalorrequired$ ICFSecProtSecUserObj instance referenced by the SecUser key.
 	 */
-	ICFSecProtSecUserObj getRequiredContainerSecUser( boolean forceRead );
+	ICFSecProtSecUserObj get$OptionalOrRequired$ContainerSecUser( boolean forceRead );
 
 	/**
 	 *	Get the required ICFLibKeyHash256 attribute SecSessionId.

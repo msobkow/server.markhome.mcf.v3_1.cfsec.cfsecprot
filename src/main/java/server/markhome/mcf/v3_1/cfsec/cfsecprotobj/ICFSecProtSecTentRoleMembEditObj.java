@@ -113,42 +113,42 @@ public interface ICFSecProtSecTentRoleMembEditObj
 	 *
 	 *	@return	The ICFSecProtSecTentRoleObj instance referenced by the Role key.
 	 */
-	ICFSecProtSecTentRoleObj getRequiredContainerRole();
+	ICFSecProtSecTentRoleObj get$OptionalOrRequired$ContainerRole();
 
 	/**
-	 *	Get the required ICFSecProtSecTentRoleObj instance referenced by the Role key.
+	 *	Get the $optionalorrequired$ ICFSecProtSecTentRoleObj instance referenced by the Role key.
 	 *
-	 *	@return	The required ICFSecProtSecTentRoleObj instance referenced by the Role key.
+	 *	@return	The $optionalorrequired$ ICFSecProtSecTentRoleObj instance referenced by the Role key.
 	 */
-	ICFSecProtSecTentRoleObj getRequiredContainerRole( boolean forceRead );
+	ICFSecProtSecTentRoleObj get$OptionalOrRequired$ContainerRole( boolean forceRead );
 
 	/**
 	 *	Set the ICFSecProtSecTentRoleObj instance referenced by the Role key.
 	 *
 	 *	@param	value	the ICFSecProtSecTentRoleObj instance to be referenced by the Role key.
 	 */
-	void setRequiredContainerRole( ICFSecProtSecTentRoleObj value );
+	void set$OptionalOrRequired$ContainerRole( ICFSecProtSecTentRoleObj value );
 
 	/**
 	 *	Get the ICFSecProtSecUserObj instance referenced by the User key.
 	 *
 	 *	@return	The ICFSecProtSecUserObj instance referenced by the User key.
 	 */
-	ICFSecProtSecUserObj getRequiredParentUser();
+	ICFSecProtSecUserObj get$OptionalOrRequired$ParentUser();
 
 	/**
-	 *	Get the required ICFSecProtSecUserObj instance referenced by the User key.
+	 *	Get the $optionalorrequired$ ICFSecProtSecUserObj instance referenced by the User key.
 	 *
-	 *	@return	The required ICFSecProtSecUserObj instance referenced by the User key.
+	 *	@return	The $optionalorrequired$ ICFSecProtSecUserObj instance referenced by the User key.
 	 */
-	ICFSecProtSecUserObj getRequiredParentUser( boolean forceRead );
+	ICFSecProtSecUserObj get$OptionalOrRequired$ParentUser( boolean forceRead );
 
 	/**
 	 *	Set the ICFSecProtSecUserObj instance referenced by the User key.
 	 *
 	 *	@param	value	the ICFSecProtSecUserObj instance to be referenced by the User key.
 	 */
-	void setRequiredParentUser( ICFSecProtSecUserObj value );
+	void set$OptionalOrRequired$ParentUser( ICFSecProtSecUserObj value );
 
 	/**
 	 *	Get the required ICFLibKeyHash256 attribute SecTentRoleId.

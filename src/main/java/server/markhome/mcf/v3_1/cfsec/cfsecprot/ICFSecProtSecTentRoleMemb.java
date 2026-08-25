@@ -76,19 +76,19 @@ public interface ICFSecProtSecTentRoleMemb
 
 	public ICFSecProtSecTentRoleMembPKey getPKey();
 	public void setPKey(ICFSecProtSecTentRoleMembPKey pkey );
-	public ICFSecProtSecTentRole getRequiredContainerRole();
+	public ICFSecProtSecTentRole get$OptionalOrRequired$ContainerRole();
 
-	public void setRequiredContainerRole($implIJavaAtomType$ argSecTentRoleId);
-
-
-	public void setRequiredContainerRole(ICFSecProtSecTentRole argObj);
-
-	public ICFSecProtSecUser getRequiredParentUser();
-
-	public void setRequiredParentUser($implIJavaAtomType$ argLoginId);
+	public void set$OptionalOrRequired$ContainerRole($implIJavaAtomType$ argSecTentRoleId);
 
 
-	public void setRequiredParentUser(ICFSecProtSecUser argObj);
+	public void set$OptionalOrRequired$ContainerRole(ICFSecProtSecTentRole argObj);
+
+	public ICFSecProtSecUser get$OptionalOrRequired$ParentUser();
+
+	public void set$OptionalOrRequired$ParentUser($implIJavaAtomType$ argLoginId);
+
+
+	public void set$OptionalOrRequired$ParentUser(ICFSecProtSecUser argObj);
 
 	public ICFLibKeyHash256 getRequiredSecTentRoleId();
 

@@ -70,7 +70,7 @@ public interface ICFSecProtTenantH
 	public CFLibDbKeyHash256 getAuditSessionId();
 	public void setAuditSessionId(CFLibDbKeyHash256 auditSessionId);
 
-	public $implIJavaAtomType first implIJavaAtomType each implCommaIJavaAtomType empty empty )$ getRequiredId();
+	public $implIJavaAtomType$ getRequiredId();
 	public void setRequiredId( ICFLibKeyHash256 requiredId );
 
 	public $implIJavaAtomType$ getRequiredClusterId();

@@ -85,28 +85,28 @@ public interface ICFSecProtTableInfoEditObj
 	 *
 	 *	@return	The ICFSecProtTableInfoObj instance referenced by the SuperRef key.
 	 */
-	ICFSecProtTableInfoObj getOptionalParentSuperRef();
+	ICFSecProtTableInfoObj get$OptionalOrRequired$ParentSuperRef();
 
 	/**
-	 *	Get the optional ICFSecProtTableInfoObj instance referenced by the SuperRef key.
+	 *	Get the $optionalorrequired$ ICFSecProtTableInfoObj instance referenced by the SuperRef key.
 	 *
-	 *	@return	The optional ICFSecProtTableInfoObj instance referenced by the SuperRef key.
+	 *	@return	The $optionalorrequired$ ICFSecProtTableInfoObj instance referenced by the SuperRef key.
 	 */
-	ICFSecProtTableInfoObj getOptionalParentSuperRef( boolean forceRead );
+	ICFSecProtTableInfoObj get$OptionalOrRequired$ParentSuperRef( boolean forceRead );
 
 	/**
 	 *	Set the ICFSecProtTableInfoObj instance referenced by the SuperRef key.
 	 *
 	 *	@param	value	the ICFSecProtTableInfoObj instance to be referenced by the SuperRef key.
 	 */
-	void setOptionalParentSuperRef( ICFSecProtTableInfoObj value );
+	void set$OptionalOrRequired$ParentSuperRef( ICFSecProtTableInfoObj value );
 
 	/**
 	 *	Get a list ICFSecProtTableInfoObj instances referenced by the SubRefs key.
 	 *
 	 *	@return	The (potentially empty) list of ICFSecProtTableInfoObj instances referenced by the SubRefs key.
 	 */
-	List<ICFSecProtTableInfoObj> getOptionalChildrenSubRefs();
+	List<ICFSecProtTableInfoObj> get$OptionalOrRequired$ChildrenSubRefs();
 
 	/**
 	 *	Get the required int attribute TableInfoId.

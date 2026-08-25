@@ -217,18 +217,18 @@ public interface ICFSecProtSecUserObj
 	void setIsNew( boolean value );
 
 	/**
-	 *	Get the array of optional ICFSecProtSecSessionObj array of instances referenced by the SecSess key.
+	 *	Get the array of $optionalorrequired$ ICFSecProtSecSessionObj array of instances referenced by the SecSess key.
 	 *
-	 *	@return	The optional ICFSecProtSecSessionObj[] array of instances referenced by the SecSess key.
+	 *	@return	The $optionalorrequired$ ICFSecProtSecSessionObj[] array of instances referenced by the SecSess key.
 	 */
-	List<ICFSecProtSecSessionObj> getOptionalComponentsSecSess();
+	List<ICFSecProtSecSessionObj> get$OptionalOrRequired$ComponentsSecSess();
 
 	/**
-	 *	Get the array of optional ICFSecProtSecSessionObj array of instances referenced by the SecSess key.
+	 *	Get the array of $optionalorrequired$ ICFSecProtSecSessionObj array of instances referenced by the SecSess key.
 	 *
-	 *	@return	The optional ICFSecProtSecSessionObj[] array of instances referenced by the SecSess key.
+	 *	@return	The $optionalorrequired$ ICFSecProtSecSessionObj[] array of instances referenced by the SecSess key.
 	 */
-	List<ICFSecProtSecSessionObj> getOptionalComponentsSecSess( boolean forceRead );
+	List<ICFSecProtSecSessionObj> get$OptionalOrRequired$ComponentsSecSess( boolean forceRead );
 
 	/**
 	 *	Get the required ICFLibKeyHash256 attribute SecUserId.

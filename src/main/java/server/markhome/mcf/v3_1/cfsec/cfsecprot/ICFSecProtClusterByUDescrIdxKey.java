@@ -46,8 +46,8 @@ import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
  */
 public interface ICFSecProtClusterByUDescrIdxKey
 {
-	public String getRequiredDescription();
-	public void setRequiredDescription( String value );
+	public $implIJavaAtomType$ getRequiredDescription();
+	public void setRequiredDescription( $implIJavaAtomType$ value );
 	@Override
 	public boolean equals( Object obj );
 

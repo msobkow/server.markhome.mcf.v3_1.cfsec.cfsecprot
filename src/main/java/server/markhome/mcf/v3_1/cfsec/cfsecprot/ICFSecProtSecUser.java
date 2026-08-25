@@ -83,24 +83,24 @@ public interface ICFSecProtSecUser
 
 	public CFLibDbKeyHash256 getPKey();
 	public void setPKey(CFLibDbKeyHash256 requiredSecUserId);
-	public List<ICFSecProtSecSession> getOptionalComponentsSecSess();
+	public List<ICFSecProtSecSession> get$OptionalOrRequired$ComponentsSecSess();
 
-	public List<ICFSecProtSecSession> getOptionalChildrenSecProxy();
+	public List<ICFSecProtSecSession> get$OptionalOrRequired$ChildrenSecProxy();
 
-	public ICFSecProtSecUserEMConf getOptionalComponentsEMConf();
+	public ICFSecProtSecUserEMConf get$OptionalOrRequired$ComponentsEMConf();
 
-	public ICFSecProtSecUserPWReset getOptionalComponentsPWReset();
+	public ICFSecProtSecUserPWReset get$OptionalOrRequired$ComponentsPWReset();
 
 	public $implIJavaAtomType$ getRequiredSecUserId();
 	public void setRequiredSecUserId( $implIJavaAtomType$ value );
 	public int getRequiredRevision();
 	public void setRequiredRevision( int value );
 
-	public List<ICFSecProtSecSysGrpMemb> getOptionalChildrenSysSecGrpMemb();
+	public List<ICFSecProtSecSysGrpMemb> get$OptionalOrRequired$ChildrenSysSecGrpMemb();
 
-	public List<ICFSecProtSecClusGrpMemb> getOptionalChildrenClusSecGrpMemb();
+	public List<ICFSecProtSecClusGrpMemb> get$OptionalOrRequired$ChildrenClusSecGrpMemb();
 
-	public List<ICFSecProtSecTentGrpMemb> getOptionalChildrenTentSecGrpMemb();
+	public List<ICFSecProtSecTentGrpMemb> get$OptionalOrRequired$ChildrenTentSecGrpMemb();
 
 	public $implIJavaAtomType$ getRequiredLoginId();
 	public void setRequiredLoginId( $implIJavaAtomType$ value );

@@ -77,23 +77,23 @@ public interface ICFSecProtISOCtryLang
 
 	public ICFSecProtISOCtryLangPKey getPKey();
 	public void setPKey(ICFSecProtISOCtryLangPKey pkey );
-	public ICFSecProtISOCtry getRequiredContainerCtry();
+	public ICFSecProtISOCtry get$OptionalOrRequired$ContainerCtry();
 
-	public void setRequiredContainerCtry($reference DataCol switch IsNullable yes implIJavaOptAtomType default implIJavaReqAtomType$ argISOCtryId);
-
-
-	public void setRequiredContainerCtry(ICFSecProtISOCtry argObj);
-
-	public void setRequiredContainerCtry(ICFSecPubISOCtry argObj);
-
-	public ICFSecProtISOLang getRequiredParentLang();
-
-	public void setRequiredParentLang($reference DataCol switch IsNullable yes implIJavaOptAtomType default implIJavaReqAtomType$ argISOLangId);
+	public void set$OptionalOrRequired$ContainerCtry($implIJavaAtomType$ argISOCtryId);
 
 
-	public void setRequiredParentLang(ICFSecProtISOLang argObj);
+	public void set$OptionalOrRequired$ContainerCtry(ICFSecProtISOCtry argObj);
 
-	public void setRequiredParentLang(ICFSecPubISOLang argObj);
+	public void set$OptionalOrRequired$ContainerCtry(ICFSecPubISOCtry argObj);
+
+	public ICFSecProtISOLang get$OptionalOrRequired$ParentLang();
+
+	public void set$OptionalOrRequired$ParentLang($implIJavaAtomType$ argISOLangId);
+
+
+	public void set$OptionalOrRequired$ParentLang(ICFSecProtISOLang argObj);
+
+	public void set$OptionalOrRequired$ParentLang(ICFSecPubISOLang argObj);
 
 	public short getRequiredISOCtryId();
 

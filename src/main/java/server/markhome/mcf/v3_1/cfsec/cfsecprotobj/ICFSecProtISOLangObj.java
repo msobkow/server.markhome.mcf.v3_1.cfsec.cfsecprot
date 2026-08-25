@@ -217,18 +217,18 @@ public interface ICFSecProtISOLangObj
 	void setIsNew( boolean value );
 
 	/**
-	 *	Get the array of optional ICFSecProtISOCtryLangObj array of instances referenced by the Ctry key.
+	 *	Get the array of $optionalorrequired$ ICFSecProtISOCtryLangObj array of instances referenced by the Ctry key.
 	 *
-	 *	@return	The optional ICFSecProtISOCtryLangObj[] array of instances referenced by the Ctry key.
+	 *	@return	The $optionalorrequired$ ICFSecProtISOCtryLangObj[] array of instances referenced by the Ctry key.
 	 */
-	List<ICFSecProtISOCtryLangObj> getOptionalChildrenCtry();
+	List<ICFSecProtISOCtryLangObj> get$OptionalOrRequired$ChildrenCtry();
 
 	/**
-	 *	Get the array of optional ICFSecProtISOCtryLangObj array of instances referenced by the Ctry key.
+	 *	Get the array of $optionalorrequired$ ICFSecProtISOCtryLangObj array of instances referenced by the Ctry key.
 	 *
-	 *	@return	The optional ICFSecProtISOCtryLangObj[] array of instances referenced by the Ctry key.
+	 *	@return	The $optionalorrequired$ ICFSecProtISOCtryLangObj[] array of instances referenced by the Ctry key.
 	 */
-	List<ICFSecProtISOCtryLangObj> getOptionalChildrenCtry( boolean forceRead );
+	List<ICFSecProtISOCtryLangObj> get$OptionalOrRequired$ChildrenCtry( boolean forceRead );
 
 	/**
 	 *	Get the required short attribute ISOLangId.

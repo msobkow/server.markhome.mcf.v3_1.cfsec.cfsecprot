@@ -70,7 +70,7 @@ public interface ICFSecProtSecSysRoleH
 	public CFLibDbKeyHash256 getAuditSessionId();
 	public void setAuditSessionId(CFLibDbKeyHash256 auditSessionId);
 
-	public $implIJavaAtomType first implIJavaAtomType each implCommaIJavaAtomType empty empty )$ getRequiredSecSysRoleId();
+	public $implIJavaAtomType$ getRequiredSecSysRoleId();
 	public void setRequiredSecSysRoleId( ICFLibKeyHash256 requiredSecSysRoleId );
 
 	public $implIJavaAtomType$ getRequiredName();

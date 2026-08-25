@@ -65,23 +65,23 @@ public interface ICFSecProtSecSession
 	public int getRequiredRevision();
 	public void setRequiredRevision( int value );
 
-	public ICFSecProtSecUser getRequiredContainerSecUser();
+	public ICFSecProtSecUser get$OptionalOrRequired$ContainerSecUser();
 
-	public void setRequiredContainerSecUser($implIJavaAtomType$ argSecUserId);
-
-
-	public void setRequiredContainerSecUser(ICFSecProtSecUser argObj);
-
-	public void setRequiredContainerSecUser(ICFSecPubSecUser argObj);
-
-	public ICFSecProtSecUser getRequiredParentSecProxy();
-
-	public void setRequiredParentSecProxy($implIJavaAtomType$ argSecProxyId);
+	public void set$OptionalOrRequired$ContainerSecUser($implIJavaAtomType$ argSecUserId);
 
 
-	public void setRequiredParentSecProxy(ICFSecProtSecUser argObj);
+	public void set$OptionalOrRequired$ContainerSecUser(ICFSecProtSecUser argObj);
 
-	public void setRequiredParentSecProxy(ICFSecPubSecUser argObj);
+	public void set$OptionalOrRequired$ContainerSecUser(ICFSecPubSecUser argObj);
+
+	public ICFSecProtSecUser get$OptionalOrRequired$ParentSecProxy();
+
+	public void set$OptionalOrRequired$ParentSecProxy($implIJavaAtomType$ argSecProxyId);
+
+
+	public void set$OptionalOrRequired$ParentSecProxy(ICFSecProtSecUser argObj);
+
+	public void set$OptionalOrRequired$ParentSecProxy(ICFSecPubSecUser argObj);
 
 	public $implIJavaAtomType$ getRequiredSecUserId();
 	public void setRequiredSecUserId( $implIJavaAtomType$ value );

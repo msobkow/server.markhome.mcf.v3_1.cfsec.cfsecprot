@@ -46,8 +46,8 @@ import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
  */
 public interface ICFSecProtISOLangByCode2IdxKey
 {
-	public $reference DataCol switch IsNullable yes implIJavaOptAtomType default implIJavaReqAtomType$ getOptionalISO6391Code();
-	public void setOptionalISO6391Code( $reference DataCol switch IsNullable yes implIJavaOptAtomType default implIJavaReqAtomType$ value );
+	public $implIJavaAtomType$ getOptionalISO6391Code();
+	public void setOptionalISO6391Code( $implIJavaAtomType$ value );
 	@Override
 	public boolean equals( Object obj );
 

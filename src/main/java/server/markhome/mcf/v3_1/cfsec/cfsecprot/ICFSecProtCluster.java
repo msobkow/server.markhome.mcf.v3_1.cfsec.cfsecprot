@@ -77,23 +77,23 @@ public interface ICFSecProtCluster
 
 	public CFLibDbKeyHash256 getPKey();
 	public void setPKey(CFLibDbKeyHash256 requiredId);
-	public List<ICFSecProtTenant> getOptionalComponentsTenant();
+	public List<ICFSecProtTenant> get$OptionalOrRequired$ComponentsTenant();
 
-	public List<ICFSecProtSecClusGrp> getOptionalComponentsSecGroup();
+	public List<ICFSecProtSecClusGrp> get$OptionalOrRequired$ComponentsSecGroup();
 
-	public List<ICFSecProtSecClusRole> getOptionalComponentsSecRole();
+	public List<ICFSecProtSecClusRole> get$OptionalOrRequired$ComponentsSecRole();
 
-	public List<ICFSecProtSysCluster> getOptionalComponentsSysCluster();
+	public List<ICFSecProtSysCluster> get$OptionalOrRequired$ComponentsSysCluster();
 
-	public ICFLibKeyHash256 getRequiredId();
-	public void setRequiredId( ICFLibKeyHash256 value );
+	public $implIJavaAtomType$ getRequiredId();
+	public void setRequiredId( $implIJavaAtomType$ value );
 	public int getRequiredRevision();
 	public void setRequiredRevision( int value );
 
-	public String getRequiredFullDomName();
-	public void setRequiredFullDomName( String value );
-	public String getRequiredDescription();
-	public void setRequiredDescription( String value );
+	public $implIJavaAtomType$ getRequiredFullDomName();
+	public void setRequiredFullDomName( $implIJavaAtomType$ value );
+	public $implIJavaAtomType$ getRequiredDescription();
+	public void setRequiredDescription( $implIJavaAtomType$ value );
 	public boolean equals( Object obj );
 
 	public int hashCode();
