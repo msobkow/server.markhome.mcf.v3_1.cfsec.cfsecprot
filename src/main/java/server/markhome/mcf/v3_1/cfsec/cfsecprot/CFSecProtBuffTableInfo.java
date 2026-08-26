@@ -122,22 +122,22 @@ public class CFSecProtBuffTableInfo
 
 	@Override
 	public ICFSecProtTableInfo getOptionalParentSuperRef(String argSuperName) {
-		ICFSecSchema targetBackingCFSec = ICFSecSchema.getBackingCFSec();
+		ICFSecProtSchema targetBackingCFSec = ICFSecProtSchema.getBackingCFSec();
 		if (targetBackingCFSec == null) {
-			throw new CFLibNullArgumentException(getClass(), "getOptionalParentSuperRef", 0, "ICFSecSchema.getBackingCFSec()");
+			throw new CFLibNullArgumentException(getClass(), "getOptionalParentSuperRef", 0, "ICFSecProtSchema.getBackingCFSec()");
 		}
 		ICFSecProtTableInfoTable targetTable = targetBackingCFSec.getTableTableInfo();
 		if (targetTable == null) {
-			throw new CFLibNullArgumentException(getClass(), "getOptionalParentSuperRef", 0, "ICFSecSchema.getBackingCFSec().getTableTableInfo()");
+			throw new CFLibNullArgumentException(getClass(), "getOptionalParentSuperRef", 0, "ICFSecProtSchema.getBackingCFSec().getTableTableInfo()");
 		}
 		return(targetTable.readDerivedByTableNameIdx(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getOptionalSuperName()));
 	}
 
 	@Override
 	public void setOptionalParentSuperRef(String argSuperName) {
-		ICFSecSchema targetBackingCFSec = ICFSecSchema.getBackingCFSec();
+		ICFSecProtSchema targetBackingCFSec = ICFSecProtSchema.getBackingCFSec();
 		if (targetBackingCFSec == null) {
-			throw new CFLibNullArgumentException(getClass(), "setOptionalParentSuperRef-args", 0, "ICFSecSchema.getBackingCFSec()");
+			throw new CFLibNullArgumentException(getClass(), "setOptionalParentSuperRef-args", 0, "ICFSecProtSchema.getBackingCFSec()");
 		}
 		ICFSecProtTableInfoTable targetTable = targetBackingCFSec.getTableTableInfo();
 		if (targetTable == null) {
