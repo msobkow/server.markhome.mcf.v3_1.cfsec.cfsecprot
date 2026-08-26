@@ -60,8 +60,8 @@ public interface ICFSecProtISOCtryHPKey
 	public CFLibDbKeyHash256 getAuditSessionId();
 	public void setAuditSessionId( CFLibDbKeyHash256 value );
 
-	public $implIJavaAtomType$ getRequiredISOCtryId();
-	public void setRequiredISOCtryId( $implIJavaAtomType$ value );
+	public short getRequiredISOCtryId();
+	public void setRequiredISOCtryId( short value );
 	@Override
 	public boolean equals( Object obj );
 

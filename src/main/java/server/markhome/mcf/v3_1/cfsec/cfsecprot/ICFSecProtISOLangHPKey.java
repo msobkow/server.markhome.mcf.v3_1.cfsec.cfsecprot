@@ -60,8 +60,8 @@ public interface ICFSecProtISOLangHPKey
 	public CFLibDbKeyHash256 getAuditSessionId();
 	public void setAuditSessionId( CFLibDbKeyHash256 value );
 
-	public $implIJavaAtomType$ getRequiredISOLangId();
-	public void setRequiredISOLangId( $implIJavaAtomType$ value );
+	public short getRequiredISOLangId();
+	public void setRequiredISOLangId( short value );
 	@Override
 	public boolean equals( Object obj );
 

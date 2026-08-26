@@ -60,8 +60,8 @@ public interface ICFSecProtSecClusGrpHPKey
 	public CFLibDbKeyHash256 getAuditSessionId();
 	public void setAuditSessionId( CFLibDbKeyHash256 value );
 
-	public $implIJavaAtomType$ getRequiredSecClusGrpId();
-	public void setRequiredSecClusGrpId( $implIJavaAtomType$ value );
+	public ICFLibKeyHash256 getRequiredSecClusGrpId();
+	public void setRequiredSecClusGrpId( ICFLibKeyHash256 value );
 	@Override
 	public boolean equals( Object obj );
 

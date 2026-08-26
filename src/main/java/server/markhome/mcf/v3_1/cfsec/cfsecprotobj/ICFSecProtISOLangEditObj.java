@@ -113,7 +113,7 @@ public interface ICFSecProtISOLangEditObj
 	 *
 	 *	@return	The (potentially empty) list of ICFSecProtISOCtryLangObj instances referenced by the Ctry key.
 	 */
-	List<ICFSecProtISOCtryLangObj> get$OptionalOrRequired$ChildrenCtry();
+	List<ICFSecProtISOCtryLangObj> getOptionalChildrenCtry();
 
 	/**
 	 *	Get the required short attribute ISOLangId.

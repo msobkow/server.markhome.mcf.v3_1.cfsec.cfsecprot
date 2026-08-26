@@ -78,19 +78,19 @@ public interface ICFSecProtISOLang
 
 	public Short getPKey();
 	public void setPKey(Short requiredISOLangId);
-	public List<ICFSecProtISOCtryLang> get$OptionalOrRequired$ChildrenCtry();
+	public List<ICFSecProtISOCtryLang> getOptionalChildrenCtry();
 
-	public $implIJavaAtomType$ getRequiredISOLangId();
-	public void setRequiredISOLangId( $implIJavaAtomType$ value );
+	public short getRequiredISOLangId();
+	public void setRequiredISOLangId( short value );
 	public int getRequiredRevision();
 	public void setRequiredRevision( int value );
 
-	public $implIJavaAtomType$ getRequiredISO6392Code();
-	public void setRequiredISO6392Code( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalISO6391Code();
-	public void setOptionalISO6391Code( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredEnglishName();
-	public void setRequiredEnglishName( $implIJavaAtomType$ value );
+	public String getRequiredISO6392Code();
+	public void setRequiredISO6392Code( String value );
+	public String getOptionalISO6391Code();
+	public void setOptionalISO6391Code( String value );
+	public String getRequiredEnglishName();
+	public void setRequiredEnglishName( String value );
 	public boolean equals( Object obj );
 
 	public int hashCode();

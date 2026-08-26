@@ -70,10 +70,10 @@ public interface ICFSecProtSecSysRoleEnablesH
 	public CFLibDbKeyHash256 getAuditSessionId();
 	public void setAuditSessionId(CFLibDbKeyHash256 auditSessionId);
 
-	public $implIJavaAtomType$ getRequiredSecSysRoleId();
+	public ICFLibKeyHash256 getRequiredSecSysRoleId();
 	public void setRequiredSecSysRoleId( ICFLibKeyHash256 requiredSecSysRoleId );
 
-	public $implIJavaAtomType$ getRequiredEnableName();
+	public String getRequiredEnableName();
 	public void setRequiredEnableName( String requiredEnableName );
 
 	@Override

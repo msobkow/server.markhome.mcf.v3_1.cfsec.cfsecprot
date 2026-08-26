@@ -78,28 +78,28 @@ public interface ICFSecProtTenant
 
 	public CFLibDbKeyHash256 getPKey();
 	public void setPKey(CFLibDbKeyHash256 requiredId);
-	public List<ICFSecProtSecTentGrp> get$OptionalOrRequired$ComponentsSecGroup();
+	public List<ICFSecProtSecTentGrp> getOptionalComponentsSecGroup();
 
-	public List<ICFSecProtSecTentRole> get$OptionalOrRequired$ComponentsSecRole();
+	public List<ICFSecProtSecTentRole> getOptionalComponentsSecRole();
 
-	public $implIJavaAtomType$ getRequiredId();
-	public void setRequiredId( $implIJavaAtomType$ value );
+	public ICFLibKeyHash256 getRequiredId();
+	public void setRequiredId( ICFLibKeyHash256 value );
 	public int getRequiredRevision();
 	public void setRequiredRevision( int value );
 
-	public ICFSecProtCluster get$OptionalOrRequired$ContainerCluster();
+	public ICFSecProtCluster getRequiredContainerCluster();
 
-	public void set$OptionalOrRequired$ContainerCluster($implIJavaAtomType$ argClusterId);
+	public void setRequiredContainerCluster(ICFLibKeyHash256 argClusterId);
 
 
-	public void set$OptionalOrRequired$ContainerCluster(ICFSecProtCluster argObj);
+	public void setRequiredContainerCluster(ICFSecProtCluster argObj);
 
-	public void set$OptionalOrRequired$ContainerCluster(ICFSecPubCluster argObj);
+	public void setRequiredContainerCluster(ICFSecPubCluster argObj);
 
-	public $implIJavaAtomType$ getRequiredClusterId();
-	public void setRequiredClusterId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredTenantName();
-	public void setRequiredTenantName( $implIJavaAtomType$ value );
+	public ICFLibKeyHash256 getRequiredClusterId();
+	public void setRequiredClusterId( ICFLibKeyHash256 value );
+	public String getRequiredTenantName();
+	public void setRequiredTenantName( String value );
 	public boolean equals( Object obj );
 
 	public int hashCode();

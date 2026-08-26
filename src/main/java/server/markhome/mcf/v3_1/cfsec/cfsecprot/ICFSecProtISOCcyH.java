@@ -70,17 +70,17 @@ public interface ICFSecProtISOCcyH
 	public CFLibDbKeyHash256 getAuditSessionId();
 	public void setAuditSessionId(CFLibDbKeyHash256 auditSessionId);
 
-	public $implIJavaAtomType$ getRequiredISOCcyId();
+	public short getRequiredISOCcyId();
 	public void setRequiredISOCcyId( short requiredISOCcyId );
 
-	public $implIJavaAtomType$ getRequiredISOCode();
-	public void setRequiredISOCode( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredName();
-	public void setRequiredName( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalUnitSymbol();
-	public void setOptionalUnitSymbol( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredPrecis();
-	public void setRequiredPrecis( $implIJavaAtomType$ value );
+	public String getRequiredISOCode();
+	public void setRequiredISOCode( String value );
+	public String getRequiredName();
+	public void setRequiredName( String value );
+	public String getOptionalUnitSymbol();
+	public void setOptionalUnitSymbol( String value );
+	public short getRequiredPrecis();
+	public void setRequiredPrecis( short value );
 	@Override
 	public boolean equals( Object obj );
 

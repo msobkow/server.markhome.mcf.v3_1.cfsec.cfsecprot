@@ -356,9 +356,9 @@ public interface ICFSecProtSecTentRoleMembTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFSecProtSecTentRoleMemb[] protpageRecByTentRoleIdx( ICFSecPubAuthorization Authorization,
-		$implIJavaAtomType$ SecTentRoleId,
-		$implIJavaOptAtomType$ priorSecTentRoleId,
-		$implIJavaOptAtomType$ priorLoginId );
+		ICFLibKeyHash256 SecTentRoleId,
+		ICFLibKeyHash256 priorSecTentRoleId,
+		String priorLoginId );
 
 	/**
 	 *	Read a page array of the specific SecTentRoleMemb record instances identified by the duplicate key UserIdx.
@@ -372,7 +372,7 @@ public interface ICFSecProtSecTentRoleMembTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFSecProtSecTentRoleMemb[] protpageRecByUserIdx( ICFSecPubAuthorization Authorization,
-		$implIJavaAtomType$ LoginId,
-		$implIJavaOptAtomType$ priorSecTentRoleId,
-		$implIJavaOptAtomType$ priorLoginId );
+		String LoginId,
+		ICFLibKeyHash256 priorSecTentRoleId,
+		String priorLoginId );
 }

@@ -70,15 +70,15 @@ public interface ICFSecProtISOLangH
 	public CFLibDbKeyHash256 getAuditSessionId();
 	public void setAuditSessionId(CFLibDbKeyHash256 auditSessionId);
 
-	public $implIJavaAtomType$ getRequiredISOLangId();
+	public short getRequiredISOLangId();
 	public void setRequiredISOLangId( short requiredISOLangId );
 
-	public $implIJavaAtomType$ getRequiredISO6392Code();
-	public void setRequiredISO6392Code( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalISO6391Code();
-	public void setOptionalISO6391Code( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredEnglishName();
-	public void setRequiredEnglishName( $implIJavaAtomType$ value );
+	public String getRequiredISO6392Code();
+	public void setRequiredISO6392Code( String value );
+	public String getOptionalISO6391Code();
+	public void setOptionalISO6391Code( String value );
+	public String getRequiredEnglishName();
+	public void setRequiredEnglishName( String value );
 	@Override
 	public boolean equals( Object obj );
 

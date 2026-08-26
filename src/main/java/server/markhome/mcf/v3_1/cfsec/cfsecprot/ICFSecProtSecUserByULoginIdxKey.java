@@ -46,8 +46,8 @@ import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
  */
 public interface ICFSecProtSecUserByULoginIdxKey
 {
-	public $implIJavaAtomType$ getRequiredLoginId();
-	public void setRequiredLoginId( $implIJavaAtomType$ value );
+	public String getRequiredLoginId();
+	public void setRequiredLoginId( String value );
 	@Override
 	public boolean equals( Object obj );
 

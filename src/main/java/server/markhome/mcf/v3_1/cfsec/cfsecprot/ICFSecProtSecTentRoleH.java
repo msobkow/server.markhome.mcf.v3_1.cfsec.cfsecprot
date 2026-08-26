@@ -70,13 +70,13 @@ public interface ICFSecProtSecTentRoleH
 	public CFLibDbKeyHash256 getAuditSessionId();
 	public void setAuditSessionId(CFLibDbKeyHash256 auditSessionId);
 
-	public $implIJavaAtomType$ getRequiredSecTentRoleId();
+	public ICFLibKeyHash256 getRequiredSecTentRoleId();
 	public void setRequiredSecTentRoleId( ICFLibKeyHash256 requiredSecTentRoleId );
 
-	public $implIJavaAtomType$ getRequiredTenantId();
-	public void setRequiredTenantId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredName();
-	public void setRequiredName( $implIJavaAtomType$ value );
+	public ICFLibKeyHash256 getRequiredTenantId();
+	public void setRequiredTenantId( ICFLibKeyHash256 value );
+	public String getRequiredName();
+	public void setRequiredName( String value );
 	@Override
 	public boolean equals( Object obj );
 

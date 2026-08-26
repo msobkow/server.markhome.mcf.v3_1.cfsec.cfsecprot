@@ -46,8 +46,8 @@ import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
  */
 public interface ICFSecProtSecTentRoleMembByTentRoleIdxKey
 {
-	public $implIJavaAtomType$ getRequiredSecTentRoleId();
-	public void setRequiredSecTentRoleId( $implIJavaAtomType$ value );
+	public ICFLibKeyHash256 getRequiredSecTentRoleId();
+	public void setRequiredSecTentRoleId( ICFLibKeyHash256 value );
 	@Override
 	public boolean equals( Object obj );
 

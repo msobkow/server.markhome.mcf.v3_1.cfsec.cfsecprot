@@ -61,17 +61,17 @@ public interface ICFSecProtSecSessionH
 	public CFLibDbKeyHash256 getAuditSessionId();
 	public void setAuditSessionId(CFLibDbKeyHash256 auditSessionId);
 
-	public $implIJavaAtomType$ getRequiredSecSessionId();
+	public ICFLibKeyHash256 getRequiredSecSessionId();
 	public void setRequiredSecSessionId( ICFLibKeyHash256 requiredSecSessionId );
 
-	public $implIJavaAtomType$ getRequiredSecUserId();
-	public void setRequiredSecUserId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredStart();
-	public void setRequiredStart( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalFinish();
-	public void setOptionalFinish( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalSecProxyId();
-	public void setOptionalSecProxyId( $implIJavaAtomType$ value );
+	public ICFLibKeyHash256 getRequiredSecUserId();
+	public void setRequiredSecUserId( ICFLibKeyHash256 value );
+	public LocalDateTime getRequiredStart();
+	public void setRequiredStart( LocalDateTime value );
+	public LocalDateTime getOptionalFinish();
+	public void setOptionalFinish( LocalDateTime value );
+	public ICFLibKeyHash256 getOptionalSecProxyId();
+	public void setOptionalSecProxyId( ICFLibKeyHash256 value );
 	@Override
 	public boolean equals( Object obj );
 

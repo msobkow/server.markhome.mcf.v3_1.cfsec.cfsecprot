@@ -46,10 +46,10 @@ import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
  */
 public interface ICFSecProtTenantByUNameIdxKey
 {
-	public $implIJavaAtomType$ getRequiredClusterId();
-	public void setRequiredClusterId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredTenantName();
-	public void setRequiredTenantName( $implIJavaAtomType$ value );
+	public ICFLibKeyHash256 getRequiredClusterId();
+	public void setRequiredClusterId( ICFLibKeyHash256 value );
+	public String getRequiredTenantName();
+	public void setRequiredTenantName( String value );
 	@Override
 	public boolean equals( Object obj );
 

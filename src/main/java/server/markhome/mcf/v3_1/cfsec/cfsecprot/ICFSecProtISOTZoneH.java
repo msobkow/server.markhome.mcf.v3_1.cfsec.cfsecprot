@@ -70,21 +70,21 @@ public interface ICFSecProtISOTZoneH
 	public CFLibDbKeyHash256 getAuditSessionId();
 	public void setAuditSessionId(CFLibDbKeyHash256 auditSessionId);
 
-	public $implIJavaAtomType$ getRequiredISOTZoneId();
+	public short getRequiredISOTZoneId();
 	public void setRequiredISOTZoneId( short requiredISOTZoneId );
 
-	public $implIJavaAtomType$ getRequiredIso8601();
-	public void setRequiredIso8601( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredTZName();
-	public void setRequiredTZName( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredTZHourOffset();
-	public void setRequiredTZHourOffset( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredTZMinOffset();
-	public void setRequiredTZMinOffset( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredDescription();
-	public void setRequiredDescription( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredVisible();
-	public void setRequiredVisible( $implIJavaAtomType$ value );
+	public String getRequiredIso8601();
+	public void setRequiredIso8601( String value );
+	public String getRequiredTZName();
+	public void setRequiredTZName( String value );
+	public short getRequiredTZHourOffset();
+	public void setRequiredTZHourOffset( short value );
+	public short getRequiredTZMinOffset();
+	public void setRequiredTZMinOffset( short value );
+	public String getRequiredDescription();
+	public void setRequiredDescription( String value );
+	public boolean getRequiredVisible();
+	public void setRequiredVisible( boolean value );
 	@Override
 	public boolean equals( Object obj );
 

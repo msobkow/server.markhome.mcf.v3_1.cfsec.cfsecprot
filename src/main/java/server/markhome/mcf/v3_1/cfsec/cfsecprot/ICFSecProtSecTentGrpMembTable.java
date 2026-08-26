@@ -356,9 +356,9 @@ public interface ICFSecProtSecTentGrpMembTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFSecProtSecTentGrpMemb[] protpageRecByTentGrpIdx( ICFSecPubAuthorization Authorization,
-		$implIJavaAtomType$ SecTentGrpId,
-		$implIJavaOptAtomType$ priorSecTentGrpId,
-		$implIJavaOptAtomType$ priorLoginId );
+		ICFLibKeyHash256 SecTentGrpId,
+		ICFLibKeyHash256 priorSecTentGrpId,
+		String priorLoginId );
 
 	/**
 	 *	Read a page array of the specific SecTentGrpMemb record instances identified by the duplicate key UserIdx.
@@ -372,7 +372,7 @@ public interface ICFSecProtSecTentGrpMembTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFSecProtSecTentGrpMemb[] protpageRecByUserIdx( ICFSecPubAuthorization Authorization,
-		$implIJavaAtomType$ LoginId,
-		$implIJavaOptAtomType$ priorSecTentGrpId,
-		$implIJavaOptAtomType$ priorLoginId );
+		String LoginId,
+		ICFLibKeyHash256 priorSecTentGrpId,
+		String priorLoginId );
 }

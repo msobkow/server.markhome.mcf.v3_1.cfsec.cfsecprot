@@ -76,19 +76,19 @@ public interface ICFSecProtSecSysRoleEnables
 
 	public ICFSecProtSecSysRoleEnablesPKey getPKey();
 	public void setPKey(ICFSecProtSecSysRoleEnablesPKey pkey );
-	public ICFSecProtSecSysRole get$OptionalOrRequired$ContainerSysRole();
+	public ICFSecProtSecSysRole getRequiredContainerSysRole();
 
-	public void set$OptionalOrRequired$ContainerSysRole($implIJavaAtomType$ argSecSysRoleId);
-
-
-	public void set$OptionalOrRequired$ContainerSysRole(ICFSecProtSecSysRole argObj);
-
-	public ICFSecProtSecSysGrp get$OptionalOrRequired$ParentEnableGroup();
-
-	public void set$OptionalOrRequired$ParentEnableGroup($implIJavaAtomType$ argEnableName);
+	public void setRequiredContainerSysRole(ICFLibKeyHash256 argSecSysRoleId);
 
 
-	public void set$OptionalOrRequired$ParentEnableGroup(ICFSecProtSecSysGrp argObj);
+	public void setRequiredContainerSysRole(ICFSecProtSecSysRole argObj);
+
+	public ICFSecProtSecSysGrp getRequiredParentEnableGroup();
+
+	public void setRequiredParentEnableGroup(String argEnableName);
+
+
+	public void setRequiredParentEnableGroup(ICFSecProtSecSysGrp argObj);
 
 	public ICFLibKeyHash256 getRequiredSecSysRoleId();
 

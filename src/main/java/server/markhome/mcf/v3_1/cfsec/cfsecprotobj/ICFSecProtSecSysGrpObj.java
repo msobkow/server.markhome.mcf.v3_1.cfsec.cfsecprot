@@ -217,18 +217,18 @@ public interface ICFSecProtSecSysGrpObj
 	void setIsNew( boolean value );
 
 	/**
-	 *	Get the $optionalorrequired$ ICFSecProtSecSysRoleObj instance referenced by the ImplSysRole key.
+	 *	Get the optional ICFSecProtSecSysRoleObj instance referenced by the ImplSysRole key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFSecProtSecSysRoleObj instance referenced by the ImplSysRole key.
+	 *	@return	The optional ICFSecProtSecSysRoleObj instance referenced by the ImplSysRole key.
 	 */
-	ICFSecProtSecSysRoleObj get$OptionalOrRequired$ComponentsImplSysRole();
+	ICFSecProtSecSysRoleObj getOptionalComponentsImplSysRole();
 
 	/**
-	 *	Get the $optionalorrequired$ ICFSecProtSecSysRoleObj instance referenced by the ImplSysRole key.
+	 *	Get the optional ICFSecProtSecSysRoleObj instance referenced by the ImplSysRole key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFSecProtSecSysRoleObj instance referenced by the ImplSysRole key.
+	 *	@return	The optional ICFSecProtSecSysRoleObj instance referenced by the ImplSysRole key.
 	 */
-	ICFSecProtSecSysRoleObj get$OptionalOrRequired$ComponentsImplSysRole( boolean forceRead );
+	ICFSecProtSecSysRoleObj getOptionalComponentsImplSysRole( boolean forceRead );
 
 	/**
 	 *	Get the required ICFLibKeyHash256 attribute SecSysGrpId.

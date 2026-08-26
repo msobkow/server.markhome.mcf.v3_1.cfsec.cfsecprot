@@ -70,13 +70,13 @@ public interface ICFSecProtISOCtryH
 	public CFLibDbKeyHash256 getAuditSessionId();
 	public void setAuditSessionId(CFLibDbKeyHash256 auditSessionId);
 
-	public $implIJavaAtomType$ getRequiredISOCtryId();
+	public short getRequiredISOCtryId();
 	public void setRequiredISOCtryId( short requiredISOCtryId );
 
-	public $implIJavaAtomType$ getRequiredISOCode();
-	public void setRequiredISOCode( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredName();
-	public void setRequiredName( $implIJavaAtomType$ value );
+	public String getRequiredISOCode();
+	public void setRequiredISOCode( String value );
+	public String getRequiredName();
+	public void setRequiredName( String value );
 	@Override
 	public boolean equals( Object obj );
 

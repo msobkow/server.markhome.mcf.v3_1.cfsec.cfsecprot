@@ -46,8 +46,8 @@ import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
  */
 public interface ICFSecProtISOLangByCode3IdxKey
 {
-	public $implIJavaAtomType$ getRequiredISO6392Code();
-	public void setRequiredISO6392Code( $implIJavaAtomType$ value );
+	public String getRequiredISO6392Code();
+	public void setRequiredISO6392Code( String value );
 	@Override
 	public boolean equals( Object obj );
 

@@ -113,21 +113,21 @@ public interface ICFSecProtSecUserPWResetEditObj
 	 *
 	 *	@return	The ICFSecProtSecUserObj instance referenced by the User key.
 	 */
-	ICFSecProtSecUserObj get$OptionalOrRequired$ContainerUser();
+	ICFSecProtSecUserObj getRequiredContainerUser();
 
 	/**
-	 *	Get the $optionalorrequired$ ICFSecProtSecUserObj instance referenced by the User key.
+	 *	Get the required ICFSecProtSecUserObj instance referenced by the User key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFSecProtSecUserObj instance referenced by the User key.
+	 *	@return	The required ICFSecProtSecUserObj instance referenced by the User key.
 	 */
-	ICFSecProtSecUserObj get$OptionalOrRequired$ContainerUser( boolean forceRead );
+	ICFSecProtSecUserObj getRequiredContainerUser( boolean forceRead );
 
 	/**
 	 *	Set the ICFSecProtSecUserObj instance referenced by the User key.
 	 *
 	 *	@param	value	the ICFSecProtSecUserObj instance to be referenced by the User key.
 	 */
-	void set$OptionalOrRequired$ContainerUser( ICFSecProtSecUserObj value );
+	void setRequiredContainerUser( ICFSecProtSecUserObj value );
 
 	/**
 	 *	Get the required ICFLibKeyHash256 attribute SecUserId.

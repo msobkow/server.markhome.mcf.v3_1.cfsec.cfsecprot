@@ -113,42 +113,42 @@ public interface ICFSecProtSecClusGrpMembEditObj
 	 *
 	 *	@return	The ICFSecProtSecClusGrpObj instance referenced by the Group key.
 	 */
-	ICFSecProtSecClusGrpObj get$OptionalOrRequired$ContainerGroup();
+	ICFSecProtSecClusGrpObj getRequiredContainerGroup();
 
 	/**
-	 *	Get the $optionalorrequired$ ICFSecProtSecClusGrpObj instance referenced by the Group key.
+	 *	Get the required ICFSecProtSecClusGrpObj instance referenced by the Group key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFSecProtSecClusGrpObj instance referenced by the Group key.
+	 *	@return	The required ICFSecProtSecClusGrpObj instance referenced by the Group key.
 	 */
-	ICFSecProtSecClusGrpObj get$OptionalOrRequired$ContainerGroup( boolean forceRead );
+	ICFSecProtSecClusGrpObj getRequiredContainerGroup( boolean forceRead );
 
 	/**
 	 *	Set the ICFSecProtSecClusGrpObj instance referenced by the Group key.
 	 *
 	 *	@param	value	the ICFSecProtSecClusGrpObj instance to be referenced by the Group key.
 	 */
-	void set$OptionalOrRequired$ContainerGroup( ICFSecProtSecClusGrpObj value );
+	void setRequiredContainerGroup( ICFSecProtSecClusGrpObj value );
 
 	/**
 	 *	Get the ICFSecProtSecUserObj instance referenced by the User key.
 	 *
 	 *	@return	The ICFSecProtSecUserObj instance referenced by the User key.
 	 */
-	ICFSecProtSecUserObj get$OptionalOrRequired$ParentUser();
+	ICFSecProtSecUserObj getRequiredParentUser();
 
 	/**
-	 *	Get the $optionalorrequired$ ICFSecProtSecUserObj instance referenced by the User key.
+	 *	Get the required ICFSecProtSecUserObj instance referenced by the User key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFSecProtSecUserObj instance referenced by the User key.
+	 *	@return	The required ICFSecProtSecUserObj instance referenced by the User key.
 	 */
-	ICFSecProtSecUserObj get$OptionalOrRequired$ParentUser( boolean forceRead );
+	ICFSecProtSecUserObj getRequiredParentUser( boolean forceRead );
 
 	/**
 	 *	Set the ICFSecProtSecUserObj instance referenced by the User key.
 	 *
 	 *	@param	value	the ICFSecProtSecUserObj instance to be referenced by the User key.
 	 */
-	void set$OptionalOrRequired$ParentUser( ICFSecProtSecUserObj value );
+	void setRequiredParentUser( ICFSecProtSecUserObj value );
 
 	/**
 	 *	Get the required ICFLibKeyHash256 attribute SecClusGrpId.

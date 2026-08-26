@@ -77,19 +77,19 @@ public interface ICFSecProtISOCtry
 
 	public Short getPKey();
 	public void setPKey(Short requiredISOCtryId);
-	public List<ICFSecProtISOCtryCcy> get$OptionalOrRequired$ComponentsCcy();
+	public List<ICFSecProtISOCtryCcy> getOptionalComponentsCcy();
 
-	public List<ICFSecProtISOCtryLang> get$OptionalOrRequired$ComponentsLang();
+	public List<ICFSecProtISOCtryLang> getOptionalComponentsLang();
 
-	public $implIJavaAtomType$ getRequiredISOCtryId();
-	public void setRequiredISOCtryId( $implIJavaAtomType$ value );
+	public short getRequiredISOCtryId();
+	public void setRequiredISOCtryId( short value );
 	public int getRequiredRevision();
 	public void setRequiredRevision( int value );
 
-	public $implIJavaAtomType$ getRequiredISOCode();
-	public void setRequiredISOCode( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredName();
-	public void setRequiredName( $implIJavaAtomType$ value );
+	public String getRequiredISOCode();
+	public void setRequiredISOCode( String value );
+	public String getRequiredName();
+	public void setRequiredName( String value );
 	public boolean equals( Object obj );
 
 	public int hashCode();

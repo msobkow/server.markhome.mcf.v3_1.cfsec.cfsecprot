@@ -113,42 +113,42 @@ public interface ICFSecProtISOCtryLangEditObj
 	 *
 	 *	@return	The ICFSecProtISOCtryObj instance referenced by the Ctry key.
 	 */
-	ICFSecProtISOCtryObj get$OptionalOrRequired$ContainerCtry();
+	ICFSecProtISOCtryObj getRequiredContainerCtry();
 
 	/**
-	 *	Get the $optionalorrequired$ ICFSecProtISOCtryObj instance referenced by the Ctry key.
+	 *	Get the required ICFSecProtISOCtryObj instance referenced by the Ctry key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFSecProtISOCtryObj instance referenced by the Ctry key.
+	 *	@return	The required ICFSecProtISOCtryObj instance referenced by the Ctry key.
 	 */
-	ICFSecProtISOCtryObj get$OptionalOrRequired$ContainerCtry( boolean forceRead );
+	ICFSecProtISOCtryObj getRequiredContainerCtry( boolean forceRead );
 
 	/**
 	 *	Set the ICFSecProtISOCtryObj instance referenced by the Ctry key.
 	 *
 	 *	@param	value	the ICFSecProtISOCtryObj instance to be referenced by the Ctry key.
 	 */
-	void set$OptionalOrRequired$ContainerCtry( ICFSecProtISOCtryObj value );
+	void setRequiredContainerCtry( ICFSecProtISOCtryObj value );
 
 	/**
 	 *	Get the ICFSecProtISOLangObj instance referenced by the Lang key.
 	 *
 	 *	@return	The ICFSecProtISOLangObj instance referenced by the Lang key.
 	 */
-	ICFSecProtISOLangObj get$OptionalOrRequired$ParentLang();
+	ICFSecProtISOLangObj getRequiredParentLang();
 
 	/**
-	 *	Get the $optionalorrequired$ ICFSecProtISOLangObj instance referenced by the Lang key.
+	 *	Get the required ICFSecProtISOLangObj instance referenced by the Lang key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFSecProtISOLangObj instance referenced by the Lang key.
+	 *	@return	The required ICFSecProtISOLangObj instance referenced by the Lang key.
 	 */
-	ICFSecProtISOLangObj get$OptionalOrRequired$ParentLang( boolean forceRead );
+	ICFSecProtISOLangObj getRequiredParentLang( boolean forceRead );
 
 	/**
 	 *	Set the ICFSecProtISOLangObj instance referenced by the Lang key.
 	 *
 	 *	@param	value	the ICFSecProtISOLangObj instance to be referenced by the Lang key.
 	 */
-	void set$OptionalOrRequired$ParentLang( ICFSecProtISOLangObj value );
+	void setRequiredParentLang( ICFSecProtISOLangObj value );
 
 	/**
 	 *	Get the required short attribute ISOCtryId.

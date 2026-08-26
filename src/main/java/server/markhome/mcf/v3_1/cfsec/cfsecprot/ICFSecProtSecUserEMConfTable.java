@@ -401,8 +401,8 @@ public interface ICFSecProtSecUserEMConfTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFSecProtSecUserEMConf[] protpageRecByConfEMAddrIdx( ICFSecPubAuthorization Authorization,
-		$implIJavaAtomType$ ConfirmEMailAddr,
-		$implIJavaOptAtomType$ priorSecUserId );
+		String ConfirmEMailAddr,
+		ICFLibKeyHash256 priorSecUserId );
 
 	/**
 	 *	Read a page array of the specific SecUserEMConf record instances identified by the duplicate key SentStampIdx.
@@ -416,8 +416,8 @@ public interface ICFSecProtSecUserEMConfTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFSecProtSecUserEMConf[] protpageRecBySentStampIdx( ICFSecPubAuthorization Authorization,
-		$implIJavaAtomType$ EMailSentStamp,
-		$implIJavaOptAtomType$ priorSecUserId );
+		LocalDateTime EMailSentStamp,
+		ICFLibKeyHash256 priorSecUserId );
 
 	/**
 	 *	Read a page array of the specific SecUserEMConf record instances identified by the duplicate key NewAcctIdx.
@@ -431,6 +431,6 @@ public interface ICFSecProtSecUserEMConfTable
 	 *	@throws	CFLibNotSupportedException thrown by client-side implementations.
 	 */
 	public ICFSecProtSecUserEMConf[] protpageRecByNewAcctIdx( ICFSecPubAuthorization Authorization,
-		$implIJavaAtomType$ NewAccount,
-		$implIJavaOptAtomType$ priorSecUserId );
+		boolean NewAccount,
+		ICFLibKeyHash256 priorSecUserId );
 }

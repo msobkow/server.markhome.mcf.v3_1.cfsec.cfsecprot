@@ -113,28 +113,28 @@ public interface ICFSecProtClusterEditObj
 	 *
 	 *	@return	The (potentially empty) list of ICFSecProtTenantObj instances referenced by the Tenant key.
 	 */
-	List<ICFSecProtTenantObj> get$OptionalOrRequired$ComponentsTenant();
+	List<ICFSecProtTenantObj> getOptionalComponentsTenant();
 
 	/**
 	 *	Get a list ICFSecProtSecClusGrpObj instances referenced by the SecGroup key.
 	 *
 	 *	@return	The (potentially empty) list of ICFSecProtSecClusGrpObj instances referenced by the SecGroup key.
 	 */
-	List<ICFSecProtSecClusGrpObj> get$OptionalOrRequired$ComponentsSecGroup();
+	List<ICFSecProtSecClusGrpObj> getOptionalComponentsSecGroup();
 
 	/**
 	 *	Get a list ICFSecProtSecClusRoleObj instances referenced by the SecRole key.
 	 *
 	 *	@return	The (potentially empty) list of ICFSecProtSecClusRoleObj instances referenced by the SecRole key.
 	 */
-	List<ICFSecProtSecClusRoleObj> get$OptionalOrRequired$ComponentsSecRole();
+	List<ICFSecProtSecClusRoleObj> getOptionalComponentsSecRole();
 
 	/**
 	 *	Get a list ICFSecProtSysClusterObj instances referenced by the SysCluster key.
 	 *
 	 *	@return	The (potentially empty) list of ICFSecProtSysClusterObj instances referenced by the SysCluster key.
 	 */
-	List<ICFSecProtSysClusterObj> get$OptionalOrRequired$ComponentsSysCluster();
+	List<ICFSecProtSysClusterObj> getOptionalComponentsSysCluster();
 
 	/**
 	 *	Get the required ICFLibKeyHash256 attribute Id.

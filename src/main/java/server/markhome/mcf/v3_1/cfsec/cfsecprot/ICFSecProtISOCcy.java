@@ -80,21 +80,21 @@ public interface ICFSecProtISOCcy
 
 	public Short getPKey();
 	public void setPKey(Short requiredISOCcyId);
-	public List<ICFSecProtISOCtryCcy> get$OptionalOrRequired$ChildrenCtry();
+	public List<ICFSecProtISOCtryCcy> getOptionalChildrenCtry();
 
-	public $implIJavaAtomType$ getRequiredISOCcyId();
-	public void setRequiredISOCcyId( $implIJavaAtomType$ value );
+	public short getRequiredISOCcyId();
+	public void setRequiredISOCcyId( short value );
 	public int getRequiredRevision();
 	public void setRequiredRevision( int value );
 
-	public $implIJavaAtomType$ getRequiredISOCode();
-	public void setRequiredISOCode( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredName();
-	public void setRequiredName( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalUnitSymbol();
-	public void setOptionalUnitSymbol( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredPrecis();
-	public void setRequiredPrecis( $implIJavaAtomType$ value );
+	public String getRequiredISOCode();
+	public void setRequiredISOCode( String value );
+	public String getRequiredName();
+	public void setRequiredName( String value );
+	public String getOptionalUnitSymbol();
+	public void setOptionalUnitSymbol( String value );
+	public short getRequiredPrecis();
+	public void setRequiredPrecis( short value );
 	public boolean equals( Object obj );
 
 	public int hashCode();

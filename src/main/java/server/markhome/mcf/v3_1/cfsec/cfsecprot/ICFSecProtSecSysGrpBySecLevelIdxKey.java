@@ -46,8 +46,8 @@ import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
  */
 public interface ICFSecProtSecSysGrpBySecLevelIdxKey
 {
-	public $implIJavaAtomType$ getRequiredSecLevel();
-	public void setRequiredSecLevel( $implIJavaAtomType$ value );
+	public ICFSecPubSchema.SecLevelEnum getRequiredSecLevel();
+	public void setRequiredSecLevel( ICFSecPubSchema.SecLevelEnum value );
 	@Override
 	public boolean equals( Object obj );
 

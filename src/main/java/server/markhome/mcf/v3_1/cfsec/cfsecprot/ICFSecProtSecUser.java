@@ -83,37 +83,37 @@ public interface ICFSecProtSecUser
 
 	public CFLibDbKeyHash256 getPKey();
 	public void setPKey(CFLibDbKeyHash256 requiredSecUserId);
-	public List<ICFSecProtSecSession> get$OptionalOrRequired$ComponentsSecSess();
+	public List<ICFSecProtSecSession> getOptionalComponentsSecSess();
 
-	public List<ICFSecProtSecSession> get$OptionalOrRequired$ChildrenSecProxy();
+	public List<ICFSecProtSecSession> getOptionalChildrenSecProxy();
 
-	public ICFSecProtSecUserEMConf get$OptionalOrRequired$ComponentsEMConf();
+	public ICFSecProtSecUserEMConf getOptionalComponentsEMConf();
 
-	public ICFSecProtSecUserPWReset get$OptionalOrRequired$ComponentsPWReset();
+	public ICFSecProtSecUserPWReset getOptionalComponentsPWReset();
 
-	public $implIJavaAtomType$ getRequiredSecUserId();
-	public void setRequiredSecUserId( $implIJavaAtomType$ value );
+	public ICFLibKeyHash256 getRequiredSecUserId();
+	public void setRequiredSecUserId( ICFLibKeyHash256 value );
 	public int getRequiredRevision();
 	public void setRequiredRevision( int value );
 
-	public List<ICFSecProtSecSysGrpMemb> get$OptionalOrRequired$ChildrenSysSecGrpMemb();
+	public List<ICFSecProtSecSysGrpMemb> getOptionalChildrenSysSecGrpMemb();
 
-	public List<ICFSecProtSecClusGrpMemb> get$OptionalOrRequired$ChildrenClusSecGrpMemb();
+	public List<ICFSecProtSecClusGrpMemb> getOptionalChildrenClusSecGrpMemb();
 
-	public List<ICFSecProtSecTentGrpMemb> get$OptionalOrRequired$ChildrenTentSecGrpMemb();
+	public List<ICFSecProtSecTentGrpMemb> getOptionalChildrenTentSecGrpMemb();
 
-	public $implIJavaAtomType$ getRequiredLoginId();
-	public void setRequiredLoginId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredAccountStatus();
-	public void setRequiredAccountStatus( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalDfltSysGrpName();
-	public void setOptionalDfltSysGrpName( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalDfltClusGrpName();
-	public void setOptionalDfltClusGrpName( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalDfltTentGrpName();
-	public void setOptionalDfltTentGrpName( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredEMailAddress();
-	public void setRequiredEMailAddress( $implIJavaAtomType$ value );
+	public String getRequiredLoginId();
+	public void setRequiredLoginId( String value );
+	public ICFSecPubSchema.SecAccountStatusEnum getRequiredAccountStatus();
+	public void setRequiredAccountStatus( ICFSecPubSchema.SecAccountStatusEnum value );
+	public String getOptionalDfltSysGrpName();
+	public void setOptionalDfltSysGrpName( String value );
+	public String getOptionalDfltClusGrpName();
+	public void setOptionalDfltClusGrpName( String value );
+	public String getOptionalDfltTentGrpName();
+	public void setOptionalDfltTentGrpName( String value );
+	public String getRequiredEMailAddress();
+	public void setRequiredEMailAddress( String value );
 	public boolean equals( Object obj );
 
 	public int hashCode();

@@ -70,13 +70,13 @@ public interface ICFSecProtSecTentGrpH
 	public CFLibDbKeyHash256 getAuditSessionId();
 	public void setAuditSessionId(CFLibDbKeyHash256 auditSessionId);
 
-	public $implIJavaAtomType$ getRequiredSecTentGrpId();
+	public ICFLibKeyHash256 getRequiredSecTentGrpId();
 	public void setRequiredSecTentGrpId( ICFLibKeyHash256 requiredSecTentGrpId );
 
-	public $implIJavaAtomType$ getRequiredTenantId();
-	public void setRequiredTenantId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredName();
-	public void setRequiredName( $implIJavaAtomType$ value );
+	public ICFLibKeyHash256 getRequiredTenantId();
+	public void setRequiredTenantId( ICFLibKeyHash256 value );
+	public String getRequiredName();
+	public void setRequiredName( String value );
 	@Override
 	public boolean equals( Object obj );
 

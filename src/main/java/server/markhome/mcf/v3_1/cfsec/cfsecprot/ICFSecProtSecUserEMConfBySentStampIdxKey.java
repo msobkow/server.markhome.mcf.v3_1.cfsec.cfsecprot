@@ -46,8 +46,8 @@ import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
  */
 public interface ICFSecProtSecUserEMConfBySentStampIdxKey
 {
-	public $implIJavaAtomType$ getRequiredEMailSentStamp();
-	public void setRequiredEMailSentStamp( $implIJavaAtomType$ value );
+	public LocalDateTime getRequiredEMailSentStamp();
+	public void setRequiredEMailSentStamp( LocalDateTime value );
 	@Override
 	public boolean equals( Object obj );
 

@@ -113,7 +113,7 @@ public interface ICFSecProtISOCcyEditObj
 	 *
 	 *	@return	The (potentially empty) list of ICFSecProtISOCtryCcyObj instances referenced by the Ctry key.
 	 */
-	List<ICFSecProtISOCtryCcyObj> get$OptionalOrRequired$ChildrenCtry();
+	List<ICFSecProtISOCtryCcyObj> getOptionalChildrenCtry();
 
 	/**
 	 *	Get the required short attribute ISOCcyId.

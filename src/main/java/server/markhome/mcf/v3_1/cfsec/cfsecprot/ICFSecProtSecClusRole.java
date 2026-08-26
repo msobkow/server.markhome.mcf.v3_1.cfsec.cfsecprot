@@ -78,31 +78,31 @@ public interface ICFSecProtSecClusRole
 
 	public CFLibDbKeyHash256 getPKey();
 	public void setPKey(CFLibDbKeyHash256 requiredSecClusRoleId);
-	public List<ICFSecProtSecClusRoleMemb> get$OptionalOrRequired$ChildrenMembByGrp();
+	public List<ICFSecProtSecClusRoleMemb> getOptionalChildrenMembByGrp();
 
-	public $implIJavaAtomType$ getRequiredSecClusRoleId();
-	public void setRequiredSecClusRoleId( $implIJavaAtomType$ value );
+	public ICFLibKeyHash256 getRequiredSecClusRoleId();
+	public void setRequiredSecClusRoleId( ICFLibKeyHash256 value );
 	public int getRequiredRevision();
 	public void setRequiredRevision( int value );
 
-	public ICFSecProtCluster get$OptionalOrRequired$OwnerCluster();
+	public ICFSecProtCluster getRequiredOwnerCluster();
 
-	public void set$OptionalOrRequired$OwnerCluster($implIJavaAtomType$ argClusterId);
-
-
-	public void set$OptionalOrRequired$OwnerCluster(ICFSecProtCluster argObj);
-
-	public ICFSecProtSecSysGrp get$OptionalOrRequired$ContainerSysRole();
-
-	public void set$OptionalOrRequired$ContainerSysRole($implIJavaAtomType$ argName);
+	public void setRequiredOwnerCluster(ICFLibKeyHash256 argClusterId);
 
 
-	public void set$OptionalOrRequired$ContainerSysRole(ICFSecProtSecSysGrp argObj);
+	public void setRequiredOwnerCluster(ICFSecProtCluster argObj);
 
-	public $implIJavaAtomType$ getRequiredClusterId();
-	public void setRequiredClusterId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredName();
-	public void setRequiredName( $implIJavaAtomType$ value );
+	public ICFSecProtSecSysGrp getRequiredContainerSysRole();
+
+	public void setRequiredContainerSysRole(String argName);
+
+
+	public void setRequiredContainerSysRole(ICFSecProtSecSysGrp argObj);
+
+	public ICFLibKeyHash256 getRequiredClusterId();
+	public void setRequiredClusterId( ICFLibKeyHash256 value );
+	public String getRequiredName();
+	public void setRequiredName( String value );
 	public boolean equals( Object obj );
 
 	public int hashCode();

@@ -46,10 +46,10 @@ import server.markhome.mcf.v3_1.cflib.xml.CFLibXmlUtil;
 public interface ICFSecProtSecSysRoleEnablesPKey
 {
 
-	public $implIJavaAtomType$ getRequiredSecSysRoleId();
-	public void setRequiredSecSysRoleId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredEnableName();
-	public void setRequiredEnableName( $implIJavaAtomType$ value );
+	public ICFLibKeyHash256 getRequiredSecSysRoleId();
+	public void setRequiredSecSysRoleId( ICFLibKeyHash256 value );
+	public String getRequiredEnableName();
+	public void setRequiredEnableName( String value );
 	@Override
 	public boolean equals( Object obj );
 

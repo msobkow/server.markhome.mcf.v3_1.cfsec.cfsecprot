@@ -46,10 +46,10 @@ import server.markhome.mcf.v3_1.cflib.xml.CFLibXmlUtil;
 public interface ICFSecProtISOCtryLangPKey
 {
 
-	public $implIJavaAtomType$ getRequiredISOCtryId();
-	public void setRequiredISOCtryId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredISOLangId();
-	public void setRequiredISOLangId( $implIJavaAtomType$ value );
+	public short getRequiredISOCtryId();
+	public void setRequiredISOCtryId( short value );
+	public short getRequiredISOLangId();
+	public void setRequiredISOLangId( short value );
 	@Override
 	public boolean equals( Object obj );
 

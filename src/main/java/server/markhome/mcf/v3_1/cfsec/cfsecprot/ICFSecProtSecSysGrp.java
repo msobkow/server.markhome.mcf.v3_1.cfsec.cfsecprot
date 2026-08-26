@@ -79,33 +79,33 @@ public interface ICFSecProtSecSysGrp
 
 	public CFLibDbKeyHash256 getPKey();
 	public void setPKey(CFLibDbKeyHash256 requiredSecSysGrpId);
-	public List<ICFSecProtSecSysGrpInc> get$OptionalOrRequired$ComponentsIncByGrp();
+	public List<ICFSecProtSecSysGrpInc> getOptionalComponentsIncByGrp();
 
-	public List<ICFSecProtSecSysGrpMemb> get$OptionalOrRequired$ChildrenMembByGrp();
+	public List<ICFSecProtSecSysGrpMemb> getOptionalChildrenMembByGrp();
 
-	public ICFSecProtSecSysRole get$OptionalOrRequired$ComponentsImplSysRole();
+	public ICFSecProtSecSysRole getOptionalComponentsImplSysRole();
 
-	public $implIJavaAtomType$ getRequiredSecSysGrpId();
-	public void setRequiredSecSysGrpId( $implIJavaAtomType$ value );
+	public ICFLibKeyHash256 getRequiredSecSysGrpId();
+	public void setRequiredSecSysGrpId( ICFLibKeyHash256 value );
 	public int getRequiredRevision();
 	public void setRequiredRevision( int value );
 
-	public List<ICFSecProtSecClusGrp> get$OptionalOrRequired$ComponentsImplClusGrp();
+	public List<ICFSecProtSecClusGrp> getOptionalComponentsImplClusGrp();
 
-	public List<ICFSecProtSecTentGrp> get$OptionalOrRequired$ComponentsImplTentGrp();
+	public List<ICFSecProtSecTentGrp> getOptionalComponentsImplTentGrp();
 
-	public List<ICFSecProtSecClusRole> get$OptionalOrRequired$ComponentsImplClusRole();
+	public List<ICFSecProtSecClusRole> getOptionalComponentsImplClusRole();
 
-	public List<ICFSecProtSecTentRole> get$OptionalOrRequired$ComponentsImplTentRole();
+	public List<ICFSecProtSecTentRole> getOptionalComponentsImplTentRole();
 
-	public List<ICFSecProtSecSysGrpInc> get$OptionalOrRequired$ChildrenSysGrpByName();
+	public List<ICFSecProtSecSysGrpInc> getOptionalChildrenSysGrpByName();
 
-	public List<ICFSecProtSecSysRoleEnables> get$OptionalOrRequired$ChildrenRoleByEnableName();
+	public List<ICFSecProtSecSysRoleEnables> getOptionalChildrenRoleByEnableName();
 
-	public $implIJavaAtomType$ getRequiredName();
-	public void setRequiredName( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredSecLevel();
-	public void setRequiredSecLevel( $implIJavaAtomType$ value );
+	public String getRequiredName();
+	public void setRequiredName( String value );
+	public ICFSecPubSchema.SecLevelEnum getRequiredSecLevel();
+	public void setRequiredSecLevel( ICFSecPubSchema.SecLevelEnum value );
 	public boolean equals( Object obj );
 
 	public int hashCode();

@@ -76,17 +76,17 @@ public interface ICFSecProtSecSysRole
 
 	public CFLibDbKeyHash256 getPKey();
 	public void setPKey(CFLibDbKeyHash256 requiredSecSysRoleId);
-	public List<ICFSecProtSecSysRoleEnables> get$OptionalOrRequired$ComponentsEnabledByRole();
+	public List<ICFSecProtSecSysRoleEnables> getOptionalComponentsEnabledByRole();
 
-	public List<ICFSecProtSecSysRoleMemb> get$OptionalOrRequired$ChildrenMembByRole();
+	public List<ICFSecProtSecSysRoleMemb> getOptionalChildrenMembByRole();
 
-	public $implIJavaAtomType$ getRequiredSecSysRoleId();
-	public void setRequiredSecSysRoleId( $implIJavaAtomType$ value );
+	public ICFLibKeyHash256 getRequiredSecSysRoleId();
+	public void setRequiredSecSysRoleId( ICFLibKeyHash256 value );
 	public int getRequiredRevision();
 	public void setRequiredRevision( int value );
 
-	public $implIJavaAtomType$ getRequiredName();
-	public void setRequiredName( $implIJavaAtomType$ value );
+	public String getRequiredName();
+	public void setRequiredName( String value );
 	public boolean equals( Object obj );
 
 	public int hashCode();

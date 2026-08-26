@@ -66,40 +66,40 @@ public interface ICFSecProtTableInfo
 
 	public Integer getPKey();
 	public void setPKey(Integer requiredTableInfoId);
-	public $implIJavaAtomType$ getRequiredTableInfoId();
-	public void setRequiredTableInfoId( $implIJavaAtomType$ value );
+	public int getRequiredTableInfoId();
+	public void setRequiredTableInfoId( int value );
 	public int getRequiredRevision();
 	public void setRequiredRevision( int value );
 
-	public ICFSecProtTableInfo get$OptionalOrRequired$ParentSuperRef();
+	public ICFSecProtTableInfo getOptionalParentSuperRef();
 
-	public void set$OptionalOrRequired$ParentSuperRef($implIJavaAtomType$ argSuperName);
+	public void setOptionalParentSuperRef(String argSuperName);
 
 
-	public void set$OptionalOrRequired$ParentSuperRef(ICFSecProtTableInfo argObj);
+	public void setOptionalParentSuperRef(ICFSecProtTableInfo argObj);
 
-	public void set$OptionalOrRequired$ParentSuperRef(ICFSecPubTableInfo argObj);
+	public void setOptionalParentSuperRef(ICFSecPubTableInfo argObj);
 
-	public List<ICFSecProtTableInfo> get$OptionalOrRequired$ChildrenSubRefs();
+	public List<ICFSecProtTableInfo> getOptionalChildrenSubRefs();
 
-	public $implIJavaAtomType$ getRequiredSchemaName();
-	public void setRequiredSchemaName( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredTableName();
-	public void setRequiredTableName( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalSuperName();
-	public void setOptionalSuperName( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredBackingClassCode();
-	public void setRequiredBackingClassCode( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredRuntimeClassCode();
-	public void setRequiredRuntimeClassCode( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredHasHistory();
-	public void setRequiredHasHistory( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredIsMutable();
-	public void setRequiredIsMutable( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredSecScopeName();
-	public void setRequiredSecScopeName( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredCodeVis();
-	public void setRequiredCodeVis( $implIJavaAtomType$ value );
+	public String getRequiredSchemaName();
+	public void setRequiredSchemaName( String value );
+	public String getRequiredTableName();
+	public void setRequiredTableName( String value );
+	public String getOptionalSuperName();
+	public void setOptionalSuperName( String value );
+	public int getRequiredBackingClassCode();
+	public void setRequiredBackingClassCode( int value );
+	public int getRequiredRuntimeClassCode();
+	public void setRequiredRuntimeClassCode( int value );
+	public boolean getRequiredHasHistory();
+	public void setRequiredHasHistory( boolean value );
+	public boolean getRequiredIsMutable();
+	public void setRequiredIsMutable( boolean value );
+	public String getRequiredSecScopeName();
+	public void setRequiredSecScopeName( String value );
+	public String getRequiredCodeVis();
+	public void setRequiredCodeVis( String value );
 	public boolean equals( Object obj );
 
 	public int hashCode();

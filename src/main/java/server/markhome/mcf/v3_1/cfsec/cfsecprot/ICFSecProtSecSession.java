@@ -60,37 +60,37 @@ public interface ICFSecProtSecSession
 
 	public CFLibDbKeyHash256 getPKey();
 	public void setPKey(CFLibDbKeyHash256 requiredSecSessionId);
-	public $implIJavaAtomType$ getRequiredSecSessionId();
-	public void setRequiredSecSessionId( $implIJavaAtomType$ value );
+	public ICFLibKeyHash256 getRequiredSecSessionId();
+	public void setRequiredSecSessionId( ICFLibKeyHash256 value );
 	public int getRequiredRevision();
 	public void setRequiredRevision( int value );
 
-	public ICFSecProtSecUser get$OptionalOrRequired$ContainerSecUser();
+	public ICFSecProtSecUser getRequiredContainerSecUser();
 
-	public void set$OptionalOrRequired$ContainerSecUser($implIJavaAtomType$ argSecUserId);
-
-
-	public void set$OptionalOrRequired$ContainerSecUser(ICFSecProtSecUser argObj);
-
-	public void set$OptionalOrRequired$ContainerSecUser(ICFSecPubSecUser argObj);
-
-	public ICFSecProtSecUser get$OptionalOrRequired$ParentSecProxy();
-
-	public void set$OptionalOrRequired$ParentSecProxy($implIJavaAtomType$ argSecProxyId);
+	public void setRequiredContainerSecUser(ICFLibKeyHash256 argSecUserId);
 
 
-	public void set$OptionalOrRequired$ParentSecProxy(ICFSecProtSecUser argObj);
+	public void setRequiredContainerSecUser(ICFSecProtSecUser argObj);
 
-	public void set$OptionalOrRequired$ParentSecProxy(ICFSecPubSecUser argObj);
+	public void setRequiredContainerSecUser(ICFSecPubSecUser argObj);
 
-	public $implIJavaAtomType$ getRequiredSecUserId();
-	public void setRequiredSecUserId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredStart();
-	public void setRequiredStart( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalFinish();
-	public void setOptionalFinish( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalSecProxyId();
-	public void setOptionalSecProxyId( $implIJavaAtomType$ value );
+	public ICFSecProtSecUser getRequiredParentSecProxy();
+
+	public void setRequiredParentSecProxy(ICFLibKeyHash256 argSecProxyId);
+
+
+	public void setRequiredParentSecProxy(ICFSecProtSecUser argObj);
+
+	public void setRequiredParentSecProxy(ICFSecPubSecUser argObj);
+
+	public ICFLibKeyHash256 getRequiredSecUserId();
+	public void setRequiredSecUserId( ICFLibKeyHash256 value );
+	public LocalDateTime getRequiredStart();
+	public void setRequiredStart( LocalDateTime value );
+	public LocalDateTime getOptionalFinish();
+	public void setOptionalFinish( LocalDateTime value );
+	public ICFLibKeyHash256 getOptionalSecProxyId();
+	public void setOptionalSecProxyId( ICFLibKeyHash256 value );
 	public boolean equals( Object obj );
 
 	public int hashCode();

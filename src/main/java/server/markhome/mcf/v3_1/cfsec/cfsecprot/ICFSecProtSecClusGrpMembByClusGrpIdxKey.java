@@ -46,8 +46,8 @@ import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
  */
 public interface ICFSecProtSecClusGrpMembByClusGrpIdxKey
 {
-	public $implIJavaAtomType$ getRequiredSecClusGrpId();
-	public void setRequiredSecClusGrpId( $implIJavaAtomType$ value );
+	public ICFLibKeyHash256 getRequiredSecClusGrpId();
+	public void setRequiredSecClusGrpId( ICFLibKeyHash256 value );
 	@Override
 	public boolean equals( Object obj );
 

@@ -113,35 +113,35 @@ public interface ICFSecProtTenantEditObj
 	 *
 	 *	@return	The ICFSecProtClusterObj instance referenced by the Cluster key.
 	 */
-	ICFSecProtClusterObj get$OptionalOrRequired$ContainerCluster();
+	ICFSecProtClusterObj getRequiredContainerCluster();
 
 	/**
-	 *	Get the $optionalorrequired$ ICFSecProtClusterObj instance referenced by the Cluster key.
+	 *	Get the required ICFSecProtClusterObj instance referenced by the Cluster key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFSecProtClusterObj instance referenced by the Cluster key.
+	 *	@return	The required ICFSecProtClusterObj instance referenced by the Cluster key.
 	 */
-	ICFSecProtClusterObj get$OptionalOrRequired$ContainerCluster( boolean forceRead );
+	ICFSecProtClusterObj getRequiredContainerCluster( boolean forceRead );
 
 	/**
 	 *	Set the ICFSecProtClusterObj instance referenced by the Cluster key.
 	 *
 	 *	@param	value	the ICFSecProtClusterObj instance to be referenced by the Cluster key.
 	 */
-	void set$OptionalOrRequired$ContainerCluster( ICFSecProtClusterObj value );
+	void setRequiredContainerCluster( ICFSecProtClusterObj value );
 
 	/**
 	 *	Get a list ICFSecProtSecTentGrpObj instances referenced by the SecGroup key.
 	 *
 	 *	@return	The (potentially empty) list of ICFSecProtSecTentGrpObj instances referenced by the SecGroup key.
 	 */
-	List<ICFSecProtSecTentGrpObj> get$OptionalOrRequired$ComponentsSecGroup();
+	List<ICFSecProtSecTentGrpObj> getOptionalComponentsSecGroup();
 
 	/**
 	 *	Get a list ICFSecProtSecTentRoleObj instances referenced by the SecRole key.
 	 *
 	 *	@return	The (potentially empty) list of ICFSecProtSecTentRoleObj instances referenced by the SecRole key.
 	 */
-	List<ICFSecProtSecTentRoleObj> get$OptionalOrRequired$ComponentsSecRole();
+	List<ICFSecProtSecTentRoleObj> getOptionalComponentsSecRole();
 
 	/**
 	 *	Get the required ICFLibKeyHash256 attribute Id.

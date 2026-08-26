@@ -61,11 +61,11 @@ public interface ICFSecProtSysClusterH
 	public CFLibDbKeyHash256 getAuditSessionId();
 	public void setAuditSessionId(CFLibDbKeyHash256 auditSessionId);
 
-	public $implIJavaAtomType$ getRequiredSingletonId();
+	public int getRequiredSingletonId();
 	public void setRequiredSingletonId( int requiredSingletonId );
 
-	public $implIJavaAtomType$ getRequiredClusterId();
-	public void setRequiredClusterId( $implIJavaAtomType$ value );
+	public ICFLibKeyHash256 getRequiredClusterId();
+	public void setRequiredClusterId( ICFLibKeyHash256 value );
 	@Override
 	public boolean equals( Object obj );
 

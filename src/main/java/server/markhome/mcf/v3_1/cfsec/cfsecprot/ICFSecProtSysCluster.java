@@ -58,22 +58,22 @@ public interface ICFSecProtSysCluster
 
 	public Integer getPKey();
 	public void setPKey(Integer requiredSingletonId);
-	public $implIJavaAtomType$ getRequiredSingletonId();
-	public void setRequiredSingletonId( $implIJavaAtomType$ value );
+	public int getRequiredSingletonId();
+	public void setRequiredSingletonId( int value );
 	public int getRequiredRevision();
 	public void setRequiredRevision( int value );
 
-	public ICFSecProtCluster get$OptionalOrRequired$ContainerCluster();
+	public ICFSecProtCluster getRequiredContainerCluster();
 
-	public void set$OptionalOrRequired$ContainerCluster($implIJavaAtomType$ argClusterId);
+	public void setRequiredContainerCluster(ICFLibKeyHash256 argClusterId);
 
 
-	public void set$OptionalOrRequired$ContainerCluster(ICFSecProtCluster argObj);
+	public void setRequiredContainerCluster(ICFSecProtCluster argObj);
 
-	public void set$OptionalOrRequired$ContainerCluster(ICFSecPubCluster argObj);
+	public void setRequiredContainerCluster(ICFSecPubCluster argObj);
 
-	public $implIJavaAtomType$ getRequiredClusterId();
-	public void setRequiredClusterId( $implIJavaAtomType$ value );
+	public ICFLibKeyHash256 getRequiredClusterId();
+	public void setRequiredClusterId( ICFLibKeyHash256 value );
 	public boolean equals( Object obj );
 
 	public int hashCode();

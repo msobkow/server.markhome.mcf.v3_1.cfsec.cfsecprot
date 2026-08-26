@@ -46,8 +46,8 @@ import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
  */
 public interface ICFSecProtISOCtryLangByCtryIdxKey
 {
-	public $implIJavaAtomType$ getRequiredISOCtryId();
-	public void setRequiredISOCtryId( $implIJavaAtomType$ value );
+	public short getRequiredISOCtryId();
+	public void setRequiredISOCtryId( short value );
 	@Override
 	public boolean equals( Object obj );
 

@@ -46,10 +46,10 @@ import server.markhome.mcf.v3_1.cflib.xml.CFLibXmlUtil;
 public interface ICFSecProtSecTentRoleMembPKey
 {
 
-	public $implIJavaAtomType$ getRequiredSecTentRoleId();
-	public void setRequiredSecTentRoleId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getRequiredLoginId();
-	public void setRequiredLoginId( $implIJavaAtomType$ value );
+	public ICFLibKeyHash256 getRequiredSecTentRoleId();
+	public void setRequiredSecTentRoleId( ICFLibKeyHash256 value );
+	public String getRequiredLoginId();
+	public void setRequiredLoginId( String value );
 	@Override
 	public boolean equals( Object obj );
 

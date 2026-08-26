@@ -113,42 +113,42 @@ public interface ICFSecProtSecSysGrpIncEditObj
 	 *
 	 *	@return	The ICFSecProtSecSysGrpObj instance referenced by the Group key.
 	 */
-	ICFSecProtSecSysGrpObj get$OptionalOrRequired$ContainerGroup();
+	ICFSecProtSecSysGrpObj getRequiredContainerGroup();
 
 	/**
-	 *	Get the $optionalorrequired$ ICFSecProtSecSysGrpObj instance referenced by the Group key.
+	 *	Get the required ICFSecProtSecSysGrpObj instance referenced by the Group key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFSecProtSecSysGrpObj instance referenced by the Group key.
+	 *	@return	The required ICFSecProtSecSysGrpObj instance referenced by the Group key.
 	 */
-	ICFSecProtSecSysGrpObj get$OptionalOrRequired$ContainerGroup( boolean forceRead );
+	ICFSecProtSecSysGrpObj getRequiredContainerGroup( boolean forceRead );
 
 	/**
 	 *	Set the ICFSecProtSecSysGrpObj instance referenced by the Group key.
 	 *
 	 *	@param	value	the ICFSecProtSecSysGrpObj instance to be referenced by the Group key.
 	 */
-	void set$OptionalOrRequired$ContainerGroup( ICFSecProtSecSysGrpObj value );
+	void setRequiredContainerGroup( ICFSecProtSecSysGrpObj value );
 
 	/**
 	 *	Get the ICFSecProtSecSysGrpObj instance referenced by the SubGroup key.
 	 *
 	 *	@return	The ICFSecProtSecSysGrpObj instance referenced by the SubGroup key.
 	 */
-	ICFSecProtSecSysGrpObj get$OptionalOrRequired$ParentSubGroup();
+	ICFSecProtSecSysGrpObj getRequiredParentSubGroup();
 
 	/**
-	 *	Get the $optionalorrequired$ ICFSecProtSecSysGrpObj instance referenced by the SubGroup key.
+	 *	Get the required ICFSecProtSecSysGrpObj instance referenced by the SubGroup key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFSecProtSecSysGrpObj instance referenced by the SubGroup key.
+	 *	@return	The required ICFSecProtSecSysGrpObj instance referenced by the SubGroup key.
 	 */
-	ICFSecProtSecSysGrpObj get$OptionalOrRequired$ParentSubGroup( boolean forceRead );
+	ICFSecProtSecSysGrpObj getRequiredParentSubGroup( boolean forceRead );
 
 	/**
 	 *	Set the ICFSecProtSecSysGrpObj instance referenced by the SubGroup key.
 	 *
 	 *	@param	value	the ICFSecProtSecSysGrpObj instance to be referenced by the SubGroup key.
 	 */
-	void set$OptionalOrRequired$ParentSubGroup( ICFSecProtSecSysGrpObj value );
+	void setRequiredParentSubGroup( ICFSecProtSecSysGrpObj value );
 
 	/**
 	 *	Get the required ICFLibKeyHash256 attribute SecSysGrpId.

@@ -217,18 +217,18 @@ public interface ICFSecProtISOCcyObj
 	void setIsNew( boolean value );
 
 	/**
-	 *	Get the array of $optionalorrequired$ ICFSecProtISOCtryCcyObj array of instances referenced by the Ctry key.
+	 *	Get the array of optional ICFSecProtISOCtryCcyObj array of instances referenced by the Ctry key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFSecProtISOCtryCcyObj[] array of instances referenced by the Ctry key.
+	 *	@return	The optional ICFSecProtISOCtryCcyObj[] array of instances referenced by the Ctry key.
 	 */
-	List<ICFSecProtISOCtryCcyObj> get$OptionalOrRequired$ChildrenCtry();
+	List<ICFSecProtISOCtryCcyObj> getOptionalChildrenCtry();
 
 	/**
-	 *	Get the array of $optionalorrequired$ ICFSecProtISOCtryCcyObj array of instances referenced by the Ctry key.
+	 *	Get the array of optional ICFSecProtISOCtryCcyObj array of instances referenced by the Ctry key.
 	 *
-	 *	@return	The $optionalorrequired$ ICFSecProtISOCtryCcyObj[] array of instances referenced by the Ctry key.
+	 *	@return	The optional ICFSecProtISOCtryCcyObj[] array of instances referenced by the Ctry key.
 	 */
-	List<ICFSecProtISOCtryCcyObj> get$OptionalOrRequired$ChildrenCtry( boolean forceRead );
+	List<ICFSecProtISOCtryCcyObj> getOptionalChildrenCtry( boolean forceRead );
 
 	/**
 	 *	Get the required short attribute ISOCcyId.

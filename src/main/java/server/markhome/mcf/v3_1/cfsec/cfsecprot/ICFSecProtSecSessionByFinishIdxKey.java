@@ -46,10 +46,10 @@ import server.markhome.mcf.v3_1.cfsec.cfsecprotobj.*;
  */
 public interface ICFSecProtSecSessionByFinishIdxKey
 {
-	public $implIJavaAtomType$ getRequiredSecUserId();
-	public void setRequiredSecUserId( $implIJavaAtomType$ value );
-	public $implIJavaAtomType$ getOptionalFinish();
-	public void setOptionalFinish( $implIJavaAtomType$ value );
+	public ICFLibKeyHash256 getRequiredSecUserId();
+	public void setRequiredSecUserId( ICFLibKeyHash256 value );
+	public LocalDateTime getOptionalFinish();
+	public void setOptionalFinish( LocalDateTime value );
 	@Override
 	public boolean equals( Object obj );
 
