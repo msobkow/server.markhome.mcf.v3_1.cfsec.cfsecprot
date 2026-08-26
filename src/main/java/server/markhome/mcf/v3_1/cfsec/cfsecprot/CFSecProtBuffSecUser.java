@@ -230,7 +230,79 @@ public class CFSecProtBuffSecUser
 	public int getClassCode() {
 		return( ICFSecProtSecUser.CLASS_CODE );
 	}
-$implJustProtSchemaProtBuffTableProtRelationProtGetterWithArgs$$implJustProtSchemaProtBuffTableProtRelationProtGetterWithArgs$$implJustProtSchemaProtBuffTableProtRelationProtGetterWithArgs$
+
+	@Override
+	public List<ICFSecProtSecSysGrpMemb> getOptionalChildrenSysSecGrpMemb(String argLoginId) {
+		ICFSecProtSchema targetBackingCFSec = ICFSecProtSchema.getBackingCFSec();
+		if (targetBackingCFSec == null) {
+			throw new CFLibNullArgumentException(getClass(), "getOptionalChildrenSysSecGrpMemb", 0, "ICFSecProtSchema.getBackingCFSec()");
+		}
+		ICFSecProtSecSysGrpMembTable targetTable = targetBackingCFSec.getTableSecSysGrpMemb();
+		if (targetTable == null) {
+			throw new CFLibNullArgumentException(getClass(), "getOptionalChildrenSysSecGrpMemb", 0, "ICFSecProtSchema.getBackingCFSec().getTableSecSysGrpMemb()");
+		}
+		ICFSecProtSecSysGrpMemb[] targetArr = targetTable.readDerivedByLoginIdx(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredLoginId());
+		if( targetArr != null ) {
+			List<ICFSecProtSecSysGrpMemb> results = new ArrayList<>(targetArr.length);
+			for (int idx = 0; idx < targetArr.length; idx++) {
+				results.add(targetArr[idx]);
+			}
+			return(results);
+		}
+		else {
+			List<ICFSecProtSecSysGrpMemb> results = new ArrayList<>();
+			return(results);
+		}
+	}
+
+	@Override
+	public List<ICFSecProtSecClusGrpMemb> getOptionalChildrenClusSecGrpMemb(String argLoginId) {
+		ICFSecProtSchema targetBackingCFSec = ICFSecProtSchema.getBackingCFSec();
+		if (targetBackingCFSec == null) {
+			throw new CFLibNullArgumentException(getClass(), "getOptionalChildrenClusSecGrpMemb", 0, "ICFSecProtSchema.getBackingCFSec()");
+		}
+		ICFSecProtSecClusGrpMembTable targetTable = targetBackingCFSec.getTableSecClusGrpMemb();
+		if (targetTable == null) {
+			throw new CFLibNullArgumentException(getClass(), "getOptionalChildrenClusSecGrpMemb", 0, "ICFSecProtSchema.getBackingCFSec().getTableSecClusGrpMemb()");
+		}
+		ICFSecProtSecClusGrpMemb[] targetArr = targetTable.readDerivedByLoginIdx(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredLoginId());
+		if( targetArr != null ) {
+			List<ICFSecProtSecClusGrpMemb> results = new ArrayList<>(targetArr.length);
+			for (int idx = 0; idx < targetArr.length; idx++) {
+				results.add(targetArr[idx]);
+			}
+			return(results);
+		}
+		else {
+			List<ICFSecProtSecClusGrpMemb> results = new ArrayList<>();
+			return(results);
+		}
+	}
+
+	@Override
+	public List<ICFSecProtSecTentGrpMemb> getOptionalChildrenTentSecGrpMemb(String argLoginId) {
+		ICFSecProtSchema targetBackingCFSec = ICFSecProtSchema.getBackingCFSec();
+		if (targetBackingCFSec == null) {
+			throw new CFLibNullArgumentException(getClass(), "getOptionalChildrenTentSecGrpMemb", 0, "ICFSecProtSchema.getBackingCFSec()");
+		}
+		ICFSecProtSecTentGrpMembTable targetTable = targetBackingCFSec.getTableSecTentGrpMemb();
+		if (targetTable == null) {
+			throw new CFLibNullArgumentException(getClass(), "getOptionalChildrenTentSecGrpMemb", 0, "ICFSecProtSchema.getBackingCFSec().getTableSecTentGrpMemb()");
+		}
+		ICFSecProtSecTentGrpMemb[] targetArr = targetTable.readDerivedByUserIdx(ICFSecSchema.getAuthorizationCallback().getEffectiveAuthorization(), getRequiredLoginId());
+		if( targetArr != null ) {
+			List<ICFSecProtSecTentGrpMemb> results = new ArrayList<>(targetArr.length);
+			for (int idx = 0; idx < targetArr.length; idx++) {
+				results.add(targetArr[idx]);
+			}
+			return(results);
+		}
+		else {
+			List<ICFSecProtSecTentGrpMemb> results = new ArrayList<>();
+			return(results);
+		}
+	}
+
 	@Override
 	public String getRequiredLoginId() {
 		return(requiredLoginId);
